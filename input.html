@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SSOMI</title>
+    <link rel="stylesheet" href="/resource/css/common.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="/resource/js/ui-script.js"></script>
+</head>
+<body>
+    <div class="menu">
+        <button type="button" class="ui-nav">
+            <span class="ally-hidden">all menu</span>
+        </button>
+        <ul>
+            <li><a href="accessibility.html" id="table">web accessibility</a></li>
+            <li><a href="table.html" id="table">table</a></li>
+            <li><a href="input.html" id="input">input</a></li>
+            <li><a href="button.html" id="button">button</a></li>
+            <li><a href="popup.html" id="popup">popup</a></li>
+            <li><a href="scroll.html" id="scroll">scroll</a></li>
+            <li><a href="accordion.html" id="accordion">accordion</a></li>
+            <li><a href="dropdown.html" id="dropdown">dropdown</a></li>
+            <li><a href="cursor.html" id="cursor">cursor</a></li>
+            <li><a href="grid.html" id="grid">grid</a></li>
+            <li><a href="study01.html" id="study01">study01</a></li>
+            <li><a href="study02(JQEURY).html" id="study02">study02(JQEURY)</a></li>
+            <li><a href="study02(JQEURY).html" id="study02">study03(SCROLL)</a></li>
+            <li><a href="study02(JQEURY).html" id="study02">study04(VIDEO)</a></li>
+        </ul>
+    </div>
+    <div class="container">
+        <div class="ui-content input">
+            <h2>INPUT</h2>
+            <p></p>
+            <div class="checkbox-area">
+                <div class="checkwrap">
+                    <div class="checkbox">
+                        <div class="logo area">
+                        <img src="/resource/img/img-nike_logo.png" alt="나이키로고">
+                        <h1>NIKE<br><span>유한회사 나이키코리아</span></h1>
+                        </div>
+                        <div class="slide">
+                        <div class="area terms">
+                            <dl>
+                            <dt class="allcheck">
+                                <input type="checkbox" id="chkAll" class="chkAll" onclick="clickAll()">
+                                <label for="chkAll" class="chk-label">전체 동의하기</label>
+                            </dt>
+                            <dd class="allcheck-txt">
+                                <p>
+                                전체동의는 카카오 및 유한회사 나이키코리아의 서비스 동의를 포함하고 있습니다. 
+                                전체동의는 선택목적에 대한 동의를 포함하고 있으며,
+                                선택목적에 대한 동의를 거부해도 서비스 이용이 가능합니다.
+                                </p>
+                            </dd>
+                            </dl>
+                        </div>
+                        <div class="area terms">
+                            <dl>
+                            <dt>카카오 동의 항목</dt>
+                            <dd>
+                                <input type="checkbox" id="chk01" name="chk" class="inpCheck">
+                                <label for="chk01" class="small-chk">[필수] 카카오 개이정보 제3자 제공 동의</label>
+                                <button type="button" class="termsBtn">보기</button>
+                            </dd>
+                            </dl>
+                        </div>
+                        <div class="area terms">
+                            <dl>
+                            <dt>NIKE 서비스 동의</dt>
+                            <dd>
+                                <input type="checkbox" id="chk02" name="chk" class="inpCheck">
+                                <label for="chk02" class="small-chk">[필수] 이용약관</label>
+                                <button type="button" class="termsBtn">보기</button>
+                            </dd>
+                            </dl>
+                        </div>
+                        <div class="area terms">
+                            <dl>
+                            <dt>NIKE 서비스 동의</dt>
+                            <dd>
+                                <input type="checkbox" id="chk03" name="chk" class="inpCheck">
+                                <label for="chk03" class="small-chk">[필수] 이용약관</label>
+                                <button type="button" class="termsBtn">보기</button>
+                            </dd>
+                            </dl>
+                        </div>
+                        <div class="area terms">
+                            <dl>
+                            <dt>NIKE 서비스 동의</dt>
+                            <dd>
+                                <input type="checkbox" id="chk04" name="chk" class="inpCheck">
+                                <label for="chk04" class="small-chk">[필수] 이용약관</label>
+                                <button type="button" class="termsBtn">보기</button>
+                            </dd>
+                            </dl>
+                        </div>
+                        </div>
+                        <button type="button" class="continue-btn" onclick="agreechk()">동의하고 계속하기</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        const all = document.querySelector('#chkAll');
+        var inp = document.getElementsByName('chk');
+        var chknum = 0;
+        
+        //전체선택 외 버튼 리스너
+        for (var i =0 ; i < inp.length; i++) {
+          inp[i].addEventListener("click", function () {
+              if (this.checked) {chknum++;}
+              else {chknum--;}
+              // console.log(chknum)
+              if (chknum == inp.length) {all.checked = true} 
+              else {all.checked = false}
+          });
+        }
+    
+        for(var i=0; i < inp.length; i++){
+          inp[i].addEventListener("click", function(){
+            if(this.checked) {chknum++}
+            else{chknum--}
+          });
+        }
+    
+         //전체선택/해제
+        function clickAll(){
+          for(var i = 0, len = inp.length; i < len; i++){ 
+            if(all.checked == true){
+              inp[i].checked = true;
+              chknum = inp.length
+            }else{
+              inp[i].checked = false;
+              chknum = 0
+            }
+          } 
+        }
+    
+        //동의하고계속하기
+        function agreechk(){
+          for(var i = 0; i < inp.length; i++){
+            all.checked = true
+            inp[i].checked = true
+          }
+        }   
+      </script>
+</body>
+</html>

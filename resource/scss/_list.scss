@@ -1,0 +1,25 @@
+/* list */
+.listDefault {
+    li{
+        line-height: 2;
+        position: relative;
+        padding-left: 10px;
+        color: rgb(188, 188, 188);   
+        &::before{
+            content: '';
+            min-width: 2px;
+            min-height: 2px;
+            max-width: 2px;
+            max-height: 2px;
+            border-radius: 50%;
+            font-weight: 900;
+            background-color: #fff;
+            position: absolute;
+            top: 17px;
+            left: 0;
+        }
+        b{
+            color: #fff;
+        }
+    }
+}
