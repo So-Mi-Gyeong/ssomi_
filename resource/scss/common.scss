@@ -21,7 +21,7 @@
     &.blackStyle{
         .ui-nav{
             &::before{
-                background: url(/ssomi_2023/resource/img/ico_menu_black.png) 0 0 no-repeat;
+                background: url(/ssomi_2023/ssomi_2023/resource/img/ico_menu_black.png) 0 0 no-repeat;
             }
         }
         &.open{
@@ -29,7 +29,7 @@
             transition: .5s;
             .ui-nav{
                 &::before{
-                    background: url(/resource/img/ico_menu_black.png) -36px 0 no-repeat;
+                    background: url(/ssomi_2023/resource/img/ico_menu_black.png) -36px 0 no-repeat;
                 }
             }
         }
@@ -40,7 +40,7 @@
         transition: .5s;
         .ui-nav{
             &::before{
-                background: url(/resource/img/ico_menu_white.png) -36px 0 no-repeat;
+                background: url(/ssomi_2023/resource/img/ico_menu_white.png) -36px 0 no-repeat;
             }
         }
     }
@@ -55,7 +55,7 @@
             content: '';
             width: 50px;
             height: 30px;
-            background: url(/resource/img/ico_menu_white.png) 0 0 no-repeat;
+            background: url(/ssomi_2023/resource/img/ico_menu_white.png) 0 0 no-repeat;
             background-size: 100% 100%;
             display: block;
         }
