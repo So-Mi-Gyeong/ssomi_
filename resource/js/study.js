@@ -1,7 +1,7 @@
 $(document).ready(function () {
     $('.testimonial-pic img:first-child').addClass('active');
 
-    /*============================================ jquery1 ============================================*/
+    /*============================================ study02 - jquery1(프로필) ============================================*/
     $('.testimonial-pic img').click(function () {
       // $('.testimonial-pic img').removeClass('active');
       $(this).addClass('active');
@@ -12,7 +12,7 @@ $(document).ready(function () {
         'active') // #tab1 == $(this).attr('data-alt') -> # + tab1,2,3,4
     });
 
-    /*============================================ jquery2 ============================================*/
+    /*============================================ study02 - jquery2(성인인증) ============================================*/
     // var num = parselnt($(.xx).val());
     // parselnt = 문자열을 정수로 변환시켜주는 함수. 소수인 경우에는 소숫점 이하를 버리고 정수만 반환.
     $('.login button').click(function () {
@@ -52,7 +52,7 @@ $(document).ready(function () {
       // });
     });
 
-    /*============================================ jquery3 ============================================*/
+    /*============================================ study02 - jquery3(별점) ============================================*/
     $('.stars .fa').click(function () {
       $(this).addClass('active')
       $(this).prevAll().addClass('active')
@@ -63,15 +63,15 @@ $(document).ready(function () {
       //$('.print').text(starRate)
 
       if (starRate == 1) {
-        $('.print').html('<img src="/resource/img/jquery/star-lv1.png">' + '별로에요')
+        $('.print').html('<img src="/ssomi_2023/resource/img/jquery/star-lv1.png">' + '별로에요')
       } else if (starRate == 2) {
-        $('.print').html('<img src="/resource/img/jquery/star-lv2.png">' + '보통이에요')
+        $('.print').html('<img src="/ssomi_2023/resource/img/jquery/star-lv2.png">' + '보통이에요')
       } else if (starRate == 3) {
-        $('.print').html('<img src="/resource/img/jquery/star-lv3.png">' + '그냥 그래요')
+        $('.print').html('<img src="/ssomi_2023/resource/img/jquery/star-lv3.png">' + '그냥 그래요')
       } else if (starRate == 4) {
-        $('.print').html('<img src="/resource/img/jquery/star-lv4.png">' + '마음에 들어요')
+        $('.print').html('<img src="/ssomi_2023/resource/img/jquery/star-lv4.png">' + '마음에 들어요')
       } else {
-        $('.print').html('<img src="/resource/img/jquery/star-lv5.png">' + '아주 좋아요')
+        $('.print').html('<img src="/ssomi_2023/resource/img/jquery/star-lv5.png">' + '아주 좋아요')
       }
     });
 
@@ -125,7 +125,7 @@ $(document).ready(function () {
     //   window.star.init(2);
     // })(jQuery);
 
-    /*============================================ jquery4 ============================================*/
+    /*============================================ study02 - jquery4(클릭메뉴) ============================================*/
     //  test
     // $('.tabBtn li').click(function(){
     //     $(this).addClass('active')
@@ -147,7 +147,7 @@ $(document).ready(function () {
       $('#' + result).addClass('active');
     });
 
-    /*============================================ jquery5 ============================================*/
+    /*============================================ study02 - jquery5(full screen menu) ============================================*/
     $('.navi li').mouseenter(function(){
       var changeImg = $(this).attr('data-image');
 
@@ -161,7 +161,7 @@ $(document).ready(function () {
       });
     });
 
-    /*============================================ jquery6 ============================================*/
+    /*============================================ study02 - jquery6(hover card) ============================================*/
     $('.size span, .color span').click(function(){
       $(this).addClass('active');
       $(this).siblings().removeClass('active');
@@ -170,7 +170,7 @@ $(document).ready(function () {
       $(this).toggleClass('active');
     });
 
-    /*============================================ jquery7 ============================================*/
+    /*============================================ study02 - jquery7(아코디언) ============================================*/
     $('.accotitle').click(function(){
       //title
       $(this).addClass('active');
@@ -184,7 +184,7 @@ $(document).ready(function () {
       $('.image img').attr('src', dataImage);
     });
 
-    /*============================================ 뉴스레터 구독하기 ============================================*/
+    /*============================================ study02 - jquery8(뉴스레터 구독하기) ============================================*/
     $('.btn-open').click(function(){
       $('.modal, .overlay').addClass('active');
     });
@@ -192,13 +192,13 @@ $(document).ready(function () {
       $('.modal, .overlay').removeClass('active');
     });
 
-    /*============================================ link 이동 ============================================*/
+    /*============================================ study03 - link 이동 ============================================*/
     $('header a, .btn-gototop').click(function(e) {
       $.scrollTo(this.hash || 0, 900);
       e.prevenDefault();
     });
 
-    /*============================================ video ============================================*/
+    /*============================================ study04 - video ============================================*/
     $('.trigger').click(function(){
       $(this).toggleClass('active');
       $('.modal-gnb').fadeToggle();

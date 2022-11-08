@@ -296,7 +296,7 @@
                     }
                     p{
                         color: #fff;
-                        margin-bottom: 20px;
+                        margin: 0 0 10px 0;
                     }
                     .sns{
                         a{
@@ -344,16 +344,20 @@
                 font-weight: bold;
                 display: block;
                 margin-top: 15px;
+                color: #000;
             }
             input[type=email],
             input[type=password]{
-                width: 100%;
-                padding: 10px;
+                width: 100% !important;
+                height: 100% !important;
+                position: relative !important;
+                padding: 10px !important;
+                padding-left: 40px !important;
                 box-sizing: border-box;
                 border: 1px solid #ddd;
                 border-radius: 5px;
                 transition: .3s;
-                padding-left: 40px;
+                clip-path: inset(0%);
                 &::placeholder{
                     opacity: 1;
                     transition: .3s;
@@ -1139,6 +1143,7 @@
                 &:hover{
                     .detail{
                         bottom: 0;
+                        z-index: 9999;
                     }
                     & > img{
                         filter: blur(2px);
