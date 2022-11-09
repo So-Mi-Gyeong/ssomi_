@@ -63,15 +63,15 @@ $(document).ready(function () {
       //$('.print').text(starRate)
 
       if (starRate == 1) {
-        $('.print').html('<img src="/ssomi_2023/resource/img/jquery/star-lv1.png">' + '별로에요')
+        $('.print').html('<img src="./resource/img/jquery/star-lv1.png">' + '별로에요')
       } else if (starRate == 2) {
-        $('.print').html('<img src="/ssomi_2023/resource/img/jquery/star-lv2.png">' + '보통이에요')
+        $('.print').html('<img src="./resource/img/jquery/star-lv2.png">' + '보통이에요')
       } else if (starRate == 3) {
-        $('.print').html('<img src="/ssomi_2023/resource/img/jquery/star-lv3.png">' + '그냥 그래요')
+        $('.print').html('<img src="./resource/img/jquery/star-lv3.png">' + '그냥 그래요')
       } else if (starRate == 4) {
-        $('.print').html('<img src="/ssomi_2023/resource/img/jquery/star-lv4.png">' + '마음에 들어요')
+        $('.print').html('<img src="./resource/img/jquery/star-lv4.png">' + '마음에 들어요')
       } else {
-        $('.print').html('<img src="/ssomi_2023/resource/img/jquery/star-lv5.png">' + '아주 좋아요')
+        $('.print').html('<img src="./resource/img/jquery/star-lv5.png">' + '아주 좋아요')
       }
     });
 

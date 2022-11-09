@@ -179,7 +179,7 @@
                     display: inline-block;
                     vertical-align: middle;
                     margin-right: 5px;
-                    background: url('/ssomi_2023/resource/img/checkbox-01.png') no-repeat;
+                    background: url('./resource/img/checkbox-01.png') no-repeat;
                     background-position: left center;
                 }
             }
@@ -207,7 +207,7 @@
                     height: 18px;
                     vertical-align: middle;
                     margin-right: 5px;
-                    background: url('/ssomi_2023/resource/img/radio-01.png') no-repeat;
+                    background: url('./resource/img/radio-01.png') no-repeat;
                     background-position: left center;
                 }
             }
@@ -374,10 +374,10 @@
                 }
             }
             input[type=email]{
-                background: #fff url('/ssomi_2023/resource/img/icon-email.png') no-repeat center left 10px;
+                background: #fff url('./resource/img/icon-email.png') no-repeat center left 10px;
             }
             input[type=password]{
-                background: #fff url('/ssomi_2023/resource/img/icon-lock.png') no-repeat center left 10px;
+                background: #fff url('./resource/img/icon-lock.png') no-repeat center left 10px;
             }
             p{
                 overflow: hidden;
@@ -571,7 +571,7 @@
                     width: inherit;
                     height: inherit;
                     display: block;
-                    background: url('/ssomi_2023/resource/img/bg-style.jpg') 0 0 no-repeat;
+                    background: url('./resource/img/bg-style.jpg') 0 0 no-repeat;
                     background-position: center center;
                 }
             }
@@ -648,7 +648,7 @@
                         width: inherit;
                         height: inherit;
                         display: block;
-                        background: url('/ssomi_2023/resource/img/phone.png') 0 0 no-repeat;
+                        background: url('./resource/img/phone.png') 0 0 no-repeat;
                         background-position: center center;
                         overflow: hidden;
                     }
@@ -881,7 +881,7 @@
                         box-sizing: border-box;
                         border: none;
                         border-bottom: 2px solid #ddd;
-                        background: #fff url('/ssomi_2023/resource/img/jquery/search-icon.png') no-repeat center left 5px;
+                        background: #fff url('./resource/img/jquery/search-icon.png') no-repeat center left 5px;
                         background-size: 23px;
                         padding-left: 35px;
                         &::placeholder{
@@ -980,7 +980,7 @@
             .photo{
                 width: 100%;
                 height: 100%;
-                background-image: url('/ssomi_2023/resource/img/jquery/portrait-initial.jpg');
+                background-image: url('./resource/img/jquery/portrait-initial.jpg');
                 background-repeat:no-repeat;
                 background-position: center center;
                 background-size: cover;
@@ -1172,7 +1172,7 @@
                         em{
                             position: relative;
                             &::after{
-                                content: url('/ssomi_2023/resource/img/jquery/logo-kakao.png');
+                                content: url('./resource/img/jquery/logo-kakao.png');
                                 position: absolute;
                                 top: -25px;
                                 right: -33px;
@@ -1265,19 +1265,19 @@
                   opacity: .8;
                   &:nth-of-type(1){
                     color: #222;
-                    background: #fff url('/ssomi_2023/resource/img/ui-design/logo-mobile.png') no-repeat center left 6px;
+                    background: #fff url('./resource/img/ui-design/logo-mobile.png') no-repeat center left 6px;
                   }
                   &:nth-of-type(2){
-                    background: #898c9b url('/ssomi_2023/resource/img/ui-design/logo-email.png') no-repeat center left 8px;
+                    background: #898c9b url('./resource/img/ui-design/logo-email.png') no-repeat center left 8px;
                   }
                   &:nth-of-type(3){
-                    background: #11ce00 url('/ssomi_2023/resource/img/ui-design/logo-naver.png') no-repeat center left 8px;
+                    background: #11ce00 url('./resource/img/ui-design/logo-naver.png') no-repeat center left 8px;
                   }
                   &:nth-of-type(4){
-                    background: #0076fe url('/ssomi_2023/resource/img/ui-design/logo-facebook.png') no-repeat center left 8px;
+                    background: #0076fe url('./resource/img/ui-design/logo-facebook.png') no-repeat center left 8px;
                   }
                   &:nth-of-type(5){
-                    background: #00c026 url('/ssomi_2023/resource/img/ui-design/logo-line.png') no-repeat center left 8px;
+                    background: #00c026 url('./resource/img/ui-design/logo-line.png') no-repeat center left 8px;
                   }
                   &:hover{
                     opacity: 1;
@@ -1363,7 +1363,7 @@
                     -webkit-box-flex: 2;
                         -ms-flex: 2;
                             flex: 2;
-                    background: url("/ssomi_2023/resource/img/jquery/office.jpg") no-repeat center right;
+                    background: url("./resource/img/jquery/office.jpg") no-repeat center right;
                     background-size: cover;
                     }
                 .desc {
