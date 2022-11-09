@@ -2701,6 +2701,7 @@ table .t_left {
   transition: 0.5s;
 }
 
+/* scroll */
 body::-webkit-scrollbar {
   width: 10px;
 }
