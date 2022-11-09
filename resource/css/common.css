@@ -415,7 +415,7 @@ table .t_left {
   content: "";
   width: 16px;
   height: 16px;
-  background: url(./resource/img/ico_nextBlack.png) 0 0 no-repeat;
+  background: url(../img/ico_nextBlack.png) 0 0 no-repeat;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -456,7 +456,7 @@ table .t_left {
   border: 1px solid transparent;
 }
 .ui-pagination.circleStyle .inner-pagination .link-page.pre > button::before, .ui-pagination.circleStyle .inner-pagination .link-page.next > button::before {
-  background: url(./resource/img/ico_nextWhite.png) 0 0 no-repeat;
+  background: url(../img/ico_nextWhite.png) 0 0 no-repeat;
 }
 .ui-pagination.circleStyle .inner-pagination .link-page.pre.active, .ui-pagination.circleStyle .inner-pagination .link-page.next.active {
   background: transparent;
@@ -560,7 +560,7 @@ table .t_left {
 }
 .ui-content.input .checkbox-area .checkwrap .checkbox .slide .area.terms input:checked + .chk-label::before, .ui-content.input .checkbox-area .checkwrap .checkbox .slide .area.terms input:checked + .small-chk::before {
   border: 1px solid #fbe64c;
-  background: #fbe64c url("./resource/img/ico-checked.png") 50% 50% no-repeat;
+  background: #fbe64c url("../img/ico-checked.png") 50% 50% no-repeat;
   background-size: 50% 50%;
 }
 .ui-content.input .checkbox-area .checkwrap .checkbox .slide .area.terms:last-child {
@@ -806,7 +806,7 @@ table .t_left {
   display: inline-block;
   vertical-align: middle;
   margin-right: 5px;
-  background: url("./resource/img/checkbox-01.png") no-repeat;
+  background: url("../img/checkbox-01.png") no-repeat;
   background-position: left center;
 }
 .ui-content.study01 .grade {
@@ -831,7 +831,7 @@ table .t_left {
   height: 18px;
   vertical-align: middle;
   margin-right: 5px;
-  background: url("./resource/img/radio-01.png") no-repeat;
+  background: url("../img/radio-01.png") no-repeat;
   background-position: left center;
 }
 .ui-content.study01 .fontawesome {
@@ -1041,10 +1041,10 @@ table .t_left {
   visibility: hidden;
 }
 .ui-content.study01 .login input[type=email] {
-  background: #fff url("./resource/img/icon-email.png") no-repeat center left 10px;
+  background: #fff url("../img/icon-email.png") no-repeat center left 10px;
 }
 .ui-content.study01 .login input[type=password] {
-  background: #fff url("./resource/img/icon-lock.png") no-repeat center left 10px;
+  background: #fff url("../img/icon-lock.png") no-repeat center left 10px;
 }
 .ui-content.study01 .login p {
   overflow: hidden;
@@ -1255,7 +1255,7 @@ table .t_left {
   width: inherit;
   height: inherit;
   display: block;
-  background: url("./resource/img/bg-style.jpg") 0 0 no-repeat;
+  background: url("../img/bg-style.jpg") 0 0 no-repeat;
   background-position: center center;
 }
 .ui-content.study02 .multi-repeating-linear .dim {
@@ -1338,7 +1338,7 @@ table .t_left {
   width: inherit;
   height: inherit;
   display: block;
-  background: url("./resource/img/phone.png") 0 0 no-repeat;
+  background: url("../img/phone.png") 0 0 no-repeat;
   background-position: center center;
   overflow: hidden;
 }
@@ -1599,7 +1599,7 @@ table .t_left {
           box-sizing: border-box;
   border: none;
   border-bottom: 2px solid #ddd;
-  background: #fff url("./resource/img/jquery/search-icon.png") no-repeat center left 5px;
+  background: #fff url("../img/jquery/search-icon.png") no-repeat center left 5px;
   background-size: 23px;
   padding-left: 35px;
 }
@@ -1715,7 +1715,7 @@ table .t_left {
 .ui-content.study02 .navi-area .photo {
   width: 100%;
   height: 100%;
-  background-image: url("./resource/img/jquery/portrait-initial.jpg");
+  background-image: url("../img/jquery/portrait-initial.jpg");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -1923,7 +1923,7 @@ table .t_left {
   position: relative;
 }
 .ui-content.study02 .acco article .heading h1 em::after {
-  content: url("./resource/img/jquery/logo-kakao.png");
+  content: url("../img/jquery/logo-kakao.png");
   position: absolute;
   top: -25px;
   right: -33px;
@@ -2015,19 +2015,19 @@ table .t_left {
 }
 .ui-content.study02 .loginType .login .login-type .logIcon:nth-of-type(1) {
   color: #222;
-  background: #fff url("./resource/img/ui-design/logo-mobile.png") no-repeat center left 6px;
+  background: #fff url("../img/ui-design/logo-mobile.png") no-repeat center left 6px;
 }
 .ui-content.study02 .loginType .login .login-type .logIcon:nth-of-type(2) {
-  background: #898c9b url("./resource/img/ui-design/logo-email.png") no-repeat center left 8px;
+  background: #898c9b url("../img/ui-design/logo-email.png") no-repeat center left 8px;
 }
 .ui-content.study02 .loginType .login .login-type .logIcon:nth-of-type(3) {
-  background: #11ce00 url("./resource/img/ui-design/logo-naver.png") no-repeat center left 8px;
+  background: #11ce00 url("../img/ui-design/logo-naver.png") no-repeat center left 8px;
 }
 .ui-content.study02 .loginType .login .login-type .logIcon:nth-of-type(4) {
-  background: #0076fe url("./resource/img/ui-design/logo-facebook.png") no-repeat center left 8px;
+  background: #0076fe url("../img/ui-design/logo-facebook.png") no-repeat center left 8px;
 }
 .ui-content.study02 .loginType .login .login-type .logIcon:nth-of-type(5) {
-  background: #00c026 url("./resource/img/ui-design/logo-line.png") no-repeat center left 8px;
+  background: #00c026 url("../img/ui-design/logo-line.png") no-repeat center left 8px;
 }
 .ui-content.study02 .loginType .login .login-type .logIcon:hover {
   opacity: 1;
@@ -2108,7 +2108,7 @@ table .t_left {
   -webkit-box-flex: 2;
   -ms-flex: 2;
   flex: 2;
-  background: url("./resource/img/jquery/office.jpg") no-repeat center right;
+  background: url("../img/jquery/office.jpg") no-repeat center right;
   background-size: cover;
 }
 .ui-content.study02 .content-center .modal .modal-content .desc {

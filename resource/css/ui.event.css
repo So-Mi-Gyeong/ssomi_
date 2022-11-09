@@ -32,7 +32,7 @@
   transform: translateX(-50%);
 }
 .step.line-img{
-  background: url('./resource/img/event/ico-dotline-pink.jpg') 0 0 no-repeat;
+  background: url('../img/event/ico-dotline-pink.jpg') 0 0 no-repeat;
   background-size: 100% 12.5px;
 }
 .step h2{
@@ -41,7 +41,7 @@
   letter-spacing: -1px;
 }
 .step h2.que-img{
-  background: url('./resource/img/event/ico-questionMark.jpg') 50% 40px no-repeat;
+  background: url('../img/event/ico-questionMark.jpg') 50% 40px no-repeat;
   background-size: 86.5px 94.5px;
   padding-bottom: 126.5px;
   margin-bottom: 0;
@@ -79,7 +79,7 @@
   display: none;
 }
 .check input[type=checkbox]:checked + label::before{
-  background: url('./resource/img/event/ico-checkbox-select.jpg') 0 0 no-repeat;
+  background: url('../img/event/ico-checkbox-select.jpg') 0 0 no-repeat;
   background-size: 100% 100%;
 }
 .check label{
@@ -93,7 +93,7 @@
   content: '';
   width: 17px;
   height: 17px;
-  background: url('./resource/img/event/ico-checkbox-empty.jpg') 0 0 no-repeat;
+  background: url('../img/event/ico-checkbox-empty.jpg') 0 0 no-repeat;
   background-size: 100% 100%;
   position: absolute; 
   top: 2px;
@@ -144,7 +144,7 @@
   content: '';
   width: 20px;
   height: 20px;
-  background: url('./resource/img/event/ico-announcement.png') 0 0 no-repeat;
+  background: url('../img/event/ico-announcement.png') 0 0 no-repeat;
   background-size: 100% 100%;
   position: absolute;
   top: 11px;
