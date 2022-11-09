@@ -2187,10 +2187,10 @@ table .t_left {
 .ui-content.study03 .smooth-scrolling {
   padding: 20px;
 }
-.ui-content.study03 .smooth-scrolling header {
+.ui-content.study03 .smooth-scrolling #top {
   margin-bottom: 20px;
 }
-.ui-content.study03 .smooth-scrolling header a {
+.ui-content.study03 .smooth-scrolling #top a {
   background-color: teal;
   color: #fff;
   text-transform: uppercase;
@@ -2701,6 +2701,21 @@ table .t_left {
   transition: 0.5s;
 }
 
+body::-webkit-scrollbar {
+  width: 10px;
+}
+body::-webkit-scrollbar-thumb {
+  height: 30%;
+  background-color: #452f55;
+  border-radius: 10px;
+}
+body::-webkit-scrollbar-track {
+  background-color: grey;
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0px 0px 5px white;
+          box-shadow: inset 0px 0px 5px white;
+}
+
 /* class */
 .content-center {
   width: 100%;
@@ -2713,6 +2728,10 @@ table .t_left {
   width: 100%;
   margin: 0 auto;
   background-color: #282726;
+  overflow: auto;
+}
+.container::-webkit-scrollbar {
+  display: none;
 }
 .container.bgGray {
   background-color: #eee;

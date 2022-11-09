@@ -1,5 +1,21 @@
 @import '_reset.scss', '_typography.scss', '_table.scss', '_button.scss', '_list.scss', '_input.scss', '_study.scss', '_cursor.scss', '_grid.scss';
 
+body{
+    &::-webkit-scrollbar {
+        width: 10px;
+    }
+    &::-webkit-scrollbar-thumb {
+        height: 30%;
+        background-color: #452f55;
+        border-radius: 10px;
+    }
+    &::-webkit-scrollbar-track {
+        background-color: grey;
+        border-radius: 10px;
+        box-shadow: inset 0px 0px 5px white;
+    }
+}
+
 /* class */
 .content-center{
     width: 100%;
@@ -12,6 +28,10 @@
     width: 100%;
     margin: 0 auto;
     background-color: #282726;
+    overflow: auto;
+    &::-webkit-scrollbar {
+        display: none;
+    }
     &.bgGray{
         background-color: #eee;
         .ui-content{
