@@ -1,60 +1,160 @@
+html,
+body,
+div,
+span,
+iframe,
+h1, h2, h3, h4, h5, h6, p, pre,
+a,
+code,
+em,
+img,
+strong, b, u, i,
+dl, dt, dd, ol, ul, li,
+fieldset,
+form,
+label,
+legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article,
+figure, figcaption,
+footer,
+header,
+section {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+/* list */
+ol,
+ul,
+li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* table */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+table tr {
+  border-bottom: 1px solid #000;
+}
+table tr th,
+table tr td {
+  border-right: 1px solid #000;
+}
+table tr th:last-child,
+table tr td:last-child {
+  border-right: 0;
+}
+
+/* font */
+body {
+  color: #222;
+}
+body font {
+  size: 16px;
+  weight: normal;
+}
+
+a {
+  color: #222;
+  text-decoration: none;
+}
+
+/* button */
+button {
+  background: transparent;
+  outline: 0;
+  border: 0;
+  cursor: pointer;
+}
+
+/* hidden */
+caption,
+input,
+.ally-hidden {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  color: transparent !important;
+  overflow: hidden !important;
+  clip: rect(1px, 1px, 1px, 1px);
+  -webkit-clip-path: inset(50%);
+          clip-path: inset(50%);
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/* ============================================================== */
+body {
+  background-color: #000;
+}
+
 /* ==================================== menu ================================= */
 .menu {
-  width: 95%;
-  height: 100vh;
+  width: 100%;
   background-color: #000;
-  position: fixed;
-  top: 0;
-  left: -95%;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
+  position: relative;
   z-index: 9999;
-}
-.menu.blackStyle .ui-nav::before {
-  background: url(./resource/img/ico_menu_black.png) 0 0 no-repeat;
-}
-.menu.blackStyle.open {
-  left: 0;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
-}
-.menu.blackStyle.open .ui-nav::before {
-  background: url(./resource/img/ico_menu_black.png) -36px 0 no-repeat;
-}
-.menu.open {
-  left: 0;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
-}
-.menu.open .ui-nav::before {
-  background: url(./resource/img/ico_menu_white.png) -36px 0 no-repeat;
 }
 .menu .ui-nav {
   width: 30px;
   height: 30px;
+  padding: 0;
   position: absolute;
-  right: -23px;
+  top: 0;
+  left: 0;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
   overflow: hidden;
 }
 .menu .ui-nav::before {
   content: "";
   width: 50px;
   height: 30px;
-  background: url(./resource/img/ico_menu_white.png) 0 0 no-repeat;
+  background: url(../img/ico_menu_white.png) 0 0 no-repeat;
   background-size: 100% 100%;
   display: block;
 }
-.menu ul {
-  width: 100%;
-  padding-top: 30px;
+.menu .ui-nav.open {
+  left: 428px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
-.menu ul li {
+.menu .ui-nav.open::before {
+  background: url(../img/ico_menu_white.png) -36px 0 no-repeat;
+}
+.menu .ui-menuContent {
+  width: 30%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: -30%;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+.menu .ui-menuContent::-webkit-scrollbar {
+  display: none;
+}
+.menu .ui-menuContent li {
   width: 100%;
+  background-color: #452f55;
   border-bottom: 1px solid #fff;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
-.menu ul li a {
+.menu .ui-menuContent li:last-child {
+  border-bottom: 0;
+}
+.menu .ui-menuContent li a {
   display: inline-block;
   width: 100%;
   padding: 20px;
@@ -64,10 +164,14 @@
   font-size: 18px;
   font-weight: 500;
 }
-.menu ul li a:hover {
+.menu .ui-menuContent li a:hover {
   background-color: rgba(255, 255, 255, 0.195);
 }
-.menu ul li a:focus {
-  color: #000;
-  background-color: #fff;
+.menu .ui-menuContent li a:focus {
+  background-color: #3a2645;
+}
+.menu .ui-menuContent.open {
+  left: 0;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }

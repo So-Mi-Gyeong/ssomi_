@@ -1,21 +1,4 @@
 $(document).ready(function(){
-    
-    //*********************** menu ***********************
-    const uinavs = document.querySelectorAll('.ui-nav');
-    for(let i = 0; i < uinavs.length; i++) {
-        uinavs[i].addEventListener('click', act); //click -> act()실행
-    }
-    function act() {
-        const menu = document.querySelector('.menu');
-        menu.classList.toggle('open');
-        // const menulis = document.querySelectorAll('.menu ul li');
-        // for(let i = 0; i < menulis.length; i++) {
-        //     menulis[i].addEventListener('click', function(){
-        //         menu.classList.remove('open');
-        //     });
-        // }
-    }
-
     //*********************** pagination(accessibility.html) ***********************
     $('.ui-pagination .inner-pagination .link-page').click(function(){
         $('.ui-pagination .inner-pagination .link-page').removeClass('active'); //active 초기화
