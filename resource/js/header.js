@@ -1,7 +1,7 @@
 $(document).ready(function(){
     $.ajax({
         type : "GET",
-        url : "../incloud/header.html",
+        url : "/incloud/header.html",
         dataType : "html",
         success: function(header_result){
             headerNav(header_result);
