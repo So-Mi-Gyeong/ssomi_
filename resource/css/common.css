@@ -77,7 +77,8 @@ button {
 
 /* hidden */
 caption,
-input,
+input[type=checkbox],
+input[type=radio],
 .ally-hidden {
   position: absolute !important;
   width: 1px !important;
@@ -560,7 +561,7 @@ table .t_left {
 }
 .ui-content.input .checkbox-area .checkwrap .checkbox .slide .area.terms input:checked + .chk-label::before, .ui-content.input .checkbox-area .checkwrap .checkbox .slide .area.terms input:checked + .small-chk::before {
   border: 1px solid #fbe64c;
-  background: #fbe64c url("../img/ico-checked.png") 50% 50% no-repeat;
+  background: #fbe64c url("./resource/img/ico-checked.png") 50% 50% no-repeat;
   background-size: 50% 50%;
 }
 .ui-content.input .checkbox-area .checkwrap .checkbox .slide .area.terms:last-child {
