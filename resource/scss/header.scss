@@ -3,9 +3,39 @@ body{
     background-color: #000;
 }
 /* ==================================== menu ================================= */
+header{
+    &.blackStyle{
+        .wrap{
+            .menu{
+                .ui-nav{
+                    &::before{
+                        background: url(../img/ico_menu_black.png) 0 0 no-repeat;
+                    }
+                    &.open{
+                        &::before{
+                            background: url(../img/ico_menu_black.png) -36px 0 no-repeat;
+                        }
+                    }
+                }
+                .ui-menuContent{
+                    li{
+                        background-color: #222;
+                        a{
+                            color: #fff;
+                            &:hover{
+                                background-color: #333;
+                            }
+                            &:focus{
+                                background-color: rgb(12, 12, 12);      
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
 .menu{
-    width: 100%;
-    background-color: #000;
     position: relative;
     z-index: 9999;
     .ui-nav{
@@ -33,7 +63,6 @@ body{
             }
         }
     }
-
     .ui-menuContent{
         width: 30%;
         height: 100vh;

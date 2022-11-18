@@ -98,9 +98,26 @@ body {
 }
 
 /* ==================================== menu ================================= */
+header.blackStyle .wrap .menu .ui-nav::before {
+  background: url(../img/ico_menu_black.png) 0 0 no-repeat;
+}
+header.blackStyle .wrap .menu .ui-nav.open::before {
+  background: url(../img/ico_menu_black.png) -36px 0 no-repeat;
+}
+header.blackStyle .wrap .menu .ui-menuContent li {
+  background-color: #222;
+}
+header.blackStyle .wrap .menu .ui-menuContent li a {
+  color: #fff;
+}
+header.blackStyle .wrap .menu .ui-menuContent li a:hover {
+  background-color: #333;
+}
+header.blackStyle .wrap .menu .ui-menuContent li a:focus {
+  background-color: rgb(12, 12, 12);
+}
+
 .menu {
-  width: 100%;
-  background-color: #000;
   position: relative;
   z-index: 9999;
 }

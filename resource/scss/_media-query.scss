@@ -1,0 +1,25 @@
+@charset 'utf-8';
+
+// Breakpoints
+$breakpoint-small: 360px;
+$breakpoint-mobile: 500px;
+$breakpoint-tablet: 758px;
+$breakpoint-desktop: 1360px;
+
+@mixin small {
+    @media (min-width: #{$breakpoint-small}) and (max-width: #{$breakpoint-mobile - 1px}) {
+      @content;
+    }
+  }
+
+@mixin mobile {
+    @media (min-width: #{$breakpoint-mobile}) and (max-width: #{$breakpoint-tablet - 1px}) {
+      @content;
+    }
+  }
+  
+  @mixin tablet {
+    @media (min-width: #{$breakpoint-tablet}) and (max-width: #{$breakpoint-desktop - 1px}) {
+      @content;
+    }
+  }
