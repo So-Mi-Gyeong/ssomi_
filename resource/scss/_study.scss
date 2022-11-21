@@ -501,6 +501,51 @@
                 }
             }
         } 
+        //hover 시 나타나는 툴팁
+        .icon{
+            width: 125px;
+            height: 125px;
+            margin: 10px;
+            position: relative;
+            margin-top: 100px;
+            &:hover{
+                span{
+                    opacity: .8;
+                    transition: .5s;
+                    visibility: visible;
+                }
+            }
+            img{
+                width: 100%;
+            }
+            span{
+                position: absolute;
+                top: -120px;
+                left: 50%;
+                transform: translateX(-50%);
+                text-align: center;
+                padding: 10px;
+                border-radius: 5px;
+                background-color: #000;
+                color: #fff;
+                width: 200px;
+                opacity: 0;
+                transition: .5s;
+                // visibility: visible 대신 pointer-events:none 사용가능
+                visibility: hidden;
+                font-size: 10px;
+                &::after{
+                    content: '';
+                    position: absolute;
+                    bottom: -5px;
+                    left: 50%;
+                    transform: translateX(-50%) rotate(45deg);
+                    background-color: #000;
+                    width: 10px;
+                    height: 10px;
+                }
+            }
+        }
     }
     &.study02{
         width: 100%;
