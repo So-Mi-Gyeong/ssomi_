@@ -1,7 +1,14 @@
 $(document).ready(function () {
-    $('.testimonial-pic img:first-child').addClass('active');
+    /*============================================ study01 - menu(method) ============================================*/
+    $('.study02-menu li').mouseenter(function(){
+      $(this).children('.sub-menu').stop().slideDown();
+    });
+    $('.study02-menu li').mouseleave(function(){
+        $(this).children('.sub-menu').stop().slideUp();
+    });
 
     /*============================================ study02 - jquery1(프로필) ============================================*/
+    $('.testimonial-pic img:first-child').addClass('active');
     $('.testimonial-pic img').click(function () {
       // $('.testimonial-pic img').removeClass('active');
       $(this).addClass('active');
