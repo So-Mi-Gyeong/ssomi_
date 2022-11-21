@@ -1,0 +1,172 @@
+.container{
+    &.accordian{
+        max-width: 500px;
+        margin: 0 auto;
+        padding: 0;
+        font-size: 62.5%;
+        font-family: 'Noto Sans KR', sans-serif;  
+        font-weight: 400;
+        color: #222;
+        letter-spacing: -1px;
+        background-color: #fff;
+        button{
+            background: transparent;
+            border: none;
+            cursor: pointer;
+            &:disabled{
+                background-color: #ddd;
+            }
+        }
+        textarea{
+        line-height: 17.38px;
+        font-size: 1.2em;
+        padding: 16px;
+        background-color: #fff;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        box-sizing: border-box;
+            &:focus{
+                outline: none;
+            }
+        }
+        .terms{
+            position: relative;
+        }
+          /* button */
+        .termsBtn{
+            width: 50px;
+            height: 28px;
+            font-size: 1.4em;
+            font-weight: 500;
+            color: #666;
+            background-color: #f3f3f3;
+            border-radius: 4px;
+            text-align: center;
+            cursor: pointer;
+          }
+          .termsStartBtn{
+            width: 100%;
+            height: 60px;
+            background-color: #019af9;
+            color: #fff;
+            font-size: 1.8em;
+            font-weight: 700;
+            border-radius: 10px;
+          }
+          .accoClick{
+            display: inline-block;
+            width: 16px;
+            height: 16px;
+            background: url('../img/acco-ico-check.png') -38px -5px no-repeat;
+            position: absolute;
+            top: 7px;
+            right: 0;
+            cursor: pointer;
+          }
+          .accoClick.active + .termsBox{
+            display: none;
+          }
+          /* //button */
+        
+          .boxwrap{
+            width: 100%;
+            margin: 0 auto;
+            padding: 48px 24px 24px 24px;
+            box-sizing: border-box;
+            h2{
+                font-size: 3em;
+                font-weight: 400;
+            }
+            p{
+                font-size: 1.6em;
+                color: #666;
+                padding: 20px 0 36px 0;
+            }
+            .accordian-area{
+                &+.accordian-area,
+                &+.termsStartBtn{
+                    margin-top: 32px;
+                }
+                .terms{
+                    > label{
+                        font-size: 1.6em;
+                        font-weight: 500;
+                        display: flex;
+                        align-items: center;
+                        position: relative;
+                        padding-bottom: 19px;
+                        border-bottom: 1px solid #ddd;
+                        &::before{
+                            content: '';
+                            display: inline-block;
+                            width: 24px;
+                            height: 24px;
+                            background: #ddd url('../img/acco-ico-check.png') -5px -2px no-repeat;
+                            border-radius: 50%;
+                            margin-right: 8px;
+                        }
+                    }
+                    > input{
+                        &:checked{
+                            &+label{
+                                &::before{
+                                    background-color: #019af9;
+                                }
+                                &::after{
+                                    background: url('../img/acco-ico-check.png') -67px -5px no-repeat;
+                                }
+                            }
+                        }
+                    }
+                    .termsBox{
+                        .terms-content{
+                            margin-top: 24px;
+                            .terms-subtxt{
+                                display: flex;
+                                align-items: center;
+                                position: relative;
+                                input{
+                                    display: none;
+                                    &:checked{
+                                        &+label{
+                                            &::before{
+                                                background: url('../img/acco-ico-check.png') -10px -33px no-repeat;
+                                            }
+                                        }
+                                    }
+                                }
+                                >label{
+                                    font-size: 1.4em;
+                                    font-weight: 400;
+                                    color: #666;
+                                    &::before{
+                                        content: '';
+                                        display: inline-block;
+                                        width: 16px;
+                                        height: 16px;
+                                        background: url('../img/acco-ico-check.png') -38px -33px no-repeat;
+                                        border-radius: 50%;
+                                        margin-right: 8px;
+                                    }
+                                }
+                                >.termsBtn{
+                                    position: absolute;
+                                    right: 0;
+                                  }
+                            }
+                            >form{
+                                >textarea{
+                                    width: 100%;
+                                    height: 64px;
+                                    color: #666;
+                                    margin-top: 16px; 
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+          }
+    }
+}
+

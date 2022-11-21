@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SSOMI</title>
+    <link rel="stylesheet" href="./resource/css/header.css">
+    <link rel="stylesheet" href="./resource/css/common.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.12.4.min.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="./resource/js/header.js"></script>
+    <script src="./resource/js/ui-script.js"></script>
+</head>
+<body>
+    <header></header>
+    <div class="container accordian">
+      <div class="boxwrap">
+        <h2><strong>건강검진 정보를</strong><br>연동해주세요</h2>
+        <p>건강검진 결과 및 건강분석 서비스 이용을 위한<br>약관에 동의해 주세요.</p>
+        <div class="accordian-area">
+          <div class="terms" id="aa">
+            <input type="checkbox" id="inp01" data-name="aaa" class="ui-check-parent">
+            <label for="inp01">[필수]건강검진 서비스 이용 약관</label>
+            <button type="button" class="accoClick"></button>
+            <div class="termsBox">
+              <div class="terms-content">
+                <div class="terms-subtxt">
+                  <input type="checkbox" id="inp01-1" data-name="aaa" class="ui-check-child">
+                  <label for="inp01-1">건강검진 서비스 이용 약관 동의(필수)</label>
+                  <button type="button" class="termsBtn">보기</button>
+                </div>
+                <form>
+                  <textarea>귀하는 개인(신용)정보의 수집. 이용 및 조회, 제공에 관한 동의를 거부하실 수 있으며, 개인의 신용도 등을 평가하기</textarea>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="accordian-area">
+          <div class="terms" id="bb">
+            <input type="checkbox" id="inp02" data-name="bbb" class="ui-check-parent">
+            <label for="inp02">[필수]건강검진 연동을 위한 개인정보 동의</label>
+            <button type="button" class="accoClick"></button>
+            <div class="termsBox">
+              <div class="terms-content">
+                <div class="terms-subtxt">
+                  <input type="checkbox" id="inp02-1" data-name="bbb" class="ui-check-child">
+                  <label for="inp02-1">개인정보 수집ㆍ이용 동의 (필수)</label>
+                  <button type="button" class="termsBtn">보기</button>
+                </div>
+                <form>
+                  <textarea>귀하는 개인(신용)정보의 수집. 이용 및 조회, 제공에 관한 동의를 거부하실 수 있으며, 개인의 신용도 등을 평가하기</textarea>
+                </form>
+              </div>
+              <div class="terms-content">
+                <div class="terms-subtxt">
+                  <input type="checkbox" id="inp02-2" class="ui-check-child">
+                  <label for="inp02-2">건강정보(민감정보) 수집·이용 동의(필수)</label>
+                  <button type="button" class="termsBtn">보기</button>
+                </div>
+                <form>
+                  <textarea>귀하는 개인(신용)정보의 수집. 이용 및 조회, 제공에 관한 동의를 거부하실 수 있으며, 개인의 신용도 등을 평가하기</textarea>
+                </form>
+              </div>
+              <div class="terms-content">
+                <div class="terms-subtxt">
+                  <input type="checkbox" id="inp02-3" class="ui-check-child">
+                  <label for="inp02-3">개인정보 제3자 제공 동의(필수)</label>
+                  <button type="button" class="termsBtn">보기</button>
+                </div>
+                <form>
+                  <textarea>귀하는 개인(신용)정보의 수집. 이용 및 조회, 제공에 관한 동의를 거부하실 수 있으며, 개인의 신용도 등을 평가하기</textarea>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button type="button" class="termsStartBtn" disabled>시작하기</button>
+      </div>
+    </div>
+    <script>
+      const myAcco = {
+        uiWrap: null,
+        allInp: null,
+        uiParents: null,
+        uiChild: null,
+        accoBtn: null,
+        startBtn: null,
+        btnNum: null,
+        parent_clickNum: null,
+  
+        Init: function () {
+          uiWrap = document.querySelectorAll('.terms')
+          allInp = document.querySelectorAll('.terms input')
+          accoBtn = document.querySelectorAll('.accoClick');
+          uiParents = document.querySelectorAll('.ui-check-parent');
+          uiChild = document.querySelectorAll('.ui-check-child');
+          startBtn = document.querySelector('.termsStartBtn');
+          btnNum = 0;
+          parent_clickNum = 0;
+          const _this = this;
+  
+          //accordian
+          for (var i = 0; i < accoBtn.length; i++) {
+            accoBtn[i].addEventListener('click', function () {
+              this.classList.toggle('active');
+            });
+          }
+          //uiParents : [대분류] {서비스 이용동의, 개인정보 동의}
+          uiParents.forEach(function (uiParent, idx) {
+            //약관에 접근하기 위한 변수 선언
+            const el_wrap = uiParents[idx].closest('.terms');
+            const el_parents = el_wrap.querySelectorAll('.ui-check-parent');
+            const el_child = el_wrap.querySelectorAll('.ui-check-child');
+  
+            let child_clickNum = 0; //개별 약관 클릭한 수 체크
+            /*
+             * [대분류 약관] 컨트롤러
+             */
+            //.ui-check-parent 클릭시 ☆현재 메뉴 또눈 내부 변수가 어떻게 바뀔지 관련된 동작☆
+            uiParent.addEventListener('click', function () {
+              //대분류 및 소분류 클릭수 제어
+              if (this.checked) { //대분류 선택시 
+                parent_clickNum++; //대분류 클릭수 증가
+                child_clickNum = el_child.length //전체 선택되었으니 자식 수 크기만큼 설정
+              } else { //대분류 선택 해제시
+                parent_clickNum--; //대분류 클릭수 감소
+                child_clickNum = 0; //전체 선택 해제되었으니 자식 수 클릭수 초기화
+              }
+            });
+            //.ui-check-parent 클릭 시 ☆다른 메뉴들이 어떻게 변화될 지☆
+            uiParent.addEventListener('change', function () {
+              //(재설정) 자식 버튼 동작
+              el_child.forEach(function (child, idx) {
+                if (el_parents[0].checked) { //대분류 선택 시
+                  child.checked = true; //자식 선택 켜기
+                } else { //대분류 선택 해제 시
+                  child.checked = false; //자식 선택 끄기
+                }
+              });
+              //(재설정) start btn 동작
+              if (parent_clickNum === uiParents.length) { //대분류 동의가 다 눌려졌으면
+                startBtn.disabled = false;
+              } else {
+                startBtn.disabled = true;
+              }
+            });
+  
+            /*
+             * [소분류 약관] 컨트롤러
+             */
+            el_child.forEach(function (child) {
+              child.addEventListener('click', function () {
+                //클릭될 때마다 클릭 수 체크
+                if (this.checked) {
+                  child_clickNum++;
+                } else {
+                  child_clickNum--;
+                }
+              })
+              //c자식 클릭에 따라 변화되는 다른 메뉴를 제어할때 쓰는 이벤트리스너
+              child.addEventListener('change', function () {
+                //(재설정) 대분류 설정
+                if (child_clickNum === el_child.length) { //자식이 다 눌려지면
+                  parent_clickNum++; //대분류 클릭 수 증가
+                  el_parents[0].checked = true; //대분류 선택 켜기
+                } else {
+                  /*
+                    - 삼항연산자
+                    - A = c < d ? c : d
+                    - 해석 : c 가 d보다 작으면 A는 c, 아니라면 A에 d값을 넣어라
+                  */
+                  /*
+                   * 아래 쓰임
+                   * 동작 설명 : 전체 선택되어있다가 자식값 하나라도 해제되면, start btn 버튼을 비활성화해라
+                   *
+                   * 코드 해석
+                   * el_parents[0] 변수 의미 = 대분류 체크박스
+                   *
+                   * 대분류 체크 켜져있을 때, 자식이 클릭이 해제면 대분류 클릭 수를 하나 줄이고
+                   *    ㄴ el_parents[0].checked == true(체크됐으면)면 (parent_clickNum)-1을 넣고
+                   * 대분류 체크 꺼져있을 때, 자식이 클릭이 해제면 그냥 있던 값 그대로 쓰기
+                   *    ㄴ false(체크 안 됐으면) parent_clickNum을 대입해라
+                   */
+                  parent_clickNum = el_parents[0].checked ? (parent_clickNum - 1) : parent_clickNum
+                  el_parents[0].checked = false; //대분류 선택 끄기
+                }
+                //(재설정) start btn 동작
+                if (parent_clickNum === uiParents.length) {
+                  startBtn.disabled = false;
+                } else {
+                  startBtn.disabled = true;
+                }
+              })
+            }); //--el_child 이벤트 리스너 정의 끝
+          }); //uiParent 이벤트 리스너 정의 끝
+        } //--Init 메소드 정의 끝
+      } //--mcAcco 정의 끝
+      myAcco.Init();
+    </script>
+  </body>
+</html>
