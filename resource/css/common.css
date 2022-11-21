@@ -657,9 +657,6 @@ table .t_left {
 .ui-content.study01 .wrap {
   margin-top: 100px;
 }
-.ui-content.study01 .wrap .keyframesBox {
-  background-color: #333;
-}
 .ui-content.study01 .wrap .keyframesBox .loading {
   margin: 0;
   padding-top: 100px;
@@ -835,6 +832,9 @@ table .t_left {
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
 }
+.ui-content.study01 .wrap .keyframesBox .square > div p {
+  font-size: 14px;
+}
 .ui-content.study01 .wrap .keyframesBox .square > div > a {
   color: #fff;
   border: 1px solid #fff;
@@ -845,6 +845,7 @@ table .t_left {
   width: -moz-fit-content;
   width: fit-content;
   margin: 0 auto;
+  margin-top: 20px;
 }
 @-webkit-keyframes circle {
   0% {
