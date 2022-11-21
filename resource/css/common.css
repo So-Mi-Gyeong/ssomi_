@@ -1213,6 +1213,29 @@ table .t_left {
   width: 10px;
   height: 10px;
 }
+.ui-content.study01 .gnb01 a {
+  display: block;
+  font-size: 40px;
+  margin: 20px 0;
+  color: #333;
+}
+.ui-content.study01 .gnb01 a::before {
+  content: "\f105";
+  font-family: fontawesome;
+  margin-right: 10px;
+  opacity: 0;
+}
+.ui-content.study01 .gnb01:hover a {
+  opacity: 0.3;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+.ui-content.study01 .gnb01:hover a:hover {
+  opacity: 1;
+}
+.ui-content.study01 .gnb01:hover a:hover::before {
+  opacity: 1;
+}
 .ui-content.study02 {
   width: 100%;
 }

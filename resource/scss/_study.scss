@@ -546,6 +546,33 @@
                 }
             }
         }
+                //오버한 메뉴 외 나머지 흐려지는 nav
+                .gnb01{
+                    a{
+                        display: block;
+                        font-size: 40px;
+                        margin: 20px 0;
+                        color: #333;
+                        &::before{
+                            content: '\f105';
+                            font-family: fontawesome;
+                            margin-right: 10px;
+                            opacity: 0;
+                        }
+                    }
+                    &:hover{
+                        a{
+                            opacity: .3;
+                            transition: .5s;
+                            &:hover{
+                                opacity: 1;
+                                &::before{
+                                    opacity: 1;
+                                }
+                            }
+                        }
+                    }
+                }
     }
     &.study02{
         width: 100%;
