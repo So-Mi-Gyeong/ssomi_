@@ -1236,6 +1236,91 @@ table .t_left {
 .ui-content.study01 .gnb01:hover a:hover::before {
   opacity: 1;
 }
+.ui-content.study01 .card-effect {
+  margin-bottom: 10rem;
+}
+.ui-content.study01 .card-effect .item {
+  width: 300px;
+  height: 200px;
+  display: inline-block;
+  color: #fff;
+  font-size: 15px;
+  position: relative;
+}
+.ui-content.study01 .card-effect .item:hover .front {
+  top: -50%;
+}
+.ui-content.study01 .card-effect .item:hover .front img {
+  -webkit-animation: ani 1s linear infinite;
+          animation: ani 1s linear infinite;
+}
+.ui-content.study01 .card-effect .item:hover .back {
+  top: 50%;
+  opacity: 1;
+}
+.ui-content.study01 .card-effect .item .front,
+.ui-content.study01 .card-effect .item .back {
+  position: absolute;
+  top: 0;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+.ui-content.study01 .card-effect .item .front {
+  width: 100%;
+  height: inherit;
+  text-align: center;
+  background-color: #000;
+  z-index: 1;
+}
+.ui-content.study01 .card-effect .item .front img {
+  width: auto;
+  height: 75%;
+}
+.ui-content.study01 .card-effect .item .back {
+  background-color: #000;
+  color: #000;
+  height: inherit;
+  text-align: center;
+  padding: 1rem;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  opacity: 0;
+}
+.ui-content.study01 .card-effect .item .back p {
+  margin-bottom: 1rem;
+  color: #fff;
+  font-size: 14px;
+}
+.ui-content.study01 .card-effect .item .back a {
+  background-color: yellowgreen;
+  color: #fff;
+  padding: 5px 15px;
+  border-radius: 20px;
+  font-size: 13px;
+}
+.ui-content.study01 .card-effect .item .back a:hover {
+  background-color: #000;
+}
+@-webkit-keyframes ani {
+  0%, 100% {
+    -webkit-transform: scale(0.9);
+            transform: scale(0.9);
+  }
+  50% {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+}
+@keyframes ani {
+  0%, 100% {
+    -webkit-transform: scale(0.9);
+            transform: scale(0.9);
+  }
+  50% {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+}
 .ui-content.study02 {
   width: 100%;
 }

@@ -546,33 +546,106 @@
                 }
             }
         }
-                //오버한 메뉴 외 나머지 흐려지는 nav
-                .gnb01{
-                    a{
-                        display: block;
-                        font-size: 40px;
-                        margin: 20px 0;
-                        color: #333;
-                        &::before{
-                            content: '\f105';
-                            font-family: fontawesome;
-                            margin-right: 10px;
-                            opacity: 0;
-                        }
-                    }
+        //오버한 메뉴 외 나머지 흐려지는 nav
+        .gnb01{
+            a{
+                display: block;
+                font-size: 40px;
+                margin: 20px 0;
+                color: #333;
+                &::before{
+                    content: '\f105';
+                    font-family: fontawesome;
+                    margin-right: 10px;
+                    opacity: 0;
+                }
+            }
+            &:hover{
+                a{
+                    opacity: .3;
+                    transition: .5s;
                     &:hover{
-                        a{
-                            opacity: .3;
-                            transition: .5s;
-                            &:hover{
-                                opacity: 1;
-                                &::before{
-                                    opacity: 1;
-                                }
-                            }
+                        opacity: 1;
+                        &::before{
+                            opacity: 1;
                         }
                     }
                 }
+            }
+        }
+        //위아래로 분리되는 hover nav effect
+        .card-effect{
+            margin-bottom: 10rem;
+            .item{
+                width: 300px;
+                height: 200px;
+                display: inline-block;
+                color: #fff;
+                font-size: 15px;
+                position: relative;
+                &:hover{
+                    .front{
+                        top: -50%;
+                        img{
+                            animation: ani 1s linear infinite;
+                        }
+                    }
+                    .back{
+                        top: 50%;
+                        opacity: 1;
+                    }
+                }
+                .front, 
+                .back{
+                    position: absolute;
+                    top: 0;
+                    transition: .5s;
+                }
+                .front{
+                    width: 100%;
+                    height: inherit;
+                    text-align: center;
+                    background-color: #000;
+                    z-index: 1;
+                    img{
+                        width: auto;
+                        height: 75%;
+                    }
+                }
+                .back{
+                    background-color: #000;
+                    color: #000;
+                    height: inherit;
+                    text-align: center;
+                    padding: 1rem;
+                    box-sizing: border-box;
+                    opacity: 0;
+                    p{
+                        margin-bottom: 1rem;
+                        color: #fff;
+                        font-size: 14px;
+                    }
+                    a{
+                        background-color: yellowgreen;
+                        color: #fff;
+                        padding: 5px 15px;
+                        border-radius: 20px;
+                        font-size: 13px;
+                        &:hover{
+                            background-color: #000;
+                        }
+                    }
+                }
+            }
+        }
+        @keyframes ani{
+            0%, 100%{
+                transform: scale(0.9);
+            }
+            50%{
+                transform: scale(1.1);
+            }
+        }
     }
     &.study02{
         width: 100%;
