@@ -657,37 +657,6 @@ table .t_left {
 .ui-content.study01 .wrap {
   margin-top: 100px;
 }
-.ui-content.study01 .wrap .dropdown {
-  width: 200px;
-  display: inline-block;
-  padding: 30px;
-}
-.ui-content.study01 .wrap .dropdown .dropdown-btn {
-  width: inherit;
-  padding: 10px;
-  font-size: 18px;
-  background-color: yellowgreen;
-}
-.ui-content.study01 .wrap .dropdown .dropdown-submenu {
-  display: none;
-  width: inherit;
-  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.17);
-          box-shadow: 0 0 10px rgba(0, 0, 0, 0.17);
-  background-color: #000;
-}
-.ui-content.study01 .wrap .dropdown .dropdown-submenu a {
-  display: block;
-  padding: 7px;
-  text-align: center;
-  color: #fff;
-}
-.ui-content.study01 .wrap .dropdown .dropdown-submenu a:hover {
-  background-color: #eee;
-  color: #000;
-}
-.ui-content.study01 .wrap .dropdown:hover .dropdown-submenu {
-  display: block;
-}
 .ui-content.study01 .gnb a {
   width: -webkit-fit-content;
   width: -moz-fit-content;
@@ -1108,6 +1077,37 @@ table .t_left {
 }
 .ui-content.study01 .login button:hover {
   background-color: #207791;
+}
+.ui-content.study01 .dropdown {
+  width: 200px;
+  display: inline-block;
+  padding: 30px;
+}
+.ui-content.study01 .dropdown .dropdown-btn {
+  width: inherit;
+  padding: 10px;
+  font-size: 18px;
+  background-color: yellowgreen;
+}
+.ui-content.study01 .dropdown .dropdown-submenu {
+  display: none;
+  width: inherit;
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.17);
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.17);
+  background-color: #000;
+}
+.ui-content.study01 .dropdown .dropdown-submenu a {
+  display: block;
+  padding: 7px;
+  text-align: center;
+  color: #fff;
+}
+.ui-content.study01 .dropdown .dropdown-submenu a:hover {
+  background-color: #eee;
+  color: #000;
+}
+.ui-content.study01 .dropdown:hover .dropdown-submenu {
+  display: block;
 }
 .ui-content.study01 .items {
   text-align: center;

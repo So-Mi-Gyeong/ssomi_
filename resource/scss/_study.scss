@@ -8,38 +8,6 @@
         box-sizing: border-box;
         .wrap{
             margin-top: 100px;
-            .dropdown{
-                width: 200px;
-                display: inline-block;
-                padding: 30px;
-                .dropdown-btn{
-                    width: inherit;
-                    padding: 10px;
-                    font-size: 18px;
-                    background-color: yellowgreen;
-                }
-                .dropdown-submenu{
-                    display: none;
-                    width: inherit;
-                    box-shadow: 0 0 10px rgba(0, 0, 0, 0.17);
-                    background-color: #000;
-                    a{
-                        display: block;
-                        padding: 7px;
-                        text-align:center;
-                        color: #fff;
-                        &:hover{
-                            background-color: #eee;
-                            color: #000;
-                        }
-                    }
-                }
-                &:hover{
-                    .dropdown-submenu{
-                        display: block;
-                    }
-                }
-            }
         }
         .gnb{
             a{
@@ -442,6 +410,40 @@
                 }
             }
         }
+        
+        .dropdown{
+            width: 200px;
+            display: inline-block;
+            padding: 30px;
+            .dropdown-btn{
+                width: inherit;
+                padding: 10px;
+                font-size: 18px;
+                background-color: yellowgreen;
+            }
+            .dropdown-submenu{
+                display: none;
+                width: inherit;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.17);
+                background-color: #000;
+                a{
+                    display: block;
+                    padding: 7px;
+                    text-align:center;
+                    color: #fff;
+                    &:hover{
+                        background-color: #eee;
+                        color: #000;
+                    }
+                }
+            }
+            &:hover{
+                .dropdown-submenu{
+                    display: block;
+                }
+            }
+        }
+
         //img hover 시 text
         .items{
             text-align: center;
