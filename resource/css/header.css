@@ -125,7 +125,7 @@ header.blackStyle .wrap .menu .ui-menuContent li a:focus {
   width: 30px;
   height: 30px;
   padding: 0;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   -webkit-transition: 0.5s;
