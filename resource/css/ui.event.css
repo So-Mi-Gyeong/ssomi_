@@ -209,6 +209,7 @@
 }
 .popup{
   width: calc(100% - 5em);
+  max-width: 400px;
   background-color: #fff;
   position: absolute;
   top: 50%;
