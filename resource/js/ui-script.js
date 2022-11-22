@@ -1,4 +1,45 @@
 $(document).ready(function(){
+    //*********************** input script(inp_acco.html) ***********************
+    const all = document.querySelector('#chkAll');
+    var inp = document.getElementsByName('chk');
+    var agreeBtn = document.querySelector('.continue-btn');
+    var chknum = 0;
+
+    //전체선택 외 버튼 리스너
+    for (var i =0 ; i < inp.length; i++) {
+        //inp을 클릭 할 때마다 숫자를 증감시켜 전체 체크가 되었는지 파악 후 '전체동의하기'버튼에 checked
+        inp[i].addEventListener("click", function () {
+            if (this.checked) {chknum++;} // this에 checked가 되면 chknum 증가
+            else {chknum--;} // this에 checked가 안되면 chknum 감소
+            if (chknum == inp.length) {all.checked = true} // chknum이 inp.length와 같으면 '전체 동의하기'에 checked
+            else {all.checked = false} // chknum이 inp.length와 같지 않으면 '전체 동의하기'에 checked 해제
+        });
+    }
+
+    //전체선택/해제
+    function clickAll(){
+        for(var i = 0, len = inp.length; i < len; i++){ 
+        if(all.checked == true){ //'전체동의 버튼'에 checked = true 이면
+            inp[i].checked = true; //하위 checkbox에 checked
+            chknum = inp.length // chknum에 inp.length 입력
+        }else{//'전체동의 버튼'에 checked = false 이면
+            inp[i].checked = false; //하위 checkbox에 checked 해제
+            chknum = 0 //chknum 초기화
+        }
+        } 
+    } 
+    all.addEventListener("click", clickAll);
+
+    //동의하고계속하기
+    function agreechk(){
+        for(var i = 0; i < inp.length; i++){
+        all.checked = true; //전체선택 버튼 checked
+        inp[i].checked = true; // 하위 checkbox checked
+        chknum = inp.length; //chknum에 inp.length 입력    
+        }
+    }  
+    agreeBtn.addEventListener("click", agreechk);
+
     //*********************** acco script(inp_acco.html) ***********************
     const myAcco = {
         uiWrap: null,
@@ -118,48 +159,6 @@ $(document).ready(function(){
         } //--Init 메소드 정의 끝
       } //--mcAcco 정의 끝
       myAcco.Init();
-    
-    //*********************** input script(inp_acco.html) ***********************
-    const all = document.querySelector('#chkAll');
-    var inp = document.getElementsByName('chk');
-    var agreeBtn = document.querySelector('.continue-btn');
-    var chknum = 0;
-
-    //전체선택 외 버튼 리스너
-    for (var i =0 ; i < inp.length; i++) {
-        //inp을 클릭 할 때마다 숫자를 증감시켜 전체 체크가 되었는지 파악 후 '전체동의하기'버튼에 checked
-        inp[i].addEventListener("click", function () {
-            if (this.checked) {chknum++;} // this에 checked가 되면 chknum 증가
-            else {chknum--;} // this에 checked가 안되면 chknum 감소
-            if (chknum == inp.length) {all.checked = true} // chknum이 inp.length와 같으면 '전체 동의하기'에 checked
-            else {all.checked = false} // chknum이 inp.length와 같지 않으면 '전체 동의하기'에 checked 해제
-        });
-    }
-
-    //전체선택/해제
-    function clickAll(){
-      for(var i = 0, len = inp.length; i < len; i++){ 
-        if(all.checked == true){ //'전체동의 버튼'에 checked = true 이면
-          inp[i].checked = true; //하위 checkbox에 checked
-          chknum = inp.length // chknum에 inp.length 입력
-        }else{//'전체동의 버튼'에 checked = false 이면
-          inp[i].checked = false; //하위 checkbox에 checked 해제
-          chknum = 0 //chknum 초기화
-        }
-      } 
-    } 
-    all.addEventListener("click", clickAll);
-
-    //동의하고계속하기
-    function agreechk(){
-      for(var i = 0; i < inp.length; i++){
-        all.checked = true; //전체선택 버튼 checked
-        inp[i].checked = true; // 하위 checkbox checked
-        chknum = inp.length; //chknum에 inp.length 입력    
-      }
-    }  
-    agreeBtn.addEventListener("click", agreechk);
-   
 
     //*********************** pagination(accessibility.html) ***********************
     $('.ui-pagination .inner-pagination .link-page').click(function(){
