@@ -996,11 +996,11 @@
             input[id=trigger]{
                 display: none;
                 &:checked{
-                    ~ .sidebar{
+                    & ~ .sidebar{
                         right: 0;
                         transition: 0.3s;
                     }
-                    + label[for=trigger]{
+                    & + label[for=trigger]{
                         right: 310px;
                         transition: 0.3s;
                         span{
@@ -1085,33 +1085,39 @@
             input[name=tabmenu]{
                 display: none;
             }
-            input[id=tab1]:checked{
-                ~ .slide1{
-                    display: block;
-                }
-                ~ .btn{
-                    label[for=tab1]{
-                        background-color: crimson;
+            input[id=tab1]{
+                &:checked{
+                    & ~ .slide1{
+                        display: block;
+                    }
+                    & ~ .btn{
+                        label[for=tab1]{
+                            background-color: crimson;
+                        }
                     }
                 }
             }
-            input[id=tab2]:checked{
-                ~ .slide2{
-                    display: block;
-                }
-                ~ .btn{
-                    label[for=tab2]{
-                        background-color: crimson;
+            input[id=tab2]{
+                &:checked{
+                    & ~ .slide2{
+                        display: block;
+                    }
+                    & ~ .btn{
+                        label[for=tab2]{
+                            background-color: crimson;
+                        }
                     }
                 }
             }
-            input[id=tab3]:checked{
-                ~ .slide3{
-                    display: block;
-                }
-                ~ .btn{
-                    label[for=tab3]{
-                        background-color: crimson;
+            input[id=tab3]{
+                &:checked{
+                    & ~ .slide3{
+                        display: block;
+                    }
+                    & ~ .btn{
+                        label[for=tab3]{
+                            background-color: crimson;
+                        }
                     }
                 }
             }
@@ -1131,36 +1137,42 @@
             input[name=tabmenu2]{
                 display: none;
             }
-            input[id=tab4]:checked{
-                ~ .slide4{
-                    opacity: 1;
-                    visibility: visible;
-                }
-                ~ .btn{
-                    label[for=tab4]{
-                        background-color: crimson;
+            input[id=tab4]{
+                &:checked{
+                    & ~ .slide4{
+                        opacity: 1;
+                        visibility: visible;
+                    }
+                    & ~ .btn{
+                        label[for=tab4]{
+                            background-color: crimson;
+                        }
                     }
                 }
             }
-            input[id=tab5]:checked{
-                ~ .slide5{
-                    opacity: 1;
-                    visibility: visible;
-                }
-                ~ .btn{
-                    label[for=tab5]{
-                        background-color: crimson;
+            input[id=tab5]{
+                &:checked{
+                    & ~ .slide5{
+                        opacity: 1;
+                        visibility: visible;
+                    }
+                    & ~ .btn{
+                        label[for=tab5]{
+                            background-color: crimson;
+                        }
                     }
                 }
             }
-            input[id=tab6]:checked{
-                ~ .slide6{
-                    opacity: 1;
-                    visibility: visible;
-                }
-                ~ .btn{
-                    label[for=tab6]{
-                        background-color: crimson;
+            input[id=tab6]{
+                &:checked{
+                    & ~ .slide6{
+                        opacity: 1;
+                        visibility: visible;
+                    }
+                    & ~ .btn{
+                        label[for=tab6]{
+                            background-color: crimson;
+                        }
                     }
                 }
             }
@@ -1182,60 +1194,66 @@
             input[name=tabmenu3]{
                 display: none;
             }
-            input[id=tab7]:checked{
-                ~ .slide7{
-                    opacity: 1;
-                    visibility: visible;
-                    left: 0;
-                }
-                ~ .btn{
-                    label[for=tab7]{
-                        background-color: crimson;
-                    }
-                }
-                ~ .heading{
-                    .text1{
+            input[id=tab7]{
+                &:checked{
+                   & ~ .slide7{
                         opacity: 1;
-                        transform: translateY(0);
-                        transition-delay: .5s;
+                        visibility: visible;
+                        left: 0;
+                    }
+                    & ~ .btn{
+                        label[for=tab7]{
+                            background-color: crimson;
+                        }
+                    }
+                    & ~ .heading{
+                        .text1{
+                            opacity: 1;
+                            transform: translateY(0);
+                            transition-delay: .5s;
+                        }
                     }
                 }
             }
-            input[id=tab8]:checked{
-                ~ .slide8{
-                    opacity: 1;
-                    visibility: visible;
-                    left: 0;
-                }
-                ~ .btn{
-                    label[for=tab8]{
-                        background-color: crimson;
-                    }
-                }
-                ~ .heading{
-                    .text2{
+            input[id=tab8]{
+                &:checked{
+                    & ~ .slide8{
                         opacity: 1;
-                        transform: translateY(0);
-                        transition-delay: .5s;
+                        visibility: visible;
+                        left: 0;
+                    }
+                    & ~ .btn{
+                        label[for=tab8]{
+                            background-color: crimson;
+                        }
+                    }
+                    & ~ .heading{
+                        .text2{
+                            opacity: 1;
+                            transform: translateY(0);
+                            transition-delay: .5s;
+                        }
                     }
                 }
             }
-            input[id=tab9]:checked{
-                ~ .slide9{
-                    opacity: 1;
-                    visibility: visible;
-                    left: 0;
-                }
-                ~ .btn{
-                    label[for=tab9]{
-                        background-color: crimson;
-                    }
-                }
-                ~ .heading{
-                    .text3{
+            input[id=tab9]{
+                &:checked{
+                    & ~ .slide9{
                         opacity: 1;
-                        transform: translateY(0);
-                        transition-delay: .5s;
+                        visibility: visible;
+                        left: 0;
+                    }
+                    & ~ .btn{
+                        label[for=tab9]{
+                            background-color: crimson;
+                        }
+                    }
+                    & ~ .heading{
+                        .text3{
+                            opacity: 1;
+                            transform: translateY(0);
+                            transition-delay: .5s;
+                        }
                     }
                 }
             }
@@ -1289,39 +1307,45 @@
             input[name=tabmenu4]{
                 display: none;
             }
-            input[id=tab10]:checked{
-                ~ .slide{
-                    .slide-inner{
-                        left: 0;
+            input[id=tab10]{
+                &:checked{
+                    & ~ .slide{
+                        .slide-inner{
+                            left: 0;
+                        }
                     }
-                }
-                ~.btn{
-                    label[for=tab10]{
-                        background-color: crimson;
-                    }
-                }
-            }
-            input[id=tab11]:checked{
-                ~ .slide{
-                    .slide-inner{
-                        left: -300px;
-                    }
-                }
-                ~.btn{
-                    label[for=tab11]{
-                        background-color: crimson;
+                    & ~.btn{
+                        label[for=tab10]{
+                            background-color: crimson;
+                        }
                     }
                 }
             }
-            input[id=tab12]:checked{
-                ~ .slide{
-                    .slide-inner{
-                        left: -600px;
+            input[id=tab11]{
+                &:checked{
+                    & ~ .slide{
+                        .slide-inner{
+                            left: -300px;
+                        }
+                    }
+                    & ~ .btn{
+                        label[for=tab11]{
+                            background-color: crimson;
+                        }
                     }
                 }
-                ~.btn{
-                    label[for=tab12]{
-                        background-color: crimson;
+            }
+            input[id=tab12]{
+                &:checked{
+                    & ~ .slide{
+                        .slide-inner{
+                            left: -600px;
+                        }
+                    }
+                    & ~ .btn{
+                        label[for=tab12]{
+                            background-color: crimson;
+                        }
                     }
                 }
             }
@@ -1359,42 +1383,48 @@
             input[name=tebmenu4]{
                 display: none;
             }
-            input[id=tab13]:checked{
-                ~ .tabs{
-                    .items{
-                        left: 0;
+            input[id=tab13]{
+                &:checked{
+                   & ~ .tabs{
+                        .items{
+                            left: 0;
+                        }
                     }
-                }
-                ~ .btn{
-                    label[for=tab13]{
-                        background-color: crimson;
-                        border-radius: 50%;
-                    }
-                }
-            }
-            input[id=tab14]:checked{
-                ~ .tabs{
-                    .items{
-                        left: -800px;
-                    }
-                }
-                ~ .btn{
-                    label[for=tab14]{
-                        background-color: crimson;
-                        border-radius: 50%;
+                    & ~ .btn{
+                        label[for=tab13]{
+                            background-color: crimson;
+                            border-radius: 50%;
+                        }
                     }
                 }
             }
-            input[id=tab15]:checked{
-                ~ .tabs{
-                    .items{
-                        left: -1600px;
+            input[id=tab14]{
+                &:checked{
+                    & ~ .tabs{
+                        .items{
+                            left: -800px;
+                        }
+                    }
+                    & ~ .btn{
+                        label[for=tab14]{
+                            background-color: crimson;
+                            border-radius: 50%;
+                        }
                     }
                 }
-                ~ .btn{
-                    label[for=tab15]{
-                        background-color: crimson;
-                        border-radius: 50%;
+            }
+            input[id=tab15]{
+                &:checked{
+                    & ~ .tabs{
+                        .items{
+                            left: -1600px;
+                        }
+                    }
+                    & ~ .btn{
+                        label[for=tab15]{
+                            background-color: crimson;
+                            border-radius: 50%;
+                        }
                     }
                 }
             }
@@ -1469,29 +1499,33 @@
                     }
                 }
             }
-            input[id=tab17]:checked{
-                ~ .tabs{
-                    .items{
-                        top: -400px;
+            input[id=tab17]{
+                &:checked{
+                    & ~ .tabs{
+                        .items{
+                            top: -400px;
+                        }
                     }
-                }
-                ~ .btn{
-                    label[for=tab17]{
-                        background-color: crimson;
-                        border-radius: 50%;
+                    & ~ .btn{
+                        label[for=tab17]{
+                            background-color: crimson;
+                            border-radius: 50%;
+                        }
                     }
                 }
             }
-            input[id=tab18]:checked{
-                ~ .tabs{
-                    .items{
-                        top: -800px;
+            input[id=tab18]{
+                &:checked{
+                    & ~ .tabs{
+                        .items{
+                            top: -800px;
+                        }
                     }
-                }
-                ~ .btn{
-                    label[for=tab18]{
-                        background-color: crimson;
-                        border-radius: 50%;
+                    & ~ .btn{
+                        label[for=tab18]{
+                            background-color: crimson;
+                            border-radius: 50%;
+                        }
                     }
                 }
             }
@@ -1628,42 +1662,46 @@
                     }
                 }
             }
-            input[id=tab23]:checked{
-                ~ .tabs{
-                    .items{
-                        left: -100%;
-                        div{
-                            &:nth-child(2){
-                                h1{
-                                    transform: translateY(-260px);
-                                    opacity: 1;
+            input[id=tab23]{
+                &:checked{
+                    & ~ .tabs{
+                        .items{
+                            left: -100%;
+                            div{
+                                &:nth-child(2){
+                                    h1{
+                                        transform: translateY(-260px);
+                                        opacity: 1;
+                                    }
                                 }
                             }
                         }
-                    }
-                    .slide2-btn{
-                        label[for=tab23]{
-                            color: crimson;
+                        .slide2-btn{
+                            label[for=tab23]{
+                                color: crimson;
+                            }
                         }
                     }
                 }
             }
-            input[id=tab24]:checked{
-                ~ .tabs{
-                    .items{
-                        left: -200%;
-                        div{
-                            &:nth-child(3){
-                                h1{
-                                    transform: translateY(-260px);
-                                    opacity: 1;
+            input[id=tab24]{
+                &:checked{
+                    & ~ .tabs{
+                        .items{
+                            left: -200%;
+                            div{
+                                &:nth-child(3){
+                                    h1{
+                                        transform: translateY(-260px);
+                                        opacity: 1;
+                                    }
                                 }
                             }
                         }
-                    }
-                    .slide2-btn{
-                        label[for=tab24]{
-                            color: crimson;
+                        .slide2-btn{
+                            label[for=tab24]{
+                                color: crimson;
+                            }
                         }
                     }
                 }
