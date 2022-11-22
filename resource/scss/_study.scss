@@ -334,7 +334,7 @@
             input[type=checkbox]{
                 display: none;
                 &:checked{
-                    + label[for=agree-chk]{
+                   &+label[for=agree-chk]{
                         em{
                             background-position: right center;
                         }
@@ -360,7 +360,7 @@
             input[type=radio]{
                 display: none;
                 &:checked{
-                    + label{
+                    &+label{
                         color: rgba(220, 20, 60, 0.522);
                         em{
                             background-position: right center;
@@ -387,7 +387,7 @@
             input[type=checkbox]{
                 display: none;
                 &:checked{
-                    + label{
+                    &+label{
                         &::before{
                             color: #fff;
                             background-color: crimson;
@@ -395,7 +395,7 @@
                         }
                     }
                 }
-                + label:active{
+                &+label:active{
                     &::before{
                         transform: scale(0);
                     }
@@ -613,7 +613,6 @@
             }
         }
 
-        //img hover 시 text
         .items{
             text-align: center;
             .item{
@@ -670,7 +669,7 @@
                 }
             }
         } 
-        //hover 시 나타나는 툴팁
+
         .icon{
             width: 125px;
             height: 125px;
@@ -715,7 +714,7 @@
                 }
             }
         }
-        //오버한 메뉴 외 나머지 흐려지는 nav
+
         .gnb01{
             a{
                 display: block;
@@ -742,7 +741,7 @@
                 }
             }
         }
-        //위아래로 분리되는 hover nav effect
+
         .card-effect{
             margin-bottom: 10rem;
             .item{
@@ -815,917 +814,918 @@
                 transform: scale(1.1);
             }
         }
-                //progress bar 
-                .skill-progress{
-                    width: 500px;
-                    padding: 20px;
-                    background-color: #333;
-                    border-radius: 10px;
-                    color: #fff;
-                    box-shadow: 0 20px 50px rgba(0, 0, 0, .08);
-                    &:first-child{
-                        margin-right: 10px;
-                    }
-                    h2{
-                        text-align: center;
-                        margin: 10px 0 20px 0;
-                        font-size: 30px;
-                    }
-                    .item{
-                        margin-bottom: 10px;
-                        p{
-                            overflow: hidden;
-                            margin-bottom: 5px;
-                            span{
-                                &:nth-child(1){
-                                    float: left;
-                                }
-                                &:nth-child(2){
-                                    float: right;
-                                }
-                            }
-                        }
-                        .progress{
-                            border: 1px solid #6cd4c4;
-                            padding: 5px;
-                            border-radius: 3px;
-                            .progress-level{
-                                height: 10px;
-                                background: linear-gradient(to right, crimson, gold);
-                                animation-name: progressbar;
-                                animation-duration: 1s;
-                            }
-                        }
-                    }
-                }
-                @keyframes progressbar{
-                    0%{
-                        width: 0;
-                    }
-                }
-        
-                //progress delaybar 
-                .delay{
-                    .item{
-                        .progress{
-                            .progress-level{
-                                /*animation-name: ani;
-                                animation-duration: 1s;
-                                animation-iteration-count: 1;*/
-                                // animation: ani 1s;
-                                animation-fill-mode: both; /*정해진 반복횟수가 끝나면 100%에 머물러라*/
-                            }
-                        }
-                        &:nth-of-type(1){
-                            .progress{
-                                .progress-level{
-                                    animation-delay: 0s;
-                                }
-                            }
-                        }
-                        &:nth-of-type(2){
-                            .progress{
-                                .progress-level{
-                                    animation-delay: .2s;
-                                }
-                            }
-                        }
-                        &:nth-of-type(3){
-                            .progress{
-                                .progress-level{
-                                    animation-delay: .4s;
-                                }
-                            }
-                        }
-                        &:nth-of-type(4){
-                            .progress{
-                                .progress-level{
-                                    animation-delay: .6s;
-                                }
-                            }
-                        }
-                        &:nth-of-type(5){
-                            .progress{
-                                .progress-level{
-                                    animation-delay: .8s;
-                                }
-                            }
-                        }
-                    }
-                }
-                @keyframes progressbar{
-                    0%{
-                        width: 0;
-                    }
-                }
-        
-                //flex layout img accordion navigation
-                .gallery{
-                    display: flex;
-                    height: 100vh;
-                    padding: 0;
-                    li{
-                        border-right: 5px solid #000;
-                        flex: 1;
-                        transition: .5s;
-                        position: relative;
-                        overflow: hidden;
+
+        .skill-progress{
+            width: 500px;
+            padding: 20px;
+            background-color: #333;
+            border-radius: 10px;
+            color: #fff;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, .08);
+            &:first-child{
+                margin-right: 10px;
+            }
+            h2{
+                text-align: center;
+                margin: 10px 0 20px 0;
+                font-size: 30px;
+            }
+            .item{
+                margin-bottom: 10px;
+                p{
+                    overflow: hidden;
+                    margin-bottom: 5px;
+                    span{
                         &:nth-child(1){
-                            background: url('../img/artistic-image-01.jpg') 0 0 no-repeat;
-                            background-size: 100% 100%;
+                            float: left;
                         }
                         &:nth-child(2){
-                            background: url('../img/artistic-image-02.jpg') 0 0 no-repeat;
-                            background-size: 100% 100%;
-                        }
-                        &:nth-child(3){
-                            background: url('../img/artistic-image-03.jpg') 0 0 no-repeat;
-                            background-size: 100% 100%;}
-                        &:nth-child(4){
-                            background: url('../img/artistic-image-04.jpg') 0 0 no-repeat;
-                            background-size: 100% 100%;}
-                        &:nth-child(5){
-                            background: url('../img/artistic-image-05.jpg') 0 0 no-repeat;
-                            background-size: 100% 100%;}
-                        &:last-child{
-                            border-right: none;
-                        }
-                        &:hover{
-                            flex: 3;
-                            filter: grayscale(1);
-                            .content{
-                                bottom: 0;
-                                transition-delay: .5s;
-                            }
-                        }
-                        .content{
-                            height: 150px;
-                            position: absolute;
-                            bottom: -250px;
-                            background-color: #000;
-                            color: #fff;
-                            text-align: center;
-                            transition: .5s;
-                            padding: 20px;
-                            box-sizing: border-box;
-                            padding-top: 20px;
-                            h2{
-                                margin: 10px;
-                            }
-                            .sns{
-                                a{
-                                    color: #333;
-                                }
-                            }
-                            &::before{
-                                content: '';
-                                width: 100%;
-                                height: 60px;
-                                position: absolute;
-                                top: -30px;
-                                left: 0;
-                                transform: rotate(-3deg) scale(1.3);
-                                transform-origin: left bottom;
-                                background-color: #000;
-                                
-                            }
+                            float: right;
                         }
                     }
                 }
-        
-                //side-menu
-                .side-menu{
-                    input[id=trigger]{
-                        display: none;
-                        &:checked{
-                            ~ .sidebar{
-                                right: 0;
-                                transition: 0.3s;
-                            }
-                            + label[for=trigger]{
-                                right: 310px;
-                                transition: 0.3s;
-                                span{
-                                    &:nth-child(1){
-                                        top: 50%;
-                                        transform: rotate(45deg);
-                                    }
-                                    &:nth-child(2){
-                                        opacity: 0;
-                                    }
-                                    &:nth-child(3){
-                                        top: 50%;
-                                        transform: rotate(-45deg);
-                                    }
-                                }
-                            }
-                        }
-                    }
-                    label[for=trigger]{
-                        width: 30px;
-                        height: 20px;
-                        display: block;
-                        position: absolute;
-                        top: 50%;
-                        right: 10px;
-                        transform: translateY(-50%);
-                        cursor: pointer;
-                    }
-                    label[for=trigger] span{
-                        position: absolute;
-                        height: 2px;
-                        background-color: #000;
-                        width: 100%;
-                        left: 0;
-                        transition: 0.3s;
-                        &:nth-child(1){
-                            top: 0;
-                        }
-                        &:nth-child(2){
-                            top: 50%;
-                        }
-                        &:nth-child(3){
-                            top: 100%;
-                        }
-                    }
-                    .sidebar{
-                        background-color: #000;
-                        width: 300px;
-                        height: 100vh;
-                        position: fixed;
-                        top: 0;
-                        right:-300px;
-                        transition: 0.3s;
+                .progress{
+                    border: 1px solid #6cd4c4;
+                    padding: 5px;
+                    border-radius: 3px;
+                    .progress-level{
+                        height: 10px;
+                        background: linear-gradient(to right, crimson, gold);
+                        animation-name: progressbar;
+                        animation-duration: 1s;
                     }
                 }
-                @mixin btn {
-                    width: 100%;
+            }
+        }
+        @keyframes progressbar{
+            0%{
+                width: 0;
+            }
+        }
+
+        .delay{
+            .item{
+                .progress{
+                    .progress-level{
+                        /*animation-name: ani;
+                        animation-duration: 1s;
+                        animation-iteration-count: 1;*/
+                        // animation: ani 1s;
+                        animation-fill-mode: both; /*정해진 반복횟수가 끝나면 100%에 머물러라*/
+                    }
+                }
+                &:nth-of-type(1){
+                    .progress{
+                        .progress-level{
+                            animation-delay: 0s;
+                        }
+                    }
+                }
+                &:nth-of-type(2){
+                    .progress{
+                        .progress-level{
+                            animation-delay: .2s;
+                        }
+                    }
+                }
+                &:nth-of-type(3){
+                    .progress{
+                        .progress-level{
+                            animation-delay: .4s;
+                        }
+                    }
+                }
+                &:nth-of-type(4){
+                    .progress{
+                        .progress-level{
+                            animation-delay: .6s;
+                        }
+                    }
+                }
+                &:nth-of-type(5){
+                    .progress{
+                        .progress-level{
+                            animation-delay: .8s;
+                        }
+                    }
+                }
+            }
+        }
+        @keyframes progressbar{
+            0%{
+                width: 0;
+            }
+        }
+
+        //flex layout img accordion navigation
+        .gallery{
+            display: flex;
+            height: 100vh;
+            padding: 0;
+            li{
+                border-right: 5px solid #000;
+                flex: 1;
+                transition: .5s;
+                position: relative;
+                overflow: hidden;
+                &:nth-child(1){
+                    background: url('../img/artistic-image-01.jpg') 0 0 no-repeat;
+                    background-size: 100% 100%;
+                }
+                &:nth-child(2){
+                    background: url('../img/artistic-image-02.jpg') 0 0 no-repeat;
+                    background-size: 100% 100%;
+                }
+                &:nth-child(3){
+                    background: url('../img/artistic-image-03.jpg') 0 0 no-repeat;
+                    background-size: 100% 100%;}
+                &:nth-child(4){
+                    background: url('../img/artistic-image-04.jpg') 0 0 no-repeat;
+                    background-size: 100% 100%;}
+                &:nth-child(5){
+                    background: url('../img/artistic-image-05.jpg') 0 0 no-repeat;
+                    background-size: 100% 100%;}
+                &:last-child{
+                    border-right: none;
+                }
+                &:hover{
+                    flex: 3;
+                    filter: grayscale(1);
+                    .content{
+                        bottom: 0;
+                        transition-delay: .5s;
+                    }
+                }
+                .content{
+                    height: 150px;
                     position: absolute;
-                    bottom: 0;
+                    bottom: -250px;
+                    background-color: #000;
+                    color: #fff;
                     text-align: center;
+                    transition: .5s;
+                    padding: 20px;
                     box-sizing: border-box;
-                    background: none;
-                    label{
-                        width: 20px;
-                        height: 20px;
-                        background-color: lightgray;
-                        display: inline-block;
-                        border-radius: 50%;
-                        cursor: pointer;
-                    }
-                }
-        
-                //tab-con
-                .tab-inner{
-                    width: 300px;
-                    height: 350px;
-                    position: relative;
-                    margin-right: 10px;
-                    &:last-child{
-                        margin-right: 0;
-                    }
-                    input[name=tabmenu]{
-                        display: none;
-                    }
-                    input[id=tab1]:checked{
-                        ~ .slide1{
-                            display: block;
-                        }
-                        ~ .btn{
-                            label[for=tab1]{
-                                background-color: crimson;
-                            }
-                        }
-                    }
-                    input[id=tab2]:checked{
-                        ~ .slide2{
-                            display: block;
-                        }
-                        ~ .btn{
-                            label[for=tab2]{
-                                background-color: crimson;
-                            }
-                        }
-                    }
-                    input[id=tab3]:checked{
-                        ~ .slide3{
-                            display: block;
-                        }
-                        ~ .btn{
-                            label[for=tab3]{
-                                background-color: crimson;
-                            }
-                        }
-                    }
-                    .content{
-                        display: none;
-                        img{
-                            width: 100%;
-                        }
-                    }
-                    .btn{
-                        @include btn();
-                    }
-                }
-        
-                //tab-con opacity
-                .opacity{
-                    input[name=tabmenu2]{
-                        display: none;
-                    }
-                    input[id=tab4]:checked{
-                        ~ .slide4{
-                            opacity: 1;
-                            visibility: visible;
-                        }
-                        ~ .btn{
-                            label[for=tab4]{
-                                background-color: crimson;
-                            }
-                        }
-                    }
-                    input[id=tab5]:checked{
-                        ~ .slide5{
-                            opacity: 1;
-                            visibility: visible;
-                        }
-                        ~ .btn{
-                            label[for=tab5]{
-                                background-color: crimson;
-                            }
-                        }
-                    }
-                    input[id=tab6]:checked{
-                        ~ .slide6{
-                            opacity: 1;
-                            visibility: visible;
-                        }
-                        ~ .btn{
-                            label[for=tab6]{
-                                background-color: crimson;
-                            }
-                        }
-                    }
-                    .content{
-                        display: block;
-                        width: 100%;
-                        position: absolute;
-                        top: 0;
-                        left: 0;
-                        opacity: 0;
-                        transition: .5s;
-                        visibility: hidden;
-                    }
-                }
-        
-                //tab-con opacity2
-                .opacity2{
-                    overflow: hidden;
-                    input[name=tabmenu3]{
-                        display: none;
-                    }
-                    input[id=tab7]:checked{
-                        ~ .slide7{
-                            opacity: 1;
-                            visibility: visible;
-                            left: 0;
-                        }
-                        ~ .btn{
-                            label[for=tab7]{
-                                background-color: crimson;
-                            }
-                        }
-                        ~ .heading{
-                            .text1{
-                                opacity: 1;
-                                transform: translateY(0);
-                                transition-delay: .5s;
-                            }
-                        }
-                    }
-                    input[id=tab8]:checked{
-                        ~ .slide8{
-                            opacity: 1;
-                            visibility: visible;
-                            left: 0;
-                        }
-                        ~ .btn{
-                            label[for=tab8]{
-                                background-color: crimson;
-                            }
-                        }
-                        ~ .heading{
-                            .text2{
-                                opacity: 1;
-                                transform: translateY(0);
-                                transition-delay: .5s;
-                            }
-                        }
-                    }
-                    input[id=tab9]:checked{
-                        ~ .slide9{
-                            opacity: 1;
-                            visibility: visible;
-                            left: 0;
-                        }
-                        ~ .btn{
-                            label[for=tab9]{
-                                background-color: crimson;
-                            }
-                        }
-                        ~ .heading{
-                            .text3{
-                                opacity: 1;
-                                transform: translateY(0);
-                                transition-delay: .5s;
-                            }
-                        }
-                    }
-                    .content{
-                        display: block;
-                        width: 100%;
-                        position: absolute;
-                        top: 0;
-                        left: -50px;
-                        opacity: 0;
-                        transition: .5s;
-                        visibility: hidden;
-                    }
-                    .heading{
-                        .text1,
-                        .text2,
-                        .text3{
-                            width: 100px;
-                            height: 100px;
-                            position: absolute;
-                            top: 20px;
-                            left: 20px;
-                            transform: translateY(-50px);
-                            color: #fff;
-                            font-size: 30px;
-                            text-align:center;
-                            font-weight: bold;
-                            background-color: crimson;
-                            border-radius: 50%;
-                            padding-top: 12px;
-                            box-sizing: border-box;
-                            opacity: 0;
-                            transition: .5s;
-                            span{
-                                font-size: 20px;
-                                display: block;
-                                margin-top: 5px;
-                            }
-                        }
-                        .text2{
-                            background-color: dodgerblue;
-                        }
-                        .text3{
-                            background-color: yellowgreen;
-                        }
-                    }
-                }
-        
-                //tab-slide
-                .tab-slide{
-                    input[name=tabmenu4]{
-                        display: none;
-                    }
-                    input[id=tab10]:checked{
-                        ~ .slide{
-                            .slide-inner{
-                                left: 0;
-                            }
-                        }
-                        ~.btn{
-                            label[for=tab10]{
-                                background-color: crimson;
-                            }
-                        }
-                    }
-                    input[id=tab11]:checked{
-                        ~ .slide{
-                            .slide-inner{
-                                left: -300px;
-                            }
-                        }
-                        ~.btn{
-                            label[for=tab11]{
-                                background-color: crimson;
-                            }
-                        }
-                    }
-                    input[id=tab12]:checked{
-                        ~ .slide{
-                            .slide-inner{
-                                left: -600px;
-                            }
-                        }
-                        ~.btn{
-                            label[for=tab12]{
-                                background-color: crimson;
-                            }
-                        }
-                    }
-                    .slide{
-                        width: 300px;
-                        height: 300px;
-                        position: relative;
-                        overflow: hidden;
-                        .slide-inner{
-                            width: 900px;
-                            font-size: 0;
-                            position: absolute;
-                            top: 0;
-                            left: 0;
-                            transition: .5s;
-                            a{
-                                img{
-                                    width: 300px;
-                                    height: 300px;
-                                }
-                            }
-                        }
-                    }
-                }
-        
-                //testimonial slide
-                .testimonial{
-                    height: 500px;
-                    overflow: hidden;
+                    padding-top: 20px;
                     h2{
-                        font-size: 30px;
-                        margin: 10px 0;
-                        text-align: center;
+                        margin: 10px;
                     }
-                    input[name=tebmenu4]{
-                        display: none;
-                    }
-                    input[id=tab13]:checked{
-                        ~ .tabs{
-                            .items{
-                                left: 0;
-                            }
-                        }
-                        ~ .btn{
-                            label[for=tab13]{
-                                background-color: crimson;
-                                border-radius: 50%;
-                            }
+                    .sns{
+                        a{
+                            color: #333;
                         }
                     }
-                    input[id=tab14]:checked{
-                        ~ .tabs{
-                            .items{
-                                left: -800px;
+                    &::before{
+                        content: '';
+                        width: 100%;
+                        height: 60px;
+                        position: absolute;
+                        top: -30px;
+                        left: 0;
+                        transform: rotate(-3deg) scale(1.3);
+                        transform-origin: left bottom;
+                        background-color: #000;
+                        
+                    }
+                }
+            }
+        }
+        
+        //side-menu
+        .side-menu{
+            input[id=trigger]{
+                display: none;
+                &:checked{
+                    ~ .sidebar{
+                        right: 0;
+                        transition: 0.3s;
+                    }
+                    + label[for=trigger]{
+                        right: 310px;
+                        transition: 0.3s;
+                        span{
+                            &:nth-child(1){
+                                top: 50%;
+                                transform: rotate(45deg);
                             }
-                        }
-                        ~ .btn{
-                            label[for=tab14]{
-                                background-color: crimson;
-                                border-radius: 50%;
+                            &:nth-child(2){
+                                opacity: 0;
+                            }
+                            &:nth-child(3){
+                                top: 50%;
+                                transform: rotate(-45deg);
                             }
                         }
                     }
-                    input[id=tab15]:checked{
-                        ~ .tabs{
-                            .items{
-                                left: -1600px;
-                            }
-                        }
-                        ~ .btn{
-                            label[for=tab15]{
-                                background-color: crimson;
-                                border-radius: 50%;
-                            }
+                }
+            }
+            label[for=trigger]{
+                width: 30px;
+                height: 20px;
+                display: block;
+                position: absolute;
+                top: 50%;
+                right: 10px;
+                transform: translateY(-50%);
+                cursor: pointer;
+            }
+            label[for=trigger] span{
+                position: absolute;
+                height: 2px;
+                background-color: #000;
+                width: 100%;
+                left: 0;
+                transition: 0.3s;
+                &:nth-child(1){
+                    top: 0;
+                }
+                &:nth-child(2){
+                    top: 50%;
+                }
+                &:nth-child(3){
+                    top: 100%;
+                }
+            }
+            .sidebar{
+                background-color: #000;
+                width: 300px;
+                height: 100vh;
+                position: fixed;
+                top: 0;
+                right:-300px;
+                transition: 0.3s;
+            }
+        }
+        @mixin btn {
+            width: 100%;
+            position: absolute;
+            bottom: 0;
+            text-align: center;
+            box-sizing: border-box;
+            background: none;
+            label{
+                width: 20px;
+                height: 20px;
+                background-color: lightgray;
+                display: inline-block;
+                border-radius: 50%;
+                cursor: pointer;
+            }
+        }
+
+        //tab-con
+        .tab-inner{
+            width: 300px;
+            height: 350px;
+            position: relative;
+            margin-right: 10px;
+            &:last-child{
+                margin-right: 0;
+            }
+            input[name=tabmenu]{
+                display: none;
+            }
+            input[id=tab1]:checked{
+                ~ .slide1{
+                    display: block;
+                }
+                ~ .btn{
+                    label[for=tab1]{
+                        background-color: crimson;
+                    }
+                }
+            }
+            input[id=tab2]:checked{
+                ~ .slide2{
+                    display: block;
+                }
+                ~ .btn{
+                    label[for=tab2]{
+                        background-color: crimson;
+                    }
+                }
+            }
+            input[id=tab3]:checked{
+                ~ .slide3{
+                    display: block;
+                }
+                ~ .btn{
+                    label[for=tab3]{
+                        background-color: crimson;
+                    }
+                }
+            }
+            .content{
+                display: none;
+                img{
+                    width: 100%;
+                }
+            }
+            .btn{
+                @include btn();
+            }
+        }
+
+        //tab-con opacity
+        .opacity{
+            input[name=tabmenu2]{
+                display: none;
+            }
+            input[id=tab4]:checked{
+                ~ .slide4{
+                    opacity: 1;
+                    visibility: visible;
+                }
+                ~ .btn{
+                    label[for=tab4]{
+                        background-color: crimson;
+                    }
+                }
+            }
+            input[id=tab5]:checked{
+                ~ .slide5{
+                    opacity: 1;
+                    visibility: visible;
+                }
+                ~ .btn{
+                    label[for=tab5]{
+                        background-color: crimson;
+                    }
+                }
+            }
+            input[id=tab6]:checked{
+                ~ .slide6{
+                    opacity: 1;
+                    visibility: visible;
+                }
+                ~ .btn{
+                    label[for=tab6]{
+                        background-color: crimson;
+                    }
+                }
+            }
+            .content{
+                display: block;
+                width: 100%;
+                position: absolute;
+                top: 0;
+                left: 0;
+                opacity: 0;
+                transition: .5s;
+                visibility: hidden;
+            }
+        }
+
+        //tab-con opacity2
+        .opacity2{
+            overflow: hidden;
+            input[name=tabmenu3]{
+                display: none;
+            }
+            input[id=tab7]:checked{
+                ~ .slide7{
+                    opacity: 1;
+                    visibility: visible;
+                    left: 0;
+                }
+                ~ .btn{
+                    label[for=tab7]{
+                        background-color: crimson;
+                    }
+                }
+                ~ .heading{
+                    .text1{
+                        opacity: 1;
+                        transform: translateY(0);
+                        transition-delay: .5s;
+                    }
+                }
+            }
+            input[id=tab8]:checked{
+                ~ .slide8{
+                    opacity: 1;
+                    visibility: visible;
+                    left: 0;
+                }
+                ~ .btn{
+                    label[for=tab8]{
+                        background-color: crimson;
+                    }
+                }
+                ~ .heading{
+                    .text2{
+                        opacity: 1;
+                        transform: translateY(0);
+                        transition-delay: .5s;
+                    }
+                }
+            }
+            input[id=tab9]:checked{
+                ~ .slide9{
+                    opacity: 1;
+                    visibility: visible;
+                    left: 0;
+                }
+                ~ .btn{
+                    label[for=tab9]{
+                        background-color: crimson;
+                    }
+                }
+                ~ .heading{
+                    .text3{
+                        opacity: 1;
+                        transform: translateY(0);
+                        transition-delay: .5s;
+                    }
+                }
+            }
+            .content{
+                display: block;
+                width: 100%;
+                position: absolute;
+                top: 0;
+                left: -50px;
+                opacity: 0;
+                transition: .5s;
+                visibility: hidden;
+            }
+            .heading{
+                .text1,
+                .text2,
+                .text3{
+                    width: 100px;
+                    height: 100px;
+                    position: absolute;
+                    top: 20px;
+                    left: 20px;
+                    transform: translateY(-50px);
+                    color: #fff;
+                    font-size: 30px;
+                    text-align:center;
+                    font-weight: bold;
+                    background-color: crimson;
+                    border-radius: 50%;
+                    padding-top: 12px;
+                    box-sizing: border-box;
+                    opacity: 0;
+                    transition: .5s;
+                    span{
+                        font-size: 20px;
+                        display: block;
+                        margin-top: 5px;
+                    }
+                }
+                .text2{
+                    background-color: dodgerblue;
+                }
+                .text3{
+                    background-color: yellowgreen;
+                }
+            }
+        }
+
+        //tab-slide
+        .tab-slide{
+            input[name=tabmenu4]{
+                display: none;
+            }
+            input[id=tab10]:checked{
+                ~ .slide{
+                    .slide-inner{
+                        left: 0;
+                    }
+                }
+                ~.btn{
+                    label[for=tab10]{
+                        background-color: crimson;
+                    }
+                }
+            }
+            input[id=tab11]:checked{
+                ~ .slide{
+                    .slide-inner{
+                        left: -300px;
+                    }
+                }
+                ~.btn{
+                    label[for=tab11]{
+                        background-color: crimson;
+                    }
+                }
+            }
+            input[id=tab12]:checked{
+                ~ .slide{
+                    .slide-inner{
+                        left: -600px;
+                    }
+                }
+                ~.btn{
+                    label[for=tab12]{
+                        background-color: crimson;
+                    }
+                }
+            }
+            .slide{
+                width: 300px;
+                height: 300px;
+                position: relative;
+                overflow: hidden;
+                .slide-inner{
+                    width: 900px;
+                    font-size: 0;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    transition: .5s;
+                    a{
+                        img{
+                            width: 300px;
+                            height: 300px;
                         }
                     }
-                    .tabs{
+                }
+            }
+        }
+
+        //testimonial slide
+        .testimonial{
+            height: 500px;
+            overflow: hidden;
+            h2{
+                font-size: 30px;
+                margin: 10px 0;
+                text-align: center;
+            }
+            input[name=tebmenu4]{
+                display: none;
+            }
+            input[id=tab13]:checked{
+                ~ .tabs{
+                    .items{
+                        left: 0;
+                    }
+                }
+                ~ .btn{
+                    label[for=tab13]{
+                        background-color: crimson;
+                        border-radius: 50%;
+                    }
+                }
+            }
+            input[id=tab14]:checked{
+                ~ .tabs{
+                    .items{
+                        left: -800px;
+                    }
+                }
+                ~ .btn{
+                    label[for=tab14]{
+                        background-color: crimson;
+                        border-radius: 50%;
+                    }
+                }
+            }
+            input[id=tab15]:checked{
+                ~ .tabs{
+                    .items{
+                        left: -1600px;
+                    }
+                }
+                ~ .btn{
+                    label[for=tab15]{
+                        background-color: crimson;
+                        border-radius: 50%;
+                    }
+                }
+            }
+            .tabs{
+                width: 800px;
+                height: 400px;
+                position: relative;
+                overflow: hidden;
+                .items{
+                    width: 2400px;
+                    height: 400px;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    transition: .5s;
+                    div{
                         width: 800px;
                         height: 400px;
-                        position: relative;
-                        overflow: hidden;
-                        .items{
-                            width: 2400px;
-                            height: 400px;
-                            position: absolute;
-                            top: 0;
-                            left: 0;
-                            transition: .5s;
-                            div{
-                                width: 800px;
-                                height: 400px;
-                                float: left;
-                                box-sizing: border-box;
-                                padding: 50px;
-                                img{
-                                    width: 100px;
-                                    border-radius: 50%
-                                }
-                                p{
-                                    font-size: 16px;
-                                    margin: 20px 0;
-                                    b{
-                                        display: block;
-                                        margin-bottom: 15px;
-                                    }
-                                    span{
-                                        color: orange;
-                                    }
-                                }
+                        float: left;
+                        box-sizing: border-box;
+                        padding: 50px;
+                        img{
+                            width: 100px;
+                            border-radius: 50%
+                        }
+                        p{
+                            font-size: 16px;
+                            margin: 20px 0;
+                            b{
+                                display: block;
+                                margin-bottom: 15px;
+                            }
+                            span{
+                                color: orange;
                             }
                         }
+                    }
+                }
+            }
+            .btn{
+                @include btn();
+                position: relative;
+                bottom: 0;
+                line-height: 40px;
+                label{
+                    width: 10px;
+                    height: 10px;
+                    border-radius: 0;
+                    transition: .3s;
+                }
+            }
+        }
+
+        //testimonial length-slide
+        .length{
+            height: auto;
+            input[name=tebmenu5]{
+                display: none;
+            }
+            input[id=tab16]:checked{
+                ~ .tabs{
+                    .items{
+                        top: 0;
+                    }
+                }
+                ~ .btn{
+                    label[for=tab16]{
+                        background-color: crimson;
+                        border-radius: 50%;
+                    }
+                }
+            }
+            input[id=tab17]:checked{
+                ~ .tabs{
+                    .items{
+                        top: -400px;
+                    }
+                }
+                ~ .btn{
+                    label[for=tab17]{
+                        background-color: crimson;
+                        border-radius: 50%;
+                    }
+                }
+            }
+            input[id=tab18]:checked{
+                ~ .tabs{
+                    .items{
+                        top: -800px;
+                    }
+                }
+                ~ .btn{
+                    label[for=tab18]{
+                        background-color: crimson;
+                        border-radius: 50%;
+                    }
+                }
+            }
+            .tabs{
+                .items{
+                    width: 800px;
+                    height: 1200px;
+                }
+            }
+        }
+
+        // full-screen tab content slider frototype
+        .full-screen{
+            input[name=tabmenu6]{
+                display: none;
+            }
+            input[id=tab19]:checked{
+                ~ .tabs{
+                    .items{
+                        left: 0;
                     }
                     .btn{
-                        @include btn();
-                        position: relative;
-                        bottom: 0;
-                        line-height: 40px;
-                        label{
-                            width: 10px;
-                            height: 10px;
-                            border-radius: 0;
-                            transition: .3s;
+                        label[for=tab19]{
+                            background-color: #fff;
                         }
                     }
                 }
-        
-                //testimonial length-slide
-                .length{
-                    height: auto;
-                    input[name=tebmenu5]{
-                        display: none;
+            }
+            input[id=tab20]:checked{
+                ~ .tabs{
+                    .items{
+                        left: -100%;
                     }
-                    input[id=tab16]:checked{
-                        ~ .tabs{
-                            .items{
-                                top: 0;
-                            }
-                        }
-                        ~ .btn{
-                            label[for=tab16]{
-                                background-color: crimson;
-                                border-radius: 50%;
-                            }
-                        }
-                    }
-                    input[id=tab17]:checked{
-                        ~ .tabs{
-                            .items{
-                                top: -400px;
-                            }
-                        }
-                        ~ .btn{
-                            label[for=tab17]{
-                                background-color: crimson;
-                                border-radius: 50%;
-                            }
-                        }
-                    }
-                    input[id=tab18]:checked{
-                        ~ .tabs{
-                            .items{
-                                top: -800px;
-                            }
-                        }
-                        ~ .btn{
-                            label[for=tab18]{
-                                background-color: crimson;
-                                border-radius: 50%;
-                            }
-                        }
-                    }
-                    .tabs{
-                        .items{
-                            width: 800px;
-                            height: 1200px;
+                    .btn{
+                        label[for=tab20]{
+                            background-color: orangered;
                         }
                     }
                 }
-        
-                // full-screen tab content slider frototype
-                .full-screen{
-                    input[name=tabmenu6]{
-                        display: none;
+            }
+            input[id=tab21]:checked{
+                ~ .tabs{
+                    .items{
+                        left: -200%;
                     }
-                    input[id=tab19]:checked{
-                        ~ .tabs{
-                            .items{
-                                left: 0;
-                            }
-                            .btn{
-                                label[for=tab19]{
-                                    background-color: #fff;
-                                }
-                            }
+                    .btn{
+                        label[for=tab21]{
+                            background-color: orangered;
                         }
                     }
-                    input[id=tab20]:checked{
-                        ~ .tabs{
-                            .items{
-                                left: -100%;
-                            }
-                            .btn{
-                                label[for=tab20]{
-                                    background-color: orangered;
-                                }
-                            }
-                        }
-                    }
-                    input[id=tab21]:checked{
-                        ~ .tabs{
-                            .items{
-                                left: -200%;
-                            }
-                            .btn{
-                                label[for=tab21]{
-                                    background-color: orangered;
-                                }
-                            }
-                        }
-                    }
-                    .tabs{
+                }
+            }
+            .tabs{
+                height: 100vh;
+                overflow: hidden;
+                position: relative;
+                .items{
+                    width: 300%;
+                    height: 100vh;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    transition: .5s;
+                    div{
+                        width: 33.33333%;
                         height: 100vh;
-                        overflow: hidden;
-                        position: relative;
-                        .items{
-                            width: 300%;
-                            height: 100vh;
-                            position: absolute;
-                            top: 0;
-                            left: 0;
-                            transition: .5s;
-                            div{
-                                width: 33.33333%;
-                                height: 100vh;
-                                float: left;
-                                box-sizing: border-box;
-                                display: flex;
-                                justify-content: center;
-                                align-items: center;
-                                h1{
-                                    font-size: 80px;
-                                    color: #fff;
-                                }
-                                &:nth-child(1){
-                                    background-color: teal;
-                                }
-                                &:nth-child(2){
-                                    background-color: yellowgreen;
-                                }
-                                &:nth-child(3){
-                                    background-color: dodgerblue;
-                                }
-                            }
+                        float: left;
+                        box-sizing: border-box;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        h1{
+                            font-size: 80px;
+                            color: #fff;
                         }
-                        .btn{
-                            position: absolute;
-                            width: 100%;
-                            text-align: center;
-                            bottom: 20px;
-                            background: none;
-                            label{
-                                display: inline-block;
-                                width: 50px;
-                                height: 5px;
-                                background-color: #fff;
-                                cursor: pointer;
-                            }
+                        &:nth-child(1){
+                            background-color: teal;
+                        }
+                        &:nth-child(2){
+                            background-color: yellowgreen;
+                        }
+                        &:nth-child(3){
+                            background-color: dodgerblue;
                         }
                     }
                 }
-                
-                // full-screen2
-                .slider2{
-                    input[name=tabmenu7]{
-                        display: none;
+                .btn{
+                    position: absolute;
+                    width: 100%;
+                    text-align: center;
+                    bottom: 20px;
+                    background: none;
+                    label{
+                        display: inline-block;
+                        width: 50px;
+                        height: 5px;
+                        background-color: #fff;
+                        cursor: pointer;
                     }
-                    input[id=tab22]:checked{
-                        ~ .tabs{
-                            .items{
-                                left: 0;
-                                div{
-                                    &:nth-child(1){
-                                        h1{
-                                            transform: translateY(-260px);
-                                            opacity: 1;
-                                        }
-                                    }
-                                }
-                            }
-                            .slide2-btn{
-                                label[for=tab22]{
-                                    color: crimson;
-                                }
-                            }
-                        }
-                    }
-                    input[id=tab23]:checked{
-                        ~ .tabs{
-                            .items{
-                                left: -100%;
-                                div{
-                                    &:nth-child(2){
-                                        h1{
-                                            transform: translateY(-260px);
-                                            opacity: 1;
-                                        }
-                                    }
-                                }
-                            }
-                            .slide2-btn{
-                                label[for=tab23]{
-                                    color: crimson;
-                                }
-                            }
-                        }
-                    }
-                    input[id=tab24]:checked{
-                        ~ .tabs{
-                            .items{
-                                left: -200%;
-                                div{
-                                    &:nth-child(3){
-                                        h1{
-                                            transform: translateY(-260px);
-                                            opacity: 1;
-                                        }
-                                    }
-                                }
-                            }
-                            .slide2-btn{
-                                label[for=tab24]{
-                                    color: crimson;
-                                }
-                            }
-                        }
-                    }
-                    .tabs{
+                }
+            }
+        }
+        
+        // full-screen2
+        .slider2{
+            input[name=tabmenu7]{
+                display: none;
+            }
+            input[id=tab22]{
+                &:checked{
+                    & ~ .tabs{
                         .items{
+                            left: 0;
                             div{
-                                position: relative;
-                                h1{
-                                    position: relative;
-                                    font-size: 120px;
-                                    transform: translateY(-400px);
-                                    opacity: 0;
-                                    transition: .5s;
-                                    transition-delay: .5s;
-                                }
                                 &:nth-child(1){
-                                    background:url(/workspace/assets/img/photo-01.jpg) no-repeat center center;
-                                    background-size: cover;
-                                    background-attachment: fixed;
-                                    &::before{
-                                        content: '';
-                                        position: absolute;
-                                        background:linear-gradient(135deg, gold, transparent);
-                                        width: 100%;
-                                        height: 100%;
-                                    }
-                                }
-                                &:nth-child(2){
-                                    background:url(/workspace/assets/img/photo-02.jpg) no-repeat center center;
-                                    background-size: cover;
-                                    background-attachment: fixed;
-                                    &::before{
-                                        content: '';
-                                        position: absolute;
-                                        background:linear-gradient(135deg, crimson, transparent);
-                                        width: 100%;
-                                        height: 100%;
-                                    }
-                                }
-                                &:nth-child(3){
-                                    background:url(/workspace/assets/img/photo-03.jpg) no-repeat center center fixed;
-                                    background-size: cover;
-                                    &::before{
-                                        content: '';
-                                        position: absolute;
-                                        background:linear-gradient(135deg, royalblue, transparent);
-                                        width: 100%;
-                                        height: 100%;
+                                    h1{
+                                        transform: translateY(-260px);
+                                        opacity: 1;
                                     }
                                 }
                             }
                         }
                         .slide2-btn{
-                            width: 100%;
-                            height: 50px;
-                            line-height: 50px;
-                            position: absolute;
-                            bottom: 0;
-                            text-align: center;
-                            background-color: rgba(0, 0, 0, 0.3);
-                            label{
-                                display: inline-block;
-                                cursor: pointer;
-                                color: #fff;
-                                margin: 0 15px;
+                            label[for=tab22]{
+                                color: crimson;
                             }
                         }
                     }
                 }
+            }
+            input[id=tab23]:checked{
+                ~ .tabs{
+                    .items{
+                        left: -100%;
+                        div{
+                            &:nth-child(2){
+                                h1{
+                                    transform: translateY(-260px);
+                                    opacity: 1;
+                                }
+                            }
+                        }
+                    }
+                    .slide2-btn{
+                        label[for=tab23]{
+                            color: crimson;
+                        }
+                    }
+                }
+            }
+            input[id=tab24]:checked{
+                ~ .tabs{
+                    .items{
+                        left: -200%;
+                        div{
+                            &:nth-child(3){
+                                h1{
+                                    transform: translateY(-260px);
+                                    opacity: 1;
+                                }
+                            }
+                        }
+                    }
+                    .slide2-btn{
+                        label[for=tab24]{
+                            color: crimson;
+                        }
+                    }
+                }
+            }
+            .tabs{
+                .items{
+                    div{
+                        position: relative;
+                        h1{
+                            position: relative;
+                            font-size: 120px;
+                            transform: translateY(-400px);
+                            opacity: 0;
+                            transition: .5s;
+                            transition-delay: .5s;
+                        }
+                        &:nth-child(1){
+                            background:url(/workspace/assets/img/photo-01.jpg) no-repeat center center;
+                            background-size: cover;
+                            background-attachment: fixed;
+                            &::before{
+                                content: '';
+                                position: absolute;
+                                background:linear-gradient(135deg, gold, transparent);
+                                width: 100%;
+                                height: 100%;
+                            }
+                        }
+                        &:nth-child(2){
+                            background:url(/workspace/assets/img/photo-02.jpg) no-repeat center center;
+                            background-size: cover;
+                            background-attachment: fixed;
+                            &::before{
+                                content: '';
+                                position: absolute;
+                                background:linear-gradient(135deg, crimson, transparent);
+                                width: 100%;
+                                height: 100%;
+                            }
+                        }
+                        &:nth-child(3){
+                            background:url(/workspace/assets/img/photo-03.jpg) no-repeat center center fixed;
+                            background-size: cover;
+                            &::before{
+                                content: '';
+                                position: absolute;
+                                background:linear-gradient(135deg, royalblue, transparent);
+                                width: 100%;
+                                height: 100%;
+                            }
+                        }
+                    }
+                }
+                .slide2-btn{
+                    width: 100%;
+                    height: 50px;
+                    line-height: 50px;
+                    position: absolute;
+                    bottom: 0;
+                    text-align: center;
+                    background-color: rgba(0, 0, 0, 0.3);
+                    label{
+                        display: inline-block;
+                        cursor: pointer;
+                        color: #fff;
+                        margin: 0 15px;
+                    }
+                }
+            }
+        }
     }
     &.study02{
         width: 100%;
