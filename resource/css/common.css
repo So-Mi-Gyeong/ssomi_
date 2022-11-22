@@ -1,3 +1,4 @@
+@charset "UTF-8";
 html,
 body,
 div,
@@ -1530,6 +1531,806 @@ table .t_left {
     -webkit-transform: scale(1.1);
             transform: scale(1.1);
   }
+}
+.ui-content.study01 .skill-progress {
+  width: 500px;
+  padding: 20px;
+  background-color: #333;
+  border-radius: 10px;
+  color: #fff;
+  -webkit-box-shadow: 0 20px 50px rgba(0, 0, 0, 0.08);
+          box-shadow: 0 20px 50px rgba(0, 0, 0, 0.08);
+}
+.ui-content.study01 .skill-progress h1 {
+  text-align: center;
+  margin: 10px 0 20px 0;
+  font-size: 30px;
+}
+.ui-content.study01 .skill-progress .item {
+  margin-bottom: 10px;
+}
+.ui-content.study01 .skill-progress .item p {
+  overflow: hidden;
+  margin-bottom: 5px;
+}
+.ui-content.study01 .skill-progress .item p span:nth-child(1) {
+  float: left;
+}
+.ui-content.study01 .skill-progress .item p span:nth-child(2) {
+  float: right;
+}
+.ui-content.study01 .skill-progress .item .progress {
+  border: 1px solid #6cd4c4;
+  padding: 5px;
+  border-radius: 3px;
+}
+.ui-content.study01 .skill-progress .item .progress .progress-level {
+  height: 10px;
+  background: -webkit-gradient(linear, left top, right top, from(crimson), to(gold));
+  background: linear-gradient(to right, crimson, gold);
+  -webkit-animation-name: progressbar;
+          animation-name: progressbar;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+}
+@-webkit-keyframes progressbar {
+  0% {
+    width: 0;
+  }
+}
+@keyframes progressbar {
+  0% {
+    width: 0;
+  }
+}
+.ui-content.study01 .delay .item .progress .progress-level {
+  /*animation-name: ani;
+  animation-duration: 1s;
+  animation-iteration-count: 1;*/
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both; /*정해진 반복횟수가 끝나면 100%에 머물러라*/
+}
+.ui-content.study01 .delay .item:nth-of-type(1) .progress .progress-level {
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
+}
+.ui-content.study01 .delay .item:nth-of-type(2) .progress .progress-level {
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s;
+}
+.ui-content.study01 .delay .item:nth-of-type(3) .progress .progress-level {
+  -webkit-animation-delay: 0.4s;
+          animation-delay: 0.4s;
+}
+.ui-content.study01 .delay .item:nth-of-type(4) .progress .progress-level {
+  -webkit-animation-delay: 0.6s;
+          animation-delay: 0.6s;
+}
+.ui-content.study01 .delay .item:nth-of-type(5) .progress .progress-level {
+  -webkit-animation-delay: 0.8s;
+          animation-delay: 0.8s;
+}
+@keyframes progressbar {
+  0% {
+    width: 0;
+  }
+}
+.ui-content.study01 .gallery {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100vh;
+  padding: 0;
+}
+.ui-content.study01 .gallery li {
+  border-right: 5px solid #000;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  position: relative;
+  overflow: hidden;
+}
+.ui-content.study01 .gallery li:nth-child(1) {
+  background: url(/workspace/assets/img/artistic-image-01.jpg) 0 0 no-repeat;
+  background-size: 100% 100%;
+}
+.ui-content.study01 .gallery li:nth-child(2) {
+  background: url(/workspace/assets/img/artistic-image-02.jpg) 0 0 no-repeat;
+  background-size: 100% 100%;
+}
+.ui-content.study01 .gallery li:nth-child(3) {
+  background: url(/workspace/assets/img/artistic-image-03.jpg) 0 0 no-repeat;
+  background-size: 100% 100%;
+}
+.ui-content.study01 .gallery li:nth-child(4) {
+  background: url(/workspace/assets/img/artistic-image-04.jpg) 0 0 no-repeat;
+  background-size: 100% 100%;
+}
+.ui-content.study01 .gallery li:nth-child(5) {
+  background: url(/workspace/assets/img/artistic-image-05.jpg) 0 0 no-repeat;
+  background-size: 100% 100%;
+}
+.ui-content.study01 .gallery li:last-child {
+  border-right: none;
+}
+.ui-content.study01 .gallery li:hover {
+  -webkit-box-flex: 3;
+      -ms-flex: 3;
+          flex: 3;
+  -webkit-filter: grayscale(1);
+          filter: grayscale(1);
+}
+.ui-content.study01 .gallery li:hover .content {
+  bottom: 0;
+  -webkit-transition-delay: 0.5s;
+          transition-delay: 0.5s;
+}
+.ui-content.study01 .gallery li .content {
+  height: 150px;
+  position: absolute;
+  bottom: -250px;
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  padding: 20px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding-top: 20px;
+}
+.ui-content.study01 .gallery li .content h2 {
+  margin: 10px;
+}
+.ui-content.study01 .gallery li .content .sns a {
+  color: #333;
+}
+.ui-content.study01 .gallery li .content::before {
+  content: "";
+  width: 100%;
+  height: 60px;
+  position: absolute;
+  top: -30px;
+  left: 0;
+  -webkit-transform: rotate(-3deg) scale(1.3);
+          transform: rotate(-3deg) scale(1.3);
+  -webkit-transform-origin: left bottom;
+          transform-origin: left bottom;
+  background-color: #000;
+}
+.ui-content.study01 .ham input[id=trigger01] {
+  display: none;
+}
+.ui-content.study01 .ham input[id=trigger01]:checked + label[for=trigger01] span:nth-child(1) {
+  top: 50%;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+.ui-content.study01 .ham input[id=trigger01]:checked + label[for=trigger01] span:nth-child(2) {
+  opacity: 0;
+}
+.ui-content.study01 .ham input[id=trigger01]:checked + label[for=trigger01] span:nth-child(3) {
+  top: 50%;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+.ui-content.study01 .ham label[for=trigger01] {
+  width: 40px;
+  height: 30px;
+  display: block;
+  position: relative;
+  cursor: pointer;
+}
+.ui-content.study01 .ham label[for=trigger01] span {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #000;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+.ui-content.study01 .ham label[for=trigger01] span:nth-child(1) {
+  top: 0;
+}
+.ui-content.study01 .ham label[for=trigger01] span:nth-child(2) {
+  top: 50%;
+}
+.ui-content.study01 .ham label[for=trigger01] span:nth-child(3) {
+  top: 100%;
+}
+.ui-content.study01 .side-menu input[id=trigger] {
+  display: none;
+}
+.ui-content.study01 .side-menu input[id=trigger]:checked ~ .sidebar {
+  right: 0;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+.ui-content.study01 .side-menu input[id=trigger]:checked + label[for=trigger] {
+  right: 310px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+.ui-content.study01 .side-menu input[id=trigger]:checked + label[for=trigger] span:nth-child(1) {
+  top: 50%;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+.ui-content.study01 .side-menu input[id=trigger]:checked + label[for=trigger] span:nth-child(2) {
+  opacity: 0;
+}
+.ui-content.study01 .side-menu input[id=trigger]:checked + label[for=trigger] span:nth-child(3) {
+  top: 50%;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+.ui-content.study01 .side-menu label[for=trigger] {
+  width: 30px;
+  height: 20px;
+  display: block;
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  cursor: pointer;
+}
+.ui-content.study01 .side-menu label[for=trigger] span {
+  position: absolute;
+  height: 2px;
+  background-color: #000;
+  width: 100%;
+  left: 0;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+.ui-content.study01 .side-menu label[for=trigger] span:nth-child(1) {
+  top: 0;
+}
+.ui-content.study01 .side-menu label[for=trigger] span:nth-child(2) {
+  top: 50%;
+}
+.ui-content.study01 .side-menu label[for=trigger] span:nth-child(3) {
+  top: 100%;
+}
+.ui-content.study01 .side-menu .sidebar {
+  background-color: #000;
+  width: 300px;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  right: -300px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+.ui-content.study01 .tab-inner {
+  width: 300px;
+  height: 350px;
+  position: relative;
+}
+.ui-content.study01 .tab-inner input[name=tabmenu] {
+  display: none;
+}
+.ui-content.study01 .tab-inner input[id=tab1]:checked ~ .slide1 {
+  display: block;
+}
+.ui-content.study01 .tab-inner input[id=tab1]:checked ~ .btn label[for=tab1] {
+  background-color: crimson;
+}
+.ui-content.study01 .tab-inner input[id=tab2]:checked ~ .slide2 {
+  display: block;
+}
+.ui-content.study01 .tab-inner input[id=tab2]:checked ~ .btn label[for=tab2] {
+  background-color: crimson;
+}
+.ui-content.study01 .tab-inner input[id=tab3]:checked ~ .slide3 {
+  display: block;
+}
+.ui-content.study01 .tab-inner input[id=tab3]:checked ~ .btn label[for=tab3] {
+  background-color: crimson;
+}
+.ui-content.study01 .tab-inner .content {
+  display: none;
+}
+.ui-content.study01 .tab-inner .content img {
+  width: 100%;
+}
+.ui-content.study01 .tab-inner .btn {
+  width: 100%;
+  position: absolute;
+  bottom: 10px;
+  text-align: center;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+.ui-content.study01 .tab-inner .btn label {
+  width: 20px;
+  height: 20px;
+  background-color: lightgray;
+  display: inline-block;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.ui-content.study01 .opacity input[name=tabmenu2] {
+  display: none;
+}
+.ui-content.study01 .opacity input[id=tab4]:checked ~ .slide4 {
+  opacity: 1;
+  visibility: visible;
+}
+.ui-content.study01 .opacity input[id=tab4]:checked ~ .btn label[for=tab4] {
+  background-color: crimson;
+}
+.ui-content.study01 .opacity input[id=tab5]:checked ~ .slide5 {
+  opacity: 1;
+  visibility: visible;
+}
+.ui-content.study01 .opacity input[id=tab5]:checked ~ .btn label[for=tab5] {
+  background-color: crimson;
+}
+.ui-content.study01 .opacity input[id=tab6]:checked ~ .slide6 {
+  opacity: 1;
+  visibility: visible;
+}
+.ui-content.study01 .opacity input[id=tab6]:checked ~ .btn label[for=tab6] {
+  background-color: crimson;
+}
+.ui-content.study01 .opacity .content {
+  display: block;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  visibility: hidden;
+}
+.ui-content.study01 .opacity2 {
+  overflow: hidden;
+}
+.ui-content.study01 .opacity2 input[name=tabmenu3] {
+  display: none;
+}
+.ui-content.study01 .opacity2 input[id=tab7]:checked ~ .slide7 {
+  opacity: 1;
+  visibility: visible;
+  left: 0;
+}
+.ui-content.study01 .opacity2 input[id=tab7]:checked ~ .btn label[for=tab7] {
+  background-color: crimson;
+}
+.ui-content.study01 .opacity2 input[id=tab7]:checked ~ .heading .text1 {
+  opacity: 1;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+  -webkit-transition-delay: 0.5s;
+          transition-delay: 0.5s;
+}
+.ui-content.study01 .opacity2 input[id=tab8]:checked ~ .slide8 {
+  opacity: 1;
+  visibility: visible;
+  left: 0;
+}
+.ui-content.study01 .opacity2 input[id=tab8]:checked ~ .btn label[for=tab8] {
+  background-color: crimson;
+}
+.ui-content.study01 .opacity2 input[id=tab8]:checked ~ .heading .text2 {
+  opacity: 1;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+  -webkit-transition-delay: 0.5s;
+          transition-delay: 0.5s;
+}
+.ui-content.study01 .opacity2 input[id=tab9]:checked ~ .slide9 {
+  opacity: 1;
+  visibility: visible;
+  left: 0;
+}
+.ui-content.study01 .opacity2 input[id=tab9]:checked ~ .btn label[for=tab9] {
+  background-color: crimson;
+}
+.ui-content.study01 .opacity2 input[id=tab9]:checked ~ .heading .text3 {
+  opacity: 1;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+  -webkit-transition-delay: 0.5s;
+          transition-delay: 0.5s;
+}
+.ui-content.study01 .opacity2 .content {
+  display: block;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: -50px;
+  opacity: 0;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  visibility: hidden;
+}
+.ui-content.study01 .opacity2 .heading .text1,
+.ui-content.study01 .opacity2 .heading .text2,
+.ui-content.study01 .opacity2 .heading .text3 {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  -webkit-transform: translateY(-50px);
+          transform: translateY(-50px);
+  color: #fff;
+  font-size: 30px;
+  text-align: center;
+  font-weight: bold;
+  background-color: crimson;
+  border-radius: 50%;
+  padding-top: 12px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  opacity: 0;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+.ui-content.study01 .opacity2 .heading .text1 span,
+.ui-content.study01 .opacity2 .heading .text2 span,
+.ui-content.study01 .opacity2 .heading .text3 span {
+  font-size: 20px;
+  display: block;
+  margin-top: 5px;
+}
+.ui-content.study01 .opacity2 .heading .text2 {
+  background-color: dodgerblue;
+}
+.ui-content.study01 .opacity2 .heading .text3 {
+  background-color: yellowgreen;
+}
+.ui-content.study01 .tab-slide input[name=tabmenu4] {
+  display: none;
+}
+.ui-content.study01 .tab-slide input[id=tab10]:checked ~ .slide .slide-inner {
+  left: 0;
+}
+.ui-content.study01 .tab-slide input[id=tab10]:checked ~ .btn label[for=tab10] {
+  background-color: crimson;
+}
+.ui-content.study01 .tab-slide input[id=tab11]:checked ~ .slide .slide-inner {
+  left: -300px;
+}
+.ui-content.study01 .tab-slide input[id=tab11]:checked ~ .btn label[for=tab11] {
+  background-color: crimson;
+}
+.ui-content.study01 .tab-slide input[id=tab12]:checked ~ .slide .slide-inner {
+  left: -600px;
+}
+.ui-content.study01 .tab-slide input[id=tab12]:checked ~ .btn label[for=tab12] {
+  background-color: crimson;
+}
+.ui-content.study01 .tab-slide .slide {
+  width: 300px;
+  height: 300px;
+  position: relative;
+  overflow: hidden;
+}
+.ui-content.study01 .tab-slide .slide .slide-inner {
+  width: 900px;
+  font-size: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+.ui-content.study01 .tab-slide .slide .slide-inner a img {
+  width: 300px;
+  height: 300px;
+}
+.ui-content.study01 .testimonial {
+  height: 500px;
+  overflow: hidden;
+}
+.ui-content.study01 .testimonial h1 {
+  font-size: 30px;
+  margin: 10px 0;
+  text-align: center;
+}
+.ui-content.study01 .testimonial input[name=tebmenu4] {
+  display: none;
+}
+.ui-content.study01 .testimonial input[id=tab13]:checked ~ .tabs .items {
+  left: 0;
+}
+.ui-content.study01 .testimonial input[id=tab13]:checked ~ .btn label[for=tab13] {
+  background-color: crimson;
+  border-radius: 50%;
+}
+.ui-content.study01 .testimonial input[id=tab14]:checked ~ .tabs .items {
+  left: -800px;
+}
+.ui-content.study01 .testimonial input[id=tab14]:checked ~ .btn label[for=tab14] {
+  background-color: crimson;
+  border-radius: 50%;
+}
+.ui-content.study01 .testimonial input[id=tab15]:checked ~ .tabs .items {
+  left: -1600px;
+}
+.ui-content.study01 .testimonial input[id=tab15]:checked ~ .btn label[for=tab15] {
+  background-color: crimson;
+  border-radius: 50%;
+}
+.ui-content.study01 .testimonial .tabs {
+  width: 800px;
+  height: 400px;
+  position: relative;
+  overflow: hidden;
+}
+.ui-content.study01 .testimonial .tabs .items {
+  width: 2400px;
+  height: 400px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+.ui-content.study01 .testimonial .tabs .items div {
+  width: 800px;
+  height: 400px;
+  float: left;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 50px;
+}
+.ui-content.study01 .testimonial .tabs .items div img {
+  width: 100px;
+  border-radius: 50%;
+}
+.ui-content.study01 .testimonial .tabs .items div p {
+  font-size: 16px;
+  margin: 20px 0;
+}
+.ui-content.study01 .testimonial .tabs .items div p b {
+  display: block;
+  margin-bottom: 15px;
+}
+.ui-content.study01 .testimonial .tabs .items div p span {
+  color: orange;
+}
+.ui-content.study01 .testimonial .btn {
+  width: 100%;
+  position: absolute;
+  bottom: 10px;
+  text-align: center;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  position: relative;
+  bottom: 0;
+  line-height: 40px;
+}
+.ui-content.study01 .testimonial .btn label {
+  width: 20px;
+  height: 20px;
+  background-color: lightgray;
+  display: inline-block;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.ui-content.study01 .testimonial .btn label {
+  width: 10px;
+  height: 10px;
+  border-radius: 0;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+.ui-content.study01 .length {
+  height: auto;
+}
+.ui-content.study01 .length input[name=tebmenu5] {
+  display: none;
+}
+.ui-content.study01 .length input[id=tab16]:checked ~ .tabs .items {
+  top: 0;
+}
+.ui-content.study01 .length input[id=tab16]:checked ~ .btn label[for=tab16] {
+  background-color: crimson;
+  border-radius: 50%;
+}
+.ui-content.study01 .length input[id=tab17]:checked ~ .tabs .items {
+  top: -400px;
+}
+.ui-content.study01 .length input[id=tab17]:checked ~ .btn label[for=tab17] {
+  background-color: crimson;
+  border-radius: 50%;
+}
+.ui-content.study01 .length input[id=tab18]:checked ~ .tabs .items {
+  top: -800px;
+}
+.ui-content.study01 .length input[id=tab18]:checked ~ .btn label[for=tab18] {
+  background-color: crimson;
+  border-radius: 50%;
+}
+.ui-content.study01 .length .tabs .items {
+  width: 800px;
+  height: 1200px;
+}
+.ui-content.study01 .full-screen input[name=tabmenu6] {
+  display: none;
+}
+.ui-content.study01 .full-screen input[id=tab19]:checked ~ .tabs .items {
+  left: 0;
+}
+.ui-content.study01 .full-screen input[id=tab19]:checked ~ .tabs .btn label[for=tab19] {
+  background-color: #fff;
+}
+.ui-content.study01 .full-screen input[id=tab20]:checked ~ .tabs .items {
+  left: -100%;
+}
+.ui-content.study01 .full-screen input[id=tab20]:checked ~ .tabs .btn label[for=tab20] {
+  background-color: orangered;
+}
+.ui-content.study01 .full-screen input[id=tab21]:checked ~ .tabs .items {
+  left: -200%;
+}
+.ui-content.study01 .full-screen input[id=tab21]:checked ~ .tabs .btn label[for=tab21] {
+  background-color: orangered;
+}
+.ui-content.study01 .full-screen .tabs {
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+.ui-content.study01 .full-screen .tabs .items {
+  width: 300%;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+.ui-content.study01 .full-screen .tabs .items div {
+  width: 33.33333%;
+  height: 100vh;
+  float: left;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.ui-content.study01 .full-screen .tabs .items div h1 {
+  font-size: 80px;
+  color: #fff;
+}
+.ui-content.study01 .full-screen .tabs .items div:nth-child(1) {
+  background-color: teal;
+}
+.ui-content.study01 .full-screen .tabs .items div:nth-child(2) {
+  background-color: yellowgreen;
+}
+.ui-content.study01 .full-screen .tabs .items div:nth-child(3) {
+  background-color: dodgerblue;
+}
+.ui-content.study01 .full-screen .tabs .btn {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  bottom: 20px;
+}
+.ui-content.study01 .full-screen .tabs .btn label {
+  display: inline-block;
+  width: 50px;
+  height: 5px;
+  background-color: #fff;
+  cursor: pointer;
+}
+.ui-content.study01 .slider2 input[name=tabmenu7] {
+  display: none;
+}
+.ui-content.study01 .slider2 input[id=tab22]:checked ~ .tabs .items {
+  left: 0;
+}
+.ui-content.study01 .slider2 input[id=tab22]:checked ~ .tabs .items div:nth-child(1) h1 {
+  -webkit-transform: translateY(-260px);
+          transform: translateY(-260px);
+  opacity: 1;
+}
+.ui-content.study01 .slider2 input[id=tab22]:checked ~ .tabs .slide2-btn label[for=tab22] {
+  color: crimson;
+}
+.ui-content.study01 .slider2 input[id=tab23]:checked ~ .tabs .items {
+  left: -100%;
+}
+.ui-content.study01 .slider2 input[id=tab23]:checked ~ .tabs .items div:nth-child(2) h1 {
+  -webkit-transform: translateY(-260px);
+          transform: translateY(-260px);
+  opacity: 1;
+}
+.ui-content.study01 .slider2 input[id=tab23]:checked ~ .tabs .slide2-btn label[for=tab23] {
+  color: crimson;
+}
+.ui-content.study01 .slider2 input[id=tab24]:checked ~ .tabs .items {
+  left: -200%;
+}
+.ui-content.study01 .slider2 input[id=tab24]:checked ~ .tabs .items div:nth-child(3) h1 {
+  -webkit-transform: translateY(-260px);
+          transform: translateY(-260px);
+  opacity: 1;
+}
+.ui-content.study01 .slider2 input[id=tab24]:checked ~ .tabs .slide2-btn label[for=tab24] {
+  color: crimson;
+}
+.ui-content.study01 .slider2 .tabs .items div {
+  position: relative;
+}
+.ui-content.study01 .slider2 .tabs .items div h1 {
+  position: relative;
+  font-size: 120px;
+  -webkit-transform: translateY(-400px);
+          transform: translateY(-400px);
+  opacity: 0;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  -webkit-transition-delay: 0.5s;
+          transition-delay: 0.5s;
+}
+.ui-content.study01 .slider2 .tabs .items div:nth-child(1) {
+  background: url(/workspace/assets/img/photo-01.jpg) no-repeat center center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+.ui-content.study01 .slider2 .tabs .items div:nth-child(1)::before {
+  content: "";
+  position: absolute;
+  background: linear-gradient(135deg, gold, transparent);
+  width: 100%;
+  height: 100%;
+}
+.ui-content.study01 .slider2 .tabs .items div:nth-child(2) {
+  background: url(/workspace/assets/img/photo-02.jpg) no-repeat center center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+.ui-content.study01 .slider2 .tabs .items div:nth-child(2)::before {
+  content: "";
+  position: absolute;
+  background: linear-gradient(135deg, crimson, transparent);
+  width: 100%;
+  height: 100%;
+}
+.ui-content.study01 .slider2 .tabs .items div:nth-child(3) {
+  background: url(/workspace/assets/img/photo-03.jpg) no-repeat center center fixed;
+  background-size: cover;
+}
+.ui-content.study01 .slider2 .tabs .items div:nth-child(3)::before {
+  content: "";
+  position: absolute;
+  background: linear-gradient(135deg, royalblue, transparent);
+  width: 100%;
+  height: 100%;
+}
+.ui-content.study01 .slider2 .tabs .slide2-btn {
+  width: 100%;
+  height: 50px;
+  line-height: 50px;
+  position: absolute;
+  bottom: 0;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+.ui-content.study01 .slider2 .tabs .slide2-btn label {
+  display: inline-block;
+  cursor: pointer;
+  color: #fff;
+  margin: 0 15px;
 }
 .ui-content.study02 {
   width: 100%;
