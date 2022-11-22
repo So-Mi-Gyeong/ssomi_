@@ -925,21 +925,21 @@
                         position: relative;
                         overflow: hidden;
                         &:nth-child(1){
-                            background: url(/workspace/assets/img/artistic-image-01.jpg) 0 0 no-repeat;
+                            background: url('../img/artistic-image-01.jpg') 0 0 no-repeat;
                             background-size: 100% 100%;
                         }
                         &:nth-child(2){
-                            background: url(/workspace/assets/img/artistic-image-02.jpg) 0 0 no-repeat;
+                            background: url('../img/artistic-image-02.jpg') 0 0 no-repeat;
                             background-size: 100% 100%;
                         }
                         &:nth-child(3){
-                            background: url(/workspace/assets/img/artistic-image-03.jpg) 0 0 no-repeat;
+                            background: url('../img/artistic-image-03.jpg') 0 0 no-repeat;
                             background-size: 100% 100%;}
                         &:nth-child(4){
-                            background: url(/workspace/assets/img/artistic-image-04.jpg) 0 0 no-repeat;
+                            background: url('../img/artistic-image-04.jpg') 0 0 no-repeat;
                             background-size: 100% 100%;}
                         &:nth-child(5){
-                            background: url(/workspace/assets/img/artistic-image-05.jpg) 0 0 no-repeat;
+                            background: url('../img/artistic-image-05.jpg') 0 0 no-repeat;
                             background-size: 100% 100%;}
                         &:last-child{
                             border-right: none;
@@ -985,54 +985,6 @@
                             }
                         }
                     }
-                }
-        
-                // hambergur btn
-                .ham{
-                    input[id=trigger01]{
-                        display: none;
-                        &:checked{
-                            &+label[for=trigger01]{
-                                span{
-                                    &:nth-child(1){
-                                        top: 50%;
-                                        transform: rotate(45deg);
-                                    }
-                                    &:nth-child(2){
-                                        opacity: 0;
-                                    }
-                                    &:nth-child(3){
-                                        top: 50%;
-                                        transform: rotate(-45deg);
-                                    }
-                                }
-                            }
-                        }
-                    }
-                    label[for=trigger01]{
-                        width: 40px;
-                        height: 30px;
-                        display: block;
-                        position: relative;
-                        cursor: pointer;
-                        span{
-                            position: absolute;
-                            left: 0;
-                            width: 100%;
-                            height: 2px;
-                            background-color: #000;
-                            transition: .3s;
-                            &:nth-child(1){
-                                top: 0;
-                            }
-                            &:nth-child(2){
-                                    top: 50%;
-                            }
-                            &:nth-child(3){
-                                    top: 100%;
-                            }
-                        }
-                    } 
                 }
         
                 //side-menu
@@ -1103,9 +1055,10 @@
                 @mixin btn {
                     width: 100%;
                     position: absolute;
-                    bottom: 10px;
+                    bottom: 0;
                     text-align: center;
                     box-sizing: border-box;
+                    background: none;
                     label{
                         width: 20px;
                         height: 20px;
@@ -1121,6 +1074,10 @@
                     width: 300px;
                     height: 350px;
                     position: relative;
+                    margin-right: 10px;
+                    &:last-child{
+                        margin-right: 0;
+                    }
                     input[name=tabmenu]{
                         display: none;
                     }
@@ -1390,7 +1347,7 @@
                 .testimonial{
                     height: 500px;
                     overflow: hidden;
-                    h1{
+                    h2{
                         font-size: 30px;
                         margin: 10px 0;
                         text-align: center;
