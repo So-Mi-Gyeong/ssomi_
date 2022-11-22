@@ -1454,16 +1454,18 @@
             input[name=tebmenu5]{
                 display: none;
             }
-            input[id=tab16]:checked{
-                ~ .tabs{
-                    .items{
-                        top: 0;
+            input[id=tab16]{
+                &:checked{
+                    & ~ .tabs{
+                        .items{
+                            top: 0;
+                        }
                     }
-                }
-                ~ .btn{
-                    label[for=tab16]{
-                        background-color: crimson;
-                        border-radius: 50%;
+                    & ~ .btn{
+                        label[for=tab16]{
+                            background-color: crimson;
+                            border-radius: 50%;
+                        }
                     }
                 }
             }
@@ -1506,38 +1508,44 @@
             input[name=tabmenu6]{
                 display: none;
             }
-            input[id=tab19]:checked{
-                ~ .tabs{
-                    .items{
-                        left: 0;
-                    }
-                    .btn{
-                        label[for=tab19]{
-                            background-color: #fff;
+            input[id=tab19]{
+                &:checked{
+                    & ~ .tabs{
+                        .items{
+                            left: 0;
+                        }
+                        .btn{
+                            label[for=tab19]{
+                                background-color: #fff;
+                            }
                         }
                     }
                 }
             }
-            input[id=tab20]:checked{
-                ~ .tabs{
-                    .items{
-                        left: -100%;
-                    }
-                    .btn{
-                        label[for=tab20]{
-                            background-color: orangered;
+            input[id=tab20]{
+                &:checked{
+                    & ~ .tabs{
+                        .items{
+                            left: -100%;
+                        }
+                        .btn{
+                            label[for=tab20]{
+                                background-color: orangered;
+                            }
                         }
                     }
                 }
             }
-            input[id=tab21]:checked{
-                ~ .tabs{
-                    .items{
-                        left: -200%;
-                    }
-                    .btn{
-                        label[for=tab21]{
-                            background-color: orangered;
+            input[id=tab21]{
+                &:checked{
+                    & ~ .tabs{
+                        .items{
+                            left: -200%;
+                        }
+                        .btn{
+                            label[for=tab21]{
+                                background-color: orangered;
+                            }
                         }
                     }
                 }
