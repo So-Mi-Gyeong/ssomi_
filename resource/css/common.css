@@ -651,12 +651,15 @@ table .t_left {
   margin: 0 auto;
   background-color: #34465d;
   color: #fff;
-  padding: 50px 0;
+  padding: 50px 0 0 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
 .ui-content.study01 .wrap {
   margin-top: 100px;
+}
+.ui-content.study01 .wrap.noaMargin {
+  margin-top: 0;
 }
 .ui-content.study01 .wrap .keyframesBox .loading {
   margin: 0;
@@ -1541,7 +1544,10 @@ table .t_left {
   -webkit-box-shadow: 0 20px 50px rgba(0, 0, 0, 0.08);
           box-shadow: 0 20px 50px rgba(0, 0, 0, 0.08);
 }
-.ui-content.study01 .skill-progress h1 {
+.ui-content.study01 .skill-progress:first-child {
+  margin-right: 10px;
+}
+.ui-content.study01 .skill-progress h2 {
   text-align: center;
   margin: 10px 0 20px 0;
   font-size: 30px;
@@ -2189,6 +2195,7 @@ table .t_left {
   width: 100%;
   text-align: center;
   bottom: 20px;
+  background: none;
 }
 .ui-content.study01 .full-screen .tabs .btn label {
   display: inline-block;
