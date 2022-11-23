@@ -7,10 +7,6 @@
         padding: 50px 0;
         box-sizing: border-box;
         .wrap{
-            margin-top: 100px;
-            &.noaMargin{
-                margin-top: 0;
-            }
             .keyframesBox{
                 //로딩ani
                 .loading{
@@ -1878,10 +1874,6 @@
     }
     &.study02{
         width: 100%;
-        .wrap{
-            margin-top: 100px;
-        }
-
         .bg-style{
             width: 100%;
             display: flex;

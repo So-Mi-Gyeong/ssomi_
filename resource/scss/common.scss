@@ -1,4 +1,4 @@
-@import '_reset.scss', '_typography.scss', '_table.scss', '_button.scss', '_list.scss', '_input.scss', '_study.scss', '_cursor.scss', '_grid.scss', '_accordion.scss';
+@import '_reset.scss', '_typography.scss', '_table.scss', '_button.scss', '_list.scss', '_input.scss', '_study.scss', '_cursor.scss', '_grid.scss', '_accordion.scss', '_chart.scss';
 
 /* scroll */
 body{
@@ -62,6 +62,12 @@ body{
     margin: 0 auto;
     color: #fff;
     padding: 100px 0;
+    .wrap{
+        margin-top: 100px;
+        &.noaMargin{
+            margin-top: 0;
+        }
+    }
 }
 
 /* ==================================== button.html ================================= */

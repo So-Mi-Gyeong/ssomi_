@@ -1,0 +1,44 @@
+.ui-content{
+    &.chart{
+        .chart01{
+
+        }
+        .chart02{
+            position: relative;
+            text-align: center;
+            .pie-chart {
+                position: relative;
+                display:inline-block;
+                width: 300px;
+                height: 300px;
+                border-radius: 50%;
+                transition: 0.3s;
+                margin-right: 2%;
+                &:last-child{
+                    margin-right: 0;
+                }
+                .center{
+                    background: #222;
+                    color: #fff;
+                    display : block;
+                    position: absolute;
+                    top:50%; left:50%;
+                    width:200px; height:200px;
+                    border-radius: 50%;
+                    text-align:center; line-height: 200px;
+                    font-size:30px;
+                    transform: translate(-50%, -50%);
+                }
+            }
+            .replay{
+                background-color:cornflowerblue;
+                color: #000;
+                font-size: 16px;
+                border-radius: 5px;
+                position: absolute;
+                right: 0;
+                padding: 10px;
+            }
+        }
+    }
+}

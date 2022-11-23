@@ -655,12 +655,6 @@ table .t_left {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
-.ui-content.study01 .wrap {
-  margin-top: 100px;
-}
-.ui-content.study01 .wrap.noaMargin {
-  margin-top: 0;
-}
 .ui-content.study01 .wrap .keyframesBox .loading {
   margin: 0;
   padding-top: 100px;
@@ -2449,9 +2443,6 @@ table .t_left {
 }
 .ui-content.study02 {
   width: 100%;
-}
-.ui-content.study02 .wrap {
-  margin-top: 100px;
 }
 .ui-content.study02 .bg-style {
   width: 100%;
@@ -4256,6 +4247,49 @@ table .t_left {
   margin-top: 16px;
 }
 
+.ui-content.chart .chart02 {
+  position: relative;
+  text-align: center;
+}
+.ui-content.chart .chart02 .pie-chart {
+  position: relative;
+  display: inline-block;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  margin-right: 2%;
+}
+.ui-content.chart .chart02 .pie-chart:last-child {
+  margin-right: 0;
+}
+.ui-content.chart .chart02 .pie-chart .center {
+  background: #222;
+  color: #fff;
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 200px;
+  font-size: 30px;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+.ui-content.chart .chart02 .replay {
+  background-color: cornflowerblue;
+  color: #000;
+  font-size: 16px;
+  border-radius: 5px;
+  position: absolute;
+  right: 0;
+  padding: 10px;
+}
+
 /* scroll */
 body::-webkit-scrollbar {
   width: 10px;
@@ -4318,6 +4352,12 @@ body::-webkit-scrollbar-track {
   margin: 0 auto;
   color: #fff;
   padding: 100px 0;
+}
+.ui-content .wrap {
+  margin-top: 100px;
+}
+.ui-content .wrap.noaMargin {
+  margin-top: 0;
 }
 
 /* ==================================== button.html ================================= */
