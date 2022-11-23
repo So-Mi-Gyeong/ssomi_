@@ -4289,6 +4289,20 @@ table .t_left {
   right: 0;
   padding: 10px;
 }
+.ui-content.chart .counting01 ul {
+  width: 100%;
+  color: #666;
+  text-align: center;
+}
+.ui-content.chart .counting01 ul li {
+  float: left;
+  width: calc((100% - 2px) / 3);
+  list-style: none;
+  border-left: 1px solid #f9b514;
+}
+.ui-content.chart .counting01 ul li:first-child {
+  border-left: 0;
+}
 
 /* scroll */
 body::-webkit-scrollbar {

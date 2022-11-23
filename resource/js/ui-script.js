@@ -78,6 +78,48 @@ $(document).ready(function(){
 
     replayBtn.addEventListener("click", replay);
 
+    //counting01
+    $(function(){
+      var count0 = count1 = count2 = 0;
+
+      timeCounter();
+
+      function timeCounter(){
+          id0 = setInterval(count0Fn, 12.738853);
+          //12.738853=(10/785)*100
+          function count0Fn() {
+              count0++;
+              if(count0 > 785){
+                  clearInterval(id0);
+              }else{
+                  $(".number").eq(0).text(count0);
+              }
+          }
+
+          id1 = setInterval(count1Fn, 10.13171226);
+          //10.13171226(10/987)*1000
+          function count1Fn() {
+              count1++;
+              if(count1 > 987){
+                  clearInterval(id1);
+              }else{
+                  $(".number").eq(1).text(count1);
+              }
+          }
+
+          id1 = setInterval(count2Fn, 28.57142857);
+          //28.57142857=(10/350)*1000k
+          function count2Fn() {
+              count2++;
+              if(count2 > 350){
+                  clearInterval(id2);
+              }else{
+                  $(".number").eq(2).text(count2);
+              }
+          }
+      }
+    });
+
     //*********************** input script(inp_acco.html) ***********************
     const all = document.querySelector('#chkAll');
     var inp = document.getElementsByName('chk');

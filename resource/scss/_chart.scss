@@ -1,8 +1,5 @@
 .ui-content{
     &.chart{
-        .chart01{
-
-        }
         .chart02{
             position: relative;
             text-align: center;
@@ -38,6 +35,22 @@
                 position: absolute;
                 right: 0;
                 padding: 10px;
+            }
+        }
+        .counting01{
+            ul{
+                width: 100%;
+                color: #666;
+                text-align: center;
+                li{
+                    float: left;
+                    width: calc((100% - 2px) / 3);
+                    list-style: none;
+                    border-left: 1px solid #f9b514;
+                    &:first-child{
+                        border-left: 0;
+                    }
+                }
             }
         }
     }
