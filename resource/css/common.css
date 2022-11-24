@@ -655,9 +655,121 @@ table .t_left {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
+.ui-content.study01 .wrap .sns-group {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 16px;
+}
+.ui-content.study01 .wrap .sns-group ul {
+  margin: 0;
+  padding: 0;
+}
+.ui-content.study01 .wrap .sns-group ul li {
+  display: inline-block;
+  margin-right: 15px;
+  list-style: none;
+}
+.ui-content.study01 .wrap .sns-group ul li a {
+  text-decoration: none;
+  color: inherit;
+}
+.ui-content.study01 .wrap .sns-group ul li a.c-link {
+  position: relative;
+  color: #bbb;
+}
+.ui-content.study01 .wrap .sns-group ul li a.c-link::before, .ui-content.study01 .wrap .sns-group ul li a.c-link::after {
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translate(-50%, -5px);
+          transform: translate(-50%, -5px);
+  opacity: 0;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+.ui-content.study01 .wrap .sns-group ul li a.c-link::before {
+  content: "";
+  bottom: calc(100% + 2px);
+  border: solid 5px transparent;
+  border-top-color: currentColor;
+}
+.ui-content.study01 .wrap .sns-group ul li a.c-link::after {
+  content: attr(aria-label);
+  bottom: calc(100% + 12px);
+  padding: 0.5rem 0.75rem;
+  color: white;
+  font-size: 0.875rem;
+  border-radius: 3px;
+}
+.ui-content.study01 .wrap .sns-group ul li a.c-link:hover::before, .ui-content.study01 .wrap .sns-group ul li a.c-link:hover::after {
+  opacity: 1;
+}
+.ui-content.study01 .wrap .sns-group ul li a.c-link svg {
+  fill: currentColor;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  width: 24px;
+  height: 24px;
+}
+.ui-content.study01 .wrap .c-link--facebook:hover {
+  color: #3b5998;
+}
+.ui-content.study01 .wrap .c-link--twitter:hover {
+  color: #1da1f2;
+}
+.ui-content.study01 .wrap .c-link--linkedin:hover {
+  color: #0077b5;
+}
+.ui-content.study01 .wrap .c-link--instagram:hover {
+  color: #833ab4;
+}
+.ui-content.study01 .wrap .c-link--tistory:hover {
+  color: #ed5306;
+}
+.ui-content.study01 .wrap .c-link--github:hover {
+  color: #25292f;
+}
+.ui-content.study01 .wrap .c-link--codepen:hover {
+  color: #000000;
+}
+.ui-content.study01 .wrap .c-link--baekjoon:hover {
+  color: #0078c2;
+}
+.ui-content.study01 .wrap .c-link--facebook:hover::after {
+  background: #3b5998;
+}
+.ui-content.study01 .wrap .c-link--twitter:hover::after {
+  background: #1da1f2;
+}
+.ui-content.study01 .wrap .c-link--linkedin:hover::after {
+  background: #0077b5;
+}
+.ui-content.study01 .wrap .c-link--instagram:hover::after {
+  background: #833ab4;
+}
+.ui-content.study01 .wrap .c-link--tistory:hover::after {
+  background: #ed5306;
+}
+.ui-content.study01 .wrap .c-link--github:hover::after {
+  background: #25292f;
+}
+.ui-content.study01 .wrap .c-link--codepen:hover::after {
+  background: #000000;
+}
+.ui-content.study01 .wrap .c-link--baekjoon:hover::after {
+  background: #0078c2;
+}
 .ui-content.study01 .wrap .keyframesBox .loading {
   margin: 0;
-  padding-top: 100px;
+  text-align: center;
 }
 .ui-content.study01 .wrap .keyframesBox .loading span {
   display: inline-block;
@@ -709,6 +821,7 @@ table .t_left {
 .ui-content.study01 .wrap .keyframesBox .wrap .loading02 {
   width: 60px;
   height: 60px;
+  margin: 0 auto;
   position: relative;
 }
 .ui-content.study01 .wrap .keyframesBox .wrap .loading02 span {
