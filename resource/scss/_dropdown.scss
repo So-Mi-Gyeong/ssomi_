@@ -20,8 +20,15 @@
                 border-radius: 0.6rem;
                 padding: 1.5rem 1rem;
                 box-sizing: border-box;
+                &.numShow{
+                    border-radius: 0.6rem 0.6rem 0 0;
+                }
+                &.numHide{
+                    border-radius: 0.6rem;
+                }
             }
             .num-list{
+                display: none;
                 width: 30rem;
                 min-width: 5rem;
                 max-height: 23rem;

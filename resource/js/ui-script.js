@@ -1,23 +1,27 @@
 $(document).ready(function(){
 
-    //*********************** dropdown(dropdown.html) ***********************
-    $(".num-list").hide();
-
+    //*********************** dropdown(dropdown.html) ***********************  
     $(".isclick").click(function(){
-      $(".myphoneNum").css("border-radius",".6rem");
-      $(".num-list ul li").css("background-color","#fff");
-      $(".num-list").toggle(function(){
-        $(this).css("border-radius",".6rem .6rem 0px 0px");
-      });
-     
 
+      //border style 변경
+      if($(this).hasClass("numShow")){//isclick이 .numShow를 가지고 있다면
+        $(this).addClass("numHide").removeClass("numShow"); //.numHide를 add, .numShow를 remove
+      }else{
+        $(this).addClass("numShow").removeClass("numHide"); //.numShow를 add, .numHide를 remove
+      }
+
+      $(".num-list").toggle();//number_list_box open
+      
+      $(".num-list ul li").css("background-color","#fff");//.num-list를 닫으면 li bg 초기화
       $(".num-list ul li").click(function(){
-          $(".num-list ul li").css("background-color","#fff");
-          $(".num-list ul li a").css("color","#666");
-          $(this).css("background-color","#ddd");
-          $(this).children("a").css("color","#4737df");
+          $(".num-list ul li").css("background-color","#fff");//li 클릭 시 나머지 li bg 초기화
+          $(".num-list ul li a").css("color","#666");//li 클릭 시 나머지 a 글자색 초기화
+
+          $(this).css("background-color","#ddd");//클릭 된 li bg 변경
+          $(this).children("a").css("color","#4737df");//클릭 된 li a 글자색 변경
       });
     });
+    
 
     //*********************** input script(inp_acco.html) ***********************
     const all = document.querySelector('#chkAll');
