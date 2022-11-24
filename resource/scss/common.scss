@@ -67,6 +67,11 @@ body{
         &.noMargin{
             margin-top: 0;
         }
+        &.flexWrap{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
     }
 }
 

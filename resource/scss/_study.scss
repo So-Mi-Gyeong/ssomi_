@@ -522,78 +522,73 @@
             }
         }
         
-        .flexWrap{
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            .card{
-                width: 300px;
-                height: 400px;
-                margin: 10px;
-                position: relative;
-                overflow: hidden;
-                transition: .5s;
-                &:hover{
-                    transform: translateY(-20px);
-                    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.21);
-                    .content{
-                        top: 0;
-                    }
-                }
+        .card{
+            width: 300px;
+            height: 400px;
+            margin: 10px;
+            position: relative;
+            overflow: hidden;
+            transition: .5s;
+            &:hover{
+                transform: translateY(-20px);
+                box-shadow: 0 10px 20px rgba(0, 0, 0, 0.21);
                 .content{
-                    width: inherit;
-                    height: inherit;
-                    position: absolute;
-                    top: 100%;
-                    left: 0;
-                    padding: 20px;
+                    top: 0;
+                }
+            }
+            .content{
+                width: inherit;
+                height: inherit;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                padding: 20px;
+                background: linear-gradient(to top, #1e2c32, transparent);
+                text-align: center;
+                padding-top: 190px;
+                box-sizing: border-box;
+                transition: .5s;
+                h2{
+                    font-size: 30px;
+                    color: #fff;
+                    span{
+                        display: block;
+                        font-size: 14px;
+                        color: gold;
+                        margin-top: 10px;
+                    }
+                }
+                p{
+                    color: #fff;
+                    margin: 0 0 10px 0;
+                }
+                .sns{
+                    a{
+                        color: #fff;
+                        width: 20px;
+                        height: 20px;
+                        line-height: 20px;
+                        border: 1px solid #fff;
+                        display: inline-block;
+                        border-radius: 50%;
+                        font-size: 13px;
+                        text-align: center;
+                    }
+                }
+            }
+            &:nth-child(1){
+                .content{
                     background: linear-gradient(to top, #1e2c32, transparent);
-                    text-align: center;
-                    padding-top: 190px;
-                    box-sizing: border-box;
-                    transition: .5s;
-                    h2{
-                        font-size: 30px;
-                        color: #fff;
-                        span{
-                            display: block;
-                            font-size: 14px;
-                            color: gold;
-                            margin-top: 10px;
-                        }
-                    }
-                    p{
-                        color: #fff;
-                        margin: 0 0 10px 0;
-                    }
-                    .sns{
-                        a{
-                            color: #fff;
-                            width: 20px;
-                            height: 20px;
-                            line-height: 20px;
-                            border: 1px solid #fff;
-                            display: inline-block;
-                            border-radius: 50%;
-                            font-size: 13px;
-                            text-align: center;
-                        }
-                    }
                 }
-                &:nth-child(1){
-                    .content{
-                        background: linear-gradient(to top, #1e2c32, transparent);
-                    }
+            }
+            &:nth-child(2){
+                .content{
+                    background: linear-gradient(to top, #f00, transparent);
                 }
-                &:nth-child(2){
-                    .content{
-                        background: linear-gradient(to top, #f00, transparent);
-                    }
-                }
-                &:nth-child(3){
-                    .content{
-                        background: linear-gradient(to top, blue, transparent);
-                    }
+            }
+            &:nth-child(3){
+                .content{
+                    background: linear-gradient(to top, blue, transparent);
                 }
             }
         }
@@ -913,109 +908,7 @@
                 transform: scale(1.1);
             }
         }
-
-        .skill-progress{
-            width: 500px;
-            padding: 20px;
-            background-color: #333;
-            border-radius: 10px;
-            color: #fff;
-            box-shadow: 0 20px 50px rgba(0, 0, 0, .08);
-            &:first-child{
-                margin-right: 10px;
-            }
-            h2{
-                text-align: center;
-                margin: 10px 0 20px 0;
-                font-size: 30px;
-            }
-            .item{
-                margin-bottom: 10px;
-                p{
-                    overflow: hidden;
-                    margin-bottom: 5px;
-                    span{
-                        &:nth-child(1){
-                            float: left;
-                        }
-                        &:nth-child(2){
-                            float: right;
-                        }
-                    }
-                }
-                .progress{
-                    border: 1px solid #6cd4c4;
-                    padding: 5px;
-                    border-radius: 3px;
-                    .progress-level{
-                        height: 10px;
-                        background: linear-gradient(to right, crimson, gold);
-                        animation-name: progressbar;
-                        animation-duration: 1s;
-                    }
-                }
-            }
-        }
-        @keyframes progressbar{
-            0%{
-                width: 0;
-            }
-        }
-
-        .delay{
-            .item{
-                .progress{
-                    .progress-level{
-                        /*animation-name: ani;
-                        animation-duration: 1s;
-                        animation-iteration-count: 1;*/
-                        // animation: ani 1s;
-                        animation-fill-mode: both; /*정해진 반복횟수가 끝나면 100%에 머물러라*/
-                    }
-                }
-                &:nth-of-type(1){
-                    .progress{
-                        .progress-level{
-                            animation-delay: 0s;
-                        }
-                    }
-                }
-                &:nth-of-type(2){
-                    .progress{
-                        .progress-level{
-                            animation-delay: .2s;
-                        }
-                    }
-                }
-                &:nth-of-type(3){
-                    .progress{
-                        .progress-level{
-                            animation-delay: .4s;
-                        }
-                    }
-                }
-                &:nth-of-type(4){
-                    .progress{
-                        .progress-level{
-                            animation-delay: .6s;
-                        }
-                    }
-                }
-                &:nth-of-type(5){
-                    .progress{
-                        .progress-level{
-                            animation-delay: .8s;
-                        }
-                    }
-                }
-            }
-        }
-        @keyframes progressbar{
-            0%{
-                width: 0;
-            }
-        }
-
+        
         //flex layout img accordion navigation
         .gallery{
             display: flex;

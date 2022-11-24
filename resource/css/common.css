@@ -1222,18 +1222,7 @@ table .t_left {
   -webkit-transition: 0.3s;
   transition: 0.3s;
 }
-.ui-content.study01 .flexWrap {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-.ui-content.study01 .flexWrap .card {
+.ui-content.study01 .card {
   width: 300px;
   height: 400px;
   margin: 10px;
@@ -1242,16 +1231,16 @@ table .t_left {
   -webkit-transition: 0.5s;
   transition: 0.5s;
 }
-.ui-content.study01 .flexWrap .card:hover {
+.ui-content.study01 .card:hover {
   -webkit-transform: translateY(-20px);
           transform: translateY(-20px);
   -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.21);
           box-shadow: 0 10px 20px rgba(0, 0, 0, 0.21);
 }
-.ui-content.study01 .flexWrap .card:hover .content {
+.ui-content.study01 .card:hover .content {
   top: 0;
 }
-.ui-content.study01 .flexWrap .card .content {
+.ui-content.study01 .card .content {
   width: inherit;
   height: inherit;
   position: absolute;
@@ -1267,21 +1256,21 @@ table .t_left {
   -webkit-transition: 0.5s;
   transition: 0.5s;
 }
-.ui-content.study01 .flexWrap .card .content h2 {
+.ui-content.study01 .card .content h2 {
   font-size: 30px;
   color: #fff;
 }
-.ui-content.study01 .flexWrap .card .content h2 span {
+.ui-content.study01 .card .content h2 span {
   display: block;
   font-size: 14px;
   color: gold;
   margin-top: 10px;
 }
-.ui-content.study01 .flexWrap .card .content p {
+.ui-content.study01 .card .content p {
   color: #fff;
   margin: 0 0 10px 0;
 }
-.ui-content.study01 .flexWrap .card .content .sns a {
+.ui-content.study01 .card .content .sns a {
   color: #fff;
   width: 20px;
   height: 20px;
@@ -1292,15 +1281,15 @@ table .t_left {
   font-size: 13px;
   text-align: center;
 }
-.ui-content.study01 .flexWrap .card:nth-child(1) .content {
+.ui-content.study01 .card:nth-child(1) .content {
   background: -webkit-gradient(linear, left bottom, left top, from(#1e2c32), to(transparent));
   background: linear-gradient(to top, #1e2c32, transparent);
 }
-.ui-content.study01 .flexWrap .card:nth-child(2) .content {
+.ui-content.study01 .card:nth-child(2) .content {
   background: -webkit-gradient(linear, left bottom, left top, from(#f00), to(transparent));
   background: linear-gradient(to top, #f00, transparent);
 }
-.ui-content.study01 .flexWrap .card:nth-child(3) .content {
+.ui-content.study01 .card:nth-child(3) .content {
   background: -webkit-gradient(linear, left bottom, left top, from(blue), to(transparent));
   background: linear-gradient(to top, blue, transparent);
 }
@@ -1670,92 +1659,6 @@ table .t_left {
   50% {
     -webkit-transform: scale(1.1);
             transform: scale(1.1);
-  }
-}
-.ui-content.study01 .skill-progress {
-  width: 500px;
-  padding: 20px;
-  background-color: #333;
-  border-radius: 10px;
-  color: #fff;
-  -webkit-box-shadow: 0 20px 50px rgba(0, 0, 0, 0.08);
-          box-shadow: 0 20px 50px rgba(0, 0, 0, 0.08);
-}
-.ui-content.study01 .skill-progress:first-child {
-  margin-right: 10px;
-}
-.ui-content.study01 .skill-progress h2 {
-  text-align: center;
-  margin: 10px 0 20px 0;
-  font-size: 30px;
-}
-.ui-content.study01 .skill-progress .item {
-  margin-bottom: 10px;
-}
-.ui-content.study01 .skill-progress .item p {
-  overflow: hidden;
-  margin-bottom: 5px;
-}
-.ui-content.study01 .skill-progress .item p span:nth-child(1) {
-  float: left;
-}
-.ui-content.study01 .skill-progress .item p span:nth-child(2) {
-  float: right;
-}
-.ui-content.study01 .skill-progress .item .progress {
-  border: 1px solid #6cd4c4;
-  padding: 5px;
-  border-radius: 3px;
-}
-.ui-content.study01 .skill-progress .item .progress .progress-level {
-  height: 10px;
-  background: -webkit-gradient(linear, left top, right top, from(crimson), to(gold));
-  background: linear-gradient(to right, crimson, gold);
-  -webkit-animation-name: progressbar;
-          animation-name: progressbar;
-  -webkit-animation-duration: 1s;
-          animation-duration: 1s;
-}
-@-webkit-keyframes progressbar {
-  0% {
-    width: 0;
-  }
-}
-@keyframes progressbar {
-  0% {
-    width: 0;
-  }
-}
-.ui-content.study01 .delay .item .progress .progress-level {
-  /*animation-name: ani;
-  animation-duration: 1s;
-  animation-iteration-count: 1;*/
-  -webkit-animation-fill-mode: both;
-          animation-fill-mode: both; /*정해진 반복횟수가 끝나면 100%에 머물러라*/
-}
-.ui-content.study01 .delay .item:nth-of-type(1) .progress .progress-level {
-  -webkit-animation-delay: 0s;
-          animation-delay: 0s;
-}
-.ui-content.study01 .delay .item:nth-of-type(2) .progress .progress-level {
-  -webkit-animation-delay: 0.2s;
-          animation-delay: 0.2s;
-}
-.ui-content.study01 .delay .item:nth-of-type(3) .progress .progress-level {
-  -webkit-animation-delay: 0.4s;
-          animation-delay: 0.4s;
-}
-.ui-content.study01 .delay .item:nth-of-type(4) .progress .progress-level {
-  -webkit-animation-delay: 0.6s;
-          animation-delay: 0.6s;
-}
-.ui-content.study01 .delay .item:nth-of-type(5) .progress .progress-level {
-  -webkit-animation-delay: 0.8s;
-          animation-delay: 0.8s;
-}
-@keyframes progressbar {
-  0% {
-    width: 0;
   }
 }
 .ui-content.study01 .gallery {
@@ -4247,6 +4150,87 @@ table .t_left {
   margin-top: 16px;
 }
 
+.ui-content.chart .skill-progress {
+  width: 500px;
+  padding: 20px;
+  background-color: #333;
+  border-radius: 10px;
+  color: #fff;
+  -webkit-box-shadow: 0 20px 50px rgba(0, 0, 0, 0.08);
+          box-shadow: 0 20px 50px rgba(0, 0, 0, 0.08);
+}
+.ui-content.chart .skill-progress:first-child {
+  margin-right: 10px;
+}
+.ui-content.chart .skill-progress h2 {
+  text-align: center;
+  margin: 10px 0 20px 0;
+  font-size: 30px;
+}
+.ui-content.chart .skill-progress .item {
+  margin-bottom: 10px;
+}
+.ui-content.chart .skill-progress .item p {
+  overflow: hidden;
+  margin-bottom: 5px;
+}
+.ui-content.chart .skill-progress .item p span:nth-child(1) {
+  float: left;
+}
+.ui-content.chart .skill-progress .item p span:nth-child(2) {
+  float: right;
+}
+.ui-content.chart .skill-progress .item .progress {
+  border: 1px solid #6cd4c4;
+  padding: 5px;
+  border-radius: 3px;
+}
+.ui-content.chart .skill-progress .item .progress .progress-level {
+  height: 10px;
+  background: -webkit-gradient(linear, left top, right top, from(crimson), to(gold));
+  background: linear-gradient(to right, crimson, gold);
+  -webkit-animation-name: progressbar;
+          animation-name: progressbar;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+}
+.ui-content.chart .skill-progress.delay .item .progress .progress-level {
+  /*animation-name: ani;
+  animation-duration: 1s;
+  animation-iteration-count: 1;*/
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both; /*정해진 반복횟수가 끝나면 100%에 머물러라*/
+}
+.ui-content.chart .skill-progress.delay .item:nth-of-type(1) .progress .progress-level {
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
+}
+.ui-content.chart .skill-progress.delay .item:nth-of-type(2) .progress .progress-level {
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s;
+}
+.ui-content.chart .skill-progress.delay .item:nth-of-type(3) .progress .progress-level {
+  -webkit-animation-delay: 0.4s;
+          animation-delay: 0.4s;
+}
+.ui-content.chart .skill-progress.delay .item:nth-of-type(4) .progress .progress-level {
+  -webkit-animation-delay: 0.6s;
+          animation-delay: 0.6s;
+}
+.ui-content.chart .skill-progress.delay .item:nth-of-type(5) .progress .progress-level {
+  -webkit-animation-delay: 0.8s;
+          animation-delay: 0.8s;
+}
+@-webkit-keyframes progressbar {
+  0% {
+    width: 0;
+  }
+}
+@keyframes progressbar {
+  0% {
+    width: 0;
+  }
+}
 .ui-content.chart .chart02 {
   position: relative;
   text-align: center;
@@ -4631,6 +4615,17 @@ body::-webkit-scrollbar-track {
 }
 .ui-content .wrap.noMargin {
   margin-top: 0;
+}
+.ui-content .wrap.flexWrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 /* ==================================== button.html ================================= */
