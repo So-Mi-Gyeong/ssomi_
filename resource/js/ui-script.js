@@ -1,4 +1,22 @@
 $(document).ready(function(){
+    //*********************** slide(study01.html) *********************** 
+    var i = 0; // 사진 인덱스를 저장할 변수
+    $(".pre").click(function() { // img 크기만큼 왼쪽으로 이동
+        if (i > 0) {
+            i = i - 1;
+            $(".imgSlide").stop().animate({
+            "left": -100 * i + "%"
+            }, "slow");
+        }
+    });
+    $(".next").click(function() { // img 크기만큼 오른쪽으로 이동
+        if (i < 2) {
+            i = i + 1;
+            $(".imgSlide").stop().animate({
+            "left": -100 * i + "%"
+            }, "slow");
+        }
+    });
 
     //*********************** dropdown-catearea(dropdown.html) *********************** 
     //.dropdownmenu을 클릭 시 text color 변경

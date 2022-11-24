@@ -1143,6 +1143,50 @@
             }
         }
 
+        //slide
+        .slide {
+            width: 100%;
+            height: 500px;
+            position: relative;
+            overflow: hidden; /*영역 밖으로 튀어나온 오브젝트는 숨긴다.*/
+
+            .imgSlide {
+                width: 300%;
+                /* 이미지 크키 X 이미지 개수 */
+                height: 500px;
+                position: absolute;
+                z-index: 1;
+                display: flex;
+                li {
+                    width: 100%;
+                    float: left;/*이미지를 옆으로 나열시킨다.*/
+                    img {
+                        width: 100%;
+                    }
+                }
+            }
+            .moveBtn {
+                width: 100%;
+                top: 50%;
+                transform: translateY(-50%);
+                position: absolute;
+                z-index: 2;
+                font-size: 60px;
+                .pre {
+                    float: left;
+                    margin-left: 10px;
+                    text-decoration: none;
+                    color: #000;
+                }
+                  .next {
+                    float: right;
+                    margin-right: 10px;
+                    text-decoration: none;
+                    color: #000;
+                }
+            }
+        }
+
         //tab-con
         .tab-inner{
             width: 300px;
