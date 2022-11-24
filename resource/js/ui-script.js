@@ -1,5 +1,41 @@
 $(document).ready(function(){
 
+    //*********************** dropdown-catearea(dropdown.html) *********************** 
+      $(".dropdown-layer").hide();
+      $(".isDropList").hide();
+
+      $(".dropdownmenu").click(function(){
+        $(this).addClass('active');
+      });
+  
+      $(".btn-select").click(function(){
+          $(".isDropList").hide();
+          $(".button-list li").removeClass('active');
+          $(".button-list li a").removeClass('active');
+          $(".dropdown-layer").toggle();
+          
+          $(".button-list li").click(function(){
+              $(".button-list li").removeClass('active');
+              $(".button-list li a").removeClass('active');
+              $(this).addClass('active');
+              $(this).children("a").addClass('active');
+          });
+      });
+  
+      $(".btn-filter span").click(function(){
+          $(".dropdown-layer").hide();
+          $(".isDropList ul li").removeClass('active');
+          $(".isDropList ul li a").removeClass('active');
+          $(".isDropList").toggle();
+          
+          $(".isDropList ul li").click(function(){
+              $(".isDropList ul li").removeClass('active');
+              $(".isDropList ul li a").removeClass('active');
+              $(this).addClass('active');
+              $(this).children("a").addClass('active');
+          });
+      });
+
     //*********************** dropdown(dropdown.html) ***********************  
     $(".isclick").click(function(){
 
@@ -22,7 +58,6 @@ $(document).ready(function(){
       });
     });
     
-
     //*********************** input script(inp_acco.html) ***********************
     const all = document.querySelector('#chkAll');
     var inp = document.getElementsByName('chk');
