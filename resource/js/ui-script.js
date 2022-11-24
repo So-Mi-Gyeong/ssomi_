@@ -1,38 +1,47 @@
 $(document).ready(function(){
 
     //*********************** dropdown-catearea(dropdown.html) *********************** 
-      $(".dropdown-layer").hide();
-      $(".isDropList").hide();
+      //isDropList hide
 
-      $(".dropdownmenu").click(function(){
-        $(this).addClass('active');
+      //.dropdownmenu을 클릭 시 text color 변경
+      $(".dropdownmenuBtn").click(function(){
+        $(".dropdownmenuBtn").removeClass("active");
+
+        if($(this).hasClass("active")){//isclick이 .numShow를 가지고 있다면
+          $(this).removeClass("active"); //.numHide를 add, .numShow를 remove
+        }else{
+          $(this).addClass("active"); //.numShow를 add, .numHide를 remove
+        }
       });
   
+      //카테고리 전체 클릭 이벤트
       $(".btn-select").click(function(){
-          $(".isDropList").hide();
-          $(".button-list li").removeClass('active');
-          $(".button-list li a").removeClass('active');
+          $(".filter .isDropList").hide();//혜택 종류 전체 list hide
+          $(".dropdown-layer .isDropList li").removeClass('active');//list 전체 li에 bg 초기화
+          $(".dropdown-layer .isDropList li a").removeClass('active');//list 전체 a에 color 초기화
           $(".dropdown-layer").toggle();
           
-          $(".button-list li").click(function(){
-              $(".button-list li").removeClass('active');
-              $(".button-list li a").removeClass('active');
-              $(this).addClass('active');
-              $(this).children("a").addClass('active');
+          $(".dropdown-layer .isDropList li").click(function(){
+              $(".dropdown-layer .isDropList li").removeClass('active');//선택자 외 li에 bg 초기화
+              $(".dropdown-layer .isDropList li a").removeClass('active');//선택자 외 a에 color 초기화
+
+              $(this).addClass('active');//선택한 li에 bg 변경
+              $(this).children("a").addClass('active');//선택한 li의 자식요소(a)에 color 변경
           });
       });
   
-      $(".btn-filter span").click(function(){
-          $(".dropdown-layer").hide();
-          $(".isDropList ul li").removeClass('active');
-          $(".isDropList ul li a").removeClass('active');
-          $(".isDropList").toggle();
+      //혜택 종류 전체 클릭 이벤트
+      $(".btn-filter").click(function(){
+          $(".dropdown-layer").hide();//카테고리 전체 list hide
+          $(".filter .isDropList ul li").removeClass('active');//list 전체 li에 bg 초기화
+          $(".filter .isDropList ul li a").removeClass('active');//list 전체 a에 color 초기화
+          $(".filter .isDropList").toggle();
           
-          $(".isDropList ul li").click(function(){
-              $(".isDropList ul li").removeClass('active');
-              $(".isDropList ul li a").removeClass('active');
-              $(this).addClass('active');
-              $(this).children("a").addClass('active');
+          $(".filter .isDropList ul li").click(function(){
+              $(".filter .isDropList ul li").removeClass('active');//선택자 외 li에 bg 초기화
+              $(".filter .isDropList ul li a").removeClass('active');//선택자 외 a에 color 초기화
+              $(this).addClass('active');//선택한 li에 bg 변경
+              $(this).children("a").addClass('active');//선택한 li의 자식요소(a)에 color 변경
           });
       });
 

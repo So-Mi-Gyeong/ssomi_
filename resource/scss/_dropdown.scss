@@ -13,8 +13,8 @@
             background-color: #fff;
             border-bottom: 1px solid #999;
             .dropdownmenu{
-                &.active{
-                    .btn-select{
+                .dropdownmenuBtn{
+                    &.active{
                         color: #4737df;
                     }
                 }
@@ -28,6 +28,7 @@
                         color: #000;
                     }
                     .dropdown-layer{
+                        display: none;
                         position: absolute;
                         top: 6rem;
                         right: 1.4rem;
@@ -38,7 +39,7 @@
                         width: auto;
                         background: #fff;
                         overflow: hidden;
-                        .button-list{
+                        .isDropList{
                             list-style: none;
                             margin: 0;
                             padding: 0;
@@ -97,6 +98,7 @@
                     padding: 2rem 0;
                     position: relative;
                     .isDropList{
+                        display: none;
                         width: 90%;
                         max-height: -webkit-max-content;
                         visibility: visible;

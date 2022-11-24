@@ -4321,7 +4321,7 @@ table .t_left {
   background-color: #fff;
   border-bottom: 1px solid #999;
 }
-.ui-content.dropdown .cate-area .dropdownmenu.active .btn-select {
+.ui-content.dropdown .cate-area .dropdownmenu .dropdownmenuBtn.active {
   color: #4737df;
 }
 .ui-content.dropdown .cate-area .dropdownmenu.select {
@@ -4335,6 +4335,7 @@ table .t_left {
   color: #000;
 }
 .ui-content.dropdown .cate-area .dropdownmenu.select .dropdown-layer {
+  display: none;
   position: absolute;
   top: 6rem;
   right: 1.4rem;
@@ -4347,12 +4348,12 @@ table .t_left {
   background: #fff;
   overflow: hidden;
 }
-.ui-content.dropdown .cate-area .dropdownmenu.select .dropdown-layer .button-list {
+.ui-content.dropdown .cate-area .dropdownmenu.select .dropdown-layer .isDropList {
   list-style: none;
   margin: 0;
   padding: 0;
 }
-.ui-content.dropdown .cate-area .dropdownmenu.select .dropdown-layer .button-list li {
+.ui-content.dropdown .cate-area .dropdownmenu.select .dropdown-layer .isDropList li {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -4368,16 +4369,16 @@ table .t_left {
   border-right: 1px solid #999;
   position: relative;
 }
-.ui-content.dropdown .cate-area .dropdownmenu.select .dropdown-layer .button-list li.active {
+.ui-content.dropdown .cate-area .dropdownmenu.select .dropdown-layer .isDropList li.active {
   background-color: #eff2f9;
 }
-.ui-content.dropdown .cate-area .dropdownmenu.select .dropdown-layer .button-list li:nth-of-type(1):before {
+.ui-content.dropdown .cate-area .dropdownmenu.select .dropdown-layer .isDropList li:nth-of-type(1):before {
   display: none;
 }
-.ui-content.dropdown .cate-area .dropdownmenu.select .dropdown-layer .button-list li:nth-of-type(3n) {
+.ui-content.dropdown .cate-area .dropdownmenu.select .dropdown-layer .isDropList li:nth-of-type(3n) {
   border-right: 0;
 }
-.ui-content.dropdown .cate-area .dropdownmenu.select .dropdown-layer .button-list li:nth-of-type(3n+1):before {
+.ui-content.dropdown .cate-area .dropdownmenu.select .dropdown-layer .isDropList li:nth-of-type(3n+1):before {
   content: "";
   width: calc(300% + 0.2727rem);
   height: 1px;
@@ -4386,7 +4387,7 @@ table .t_left {
   top: 0;
   left: 0;
 }
-.ui-content.dropdown .cate-area .dropdownmenu.select .dropdown-layer .button-list li a {
+.ui-content.dropdown .cate-area .dropdownmenu.select .dropdown-layer .isDropList li a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -4402,7 +4403,7 @@ table .t_left {
   text-decoration: none;
   color: #333;
 }
-.ui-content.dropdown .cate-area .dropdownmenu.select .dropdown-layer .button-list li a.active {
+.ui-content.dropdown .cate-area .dropdownmenu.select .dropdown-layer .isDropList li a.active {
   color: #4737df;
 }
 .ui-content.dropdown .cate-area .dropdownmenu.filter {
@@ -4412,6 +4413,7 @@ table .t_left {
   position: relative;
 }
 .ui-content.dropdown .cate-area .dropdownmenu.filter .isDropList {
+  display: none;
   width: 90%;
   max-height: -webkit-max-content;
   visibility: visible;
