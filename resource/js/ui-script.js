@@ -1,49 +1,46 @@
 $(document).ready(function(){
 
     //*********************** dropdown-catearea(dropdown.html) *********************** 
-      //isDropList hide
-
-      //.dropdownmenu을 클릭 시 text color 변경
-      $(".dropdownmenuBtn").click(function(){
-        $(".dropdownmenuBtn").removeClass("active");
-
-        if($(this).hasClass("active")){//isclick이 .numShow를 가지고 있다면
-          $(this).removeClass("active"); //.numHide를 add, .numShow를 remove
-        }else{
-          $(this).addClass("active"); //.numShow를 add, .numHide를 remove
-        }
-      });
+    //.dropdownmenu을 클릭 시 text color 변경
+    $(".dropdownmenuBtn").click(function(){
+      if($(this).hasClass("active")){//.dropdownmenuBtn이 .active를 가지고 있다면
+        $(this).removeClass("active"); //클릭한 dropdownmenuBtn 에 remove active
+      }else{
+        $(".dropdownmenuBtn").removeClass("active");//this 외 .dropdownmenuBtn 초기화
+        $(this).addClass("active"); //.active가 없다면 클릭한 dropdownmenuBtn 에 add active
+      }
+    });
   
-      //카테고리 전체 클릭 이벤트
-      $(".btn-select").click(function(){
-          $(".filter .isDropList").hide();//혜택 종류 전체 list hide
-          $(".dropdown-layer .isDropList li").removeClass('active');//list 전체 li에 bg 초기화
-          $(".dropdown-layer .isDropList li a").removeClass('active');//list 전체 a에 color 초기화
-          $(".dropdown-layer").toggle();
-          
-          $(".dropdown-layer .isDropList li").click(function(){
-              $(".dropdown-layer .isDropList li").removeClass('active');//선택자 외 li에 bg 초기화
-              $(".dropdown-layer .isDropList li a").removeClass('active');//선택자 외 a에 color 초기화
+    //카테고리 전체 클릭 이벤트
+    $(".btn-select").click(function(){
+        $(".filter .isDropList").hide();//혜택 종류 전체 list hide
+        $(".dropdown-layer .isDropList li").removeClass('active');//list 전체 li에 bg 초기화
+        $(".dropdown-layer .isDropList li a").removeClass('active');//list 전체 a에 color 초기화
+        $(".dropdown-layer").toggle();
+        
+        $(".dropdown-layer .isDropList li").click(function(){
+            $(".dropdown-layer .isDropList li").removeClass('active');//선택자 외 li에 bg 초기화
+            $(".dropdown-layer .isDropList li a").removeClass('active');//선택자 외 a에 color 초기화
 
-              $(this).addClass('active');//선택한 li에 bg 변경
-              $(this).children("a").addClass('active');//선택한 li의 자식요소(a)에 color 변경
-          });
-      });
+            $(this).addClass('active');//선택한 li에 bg 변경
+            $(this).children("a").addClass('active');//선택한 li의 자식요소(a)에 color 변경
+        });
+    });
   
-      //혜택 종류 전체 클릭 이벤트
-      $(".btn-filter").click(function(){
-          $(".dropdown-layer").hide();//카테고리 전체 list hide
-          $(".filter .isDropList ul li").removeClass('active');//list 전체 li에 bg 초기화
-          $(".filter .isDropList ul li a").removeClass('active');//list 전체 a에 color 초기화
-          $(".filter .isDropList").toggle();
-          
-          $(".filter .isDropList ul li").click(function(){
-              $(".filter .isDropList ul li").removeClass('active');//선택자 외 li에 bg 초기화
-              $(".filter .isDropList ul li a").removeClass('active');//선택자 외 a에 color 초기화
-              $(this).addClass('active');//선택한 li에 bg 변경
-              $(this).children("a").addClass('active');//선택한 li의 자식요소(a)에 color 변경
-          });
-      });
+    //혜택 종류 전체 클릭 이벤트
+    $(".btn-filter").click(function(){
+        $(".dropdown-layer").hide();//카테고리 전체 list hide
+        $(".filter .isDropList ul li").removeClass('active');//list 전체 li에 bg 초기화
+        $(".filter .isDropList ul li a").removeClass('active');//list 전체 a에 color 초기화
+        $(".filter .isDropList").toggle();
+        
+        $(".filter .isDropList ul li").click(function(){
+            $(".filter .isDropList ul li").removeClass('active');//선택자 외 li에 bg 초기화
+            $(".filter .isDropList ul li a").removeClass('active');//선택자 외 a에 color 초기화
+            $(this).addClass('active');//선택한 li에 bg 변경
+            $(this).children("a").addClass('active');//선택한 li의 자식요소(a)에 color 변경
+        });
+    });
 
     //*********************** dropdown(dropdown.html) ***********************  
     $(".isclick").click(function(){
