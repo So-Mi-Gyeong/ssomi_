@@ -1889,6 +1889,146 @@
     }
     &.study02{
         width: 100%;
+        .popconBox{
+            max-width: 400px; //study에서
+            height: 40rem;
+            //height: 16rem;
+            margin: 0 auto;//study에서
+            position: relative;//study에서
+            background-color: #fff;//study에서
+        }
+        .pop-conts{
+            height: calc(100% - 5.3rem);
+            overflow-y: auto;
+            &.full{
+                padding: 0;
+            }
+            .point-password-keypad{
+                display: flex;
+                -webkit-box-orient: vertical;
+                -webkit-box-direction: normal;
+                flex-direction: column;
+                -webkit-box-pack: center;
+                justify-content: center;
+                height: calc(100% - 10rem);
+                text-align: center;
+                .keypad-message{
+                    h4{
+                        padding-bottom: 1rem;
+                        color: #222;
+                        font-size: 1.5rem;
+                        font-weight: bold;
+                    }
+                    p{
+                        color: #666;
+                        font-size: 1rem;
+                    }
+                }
+                .keyInsert{
+                    .keypad-circle{
+                        padding-top: 1.5rem;
+                        text-align: center;
+                        i{
+                            display: inline-block;
+                            width: 1.2rem;
+                            height: 1.2rem;
+                            margin: 0 0.35rem;
+                            border-radius: 50%;
+                            background-color: #eff2f9;
+                            &.keyon{
+                                background-color: #4737df;
+                            }
+                            input{
+                                color: inherit;
+                            }
+                        }
+                    }
+                }
+                .pw-forget{
+                    margin-top: 1.5rem;
+                    a{
+                        color: #666;
+                        font-size: .8rem;
+                        text-decoration: underline;
+                        text-underline-position: under;
+                        outline: 0;
+                    }
+                }
+            }
+            .security-keypad{
+                width: 100%;
+                height: 16rem;
+                position: absolute; //한페이지에서 쓸 때 -> fixed
+                left: 0;
+                transition: 0.4s ease-in-out;
+                background-color: #4737df;
+                &.show{
+                    visibility: visible;
+                    bottom: 0;
+                }
+                .key-random,
+                .key-back{
+                    bottom: 0;
+                    position: absolute;
+                    width: calc((100% / 3));
+                    min-height: 4rem;
+                    color: #fff;
+                    font-size: 1.2rem;
+                    font-weight: bold;
+                    text-align: center;
+                    background-color: #4737df;
+                    border: 0;
+                }
+                .key-random{
+                    left: 0;
+                }
+                .key-back{
+                    right: 0;
+                    background: #4737df url('../img/ico-key-bakcspace.png') no-repeat center center;
+                    background-size: 2.5rem auto;
+                    span{
+                        position: absolute;
+                        white-space: nowrap;
+                        width: 1px;
+                        height: 1px;
+                        overflow: hidden;
+                        border: 0;
+                        padding: 0;
+                        clip: rect(0 0 0 0);
+                        clip-path: inset(50%);
+                        margin: -1px;
+                    }
+                }
+                ul{
+                    width: 100%;
+                    overflow:hidden;
+                    li{
+                        float: left;
+                        width: calc(100% / 3);
+                        list-style: none;
+                        &:last-child{
+                            position: absolute;
+                            bottom: -0.01rem;
+                            left: 50%;
+                            transform: translateX(-50%);
+                        }
+                    }
+                    button{
+                        display: block;
+                        color: #fff;
+                        background:#fafafa;
+                        font-size: 1.2rem;
+                        font-weight: bold;
+                        width: 100%;
+                        min-height: 4rem;
+                        text-align: center;
+                        background-color: #4737df;
+                        border: 0;
+                    }
+                }
+            }
+        }
+
         .bg-style{
             width: 100%;
             display: flex;
