@@ -10,34 +10,34 @@ $(document).ready(function () {
     /*============================================ study02 - 키패드 ============================================*/
     var a = document.querySelectorAll('.keypad-circle i');
     var i = -1;
+    
     //키패드 클릭 시 i태그 색상변경
     $('.security-keypad ul li').click(function(){
-        //console.log($(this).find('button').data('key-number'));
-        //i태그에 class 추가
-        if (i < (a.length-1)){ 
-            i++;
-            $('.keypad-circle i').eq(i).addClass('keyon');
-            return;
-        }
+      //console.log($(this).find('button').data('key-number'));
+      //i태그에 class 추가
+      if (i < (a.length-1)){ 
+          i++;
+          $('.keypad-circle i').eq(i).addClass('active');
+          return;
+      }
+    
+      //색상이 전부 변경되면 class 한번에 빼기
+      $('.keypad-circle i').removeClass('active');
+      i=-1; //i 초기화
 
-        //색상이 전부 변경되면 class 한번에 빼기
-        $('.keypad-circle i').removeClass('keyon');
-        i=-1; //i 초기화
-
-        //같은 예제
-        // if (i >= (a.length-1)){
-        //     return;
-        // }
-        // i++;
-        // $('.keypad-circle i').eq(i).addClass('keyon');
-        // console.log(i); 
+      //같은 예제
+      // if (i >= (a.length-1)){
+      //     return;
+      // }
+      // i++;
+      // $('.keypad-circle i').eq(i).addClass('keyon');
+      // console.log(i); 
     });
 
     //백스페이스 클릭시 class 하나씩 빼기
     $('.key-back').click(function(){
-        $('.keypad-circle i').eq(i).removeClass('keyon');
-        i--;
-        //console.log(i);
+      $('.keypad-circle i').eq(i).removeClass('active');
+      i--;
     });  
 
 
@@ -46,15 +46,15 @@ $(document).ready(function () {
     // 배열 섞는 함수이며, 이 함수는 random() 호출할시에 arr 를 섞는다.
     //array = arr(random 함수에서 값을 받아옴) = 0,1,2,3,4,5,6,7,8,9
     var shuffleArray = function(array) {
-        for (let i = 0; i < array.length; i++) {
-            let j = Math.floor(Math.random() * (i + 1));
-            // [array[i], array[j]] = [array[j], array[i]];
-            const x = array[i];
-            array[i] = array[j];
-            array[j] = x;
-        }
-        //arr을 다 섞으면 array를 빠져나온다.
-        return array;
+      for (let i = 0; i < array.length; i++) {
+          let j = Math.floor(Math.random() * (i + 1));
+          // [array[i], array[j]] = [array[j], array[i]];
+          const x = array[i];
+          array[i] = array[j];
+          array[j] = x;
+      }
+      //arr을 다 섞으면 array를 빠져나온다.
+      return array;
     };
     // const shuffleArray = array => {
     // for (let i = 0; i < array.length; i++) {
@@ -69,17 +69,17 @@ $(document).ready(function () {
     //섞인 arr 을 ul li에 뿌려주는 함수
 
     var random = function(){
-        //arr = array
-        shuffleArray(arr);
-        //ul의 값을 비워준다.            
-        $('.security-keypad ul').empty();
-        var tmp = "";
-        //받은 값을 뿌려준다.
-        arr.forEach(function(i){
-            tmp = "<li> <button type='button' data-key-number="+ i +">"+ i + "</button> </li>"
-            //append = 받아온 값을 전부 뿌림 , text = 받아온 값을 마지막 하나만 뿌림(전에 값들을 삭제)
-            $('.security-keypad ul').append(tmp);
-        });
+      //arr = array
+      shuffleArray(arr);
+      //ul의 값을 비워준다.            
+      $('.security-keypad ul').empty();
+      var tmp = "";
+      //받은 값을 뿌려준다.
+      arr.forEach(function(i){
+          tmp = "<li> <button type='button' data-key-number="+ i +">"+ i + "</button> </li>"
+          //append = 받아온 값을 전부 뿌림 , text = 받아온 값을 마지막 하나만 뿌림(전에 값들을 삭제)
+          $('.security-keypad ul').append(tmp);
+      });
     }
     //배열예제
     // function test (text) {

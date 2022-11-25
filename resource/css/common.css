@@ -2554,7 +2554,7 @@ table .t_left {
   border-radius: 50%;
   background-color: #eff2f9;
 }
-.ui-content.study02 .pop-conts .point-password-keypad .keyInsert .keypad-circle i.keyon {
+.ui-content.study02 .pop-conts .point-password-keypad .keyInsert .keypad-circle i.active {
   background-color: #4737df;
 }
 .ui-content.study02 .pop-conts .point-password-keypad .keyInsert .keypad-circle i input {
