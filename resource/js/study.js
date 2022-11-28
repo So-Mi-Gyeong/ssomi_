@@ -81,14 +81,6 @@ $(document).ready(function () {
           $('.security-keypad ul').append(tmp);
       });
     }
-    //배열예제
-    // function test (text) {
-    //     console.log('test 함수입니다.');
-    //     console.log(text)
-    // }
-
-    // test('그라지요');
-
     /*============================================ study02 - jquery1(프로필) ============================================*/
     $('.testimonial-pic img:first-child').addClass('active');
     $('.testimonial-pic img').click(function () {
