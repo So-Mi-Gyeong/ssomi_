@@ -8,14 +8,16 @@ $(document).ready(function () {
     });
 
     /*============================================ study02 - 키패드 ============================================*/
-    var a = document.querySelectorAll('.keypad-circle i');
+    var keyInsert = document.querySelectorAll('.keypad-circle i');
     var i = -1;
+    var keyChecked = 0;
+    
     
     //키패드 클릭 시 i태그 색상변경
     $('.security-keypad ul li').click(function(){
       //console.log($(this).find('button').data('key-number'));
       //i태그에 class 추가
-      if (i < (a.length-1)){ 
+      if (i < (keyInsert.length-1)){ 
           i++;
           $('.keypad-circle i').eq(i).addClass('active');
           return;
