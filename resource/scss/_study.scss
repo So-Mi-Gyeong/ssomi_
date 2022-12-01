@@ -3372,7 +3372,8 @@
             /* dim */
             .layerDimmed{
                 opacity: .6;
-                position: fixed;
+                //position: fixed;
+                position: absolute;//여기서만사용
                 left: 0;
                 top: 0;
                 width: 100%;

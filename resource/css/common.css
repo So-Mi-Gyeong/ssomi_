@@ -4113,7 +4113,7 @@ table .t_left {
 }
 .ui-content.popup .show .layerDimmed {
   opacity: 0.6;
-  position: fixed;
+  position: absolute;
   left: 0;
   top: 0;
   width: 100%;
