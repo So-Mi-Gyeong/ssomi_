@@ -1924,50 +1924,6 @@ table .t_left {
   -webkit-transition: 0.3s;
   transition: 0.3s;
 }
-.ui-content.study01 .slide {
-  width: 100%;
-  height: 500px;
-  position: relative;
-  overflow: hidden; /*영역 밖으로 튀어나온 오브젝트는 숨긴다.*/
-}
-.ui-content.study01 .slide .imgSlide {
-  width: 300%;
-  /* 이미지 크키 X 이미지 개수 */
-  height: 500px;
-  position: absolute;
-  z-index: 1;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-.ui-content.study01 .slide .imgSlide li {
-  width: 100%;
-  float: left; /*이미지를 옆으로 나열시킨다.*/
-}
-.ui-content.study01 .slide .imgSlide li img {
-  width: 100%;
-}
-.ui-content.study01 .slide .moveBtn {
-  width: 100%;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
-  position: absolute;
-  z-index: 2;
-  font-size: 60px;
-}
-.ui-content.study01 .slide .moveBtn .pre {
-  float: left;
-  margin-left: 10px;
-  text-decoration: none;
-  color: #000;
-}
-.ui-content.study01 .slide .moveBtn .next {
-  float: right;
-  margin-right: 10px;
-  text-decoration: none;
-  color: #000;
-}
 .ui-content.study01 .tab-inner {
   width: 300px;
   height: 350px;
@@ -4368,6 +4324,141 @@ table .t_left {
 .ui-content.popup .boxwrap .popup-wrap .popup p {
   font-size: 1.2em;
   line-height: 17px;
+}
+.ui-content .slide {
+  width: 100%;
+  height: 500px;
+  position: relative;
+  overflow: hidden; /*영역 밖으로 튀어나온 오브젝트는 숨긴다.*/
+}
+.ui-content .slide .imgSlide {
+  width: 300%;
+  /* 이미지 크키 X 이미지 개수 */
+  height: 500px;
+  position: absolute;
+  z-index: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.ui-content .slide .imgSlide li {
+  width: 100%;
+  float: left; /*이미지를 옆으로 나열시킨다.*/
+}
+.ui-content .slide .imgSlide li img {
+  width: 100%;
+}
+.ui-content .slide .moveBtn {
+  width: 100%;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  position: absolute;
+  z-index: 2;
+  font-size: 60px;
+}
+.ui-content .slide .moveBtn .pre {
+  float: left;
+  margin-left: 10px;
+  text-decoration: none;
+  color: #000;
+}
+.ui-content .slide .moveBtn .next {
+  float: right;
+  margin-right: 10px;
+  text-decoration: none;
+  color: #000;
+}
+.ui-content .slideWrap {
+  width: 1000px;
+  margin: auto;
+}
+.ui-content .slideWrap .slide_wrap {
+  position: relative;
+  width: 400px;
+  margin: auto;
+  padding-bottom: 30px;
+}
+.ui-content .slideWrap .slide_wrap .slide_box {
+  width: 100%;
+  margin: auto;
+  overflow-x: hidden;
+}
+.ui-content .slideWrap .slide_wrap .slide_box .slide_content {
+  display: table;
+  float: left;
+  width: 400px;
+  height: 400px;
+}
+.ui-content .slideWrap .slide_wrap .slide_box .slide_content p {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+  font-size: 100px;
+  font-weight: bold;
+  color: #555;
+}
+.ui-content .slideWrap .slide_wrap .slide_box .slide_content.slide01 {
+  background: #ddbdff;
+}
+.ui-content .slideWrap .slide_wrap .slide_box .slide_content.slide02 {
+  background: #9fd6c2;
+}
+.ui-content .slideWrap .slide_wrap .slide_box .slide_content.slide03 {
+  background: #abe2f7;
+}
+.ui-content .slideWrap .slide_wrap .slide_box .slide_content.slide04 {
+  background: #f08c78;
+}
+.ui-content .slideWrap .slide_wrap .slide_box .slide_content.slide05 {
+  background: #fbdb65;
+}
+.ui-content .slideWrap .slide_wrap .slide_btn_box button {
+  position: absolute;
+  top: 50%;
+  margin-top: -45px;
+  width: 60px;
+  height: 60px;
+  font-size: 16px;
+  color: #999;
+  background: none;
+  border: 1px solid #ddd;
+  cursor: pointer;
+}
+.ui-content .slideWrap .slide_wrap .slide_btn_box button.slide_btn_prev {
+  left: -100px;
+}
+.ui-content .slideWrap .slide_wrap .slide_btn_box button.slide_btn_next {
+  right: -100px;
+}
+.ui-content .slideWrap .slide_wrap .slide_pagination {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+.ui-content .slideWrap .slide_wrap .slide_pagination .dot {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  margin: 0 5px;
+  overflow: hidden;
+  background: #ddd;
+  border-radius: 50%;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+.ui-content .slideWrap .slide_wrap .slide_pagination .dot.dot_active {
+  background: #333;
+}
+.ui-content .slideWrap .slide_wrap .slide_pagination .dot a {
+  display: block;
+  width: 100%;
+  height: 100%;
 }
 
 .ui-content.cursor {
