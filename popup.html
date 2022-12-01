@@ -9,7 +9,6 @@
   <link rel="stylesheet" href="./resource/css/common.css">
   <link rel="stylesheet" href="./resource/css/ui.reset.css">
   <link rel="stylesheet" href="./resource/css/ui.font.css">
-  <link rel="stylesheet" href="./resource/css/ui.event.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="./resource/js/header.js"></script>
   <script src="./resource/js/ui-script.js"></script>
@@ -20,142 +19,161 @@
   <!-- 1. font-weight / line-height
   2. step border-bottom padding -->
   <div class="container">
-    <div class="boxwrap">
-      <div class="event">
-        <div class="event-bg">
-          <img src="../img/event/event-img.png" alt="">
-        </div>
-        <div class="event-box">
-          <div class="use-method">
-            <div class="step">
-              <h2 class="que-img">이용방법</h2>
-              <h3><span class="step-style">STEP 1</span> 00700 앱 다운로드</h3>
-              <ul class="step-list">
-                <!-- <li class="list-icon">
-                  앱 다운로드 기간<br><span class="period">2022년 3월 16일(수) ~ 4월 15일(금)</span>
-                </li> -->
-                <li class="list-title">
-                  앱 다운로드 기간
-                </li>
-                <li class="period">
-                  2022년 3월 16일(수) ~ 4월 15일(금)
-                </li>
-              </ul>
+    <div class="ui-content popup">
+      <div class="wrap">
+        <div class="show">
+          <div class="layerWrap">
+            <div class="txt">
+              <h2>전화연결</h2>
+              <p>롯데시네마 판교점으로 전화를 연결 하시겠습니까?</p>
             </div>
-            <div class="step line-img">
-              <h3><span class="step-style">STEP 2</span> 00700 국제전화 사용</h3>
-              <ul class="step-list">
-                <li class="list-title">
-                  (예시) 00700+1(국가 번호)+800-642-7676
-                </li>
-                <li class="period">
-                  * 상대방의 휴대폰 번호 또는 지역 번호에서<br>
-                  가장 앞의 숫자가 0이라면 0은 제외하고<br>
-                  번호를 입력
-                </li>
-              </ul>
-              <!-- <p class="list-icon">(예시) 00700+1(국가 번호)+800-642-7676</p> -->
-            </div>
-            <div class="step line">
-              <h3><span class="step-style">STEP 3</span> 기프티콘 받기</h3>
-              <ul class="step-list">
-                <li class="list-title">
-                  혜택
-                </li>
-                <li class="period">
-                  배스킨라빈스 싱글레귤러 콘 1개
-                </li>
-                <li class="list-title">
-                  대상
-                </li>
-                <li class="period">
-                  기간 안에 00700 앱을 다운로드하고 00700 국제전화를 1회 이상 사용하신 모든 고객님
-                </li>
-                <li class="list-title">
-                  기프티콘 발생일
-                </li>
-                <li class="period">
-                  2022년 4월 22일(금) ~ 4월 27일(수)
-                </li>
-              </ul>
-              <!-- <p class="list-icon">혜택<br><span class="list-txt">배스킨라빈스 싱글레귤러 콘 1개</span></p>
-              <p class="list-icon">대상<br><span class="list-txt">기간 안에 00700 앱을 다운로드하고 00700 국제전화를 1회 이상 사용하신 모든 고객님</span></p>
-              <p class="list-icon">기프티콘 발생일<br><span class="list-txt">2022년 4월 22일(금) ~ 4월 27일(수)</span></p> -->
+            <div class="layerBtn">
+              <a href="#none" class="cancel">취소</a>
+              <a href="#none" class="confirm">연결</a>
             </div>
           </div>
-          <div class="use-method">
-            <div class="step">
-              <h2>이벤트 참여하기</h2>
-              <div class="check">
-                <input type="checkbox" id="personal-info">
-                <label for="personal-info">혜택 제공을 위한 개인정보 수집,활용 및 취급 위탁에 동의합니다.</label>
-                <input type="checkbox" id="customer-info">
-                <label for="customer-info">혜택 제공을 위하여 SKT-SKTL간 고객 정보 확인에 동의합니다.</label>
-              </div>
-              <button type="button" class="clickBtn">자세히 보기</button>
-              <div class="phone-info">
-                <h2>휴대폰 번호</h2>
-                <div class="phone-num">
-                  <select class="tel">
-                    <option value="02">010</option>
-                    <option value="031">011</option>
-                    <option value="032">012</option>
-                    <option value="032">013</option>
-                    <option value="032">014</option>
-                    <option value="032">015</option>
-                  </select>
-                  <span>-</span>
-                  <input type="tel" maxlength="4" title="휴대폰 중간번호">
-                  <span>-</span>
-                  <input type="tel" maxlength="4" title="휴태폰 마지막번호">
-                  <button type="button" class="smsBtn">SMS 인증</button>
-                </div>
-                <button type="button" class="clickBtn">앱 다운로드 URL 문자로 받기</button>
-              </div>
-            </div>
-          </div>
-          <div class="use-method">
-            <div class="step event-info">
-              <h2>이벤트 안내</h2>
-              <ul>
-                <li>
-                  2022년 3월 16일(수) 이전에 SK국제전화 00700 앱을 다운로드한 적이 없는 고객님께 혜택이 제공됩니다.
-                </li>
-                <li>
-                  2022년 3월 16일(수) ~ 4월 15일(금)까지 00700 앱을 다운로드하고 00700 국제전화를 1회 이상 사용하셔야 이벤트 참여가 완료됩니다. (STEP 1과 STEP 2를 모두 진행해 주시기 바랍니다.)
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div class="notion">
-            <h2>유의사항</h2>
-            <ul class="notion-list">
-              <li>※ 이 이벤트는 1회만 참여하실 수 있습니다.<br>(중복 참여 안 됨)</li>
-              <li>※ 이벤트 참여 시 00700 앱을 다운로드하실 때 등록한 휴대폰 번호로 모바일 쿠폰을 보내 드립니다.</li>
-              <li>※ 경품으로 받은 모바일 쿠폰은 기간을 연장하실 수 없습니다.</li>
-              <li>※ 비정상적이거나 불법적인 방법으로 이벤트에 참여하신 경우 이벤트 대상이 아니며, 혜택이 제공되지 않습니다.</li>
-              <li>※ 이벤트 참여 완료 시 개인정보 수집, 활용 및 취급·위탁에 대해 동의하신 것으로 간주됩니다. </li>
-              <li>※ 이 이벤트 경품은 제휴사 사정에 따라 안내 없이 상품이 변경되거나 대체될 수 있습니다.</li>
-              <li>※ 문의: SK국제전화 00700 고객센터<br>(1599-0070, 평일 오전 9시 ~ 오후 6시)</li>
-            </ul>
-          </div>
+          <div class="layerDimmed"></div>
         </div>
       </div>
-      <div class="popup-wrap">
-        <div class="popup-bg"></div>
-        <div class="popup">
-          <h2>개인 정보 수집, 이용 동의</h2>
-          <ul>
-            <li>1. 수집/이용 목적 : T멤버십 고객 대상 기프티콘 제공</li>
-            <li>2. 수집/이용 항목 : 이동전화번호</li>
-            <li>3. 보유/이용기간 : 이벤트 종료 60일까지</li>
-            <li>4. 제공받는 자 : SK텔레콤</li>
-            <li>5. 제공받는 목적 : T멤버십 가입여부 확인</li>
-            <li>6. 제공받는 항목 : 이동전화번호</li>
-            <li>7. 제공받는 자의 보유/이용기간 : 이벤트 종료 10일까지</li>
-          </ul>
-          <p>※ 위 개인정보 수집/이용에 동의하지 않으실 경우,
-            해당서비스를 이용하실 수 없습니다.</p>
+      <div class="wrap">
+        <div class="boxwrap">
+          <div class="event">
+            <div class="event-bg">
+              <img src="../img/event/event-img.png" alt="">
+            </div>
+            <div class="event-box">
+              <div class="use-method">
+                <div class="step">
+                  <h2 class="que-img">이용방법</h2>
+                  <h3><span class="step-style">STEP 1</span> 00700 앱 다운로드</h3>
+                  <ul class="step-list">
+                    <!-- <li class="list-icon">
+                      앱 다운로드 기간<br><span class="period">2022년 3월 16일(수) ~ 4월 15일(금)</span>
+                    </li> -->
+                    <li class="list-title">
+                      앱 다운로드 기간
+                    </li>
+                    <li class="period">
+                      2022년 3월 16일(수) ~ 4월 15일(금)
+                    </li>
+                  </ul>
+                </div>
+                <div class="step line-img">
+                  <h3><span class="step-style">STEP 2</span> 00700 국제전화 사용</h3>
+                  <ul class="step-list">
+                    <li class="list-title">
+                      (예시) 00700+1(국가 번호)+800-642-7676
+                    </li>
+                    <li class="period">
+                      * 상대방의 휴대폰 번호 또는 지역 번호에서<br>
+                      가장 앞의 숫자가 0이라면 0은 제외하고<br>
+                      번호를 입력
+                    </li>
+                  </ul>
+                  <!-- <p class="list-icon">(예시) 00700+1(국가 번호)+800-642-7676</p> -->
+                </div>
+                <div class="step line">
+                  <h3><span class="step-style">STEP 3</span> 기프티콘 받기</h3>
+                  <ul class="step-list">
+                    <li class="list-title">
+                      혜택
+                    </li>
+                    <li class="period">
+                      배스킨라빈스 싱글레귤러 콘 1개
+                    </li>
+                    <li class="list-title">
+                      대상
+                    </li>
+                    <li class="period">
+                      기간 안에 00700 앱을 다운로드하고 00700 국제전화를 1회 이상 사용하신 모든 고객님
+                    </li>
+                    <li class="list-title">
+                      기프티콘 발생일
+                    </li>
+                    <li class="period">
+                      2022년 4월 22일(금) ~ 4월 27일(수)
+                    </li>
+                  </ul>
+                  <!-- <p class="list-icon">혜택<br><span class="list-txt">배스킨라빈스 싱글레귤러 콘 1개</span></p>
+                  <p class="list-icon">대상<br><span class="list-txt">기간 안에 00700 앱을 다운로드하고 00700 국제전화를 1회 이상 사용하신 모든 고객님</span></p>
+                  <p class="list-icon">기프티콘 발생일<br><span class="list-txt">2022년 4월 22일(금) ~ 4월 27일(수)</span></p> -->
+                </div>
+              </div>
+              <div class="use-method">
+                <div class="step">
+                  <h2>이벤트 참여하기</h2>
+                  <div class="check">
+                    <input type="checkbox" id="personal-info">
+                    <label for="personal-info">혜택 제공을 위한 개인정보 수집,활용 및 취급 위탁에 동의합니다.</label>
+                    <input type="checkbox" id="customer-info">
+                    <label for="customer-info">혜택 제공을 위하여 SKT-SKTL간 고객 정보 확인에 동의합니다.</label>
+                  </div>
+                  <button type="button" class="clickBtn">자세히 보기</button>
+                  <div class="phone-info">
+                    <h2>휴대폰 번호</h2>
+                    <div class="phone-num">
+                      <select class="tel">
+                        <option value="02">010</option>
+                        <option value="031">011</option>
+                        <option value="032">012</option>
+                        <option value="032">013</option>
+                        <option value="032">014</option>
+                        <option value="032">015</option>
+                      </select>
+                      <span>-</span>
+                      <input type="tel" maxlength="4" title="휴대폰 중간번호">
+                      <span>-</span>
+                      <input type="tel" maxlength="4" title="휴태폰 마지막번호">
+                      <button type="button" class="smsBtn">SMS 인증</button>
+                    </div>
+                    <button type="button" class="clickBtn">앱 다운로드 URL 문자로 받기</button>
+                  </div>
+                </div>
+              </div>
+              <div class="use-method">
+                <div class="step event-info">
+                  <h2>이벤트 안내</h2>
+                  <ul>
+                    <li>
+                      2022년 3월 16일(수) 이전에 SK국제전화 00700 앱을 다운로드한 적이 없는 고객님께 혜택이 제공됩니다.
+                    </li>
+                    <li>
+                      2022년 3월 16일(수) ~ 4월 15일(금)까지 00700 앱을 다운로드하고 00700 국제전화를 1회 이상 사용하셔야 이벤트 참여가 완료됩니다. (STEP 1과 STEP 2를 모두 진행해 주시기 바랍니다.)
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="notion">
+                <h2>유의사항</h2>
+                <ul class="notion-list">
+                  <li>※ 이 이벤트는 1회만 참여하실 수 있습니다.<br>(중복 참여 안 됨)</li>
+                  <li>※ 이벤트 참여 시 00700 앱을 다운로드하실 때 등록한 휴대폰 번호로 모바일 쿠폰을 보내 드립니다.</li>
+                  <li>※ 경품으로 받은 모바일 쿠폰은 기간을 연장하실 수 없습니다.</li>
+                  <li>※ 비정상적이거나 불법적인 방법으로 이벤트에 참여하신 경우 이벤트 대상이 아니며, 혜택이 제공되지 않습니다.</li>
+                  <li>※ 이벤트 참여 완료 시 개인정보 수집, 활용 및 취급·위탁에 대해 동의하신 것으로 간주됩니다. </li>
+                  <li>※ 이 이벤트 경품은 제휴사 사정에 따라 안내 없이 상품이 변경되거나 대체될 수 있습니다.</li>
+                  <li>※ 문의: SK국제전화 00700 고객센터<br>(1599-0070, 평일 오전 9시 ~ 오후 6시)</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="popup-wrap">
+            <div class="popup-bg"></div>
+            <div class="popup">
+              <h2>개인 정보 수집, 이용 동의</h2>
+              <ul>
+                <li>1. 수집/이용 목적 : T멤버십 고객 대상 기프티콘 제공</li>
+                <li>2. 수집/이용 항목 : 이동전화번호</li>
+                <li>3. 보유/이용기간 : 이벤트 종료 60일까지</li>
+                <li>4. 제공받는 자 : SK텔레콤</li>
+                <li>5. 제공받는 목적 : T멤버십 가입여부 확인</li>
+                <li>6. 제공받는 항목 : 이동전화번호</li>
+                <li>7. 제공받는 자의 보유/이용기간 : 이벤트 종료 10일까지</li>
+              </ul>
+              <p>※ 위 개인정보 수집/이용에 동의하지 않으실 경우,
+                해당서비스를 이용하실 수 없습니다.</p>
+            </div>
+          </div>
         </div>
       </div>
     </div>

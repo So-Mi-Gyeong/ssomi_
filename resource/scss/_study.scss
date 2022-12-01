@@ -3316,4 +3316,322 @@
             }
         }
     }
+
+    &.popup{
+        width: 100%;
+        background-color: #fff;
+            //popup
+        .show{
+            width: 100%;
+            height: 100vh;
+            .layerWrap{
+                z-index: 2;
+                width: 16.5rem;
+                height: auto;
+                background-color: #fff;
+                border: 1px solid #d9d9d9;
+                border-radius: .7rem;
+                overflow: hidden;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%,-50%);
+                .txt{
+                    padding: 25px 20px 25px;
+                    h2{
+                        font-size: 17px;
+                        font-weight: 600;
+                        color: #222;
+                        padding-bottom: 15px;
+                    }
+                    p{
+                        font-size: 14px;
+                        color: #666;
+                        line-height: 18px;
+                    }
+                }
+                .layerBtn{
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    border-top: 1px solid #d9d9d9;
+                    a{
+                        width: 100%;
+                        text-align: center;
+                        font-size: 16px;
+                        font-weight: 600;
+                        background-color: #fff;
+                        color: #999;
+                        padding: 1rem;
+                        &.confirm{
+                            color: #4737df;
+                        }
+                    }
+                }
+            }
+            /* dim */
+            .layerDimmed{
+                opacity: .6;
+                position: fixed;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100vh;
+                //height: 100%;
+                z-index: 1;
+                background-color: #000;
+                transition-duration: 0.4s;
+            }
+        }
+        .boxwrap{
+            max-width: 500px;
+            margin: 0 auto;
+            .event{
+                background-color: #ff404e;
+                box-sizing: border-box;
+                .event-box{
+                    padding: 0 2.5em;
+                    box-sizing: border-box;
+                    .use-method{
+                        background-color: #fff;
+                        border-radius: 1em;
+                        &+.use-method{
+                            margin-top: 2.5em;
+                        }
+                        .step{
+                            padding: 2.4em 3.25em 4em 3.25em;
+                            text-align: center;
+                            box-sizing: border-box;
+                            &.line{
+                                position: relative;
+                                &::before{
+                                    content: '';
+                                    width: calc(100% - 70px);
+                                    margin: 0 auto;
+                                    border-top: 1px solid #e6e6e6;
+                                    position: absolute;
+                                    top: 0;
+                                    left: 50%;
+                                    transform: translateX(-50%);
+                                }
+                            }
+                            &.line-img{
+                                background: url('./resource/img/event/ico-dotline-pink.jpg') 0 0 no-repeat;
+                                background-size: 100% 12.5px;
+                            }
+                            h2{
+                                font-size: 2.1em;
+                                margin-bottom: 20px;
+                                letter-spacing: -1px;
+                                &.que-img{
+                                    background: url('../img/event/ico-questionMark.jpg') 50% 40px no-repeat;
+                                    background-size: 86.5px 94.5px;
+                                    padding-bottom: 126.5px;
+                                    margin-bottom: 0;
+                                }
+                            }
+                            h3{
+                                font-size: 1.8em;
+                                margin-bottom: 25px;
+                            }
+                            .step-style{
+                                color: #ff404e;
+                                text-decoration: underline;
+                            }
+                            .list-title{
+                                font-size: 1.3em;
+                                text-align: left;
+                                &::before{
+                                    content: '·';
+                                    color: #ff404e;
+                                    padding-right: .45em;
+                                }
+                                /* .list-title > .list-txt{
+                                    padding-left: 1em;
+                                } */
+                            }
+                            .period{
+                                padding-left: 1.4em;
+                                text-align: left;
+                                font-size: 1.2em;
+                            }
+                            .check{
+                                text-align:left;
+                                input[type=checkbox]{
+                                    display: none;
+                                    &:checked{
+                                        & + label{
+                                            &::before{
+                                                background: url('./resource/img/event/ico-checkbox-select.jpg') 0 0 no-repeat;
+                                                background-size: 100% 100%;
+                                            }
+                                        }
+                                    }
+                                }
+                                label{
+                                    display: block;
+                                    padding-left: 24px;
+                                    position: relative;
+                                    font-size: 1.3em;
+                                    line-height: 1.7em;
+                                    &::before{
+                                        content: '';
+                                        width: 17px;
+                                        height: 17px;
+                                        background: url('./resource/img/event/ico-checkbox-empty.jpg') 0 0 no-repeat;
+                                        background-size: 100% 100%;
+                                        position: absolute; 
+                                        top: 2px;
+                                        left: 0;
+                                    }
+                                }
+                            }
+                            .clickBtn{
+                                width: 100%;
+                                height: 46px;
+                                line-height: 46px;
+                                background-color: #0d0d0d;
+                                color: #fff;
+                                border-radius: 10px;
+                                margin: 20px 0 25px 0;
+                                font-size: 1.5em;
+                                box-sizing: border-box;
+                            }
+                            .phone-info{
+                                >h2{
+                                    text-align: left;
+                                    font-size: 1.5em;
+                                }
+                                .phone-num{
+                                    > .tel,
+                                    > input[type=tel]{
+                                        width: 50px;
+                                        height: 35px;
+                                        background-color: #fff;
+                                        border: 1px solid #d2d2d2;
+                                        border-radius: 3px;
+                                        box-sizing: border-box;
+                                        padding: 0 8.5px;
+                                        font-size: 1.3em;
+                                    }
+                                }
+                                .smsBtn{
+                                    width: 67.5px;
+                                    height: 35px;
+                                    background-color: #cc1a28;
+                                    color: #fff;
+                                    border-radius: 3px;
+                                    margin-left: .5em;
+                                    font-size: 1.3em;
+                                }
+                            }
+                            &.event-info{
+                                h2{
+                                    color: #ff404e;
+                                    font-size: 1.8em !important;
+                                    position: relative;
+                                    padding-top: calc(60.5px - 24px);
+                                    &::before{
+                                        content: '';
+                                        width: 20px;
+                                        height: 20px;
+                                        background: url('./resource/img/event/ico-announcement.png') 0 0 no-repeat;
+                                        background-size: 100% 100%;
+                                        position: absolute;
+                                        top: 11px;
+                                        left: 50%;
+                                        transform: translateX(-50%);
+                                    }
+                                }
+                                ul{
+                                    text-align: left;
+                                    li{
+                                        font-size: 1.3em;
+                                        line-height: 18px;
+                                        margin-bottom: 10px;
+                                        padding-left: 5px;
+                                        position: relative;
+                                        &::before{
+                                            content: '-';
+                                            position: absolute;
+                                            left: 0;
+                                        }
+                                        &:last-child{
+                                            margin-bottom: 0;
+                                        }
+                                    }
+                                }
+                            } 
+                        }
+                    }
+                    
+                    .notion{
+                        padding: 26px 0 49px 0;
+                        h2{
+                            font-size: 1.6em;
+                            color: #fff;
+                            margin-bottom: 16px;
+                        }
+                        .notion-list{
+                            li{
+                                color: #fff;
+                                font-size: 1.3em;
+                                line-height: 18px;
+                            }
+                        }
+                    }
+                }
+            }
+            /* popup */
+            .popup-wrap{
+                position: fixed;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                display: none;
+                &.open{
+                    display: block;
+                }
+                .popup-bg{
+                    background-color:rgba(0,0,0,.3); 
+                    position: fixed;
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                }
+                .popup{
+                    width: calc(100% - 5em);
+                    max-width: 400px;
+                    background-color: #fff;
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    padding: 2.8em 2.5em 3.5em 2.5em;
+                    border-radius: 10px;
+                    box-sizing: border-box;
+                    h2{
+                        font-size: 1.7em;
+                        letter-spacing: -1px;
+                        margin-bottom: 16px;
+                    }
+                    ul{
+                        padding-bottom: 18px;
+                        margin-bottom: 20px;
+                        border-bottom: 1px solid #e6e6e6;
+                        li{
+                            font-size: 1.2em;
+                            line-height: 17px;
+                        }
+                    }
+                    p{
+                        font-size: 1.2em;
+                        line-height: 17px;
+                    }
+                }
+            }
+        }
+    }
 }
