@@ -4339,7 +4339,6 @@ table .t_left {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  min-height: 100vh;
 }
 .ui-content.slide .textSlide :root {
   --offset: 6px;
@@ -4398,6 +4397,59 @@ table .t_left {
   transition: 0.5s -webkit-transform ease-in-out;
   transition: 0.5s transform ease-in-out;
   transition: 0.5s transform ease-in-out, 0.5s -webkit-transform ease-in-out;
+}
+.ui-content.slide .slideBar {
+  width: 80%;
+  margin: 0 auto;
+}
+.ui-content.slide .slideBar .progress-area {
+  position: relative;
+}
+.ui-content.slide .slideBar .progress-area .progress {
+  position: relative;
+  margin-top: 5rem;
+}
+.ui-content.slide .slideBar .progress-area .progress .bubble {
+  width: 100px;
+  height: 30px;
+  background: #000;
+  color: #fff;
+  border-radius: 20px;
+  text-align: center;
+  line-height: 30px;
+  position: absolute;
+  bottom: 2rem;
+  margin-left: -3rem;
+}
+.ui-content.slide .slideBar .progress-area .progress .now {
+  position: relative;
+  width: 100%;
+  height: 1.5rem;
+  background-color: #e0e1e7;
+  border-radius: 0.75rem;
+  overflow: hidden;
+}
+.ui-content.slide .slideBar .progress-area .progress .now > span {
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: rgb(238, 174, 202);
+  background: -webkit-gradient(linear, left top, right top, from(rgb(238, 174, 202)), to(rgb(148, 187, 233)));
+  background: linear-gradient(90deg, rgb(238, 174, 202) 0%, rgb(148, 187, 233) 100%);
+}
+.ui-content.slide .slideBar .progress-area .date {
+  width: 95%;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 .ui-content.slide .slideTest {
   position: relative;
