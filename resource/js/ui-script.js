@@ -1,4 +1,21 @@
 $(document).ready(function(){
+    //*********************** textSlide(slide.html) *********************** 
+    setInterval(function () {
+      const slideTxt = document.querySelectorAll('.mask span');
+      const show = document.querySelector('.mask span[data-show]');
+      const next = show.nextElementSibling || document.querySelector('.mask span:first-child');
+      const up = document.querySelector('.mask span[data-up]');
+      
+      if (up) {
+          up.removeAttribute('data-up')
+      }
+      
+      show.removeAttribute('data-show')
+      show.setAttribute('data-up', '')
+      
+      next.setAttribute('data-show', '')
+      }, 2000);
+
     //*********************** slidetest(slide.html) *********************** 
     var slider = ('.slideTest_content'),
         imgs = $('.slideTest_content div'),
