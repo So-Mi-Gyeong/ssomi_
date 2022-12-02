@@ -4325,72 +4325,58 @@ table .t_left {
   font-size: 1.2em;
   line-height: 17px;
 }
-.ui-content .slide {
-  width: 100%;
-  height: 500px;
+.ui-content.slide .slideTest {
   position: relative;
-  overflow: hidden; /*영역 밖으로 튀어나온 오브젝트는 숨긴다.*/
+  height: 400px;
 }
-.ui-content .slide .imgSlide {
-  width: 300%;
-  /* 이미지 크키 X 이미지 개수 */
-  height: 500px;
+.ui-content.slide .slideTest a {
+  font-family: sans-serif;
+  color: #000;
+  text-decoration: none;
+  font-weight: bold;
+}
+.ui-content.slide .slideTest a#prev {
   position: absolute;
-  z-index: 1;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  top: 340px;
+  left: 30px;
 }
-.ui-content .slide .imgSlide li {
-  width: 100%;
-  float: left; /*이미지를 옆으로 나열시킨다.*/
-}
-.ui-content .slide .imgSlide li img {
-  width: 100%;
-}
-.ui-content .slide .moveBtn {
-  width: 100%;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
+.ui-content.slide .slideTest a#next {
   position: absolute;
-  z-index: 2;
-  font-size: 60px;
+  top: 340px;
+  right: 30px;
 }
-.ui-content .slide .moveBtn .pre {
+.ui-content.slide .slideTest .testWrap {
+  position: absolute;
+  top: 0;
+  height: 320px;
+}
+.ui-content.slide .slideTest .slideTest_content {
+  position: absolute;
+}
+.ui-content.slide .slideTest .slideTest_content div {
   float: left;
-  margin-left: 10px;
-  text-decoration: none;
-  color: #000;
+  width: 300px;
+  height: 300px;
+  border: 1px solid #000;
 }
-.ui-content .slide .moveBtn .next {
-  float: right;
-  margin-right: 10px;
-  text-decoration: none;
-  color: #000;
-}
-.ui-content .slideWrap {
-  width: 1000px;
-  margin: auto;
-}
-.ui-content .slideWrap .slide_wrap {
+.ui-content.slide .slideWrap .slide_wrap {
   position: relative;
   width: 400px;
   margin: auto;
   padding-bottom: 30px;
 }
-.ui-content .slideWrap .slide_wrap .slide_box {
+.ui-content.slide .slideWrap .slide_wrap .slide_box {
   width: 100%;
   margin: auto;
   overflow-x: hidden;
 }
-.ui-content .slideWrap .slide_wrap .slide_box .slide_content {
+.ui-content.slide .slideWrap .slide_wrap .slide_box .slide_content {
   display: table;
   float: left;
   width: 400px;
   height: 400px;
 }
-.ui-content .slideWrap .slide_wrap .slide_box .slide_content p {
+.ui-content.slide .slideWrap .slide_wrap .slide_box .slide_content p {
   display: table-cell;
   vertical-align: middle;
   text-align: center;
@@ -4398,22 +4384,22 @@ table .t_left {
   font-weight: bold;
   color: #555;
 }
-.ui-content .slideWrap .slide_wrap .slide_box .slide_content.slide01 {
+.ui-content.slide .slideWrap .slide_wrap .slide_box .slide_content.slide01 {
   background: #ddbdff;
 }
-.ui-content .slideWrap .slide_wrap .slide_box .slide_content.slide02 {
+.ui-content.slide .slideWrap .slide_wrap .slide_box .slide_content.slide02 {
   background: #9fd6c2;
 }
-.ui-content .slideWrap .slide_wrap .slide_box .slide_content.slide03 {
+.ui-content.slide .slideWrap .slide_wrap .slide_box .slide_content.slide03 {
   background: #abe2f7;
 }
-.ui-content .slideWrap .slide_wrap .slide_box .slide_content.slide04 {
+.ui-content.slide .slideWrap .slide_wrap .slide_box .slide_content.slide04 {
   background: #f08c78;
 }
-.ui-content .slideWrap .slide_wrap .slide_box .slide_content.slide05 {
+.ui-content.slide .slideWrap .slide_wrap .slide_box .slide_content.slide05 {
   background: #fbdb65;
 }
-.ui-content .slideWrap .slide_wrap .slide_btn_box button {
+.ui-content.slide .slideWrap .slide_wrap .slide_btn_box button {
   position: absolute;
   top: 50%;
   margin-top: -45px;
@@ -4425,13 +4411,13 @@ table .t_left {
   border: 1px solid #ddd;
   cursor: pointer;
 }
-.ui-content .slideWrap .slide_wrap .slide_btn_box button.slide_btn_prev {
+.ui-content.slide .slideWrap .slide_wrap .slide_btn_box button.slide_btn_prev {
   left: -100px;
 }
-.ui-content .slideWrap .slide_wrap .slide_btn_box button.slide_btn_next {
+.ui-content.slide .slideWrap .slide_wrap .slide_btn_box button.slide_btn_next {
   right: -100px;
 }
-.ui-content .slideWrap .slide_wrap .slide_pagination {
+.ui-content.slide .slideWrap .slide_wrap .slide_pagination {
   position: absolute;
   left: 50%;
   bottom: 0;
@@ -4441,7 +4427,7 @@ table .t_left {
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
 }
-.ui-content .slideWrap .slide_wrap .slide_pagination .dot {
+.ui-content.slide .slideWrap .slide_wrap .slide_pagination .dot {
   display: inline-block;
   width: 15px;
   height: 15px;
@@ -4452,13 +4438,57 @@ table .t_left {
   -webkit-transition: 0.3s;
   transition: 0.3s;
 }
-.ui-content .slideWrap .slide_wrap .slide_pagination .dot.dot_active {
+.ui-content.slide .slideWrap .slide_wrap .slide_pagination .dot.dot_active {
   background: #333;
 }
-.ui-content .slideWrap .slide_wrap .slide_pagination .dot a {
+.ui-content.slide .slideWrap .slide_wrap .slide_pagination .dot a {
   display: block;
   width: 100%;
   height: 100%;
+}
+.ui-content.slide .slideWrapBox {
+  width: 100%;
+  height: 500px;
+  position: relative;
+  overflow: hidden; /*영역 밖으로 튀어나온 오브젝트는 숨긴다.*/
+}
+.ui-content.slide .slideWrapBox .imgSlide {
+  width: 300%;
+  /* 이미지 크키 X 이미지 개수 */
+  height: 500px;
+  position: absolute;
+  z-index: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.ui-content.slide .slideWrapBox .imgSlide li {
+  width: 100%;
+  float: left; /*이미지를 옆으로 나열시킨다.*/
+}
+.ui-content.slide .slideWrapBox .imgSlide li img {
+  width: 100%;
+}
+.ui-content.slide .slideWrapBox .moveBtn {
+  width: 100%;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  position: absolute;
+  z-index: 2;
+  font-size: 60px;
+}
+.ui-content.slide .slideWrapBox .moveBtn .pre {
+  float: left;
+  margin-left: 10px;
+  text-decoration: none;
+  color: #000;
+}
+.ui-content.slide .slideWrapBox .moveBtn .next {
+  float: right;
+  margin-right: 10px;
+  text-decoration: none;
+  color: #000;
 }
 
 .ui-content.cursor {

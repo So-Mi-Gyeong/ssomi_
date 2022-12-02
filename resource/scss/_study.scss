@@ -3592,137 +3592,171 @@
         }
     }
 
-    //slide
-    .slide {
-        width: 100%;
-        height: 500px;
-        position: relative;
-        overflow: hidden; /*영역 밖으로 튀어나온 오브젝트는 숨긴다.*/
+    &.slide{
+        .slideTest{
+            position: relative;
+            height: 400px;
+            a {
+                font-family:sans-serif;
+                color:#000;
+                text-decoration:none;
+                font-weight:bold;
+                &#prev {
+                    position:absolute;
+                    top:340px;
+                    left:30px;
+                }
+                &#next {
+                    position:absolute;
+                    top:340px;
+                    right:30px;
+                }
+            }
+            .testWrap {
+                position:absolute;
+                top:0;
+                height:320px;
+              }
+              .slideTest_content {
+                position:absolute;
+                div {
+                    float:left;
+                    width:300px;
+                    height:300px;
+                    border:1px solid #000;
+                }
+            }  
+        }
 
-        .imgSlide {
-            width: 300%;
-            /* 이미지 크키 X 이미지 개수 */
-            height: 500px;
-            position: absolute;
-            z-index: 1;
-            display: flex;
-            li {
-                width: 100%;
-                float: left;/*이미지를 옆으로 나열시킨다.*/
-                img {
-                    width: 100%;
-                }
-            }
-        }
-        .moveBtn {
-            width: 100%;
-            top: 50%;
-            transform: translateY(-50%);
-            position: absolute;
-            z-index: 2;
-            font-size: 60px;
-            .pre {
-                float: left;
-                margin-left: 10px;
-                text-decoration: none;
-                color: #000;
-            }
-                .next {
-                float: right;
-                margin-right: 10px;
-                text-decoration: none;
-                color: #000;
-            }
-        }
-    }
-    
-    .slideWrap{
-        width: 1000px;
-        margin: auto;
-        .slide_wrap { 
-            position: relative; 
-            width: 400px; 
-            margin: auto; 
-            padding-bottom: 30px; 
-            .slide_box { 
-                width: 100%; 
+        .slideWrap{
+            .slide_wrap { 
+                position: relative; 
+                width: 400px; 
                 margin: auto; 
-                overflow-x: hidden; 
-                .slide_content { 
-                    display: table; 
-                    float: left; 
-                    width: 400px; 
-                    height: 400px; 
-                    p { 
-                        display: table-cell; 
-                        vertical-align: middle; 
-                        text-align: center; 
-                        font-size: 100px; 
-                        font-weight: bold; 
-                        color: #555; 
-                    }
-                    &.slide01 { 
-                        background: #ddbdff; 
-                    }
-                    &.slide02 { 
-                        background: #9fd6c2; 
-                    }
-                    &.slide03 { 
-                        background: #abe2f7; 
-                    }
-                    &.slide04 { 
-                        background: #f08c78; 
-                    }
-                    &.slide05 { 
-                        background: #fbdb65; 
+                padding-bottom: 30px; 
+                .slide_box { 
+                    width: 100%; 
+                    margin: auto; 
+                    overflow-x: hidden; 
+                    .slide_content { 
+                        display: table; 
+                        float: left; 
+                        width: 400px; 
+                        height: 400px; 
+                        p { 
+                            display: table-cell; 
+                            vertical-align: middle; 
+                            text-align: center; 
+                            font-size: 100px; 
+                            font-weight: bold; 
+                            color: #555; 
+                        }
+                        &.slide01 { 
+                            background: #ddbdff; 
+                        }
+                        &.slide02 { 
+                            background: #9fd6c2; 
+                        }
+                        &.slide03 { 
+                            background: #abe2f7; 
+                        }
+                        &.slide04 { 
+                            background: #f08c78; 
+                        }
+                        &.slide05 { 
+                            background: #fbdb65; 
+                        }
                     }
                 }
-            }
-            .slide_btn_box{
-                button { 
+                .slide_btn_box{
+                    button { 
+                        position: absolute; 
+                        top: 50%; 
+                        margin-top: -45px; 
+                        width: 60px; 
+                        height: 60px; 
+                        font-size: 16px; 
+                        color: #999; 
+                        background: none; 
+                        border: 1px solid #ddd; 
+                        cursor: pointer; 
+                        &.slide_btn_prev { 
+                            left: -100px; 
+                        }
+                        &.slide_btn_next { 
+                            right: -100px; 
+                        }
+                    }
+                }
+                .slide_pagination{
                     position: absolute; 
-                    top: 50%; 
-                    margin-top: -45px; 
-                    width: 60px; 
-                    height: 60px; 
-                    font-size: 16px; 
-                    color: #999; 
-                    background: none; 
-                    border: 1px solid #ddd; 
-                    cursor: pointer; 
-                    &.slide_btn_prev { 
-                        left: -100px; 
-                    }
-                    &.slide_btn_next { 
-                        right: -100px; 
+                    left: 50%; 
+                    bottom: 0; 
+                    list-style: none; 
+                    margin: 0; 
+                    padding: 0; 
+                    transform: translateX(-50%);
+                    .dot { 
+                        display: inline-block; 
+                        width: 15px; 
+                        height: 15px; 
+                        margin: 0 5px; 
+                        overflow: hidden; 
+                        background: #ddd; 
+                        border-radius: 50%; 
+                        transition: 0.3s; 
+                        &.dot_active { 
+                            background: #333; 
+                        }
+                        a { 
+                            display: block; 
+                            width: 100%; 
+                            height: 100%; 
+                        }
                     }
                 }
             }
-            .slide_pagination{
-                position: absolute; 
-                left: 50%; 
-                bottom: 0; 
-                list-style: none; 
-                margin: 0; 
-                padding: 0; 
-                transform: translateX(-50%);
-                .dot { 
-                    display: inline-block; 
-                    width: 15px; 
-                    height: 15px; 
-                    margin: 0 5px; 
-                    overflow: hidden; 
-                    background: #ddd; 
-                    border-radius: 50%; 
-                    transition: 0.3s; 
-                    &.dot_active { 
-                        background: #333; 
+        }
+
+        .slideWrapBox {
+            width: 100%;
+            height: 500px;
+            position: relative;
+            overflow: hidden; /*영역 밖으로 튀어나온 오브젝트는 숨긴다.*/
+
+            .imgSlide {
+                width: 300%;
+                /* 이미지 크키 X 이미지 개수 */
+                height: 500px;
+                position: absolute;
+                z-index: 1;
+                display: flex;
+                li {
+                    width: 100%;
+                    float: left;/*이미지를 옆으로 나열시킨다.*/
+                    img {
+                        width: 100%;
                     }
-                    a { 
-                        display: block; 
-                        width: 100%; 
-                        height: 100%; 
-                    }
+                }
+            }
+            .moveBtn {
+                width: 100%;
+                top: 50%;
+                transform: translateY(-50%);
+                position: absolute;
+                z-index: 2;
+                font-size: 60px;
+                .pre {
+                    float: left;
+                    margin-left: 10px;
+                    text-decoration: none;
+                    color: #000;
+                }
+                    .next {
+                    float: right;
+                    margin-right: 10px;
+                    text-decoration: none;
+                    color: #000;
                 }
             }
         }

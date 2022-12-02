@@ -1,4 +1,59 @@
 $(document).ready(function(){
+    //*********************** slidetest(slide.html) *********************** 
+    var slider = ('.slideTest_content'),
+        imgs = $('.slideTest_content div'),
+        sliderWidth = 0,
+        windowWidth = $(window).width(),
+        startImg,
+        startPos,
+        prev = $('#prev'),
+        next = $('#next'),
+        totalSlides = 3,
+        clickTotal = 0;
+        
+    for (var i = 0; i < imgs.length; i++) {
+      sliderWidth += $(imgs[i]).outerWidth();
+    }
+    
+    imgs.filter(':first').addClass('start');
+        
+    startImg = $('.start').outerWidth();
+    startPos = -((sliderWidth * 2) - (windowWidth / 2) + (startImg / 2));
+    
+    $(slider).css('width', sliderWidth * 4);
+    
+    imgs.filter(':first').before(imgs.clone());
+    imgs.filter(':first').before(imgs.clone());
+    imgs.filter(':last').after(imgs.clone());
+    
+    $(slider).css('left', startPos);
+    
+    prev.click(function(e) {
+      e.preventDefault();
+      clickTotal--;
+      $(slider).animate({
+        left: '+=' + sliderWidth / totalSlides
+      }, 500, function() {
+        if (clickTotal == -totalSlides) {
+          clickTotal = 0;
+          $(slider).css('left', startPos);
+        }
+      });
+    });
+    
+    next.click(function(e) {
+      e.preventDefault();
+      clickTotal++;
+      $(slider).animate({
+        left: '-=' + sliderWidth / totalSlides
+      }, 500, function() {
+        if (clickTotal == totalSlides) {
+          clickTotal = 0;
+          $(slider).css('left', startPos);
+        }
+      });
+    });
+
     //*********************** slide(slide.html) *********************** 
     (function () {
       const slideList = document.querySelector('.slide_list');  // Slide parent dom
