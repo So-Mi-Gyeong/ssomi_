@@ -646,6 +646,10 @@ table .t_left {
   background-color: #eedb4a;
 }
 
+.ui-content {
+  /*====================================== study ======================================*/
+  /*====================================== //study ======================================*/
+}
 .ui-content.study01 {
   width: 100%;
   margin: 0 auto;
@@ -4331,18 +4335,20 @@ table .t_left {
 }
 .ui-content.slide .slideTest a {
   font-family: sans-serif;
-  color: #000;
+  color: #fff;
   text-decoration: none;
   font-weight: bold;
+  border: 1px solid #0076fe;
+  border-radius: 5px;
+  background-color: #0076fe;
+  padding: 5px 10px;
+  position: absolute;
+  top: 310px;
 }
 .ui-content.slide .slideTest a#prev {
-  position: absolute;
-  top: 340px;
   left: 30px;
 }
 .ui-content.slide .slideTest a#next {
-  position: absolute;
-  top: 340px;
   right: 30px;
 }
 .ui-content.slide .slideTest .testWrap {
@@ -4357,7 +4363,14 @@ table .t_left {
   float: left;
   width: 300px;
   height: 300px;
+  padding: 10px;
+  background-color: #fff;
+  color: #000;
   border: 1px solid #000;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-size: 20px;
+  font-weight: bold;
 }
 .ui-content.slide .slideWrap .slide_wrap {
   position: relative;
