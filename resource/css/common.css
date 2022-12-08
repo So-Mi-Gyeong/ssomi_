@@ -5420,6 +5420,193 @@ table .t_left {
   color: #dbdbdb !important;
 }
 
+.ui-content.netflix .netflixWrap {
+  width: 100%;
+  margin: 0 auto;
+}
+.ui-content.netflix .netflixWrap .Logo {
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+}
+.ui-content.netflix .netflixWrap .Logo h1 {
+  text-align: center;
+  margin: 0;
+  margin-right: 5rem;
+}
+.ui-content.netflix .netflixWrap .Logo h1 a {
+  text-decoration: none;
+  color: #f00;
+  font-size: 5rem;
+  font-weight: 500;
+}
+.ui-content.netflix .netflixWrap .Logo .icon {
+  position: absolute;
+  top: -34%;
+  right: 32%;
+  -webkit-transform: translateX(-32%);
+          transform: translateX(-32%);
+}
+.ui-content.netflix .netflixWrap .Logo .icon video {
+  width: 200px;
+  height: 200px;
+}
+.ui-content.netflix .netflixWrap .movienav {
+  width: 100%;
+  margin: 0 auto;
+}
+.ui-content.netflix .netflixWrap .movienav nav {
+  width: 50%;
+  margin: 0 auto;
+}
+.ui-content.netflix .netflixWrap .movienav nav ul {
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.ui-content.netflix .netflixWrap .movienav nav ul li a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+.ui-content.netflix .netflixWrap .movienav nav ul li .logoStyle {
+  color: #f00;
+  font-size: 30px;
+}
+.ui-content.netflix .netflixWrap .mainMovie {
+  width: 100%;
+  height: 65vh;
+  color: #fff;
+  position: relative;
+  background: url("../img/movietitle.png") 0 0 no-repeat;
+  margin-bottom: 3rem;
+}
+.ui-content.netflix .netflixWrap .mainMovie .mainBox {
+  padding: 10px;
+  position: absolute;
+  left: 1%;
+  bottom: 0;
+}
+.ui-content.netflix .netflixWrap .mainMovie .mainBox em {
+  font-size: 20px;
+}
+.ui-content.netflix .netflixWrap .mainMovie .mainBox em .logoStyle {
+  color: #f00;
+  font-size: 30px;
+  margin-right: 5px;
+}
+.ui-content.netflix .netflixWrap .mainMovie .mainBox h2 {
+  margin: 0;
+  font-size: 4rem;
+  font-weight: 900;
+}
+.ui-content.netflix .netflixWrap .mainMovie .mainBox p {
+  font-size: 13px;
+  font-weight: 500;
+}
+.ui-content.netflix .netflixWrap .mainMovie .mainBox .Btn {
+  display: inline-block;
+}
+.ui-content.netflix .netflixWrap .mainMovie .mainBox .Btn p {
+  display: inline-block;
+  height: 30px;
+  line-height: 30px;
+  padding: 0 2rem;
+  border-radius: 5px;
+  font-size: 14px;
+  font-weight: 600;
+}
+.ui-content.netflix .netflixWrap .mainMovie .mainBox .Btn p:nth-of-type(1) {
+  background-color: #fff;
+  color: #000;
+  margin-right: 20px;
+}
+.ui-content.netflix .netflixWrap .mainMovie .mainBox .Btn p:nth-of-type(2) {
+  background-color: #333;
+  color: #fff;
+}
+.ui-content.netflix .netflixWrap .movieBox h2 {
+  margin: 0 0 2rem 1rem;
+  padding: 0;
+  text-align: left;
+  color: #fff;
+  font-size: 3rem;
+  font-weight: 500;
+}
+.ui-content.netflix .netflixWrap .movieBox .slideBox {
+  width: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+.ui-content.netflix .netflixWrap .movieBox .slideBox .btn {
+  display: block;
+}
+.ui-content.netflix .netflixWrap .movieBox .slideBox .btn span {
+  display: block;
+  height: 400px;
+  margin-right: 3rem;
+}
+.ui-content.netflix .netflixWrap .movieBox .slideBox .btn span img {
+  width: 300px;
+  height: 100%;
+}
+.ui-content.netflix .netflixWrap .movieBox .slideBox .btn p {
+  color: #fff;
+  font-size: 20px;
+  font-weight: 500;
+}
+.ui-content.netflix .netflixWrap .movieBox .slideBox .btn .titleStyle {
+  font-weight: 600;
+}
+.ui-content.netflix .netflixWrap .movieBox .slideBox #insertHtml {
+  margin: 0 auto;
+  padding: 0;
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0;
+  margin-left: 3rem;
+}
+.ui-content.netflix .netflixWrap .movieBox .slideBox #movie {
+  margin: 0 auto;
+  padding: 0;
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0;
+  margin-left: 3rem;
+}
+.ui-content.netflix .netflixWrap .movieBox .slideBox #tv {
+  margin: 0 auto;
+  padding: 0;
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0;
+  margin-left: 3rem;
+}
+.ui-content.netflix .netflixWrap .movieBox .slideBox #person {
+  margin: 0 auto;
+  padding: 0;
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0;
+  margin-left: 3rem;
+}
+
 /* scroll */
 body::-webkit-scrollbar {
   width: 10px;

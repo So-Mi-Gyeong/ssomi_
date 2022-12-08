@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no, user-scalable=no">
+  <title>SSOMI</title>
+  <link rel="stylesheet" href="./resource/css/header.css">
+  <link rel="stylesheet" href="./resource/css/common.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.12.4.min.js"></script>
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+  <script src="./resource/js/header.js"></script>
+  <script src="./resource/js/ui-netflix.js"></script>
+</head>
+<body>
+  <header></header>
+  <div class="container">
+    <div class="ui-content netflix">
+        <!-- https://developers.themoviedb.org/3/trending/get-trending -->
+        <div class="netflixWrap">
+            <div class="Logo">
+                <h1>
+                    <a href="#">NETFLIX</a>
+                </h1>
+                <span class="icon">
+                    <video muted="muted" autoplay="autoplay" loop="loop"><source src="../resource/img/Clapper.mp4" type="video/webm"></video>
+                </span>
+            </div>
+            <div class="movienav">
+                <nav>
+                    <ul>
+                        <li><a href="#" class="logoStyle">N</a></li>
+                        <li><a href="#">TV 프로그램</a></li>
+                        <li><a href="#">영화</a></li>
+                        <li><a href="#">최신 등록 콘테츠</a></li>
+                        <li><a href="#">내가 찜한 콘테츠</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="mainMovie">
+                <div class="mainBox">
+                    <em><span class="logoStyle">N</span>시리즈</em>
+                    <h2 class="title">오만과 편견</h2>
+                    <p>다이애나 개벌든의 인기 판타지 로맨스 소설 시리즈를 각색한 서사드라마.<br>
+                    18세기 스코틀랜드로 타임슬립한 2차대전 군 간호사와 스코틀랜드 청년의 로맨스가 펼쳐진다.</p>
+                    <div class="Btn">
+                        <p>재생</p>
+                        <p>내가 찜한 콘텐츠</p>
+                    </div>
+                </div>
+            </div>
+            <div class="movieBox">
+                <h2>넷플릭스 인기 콘텐츠</h2>
+                <div class="slideBox aa">
+                    <ul id="insertHtml"></ul>
+                </div>
+            </div>
+            <div class="movieBox">
+                <h2>MOVIE</h2>
+                <div class="slideBox bb">
+                    <ul id="movie"></ul>
+                </div>
+            </div>
+            <div class="movieBox">
+                <h2>TV</h2>
+                <div class="slideBox cc">
+                    <ul id="tv"></ul>
+                </div>
+            </div>
+            <div class="movieBox">
+                <h2>PERSON</h2>
+                <div class="slideBox dd">
+                    <ul id="person"></ul>
+                </div>
+            </div>
+        </div>
+    </div>
+  </div>
+</body>
+
+</html>
