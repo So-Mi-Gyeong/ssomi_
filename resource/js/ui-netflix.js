@@ -1,5 +1,4 @@
 // for 
-
 var str = '';
 $.ajax({
     type:"GET",
@@ -12,7 +11,7 @@ $.ajax({
         data.results.forEach(function (data) {
            // console.log(data);
             //console.log(data.title + ' : ' + data.poster_path);
-            str += '<li class="btn">';
+            str += '<li class="btnNet">';
             str += '<span><img src="https://image.tmdb.org/t/p/original/' + data.poster_path + '"/></span>';
             str += '<p class="title titleStyle">' + data.title + '</p>';
             str += '<p class="title">' + data.release_date + '</p>';
@@ -41,7 +40,7 @@ $.ajax({
         data.results.forEach(function (data) {
            // console.log(data);
             //console.log(data.title + ' : ' + data.poster_path);
-            moviestr += '<li class="btn">';
+            moviestr += '<li class="btnNet">';
             moviestr += '<span><img src="https://image.tmdb.org/t/p/original/' + data.poster_path + '"/></span>';
             moviestr += '<p class="title titleStyle">' + data.title + '</p>';
             moviestr += '<p class="title">' + data.release_date + '</p>';
@@ -70,7 +69,7 @@ $.ajax({
         data.results.forEach(function (data) {
            // console.log(data);
             //console.log(data.title + ' : ' + data.poster_path);
-            tvstr += '<li class="btn">';
+            tvstr += '<li class="btnNet">';
             tvstr += '<span><img src="https://image.tmdb.org/t/p/original/' + data.poster_path + '"/></span>';
             tvstr += '<p class="title titleStyle">' + data.name + '</p>';
             tvstr += '<p class="title">' + data.first_air_date + '</p>';
@@ -99,7 +98,7 @@ $.ajax({
         data.results.forEach(function (data) {
            // console.log(data);
             //console.log(data.title + ' : ' + data.poster_path);
-            personstr += '<li class="btn">';
+            personstr += '<li class="btnNet">';
             personstr += '<span><img src="https://image.tmdb.org/t/p/original/' + data.poster_path + '"/></span>';
             personstr += '<p class="title titleStyle">' + data.name + '</p>';
             personstr += '<p class="title">' + data.first_air_date + '</p>';

@@ -1,4 +1,5 @@
 @charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Anton&family=Gowun+Batang&display=swap");
 html,
 body,
 div,
@@ -5420,6 +5421,14 @@ table .t_left {
   color: #dbdbdb !important;
 }
 
+.ui-content.netflix {
+  width: 100%;
+  padding-top: 0;
+  background-color: #000;
+}
+.ui-content.netflix * {
+  font-family: "Anton", sans-serif;
+}
 .ui-content.netflix .netflixWrap {
   width: 100%;
   margin: 0 auto;
@@ -5427,33 +5436,10 @@ table .t_left {
 .ui-content.netflix .netflixWrap .Logo {
   width: 100%;
   margin: 0 auto;
-  position: relative;
-}
-.ui-content.netflix .netflixWrap .Logo h1 {
-  text-align: center;
-  margin: 0;
-  margin-right: 5rem;
-}
-.ui-content.netflix .netflixWrap .Logo h1 a {
-  text-decoration: none;
-  color: #f00;
-  font-size: 5rem;
-  font-weight: 500;
-}
-.ui-content.netflix .netflixWrap .Logo .icon {
-  position: absolute;
-  top: -34%;
-  right: 32%;
-  -webkit-transform: translateX(-32%);
-          transform: translateX(-32%);
-}
-.ui-content.netflix .netflixWrap .Logo .icon video {
-  width: 200px;
-  height: 200px;
 }
 .ui-content.netflix .netflixWrap .movienav {
   width: 100%;
-  margin: 0 auto;
+  margin: 30px auto;
 }
 .ui-content.netflix .netflixWrap .movienav nav {
   width: 50%;
@@ -5504,18 +5490,18 @@ table .t_left {
   margin-right: 5px;
 }
 .ui-content.netflix .netflixWrap .mainMovie .mainBox h2 {
-  margin: 0;
   font-size: 4rem;
   font-weight: 900;
 }
 .ui-content.netflix .netflixWrap .mainMovie .mainBox p {
+  margin: 10px 0;
   font-size: 13px;
   font-weight: 500;
 }
-.ui-content.netflix .netflixWrap .mainMovie .mainBox .Btn {
+.ui-content.netflix .netflixWrap .mainMovie .mainBox .playBtn {
   display: inline-block;
 }
-.ui-content.netflix .netflixWrap .mainMovie .mainBox .Btn p {
+.ui-content.netflix .netflixWrap .mainMovie .mainBox .playBtn button {
   display: inline-block;
   height: 30px;
   line-height: 30px;
@@ -5524,18 +5510,23 @@ table .t_left {
   font-size: 14px;
   font-weight: 600;
 }
-.ui-content.netflix .netflixWrap .mainMovie .mainBox .Btn p:nth-of-type(1) {
+.ui-content.netflix .netflixWrap .mainMovie .mainBox .playBtn button:hover {
+  opacity: 0.8;
+}
+.ui-content.netflix .netflixWrap .mainMovie .mainBox .playBtn button.playBtn {
   background-color: #fff;
   color: #000;
   margin-right: 20px;
 }
-.ui-content.netflix .netflixWrap .mainMovie .mainBox .Btn p:nth-of-type(2) {
+.ui-content.netflix .netflixWrap .mainMovie .mainBox .playBtn button.contentBtn {
   background-color: #333;
   color: #fff;
 }
+.ui-content.netflix .netflixWrap .movieBox {
+  margin: 3rem 0 0 3rem;
+}
 .ui-content.netflix .netflixWrap .movieBox h2 {
-  margin: 0 0 2rem 1rem;
-  padding: 0;
+  margin-bottom: 20px;
   text-align: left;
   color: #fff;
   font-size: 3rem;
@@ -5546,24 +5537,25 @@ table .t_left {
   overflow-x: hidden;
   overflow-y: auto;
 }
-.ui-content.netflix .netflixWrap .movieBox .slideBox .btn {
+.ui-content.netflix .netflixWrap .movieBox .slideBox .btnNet {
   display: block;
 }
-.ui-content.netflix .netflixWrap .movieBox .slideBox .btn span {
+.ui-content.netflix .netflixWrap .movieBox .slideBox .btnNet span {
   display: block;
   height: 400px;
   margin-right: 3rem;
+  margin-bottom: 20px;
 }
-.ui-content.netflix .netflixWrap .movieBox .slideBox .btn span img {
+.ui-content.netflix .netflixWrap .movieBox .slideBox .btnNet span img {
   width: 300px;
   height: 100%;
 }
-.ui-content.netflix .netflixWrap .movieBox .slideBox .btn p {
+.ui-content.netflix .netflixWrap .movieBox .slideBox .btnNet p {
   color: #fff;
   font-size: 20px;
   font-weight: 500;
 }
-.ui-content.netflix .netflixWrap .movieBox .slideBox .btn .titleStyle {
+.ui-content.netflix .netflixWrap .movieBox .slideBox .btnNet .titleStyle {
   font-weight: 600;
 }
 .ui-content.netflix .netflixWrap .movieBox .slideBox #insertHtml {
@@ -5574,7 +5566,6 @@ table .t_left {
   display: -ms-flexbox;
   display: flex;
   padding: 0;
-  margin-left: 3rem;
 }
 .ui-content.netflix .netflixWrap .movieBox .slideBox #movie {
   margin: 0 auto;
@@ -5584,7 +5575,6 @@ table .t_left {
   display: -ms-flexbox;
   display: flex;
   padding: 0;
-  margin-left: 3rem;
 }
 .ui-content.netflix .netflixWrap .movieBox .slideBox #tv {
   margin: 0 auto;
@@ -5594,7 +5584,6 @@ table .t_left {
   display: -ms-flexbox;
   display: flex;
   padding: 0;
-  margin-left: 3rem;
 }
 .ui-content.netflix .netflixWrap .movieBox .slideBox #person {
   margin: 0 auto;
@@ -5604,7 +5593,6 @@ table .t_left {
   display: -ms-flexbox;
   display: flex;
   padding: 0;
-  margin-left: 3rem;
 }
 
 /* scroll */
