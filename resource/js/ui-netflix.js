@@ -1,4 +1,8 @@
-// for 
+var slideBox = document.getElementsByClassName('slideBox');
+
+
+  
+// for
 var str = '';
 $.ajax({
     type:"GET",

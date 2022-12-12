@@ -16,13 +16,6 @@
 				weight: 500;
 			}
 		}
-		@mixin ulBox {
-			margin: 0 auto;
-			padding: 0;
-			list-style: none;
-			display: flex;
-			padding: 0;
-		}
 		@mixin logo {
 			color: #f00;
 			font-size: 30px;
@@ -127,44 +120,42 @@
 					@include h2Box();
 				}
 				.slideBox{
-					width: 100%;
-					overflow-x:hidden;
-					overflow-y: auto;
-					.btnNet{
-						display: block;
-						span{
+					border: 1px solid red;
+					ul{
+						display: flex;
+						justify-content: start;
+						align-items: baseline;
+						overflow: auto;
+						.btnNet{
 							display: block;
-							height: 400px;
-							margin-right: 3rem;
-							margin-bottom: 20px;
-							img{
-								width: 300px;
-								height: 100%;
+							span{
+								display: block;
+								height: 400px;
+								margin-right: 3rem;
+								margin-bottom: 20px;
+								img{
+									width: 300px;
+									height: 100%;
+								}
+							}
+							p{
+								color: #fff;
+								font: {
+									size: 20px;
+									weight: 500;
+								}
+							}
+							.titleStyle{
+								font-weight: 600;
 							}
 						}
-						p{
-							color: #fff;
-							font: {
-								size: 20px;
-								weight: 500;
-							}
-						}
-						.titleStyle{
-							font-weight: 600;
-						}
 					}
-					#insertHtml{
-						@include ulBox();
-					}
-					#movie{
-						@include ulBox();
-					}
-					#tv{
-						@include ulBox();
-					}
-					#person{
-						@include ulBox();
-					}
+					// #insertHtml,
+					// #movie,
+					// #tv,
+					// #person{
+					// 	@include ulBox();
+					// }
 				}
 			}
 		}
