@@ -4182,6 +4182,7 @@ table .t_left {
   position: relative;
   font-size: 1.3em;
   line-height: 1.7em;
+  color: #000;
 }
 .ui-content.popup .boxwrap .event .event-box .use-method .step .check label::before {
   content: "";
@@ -5532,9 +5533,6 @@ table .t_left {
   font-size: 3rem;
   font-weight: 500;
 }
-.ui-content.netflix .netflixWrap .movieBox .slideBox {
-  border: 1px solid red;
-}
 .ui-content.netflix .netflixWrap .movieBox .slideBox ul {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -5546,6 +5544,7 @@ table .t_left {
       -ms-flex-align: baseline;
           align-items: baseline;
   overflow: auto;
+  overflow: hidden;
 }
 .ui-content.netflix .netflixWrap .movieBox .slideBox ul .btnNet {
   display: block;

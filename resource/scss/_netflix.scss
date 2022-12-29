@@ -120,12 +120,12 @@
 					@include h2Box();
 				}
 				.slideBox{
-					border: 1px solid red;
 					ul{
 						display: flex;
 						justify-content: start;
 						align-items: baseline;
 						overflow: auto;
+						overflow: hidden;
 						.btnNet{
 							display: block;
 							span{
