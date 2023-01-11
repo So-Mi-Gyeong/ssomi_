@@ -98,22 +98,22 @@ body {
 }
 
 /* ==================================== menu ================================= */
-header.blackStyle .wrap .menu .ui-nav::before {
+header.blackStyle .menu .ui-nav::before {
   background: url(../img/ico_menu_black.png) 0 0 no-repeat;
 }
-header.blackStyle .wrap .menu .ui-nav.open::before {
+header.blackStyle .menu .ui-nav.open::before {
   background: url(../img/ico_menu_black.png) -36px 0 no-repeat;
 }
-header.blackStyle .wrap .menu .ui-menuContent li {
+header.blackStyle .menu .ui-menuContent li {
   background-color: #222;
 }
-header.blackStyle .wrap .menu .ui-menuContent li a {
+header.blackStyle .menu .ui-menuContent li a {
   color: #fff;
 }
-header.blackStyle .wrap .menu .ui-menuContent li a:hover {
+header.blackStyle .menu .ui-menuContent li a:hover {
   background-color: #333;
 }
-header.blackStyle .wrap .menu .ui-menuContent li a:focus {
+header.blackStyle .menu .ui-menuContent li a:focus {
   background-color: rgb(12, 12, 12);
 }
 
@@ -141,7 +141,7 @@ header.blackStyle .wrap .menu .ui-menuContent li a:focus {
   display: block;
 }
 .menu .ui-nav.open {
-  left: 30%;
+  left: 50%;
   -webkit-transition: 0.5s;
   transition: 0.5s;
 }
@@ -149,11 +149,11 @@ header.blackStyle .wrap .menu .ui-menuContent li a:focus {
   background: url(../img/ico_menu_white.png) -36px 0 no-repeat;
 }
 .menu .ui-menuContent {
-  width: 30%;
+  width: 50%;
   height: 100vh;
   position: fixed;
   top: 0;
-  left: -30%;
+  left: -50%;
   -webkit-transition: 0.5s;
   transition: 0.5s;
   overflow-x: hidden;
@@ -195,14 +195,23 @@ header.blackStyle .wrap .menu .ui-menuContent li a:focus {
 }
 
 @media all and (max-width: 758px) {
-  .menu .ui-nav.open .ui-nav.open {
+  header.blackStyle .menu .ui-nav.open {
     background-color: #fff;
+  }
+  header.blackStyle .menu .ui-nav.open::before {
+    background: url(../img/ico_menu_black.png) -30px 0 no-repeat;
+  }
+  .menu .ui-nav.open {
+    background-color: #000;
     border-radius: 50%;
-    left: 93%;
+    left: 90%;
     margin-top: 2%;
     z-index: 999;
   }
-  .ui-menuContent.open.open {
+  .menu .ui-nav.open::before {
+    background: url(../img/ico_menu_white.png) -30px 0 no-repeat;
+  }
+  .ui-menuContent.open {
     width: 100%;
   }
 }
