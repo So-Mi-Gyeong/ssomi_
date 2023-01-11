@@ -498,12 +498,12 @@ input[type=radio],
     position: relative;
     padding: 0;
   }
-  .container .wrap:nth-of-type(3) {
+  .container .wrap.squareBox {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
     height: auto;
   }
-  .container .wrap:nth-of-type(3) .square {
+  .container .wrap.squareBox .square {
     width: 18rem;
     height: 18rem;
     top: 0;
@@ -511,19 +511,19 @@ input[type=radio],
             transform: translateY(0);
     padding: 1rem;
   }
-  .container .wrap:nth-of-type(3) .square:last-child {
+  .container .wrap.squareBox .square:last-child {
     margin-bottom: 0;
   }
-  .container .wrap:nth-of-type(3) .square > div > h2 {
+  .container .wrap.squareBox .square > div > h2 {
     padding-bottom: 1rem;
     font-size: 1.3rem;
     font-weight: 600;
   }
-  .container .wrap:nth-of-type(3) .square > div > p {
+  .container .wrap.squareBox .square > div > p {
     line-height: 1.3rem;
     font-size: 0.7rem;
   }
-  .container .wrap:nth-of-type(3) .square > div > a {
+  .container .wrap.squareBox .square > div > a {
     padding: 9px;
     margin: 1.2rem auto 0;
   }

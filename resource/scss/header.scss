@@ -107,3 +107,22 @@ header{
         }
     }
 }
+
+@media all and (max-width:758px) {
+    .menu .ui-nav.open{
+        .ui-nav{
+            &.open{
+                background-color: #fff;
+                border-radius: 50%;
+                left: 93%;
+                margin-top: 2%;
+                z-index: 999;
+            }
+        }
+    }
+    .ui-menuContent.open{
+        &.open{
+            width: 100%;
+        }
+    }
+}
