@@ -141,7 +141,7 @@ header.blackStyle .menu .ui-menuContent li a:focus {
   display: block;
 }
 .menu .ui-nav.open {
-  left: 50%;
+  left: 30%;
   -webkit-transition: 0.5s;
   transition: 0.5s;
 }
@@ -149,11 +149,11 @@ header.blackStyle .menu .ui-menuContent li a:focus {
   background: url(../img/ico_menu_white.png) -36px 0 no-repeat;
 }
 .menu .ui-menuContent {
-  width: 50%;
+  width: 30%;
   height: 100vh;
   position: fixed;
   top: 0;
-  left: -50%;
+  left: -30%;
   -webkit-transition: 0.5s;
   transition: 0.5s;
   overflow-x: hidden;
@@ -213,5 +213,14 @@ header.blackStyle .menu .ui-menuContent li a:focus {
   }
   .ui-menuContent.open {
     width: 100%;
+  }
+}
+@media (min-width: 759px) and (max-width: 1100px) {
+  .menu .ui-nav.open {
+    left: 50%;
+  }
+  .menu .ui-menuContent {
+    width: 50%;
+    left: 50%;
   }
 }
