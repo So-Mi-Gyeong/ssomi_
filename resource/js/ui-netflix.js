@@ -1,7 +1,4 @@
 var slideBox = document.getElementsByClassName('slideBox');
-
-
-  
 // for
 var str = '';
 $.ajax({
@@ -155,3 +152,5 @@ new ScrollBooster({
     direction: "horizontal",
     scrollMode: "transform"
 });
+
+// ============================= 가로 스크롤 =============================

@@ -78,6 +78,35 @@
         </div>
     </div>
   </div>
+  <script>
+    'use strict';
+    const target = document.querySelector('.slideBox');
+    const mousedown = (e) => {
+        const that = e.currentTarget;
+        const xy_scroll = [that.scrollLeft, that.scrollTop] ;
+        const xy = [e.pageX - xy_scroll[0], e.pageY - xy_scroll[1]] ;
+        const xy_client = [that.getBoundingClientRect().left, that.getBoundingClientRect().top];
+        
+        console.log(e.pageX - xy_scroll[0], xy_scroll, xy, xy_client);
+
+        const onMouseMove = (e) => {
+            const _xy = [e.pageX - xy_scroll[0], e.pageY - xy_scroll[1]]
+
+            that.scrollTo(xy_scroll[0] + xy[0] - _xy[0], xy_scroll[1] + xy[1] - _xy[1]);
+
+            console.log(xy_scroll[0] + xy[0] - _xy[0], xy_scroll[1] + xy[1] - _xy[1]);
+        }
+        
+        document.addEventListener('mousemove', onMouseMove);
+        document.onmouseup = (e) => {
+            console.log('end')
+            document.removeEventListener('mousemove', onMouseMove);
+            document.onmouseup = null;
+        }
+    }
+
+    target.addEventListener('mousedown', mousedown);
+  </script>
 </body>
 
 </html>
