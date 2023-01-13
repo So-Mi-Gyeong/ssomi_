@@ -121,14 +121,12 @@
 				}
 				.slideBox{
 					width: 100%;
-					overflow: hidden;
+					overflow: auto;
 					ul{
 						width: 200%;
 						display: flex;
 						justify-content: start;
 						align-items: baseline;
-						overflow: auto;
-						overflow: hidden;
 						.btnNet{
 							display: block;
 							span{

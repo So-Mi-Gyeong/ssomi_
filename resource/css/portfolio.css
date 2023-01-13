@@ -142,7 +142,7 @@ input[type=radio],
   -webkit-animation-delay: 0.2s;
           animation-delay: 0.2s;
 }
-.container .loading .loading-wrap span:nth-of-type(3) {
+.container .loading .loading-wrap span.squareBox {
   -webkit-animation-delay: 0.4s;
           animation-delay: 0.4s;
   margin-right: 0;
@@ -341,39 +341,39 @@ input[type=radio],
     position: relative;
     padding: 0;
   }
-  .container .wrap:nth-of-type(3) {
+  .container .wrap.squareBox {
     display: block;
     height: auto;
     padding: 2rem 0;
   }
-  .container .wrap:nth-of-type(3) .square {
-    width: 19rem;
-    height: 19rem;
+  .container .wrap.squareBox .square {
+    width: 100%;
+    height: 400px;
     top: 0;
     -webkit-transform: translateY(0);
             transform: translateY(0);
-    margin-bottom: 2rem;
+    margin-top: 50px;
   }
-  .container .wrap:nth-of-type(3) .square:last-child {
-    margin-bottom: 0;
+  .container .wrap.squareBox .square:last-child {
+    margin-bottom: 50px;
   }
-  .container .wrap:nth-of-type(3) .square:hover span {
+  .container .wrap.squareBox .square:hover span {
     background-color: transparent;
   }
-  .container .wrap:nth-of-type(3) .square:nth-child(2):hover span {
+  .container .wrap.squareBox .square:nth-child(2):hover span {
     background-color: transparent;
   }
-  .container .wrap:nth-of-type(3) .square:nth-child(3):hover span {
+  .container .wrap.squareBox .square:nth-child(3):hover span {
     background-color: transparent;
   }
-  .container .wrap:nth-of-type(3) .square > div > h2 {
+  .container .wrap.squareBox .square > div > h2 {
     font-size: 1.5rem;
   }
-  .container .wrap:nth-of-type(3) .square > div > p {
+  .container .wrap.squareBox .square > div > p {
     line-height: 1.5rem;
     font-size: 0.8rem;
   }
-  .container .wrap:nth-of-type(3) .square > div > a {
+  .container .wrap.squareBox .square > div > a {
     padding: 9px;
     margin: 1.2rem auto 0;
   }
@@ -426,29 +426,32 @@ input[type=radio],
     position: relative;
     padding: 3rem;
   }
-  .container .wrap:nth-of-type(3) {
+  .container .wrap.squareBox {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
   }
-  .container .wrap:nth-of-type(3) .square {
-    width: 18rem;
-    height: 18rem;
+  .container .wrap.squareBox .square {
+    width: 80%;
+    height: 400px;
     top: 0;
     -webkit-transform: translateY(0);
             transform: translateY(0);
     margin-bottom: 3rem;
   }
-  .container .wrap:nth-of-type(3) .square:last-child {
+  .container .wrap.squareBox .square:last-child {
     margin-bottom: 0;
   }
-  .container .wrap:nth-of-type(3) .square > div > h2 {
+  .container .wrap.squareBox .square span {
+    left: 9%;
+  }
+  .container .wrap.squareBox .square > div > h2 {
     font-size: 1.5rem;
   }
-  .container .wrap:nth-of-type(3) .square > div > p {
+  .container .wrap.squareBox .square > div > p {
     line-height: 1.2rem;
     font-size: 0.7rem;
   }
-  .container .wrap:nth-of-type(3) .square > div > a {
+  .container .wrap.squareBox .square > div > a {
     padding: 9px;
     margin: 1.2rem auto 0;
   }
@@ -504,8 +507,7 @@ input[type=radio],
     height: auto;
   }
   .container .wrap.squareBox .square {
-    width: 18rem;
-    height: 18rem;
+    height: 400px;
     top: 0;
     -webkit-transform: translateY(0);
             transform: translateY(0);

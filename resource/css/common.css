@@ -5535,7 +5535,7 @@ table .t_left {
 }
 .ui-content.netflix .netflixWrap .movieBox .slideBox {
   width: 100%;
-  overflow: hidden;
+  overflow: auto;
 }
 .ui-content.netflix .netflixWrap .movieBox .slideBox ul {
   width: 200%;
@@ -5548,8 +5548,6 @@ table .t_left {
   -webkit-box-align: baseline;
       -ms-flex-align: baseline;
           align-items: baseline;
-  overflow: auto;
-  overflow: hidden;
 }
 .ui-content.netflix .netflixWrap .movieBox .slideBox ul .btnNet {
   display: block;
