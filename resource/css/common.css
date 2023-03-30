@@ -646,6 +646,210 @@ table .t_left {
 .ui-content.input .checkbox-area .checkwrap .checkbox .continue-btn:hover {
   background-color: #eedb4a;
 }
+.ui-content.input .wrap .custom {
+  text-align: center;
+}
+.ui-content.input .wrap .custom input[type=checkbox] {
+  display: none;
+}
+.ui-content.input .wrap .custom input[type=checkbox]:checked + label[for=agree-chk] em {
+  background-position: right center;
+}
+.ui-content.input .wrap .custom label[for=agree-chk] em {
+  width: 18px;
+  height: 18px;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 5px;
+  background: url("../img/checkbox-01.png") no-repeat;
+  background-position: left center;
+}
+.ui-content.input .wrap .grade {
+  text-align: center;
+  margin-top: 30px;
+}
+.ui-content.input .wrap .grade input[type=radio] {
+  display: none;
+}
+.ui-content.input .wrap .grade input[type=radio]:checked + label {
+  color: rgba(220, 20, 60, 0.522);
+}
+.ui-content.input .wrap .grade input[type=radio]:checked + label em {
+  background-position: right center;
+}
+.ui-content.input .wrap .grade label {
+  cursor: pointer;
+}
+.ui-content.input .wrap .grade label em {
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  vertical-align: middle;
+  margin-right: 5px;
+  background: url("../img/radio-01.png") no-repeat;
+  background-position: left center;
+}
+.ui-content.input .wrap .fontawesome {
+  color: #fff;
+}
+.ui-content.input .wrap .fontawesome input[type=checkbox] {
+  display: none;
+}
+.ui-content.input .wrap .fontawesome input[type=checkbox]:checked + label::before {
+  color: #fff;
+  background-color: crimson;
+  border-color: transparent;
+}
+.ui-content.input .wrap .fontawesome input[type=checkbox] + label:active::before {
+  -webkit-transform: scale(0);
+          transform: scale(0);
+}
+.ui-content.input .wrap .fontawesome label {
+  display: block;
+  text-align: center;
+}
+.ui-content.input .wrap .fontawesome label::before {
+  content: "\f00c";
+  font-family: fontawesome;
+  border: 1px solid #fff;
+  width: 14px;
+  height: 14px;
+  line-height: 16px;
+  border-radius: 3px;
+  margin-right: 5px;
+  font-size: 13px;
+  vertical-align: middle;
+  display: inline-block;
+  text-align: center;
+  color: transparent;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+.ui-content.input .wrap .login {
+  margin: 0 auto;
+  text-align: center;
+  width: 800px;
+  background-color: #f5f5f5;
+  border: 1px solid #eee;
+  border-radius: 5px;
+  padding: 25px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-box-shadow: 0 0 25px rgba(0, 0, 0, 0.665);
+          box-shadow: 0 0 25px rgba(0, 0, 0, 0.665);
+}
+.ui-content.input .wrap .login span {
+  font-weight: bold;
+  display: block;
+  margin-top: 15px;
+  color: #000;
+}
+.ui-content.input .wrap .login input[type=email],
+.ui-content.input .wrap .login input[type=password] {
+  width: 100% !important;
+  height: 100% !important;
+  position: relative !important;
+  padding: 10px !important;
+  padding-left: 40px !important;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  -webkit-clip-path: inset(0%);
+          clip-path: inset(0%);
+}
+.ui-content.input .wrap .login input[type=email]::-webkit-input-placeholder, .ui-content.input .wrap .login input[type=password]::-webkit-input-placeholder {
+  opacity: 1;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+.ui-content.input .wrap .login input[type=email]::-moz-placeholder, .ui-content.input .wrap .login input[type=password]::-moz-placeholder {
+  opacity: 1;
+  -moz-transition: 0.3s;
+  transition: 0.3s;
+}
+.ui-content.input .wrap .login input[type=email]:-ms-input-placeholder, .ui-content.input .wrap .login input[type=password]:-ms-input-placeholder {
+  opacity: 1;
+  -ms-transition: 0.3s;
+  transition: 0.3s;
+}
+.ui-content.input .wrap .login input[type=email]::-ms-input-placeholder, .ui-content.input .wrap .login input[type=password]::-ms-input-placeholder {
+  opacity: 1;
+  -ms-transition: 0.3s;
+  transition: 0.3s;
+}
+.ui-content.input .wrap .login input[type=email]::placeholder,
+.ui-content.input .wrap .login input[type=password]::placeholder {
+  opacity: 1;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+.ui-content.input .wrap .login input[type=email]:hover,
+.ui-content.input .wrap .login input[type=password]:hover {
+  border: 1px solid dodgerblue;
+  -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.665);
+          box-shadow: 0 0 5px rgba(0, 0, 0, 0.665);
+}
+.ui-content.input .wrap .login input[type=email]:focus::-webkit-input-placeholder, .ui-content.input .wrap .login input[type=password]:focus::-webkit-input-placeholder {
+  opacity: 0;
+  visibility: hidden;
+}
+.ui-content.input .wrap .login input[type=email]:focus::-moz-placeholder, .ui-content.input .wrap .login input[type=password]:focus::-moz-placeholder {
+  opacity: 0;
+  visibility: hidden;
+}
+.ui-content.input .wrap .login input[type=email]:focus:-ms-input-placeholder, .ui-content.input .wrap .login input[type=password]:focus:-ms-input-placeholder {
+  opacity: 0;
+  visibility: hidden;
+}
+.ui-content.input .wrap .login input[type=email]:focus::-ms-input-placeholder, .ui-content.input .wrap .login input[type=password]:focus::-ms-input-placeholder {
+  opacity: 0;
+  visibility: hidden;
+}
+.ui-content.input .wrap .login input[type=email]:focus::placeholder,
+.ui-content.input .wrap .login input[type=password]:focus::placeholder {
+  opacity: 0;
+  visibility: hidden;
+}
+.ui-content.input .wrap .login input[type=email] {
+  background: #fff url("../img/icon-email.png") no-repeat center left 10px;
+}
+.ui-content.input .wrap .login input[type=password] {
+  background: #fff url("../img/icon-lock.png") no-repeat center left 10px;
+}
+.ui-content.input .wrap .login p {
+  overflow: hidden;
+  margin-top: 30px;
+}
+.ui-content.input .wrap .login p label {
+  float: left;
+  cursor: pointer;
+  color: #222;
+}
+.ui-content.input .wrap .login p a {
+  float: right;
+}
+.ui-content.input .wrap .login p a:hover {
+  text-decoration: underline;
+}
+.ui-content.input .wrap .login button {
+  width: 300px;
+  padding: 15px;
+  background-color: #2991b1;
+  color: #fff;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  font-size: 20px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  margin-top: 50px;
+}
+.ui-content.input .wrap .login button:hover {
+  background-color: #207791;
+}
 
 .ui-content {
   /*====================================== study ======================================*/
@@ -1260,86 +1464,6 @@ table .t_left {
           transform: rotate(-45deg);
   background-color: transparent;
 }
-.ui-content.study01 .custom {
-  text-align: center;
-  margin-top: 200px;
-}
-.ui-content.study01 .custom input[type=checkbox] {
-  display: none;
-}
-.ui-content.study01 .custom input[type=checkbox]:checked + label[for=agree-chk] em {
-  background-position: right center;
-}
-.ui-content.study01 .custom label[for=agree-chk] em {
-  width: 18px;
-  height: 18px;
-  display: inline-block;
-  vertical-align: middle;
-  margin-right: 5px;
-  background: url("../img/checkbox-01.png") no-repeat;
-  background-position: left center;
-}
-.ui-content.study01 .grade {
-  text-align: center;
-  margin-top: 30px;
-}
-.ui-content.study01 .grade input[type=radio] {
-  display: none;
-}
-.ui-content.study01 .grade input[type=radio]:checked + label {
-  color: rgba(220, 20, 60, 0.522);
-}
-.ui-content.study01 .grade input[type=radio]:checked + label em {
-  background-position: right center;
-}
-.ui-content.study01 .grade label {
-  cursor: pointer;
-}
-.ui-content.study01 .grade label em {
-  display: inline-block;
-  width: 18px;
-  height: 18px;
-  vertical-align: middle;
-  margin-right: 5px;
-  background: url("../img/radio-01.png") no-repeat;
-  background-position: left center;
-}
-.ui-content.study01 .fontawesome {
-  color: #fff;
-}
-.ui-content.study01 .fontawesome input[type=checkbox] {
-  display: none;
-}
-.ui-content.study01 .fontawesome input[type=checkbox]:checked + label::before {
-  color: #fff;
-  background-color: crimson;
-  border-color: transparent;
-}
-.ui-content.study01 .fontawesome input[type=checkbox] + label:active::before {
-  -webkit-transform: scale(0);
-          transform: scale(0);
-}
-.ui-content.study01 .fontawesome label {
-  display: block;
-  text-align: center;
-}
-.ui-content.study01 .fontawesome label::before {
-  content: "\f00c";
-  font-family: fontawesome;
-  border: 1px solid #fff;
-  width: 14px;
-  height: 14px;
-  line-height: 16px;
-  border-radius: 3px;
-  margin-right: 5px;
-  font-size: 13px;
-  vertical-align: middle;
-  display: inline-block;
-  text-align: center;
-  color: transparent;
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
-}
 .ui-content.study01 .card {
   width: 300px;
   height: 400px;
@@ -1410,131 +1534,6 @@ table .t_left {
 .ui-content.study01 .card:nth-child(3) .content {
   background: -webkit-gradient(linear, left bottom, left top, from(blue), to(transparent));
   background: linear-gradient(to top, blue, transparent);
-}
-.ui-content.study01 .login {
-  margin: 0 auto;
-  text-align: center;
-  width: 800px;
-  background-color: #f5f5f5;
-  border: 1px solid #eee;
-  border-radius: 5px;
-  padding: 25px;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  -webkit-box-shadow: 0 0 25px rgba(0, 0, 0, 0.665);
-          box-shadow: 0 0 25px rgba(0, 0, 0, 0.665);
-}
-.ui-content.study01 .login span {
-  font-weight: bold;
-  display: block;
-  margin-top: 15px;
-  color: #000;
-}
-.ui-content.study01 .login input[type=email],
-.ui-content.study01 .login input[type=password] {
-  width: 100% !important;
-  height: 100% !important;
-  position: relative !important;
-  padding: 10px !important;
-  padding-left: 40px !important;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
-  -webkit-clip-path: inset(0%);
-          clip-path: inset(0%);
-}
-.ui-content.study01 .login input[type=email]::-webkit-input-placeholder, .ui-content.study01 .login input[type=password]::-webkit-input-placeholder {
-  opacity: 1;
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
-}
-.ui-content.study01 .login input[type=email]::-moz-placeholder, .ui-content.study01 .login input[type=password]::-moz-placeholder {
-  opacity: 1;
-  -moz-transition: 0.3s;
-  transition: 0.3s;
-}
-.ui-content.study01 .login input[type=email]:-ms-input-placeholder, .ui-content.study01 .login input[type=password]:-ms-input-placeholder {
-  opacity: 1;
-  -ms-transition: 0.3s;
-  transition: 0.3s;
-}
-.ui-content.study01 .login input[type=email]::-ms-input-placeholder, .ui-content.study01 .login input[type=password]::-ms-input-placeholder {
-  opacity: 1;
-  -ms-transition: 0.3s;
-  transition: 0.3s;
-}
-.ui-content.study01 .login input[type=email]::placeholder,
-.ui-content.study01 .login input[type=password]::placeholder {
-  opacity: 1;
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
-}
-.ui-content.study01 .login input[type=email]:hover,
-.ui-content.study01 .login input[type=password]:hover {
-  border: 1px solid dodgerblue;
-  -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.665);
-          box-shadow: 0 0 5px rgba(0, 0, 0, 0.665);
-}
-.ui-content.study01 .login input[type=email]:focus::-webkit-input-placeholder, .ui-content.study01 .login input[type=password]:focus::-webkit-input-placeholder {
-  opacity: 0;
-  visibility: hidden;
-}
-.ui-content.study01 .login input[type=email]:focus::-moz-placeholder, .ui-content.study01 .login input[type=password]:focus::-moz-placeholder {
-  opacity: 0;
-  visibility: hidden;
-}
-.ui-content.study01 .login input[type=email]:focus:-ms-input-placeholder, .ui-content.study01 .login input[type=password]:focus:-ms-input-placeholder {
-  opacity: 0;
-  visibility: hidden;
-}
-.ui-content.study01 .login input[type=email]:focus::-ms-input-placeholder, .ui-content.study01 .login input[type=password]:focus::-ms-input-placeholder {
-  opacity: 0;
-  visibility: hidden;
-}
-.ui-content.study01 .login input[type=email]:focus::placeholder,
-.ui-content.study01 .login input[type=password]:focus::placeholder {
-  opacity: 0;
-  visibility: hidden;
-}
-.ui-content.study01 .login input[type=email] {
-  background: #fff url("../img/icon-email.png") no-repeat center left 10px;
-}
-.ui-content.study01 .login input[type=password] {
-  background: #fff url("../img/icon-lock.png") no-repeat center left 10px;
-}
-.ui-content.study01 .login p {
-  overflow: hidden;
-  margin-top: 30px;
-}
-.ui-content.study01 .login p label {
-  float: left;
-  cursor: pointer;
-  color: #222;
-}
-.ui-content.study01 .login p a {
-  float: right;
-}
-.ui-content.study01 .login p a:hover {
-  text-decoration: underline;
-}
-.ui-content.study01 .login button {
-  width: 300px;
-  padding: 15px;
-  background-color: #2991b1;
-  color: #fff;
-  border-radius: 5px;
-  border: none;
-  cursor: pointer;
-  font-size: 20px;
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
-  margin-top: 50px;
-}
-.ui-content.study01 .login button:hover {
-  background-color: #207791;
 }
 .ui-content.study01 .dropdown {
   width: 200px;
@@ -4945,6 +4944,7 @@ table .t_left {
 .container.accordian .boxwrap h2 {
   font-size: 3em;
   font-weight: 400;
+  color: #000;
 }
 .container.accordian .boxwrap p {
   font-size: 1.6em;
