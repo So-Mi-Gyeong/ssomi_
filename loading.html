@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./resource/css/header.css">
+    <link rel="stylesheet" type="text/css" href="./resource/css/portfolio.css">
+    <title>SSOMI's_portfolio</title>
+    <script src="./resource/js/jquery-3.6.1.min.js"></script>
+    <script src="./resource/js/header.js"></script>
+    <script src="./resource/js/ui-script.js"></script>
+    <style>
+        .loadBtn{position: absolute;top: 50%;left: 50%;transform: translate(-50%, -50%); z-index: 999;}
+        .loadBtn button{color: #fff;}
+    </style>
+</head>
+<body>
+    <header class="blackStyle"></header>
+    <div class="container">
+        <div class="loading">
+            <div class="loading-wrap">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+        <div class="loadBtn">
+            <button type="button" class="loadOpen">open</button>
+            <button type="button" class="loadClose">close</button>
+        </div>
+    </div>
+    <script>
+        window.loading = {
+            open() {
+                let html = '<div class="loading">';
+                html += '<div class="loading-wrap">';
+                html += '<span></span>';
+                html += '<span></span>';
+                html += '<span></span>';
+                html += '</div>';
+                html += '</div>';
+                document.querySelector('body').insertAdjacentHTML("beforeend", html);                
+                $('html, body').css({'overflow': 'hidden', 'height': '100%'});
+            },
+            clsoe() {
+                $('.loadClose').click(function(){
+                    $('.loading').fadeOut();
+                    $('html, body').css({'overflow': 'visible', 'height': '100%'});
+                });
+            }
+        }
+    </script>
+</body>
+</html>
