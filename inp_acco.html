@@ -7,6 +7,7 @@
     <title>SSOMI</title>
     <link rel="stylesheet" href="./resource/css/header.css">
     <link rel="stylesheet" href="./resource/css/common.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.12.4.min.js"></script>
     <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
@@ -17,7 +18,7 @@
     <header></header>
     <div class="ui-content input">
       <h2>INPUT / ACCORDIAN</h2>
-      <p></p>
+      <!-- nike -->
       <div class="checkbox-area">
           <div class="checkwrap">
               <div class="checkbox">
@@ -86,70 +87,113 @@
               </div>
           </div>
       </div>
-  </div>
-    <div class="container accordian">
-      <div class="boxwrap">
-        <h2><strong>건강검진 정보를</strong><br>연동해주세요</h2>
-        <p>건강검진 결과 및 건강분석 서비스 이용을 위한<br>약관에 동의해 주세요.</p>
-        <div class="accordian-area">
-          <div class="terms" id="aa">
-            <input type="checkbox" id="inp01" data-name="aaa" class="ui-check-parent">
-            <label for="inp01">[필수]건강검진 서비스 이용 약관</label>
-            <button type="button" class="accoClick"></button>
-            <div class="termsBox">
-              <div class="terms-content">
-                <div class="terms-subtxt">
-                  <input type="checkbox" id="inp01-1" data-name="aaa" class="ui-check-child">
-                  <label for="inp01-1">건강검진 서비스 이용 약관 동의(필수)</label>
-                  <button type="button" class="termsBtn">보기</button>
+
+      <!-- 건강검진 -->
+      <div class="container accordian">
+        <div class="boxwrap">
+          <h2><strong>건강검진 정보를</strong><br>연동해주세요</h2>
+          <p>건강검진 결과 및 건강분석 서비스 이용을 위한<br>약관에 동의해 주세요.</p>
+          <div class="accordian-area">
+            <div class="terms" id="aa">
+              <input type="checkbox" id="inp01" data-name="aaa" class="ui-check-parent">
+              <label for="inp01">[필수]건강검진 서비스 이용 약관</label>
+              <button type="button" class="accoClick"></button>
+              <div class="termsBox">
+                <div class="terms-content">
+                  <div class="terms-subtxt">
+                    <input type="checkbox" id="inp01-1" data-name="aaa" class="ui-check-child">
+                    <label for="inp01-1">건강검진 서비스 이용 약관 동의(필수)</label>
+                    <button type="button" class="termsBtn">보기</button>
+                  </div>
+                  <form>
+                    <textarea>귀하는 개인(신용)정보의 수집. 이용 및 조회, 제공에 관한 동의를 거부하실 수 있으며, 개인의 신용도 등을 평가하기</textarea>
+                  </form>
                 </div>
-                <form>
-                  <textarea>귀하는 개인(신용)정보의 수집. 이용 및 조회, 제공에 관한 동의를 거부하실 수 있으며, 개인의 신용도 등을 평가하기</textarea>
-                </form>
               </div>
             </div>
           </div>
-        </div>
-        <div class="accordian-area">
-          <div class="terms" id="bb">
-            <input type="checkbox" id="inp02" data-name="bbb" class="ui-check-parent">
-            <label for="inp02">[필수]건강검진 연동을 위한 개인정보 동의</label>
-            <button type="button" class="accoClick"></button>
-            <div class="termsBox">
-              <div class="terms-content">
-                <div class="terms-subtxt">
-                  <input type="checkbox" id="inp02-1" data-name="bbb" class="ui-check-child">
-                  <label for="inp02-1">개인정보 수집ㆍ이용 동의 (필수)</label>
-                  <button type="button" class="termsBtn">보기</button>
+          <div class="accordian-area">
+            <div class="terms" id="bb">
+              <input type="checkbox" id="inp02" data-name="bbb" class="ui-check-parent">
+              <label for="inp02">[필수]건강검진 연동을 위한 개인정보 동의</label>
+              <button type="button" class="accoClick"></button>
+              <div class="termsBox">
+                <div class="terms-content">
+                  <div class="terms-subtxt">
+                    <input type="checkbox" id="inp02-1" data-name="bbb" class="ui-check-child">
+                    <label for="inp02-1">개인정보 수집ㆍ이용 동의 (필수)</label>
+                    <button type="button" class="termsBtn">보기</button>
+                  </div>
+                  <form>
+                    <textarea>귀하는 개인(신용)정보의 수집. 이용 및 조회, 제공에 관한 동의를 거부하실 수 있으며, 개인의 신용도 등을 평가하기</textarea>
+                  </form>
                 </div>
-                <form>
-                  <textarea>귀하는 개인(신용)정보의 수집. 이용 및 조회, 제공에 관한 동의를 거부하실 수 있으며, 개인의 신용도 등을 평가하기</textarea>
-                </form>
-              </div>
-              <div class="terms-content">
-                <div class="terms-subtxt">
-                  <input type="checkbox" id="inp02-2" class="ui-check-child">
-                  <label for="inp02-2">건강정보(민감정보) 수집·이용 동의(필수)</label>
-                  <button type="button" class="termsBtn">보기</button>
+                <div class="terms-content">
+                  <div class="terms-subtxt">
+                    <input type="checkbox" id="inp02-2" class="ui-check-child">
+                    <label for="inp02-2">건강정보(민감정보) 수집·이용 동의(필수)</label>
+                    <button type="button" class="termsBtn">보기</button>
+                  </div>
+                  <form>
+                    <textarea>귀하는 개인(신용)정보의 수집. 이용 및 조회, 제공에 관한 동의를 거부하실 수 있으며, 개인의 신용도 등을 평가하기</textarea>
+                  </form>
                 </div>
-                <form>
-                  <textarea>귀하는 개인(신용)정보의 수집. 이용 및 조회, 제공에 관한 동의를 거부하실 수 있으며, 개인의 신용도 등을 평가하기</textarea>
-                </form>
-              </div>
-              <div class="terms-content">
-                <div class="terms-subtxt">
-                  <input type="checkbox" id="inp02-3" class="ui-check-child">
-                  <label for="inp02-3">개인정보 제3자 제공 동의(필수)</label>
-                  <button type="button" class="termsBtn">보기</button>
+                <div class="terms-content">
+                  <div class="terms-subtxt">
+                    <input type="checkbox" id="inp02-3" class="ui-check-child">
+                    <label for="inp02-3">개인정보 제3자 제공 동의(필수)</label>
+                    <button type="button" class="termsBtn">보기</button>
+                  </div>
+                  <form>
+                    <textarea>귀하는 개인(신용)정보의 수집. 이용 및 조회, 제공에 관한 동의를 거부하실 수 있으며, 개인의 신용도 등을 평가하기</textarea>
+                  </form>
                 </div>
-                <form>
-                  <textarea>귀하는 개인(신용)정보의 수집. 이용 및 조회, 제공에 관한 동의를 거부하실 수 있으며, 개인의 신용도 등을 평가하기</textarea>
-                </form>
               </div>
             </div>
           </div>
+          <button type="button" class="termsStartBtn" disabled>시작하기</button>
         </div>
-        <button type="button" class="termsStartBtn" disabled>시작하기</button>
+      </div>
+
+      <!-- checkbox -->
+      <div class="wrap">
+        <div class="custom">
+          <input type="checkbox" id="agree-chk">
+          <label for="agree-chk"><em></em>약관을 충분히 이해하였으며 동의 합니다.</label>
+        </div>
+        <div class="grade">
+          <input type="radio" name="grade" id="grade-chk1"><label for="grade-chk1"><em></em>초등학생</label>
+          <input type="radio" name="grade" id="grade-chk2"><label for="grade-chk2"><em></em>중학생</label>
+          <input type="radio" name="grade" id="grade-chk3"><label for="grade-chk3"><em></em>고등학생</label>
+          <input type="radio" name="grade" id="grade-chk4"><label for="grade-chk4"><em></em>대학생</label>
+        </div>
+        <form class="fontawesome">
+          <input type="checkbox" id="chk1">
+          <label for="chk1">HTML</label>
+          <input type="checkbox" id="chk2">
+          <label for="chk2">CSS</label>
+          <input type="checkbox" id="chk3">
+          <label for="chk3">jQuery</label>
+          <input type="checkbox" id="chk4">
+          <label for="chk4">UIKit</label>
+        </form>
+      </div>
+
+      <!-- emailbox -->
+      <div class="wrap flexWrap">
+        <form class="login">
+          <span>Email</span>
+          <input type="email" placeholder="Email Address">
+          <span>Password</span>
+          <input type="password" placeholder="Password">
+          <p>
+            <label>
+              <input type="checkbox"> Keep me logged in
+            </label>
+            <a href="#none">Forgot Your Password?</a>
+          </p>
+          <button>Log in</button>
+        </form>
       </div>
     </div>
   </body>
