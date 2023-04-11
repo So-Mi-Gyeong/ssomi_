@@ -66,7 +66,8 @@ header{
         height: 100vh;
         position: fixed;
         top: 0;
-        left: -30%;
+        //left: -30%;
+        left: 0;
         transition: .5s;
         overflow-x: hidden;
         overflow-y: auto;
@@ -96,6 +97,18 @@ header{
                 }
                 &:focus{
                     background-color: #3a2645;      
+                }
+            }
+            .inner-menu{
+                border: 1px solid red;
+                display: none;
+                ul{
+                    li{
+                        background-color: #ffffff80;
+                        a{
+                            color: #000;
+                        }
+                    }
                 }
             }
         }
