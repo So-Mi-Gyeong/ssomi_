@@ -153,7 +153,7 @@ header.blackStyle .menu .ui-menuContent li a:focus {
   height: 100vh;
   position: fixed;
   top: 0;
-  left: 0;
+  left: -30%;
   -webkit-transition: 0.5s;
   transition: 0.5s;
   overflow-x: hidden;
