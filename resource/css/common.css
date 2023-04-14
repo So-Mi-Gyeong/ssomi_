@@ -3849,6 +3849,9 @@ table .t_left {
   font-size: 1.2em;
   line-height: 17px;
 }
+.ui-content.slide {
+  padding-bottom: 0;
+}
 .ui-content.slide .textSlide {
   display: flex;
   justify-content: center;
