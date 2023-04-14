@@ -211,7 +211,7 @@ input[type=radio],
 }
 .container .wrap.squareBox .square > div {
   width: 70%;
-  text-align: center;
+  text-align: left;
   color: #fff;
   position: absolute;
   top: 50%;
@@ -220,6 +220,7 @@ input[type=radio],
 }
 .container .wrap.squareBox .square > div > h2 {
   padding-bottom: 1rem;
+  text-align: center;
   font-size: 2rem;
   font-weight: 600;
 }
@@ -236,6 +237,9 @@ input[type=radio],
   width: -moz-fit-content;
   width: fit-content;
   margin: 1.2rem auto 0;
+}
+.container .wrap.squareBox .square > div.skill {
+  text-align: center;
 }
 @keyframes circle {
   0% {
