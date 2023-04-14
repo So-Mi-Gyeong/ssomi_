@@ -24,7 +24,7 @@
                 grid-template-rows는 행(row)의 배치<br>
                 grid-template-columns는 열(column)의 배치
             </p>
-            <div class="grid-container">
+            <!-- <div class="grid-container">
                 <div class="item">A</div>
                 <div class="item">B</div>
                 <div class="item">C</div>
@@ -34,6 +34,25 @@
                 <div class="item">G</div>
                 <div class="item">H</div>
                 <div class="item">I</div>
+            </div> -->
+            <div class="grid-container gapStyle">
+                <div class="item">A</div>
+                <div class="item">B</div>
+                <div class="item">C</div>
+                <div class="item">D</div>
+                <div class="item">E</div>
+                <div class="item">F</div>
+                <div class="item">G</div>
+                <div class="item">H</div>
+                <div class="item">I</div>
+            </div>
+            <div class="grid-inp">
+                <input type="radio" id="gap01" class="inp">
+                <label for="gap01" class="gapTxt">0<span class="gapChk"></span></label>
+                <input type="radio" id="gap02" class="inp">
+                <label for="gap02" class="gapTxt">10<span class="gapChk"></span></label>
+                <input type="radio" id="gap03" class="inp">
+                <label for="gap03" class="gapTxt">20<span class="gapChk"></span></label>
             </div>
             <h3>1fr</h3>
             <p>
@@ -137,26 +156,44 @@
                 <div class="item">H</div>
                 <div class="item">I</div>
             </div>
-            <div class="grid-container gapStyle">
-                <div class="item">A</div>
-                <div class="item">B</div>
-                <div class="item">C</div>
-                <div class="item">D</div>
-                <div class="item">E</div>
-                <div class="item">F</div>
-                <div class="item">G</div>
-                <div class="item">H</div>
-                <div class="item">I</div>
-            </div>
-            <div class="grid-inp">
-                <input type="radio" id="gap01" class="inp">
-                <label for="gap01" class="gapTxt">0<span class="gapChk"></span></label>
-                <input type="radio" id="gap02" class="inp">
-                <label for="gap02" class="gapTxt">10<span class="gapChk"></span></label>
-                <input type="radio" id="gap03" class="inp">
-                <label for="gap03" class="gapTxt">20<span class="gapChk"></span></label>
-            </div>
         </div>
     </div>
+    <script>
+            function gridinpChk(){
+      const inpChks = document.querySelectorAll('.inp');
+
+      for(var i = 0; i < inpChks.length; i++){
+          inpChks[i].addEventListener('click', inpClick); //클릭 시 inpClick() 실행
+      }
+
+      function inpClick() {
+          //inpChks 를 inp변수에 담기
+          for(const inp of inpChks){
+              inp.classList.remove('active');//.inp 전체 초기화
+          }
+          this.classList.add('active');//클릭된 input만 active 추가
+      }
+
+      var uigapStyle = document.querySelector('.gapStyle');
+      var gapInp01 = document.getElementById('gap01');
+      var gapInp02 = document.getElementById('gap02');
+      var gapInp03 = document.getElementById('gap03');
+      //input 클릭 시 .gapStyle style 변경
+      gapInp01.addEventListener('click', function(){
+          uigapStyle.style.gap = '0px'; // gap 스타일 변경
+          uigapStyle.style.transition = '.5s'; // transition 변경
+      });
+      gapInp02.addEventListener('click', function(){        
+          uigapStyle.style.gap = '10px';
+          uigapStyle.style.transition = '.5s';
+      });
+      gapInp03.addEventListener('click', function(){        
+          uigapStyle.style.gap = '20px';
+          uigapStyle.style.transition = '.5s';
+      });
+    } 
+
+    gridinpChk();
+    </script>
 </body> 
 </html>

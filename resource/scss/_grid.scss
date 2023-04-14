@@ -3,6 +3,9 @@
     grid-template-columns: 100px 100px 100px;
     grid-template-rows: 50px 50px 50px;
     margin-top: 20px;
+    h3{
+        color: #55b47d;
+    }
     .item{
         background: darkviolet;
         border: 2px solid #55b47d;
@@ -113,5 +116,8 @@
             transform: translateY(-50%);
             transition: .5s;
         }
+    }
+    & + h3{
+        margin-top: 20px;
     }
 }
