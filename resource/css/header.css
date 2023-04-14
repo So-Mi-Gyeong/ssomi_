@@ -183,6 +183,16 @@ header.blackStyle .menu .ui-menuContent li a:focus {
 .menu .ui-menuContent li a:focus {
   background-color: #3a2645;
 }
+.menu .ui-menuContent li .inner-menu {
+  border: 1px solid red;
+  display: none;
+}
+.menu .ui-menuContent li .inner-menu ul li {
+  background-color: rgba(255, 255, 255, 0.5019607843);
+}
+.menu .ui-menuContent li .inner-menu ul li a {
+  color: #000;
+}
 .menu .ui-menuContent.open {
   left: 0;
   transition: 0.5s;

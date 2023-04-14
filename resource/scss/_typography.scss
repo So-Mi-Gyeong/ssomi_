@@ -4,27 +4,40 @@ h4{font-size: 18px;}
 p{font-size: 16px;line-height: 1.5;}
 
 /* text */
-h2 + h3{
+h2 + h3,
+h2 + div > h3{
     margin-top: 50px;
 }
-h2 + p,
-h3 + p,
-h2 + .listDefault,
-h3 + .listDefault,
-h2 + table,
-h3 + table{
-    margin-top: 10px;
-}
-p + h3 {
+
+h3 + h4,
+p + h4 {
     margin-top: 20px;
 }
+
+h2 + p,
+h3 + p,
+h4 + p,
+h2 + .listDefault,
+h3 + .listDefault,
+h4 + .listDefault,
+h2 + table,
+h3 + table,
+h4 + table{
+    margin-top: 10px;
+}
+
+p + p{
+    margin-top: 5px;
+}
+
 
 /* list */
 .listDefault + table,
 table + .listDefault,
 .listDefault + p,
 p + .listDefault,
-.listDefault + h3{
+.listDefault + h3,
+.listDefault + h4{
     margin-top: 20px;
 }
 
