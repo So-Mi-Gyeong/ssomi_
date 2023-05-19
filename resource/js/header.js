@@ -2,6 +2,7 @@ $(document).ready(function(){
     $.ajax({
         type : "GET",
         url : "./includ/header.html",
+        url : "../includ/header.html",
         dataType : "html",
         success: function(header_result){
             headerNav(header_result);
