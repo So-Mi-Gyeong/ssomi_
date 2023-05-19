@@ -1,10 +1,10 @@
 
-.wrap{
-    margin-left: 200px;
-}
-.innerWrap{
-    padding: 50px;
+.guide_wrap .innerWrap{
+    height: 100vh;
+    padding: 171px 50px 50px 50px;
     box-sizing: border-box;
+    background-color: #2c2216;
+    color: #f1db9c;
 }
 
 /* --------------- font --------------- */

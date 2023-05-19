@@ -3,11 +3,11 @@
 }
 
 /* ----------- color ----------- */
-.wrap.colorBg{
+.guide_wrap.colorBg{
     background-color: #2c2216;
     height: 100vh;
 }
-.wrap.colorBg h1,h2,h3,h4,h5,h6,p,span{
+.guide_wrap.colorBg h1,h2,h3,h4,h5,h6,p,span{
     color: #f1da9c;
 }
 

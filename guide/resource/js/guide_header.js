@@ -1,7 +1,7 @@
 $(document).ready(function(){
     $.ajax({
         type : "GET",
-        url : "./includ/header.html",
+        url : "./includ/guide_header.html",
         dataType : "html",
         success: function(header_result){
             headerNav(header_result);
@@ -9,7 +9,7 @@ $(document).ready(function(){
     });
  
     function headerNav(header_result) {
-        $("#guide_head").html($(header_result).filter(".menuBox"));
+        $("#guide_head").html($(header_result).filter(".guide_menuBox"));
 
     }
 });
