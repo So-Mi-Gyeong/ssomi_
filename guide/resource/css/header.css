@@ -1,0 +1,32 @@
+.menuBox{
+    width: 200px;
+    height: 100vh;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: #f34234;
+    position: fixed;
+    left: 0;
+}
+.logo_default{
+    width: 50px;
+    height: 50px;
+    margin-bottom: 20px;
+}
+.logo_default img{
+    width: 100%;
+    height: 100%;
+}
+.menu ul li.active{
+    background-color: #ee817aaa;
+}
+.menu ul li a{
+    display: block;
+    width: 100%;
+    color: #f1c8c4;
+    padding-bottom: 10px;
+    box-sizing: border-box;
+}
+.menu ul li a::after{
+    content: '-';
+    margin-left: 5px;
+}

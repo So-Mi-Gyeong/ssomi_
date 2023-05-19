@@ -1,0 +1,151 @@
+
+.wrap{
+    margin-left: 200px;
+}
+.innerWrap{
+    padding: 50px;
+    box-sizing: border-box;
+}
+
+/* --------------- font --------------- */
+:root{
+    --bold: 700;
+    --semibold: 600;
+    --medium: 500;
+    --regular: 400;
+    --h1: 24px;
+    --h2: 20px;
+    --h3: 16px;
+}
+
+h1, .fs-h1{
+    font-size: var(--h1);
+    line-height: 36px;
+    font-weight: var(--bold);
+}
+h2, .fs-h2{
+    font-size: var(--h2);
+    line-height: 30px;
+    font-weight: var(--semibold);
+}
+h3, .fs-h3{
+    font-size: var(--h3);
+    line-height: 24px;
+    font-weight: var(--medium);
+}
+
+.fw-bold{
+    font-weight: var(--bold);
+}
+.fw-semibold{
+    font-weight: var(--semibold);
+}
+.fw-midium{
+    font-weight: var(--medium);
+}
+.fw-regular{
+    font-weight: var(--regular);
+}
+
+ h1 + *{
+    margin-top: 32px;
+ }
+
+ h2 + *,
+ div + h2{
+    margin-top: 24px;
+ }
+ h2 + p, 
+ h2 + span{
+    margin-top: 10px;
+ }
+
+ h3 + *{
+    margin-top: 20px;
+ }
+
+/* --------------- //font --------------- */
+
+/* --------------- color --------------- */
+:root{
+    --primary01: #EC008C;
+    --primary02: #1A399E;
+    --primary03: #FFFFFF;
+
+    --gray01: #F7F8F8;   
+    --gray02: #DFE0E2;   
+    --gray03: #B9BBC6;   
+    --gray04: #919199;   
+    --gray05: #74757E;   
+    --gray06: #2F3135;   
+    --gray07: #222222;   
+
+    --bg01: #F3F7FF;
+    --bg02: #F1F7FE;
+    
+    --data01: #003975;
+    --data02: #1E66F2;
+    --data03: #58B84A;
+    --data04: #E9B63E;
+    --data05: #F46931;
+    --data06: #F2303C;
+}
+
+.primary01{
+    color: var(--primary01);
+}
+.primary02{
+    color: var(--primary02);
+}
+.primary03{
+    color: var(--primary03);
+}
+
+.gray01{
+    color: var(--gray01);
+}
+.gray02{
+    color: var(--gray02);
+}
+.gray03{
+    color: var(--gray03);
+}
+.gray04{
+    color: var(--gray04);
+}
+.gray05{
+    color: var(--gray05);
+}
+.gray06{
+    color: var(--gray06);
+}
+.gray07{
+    color: var(--gray07);
+}
+
+.bg01{
+    background-color: var(--bg01);
+}
+.bg02{
+    background-color: var(--bg02);
+}
+
+.data01{
+    color: var(--data01);
+}
+.data02{
+    color: var(--data02);
+}
+.data03{
+    color: var(--data03);
+}
+.data04{
+    color: var(--data04);
+}
+.data05{
+    color: var(--data05);
+}
+.data06{
+    color: var(--data06);
+}
+/* --------------- //color --------------- */

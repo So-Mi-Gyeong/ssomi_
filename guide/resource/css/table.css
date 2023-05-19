@@ -1,0 +1,16 @@
+.tableDefault{
+    width: 100%;
+    border-top: 1px solid var(--gray07);
+}
+.tableDefault thead th,
+.tableDefault tbody th{
+    background-color: var(--gray01);
+}
+.tableDefault thead th,
+.tableDefault thead td,
+.tableDefault tbody th,
+.tableDefault tbody td{
+    padding: 14px 50px;
+    text-align: center;
+    box-sizing: border-box;
+}
