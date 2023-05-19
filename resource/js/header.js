@@ -9,7 +9,7 @@ $(document).ready(function(){
     });
  
     function headerNav(header_result) {
-        $("header").html($(header_result).filter(".wrap"));
+        $("#menu").html($(header_result).filter(".wrap"));
          //*********************** menu ***********************
         const uinavs = document.querySelectorAll('.wrap .menu .ui-nav');
         for(let i = 0; i < uinavs.length; i++) {

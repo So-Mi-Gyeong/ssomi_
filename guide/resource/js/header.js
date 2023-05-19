@@ -9,7 +9,7 @@ $(document).ready(function(){
     });
  
     function headerNav(header_result) {
-        $("header").html($(header_result).filter(".menuBox"));
+        $("#guide_head").html($(header_result).filter(".menuBox"));
 
     }
 });
