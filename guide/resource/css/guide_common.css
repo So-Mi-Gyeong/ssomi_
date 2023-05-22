@@ -149,3 +149,125 @@ h3, .fs-h3{
     color: var(--data06);
 }
 /* --------------- //color --------------- */
+
+/* --------------- tab --------------- */
+.defualt_tab_list{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.defualt_tab_item{
+  flex: 1;
+  text-align: center;
+  background-color: #fff;
+  border-bottom: 2px solid #DFE0E2;
+}
+.defualt_tab_item.on{
+  border-bottom: 2px solid #EC008C;
+}
+.defualt_tab_item a{
+  display: block;
+  width: 100%;
+  font-size: 20px;
+  font-weight: var(--medium);
+  line-height: 30px;
+  color: #74757E;
+  padding: 17px 24px;
+}
+.defualt_tab_item.on a{
+  color: #222;
+}
+/* --------------- //tab --------------- */
+
+/* --------------- table --------------- */
+.tableDefault{
+  width: 100%;
+  border-top: 1px solid var(--gray07);
+  color: #000;
+  margin-top: 20px;
+}
+
+.tableDefault thead th,
+.tableDefault tbody th{
+  background-color: var(--gray02);
+}
+
+.tableDefault thead td,
+.tableDefault tbody td{
+background-color: #fff;
+}
+
+.tableDefault thead th,
+.tableDefault thead td,
+.tableDefault tbody th,
+.tableDefault tbody td{
+  padding: 14px 50px;
+  text-align: center;
+  box-sizing: border-box;
+}
+/* --------------- //table --------------- */
+
+/* --------------- button --------------- */
+.btnDefault,
+.btnDefaultBg,
+.btnLarge,
+.btnLargeBg{
+  padding: 9px 20px;
+  font-size: 16px;
+  color: var(--primary01);
+  border: 1px solid var(--primary01);
+  border-radius: 32px;
+  box-sizing: border-box;
+}
+.btnDefault:hover,
+.btnLarge:hover{
+  background-color: var(--primary01);
+  color: #fff;
+}
+.btnDefault,
+.btnDefaultBg,
+.btnBlack,
+.btnBlackBg{
+  width: 160px;
+  height: 48px;
+}
+.btnLarge,
+.btnLargeBg,
+.btnBlarge,
+.btnBlargeBg{
+  width: 293px;
+  height: 48px;
+}
+.btnDefaultBg,
+.btnLargeBg{
+  background-color: var(--primary01);
+  color: #fff;
+}
+.btnBlack,
+.btnBlackBg,
+.btnBlarge,
+.btnBlargeBg{
+  padding: 9px 20px;
+  font-size: 16px;
+  color: var(--gray07);
+  border: 1px solid var(--gray07);
+  border-radius: 32px;
+  box-sizing: border-box;
+}
+.btnBlackBg,
+.btnBlargeBg{
+  background-color: var(--gray01);
+}
+.btnDefault.disabled,
+.btnLarge.disabled{
+  border: 1px solid var(--gray04);
+  color: var(--gray04);
+}
+.btnDefaultBg.disabled,
+.btnLargeBg.disabled{
+  border: 1px solid var(--gray04);
+  background-color: var(--gray01);
+  color: var(--gray04);
+}
+/* --------------- //button --------------- */
