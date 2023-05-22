@@ -45,7 +45,7 @@ $(document).ready(function(){
             siblings.push(silblingEle); //siblings에 첫번째 자식요소 push
             silblingEle = silblingEle.nextElementSibling; //다음 형제요소 찾기
            }
-           
+
            this.classList.add('on');
 
           });   
