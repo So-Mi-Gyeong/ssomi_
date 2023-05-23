@@ -155,11 +155,17 @@ h3, .fs-h3{
 /* --------------- //color --------------- */
 
 /* --------------- tab --------------- */
+.defualt_tab{
+  width: 100%;
+}
 .defualt_tab_list{
   width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+.defualt_tab_list + .defualt_tab_list {
+  margin-top: 20px;
 }
 .defualt_tab_item{
   flex: 1;
