@@ -1,12 +1,18 @@
 .innerWrap.bgWhite{
-  background-color: #fff;
+  background-color: #eedcc5fa;
+}
+.innerWrap.bgWhite h1,
+.innerWrap.bgWhite h2,
+.innerWrap.bgWhite h3,
+.innerWrap.bgWhite h4,
+.innerWrap.bgWhite h5,
+.innerWrap.bgWhite h6,
+.innerWrap.bgWhite p,
+.innerWrap.bgWhite span{
+  color: #2c2216;
 }
 
 /* ----------- color ----------- */
-.guide_wrap.colorBg h1,h2,h3,h4,h5,h6,p,span{
-    color: #f1da9c;
-}
-
 .primaryGuide,
 .grayGuide,
 .bgGuide,
@@ -91,8 +97,18 @@
 /* ----------- //color ----------- */
 
 /* ----------- button ----------- */
-p + button,
-div + div{
+p + button{
   margin-top: 20px;
+}
+.btnArea{
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+}
+.btnBox{
+  margin-top: 20px;
+}
+.btnBox:first-child{
+  margin-top: 0;
 }
 /* ----------- //button ----------- */

@@ -1,10 +1,14 @@
 
+.guide_wrap{
+  background-color: #2c2216;
+  color: #f1db9c;
+}
 .guide_wrap .innerWrap{
-    height: 100vh;
+    width: 1200px;
+    min-height: 100vh;
+    margin: 0 auto;
     padding: 171px 50px 50px 50px;
     box-sizing: border-box;
-    background-color: #2c2216;
-    color: #f1db9c;
 }
 
 /* --------------- font --------------- */
@@ -210,64 +214,76 @@ background-color: #fff;
 
 /* --------------- button --------------- */
 .btnDefault,
-.btnDefaultBg,
-.btnLarge,
-.btnLargeBg{
+.btnBlack,
+.btnBig,
+.btnBig-B{
   padding: 9px 20px;
   font-size: 16px;
-  color: var(--primary01);
-  border: 1px solid var(--primary01);
   border-radius: 32px;
+  background-color: #fff;
   box-sizing: border-box;
 }
+.btnDefault,
+.btnBig{
+  color: var(--primary01);
+  border: 1px solid var(--primary01);
+}
+.btnBlack,
+.btnBig-B{
+  color: var(--gray07);
+  border: 1px solid var(--gray07);
+}
 .btnDefault:hover,
-.btnLarge:hover{
+.btnBig:hover{
   background-color: var(--primary01);
   color: #fff;
 }
+.btnBlack:hover,
+.btnBig-B:hover{
+  background-color: var(--gray01);
+}
 .btnDefault,
-.btnDefaultBg,
 .btnBlack,
-.btnBlackBg{
+.btnBig,
+.btnBig-B{
   width: 160px;
   height: 48px;
 }
-.btnLarge,
-.btnLargeBg,
-.btnBlarge,
-.btnBlargeBg{
+.btnDefault.lg,
+.btnBlack.lg,
+.btnBig.lg,
+.btnBig-B.lg{
   width: 293px;
   height: 48px;
 }
-.btnDefaultBg,
-.btnLargeBg{
+.btnDefault:disabled,
+.btnBig:disabled{
+  border: 1px solid var(--gray04);
+  color: var(--gray04);
+}
+.btnDefault:disabled:hover,
+.btnBig:disabled:hover{
+  background-color: var(--gray01);
+}
+.btnDefault.fill,
+.btnBig.fill{
   background-color: var(--primary01);
   color: #fff;
 }
-.btnBlack,
-.btnBlackBg,
-.btnBlarge,
-.btnBlargeBg{
-  padding: 9px 20px;
-  font-size: 16px;
-  color: var(--gray07);
-  border: 1px solid var(--gray07);
-  border-radius: 32px;
-  box-sizing: border-box;
+.btnDefault.fill:hover,
+.btnBig.fill:hover{
+  border: 1px solid #C02882;
+  background-color: #C02882;
 }
-.btnBlackBg,
-.btnBlargeBg{
-  background-color: var(--gray01);
+.btnDefault.fill:disabled,
+.btnBig.fill:disabled{
+  border: 1px solid var(--gray02);
+  background-color: var(--gray02);
+  color: var(--gray03);
+  cursor: default;
 }
-.btnDefault.disabled,
-.btnLarge.disabled{
-  border: 1px solid var(--gray04);
-  color: var(--gray04);
-}
-.btnDefaultBg.disabled,
-.btnLargeBg.disabled{
-  border: 1px solid var(--gray04);
-  background-color: var(--gray01);
-  color: var(--gray04);
+.btnBig,
+.btnBig-B{
+  font-size: 20px;
 }
 /* --------------- //button --------------- */
