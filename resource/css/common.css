@@ -808,12 +808,16 @@ table .t_left {
   /*====================================== study ======================================*/
   /*====================================== //study ======================================*/
 }
+.ui-content.study01, .ui-content.study02, .ui-content.study03, .ui-content.study04 {
+  padding: 0;
+}
+.ui-content.study01 .wrap:first-child, .ui-content.study02 .wrap:first-child, .ui-content.study03 .wrap:first-child, .ui-content.study04 .wrap:first-child {
+  margin-top: 0;
+  padding-top: 100px;
+}
 .ui-content.study01 {
   width: 100%;
   margin: 0 auto;
-  background-color: #34465d;
-  color: #fff;
-  padding: 50px 0;
   box-sizing: border-box;
 }
 .ui-content.study01 .wrap .sns-group {
@@ -1484,7 +1488,7 @@ table .t_left {
   display: block;
   font-size: 40px;
   margin: 20px 0;
-  color: #333;
+  color: #fff;
 }
 .ui-content.study01 .gnb01 a::before {
   content: "\f105";
@@ -2354,6 +2358,7 @@ table .t_left {
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 0 10px gray;
+  color: #222;
 }
 .ui-content.study02 .bg-style .testimonial-section h1 {
   font-size: 25px;
@@ -2757,7 +2762,6 @@ table .t_left {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #eee;
 }
 .ui-content.study02 .menu-tab section {
   width: 800px;
@@ -2795,10 +2799,10 @@ table .t_left {
 }
 .ui-content.study02 .menu-tab section .tab-inner {
   margin-top: 30px;
+  color: #222;
 }
 .ui-content.study02 .menu-tab section .tab-inner .tabBtn {
   overflow: hidden;
-  margin-left: 10px;
 }
 .ui-content.study02 .menu-tab section .tab-inner .tabBtn li {
   float: left;
@@ -3116,7 +3120,7 @@ table .t_left {
   float: right;
 }
 .ui-content.study02 .loginType {
-  height: calc(100vh - 80px);
+  height: 600px;
   position: relative;
 }
 .ui-content.study02 .loginType .login {
@@ -3136,7 +3140,6 @@ table .t_left {
   display: block;
   text-align: center;
   padding: 15px;
-  border: 1px solid lightgray;
   border-radius: 3px;
   margin-bottom: 10px;
   font-size: 18px;
@@ -3298,6 +3301,7 @@ table .t_left {
   padding: 0;
   margin: 0 auto;
   list-style: none;
+  margin-bottom: 100px;
 }
 .ui-content.study02 .study02-menu li > a {
   display: block;
@@ -3309,6 +3313,7 @@ table .t_left {
 }
 .ui-content.study02 .study02-menu li .sub-menu {
   border: 1px solid #000;
+  background-color: #fff;
   display: none;
 }
 .ui-content.study02 .study02-menu li .sub-menu > a {
@@ -3346,7 +3351,6 @@ table .t_left {
 }
 .ui-content.study04 {
   width: 100%;
-  padding: 0;
 }
 .ui-content.study04 .video-frame::before {
   content: "";
@@ -3866,7 +3870,7 @@ table .t_left {
   font-family: Helvetica;
   line-height: 1.06;
   letter-spacing: -0.02em;
-  color: #1d1d1f;
+  color: #fff;
 }
 .ui-content.slide .textSlide .mask {
   height: 106px;

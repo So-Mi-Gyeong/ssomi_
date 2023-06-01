@@ -1,11 +1,20 @@
 .ui-content{
     /*====================================== study ======================================*/
+    &.study01,
+    &.study02,
+    &.study03,
+    &.study04{
+      padding: 0;
+      .wrap{
+        &:first-child{
+          margin-top: 0;
+          padding-top: 100px;
+        }
+      }
+    }
     &.study01{
         width: 100%;
         margin: 0 auto;
-        background-color: #34465d;
-        color: #fff;
-        padding: 50px 0;
         box-sizing: border-box;
         .wrap{
             .sns-group {
@@ -717,7 +726,7 @@
                 display: block;
                 font-size: 40px;
                 margin: 20px 0;
-                color: #333;
+                color: #fff;
                 &::before{
                     content: '\f105';
                     font-family: fontawesome;
@@ -1823,6 +1832,7 @@
                 padding: 20px;
                 border-radius: 10px;
                 box-shadow: 0 0 10px gray;
+                color: #222;
                 h1{
                     font-size: 25px;
                     span{
@@ -2255,7 +2265,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            background-color: #eee;
+            // background-color: #eee;
             section{
                 width: 800px;
                 .heading{
@@ -2289,9 +2299,9 @@
                 }
                 .tab-inner{
                     margin-top: 30px;
+                    color: #222;
                     .tabBtn{
                         overflow: hidden;
-                        margin-left: 10px;
                         li{
                             float: left;
                             width: 120px;
@@ -2631,7 +2641,7 @@
         }
 
         .loginType{
-            height: calc(100vh - 80px);
+            height: 600px;
             position: relative;
             .login{
               width: 360px;
@@ -2650,7 +2660,6 @@
                   display: block;
                   text-align: center;
                   padding: 15px;
-                  border: 1px solid lightgray;
                   border-radius: 3px;
                   margin-bottom: 10px;
                   font-size: 18px;
@@ -2834,6 +2843,7 @@
             padding:0;
             margin: 0 auto;
             list-style: none;
+            margin-bottom: 100px;
             li{
                 >a{
                     display: block;
@@ -2845,6 +2855,7 @@
                 }
                 .sub-menu{
                     border: 1px solid #000;
+                    background-color: #fff;
                     display: none;
                     >a{
                         display: block;
@@ -2888,7 +2899,6 @@
     }
     &.study04{
         width: 100%;
-        padding: 0;
         .video-frame{
             &::before{
             content: '';
@@ -3433,7 +3443,7 @@
                 font-family: Helvetica;
                 line-height: 1.06;
                 letter-spacing: -0.02em;
-                color: #1d1d1f;
+                color: #fff;
             }
             .mask {
                 height: 106px;
