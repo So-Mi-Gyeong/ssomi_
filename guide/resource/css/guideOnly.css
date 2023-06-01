@@ -1,17 +1,3 @@
-.innerWrap.bgWhite{
-  background-color: #eedcc5fa;
-}
-.innerWrap.bgWhite h1,
-.innerWrap.bgWhite h2,
-.innerWrap.bgWhite h3,
-.innerWrap.bgWhite h4,
-.innerWrap.bgWhite h5,
-.innerWrap.bgWhite h6,
-.innerWrap.bgWhite p,
-.innerWrap.bgWhite span{
-  color: #2c2216;
-}
-
 /* ----------- color ----------- */
 .primaryGuide,
 .grayGuide,

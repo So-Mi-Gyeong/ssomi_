@@ -1,7 +1,8 @@
 
 .guide_wrap{
-  background-color: #2c2216;
-  color: #f1db9c;
+  /*background-color: #2c2216;*/
+  background-color: #dedbd1;
+  color: #222;
 }
 .guide_wrap .innerWrap{
     width: 1200px;
