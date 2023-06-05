@@ -1,4 +1,4 @@
-@import '_reset.scss', '_typography.scss', '_table.scss', '_button.scss', '_list.scss', '_input.scss', '_study.scss', '_cursor.scss', '_grid.scss', '_accordion.scss', '_chart.scss', '_dropdown.scss', '_netflix.scss';
+@import '_reset.scss', '_home.scss', '_typography.scss', '_table.scss', '_button.scss', '_list.scss', '_input.scss', '_study.scss', '_cursor.scss', '_grid.scss', '_accordion.scss', '_chart.scss', '_dropdown.scss', '_netflix.scss';
 
 /* scroll */
 body{
@@ -32,42 +32,6 @@ body{
     overflow: auto;
     &::-webkit-scrollbar {
         display: none;
-    }
-    &.bgGray{
-        background-color: #eee;
-        .ui-content{
-            color: #222;
-        }
-    }
-    .main{
-        width: 100%;
-        height: 100vh;
-        position: relative;
-        overflow: hidden;
-        p{
-            color: #fff;
-            font-size: 100px;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            text-align: center;
-        }
-        &.bgOrange{
-            background-color: #F34234;
-        }
-        .mainPhoto{
-            width: 500px;
-            height: 500px;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            img{
-                width: 100%;
-                height: 100%;
-            }
-        }
     }
 }
 
