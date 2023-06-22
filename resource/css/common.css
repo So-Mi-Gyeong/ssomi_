@@ -140,6 +140,54 @@ input[type=radio],
     border-right: 1px solid #fff;
   }
 }
+/*====================================== //typing ======================================*/
+.styleArea {
+  height: 50vh;
+}
+.styleArea h2 {
+  text-align: center;
+  margin-top: 50px;
+  font-size: 70px;
+  font-weight: 700;
+}
+.styleArea ul {
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10%;
+}
+.styleArea ul li {
+  width: 200px;
+  height: 200px;
+  line-height: 200px;
+  background-color: #650911;
+  border: 1px solid #650911;
+  border-radius: 50%;
+  text-align: center;
+  font-size: 30px;
+  transition: 1s;
+  position: relative;
+  top: 0;
+  animation: ball 1s ease-in Infinite Alternate;
+}
+.styleArea ul li:hover {
+  width: 300px;
+  height: 300px;
+  line-height: 300px;
+  background-color: #000;
+  border: 5px solid #650911;
+  transition: 1s;
+}
+@keyframes ball {
+  0% {
+    top: 0px;
+  }
+  100% {
+    top: 10%;
+  }
+}
+
 h2 {
   font-size: 25px;
 }
