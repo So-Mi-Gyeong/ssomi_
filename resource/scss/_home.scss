@@ -2,23 +2,27 @@
   color: #fff;
 }
 /*====================================== typing ======================================*/
-.typingArea {
+.redStyle{
+  width: 100%;
+  margin: 0 auto;
+  padding: 5% 0;
+  position: relative;
+  background:#650911;
+  &::after{
+    content: '';
     width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    opacity: 0.1;
+    background: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/662025/grain.jpg') repeat center center;
+    -webkit-animation: grain 0.5s steps(1) infinite;
+    animation: grain 0.5s steps(1) infinite;
+  }
+}
+.typingArea {
     height: 100vh;
-    margin: 0 auto;
-    position: relative;
-    background:#650911;
-    &::after{
-      content: '';
-      width: 100%;
-      height: 100%;
-      position: absolute;
-      top: 0;
-      opacity: 0.1;
-      background: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/662025/grain.jpg') repeat center center;
-      -webkit-animation: grain 0.5s steps(1) infinite;
-      animation: grain 0.5s steps(1) infinite;
-    }
+    padding: 0;
     .typingBox {
       width: 100%;
       margin: 0 auto;
@@ -64,49 +68,120 @@
 }
 /*====================================== //typing ======================================*/
 .styleArea{
-  height: 50vh;
+  padding: 5% 10%;
+  background-color: #282726;
   h2{
     text-align: center;
-    margin-top: 50px;
     font: {
       size: 70px;
       weight: 700;
     }
   }
-  ul{
-    height: 100%;
+  .styleAreaList{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 10%;
+    margin-top: 50px;
     li{
       width: 200px;
       height: 200px;
-      line-height: 200px;
-      background-color: #650911;
-      border: 1px solid #650911;
-      border-radius: 50%;
+      background-color: #e6e8e6;
+      border: 1px solid #ced0ce;
+      border-radius: 30px;
       text-align: center;
-      font-size: 30px;
-      transition: 1s;
-      position:relative;
-      top:0;
-      animation: ball 1s ease-in Infinite Alternate ;
+      font-size: 16px;
+      padding: 20px;
+      box-sizing: border-box;
+      a{
+        position: relative;
+        display: block;
+        img{
+          width: 70px;
+          height: 70px;
+          margin: 10px auto 0 auto;
+          border-radius: 50%;
+          display: block;
+        }
+        strong{
+          display: block;
+          margin-top: 15px;
+          font-size: 20px;
+          line-height: 20px;
+        }
+        span{
+          display: block;
+          margin-top: 3px;
+          font-size: 15px;
+        }
+      }
       &:hover{
-        width: 300px;
-        height: 300px;
-        line-height: 300px;
-        background-color: #000;
-        border: 5px solid #650911;
-        transition: 1s;
+        background-color: #ced0ce;
+        box-shadow: 10px 10px 33px #000;
       }
     }
-    @keyframes ball {
-      0% {
-        top:0px;
+    & + .styleAreaList{
+      margin-top: 30px;
+    }
+  }
+}
+.studyArea{
+  .studyList{
+    li{
+      width: 60%;
+      height: 200px;
+      margin: 0 auto;
+      background-color: #e6e8e6;
+      border: 1px solid #ced0ce;
+      border-radius: 30px;
+      text-align: left;
+      font-size: 16px;
+      padding: 20px 40px;
+      box-sizing: border-box;
+      overflow: hidden;
+      &:hover{
+        background-color: #ced0ce;
+        box-shadow: 10px 10px 33px #000;
       }
-      100% {
-        top:10%;
+      & + li{
+        margin-top: 20px;
+      }
+      a{
+        height: 100%;
+        position: relative;
+        display: block;
+        .badge{
+          display: block;
+          min-width: 50px;
+          width: fit-content;
+          text-align: center;
+          background-color: #282726;
+          color: #fff;
+          border-radius: 10px;
+        }
+        .date{
+          display: block;
+          margin-top: 20px;
+          font-size: 12px;
+          color: #282726;
+        }
+        strong{
+          display: block;
+          font-size: 29px;
+          margin-top: 20px;
+        }
+        span{
+          display: block;
+          margin-top: 10px;
+        }
+        img{
+          width: 150px;
+          height: 150px;
+          position: absolute;
+          top: 50%;
+          right: 0;
+          transform: translateY(-50%);
+          border-radius: 20px;
+        }
       }
     }
   }
