@@ -146,6 +146,60 @@ input[type=radio],
   }
 }
 /*====================================== //typing ======================================*/
+.studyBox {
+  padding: 5% 0;
+}
+.studyBox h2 {
+  text-align: center;
+  font-size: 70px;
+  font-weight: 700;
+}
+.studyBox .tistoryBox {
+  width: 70%;
+  height: 500px;
+  margin: 50px auto;
+  background-color: #650911;
+  box-shadow: 10px 10px 30px #000;
+  border-radius: 50px;
+}
+.studyBox .tistoryBox .tistoryArea {
+  height: inherit;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5%;
+  box-sizing: border-box;
+}
+.studyBox .tistoryBox .tistoryArea .tistoryLeft {
+  width: auto;
+  border-radius: 10px;
+  margin-right: 50px;
+}
+.studyBox .tistoryBox .tistoryArea .tistoryLeft a {
+  display: block;
+  width: 400PX;
+  height: 400PX;
+  border-radius: inherit;
+  overflow: hidden;
+}
+.studyBox .tistoryBox .tistoryArea .tistoryLeft a img {
+  width: 100%;
+  height: 100%;
+}
+.studyBox .tistoryBox .tistoryArea .tistoryright {
+  width: 50%;
+}
+.studyBox .tistoryBox .tistoryArea .tistoryright a {
+  width: -moz-fit-content;
+  width: fit-content;
+  display: block;
+  color: #fff;
+  background-color: #000;
+  border-radius: 50px;
+  padding: 10px 20px;
+  margin-top: 20px;
+}
+
 .styleArea {
   padding: 5% 10%;
   background-color: #282726;
