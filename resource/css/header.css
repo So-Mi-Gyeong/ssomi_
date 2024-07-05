@@ -88,7 +88,7 @@ header.blackStyle .menu .ui-nav.open::before {
   background: url(../img/ico_menu_black.png) -36px 0 no-repeat;
 }
 header.blackStyle .menu .ui-menuContent li {
-  background-color: #222;
+  /* background-color: #222; */
   border-bottom: 1px solid #fff;
 }
 header.blackStyle .menu .ui-menuContent li a {
