@@ -88,7 +88,7 @@ header.blackStyle .menu .ui-nav.open::before {
   background: url(../img/ico_menu_black.png) -36px 0 no-repeat;
 }
 header.blackStyle .menu .ui-menuContent li {
-  /* background-color: #222; */
+  background-color: #222;
   border-bottom: 1px solid #fff;
 }
 header.blackStyle .menu .ui-menuContent li a {
@@ -112,6 +112,7 @@ header.blackStyle .menu .ui-menuContent li a:focus {
   position: fixed;
   top: 0;
   left: 0;
+  -webkit-transition: 0.5s;
   transition: 0.5s;
   overflow: hidden;
 }
@@ -125,6 +126,7 @@ header.blackStyle .menu .ui-menuContent li a:focus {
 }
 .menu .ui-nav.open {
   left: 30%;
+  -webkit-transition: 0.5s;
   transition: 0.5s;
 }
 .menu .ui-nav.open::before {
@@ -136,6 +138,7 @@ header.blackStyle .menu .ui-menuContent li a:focus {
   position: fixed;
   top: 0;
   left: -30%;
+  -webkit-transition: 0.5s;
   transition: 0.5s;
   overflow-x: hidden;
   overflow-y: auto;
@@ -147,7 +150,8 @@ header.blackStyle .menu .ui-menuContent li a:focus {
   width: 100%;
   background-color: #dedbd1;
   border-bottom: 1px solid #222;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 .menu .ui-menuContent li:last-child {
   border-bottom: 0;
@@ -157,7 +161,8 @@ header.blackStyle .menu .ui-menuContent li a:focus {
   width: 100%;
   padding: 25px;
   color: #222;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   font-size: 1rem;
   font-weight: 500;
 }
@@ -170,6 +175,7 @@ header.blackStyle .menu .ui-menuContent li a:focus {
 }
 .menu .ui-menuContent.open {
   left: 0;
+  -webkit-transition: 0.5s;
   transition: 0.5s;
 }
 
@@ -202,4 +208,4 @@ header.blackStyle .menu .ui-menuContent li a:focus {
   .menu .ui-nav.open {
     left: 50%;
   }
-}/*# sourceMappingURL=header.css.map */
+}
