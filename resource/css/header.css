@@ -81,31 +81,31 @@ input[type=radio],
 
 /* ============================================================== */
 /* ==================================== menu ================================= */
-header.blackStyle .menu .ui-nav::before {
+header.blackStyle .ui-menu-nav::before {
   background: url(../img/ico_menu_black.png) 0 0 no-repeat;
 }
-header.blackStyle .menu .ui-nav.open::before {
+header.blackStyle .ui-menu-nav.open::before {
   background: url(../img/ico_menu_black.png) -36px 0 no-repeat;
 }
-header.blackStyle .menu .ui-menuContent li {
+header.blackStyle .ui-menu-item {
   background-color: #222;
   border-bottom: 1px solid #fff;
 }
-header.blackStyle .menu .ui-menuContent li a {
+header.blackStyle .ui-menu-item a {
   color: #fff;
 }
-header.blackStyle .menu .ui-menuContent li a:hover {
+header.blackStyle .ui-menu-item a:hover {
   background-color: #333;
 }
-header.blackStyle .menu .ui-menuContent li a:focus {
+header.blackStyle .ui-menu-item a:focus {
   background-color: rgb(12, 12, 12);
 }
 
-.menu {
+.ui-menu {
   position: relative;
   z-index: 9999;
 }
-.menu .ui-nav {
+.ui-menu-nav {
   width: 30px;
   height: 30px;
   padding: 0;
@@ -115,7 +115,7 @@ header.blackStyle .menu .ui-menuContent li a:focus {
   transition: 0.5s;
   overflow: hidden;
 }
-.menu .ui-nav::before {
+.ui-menu-nav::before {
   content: "";
   width: 50px;
   height: 30px;
@@ -123,14 +123,14 @@ header.blackStyle .menu .ui-menuContent li a:focus {
   background-size: 100% 100%;
   display: block;
 }
-.menu .ui-nav.open {
+.ui-menu-nav.open {
   left: 30%;
   transition: 0.5s;
 }
-.menu .ui-nav.open::before {
+.ui-menu-nav.open::before {
   background: url(../img/ico_menu_white.png) -36px 0 no-repeat;
 }
-.menu .ui-menuContent {
+.ui-menu-list {
   width: 30%;
   height: 100vh;
   position: fixed;
@@ -140,19 +140,23 @@ header.blackStyle .menu .ui-menuContent li a:focus {
   overflow-x: hidden;
   overflow-y: auto;
 }
-.menu .ui-menuContent::-webkit-scrollbar {
+.ui-menu-list::-webkit-scrollbar {
   display: none;
 }
-.menu .ui-menuContent li {
+.ui-menu-list.open {
+  left: 0;
+  transition: 0.5s;
+}
+.ui-menu-item {
   width: 100%;
   background-color: #dedbd1;
   border-bottom: 1px solid #222;
   box-sizing: border-box;
 }
-.menu .ui-menuContent li:last-child {
+.ui-menu-item:last-child {
   border-bottom: 0;
 }
-.menu .ui-menuContent li a {
+.ui-menu-item a {
   display: inline-block;
   width: 100%;
   padding: 25px;
@@ -161,45 +165,41 @@ header.blackStyle .menu .ui-menuContent li a:focus {
   font-size: 1rem;
   font-weight: 500;
 }
-.menu .ui-menuContent li a:hover {
+.ui-menu-item a:hover {
   background-color: rgba(255, 255, 255, 0.195);
 }
-.menu .ui-menuContent li a:focus {
+.ui-menu-item a:focus {
   background-color: #222;
   color: #fff;
 }
-.menu .ui-menuContent.open {
-  left: 0;
-  transition: 0.5s;
-}
 
 @media all and (max-width: 758px) {
-  header.blackStyle .menu .ui-nav.open {
+  header.blackStyle .ui-menu-nav.open {
     background-color: #fff;
   }
-  header.blackStyle .menu .ui-nav.open::before {
+  header.blackStyle .ui-menu-nav.open::before {
     background: url(../img/ico_menu_black.png) -30px 0 no-repeat;
   }
-  .menu .ui-nav.open {
+  .ui-menu-nav.open {
     background-color: #000;
     border-radius: 50%;
     left: 90%;
     margin-top: 2%;
     z-index: 999;
   }
-  .menu .ui-nav.open::before {
+  .ui-menu-nav.open::before {
     background: url(../img/ico_menu_white.png) -30px 0 no-repeat;
   }
-  .ui-menuContent.open {
+  .ui-menu-list.open {
     width: 100%;
   }
 }
 @media (min-width: 759px) and (max-width: 1100px) {
-  .menu .ui-menuContent {
+  .ui-menu-list {
     width: 50%;
     left: -50%;
   }
-  .menu .ui-nav.open {
+  .ui-menu-nav.open {
     left: 50%;
   }
 }/*# sourceMappingURL=header.css.map */

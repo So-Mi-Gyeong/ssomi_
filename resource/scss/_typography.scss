@@ -5,14 +5,10 @@ p{font-size: 16px;line-height: 1.5;}
 
 /* text */
 h2 + h3,
-h2 + div > h3{
-    margin-top: 50px;
-}
+h2 + div > h3{margin-top: 50px;}
 
 h3 + h4,
-p + h4 {
-    margin-top: 20px;
-}
+p + h4 {margin-top: 20px;}
 
 h2 + p,
 h3 + p,
@@ -22,13 +18,9 @@ h3 + .listDefault,
 h4 + .listDefault,
 h2 + table,
 h3 + table,
-h4 + table{
-    margin-top: 10px;
-}
+h4 + table{margin-top: 10px;}
 
-p + p{
-    margin-top: 5px;
-}
+p + p{margin-top: 5px;}
 
 
 /* list */
@@ -37,17 +29,11 @@ table + .listDefault,
 .listDefault + p,
 p + .listDefault,
 .listDefault + h3,
-.listDefault + h4{
-    margin-top: 20px;
-}
+.listDefault + h4{margin-top: 20px;}
 
 /* table */
 table {
-    & + table{
-        margin-top: 50px;
-    }
-    & + p{
-        margin-top: 10px;
-    }
+    & + table{margin-top: 50px;}
+    & + p{margin-top: 10px;}
 }
 

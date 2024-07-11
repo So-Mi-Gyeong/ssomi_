@@ -20,7 +20,7 @@ $(document).ready(function(){
     function headerNav(header_result) {
         $("#menu").html($(header_result).filter(".wrap"));
          //*********************** menu ***********************
-        const uinavs = document.querySelectorAll('.wrap .menu .ui-nav');
+        const uinavs = document.querySelectorAll('.wrap .ui-menu .ui-menu-nav');
         for(let i = 0; i < uinavs.length; i++) {
             uinavs[i].addEventListener('click', act); //click -> act()실행
         }
@@ -28,9 +28,9 @@ $(document).ready(function(){
         function act() {
             this.classList.toggle('open');
             
-            const menu = document.querySelector('.ui-menuContent');
+            const menu = document.querySelector('.ui-menu-list');
             menu.classList.toggle('open');
-            // const menulis = document.querySelectorAll('.menu ul li');
+            // const menulis = document.querySelectorAll('.ui-menu ul li');
             // for(let i = 0; i < menulis.length; i++) {
             //     menulis[i].addEventListener('click', function(){
             //         menu.classList.remove('open');

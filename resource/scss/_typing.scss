@@ -1,0 +1,71 @@
+.redStyle{
+  width: 100%;
+  margin: 0 auto;
+  padding: 5% 0;
+  position: relative;
+  background:#650911;
+  &::after{
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    opacity: 0.1;
+    background: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/662025/grain.jpg') repeat center center;
+    -webkit-animation: grain 0.5s steps(1) infinite;
+    animation: grain 0.5s steps(1) infinite;
+
+  }
+}
+.typingArea {
+    height: 100vh;
+    padding: 0;
+    .typingBox {
+      width: 100%;
+      margin: 0 auto;
+      position: absolute;
+      top: 50%;
+      left:50%;
+      transform:translate(-50%,-50%);
+      z-index: 9;
+      font-size: 10rem;
+      font-weight: bolder;
+      color:#fff;
+      text-shadow: 10px 10px 1px #000;
+      text-align:center;
+      .typing-txt {
+        display: none;
+        ul{
+          li{
+            &.on{
+              display: inline-block;
+              animation-name: cursor;
+              animation-duration: 0.3s;
+              animation-iteration-count: infinite;
+              font-size: 1em;
+            }
+          }
+        }
+    }
+  }
+}
+
+@keyframes cursor {
+    0% {border-right: 1px solid #fff}
+
+    50% {border-right: 1px solid #000}
+
+    100% {border-right: 1px solid #fff}
+}
+
+@media (min-width: 0px) and (max-width: 375px) {
+  .typingArea {
+    .typingBox {font-size: 5rem;}
+  }
+}
+
+@media (min-width: 376px) and (max-width: 650px) {
+  .typingArea {
+    .typingBox {font-size: 6rem;}
+  }
+}
