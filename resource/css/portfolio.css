@@ -81,6 +81,72 @@ input[type=radio],
 }
 
 /* ============================================================== */
+h2 {
+  font-size: 2.5rem;
+}
+
+h3 {
+  font-size: 2rem;
+}
+
+h4 {
+  font-size: 1.8rem;
+}
+
+p {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+/* text */
+h2 + h3,
+h2 + div > h3 {
+  margin-top: 5rem;
+}
+
+h3 + h4,
+p + h4 {
+  margin-top: 2rem;
+}
+
+h2 + p,
+h3 + p,
+h4 + p,
+h2 + .listDefault,
+h3 + .listDefault,
+h4 + .listDefault,
+h2 + table,
+h3 + table,
+h4 + table {
+  margin-top: 1rem;
+}
+
+p + p {
+  margin-top: 0.5rem;
+}
+
+strong + p {
+  margin-top: 1rem;
+}
+
+/* list */
+.listDefault + table,
+table + .listDefault,
+.listDefault + p,
+p + .listDefault,
+.listDefault + h3,
+.listDefault + h4 {
+  margin-top: 2rem;
+}
+
+/* table */
+table + table {
+  margin-top: 5rem;
+}
+table + p {
+  margin-top: 1rem;
+}
+
 * {
   font-family: "Playfair Display", serif;
 }

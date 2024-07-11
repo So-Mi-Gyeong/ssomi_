@@ -3534,50 +3534,50 @@
             }
         }
 
-        .slideTest{
-            position: relative;
-            height: 400px;
-            a {
-                font-family:sans-serif;
-                color:#fff;
-                text-decoration:none;
-                font-weight:bold;
-                border: 1px solid #0076fe;
-                border-radius: 5px;
-                background-color: #0076fe;
-                padding: 5px 10px;
-                position:absolute;
-                top:310px;
-                &#prev {
-                    left:30px;
-                }
-                &#next {
-                    right:30px;
-                }
-            }
-            .testWrap {
-                position:absolute;
-                top:0;
-                height:320px;
-              }
-              .slideTest_content {
-                position:absolute;
-                div {
-                    float:left;
-                    width:300px;
-                    height:300px;
-                    padding: 10px;
-                    background-color: #fff;
-                    color: #000;
-                    border:1px solid #000;
-                    box-sizing: border-box;
-                    font: {
-                        size: 20px;
-                        weight: bold;
-                    }
-                }
-            }  
-        }
+        // .slideTest{
+        //     position: relative;
+        //     height: 400px;
+        //     a {
+        //         font-family:sans-serif;
+        //         color:#fff;
+        //         text-decoration:none;
+        //         font-weight:bold;
+        //         border: 1px solid #0076fe;
+        //         border-radius: 5px;
+        //         background-color: #0076fe;
+        //         padding: 5px 10px;
+        //         position:absolute;
+        //         top:310px;
+        //         &#prev {
+        //             left:30px;
+        //         }
+        //         &#next {
+        //             right:30px;
+        //         }
+        //     }
+        //     .testWrap {
+        //         position:absolute;
+        //         top:0;
+        //         height:320px;
+        //       }
+        //       .slideTest_content {
+        //         position:absolute;
+        //         div {
+        //             float:left;
+        //             width:300px;
+        //             height:300px;
+        //             padding: 10px;
+        //             background-color: #fff;
+        //             color: #000;
+        //             border:1px solid #000;
+        //             box-sizing: border-box;
+        //             font: {
+        //                 size: 20px;
+        //                 weight: bold;
+        //             }
+        //         }
+        //     }  
+        // }
 
         .slideWrap{
             .slide_wrap { 
