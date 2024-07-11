@@ -1,5 +1,14 @@
 @import '_reset.scss', '_home.scss', '_typography.scss', '_table.scss', '_button.scss', '_list.scss', '_input.scss', '_study.scss', '_cursor.scss', '_grid.scss', '_accordion.scss', '_chart.scss', '_dropdown.scss', '_netflix.scss';
 
+html {font-size: 62.5%;}
+
+@media screen and (max-width: 320px) {
+    html {font-size: 50%;}
+}
+@media screen and (max-width: 360px) {
+    html {font-size: 56.25%;}
+}
+
 /* scroll */
 body{
     &::-webkit-scrollbar {

@@ -1,6 +1,6 @@
-.main{
-  color: #fff;
-}
+// .main{
+//   color: #fff;
+// }
 /*====================================== typing ======================================*/
 .redStyle{
   width: 100%;
@@ -18,6 +18,7 @@
     background: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/662025/grain.jpg') repeat center center;
     -webkit-animation: grain 0.5s steps(1) infinite;
     animation: grain 0.5s steps(1) infinite;
+
   }
 }
 .typingArea {
@@ -31,7 +32,7 @@
       left:50%;
       transform:translate(-50%,-50%);
       z-index: 9;
-      font-size: 6em;
+      font-size: 10rem;
       font-weight: bolder;
       color:#fff;
       text-shadow: 10px 10px 1px #000;
@@ -54,189 +55,195 @@
 }
 
 @keyframes cursor {
-    0% {
-        border-right: 1px solid #fff
-    }
+    0% {border-right: 1px solid #fff}
 
-    50% {
-        border-right: 1px solid #000
-    }
+    50% {border-right: 1px solid #000}
 
-    100% {
-        border-right: 1px solid #fff
-    }
+    100% {border-right: 1px solid #fff}
+}
+
+@media (min-width: 0px) and (max-width: 375px) {
+  .typingArea {
+    .typingBox {font-size: 5rem;}
+  }
+}
+
+@media (min-width: 376px) and (max-width: 650px) {
+  .typingArea {
+    .typingBox {font-size: 6rem;}
+  }
 }
 /*====================================== //typing ======================================*/
-.studyBox{
-  padding: 5% 0;
-  h2{
-    text-align: center;
-    font: {
-      size: 70px;
-      weight: 700;
-    }
-  }
-  .tistoryBox{
-    width: 70%;
-    height: 500px;
-    margin: 50px auto;
-    background-color: #650911;
-    box-shadow: 10px 10px 30px #000;
-    border-radius: 50px;
-    .tistoryArea{
-      height: inherit;
-      display: flex;
-      justify-content: center;
-      align-items: center;    
-      padding: 5%;
-      box-sizing: border-box;
-      .tistoryLeft{
-        width: auto;
-        border-radius: 10px;
-        margin-right: 50px;
-        a{
-          display: block;
-          width: 400PX;
-          height: 400PX;
-          border-radius: inherit;
-          overflow: hidden;
-          img{
-            width: 100%;
-            height: 100%;
-          }
-        }
-      }
-      .tistoryright{
-        width: 50%;
-        a{
-          width: fit-content;
-          display: block;
-          color: #fff;
-          background-color: #000;
-          border-radius: 50px;
-          padding: 10px 20px;
-          margin-top: 20px;
-        }
-      }
-    }
-  }
-}
-.styleArea{
-  padding: 5% 10%;
-  background-color: #282726;
-  h2{
-    text-align: center;
-    font: {
-      size: 70px;
-      weight: 700;
-    }
-  }
-  .styleAreaList{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 50px;
-    li{
-      width: 200px;
-      height: 200px;
-      background-color: #e6e8e6;
-      border: 1px solid #ced0ce;
-      border-radius: 30px;
-      text-align: center;
-      font-size: 16px;
-      padding: 20px;
-      box-sizing: border-box;
-      a{
-        position: relative;
-        display: block;
-        img{
-          width: 70px;
-          height: 70px;
-          margin: 10px auto 0 auto;
-          border-radius: 50%;
-          display: block;
-        }
-        strong{
-          display: block;
-          margin-top: 15px;
-          font-size: 20px;
-          line-height: 20px;
-        }
-        span{
-          display: block;
-          margin-top: 3px;
-          font-size: 15px;
-        }
-      }
-      &:hover{
-        background-color: #ced0ce;
-        box-shadow: 10px 10px 33px #000;
-      }
-    }
-    & + .styleAreaList{
-      margin-top: 30px;
-    }
-  }
-}
-.studyArea{
-  .studyList{
-    li{
-      width: 60%;
-      height: 200px;
-      margin: 0 auto;
-      background-color: #e6e8e6;
-      border: 1px solid #ced0ce;
-      border-radius: 30px;
-      text-align: left;
-      font-size: 16px;
-      padding: 20px 40px;
-      box-sizing: border-box;
-      overflow: hidden;
-      &:hover{
-        background-color: #ced0ce;
-        box-shadow: 10px 10px 33px #000;
-      }
-      & + li{
-        margin-top: 20px;
-      }
-      a{
-        height: 100%;
-        position: relative;
-        display: block;
-        .badge{
-          display: block;
-          min-width: 50px;
-          width: fit-content;
-          text-align: center;
-          background-color: #282726;
-          color: #fff;
-          border-radius: 10px;
-        }
-        .date{
-          display: block;
-          margin-top: 20px;
-          font-size: 12px;
-          color: #282726;
-        }
-        strong{
-          display: block;
-          font-size: 29px;
-          margin-top: 20px;
-        }
-        span{
-          display: block;
-          margin-top: 10px;
-        }
-        img{
-          width: 150px;
-          height: 150px;
-          position: absolute;
-          top: 50%;
-          right: 0;
-          transform: translateY(-50%);
-          border-radius: 20px;
-        }
-      }
-    }
-  }
-}
+// .studyBox{
+//   padding: 5% 0;
+//   h2{
+//     text-align: center;
+//     font: {
+//       size: 70px;
+//       weight: 700;
+//     }
+//   }
+//   .tistoryBox{
+//     width: 70%;
+//     height: 500px;
+//     margin: 50px auto;
+//     background-color: #650911;
+//     box-shadow: 10px 10px 30px #000;
+//     border-radius: 50px;
+//     .tistoryArea{
+//       height: inherit;
+//       display: flex;
+//       justify-content: center;
+//       align-items: center;    
+//       padding: 5%;
+//       box-sizing: border-box;
+//       .tistoryLeft{
+//         width: auto;
+//         border-radius: 10px;
+//         margin-right: 50px;
+//         a{
+//           display: block;
+//           width: 400PX;
+//           height: 400PX;
+//           border-radius: inherit;
+//           overflow: hidden;
+//           img{
+//             width: 100%;
+//             height: 100%;
+//           }
+//         }
+//       }
+//       .tistoryright{
+//         width: 50%;
+//         a{
+//           width: fit-content;
+//           display: block;
+//           color: #fff;
+//           background-color: #000;
+//           border-radius: 50px;
+//           padding: 10px 20px;
+//           margin-top: 20px;
+//         }
+//       }
+//     }
+//   }
+// }
+// .styleArea{
+//   padding: 5% 10%;
+//   background-color: #282726;
+//   h2{
+//     text-align: center;
+//     font: {
+//       size: 70px;
+//       weight: 700;
+//     }
+//   }
+//   .styleAreaList{
+//     display: flex;
+//     justify-content: space-between;
+//     align-items: center;
+//     margin-top: 50px;
+//     li{
+//       width: 200px;
+//       height: 200px;
+//       background-color: #e6e8e6;
+//       border: 1px solid #ced0ce;
+//       border-radius: 30px;
+//       text-align: center;
+//       font-size: 16px;
+//       padding: 20px;
+//       box-sizing: border-box;
+//       a{
+//         position: relative;
+//         display: block;
+//         img{
+//           width: 70px;
+//           height: 70px;
+//           margin: 10px auto 0 auto;
+//           border-radius: 50%;
+//           display: block;
+//         }
+//         strong{
+//           display: block;
+//           margin-top: 15px;
+//           font-size: 20px;
+//           line-height: 20px;
+//         }
+//         span{
+//           display: block;
+//           margin-top: 3px;
+//           font-size: 15px;
+//         }
+//       }
+//       &:hover{
+//         background-color: #ced0ce;
+//         box-shadow: 10px 10px 33px #000;
+//       }
+//     }
+//     & + .styleAreaList{
+//       margin-top: 30px;
+//     }
+//   }
+// }
+// .studyArea{
+//   .studyList{
+//     li{
+//       width: 60%;
+//       height: 200px;
+//       margin: 0 auto;
+//       background-color: #e6e8e6;
+//       border: 1px solid #ced0ce;
+//       border-radius: 30px;
+//       text-align: left;
+//       font-size: 16px;
+//       padding: 20px 40px;
+//       box-sizing: border-box;
+//       overflow: hidden;
+//       &:hover{
+//         background-color: #ced0ce;
+//         box-shadow: 10px 10px 33px #000;
+//       }
+//       & + li{
+//         margin-top: 20px;
+//       }
+//       a{
+//         height: 100%;
+//         position: relative;
+//         display: block;
+//         .badge{
+//           display: block;
+//           min-width: 50px;
+//           width: fit-content;
+//           text-align: center;
+//           background-color: #282726;
+//           color: #fff;
+//           border-radius: 10px;
+//         }
+//         .date{
+//           display: block;
+//           margin-top: 20px;
+//           font-size: 12px;
+//           color: #282726;
+//         }
+//         strong{
+//           display: block;
+//           font-size: 29px;
+//           margin-top: 20px;
+//         }
+//         span{
+//           display: block;
+//           margin-top: 10px;
+//         }
+//         img{
+//           width: 150px;
+//           height: 150px;
+//           position: absolute;
+//           top: 50%;
+//           right: 0;
+//           transform: translateY(-50%);
+//           border-radius: 20px;
+//         }
+//       }
+//     }
+//   }
+// }
