@@ -1,0 +1,441 @@
+html {font-size: 62.5%;}
+
+@media screen and (max-width: 320px) {
+    html {font-size: 50%;}
+}
+@media screen and (max-width: 360px) {
+    html {font-size: 56.25%;}
+}
+
+html, 
+body, 
+div, 
+span, 
+iframe, 
+h1, h2, h3, h4, h5, h6, p, pre, 
+a, 
+code, 
+em, 
+img, 
+strong, b, u, i, 
+dl, dt, dd, ol, ul, li, 
+fieldset, 
+form, 
+label, 
+legend, 
+table, caption, tbody, tfoot, thead, tr, th, td, 
+article, 
+figure, figcaption, 
+footer, 
+header, 
+section {
+    margin: 0; 
+    padding: 0; 
+    border: 0;
+    word-break: keep-all;
+}
+
+/* list */
+ol, 
+ul, 
+li {
+    list-style: none; 
+    margin: 0; 
+    padding: 0;
+}
+
+/* table */
+table {
+  width: 100%;
+  border: 0;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* font */
+body{
+  color: #222;
+  font-size: 16px;
+  font-weight: normal;
+}
+
+a{
+    color: #222; 
+    text-decoration: none;
+}
+
+/* button */
+button{
+    background: transparent;
+    outline: 0;
+    border: 0;
+    cursor: pointer;
+}
+
+/* hidden */
+caption,
+input[type=checkbox],
+input[type=radio],
+.ally-hidden{
+    position: absolute !important;
+    width: 1px !important;
+    height: 1px !important;
+    color: transparent !important;
+    overflow: hidden !important;
+    clip: rect(1px, 1px, 1px, 1px);
+    clip-path: inset(50%);
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+/* ============================= 공통 ============================= */
+.data-state{
+    font-size: .9rem;
+    font-weight: 600;
+    line-height: 1.2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: .4rem;
+    &::before{
+        content:'';
+        display: block;
+        width: .6rem;
+        height: .6rem;
+        border-radius: 50%;
+    }
+    &[data-type="true"]{
+        color: #1F9D00;
+        &::before{background-color: #1F9D00;}
+    }
+    &[data-type="false"]{
+        color: #F10000;
+        &::before{background-color: #F10000;}
+    }
+}
+
+/* ============================= 개별 ============================= */
+
+.content{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: flex-start;
+}
+
+// main left
+.main{
+    &-bar-wrap{
+        width: 15rem;
+        background-color: #EAF6FF;
+        &::before{
+            content: '';
+            display: block;
+            width: 15rem;
+            height: 26.7rem;
+            background: url(../../camelotech/resource/img/img-mainbarbg.png) 0 0 no-repeat;
+            background-size: 15rem 26.7rem;
+        }
+    }
+    &-logo{
+        position: absolute;
+        top: 2rem;
+        left: 2rem;
+        img{       
+            width: 11rem;
+            height: 1.3rem;
+        }
+    }
+}
+//main bar(설비 선택)
+.main-facility{
+    &-wrap{padding: 3.6rem 1.6rem 2rem;}
+    &-title{
+        font-size: 1.2rem;
+        font-weight: 600;
+        color: #00090F;
+    }
+    &-selection{}
+}
+//main bar(세팅버튼)
+.main-setting{
+    &-menu{
+        display: flex;
+        flex-direction: column;
+        gap: 2.4rem;
+        position: absolute;
+        bottom: 2rem;
+        left: 1.6rem;
+    }
+    &-list{
+        display: flex;
+        flex-direction: column;
+        gap: .8rem;
+    }
+    &-item{
+        font-size: .9rem;
+        font-weight: 600;
+        color: #254667;
+        gap: .6rem;
+
+        &[data-icon="report"]::before{background: url(../../camelotech/resource/img/ico-report.png) 0 0 no-repeat;}
+        &[data-icon="settings"]::before{background: url(../../camelotech/resource/img/ico-settings.png) 0 0 no-repeat;}
+        &[data-icon="power"]::before{background: url(../../camelotech/resource/img/ico-power.png) 0 0 no-repeat;}
+        
+        &[data-icon]{
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            &::before{
+                content: '';
+                display: block;
+                width: 1.6rem;
+                height: 1.6rem;    
+                background-size: 1.6rem;    
+            }
+        }
+    }
+    &-ver{
+        font-size: 1.1rem;
+        font-weight: 400;
+        color: #4B5976;
+    }
+}
+
+// main right
+.content-body{
+    width: 100%;
+    padding: 4rem 3rem 0;
+    background-color: #F5FBFF;
+    position: relative;
+    .content-body-title{
+        &[data-style="img"]{
+            img{
+                width: 9.5rem;
+                height: 2.5rem;
+            }
+        }
+        &[data-style="text"]{
+            font-size: 2rem;
+            font-weight: 600;
+            line-height: 2.8rem;
+            color: #000E16;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            gap: .8rem;
+            span{
+                font-size: 1.3rem;
+                font-weight: 300;
+                line-height: 1.82rem;
+                color: #000E16;
+            }
+        }
+    }
+}
+
+//현재 날짜/시간
+.date-wrap{
+    display: flex;
+    flex-direction: column;
+    gap: .4rem;
+    position: absolute;
+    top: 3.5rem;
+    right: 3rem;
+    text-align: right;
+    .today{
+        font-size: 1.2rem;
+        font-weight: 300;
+        line-height: 1.4rem;
+        color: #747474;
+    }
+    .time{
+        font-size: 1.6rem;
+        font-weight: 500;
+        line-height: 2rem;
+        color: #747474;
+        span{
+            font-size: 1.6rem;
+            font-weight: 300;
+            line-height: 2rem;
+            color: #747474;
+        }
+    }
+}
+
+// 제조 리스트
+.manufacturing{
+    &-wrap{
+        width: 100%;
+        margin-top: 13.7rem;
+    }
+    &-list{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+    }
+    &-item{
+        height: 25rem;
+        box-sizing: border-box;
+        &[data-style="temperature"]{
+            border: .1rem solid #E4EDF5;
+            border-radius: .4rem;
+            background-color: #EDF5FC;
+            .temp-wrap{
+                height: 100%;
+                box-sizing: border-box;
+                padding: 1.2rem;
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                grid-template-rows: 1fr 1fr;
+                grid-gap: 2rem;
+            }
+            .temp-list{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                gap: .4rem;
+                position: relative;
+                &:nth-of-type(1){
+                    &::after{
+                        content: '';
+                        width: .1rem;
+                        height: 100%;
+                        background-color: #E4EDF5;
+                        position: absolute;
+                        bottom: -1rem;
+                        right: -1.1rem;
+                    }
+                }
+                &:nth-of-type(2){
+                    &::after{
+                        content: '';
+                        width: 100%;
+                        height: .1rem;
+                        background-color: #E4EDF5;
+                        position: absolute;
+                        bottom: -1.1rem;
+                        left: -1rem;
+                    }
+                }
+                &:nth-of-type(3){
+                    &::after{
+                        content: '';
+                        width: 100%;
+                        height: .1rem;
+                        background-color: #E4EDF5;
+                        position: absolute;
+                        top: -1rem;
+                        right: -1rem;
+                    }
+                }
+                &:nth-of-type(4){
+                    &::after{
+                        content: '';
+                        width: .1rem;
+                        height: 100%;
+                        background-color: #E4EDF5;
+                        position: absolute;
+                        top: -1rem;
+                        left: -1rem;
+                    }
+                }
+            }
+            .temp-item{
+                font-size: 3rem;
+                font-weight: 300;
+                line-height: 3.6rem;
+                color: #85A0BA;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 1rem;
+
+                &::before{
+                    content: '';
+                    display: block;
+                    width: 3rem;
+                    height: 3rem;
+                }
+                &[data-style="thermometer"]::before{
+                    background: url(../../camelotech/resource/img/ico-thermometer.png) 0 0 no-repeat;
+                    background-size: 3rem;
+                }
+                &[data-style="humid"]::before{
+                    background: url(../../camelotech/resource/img/ico-humid.png) 0 0 no-repeat;
+                    background-size: 3rem;
+                }
+                &[data-style="tanktemp"]::before{
+                    background: url(../../camelotech/resource/img/ico-tanktemp.png) 0 0 no-repeat;
+                    background-size: 3rem;
+                }
+                &[data-style="change"]::before{
+                    background: url(../../camelotech/resource/img/ico-change.png) 0 0 no-repeat;
+                    background-size: 3rem;
+                }
+            }
+            .temp-item-txt{
+                font-size: 1.2rem;
+                font-weight: 600;
+                line-height: 1.68rem;
+                text-align: center;
+                color: #85A0BA;
+            }
+            .temp-list-btn{
+                min-height: 3.2rem;
+                padding: 0 1rem;
+                margin-top: 1.5rem;
+                font-size: 1.1rem;
+                font-weight: 500;
+                line-height: 1.32rem;
+                color: #85A0BA;
+                background-color: #fff;
+                border-radius: .4rem;
+            }
+        }
+    }
+    &-btn{
+        width: 22rem;
+        height: 100%;
+        padding: 0 3rem;
+        background-color: #fff;
+        border: .1rem solid #E4EDF5;
+        border-radius: .4rem;
+        &:focus{border: .1rem solid #008FFF;}
+    }
+    &-content-tit{
+        font-size: 2rem;
+        font-weight: 500;
+        line-height: 2.4rem;
+        color: #00090F;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+        &::before{
+            content: '';
+            display: block;
+            width: 8rem;
+            height: 8rem;
+            background: url(../../camelotech/resource/img/img-processing.png) 0 0 no-repeat;
+            background-size: 8rem 8rem;
+        }
+        &::after{
+            content: '';
+            width: 100%;
+            height: .1rem;
+            background-color: #E4EDF5;
+        }
+    }
+    &-content-txt{
+        margin-top: 1.6rem;
+        font-size: 1.2rem;
+        font-weight: 600;
+        line-height: 1.68rem;
+        color: #747474;
+    }
+}
+

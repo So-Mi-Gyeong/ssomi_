@@ -1,0 +1,431 @@
+@charset "UTF-8";
+html {
+  font-size: 62.5%;
+}
+
+@media screen and (max-width: 320px) {
+  html {
+    font-size: 50%;
+  }
+}
+@media screen and (max-width: 360px) {
+  html {
+    font-size: 56.25%;
+  }
+}
+html,
+body,
+div,
+span,
+iframe,
+h1, h2, h3, h4, h5, h6, p, pre,
+a,
+code,
+em,
+img,
+strong, b, u, i,
+dl, dt, dd, ol, ul, li,
+fieldset,
+form,
+label,
+legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article,
+figure, figcaption,
+footer,
+header,
+section {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  word-break: keep-all;
+}
+
+/* list */
+ol,
+ul,
+li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* table */
+table {
+  width: 100%;
+  border: 0;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* font */
+body {
+  color: #222;
+  font-size: 16px;
+  font-weight: normal;
+}
+
+a {
+  color: #222;
+  text-decoration: none;
+}
+
+/* button */
+button {
+  background: transparent;
+  outline: 0;
+  border: 0;
+  cursor: pointer;
+}
+
+/* hidden */
+caption,
+input[type=checkbox],
+input[type=radio],
+.ally-hidden {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  color: transparent !important;
+  overflow: hidden !important;
+  clip: rect(1px, 1px, 1px, 1px);
+  -webkit-clip-path: inset(50%);
+          clip-path: inset(50%);
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/* ============================= 공통 ============================= */
+.data-state {
+  font-size: 0.9rem;
+  font-weight: 600;
+  line-height: 1.2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.4rem;
+}
+.data-state::before {
+  content: "";
+  display: block;
+  width: 0.6rem;
+  height: 0.6rem;
+  border-radius: 50%;
+}
+.data-state[data-type=true] {
+  color: #1F9D00;
+}
+.data-state[data-type=true]::before {
+  background-color: #1F9D00;
+}
+.data-state[data-type=false] {
+  color: #F10000;
+}
+.data-state[data-type=false]::before {
+  background-color: #F10000;
+}
+
+/* ============================= 개별 ============================= */
+.content {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.main-bar-wrap {
+  width: 15rem;
+  background-color: #EAF6FF;
+}
+.main-bar-wrap::before {
+  content: "";
+  display: block;
+  width: 15rem;
+  height: 26.7rem;
+  background: url(../../camelotech/resource/img/img-mainbarbg.png) 0 0 no-repeat;
+  background-size: 15rem 26.7rem;
+}
+.main-logo {
+  position: absolute;
+  top: 2rem;
+  left: 2rem;
+}
+.main-logo img {
+  width: 11rem;
+  height: 1.3rem;
+}
+
+.main-facility-wrap {
+  padding: 3.6rem 1.6rem 2rem;
+}
+.main-facility-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #00090F;
+}
+.main-setting-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+  position: absolute;
+  bottom: 2rem;
+  left: 1.6rem;
+}
+.main-setting-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+.main-setting-item {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #254667;
+  gap: 0.6rem;
+}
+.main-setting-item[data-icon=report]::before {
+  background: url(../../camelotech/resource/img/ico-report.png) 0 0 no-repeat;
+}
+.main-setting-item[data-icon=settings]::before {
+  background: url(../../camelotech/resource/img/ico-settings.png) 0 0 no-repeat;
+}
+.main-setting-item[data-icon=power]::before {
+  background: url(../../camelotech/resource/img/ico-power.png) 0 0 no-repeat;
+}
+.main-setting-item[data-icon] {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.main-setting-item[data-icon]::before {
+  content: "";
+  display: block;
+  width: 1.6rem;
+  height: 1.6rem;
+  background-size: 1.6rem;
+}
+.main-setting-ver {
+  font-size: 1.1rem;
+  font-weight: 400;
+  color: #4B5976;
+}
+
+.content-body {
+  width: 100%;
+  padding: 4rem 3rem 0;
+  background-color: #F5FBFF;
+  position: relative;
+}
+.content-body .content-body-title[data-style=img] img {
+  width: 9.5rem;
+  height: 2.5rem;
+}
+.content-body .content-body-title[data-style=text] {
+  font-size: 2rem;
+  font-weight: 600;
+  line-height: 2.8rem;
+  color: #000E16;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0.8rem;
+}
+.content-body .content-body-title[data-style=text] span {
+  font-size: 1.3rem;
+  font-weight: 300;
+  line-height: 1.82rem;
+  color: #000E16;
+}
+
+.date-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  position: absolute;
+  top: 3.5rem;
+  right: 3rem;
+  text-align: right;
+}
+.date-wrap .today {
+  font-size: 1.2rem;
+  font-weight: 300;
+  line-height: 1.4rem;
+  color: #747474;
+}
+.date-wrap .time {
+  font-size: 1.6rem;
+  font-weight: 500;
+  line-height: 2rem;
+  color: #747474;
+}
+.date-wrap .time span {
+  font-size: 1.6rem;
+  font-weight: 300;
+  line-height: 2rem;
+  color: #747474;
+}
+
+.manufacturing-wrap {
+  width: 100%;
+  margin-top: 13.7rem;
+}
+.manufacturing-list {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+.manufacturing-item {
+  height: 25rem;
+  box-sizing: border-box;
+}
+.manufacturing-item[data-style=temperature] {
+  border: 0.1rem solid #E4EDF5;
+  border-radius: 0.4rem;
+  background-color: #EDF5FC;
+}
+.manufacturing-item[data-style=temperature] .temp-wrap {
+  height: 100%;
+  box-sizing: border-box;
+  padding: 1.2rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-gap: 2rem;
+}
+.manufacturing-item[data-style=temperature] .temp-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.4rem;
+  position: relative;
+}
+.manufacturing-item[data-style=temperature] .temp-list:nth-of-type(1)::after {
+  content: "";
+  width: 0.1rem;
+  height: 100%;
+  background-color: #E4EDF5;
+  position: absolute;
+  bottom: -1rem;
+  right: -1.1rem;
+}
+.manufacturing-item[data-style=temperature] .temp-list:nth-of-type(2)::after {
+  content: "";
+  width: 100%;
+  height: 0.1rem;
+  background-color: #E4EDF5;
+  position: absolute;
+  bottom: -1.1rem;
+  left: -1rem;
+}
+.manufacturing-item[data-style=temperature] .temp-list:nth-of-type(3)::after {
+  content: "";
+  width: 100%;
+  height: 0.1rem;
+  background-color: #E4EDF5;
+  position: absolute;
+  top: -1rem;
+  right: -1rem;
+}
+.manufacturing-item[data-style=temperature] .temp-list:nth-of-type(4)::after {
+  content: "";
+  width: 0.1rem;
+  height: 100%;
+  background-color: #E4EDF5;
+  position: absolute;
+  top: -1rem;
+  left: -1rem;
+}
+.manufacturing-item[data-style=temperature] .temp-item {
+  font-size: 3rem;
+  font-weight: 300;
+  line-height: 3.6rem;
+  color: #85A0BA;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+.manufacturing-item[data-style=temperature] .temp-item::before {
+  content: "";
+  display: block;
+  width: 3rem;
+  height: 3rem;
+}
+.manufacturing-item[data-style=temperature] .temp-item[data-style=thermometer]::before {
+  background: url(../../camelotech/resource/img/ico-thermometer.png) 0 0 no-repeat;
+  background-size: 3rem;
+}
+.manufacturing-item[data-style=temperature] .temp-item[data-style=humid]::before {
+  background: url(../../camelotech/resource/img/ico-humid.png) 0 0 no-repeat;
+  background-size: 3rem;
+}
+.manufacturing-item[data-style=temperature] .temp-item[data-style=tanktemp]::before {
+  background: url(../../camelotech/resource/img/ico-tanktemp.png) 0 0 no-repeat;
+  background-size: 3rem;
+}
+.manufacturing-item[data-style=temperature] .temp-item[data-style=change]::before {
+  background: url(../../camelotech/resource/img/ico-change.png) 0 0 no-repeat;
+  background-size: 3rem;
+}
+.manufacturing-item[data-style=temperature] .temp-item-txt {
+  font-size: 1.2rem;
+  font-weight: 600;
+  line-height: 1.68rem;
+  text-align: center;
+  color: #85A0BA;
+}
+.manufacturing-item[data-style=temperature] .temp-list-btn {
+  min-height: 3.2rem;
+  padding: 0 1rem;
+  margin-top: 1.5rem;
+  font-size: 1.1rem;
+  font-weight: 500;
+  line-height: 1.32rem;
+  color: #85A0BA;
+  background-color: #fff;
+  border-radius: 0.4rem;
+}
+.manufacturing-btn {
+  width: 22rem;
+  height: 100%;
+  padding: 0 3rem;
+  background-color: #fff;
+  border: 0.1rem solid #E4EDF5;
+  border-radius: 0.4rem;
+}
+.manufacturing-btn:focus {
+  border: 0.1rem solid #008FFF;
+}
+.manufacturing-content-tit {
+  font-size: 2rem;
+  font-weight: 500;
+  line-height: 2.4rem;
+  color: #00090F;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+.manufacturing-content-tit::before {
+  content: "";
+  display: block;
+  width: 8rem;
+  height: 8rem;
+  background: url(../../camelotech/resource/img/img-processing.png) 0 0 no-repeat;
+  background-size: 8rem 8rem;
+}
+.manufacturing-content-tit::after {
+  content: "";
+  width: 100%;
+  height: 0.1rem;
+  background-color: #E4EDF5;
+}
+.manufacturing-content-txt {
+  margin-top: 1.6rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+  line-height: 1.68rem;
+  color: #747474;
+}/*# sourceMappingURL=camelotech.css.map */
