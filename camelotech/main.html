@@ -9,89 +9,110 @@
     <link rel="stylesheet" href="../resource/css/camelotech.css">
 </head>
 <body>
-    <div class="content-wrap">
-        <div class="content">
-            <!-- main left -->
-            <div class="main-bar-wrap">
-                <h1 class="main-logo"><img src="../camelotech/resource/img/img-logo.png" alt="카멜로테크 로고 이미지"></h1>
-                <div class="main-facility-wrap">
-                    <h3 class="main-facility-title">경희청담한의원</h3>
-                    <!-- <dl class="main-facility-selection">
-                        <dt>설비 선택</dt>
-                        <dd><input type="text"></dd>
-                    </dl> -->
-                </div>
-                <div class="main-setting-menu">
-                    <ul class="main-setting-list">
-                        <li class="main-setting-item" data-icon="report">알림</li>
-                        <li class="main-setting-item" data-icon="settings">환경설정</li>
-                        <li class="main-setting-item" data-icon="power">종료</li>
+    <div class="wrapper">
+        <header class="header">
+            <div>
+                <div>
+                    <div><span>정문수</span>님</div>
+                    <button type="button">제조 현황 보기</button>
+                </div>  
+                <div>
+                    <ul>
+                        <li>세척</li>
+                        <li>온수투입</li>
+                        <li>재료투입</li>
+                        <li>교반중</li>
+                        <li>포장중</li>
                     </ul>
-                    <span class="main-setting-ver">HAP Ver 1.0</span>
+                    <button type="button">정지</button>
                 </div>
             </div>
+        </header>
 
-            <!-- main right -->
-            <div class="content-body">
-                <h2 class="content-body-title" data-style="img"><img src="../camelotech/resource/img/img-logo02.png" alt="OHAP"></h2>
-                <!-- text title -->
-                <!-- <h2 class="content-body-title" data-style="text">알람 리스트<span>English</span></h2> -->
-
-                <div class="date-wrap">
-                    <div class="today">2023년 10월 11일 (수)</div>
-                    <div class="time"><span>오후</span>04:37:03</div>
+        <div class="content-wrap">
+            <div class="content">
+                <!-- main left -->
+                <div class="main-bar-wrap">
+                    <h1 class="main-logo"><img src="../camelotech/resource/img/img-logo.png" alt="카멜로테크 로고 이미지"></h1>
+                    <div class="main-facility-wrap">
+                        <h3 class="main-facility-title">경희청담한의원</h3>
+                        <!-- <dl class="main-facility-selection">
+                            <dt>설비 선택</dt>
+                            <dd><input type="text"></dd>
+                        </dl> -->
+                    </div>
+                    <div class="main-setting-menu">
+                        <ul class="main-setting-list">
+                            <li class="main-setting-item" data-icon="report">알림</li>
+                            <li class="main-setting-item" data-icon="settings">환경설정</li>
+                            <li class="main-setting-item" data-icon="power">종료</li>
+                        </ul>
+                        <span class="main-setting-ver">HAP Ver 1.0</span>
+                    </div>
                 </div>
-
-                <div class="manufacturing-wrap">
-                    <ul class="manufacturing-list">
-                        <li class="manufacturing-item">
-                            <button type="button" type="button" class="manufacturing-btn">
-                                <dl class="manufacturing-content">
-                                    <dt class="manufacturing-content-tit">제조</dt>
-                                    <dd class="manufacturing-content-txt">sub message</dd>
-                                </dl>
-                            </button>
-                        </li>
-                        <li class="manufacturing-item">
-                            <button type="button" type="button" class="manufacturing-btn">
-                                <dl class="manufacturing-content">
-                                    <dt class="manufacturing-content-tit">제조 현황</dt>
-                                    <dd class="manufacturing-content-txt">sub message</dd>
-                                </dl>
-                            </button>
-                        </li>
-                        <li class="manufacturing-item">
-                            <button type="button" type="button" class="manufacturing-btn">
-                                <dl class="manufacturing-content">
-                                    <dt class="manufacturing-content-tit">카트리지</dt>
-                                    <dd class="manufacturing-content-txt">준비 필요 약재<span>10 종</span></dd>
-                                </dl>
-                            </button>
-                        </li>
-                        <li class="manufacturing-item" data-style="temperature">
-                            <div class="temp-wrap">
-                                <div class="temp-list">
-                                    <span class="temp-item-state data-state" data-type="true">정상</span>
-                                    <span class="temp-item" data-style="thermometer">24</span>
-                                    <span class="temp-item-txt">카트리지 온도</span>
+    
+                <!-- main right -->
+                <div class="content-body">
+                    <h2 class="content-body-title" data-style="img"><img src="../camelotech/resource/img/img-logo02.png" alt="OHAP"></h2>
+                    <!-- text title -->
+                    <!-- <h2 class="content-body-title" data-style="text">알람 리스트<span>English</span></h2> -->
+    
+                    <div class="date-wrap">
+                        <div class="today">2023년 10월 11일 (수)</div>
+                        <div class="time"><span>오후</span>04:37:03</div>
+                    </div>
+    
+                    <div class="manufacturing-wrap">
+                        <ul class="manufacturing-list">
+                            <li class="manufacturing-item">
+                                <button type="button" type="button" class="manufacturing-btn">
+                                    <dl class="manufacturing-content">
+                                        <dt class="manufacturing-content-tit" data-style="processing">제조</dt>
+                                        <dd class="manufacturing-content-txt">sub message</dd>
+                                    </dl>
+                                </button>
+                            </li>
+                            <li class="manufacturing-item">
+                                <button type="button" type="button" class="manufacturing-btn">
+                                    <dl class="manufacturing-content">
+                                        <dt class="manufacturing-content-tit" data-style="flow">제조 현황</dt>
+                                        <dd class="manufacturing-content-txt">sub message</dd>
+                                    </dl>
+                                </button>
+                            </li>
+                            <li class="manufacturing-item">
+                                <button type="button" type="button" class="manufacturing-btn">
+                                    <dl class="manufacturing-content">
+                                        <dt class="manufacturing-content-tit" data-style="cartridge">카트리지</dt>
+                                        <dd class="manufacturing-content-txt">준비 필요 약재<span>10 종</span></dd>
+                                    </dl>
+                                </button>
+                            </li>
+                            <li class="manufacturing-item" data-style="temperature">
+                                <div class="temp-wrap">
+                                    <div class="temp-list">
+                                        <span class="temp-item-state data-state" data-type="true">정상</span>
+                                        <span class="temp-item" data-style="thermometer">24</span>
+                                        <span class="temp-item-txt">카트리지 온도</span>
+                                    </div>
+                                    <div class="temp-list">
+                                        <span class="temp-item-state data-state" data-type="true">정상</span>
+                                        <span class="temp-item" data-style="humid">45%</span>
+                                        <span class="temp-item-txt">카트리지 온도</span>
+                                    </div>
+                                    <div class="temp-list">
+                                        <span class="temp-item-state data-state" data-type="false">정상</span>
+                                        <span class="temp-item" data-style="tanktemp">82</span>
+                                        <span class="temp-item-txt">카트리지 온도</span>
+                                    </div>
+                                    <div class="temp-list">
+                                        <span class="temp-item" data-style="change"></span>
+                                        <button type="button" class="temp-list-btn">소모품 교체일자</button>
+                                    </div>
                                 </div>
-                                <div class="temp-list">
-                                    <span class="temp-item-state data-state" data-type="true">정상</span>
-                                    <span class="temp-item" data-style="humid">45%</span>
-                                    <span class="temp-item-txt">카트리지 온도</span>
-                                </div>
-                                <div class="temp-list">
-                                    <span class="temp-item-state data-state" data-type="false">정상</span>
-                                    <span class="temp-item" data-style="tanktemp">82</span>
-                                    <span class="temp-item-txt">카트리지 온도</span>
-                                </div>
-                                <div class="temp-list">
-                                    <span class="temp-item" data-style="change"></span>
-                                    <button type="button" class="temp-list-btn">소모품 교체일자</button>
-                                </div>
-                            </div>
-                        </li>
-                    </ul>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>

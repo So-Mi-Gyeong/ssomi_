@@ -97,13 +97,13 @@ input[type=radio],
 
 /* ============================= 공통 ============================= */
 .data-state {
-  font-size: 0.9rem;
+  font-size: 0.8vw;
   font-weight: 600;
-  line-height: 1.2rem;
+  line-height: 1.2vw;
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 0.4rem;
+  gap: 0.3vw;
 }
 .data-state::before {
   content: "";
@@ -129,47 +129,46 @@ input[type=radio],
 .content {
   width: 100%;
   height: 100vh;
-  display: flex;
-  justify-content: flex-start;
+  display: grid;
+  grid-template-columns: 1fr 4fr;
 }
 
 .main-bar-wrap {
-  width: 15rem;
   background-color: #EAF6FF;
 }
 .main-bar-wrap::before {
   content: "";
   display: block;
-  width: 15rem;
-  height: 26.7rem;
+  width: 100%;
+  height: 22vw;
   background: url(../../camelotech/resource/img/img-mainbarbg.png) 0 0 no-repeat;
-  background-size: 15rem 26.7rem;
+  background-size: 100% 22vw;
 }
 .main-logo {
   position: absolute;
-  top: 2rem;
-  left: 2rem;
+  top: 2vw;
+  left: 2vw;
 }
 .main-logo img {
-  width: 11rem;
-  height: 1.3rem;
+  width: 9vw;
+  height: 1vw;
 }
 
 .main-facility-wrap {
-  padding: 3.6rem 1.6rem 2rem;
+  padding: 3.6rem 1vw 2vw;
 }
 .main-facility-title {
-  font-size: 1.2rem;
+  font-size: 1.2vw;
   font-weight: 600;
   color: #00090F;
 }
 .main-setting-menu {
   display: flex;
   flex-direction: column;
-  gap: 2.4rem;
+  gap: 2vw;
   position: absolute;
-  bottom: 2rem;
-  left: 1.6rem;
+  bottom: 2vw;
+  left: 1vw;
 }
 .main-setting-list {
   display: flex;
@@ -177,7 +176,7 @@ input[type=radio],
   gap: 0.8rem;
 }
 .main-setting-item {
-  font-size: 0.9rem;
+  font-size: 0.8vw;
   font-weight: 600;
   color: #254667;
   gap: 0.6rem;
@@ -199,28 +198,29 @@ input[type=radio],
 .main-setting-item[data-icon]::before {
   content: "";
   display: block;
-  width: 1.6rem;
-  height: 1.6rem;
-  background-size: 1.6rem;
+  width: 1vw;
+  height: 1vw;
+  background-size: 1vw;
 }
 .main-setting-ver {
-  font-size: 1.1rem;
+  font-size: 0.9vw;
   font-weight: 400;
   color: #4B5976;
 }
 
 .content-body {
   width: 100%;
-  padding: 4rem 3rem 0;
+  padding: 3.3vw 2.5vw 0;
   background-color: #F5FBFF;
   position: relative;
+  box-sizing: border-box;
 }
 .content-body .content-body-title[data-style=img] img {
-  width: 9.5rem;
-  height: 2.5rem;
+  width: 8vw;
+  height: 2vw;
 }
 .content-body .content-body-title[data-style=text] {
-  font-size: 2rem;
+  font-size: 2vw;
   font-weight: 600;
   line-height: 2.8rem;
   color: #000E16;
@@ -230,75 +230,77 @@ input[type=radio],
   gap: 0.8rem;
 }
 .content-body .content-body-title[data-style=text] span {
-  font-size: 1.3rem;
+  font-size: 1.2 0.5vw;
   font-weight: 300;
-  line-height: 1.82rem;
+  line-height: 1.82vw;
   color: #000E16;
 }
 
 .date-wrap {
   display: flex;
   flex-direction: column;
-  gap: 0.4rem;
+  gap: 0.3vw;
   position: absolute;
   top: 3.5rem;
-  right: 3rem;
+  right: 2.5vw;
   text-align: right;
 }
 .date-wrap .today {
-  font-size: 1.2rem;
+  font-size: 1.2vw;
   font-weight: 300;
-  line-height: 1.4rem;
+  line-height: 1.2vw;
   color: #747474;
 }
 .date-wrap .time {
-  font-size: 1.6rem;
+  font-size: 1vw;
   font-weight: 500;
-  line-height: 2rem;
+  line-height: 2vw;
   color: #747474;
 }
 .date-wrap .time span {
-  font-size: 1.6rem;
+  font-size: 1vw;
   font-weight: 300;
-  line-height: 2rem;
+  line-height: 2vw;
   color: #747474;
 }
 
 .manufacturing-wrap {
   width: 100%;
-  margin-top: 13.7rem;
+  margin-top: 11vw;
 }
 .manufacturing-list {
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 2rem;
+  gap: 2vw;
+  flex-wrap: wrap;
 }
 .manufacturing-item {
-  height: 25rem;
+  height: 21vw;
   box-sizing: border-box;
 }
 .manufacturing-item[data-style=temperature] {
+  min-width: 23vw;
   border: 0.1rem solid #E4EDF5;
-  border-radius: 0.4rem;
+  border-radius: 0.3vw;
   background-color: #EDF5FC;
 }
 .manufacturing-item[data-style=temperature] .temp-wrap {
   height: 100%;
   box-sizing: border-box;
-  padding: 1.2rem;
+  padding: 1.2vw;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
-  grid-gap: 2rem;
+  grid-gap: 2vw;
 }
 .manufacturing-item[data-style=temperature] .temp-list {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 0.4rem;
+  gap: 0.3vw;
   position: relative;
 }
 .manufacturing-item[data-style=temperature] .temp-list:nth-of-type(1)::after {
@@ -308,7 +310,7 @@ input[type=radio],
   background-color: #E4EDF5;
   position: absolute;
   bottom: -1rem;
-  right: -1.1rem;
+  right: -0.9vw;
 }
 .manufacturing-item[data-style=temperature] .temp-list:nth-of-type(2)::after {
   content: "";
@@ -316,7 +318,7 @@ input[type=radio],
   height: 0.1rem;
   background-color: #E4EDF5;
   position: absolute;
-  bottom: -1.1rem;
+  bottom: -0.9vw;
   left: -1rem;
 }
 .manufacturing-item[data-style=temperature] .temp-list:nth-of-type(3)::after {
@@ -338,7 +340,7 @@ input[type=radio],
   left: -1rem;
 }
 .manufacturing-item[data-style=temperature] .temp-item {
-  font-size: 3rem;
+  font-size: 2.5vw;
   font-weight: 300;
   line-height: 3.6rem;
   color: #85A0BA;
@@ -350,71 +352,81 @@ input[type=radio],
 .manufacturing-item[data-style=temperature] .temp-item::before {
   content: "";
   display: block;
-  width: 3rem;
-  height: 3rem;
+  width: 2.5vw;
+  height: 2.5vw;
 }
 .manufacturing-item[data-style=temperature] .temp-item[data-style=thermometer]::before {
   background: url(../../camelotech/resource/img/ico-thermometer.png) 0 0 no-repeat;
-  background-size: 3rem;
+  background-size: 2.5vw;
 }
 .manufacturing-item[data-style=temperature] .temp-item[data-style=humid]::before {
   background: url(../../camelotech/resource/img/ico-humid.png) 0 0 no-repeat;
-  background-size: 3rem;
+  background-size: 2.5vw;
 }
 .manufacturing-item[data-style=temperature] .temp-item[data-style=tanktemp]::before {
   background: url(../../camelotech/resource/img/ico-tanktemp.png) 0 0 no-repeat;
-  background-size: 3rem;
+  background-size: 2.5vw;
 }
 .manufacturing-item[data-style=temperature] .temp-item[data-style=change]::before {
   background: url(../../camelotech/resource/img/ico-change.png) 0 0 no-repeat;
-  background-size: 3rem;
+  background-size: 2.5vw;
 }
 .manufacturing-item[data-style=temperature] .temp-item-txt {
-  font-size: 1.2rem;
+  font-size: 1.2vw;
   font-weight: 600;
   line-height: 1.68rem;
   text-align: center;
   color: #85A0BA;
 }
 .manufacturing-item[data-style=temperature] .temp-list-btn {
-  min-height: 3.2rem;
+  min-height: 3.2vw;
   padding: 0 1rem;
   margin-top: 1.5rem;
-  font-size: 1.1rem;
+  font-size: 0.9vw;
   font-weight: 500;
-  line-height: 1.32rem;
+  line-height: 1.32vw;
   color: #85A0BA;
   background-color: #fff;
-  border-radius: 0.4rem;
+  border-radius: 0.3vw;
 }
 .manufacturing-btn {
-  width: 22rem;
+  min-width: 15vw;
   height: 100%;
-  padding: 0 3rem;
+  padding: 3vw;
   background-color: #fff;
   border: 0.1rem solid #E4EDF5;
-  border-radius: 0.4rem;
+  border-radius: 0.3vw;
 }
 .manufacturing-btn:focus {
   border: 0.1rem solid #008FFF;
 }
 .manufacturing-content-tit {
-  font-size: 2rem;
+  font-size: 2vw;
   font-weight: 500;
-  line-height: 2.4rem;
+  line-height: 2vw;
   color: #00090F;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 2rem;
+  gap: 2vw;
+}
+.manufacturing-content-tit[data-style=processing]::before {
+  background: url(../../camelotech/resource/img/img-processing.png) 0 0 no-repeat;
+  background-size: 7vw 7vw;
+}
+.manufacturing-content-tit[data-style=flow]::before {
+  background: url(../../camelotech/resource/img/img-flow.png) 0 0 no-repeat;
+  background-size: 7vw 7vw;
+}
+.manufacturing-content-tit[data-style=cartridge]::before {
+  background: url(../../camelotech/resource/img/img-cartridge.png) 0 0 no-repeat;
+  background-size: 7vw 7vw;
 }
 .manufacturing-content-tit::before {
   content: "";
   display: block;
-  width: 8rem;
-  height: 8rem;
-  background: url(../../camelotech/resource/img/img-processing.png) 0 0 no-repeat;
-  background-size: 8rem 8rem;
+  width: 7vw;
+  height: 7vw;
 }
 .manufacturing-content-tit::after {
   content: "";
@@ -423,8 +435,8 @@ input[type=radio],
   background-color: #E4EDF5;
 }
 .manufacturing-content-txt {
-  margin-top: 1.6rem;
-  font-size: 1.2rem;
+  margin-top: 1vw;
+  font-size: 1.2vw;
   font-weight: 600;
   line-height: 1.68rem;
   color: #747474;
