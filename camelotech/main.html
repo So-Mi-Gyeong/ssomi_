@@ -11,20 +11,55 @@
 <body>
     <div class="wrapper">
         <header class="header">
-            <div>
-                <div>
-                    <div><span>정문수</span>님</div>
-                    <button type="button">제조 현황 보기</button>
+            <div class="header-wrap">
+                <div class="header-info">
+                    <div class="data-state" data-type="green">제조중</div>
+                    <div class="header-info-name"><span>정문수</span>님</div>
+                    <button type="button" class="header-info-btn">제조 현황 보기</button>
                 </div>  
-                <div>
-                    <ul>
-                        <li>세척</li>
-                        <li>온수투입</li>
-                        <li>재료투입</li>
-                        <li>교반중</li>
-                        <li>포장중</li>
+                <!-- 예열/세척 만 있는 경우 data-type="action" 추가 -->
+                <div class="header-action" data-type="action">
+                    <ul class="header-action-list">
+                        <li class="header-action-item manufacturing">
+                            <div class="header-action-wrap">
+                                <span class="header-action-name">세척</span>
+                                <div class="progress-container">
+                                    <div class="progress-bar" data-percentage="50">50%</div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="header-action-item booting">
+                            <div class="header-action-wrap">
+                                <span class="header-action-name">온수투입</span>
+                                <div class="progress-container">
+                                    <div class="progress-bar" data-percentage="30">30%</div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="header-action-item idle" data-action="true">
+                            <div class="header-action-wrap">
+                                <span class="header-action-name" data-color="green">재료투입</span>
+                                <div class="progress-container">
+                                    <div class="progress-bar" data-percentage="70">70%</div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="header-action-item error">
+                            <div class="header-action-wrap">
+                                <span class="header-action-name">교반중</span>
+                                <div class="progress-container">
+                                    <div class="progress-bar" data-percentage="10">10%</div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="header-action-item">
+                            <div class="header-action-wrap">
+                                <span class="header-action-name">포장중</span>
+                            </div>
+                        </li>
                     </ul>
-                    <button type="button">정지</button>
+                    <button type="button" class="header-action-btn">정지</button>
+                    <!-- <button type="button" class="header-action-btn" data-type="reserve">정지 예약</button> -->
                 </div>
             </div>
         </header>
@@ -91,17 +126,17 @@
                             <li class="manufacturing-item" data-style="temperature">
                                 <div class="temp-wrap">
                                     <div class="temp-list">
-                                        <span class="temp-item-state data-state" data-type="true">정상</span>
+                                        <span class="temp-item-state data-state" data-type="green">정상</span>
                                         <span class="temp-item" data-style="thermometer">24</span>
                                         <span class="temp-item-txt">카트리지 온도</span>
                                     </div>
                                     <div class="temp-list">
-                                        <span class="temp-item-state data-state" data-type="true">정상</span>
+                                        <span class="temp-item-state data-state" data-type="green">정상</span>
                                         <span class="temp-item" data-style="humid">45%</span>
                                         <span class="temp-item-txt">카트리지 온도</span>
                                     </div>
                                     <div class="temp-list">
-                                        <span class="temp-item-state data-state" data-type="false">정상</span>
+                                        <span class="temp-item-state data-state" data-type="red">정상</span>
                                         <span class="temp-item" data-style="tanktemp">82</span>
                                         <span class="temp-item-txt">카트리지 온도</span>
                                     </div>
@@ -118,4 +153,15 @@
         </div>
     </div>
 </body>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    const progressBars = document.querySelectorAll(".progress-bar");
+
+    progressBars.forEach(bar => {
+        const percentage = bar.getAttribute("data-percentage");
+        bar.style.width = `${percentage}%`;
+        bar.textContent = `${percentage}%`;
+    });
+});
+</script>
 </html>
