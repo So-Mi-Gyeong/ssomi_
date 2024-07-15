@@ -162,12 +162,35 @@
 </body>
 <script>
 document.addEventListener("DOMContentLoaded", function() {
+
+    //progress
     const progressBars = document.querySelectorAll(".progress-bar");
 
     progressBars.forEach(bar => {
         const percentage = bar.getAttribute("data-percentage");
         bar.style.width = `${percentage}%`;
         bar.textContent = `${percentage}%`;
+    });
+
+    //toggle
+    var selectBtns = document.querySelectorAll('.main-select-btn');
+
+    selectBtns.forEach(function(btn) {
+        btn.addEventListener('click', function() {
+            var parent = this.parentElement;
+            var selectVal = parent.querySelector('.main-select-val');
+
+            parent.classList.toggle('is-val');
+
+            var isVisible = selectVal.style.display === 'block' || window.getComputedStyle(selectVal).display === 'block';
+
+            var titAfter = parent.querySelector('.main-select-tit::after');
+            if (isVisible) {
+                titAfter.style.transform = 'rotate(180deg)';
+            } else {
+                titAfter.style.transform = '';
+            }
+        });
     });
 });
 </script>

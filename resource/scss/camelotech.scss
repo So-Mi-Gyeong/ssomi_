@@ -194,21 +194,22 @@ input[type=radio],
     }
 }
 
-.main-select{
-    &-wrap{
+.main-select {
+    &-wrap {
         margin-top: .3vw;
         position: relative;
-        &.is-val{
-            .main-select-tit::after{transform: rotate(180deg);}
+        &.is-val {
+            .main-select-tit::after {transform: rotate(180deg);}
+            .main-select-val {display: block;}
         }
     }
-    &-btn{
+    &-btn {
         width: 9.8vw;
         height: 1.8vw;
         background-color: #fff;
         border-radius: .3vw;
     }
-    &-tit{
+    &-tit {
         font-size: .8vw;
         font-weight: 600;
         color: #00090F;
@@ -224,7 +225,8 @@ input[type=radio],
             background-size: 1.2vw 1.2vw;
         }
     }
-    &-val{
+    &-val {
+        display: none;
         width: 9.8vw;
         padding: .2vw;
         background-color: #fff;
@@ -233,7 +235,7 @@ input[type=radio],
         top: 2vw;
         left: 0;
         box-sizing: border-box;
-        .select-val-item{
+        .select-val-item {
             width: 100%;
             min-height: 1.7vw;
             line-height: 2;
@@ -244,12 +246,10 @@ input[type=radio],
             color: #00090F;
             background-color: #fff;
             border-radius: .3vw;
-            &[data-select="true"]{background-color: #E4EDF5;}
+            &:focus{background-color: #E4EDF5;}
         }
     }
-
 }
-
 
 /* ============================= 개별 ============================= */
 .wrapper{

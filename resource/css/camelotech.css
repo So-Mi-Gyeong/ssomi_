@@ -202,6 +202,9 @@ input[type=radio],
 .main-select-wrap.is-val .main-select-tit::after {
   transform: rotate(180deg);
 }
+.main-select-wrap.is-val .main-select-val {
+  display: block;
+}
 .main-select-btn {
   width: 9.8vw;
   height: 1.8vw;
@@ -225,6 +228,7 @@ input[type=radio],
   background-size: 1.2vw 1.2vw;
 }
 .main-select-val {
+  display: none;
   width: 9.8vw;
   padding: 0.2vw;
   background-color: #fff;
@@ -246,7 +250,7 @@ input[type=radio],
   background-color: #fff;
   border-radius: 0.3vw;
 }
-.main-select-val .select-val-item[data-select=true] {
+.main-select-val .select-val-item:focus {
   background-color: #E4EDF5;
 }
 
