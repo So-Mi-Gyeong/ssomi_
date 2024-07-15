@@ -158,42 +158,40 @@ input[type=radio],
 }
 
 /* ============================= 공통 ============================= */
-//제조상태
-.data-state{
-    font-size: .8vw;
-    font-weight: 600;
-    line-height: 1.2vw;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: .3vw;
-    &::before{
-        content:'';
-        display: block;
-        width: 0.5vw;
-        height: 0.5vw;
-        border-radius: 50%;
-    }
 
-    // 각 상태별 스타일
-    &[data-type="green"]{
-        color: #1F9D00;
-        &::before{background-color: #1F9D00;}
+//현재 날짜/시간
+.date-wrap{
+    display: flex;
+    flex-direction: column;
+    gap: .3vw;
+    position: absolute;
+    top: 3.3vw;
+    right: 2.5vw;
+    text-align: right;
+    .today{
+        font-size: 1vw;
+        font-weight: 300;
+        line-height: 1.2vw;
+        color: #747474;
     }
-    &[data-type="yellow"]{
-        color: #ffc200;
-        &::before{background-color: #ffc200;}
-    }
-    &[data-type="blue"]{
-        color: #008fff;
-        &::before{background-color: #008fff;}
-    }
-    &[data-type="red"]{
-        color: #F10000;
-        &::before{background-color: #F10000;}
+    .time{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 1.3vw;
+        font-weight: 500;
+        line-height: 1.6vw;
+        color: #747474;
+        span{
+            font-size: 1.3vw;
+            font-weight: 300;
+            line-height: 1.6vw;
+            color: #747474;
+        }
     }
 }
 
+//main bar select
 .main-select {
     &-wrap {
         margin-top: .3vw;
@@ -248,6 +246,42 @@ input[type=radio],
             border-radius: .3vw;
             &:focus{background-color: #E4EDF5;}
         }
+    }
+}
+
+//상태별 style
+.data-state{
+    font-size: .8vw;
+    font-weight: 600;
+    line-height: 1.2vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: .3vw;
+    &::before{
+        content:'';
+        display: block;
+        width: 0.5vw;
+        height: 0.5vw;
+        border-radius: 50%;
+    }
+
+    // 각 상태별 스타일
+    &[data-type="green"]{
+        color: #1F9D00;
+        &::before{background-color: #1F9D00;}
+    }
+    &[data-type="yellow"]{
+        color: #ffc200;
+        &::before{background-color: #ffc200;}
+    }
+    &[data-type="blue"]{
+        color: #008fff;
+        &::before{background-color: #008fff;}
+    }
+    &[data-type="red"]{
+        color: #F10000;
+        &::before{background-color: #F10000;}
     }
 }
 
@@ -408,6 +442,7 @@ input[type=radio],
     &-facility{
         &-wrap{padding: 3vw 1vw 2vw;}
         &-title{
+            margin-bottom: 2.3vw;
             font-size: 1vw;
             font-weight: 600;
             color: #00090F;
@@ -450,6 +485,11 @@ input[type=radio],
                 }
             }
         }
+        &-btn{
+            font-size: .8vw;
+            font-weight: 600;
+            color: #254667;
+        }
         &-ver{
             font-size: .9vw;
             font-weight: 400;
@@ -457,8 +497,6 @@ input[type=radio],
         }
     }
 }
-
-
 
 // main right
 .content-body{
@@ -489,38 +527,6 @@ input[type=radio],
                 line-height: 1.82vw;
                 color: #000E16;
             }
-        }
-    }
-}
-
-//현재 날짜/시간
-.date-wrap{
-    display: flex;
-    flex-direction: column;
-    gap: .3vw;
-    position: absolute;
-    top: 3.3vw;
-    right: 2.5vw;
-    text-align: right;
-    .today{
-        font-size: 1vw;
-        font-weight: 300;
-        line-height: 1.2vw;
-        color: #747474;
-    }
-    .time{
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        font-size: 1.3vw;
-        font-weight: 500;
-        line-height: 1.6vw;
-        color: #747474;
-        span{
-            font-size: 1.3vw;
-            font-weight: 300;
-            line-height: 1.6vw;
-            color: #747474;
         }
     }
 }

@@ -154,45 +154,35 @@ input[type=radio],
   src: local("Pretendard Thin"), url(../font/pretendard/Pretendard-Thin.subset.woff2) format("woff2"), url(../font/pretendard/Pretendard-Thin.subset.woff) format("woff");
 }
 /* ============================= 공통 ============================= */
-.data-state {
-  font-size: 0.8vw;
-  font-weight: 600;
-  line-height: 1.2vw;
+.date-wrap {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  flex-direction: column;
   gap: 0.3vw;
+  position: absolute;
+  top: 3.3vw;
+  right: 2.5vw;
+  text-align: right;
 }
-.data-state::before {
-  content: "";
-  display: block;
-  width: 0.5vw;
-  height: 0.5vw;
-  border-radius: 50%;
+.date-wrap .today {
+  font-size: 1vw;
+  font-weight: 300;
+  line-height: 1.2vw;
+  color: #747474;
 }
-.data-state[data-type=green] {
-  color: #1F9D00;
+.date-wrap .time {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.3vw;
+  font-weight: 500;
+  line-height: 1.6vw;
+  color: #747474;
 }
-.data-state[data-type=green]::before {
-  background-color: #1F9D00;
-}
-.data-state[data-type=yellow] {
-  color: #ffc200;
-}
-.data-state[data-type=yellow]::before {
-  background-color: #ffc200;
-}
-.data-state[data-type=blue] {
-  color: #008fff;
-}
-.data-state[data-type=blue]::before {
-  background-color: #008fff;
-}
-.data-state[data-type=red] {
-  color: #F10000;
-}
-.data-state[data-type=red]::before {
-  background-color: #F10000;
+.date-wrap .time span {
+  font-size: 1.3vw;
+  font-weight: 300;
+  line-height: 1.6vw;
+  color: #747474;
 }
 
 .main-select-wrap {
@@ -252,6 +242,47 @@ input[type=radio],
 }
 .main-select-val .select-val-item:focus {
   background-color: #E4EDF5;
+}
+
+.data-state {
+  font-size: 0.8vw;
+  font-weight: 600;
+  line-height: 1.2vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.3vw;
+}
+.data-state::before {
+  content: "";
+  display: block;
+  width: 0.5vw;
+  height: 0.5vw;
+  border-radius: 50%;
+}
+.data-state[data-type=green] {
+  color: #1F9D00;
+}
+.data-state[data-type=green]::before {
+  background-color: #1F9D00;
+}
+.data-state[data-type=yellow] {
+  color: #ffc200;
+}
+.data-state[data-type=yellow]::before {
+  background-color: #ffc200;
+}
+.data-state[data-type=blue] {
+  color: #008fff;
+}
+.data-state[data-type=blue]::before {
+  background-color: #008fff;
+}
+.data-state[data-type=red] {
+  color: #F10000;
+}
+.data-state[data-type=red]::before {
+  background-color: #F10000;
 }
 
 /* ============================= 개별 ============================= */
@@ -414,6 +445,7 @@ input[type=radio],
   padding: 3vw 1vw 2vw;
 }
 .main-facility-title {
+  margin-bottom: 2.3vw;
   font-size: 1vw;
   font-weight: 600;
   color: #00090F;
@@ -458,6 +490,11 @@ input[type=radio],
   height: 1vw;
   background-size: 1vw;
 }
+.main-setting-btn {
+  font-size: 0.8vw;
+  font-weight: 600;
+  color: #254667;
+}
 .main-setting-ver {
   font-size: 0.9vw;
   font-weight: 400;
@@ -490,37 +527,6 @@ input[type=radio],
   font-weight: 300;
   line-height: 1.82vw;
   color: #000E16;
-}
-
-.date-wrap {
-  display: flex;
-  flex-direction: column;
-  gap: 0.3vw;
-  position: absolute;
-  top: 3.3vw;
-  right: 2.5vw;
-  text-align: right;
-}
-.date-wrap .today {
-  font-size: 1vw;
-  font-weight: 300;
-  line-height: 1.2vw;
-  color: #747474;
-}
-.date-wrap .time {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  font-size: 1.3vw;
-  font-weight: 500;
-  line-height: 1.6vw;
-  color: #747474;
-}
-.date-wrap .time span {
-  font-size: 1.3vw;
-  font-weight: 300;
-  line-height: 1.6vw;
-  color: #747474;
 }
 
 .manufacturing-wrap {
