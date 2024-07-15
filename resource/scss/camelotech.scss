@@ -201,13 +201,15 @@ input[type=radio],
     box-sizing: border-box;
 }
 .header{
-    width: calc(100% - 12.5vw);
+    max-width: 87.5vw;
+    height: 5rem;
+    // width: calc(100% - 12.5vw);
     position: fixed;
     bottom: 0;
     right: 0;
     z-index: 9;
     &-wrap{
-        height: 5rem;
+        height: 100%;
         display: flex;
         justify-content: flex-start;
         align-items: center;
@@ -215,7 +217,8 @@ input[type=radio],
     &-info{
         min-width: 26.5vw;
         height: 100%;
-        padding: 1rem 2rem;
+        min-height: 3vw;
+        padding: 0 2rem;
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -242,13 +245,12 @@ input[type=radio],
         }
     }
     &-action{
-        width: 100%;
         height: 100%;
-        padding: 1rem 2rem;
+        padding: 0 2vw;
         display: flex;
         justify-content: flex-start;
         align-items: center;
-        gap: 1.6rem;
+        gap: .8vw;
         background-color: #002943;
         &[data-type="action02"]{
             .header-action-item:last-child{width: fit-content;}
@@ -259,7 +261,7 @@ input[type=radio],
             justify-content: space-between;
             align-items: center;
             color: #fff;
-            gap: 1.6rem;
+            gap: .8vw;
         }
         &-item{
             width: 100%;
@@ -267,10 +269,11 @@ input[type=radio],
                 .header-action-name{
                     color: #85A0BA;
                     &[data-color="green"]{
-                        padding: .5rem;
-                        border: .1rem solid #1F9D00;
-                        border-radius: .5rem;
-                        & + .progress-container{background-color: #254667;   }
+                        padding: .2vw .5vw;
+                        color: #32FF00;
+                        border: .1rem solid #32FF00;
+                        border-radius: .3vw;
+                        & + .progress-container{background-color: #254667;}
                     }
                 }
                 .progress-container{background-color: #85A0BA;}
@@ -288,19 +291,19 @@ input[type=radio],
             color: #254667;
         }
         &-btn{
-            min-height: 4rem;
-            padding: 0 2rem;
-            font-size: 2rem;
-            font-weight: 500;
+            width: 5.8vw;
+            height: 1.7vw;
+            font-size: .8vw;
+            font-weight: 600;
             color: #fff;
-            border-radius: .8rem;
+            border-radius: .3vw;
             background-color: #008fff;
             &[data-type="reserve"]{background-color: #ffc200;}
         }
     }
     .progress-container {
         width: 100%;
-        min-width: 120px;
+        min-width: 6.9vw;
         background-color: #254667;
         border-radius: 25px;
         overflow: hidden;
