@@ -13,30 +13,32 @@
         <header class="header">
             <div class="header-wrap">
                 <div class="header-info">
-                    <div class="data-state" data-type="green">제조중</div>
-                    <div class="header-info-name"><span>정문수</span>님</div>
+                    <div class="header-info-wrap">
+                        <div class="data-state" data-type="green">제조중</div>
+                        <div class="header-info-name"><span>정문수</span> 님</div>
+                    </div>
                     <button type="button" class="header-info-btn">제조 현황 보기</button>
                 </div>  
                 <!-- 예열/세척 만 있는 경우 data-type="action" 추가 -->
                 <div class="header-action" data-type="action">
                     <ul class="header-action-list">
-                        <li class="header-action-item manufacturing">
+                        <li class="header-action-item" data-action="true">
                             <div class="header-action-wrap">
                                 <span class="header-action-name">세척</span>
                                 <div class="progress-container">
-                                    <div class="progress-bar" data-percentage="50">50%</div>
+                                    <div class="progress-bar">50%</div>
                                 </div>
                             </div>
                         </li>
-                        <li class="header-action-item booting">
+                        <li class="header-action-item" data-action="true">
                             <div class="header-action-wrap">
                                 <span class="header-action-name">온수투입</span>
                                 <div class="progress-container">
-                                    <div class="progress-bar" data-percentage="30">30%</div>
+                                    <div class="progress-bar">30%</div>
                                 </div>
                             </div>
                         </li>
-                        <li class="header-action-item idle" data-action="true">
+                        <li class="header-action-item" data-action="true">
                             <div class="header-action-wrap">
                                 <span class="header-action-name" data-color="green">재료투입</span>
                                 <div class="progress-container">
@@ -44,7 +46,7 @@
                                 </div>
                             </div>
                         </li>
-                        <li class="header-action-item error">
+                        <li class="header-action-item">
                             <div class="header-action-wrap">
                                 <span class="header-action-name">교반중</span>
                                 <div class="progress-container">

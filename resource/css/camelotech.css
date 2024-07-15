@@ -2,6 +2,9 @@
 html {
   font-size: 62.5%;
 }
+html * {
+  font-family: "base";
+}
 
 @media screen and (max-width: 320px) {
   html {
@@ -95,20 +98,69 @@ input[type=radio],
   padding: 0 !important;
 }
 
+/* ============================= font ============================= */
+@font-face {
+  font-family: "Base";
+  font-weight: 900;
+  font-display: swap;
+  src: local("Pretendard Black"), url(../fonts/pretendard/Pretendard-Black.subset.woff2) format("woff2"), url(../fonts/pretendard/Pretendard-Black.subset.woff) format("woff");
+}
+@font-face {
+  font-family: "Base";
+  font-weight: 800;
+  font-display: swap;
+  src: local("Pretendard ExtraBold"), url(../fonts/pretendard/Pretendard-ExtraBold.subset.woff2) format("woff2"), url(../fonts/pretendard/Pretendard-ExtraBold.subset.woff) format("woff");
+}
+@font-face {
+  font-family: "Base";
+  font-weight: 700;
+  font-display: swap;
+  src: local("Pretendard Bold"), url(../fonts/pretendard/Pretendard-Bold.subset.woff2) format("woff2"), url(../fonts/pretendard/Pretendard-Bold.subset.woff) format("woff");
+}
+@font-face {
+  font-family: "Base";
+  font-weight: 600;
+  font-display: swap;
+  src: local("Pretendard SemiBold"), url(../fonts/pretendard/Pretendard-SemiBold.subset.woff2) format("woff2"), url(../fonts/pretendard/Pretendard-SemiBold.subset.woff) format("woff");
+}
+@font-face {
+  font-family: "Base";
+  font-weight: 500;
+  font-display: swap;
+  src: local("Pretendard Medium"), url(../fonts/pretendard/Pretendard-Medium.subset.woff2) format("woff2"), url(../fonts/pretendard/Pretendard-Medium.subset.woff) format("woff");
+}
+@font-face {
+  font-family: "Base";
+  font-weight: 400;
+  font-display: swap;
+  src: local("Pretendard Regular"), url(../fonts/pretendard/Pretendard-Regular.subset.woff2) format("woff2"), url(../fonts/pretendard/Pretendard-Regular.subset.woff) format("woff");
+}
+@font-face {
+  font-family: "Base";
+  font-weight: 300;
+  font-display: swap;
+  src: local("Pretendard Light"), url(../fonts/pretendard/Pretendard-Light.subset.woff2) format("woff2"), url(../fonts/pretendard/Pretendard-Light.subset.woff) format("woff");
+}
+@font-face {
+  font-family: "Base";
+  font-weight: 200;
+  font-display: swap;
+  src: local("Pretendard ExtraLight"), url(../fonts/pretendard/Pretendard-ExtraLight.subset.woff2) format("woff2"), url(../fonts/pretendard/Pretendard-ExtraLight.subset.woff) format("woff");
+}
+@font-face {
+  font-family: "Base";
+  font-weight: 100;
+  font-display: swap;
+  src: local("Pretendard Thin"), url(../fonts/pretendard/Pretendard-Thin.subset.woff2) format("woff2"), url(../fonts/pretendard/Pretendard-Thin.subset.woff) format("woff");
+}
 /* ============================= 공통 ============================= */
 .data-state {
   font-size: 0.8vw;
   font-weight: 600;
   line-height: 1.2vw;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
   gap: 0.3vw;
 }
 .data-state::before {
@@ -147,12 +199,11 @@ input[type=radio],
 .wrapper {
   width: 100%;
   position: relative;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 .header {
-  width: calc(100% - 20vw);
+  width: calc(100% - 12.5vw);
   position: fixed;
   bottom: 0;
   right: 0;
@@ -160,62 +211,58 @@ input[type=radio],
 }
 .header-wrap {
   height: 5rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: flex-start;
+  align-items: center;
 }
 .header-info {
+  min-width: 26.5vw;
   height: 100%;
   padding: 1rem 2rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: space-between;
+  align-items: center;
   background-color: #fff;
+}
+.header-info-wrap {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1.3vw;
+}
+.header-info-name {
+  font-size: 1vw;
+  font-weight: 600;
+  color: #254667;
+}
+.header-info-btn {
+  min-height: 1.7vw;
+  padding: 0 0.8vw;
+  font-size: 0.8vw;
+  font-weight: 600;
+  color: #254667;
+  background-color: #E4EDF5;
+  border-radius: 0.3vw;
 }
 .header-action {
   width: 100%;
   height: 100%;
   padding: 1rem 2rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: flex-start;
+  align-items: center;
   gap: 1.6rem;
   background-color: #002943;
 }
 .header-action[data-type=action02] .header-action-item:last-child {
-  width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
 }
 .header-action-list {
   width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: space-between;
+  align-items: center;
   color: #fff;
   gap: 1.6rem;
 }
@@ -223,21 +270,29 @@ input[type=radio],
   width: 100%;
 }
 .header-action-item[data-action=true] .header-action-name {
+  color: #85A0BA;
+}
+.header-action-item[data-action=true] .header-action-name[data-color=green] {
   padding: 0.5rem;
   border: 0.1rem solid #1F9D00;
   border-radius: 0.5rem;
 }
+.header-action-item[data-action=true] .header-action-name[data-color=green] + .progress-container {
+  background-color: #254667;
+}
+.header-action-item[data-action=true] .progress-container {
+  background-color: #85A0BA;
+}
 .header-action-wrap {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: flex-start;
+  align-items: center;
   gap: 0.8rem;
+}
+.header-action-name {
+  font-size: 0.8vw;
+  font-weight: 600;
+  color: #254667;
 }
 .header-action-btn {
   min-height: 4rem;
@@ -254,7 +309,7 @@ input[type=radio],
 .header .progress-container {
   width: 100%;
   min-width: 120px;
-  background-color: #85a0ba;
+  background-color: #254667;
   border-radius: 25px;
   overflow: hidden;
 }
@@ -263,18 +318,18 @@ input[type=radio],
   width: 0;
   background-color: #32ff00;
   border-radius: 25px 0 0 25px;
-  -webkit-transition: width 0.5s ease-in-out;
   transition: width 0.5s ease-in-out;
 }
 
 .content {
   width: 100%;
   height: 100vh;
-  display: grid;
-  grid-template-columns: 1fr 4fr;
+  display: flex;
+  justify-content: flex-start;
 }
 
 .main-bar-wrap {
+  width: 12.5vw;
   background-color: #EAF6FF;
 }
 .main-bar-wrap::before {
@@ -287,43 +342,33 @@ input[type=radio],
 }
 .main-logo {
   position: absolute;
-  top: 2vw;
-  left: 2vw;
+  top: 3.6vw;
+  left: 1.7vw;
 }
 .main-logo img {
-  width: 9vw;
-  height: 1vw;
+  width: 9.2vw;
+  height: 1.1vw;
 }
 
 .main-facility-wrap {
   padding: 3vw 1vw 2vw;
 }
 .main-facility-title {
-  font-size: 1.2vw;
+  font-size: 1vw;
   font-weight: 600;
   color: #00090F;
 }
 .main-setting-menu {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   gap: 2vw;
   position: absolute;
   bottom: 2vw;
   left: 1vw;
 }
 .main-setting-list {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   gap: 0.7vw;
 }
 .main-setting-item {
@@ -342,15 +387,9 @@ input[type=radio],
   background: url(../../camelotech/resource/img/ico-power.png) 0 0 no-repeat;
 }
 .main-setting-item[data-icon] {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: flex-start;
+  align-items: center;
 }
 .main-setting-item[data-icon]::before {
   content: "";
@@ -366,31 +405,24 @@ input[type=radio],
 }
 
 .content-body {
-  width: 100%;
+  width: calc(100% - 12.5vw);
   padding: 3.3vw 2.5vw 0;
   background-color: #F5FBFF;
   position: relative;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 .content-body .content-body-title[data-style=img] img {
-  width: 8vw;
-  height: 2vw;
+  width: 7.9vw;
+  height: 2.1vw;
 }
 .content-body .content-body-title[data-style=text] {
   font-size: 2vw;
   font-weight: 600;
   line-height: 2.3vw;
   color: #000E16;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: flex-start;
+  align-items: center;
   gap: 0.7vw;
 }
 .content-body .content-body-title[data-style=text] span {
@@ -401,35 +433,33 @@ input[type=radio],
 }
 
 .date-wrap {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   gap: 0.3vw;
   position: absolute;
-  top: 2.9vw;
+  top: 3.3vw;
   right: 2.5vw;
   text-align: right;
 }
 .date-wrap .today {
-  font-size: 1.2vw;
+  font-size: 1vw;
   font-weight: 300;
   line-height: 1.2vw;
   color: #747474;
 }
 .date-wrap .time {
-  font-size: 1vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.3vw;
   font-weight: 500;
-  line-height: 2vw;
+  line-height: 1.6vw;
   color: #747474;
 }
 .date-wrap .time span {
-  font-size: 1vw;
+  font-size: 1.3vw;
   font-weight: 300;
-  line-height: 2vw;
+  line-height: 1.6vw;
   color: #747474;
 }
 
@@ -439,34 +469,25 @@ input[type=radio],
 }
 .manufacturing-list {
   width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: flex-start;
+  align-items: center;
   gap: 2vw;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-wrap: wrap;
 }
 .manufacturing-item {
   height: 21vw;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 .manufacturing-item[data-style=temperature] {
-  min-width: 22vw;
+  min-width: 21vw;
   border: 0.1rem solid #E4EDF5;
   border-radius: 0.3vw;
   background-color: #EDF5FC;
 }
 .manufacturing-item[data-style=temperature] .temp-wrap {
   height: 100%;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   padding: 1.2vw;
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -474,19 +495,10 @@ input[type=radio],
   grid-gap: 2vw;
 }
 .manufacturing-item[data-style=temperature] .temp-list {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   gap: 0.3vw;
   position: relative;
 }
@@ -531,15 +543,9 @@ input[type=radio],
   font-weight: 300;
   line-height: 3vw;
   color: #85A0BA;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
   gap: 0.1vw;
 }
 .manufacturing-item[data-style=temperature] .temp-item::before {
@@ -583,6 +589,7 @@ input[type=radio],
   border-radius: 0.3vw;
 }
 .manufacturing-btn {
+  width: 18.3vw;
   min-width: 15vw;
   height: 100%;
   padding: 3vw;
@@ -598,16 +605,9 @@ input[type=radio],
   font-weight: 500;
   line-height: 2vw;
   color: #00090F;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: column;
+  align-items: center;
   gap: 2vw;
 }
 .manufacturing-content-tit[data-style=processing]::before {
@@ -640,4 +640,4 @@ input[type=radio],
   font-weight: 600;
   line-height: 1.4vw;
   color: #747474;
-}
+}/*# sourceMappingURL=camelotech.css.map */

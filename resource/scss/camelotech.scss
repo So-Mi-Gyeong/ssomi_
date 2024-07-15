@@ -1,4 +1,8 @@
-html {font-size: 62.5%;}
+html {
+    font-size: 62.5%;
+    *{font-family: 'base';}
+
+}
 
 @media screen and (max-width: 320px) {
     html {font-size: 50%;}
@@ -88,6 +92,71 @@ input[type=radio],
     padding: 0 !important;
 }
 
+/* ============================= font ============================= */
+
+@font-face {
+	font-family: 'Base';
+	font-weight: 900;
+	font-display: swap;
+	src: local('Pretendard Black'), url(../fonts/pretendard/Pretendard-Black.subset.woff2) format('woff2'), url(../fonts/pretendard/Pretendard-Black.subset.woff) format('woff');
+}
+
+@font-face {
+	font-family: 'Base';
+	font-weight: 800;
+	font-display: swap;
+	src: local('Pretendard ExtraBold'), url(../fonts/pretendard/Pretendard-ExtraBold.subset.woff2) format('woff2'), url(../fonts/pretendard/Pretendard-ExtraBold.subset.woff) format('woff');
+}
+
+@font-face {
+	font-family: 'Base';
+	font-weight: 700;
+	font-display: swap;
+	src: local('Pretendard Bold'), url(../fonts/pretendard/Pretendard-Bold.subset.woff2) format('woff2'), url(../fonts/pretendard/Pretendard-Bold.subset.woff) format('woff');
+}
+
+@font-face {
+	font-family: 'Base';
+	font-weight: 600;
+	font-display: swap;
+	src: local('Pretendard SemiBold'), url(../fonts/pretendard/Pretendard-SemiBold.subset.woff2) format('woff2'), url(../fonts/pretendard/Pretendard-SemiBold.subset.woff) format('woff');
+}
+
+@font-face {
+	font-family: 'Base';
+	font-weight: 500;
+	font-display: swap;
+	src: local('Pretendard Medium'), url(../fonts/pretendard/Pretendard-Medium.subset.woff2) format('woff2'), url(../fonts/pretendard/Pretendard-Medium.subset.woff) format('woff');
+}
+
+@font-face {
+	font-family: 'Base';
+	font-weight: 400;
+	font-display: swap;
+	src: local('Pretendard Regular'), url(../fonts/pretendard/Pretendard-Regular.subset.woff2) format('woff2'), url(../fonts/pretendard/Pretendard-Regular.subset.woff) format('woff');
+}
+
+@font-face {
+	font-family: 'Base';
+	font-weight: 300;
+	font-display: swap;
+	src: local('Pretendard Light'), url(../fonts/pretendard/Pretendard-Light.subset.woff2) format('woff2'), url(../fonts/pretendard/Pretendard-Light.subset.woff) format('woff');
+}
+
+@font-face {
+	font-family: 'Base';
+	font-weight: 200;
+	font-display: swap;
+	src: local('Pretendard ExtraLight'), url(../fonts/pretendard/Pretendard-ExtraLight.subset.woff2) format('woff2'), url(../fonts/pretendard/Pretendard-ExtraLight.subset.woff) format('woff');
+}
+
+@font-face {
+	font-family: 'Base';
+	font-weight: 100;
+	font-display: swap;
+	src: local('Pretendard Thin'), url(../fonts/pretendard/Pretendard-Thin.subset.woff2) format('woff2'), url(../fonts/pretendard/Pretendard-Thin.subset.woff) format('woff');
+}
+
 /* ============================= 공통 ============================= */
 //제조상태
 .data-state{
@@ -132,7 +201,7 @@ input[type=radio],
     box-sizing: border-box;
 }
 .header{
-    width: calc(100% - 20vw);
+    width: calc(100% - 12.5vw);
     position: fixed;
     bottom: 0;
     right: 0;
@@ -144,12 +213,33 @@ input[type=radio],
         align-items: center;
     }
     &-info{
+        min-width: 26.5vw;
         height: 100%;
         padding: 1rem 2rem;
         display: flex;
-        justify-content: flex-start;
+        justify-content: space-between;
         align-items: center;
         background-color: #fff;
+        &-wrap{
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            gap: 1.3vw;
+        }
+        &-name{
+            font-size: 1vw;
+            font-weight: 600;
+            color: #254667;
+        }
+        &-btn{
+            min-height: 1.7vw;
+            padding: 0 .8vw;
+            font-size: .8vw;
+            font-weight: 600;
+            color: #254667;
+            background-color: #E4EDF5;
+            border-radius: .3vw;
+        }
     }
     &-action{
         width: 100%;
@@ -175,10 +265,15 @@ input[type=radio],
             width: 100%;
             &[data-action="true"]{
                 .header-action-name{
-                    padding: .5rem;
-                    border: .1rem solid #1F9D00;
-                    border-radius: .5rem;
+                    color: #85A0BA;
+                    &[data-color="green"]{
+                        padding: .5rem;
+                        border: .1rem solid #1F9D00;
+                        border-radius: .5rem;
+                        & + .progress-container{background-color: #254667;   }
+                    }
                 }
+                .progress-container{background-color: #85A0BA;}
             }
         }
         &-wrap{
@@ -188,7 +283,9 @@ input[type=radio],
             gap: .8rem;
         }
         &-name{
-            
+            font-size: .8vw;
+            font-weight: 600;
+            color: #254667;
         }
         &-btn{
             min-height: 4rem;
@@ -204,7 +301,7 @@ input[type=radio],
     .progress-container {
         width: 100%;
         min-width: 120px;
-        background-color: #85a0ba;
+        background-color: #254667;
         border-radius: 25px;
         overflow: hidden;
     }
@@ -221,13 +318,16 @@ input[type=radio],
 .content{
     width: 100%;
     height: 100vh;
-    display: grid;
-    grid-template-columns: 1fr 4fr;
+    display: flex;
+    justify-content: flex-start;
+    // display: grid;
+    // grid-template-columns: 1fr 4fr;
 }
 
 // main left
 .main{
     &-bar-wrap{
+        width: 12.5vw;
         background-color: #EAF6FF;
         &::before{
             content: '';
@@ -240,11 +340,11 @@ input[type=radio],
     }
     &-logo{
         position: absolute;
-        top: 2vw;
-        left: 2vw;
+        top: 3.6vw;
+        left: 1.7vw;
         img{       
-            width: 9vw;
-            height: 1vw;
+            width: 9.2vw;
+            height: 1.1vw;
         }
     }
 }
@@ -252,7 +352,7 @@ input[type=radio],
 .main-facility{
     &-wrap{padding: 3vw 1vw 2vw;}
     &-title{
-        font-size: 1.2vw;
+        font-size: 1vw;
         font-weight: 600;
         color: #00090F;
     }
@@ -305,7 +405,7 @@ input[type=radio],
 
 // main right
 .content-body{
-    width: 100%;
+    width: calc(100% - 12.5vw);
     padding: 3.3vw 2.5vw 0;
     background-color: #F5FBFF;
     position: relative;
@@ -313,8 +413,8 @@ input[type=radio],
     .content-body-title{
         &[data-style="img"]{
             img{
-                width: 8vw;
-                height: 2vw;
+                width: 7.9vw;
+                height: 2.1vw;
             }
         }
         &[data-style="text"]{
@@ -342,24 +442,27 @@ input[type=radio],
     flex-direction: column;
     gap: .3vw;
     position: absolute;
-    top: 2.9vw;
+    top: 3.3vw;
     right: 2.5vw;
     text-align: right;
     .today{
-        font-size: 1.2vw;
+        font-size: 1vw;
         font-weight: 300;
         line-height: 1.2vw;
         color: #747474;
     }
     .time{
-        font-size: 1vw;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 1.3vw;
         font-weight: 500;
-        line-height: 2vw;
+        line-height: 1.6vw;
         color: #747474;
         span{
-            font-size: 1vw;
+            font-size: 1.3vw;
             font-weight: 300;
-            line-height: 2vw;
+            line-height: 1.6vw;
             color: #747474;
         }
     }
@@ -374,7 +477,7 @@ input[type=radio],
     &-list{
         width: 100%;
         display: flex;
-        justify-content: center;
+        justify-content: flex-start;
         align-items: center;
         gap: 2vw;
         flex-wrap: wrap;
@@ -383,7 +486,7 @@ input[type=radio],
         height: 21vw;
         box-sizing: border-box;
         &[data-style="temperature"]{
-            min-width: 22vw;
+            min-width: 21vw;
             border: .1rem solid #E4EDF5;
             border-radius: .3vw;
             background-color: #EDF5FC;
@@ -502,6 +605,7 @@ input[type=radio],
         }
     }
     &-btn{
+        width: 18.3vw;
         min-width: 15vw;
         height: 100%;
         padding: 3vw;
