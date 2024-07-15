@@ -3,9 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>카멜로테크</title>
-
     <link rel="stylesheet" href="../resource/css/camelotech.css">
 </head>
 <body>
@@ -78,7 +76,8 @@
                                 <span class="main-select-tit">설비 No. 1</span>
                             </button>
                             <span class="main-select-val">
-                                <button type="button" class="select-val-item" data-select="true">설비 No. 1</button>
+                                <button type="button" class="select-val-item" data-select="true" onclick="showModal()">설비 No. 1</button>
+                                <!-- <button type="button" class="select-val-item" data-select="true" onclick="showModal()">설비 No. 1</button> -->
                                 <button type="button" class="select-val-item">김원장님 전용 설비</button>
                             </span>
                         </div>
@@ -159,39 +158,55 @@
             </div>
         </div>
     </div>
+    <!-- modal -->
+    <div class="camel-modal" id="myModal">
+        <div class="camel-modal-wrap">
+            <div class="camel-modal-head">
+                <button type="button" class="camel-modal-close" data-icon="pop-close" aria-label="창닫기" onclick="hideModal()"></button>
+            </div>
+            <div class="camel-modal-body">
+                <p class="camel-modal-tit">설비 선택</p>
+                <p class="camel-modal-txt">설비 No. 1으로 변경하시겠습니까?</p>
+            </div>
+            <div class="camel-modal-foot">
+                <div class="camel-btn-wrap">
+                    <button type="button" class="camel-btn" data-style="primary-skyblue" onclick="hideModal()">예</button>
+                    <button type="button" class="camel-btn" data-style="primary" onclick="hideModal()">아니오</button>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 <script>
-document.addEventListener("DOMContentLoaded", function() {
+    function showModal() {
+        const modal = document.getElementById('myModal');
+        modal.style.display = 'flex'; // 모달을 보이도록 설정
+    }
 
-    //progress
-    const progressBars = document.querySelectorAll(".progress-bar");
+    function hideModal() {
+        const modal = document.getElementById('myModal');
+        modal.style.display = 'none'; // 모달을 숨김
+    }
 
-    progressBars.forEach(bar => {
-        const percentage = bar.getAttribute("data-percentage");
-        bar.style.width = `${percentage}%`;
-        bar.textContent = `${percentage}%`;
-    });
+    // 페이지 로딩 후 실행될 초기화 함수
+    document.addEventListener("DOMContentLoaded", function() {
+        // progress bar 초기화
+        const progressBars = document.querySelectorAll(".progress-bar");
+        progressBars.forEach(bar => {
+            const percentage = bar.getAttribute("data-percentage");
+            bar.style.width = `${percentage}%`;
+            bar.textContent = `${percentage}%`;
+        });
 
-    //toggle
-    var selectBtns = document.querySelectorAll('.main-select-btn');
-
-    selectBtns.forEach(function(btn) {
-        btn.addEventListener('click', function() {
-            var parent = this.parentElement;
-            var selectVal = parent.querySelector('.main-select-val');
-
-            parent.classList.toggle('is-val');
-
-            var isVisible = selectVal.style.display === 'block' || window.getComputedStyle(selectVal).display === 'block';
-
-            var titAfter = parent.querySelector('.main-select-tit::after');
-            if (isVisible) {
-                titAfter.style.transform = 'rotate(180deg)';
-            } else {
-                titAfter.style.transform = '';
-            }
+        // 설비 선택 버튼 토글
+        const selectBtns = document.querySelectorAll('.main-select-btn');
+        selectBtns.forEach(btn => {
+            btn.addEventListener('click', function() {
+                const parent = this.parentElement;
+                const selectVal = parent.querySelector('.main-select-val');
+                parent.classList.toggle('is-val');
+            });
         });
     });
-});
 </script>
 </html>

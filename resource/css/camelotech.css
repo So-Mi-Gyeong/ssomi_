@@ -285,6 +285,109 @@ input[type=radio],
   background-color: #F10000;
 }
 
+/* ============================= 버튼 ============================= */
+.camel-btn {
+  width: 100%;
+  min-height: 2.7vw;
+  font-size: 1vw;
+  font-weight: 500;
+  line-height: 1.2vw;
+  text-align: center;
+  border-radius: 0.3vw;
+}
+.camel-btn-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.8vw;
+}
+.camel-btn[data-style=primary] {
+  color: #85A0BA;
+  background-color: #E4EDF5;
+}
+.camel-btn[data-style=primary-skyblue] {
+  color: #fff;
+  background-color: #002943;
+}
+
+/* ============================= 팝업 ============================= */
+.camel-modal {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  justify-content: center;
+  align-items: center;
+}
+.camel-modal[aria-hidden=false] {
+  display: flex;
+}
+.camel-modal::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 0;
+  opacity: 1;
+}
+.camel-modal-wrap {
+  position: relative;
+  display: block;
+  width: 100%;
+  max-width: 33.3vw;
+  padding: 2.5vw 2.9vw;
+  border: 0.1rem solid #E4EDF5;
+  border-radius: 0.3vw;
+  background-color: #fff;
+}
+.camel-modal-head {
+  min-height: 2vw;
+  position: relative;
+}
+.camel-modal-body {
+  margin-top: 1.3vw;
+  text-align: center;
+}
+.camel-modal-foot {
+  margin-top: 3.7vw;
+}
+.camel-modal-close {
+  width: 2vw;
+  height: 2vw;
+  padding: 0;
+  position: absolute;
+  right: 0;
+}
+.camel-modal-close::before {
+  content: "";
+  display: block;
+  width: 2vw;
+  height: 2vw;
+  background: url(../../camelotech/resource/img/ico-close.png);
+  background-size: 2vw;
+}
+.camel-modal-tit {
+  font-size: 1.7vw;
+  font-weight: 500;
+  color: #00090F;
+}
+.camel-modal-tit + .camel-modal-txt {
+  margin-top: 1.7vw;
+}
+.camel-modal-txt {
+  font-size: 1.2vw;
+  font-weight: 300;
+  color: #747474;
+}
+
 /* ============================= 개별 ============================= */
 .wrapper {
   width: 100%;
@@ -538,12 +641,16 @@ input[type=radio],
   display: flex;
   justify-content: flex-start;
   align-items: center;
+  flex-wrap: wrap;
   gap: 1.7vw;
   flex-wrap: wrap;
 }
 .manufacturing-item {
   height: 21vw;
   box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 .manufacturing-item[data-style=temperature] {
   min-width: 21vw;
@@ -654,6 +761,9 @@ input[type=radio],
   line-height: 1.4vw;
   text-align: center;
   color: #85A0BA;
+}
+.manufacturing-item:nth-last-child(1) {
+  align-self: flex-start;
 }
 .manufacturing-btn {
   width: 18vw;
