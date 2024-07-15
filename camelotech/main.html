@@ -73,10 +73,15 @@
                     <h1 class="main-logo"><img src="../camelotech/resource/img/img-logo.png" alt="카멜로테크 로고 이미지"></h1>
                     <div class="main-facility-wrap">
                         <h3 class="main-facility-title">경희청담한의원</h3>
-                        <!-- <dl class="main-facility-selection">
-                            <dt>설비 선택</dt>
-                            <dd><input type="text"></dd>
-                        </dl> -->
+                        <div class="main-select-wrap is-val"><!-- 선택값이 있는 경우 class="is-val"추가 -->
+                            <button type="button" class="main-select-btn">
+                                <span class="main-select-tit">설비 No. 1</span>
+                            </button>
+                            <span class="main-select-val">
+                                <button type="button" class="select-val-item" data-select="true">설비 No. 1</button>
+                                <button type="button" class="select-val-item">김원장님 전용 설비</button>
+                            </span>
+                        </div>
                     </div>
                     <div class="main-setting-menu">
                         <ul class="main-setting-list">
@@ -121,7 +126,7 @@
                                 <button type="button" type="button" class="manufacturing-btn">
                                     <dl class="manufacturing-content">
                                         <dt class="manufacturing-content-tit" data-style="cartridge">카트리지</dt>
-                                        <dd class="manufacturing-content-txt">준비 필요 약재<span>10 종</span></dd>
+                                        <dd class="manufacturing-content-txt">준비 필요 약재<span class="on">10 종</span></dd>
                                     </dl>
                                 </button>
                             </li>
@@ -130,7 +135,7 @@
                                     <div class="temp-list">
                                         <span class="temp-item-state data-state" data-type="green">정상</span>
                                         <span class="temp-item" data-style="thermometer">24</span>
-                                        <span class="temp-item-txt">카트리지 온도</span>
+                                        <span class="temp-item-txt">카트리 지 온도</span>
                                     </div>
                                     <div class="temp-list">
                                         <span class="temp-item-state data-state" data-type="green">정상</span>

@@ -98,63 +98,63 @@ input[type=radio],
 	font-family: 'Base';
 	font-weight: 900;
 	font-display: swap;
-	src: local('Pretendard Black'), url(../fonts/pretendard/Pretendard-Black.subset.woff2) format('woff2'), url(../fonts/pretendard/Pretendard-Black.subset.woff) format('woff');
+	src: local('Pretendard Black'), url(../font/pretendard/Pretendard-Black.subset.woff2) format('woff2'), url(../font/pretendard/Pretendard-Black.subset.woff) format('woff');
 }
 
 @font-face {
 	font-family: 'Base';
 	font-weight: 800;
 	font-display: swap;
-	src: local('Pretendard ExtraBold'), url(../fonts/pretendard/Pretendard-ExtraBold.subset.woff2) format('woff2'), url(../fonts/pretendard/Pretendard-ExtraBold.subset.woff) format('woff');
+	src: local('Pretendard ExtraBold'), url(../font/pretendard/Pretendard-ExtraBold.subset.woff2) format('woff2'), url(../font/pretendard/Pretendard-ExtraBold.subset.woff) format('woff');
 }
 
 @font-face {
 	font-family: 'Base';
 	font-weight: 700;
 	font-display: swap;
-	src: local('Pretendard Bold'), url(../fonts/pretendard/Pretendard-Bold.subset.woff2) format('woff2'), url(../fonts/pretendard/Pretendard-Bold.subset.woff) format('woff');
+	src: local('Pretendard Bold'), url(../font/pretendard/Pretendard-Bold.subset.woff2) format('woff2'), url(../font/pretendard/Pretendard-Bold.subset.woff) format('woff');
 }
 
 @font-face {
 	font-family: 'Base';
 	font-weight: 600;
 	font-display: swap;
-	src: local('Pretendard SemiBold'), url(../fonts/pretendard/Pretendard-SemiBold.subset.woff2) format('woff2'), url(../fonts/pretendard/Pretendard-SemiBold.subset.woff) format('woff');
+	src: local('Pretendard SemiBold'), url(../font/pretendard/Pretendard-SemiBold.subset.woff2) format('woff2'), url(../font/pretendard/Pretendard-SemiBold.subset.woff) format('woff');
 }
 
 @font-face {
 	font-family: 'Base';
 	font-weight: 500;
 	font-display: swap;
-	src: local('Pretendard Medium'), url(../fonts/pretendard/Pretendard-Medium.subset.woff2) format('woff2'), url(../fonts/pretendard/Pretendard-Medium.subset.woff) format('woff');
+	src: local('Pretendard Medium'), url(../font/pretendard/Pretendard-Medium.subset.woff2) format('woff2'), url(../font/pretendard/Pretendard-Medium.subset.woff) format('woff');
 }
 
 @font-face {
 	font-family: 'Base';
 	font-weight: 400;
 	font-display: swap;
-	src: local('Pretendard Regular'), url(../fonts/pretendard/Pretendard-Regular.subset.woff2) format('woff2'), url(../fonts/pretendard/Pretendard-Regular.subset.woff) format('woff');
+	src: local('Pretendard Regular'), url(../font/pretendard/Pretendard-Regular.subset.woff2) format('woff2'), url(../font/pretendard/Pretendard-Regular.subset.woff) format('woff');
 }
 
 @font-face {
 	font-family: 'Base';
 	font-weight: 300;
 	font-display: swap;
-	src: local('Pretendard Light'), url(../fonts/pretendard/Pretendard-Light.subset.woff2) format('woff2'), url(../fonts/pretendard/Pretendard-Light.subset.woff) format('woff');
+	src: local('Pretendard Light'), url(../font/pretendard/Pretendard-Light.subset.woff2) format('woff2'), url(../font/pretendard/Pretendard-Light.subset.woff) format('woff');
 }
 
 @font-face {
 	font-family: 'Base';
 	font-weight: 200;
 	font-display: swap;
-	src: local('Pretendard ExtraLight'), url(../fonts/pretendard/Pretendard-ExtraLight.subset.woff2) format('woff2'), url(../fonts/pretendard/Pretendard-ExtraLight.subset.woff) format('woff');
+	src: local('Pretendard ExtraLight'), url(../font/pretendard/Pretendard-ExtraLight.subset.woff2) format('woff2'), url(../font/pretendard/Pretendard-ExtraLight.subset.woff) format('woff');
 }
 
 @font-face {
 	font-family: 'Base';
 	font-weight: 100;
 	font-display: swap;
-	src: local('Pretendard Thin'), url(../fonts/pretendard/Pretendard-Thin.subset.woff2) format('woff2'), url(../fonts/pretendard/Pretendard-Thin.subset.woff) format('woff');
+	src: local('Pretendard Thin'), url(../font/pretendard/Pretendard-Thin.subset.woff2) format('woff2'), url(../font/pretendard/Pretendard-Thin.subset.woff) format('woff');
 }
 
 /* ============================= 공통 ============================= */
@@ -193,6 +193,63 @@ input[type=radio],
         &::before{background-color: #F10000;}
     }
 }
+
+.main-select{
+    &-wrap{
+        margin-top: .3vw;
+        position: relative;
+        &.is-val{
+            .main-select-tit::after{transform: rotate(180deg);}
+        }
+    }
+    &-btn{
+        width: 9.8vw;
+        height: 1.8vw;
+        background-color: #fff;
+        border-radius: .3vw;
+    }
+    &-tit{
+        font-size: .8vw;
+        font-weight: 600;
+        color: #00090F;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        &::after{
+            content: '';
+            display: block;
+            width: 1.2vw;
+            height: 1.2vw;
+            background: url(../../camelotech/resource/img/ico-arrow.png) 0 0 no-repeat;
+            background-size: 1.2vw 1.2vw;
+        }
+    }
+    &-val{
+        width: 9.8vw;
+        padding: .2vw;
+        background-color: #fff;
+        border-radius: .3vw;
+        position: absolute;
+        top: 2vw;
+        left: 0;
+        box-sizing: border-box;
+        .select-val-item{
+            width: 100%;
+            min-height: 1.7vw;
+            line-height: 2;
+            padding: .3vw .7vw;
+            font-size: .8vw;
+            font-weight: 600;
+            text-align: left;
+            color: #00090F;
+            background-color: #fff;
+            border-radius: .3vw;
+            &[data-select="true"]{background-color: #E4EDF5;}
+        }
+    }
+
+}
+
 
 /* ============================= 개별 ============================= */
 .wrapper{
@@ -323,8 +380,6 @@ input[type=radio],
     height: 100vh;
     display: flex;
     justify-content: flex-start;
-    // display: grid;
-    // grid-template-columns: 1fr 4fr;
 }
 
 // main left
@@ -350,61 +405,60 @@ input[type=radio],
             height: 1.1vw;
         }
     }
-}
-//main bar(설비 선택)
-.main-facility{
-    &-wrap{padding: 3vw 1vw 2vw;}
-    &-title{
-        font-size: 1vw;
-        font-weight: 600;
-        color: #00090F;
-    }
-    &-selection{}
-}
-//main bar(세팅버튼)
-.main-setting{
-    &-menu{
-        display: flex;
-        flex-direction: column;
-        gap: 2vw;
-        position: absolute;
-        bottom: 2vw;
-        left: 1vw;
-    }
-    &-list{
-        display: flex;
-        flex-direction: column;
-        gap: .7vw;
-    }
-    &-item{
-        font-size: .8vw;
-        font-weight: 600;
-        color: #254667;
-        gap: 0.5vw;
-
-        &[data-icon="report"]::before{background: url(../../camelotech/resource/img/ico-report.png) 0 0 no-repeat;}
-        &[data-icon="settings"]::before{background: url(../../camelotech/resource/img/ico-settings.png) 0 0 no-repeat;}
-        &[data-icon="power"]::before{background: url(../../camelotech/resource/img/ico-power.png) 0 0 no-repeat;}
-        
-        &[data-icon]{
-            display: flex;
-            justify-content: flex-start;
-            align-items: center;
-            &::before{
-                content: '';
-                display: block;
-                width: 1vw;
-                height: 1vw;    
-                background-size: 1vw;    
-            }
+    &-facility{
+        &-wrap{padding: 3vw 1vw 2vw;}
+        &-title{
+            font-size: 1vw;
+            font-weight: 600;
+            color: #00090F;
         }
     }
-    &-ver{
-        font-size: .9vw;
-        font-weight: 400;
-        color: #4B5976;
+    &-setting{
+        &-menu{
+            display: flex;
+            flex-direction: column;
+            gap: 2vw;
+            position: absolute;
+            bottom: 2vw;
+            left: 1vw;
+        }
+        &-list{
+            display: flex;
+            flex-direction: column;
+            gap: .7vw;
+        }
+        &-item{
+            font-size: .8vw;
+            font-weight: 600;
+            color: #254667;
+            gap: 0.5vw;
+
+            &[data-icon="report"]::before{background: url(../../camelotech/resource/img/ico-report.png) 0 0 no-repeat;}
+            &[data-icon="settings"]::before{background: url(../../camelotech/resource/img/ico-settings.png) 0 0 no-repeat;}
+            &[data-icon="power"]::before{background: url(../../camelotech/resource/img/ico-power.png) 0 0 no-repeat;}
+            
+            &[data-icon]{
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                &::before{
+                    content: '';
+                    display: block;
+                    width: 1vw;
+                    height: 1vw;    
+                    background-size: 1vw;    
+                }
+            }
+        }
+        &-ver{
+            font-size: .9vw;
+            font-weight: 400;
+            color: #4B5976;
+        }
     }
 }
+
+
 
 // main right
 .content-body{
@@ -482,7 +536,7 @@ input[type=radio],
         display: flex;
         justify-content: flex-start;
         align-items: center;
-        gap: 2vw;
+        gap: 1.7vw;
         flex-wrap: wrap;
     }
     &-item{
@@ -494,9 +548,10 @@ input[type=radio],
             border-radius: .3vw;
             background-color: #EDF5FC;
             .temp-wrap{
+                width: 22.5vw;
                 height: 100%;
                 box-sizing: border-box;
-                padding: 1.2vw;
+                padding: 1vw;
                 display: grid;
                 grid-template-columns: 1fr 1fr;
                 grid-template-rows: 1fr 1fr;
@@ -511,47 +566,58 @@ input[type=radio],
                 position: relative;
                 &:nth-of-type(1){
                     &::after{
-                        content: '';
+                        content: "";
                         width: .1vw;
-                        height: 100%;
+                        height: calc(100% + 1.2vw);
                         background-color: #E4EDF5;
                         position: absolute;
-                        bottom: -.1vw;
-                        right: -.9vw;
+                        bottom: -1.2vw;
+                        right: -1vw;
                     }
                 }
                 &:nth-of-type(2){
                     &::after{
-                        content: '';
-                        width: 100%;
-                        height: .1vw;
+                        content: "";
+                        width: calc(100% + 1.2vw);
+                        height: 0.1vw;
                         background-color: #E4EDF5;
                         position: absolute;
-                        bottom: -.9vw;
-                        left: -.1vw;
+                        bottom: -1.2vw;
+                        left: -1.2vw;
                     }
                 }
                 &:nth-of-type(3){
                     &::after{
-                        content: '';
-                        width: 100%;
-                        height: .1vw;
+                        content: "";
+                        width: calc(100% + 1.2vw);
+                        height: 0.1vw;
                         background-color: #E4EDF5;
                         position: absolute;
-                        top: -.1vw;
-                        right: -.1vw;
+                        top: -0.9vw;
+                        right: -1.2vw
                     }
                 }
                 &:nth-of-type(4){
                     &::after{
-                        content: '';
-                        width: .1vw;
-                        height: 100%;
+                        content: "";
+                        width: 0.1vw;
+                        height: calc(100% + 1.2vw);
                         background-color: #E4EDF5;
                         position: absolute;
-                        top: -.1vw;
-                        left: -.1vw;
+                        top: -1.1vw;
+                        left: -1.1vw;
                     }
+                }
+                &-btn{
+                    min-height: 3.2vw;
+                    padding: 0 1.3vw;
+                    margin-top: 1.3vw;
+                    font-size: .9vw;
+                    font-weight: 500;
+                    line-height: 1.1vw;
+                    color: #85A0BA;
+                    background-color: #fff;
+                    border-radius: .3vw;
                 }
             }
             .temp-item{
@@ -586,39 +652,28 @@ input[type=radio],
                     background: url(../../camelotech/resource/img/ico-change.png) 0 0 no-repeat;
                     background-size: 2.5vw;
                 }
-            }
-            .temp-item-txt{
-                font-size: 1.2vw;
-                font-weight: 600;
-                line-height: 1.4vw;
-                text-align: center;
-                color: #85A0BA;
-            }
-            .temp-list-btn{
-                min-height: 3.2vw;
-                padding: 0 .1vw;
-                margin-top: 1.3vw;
-                font-size: .9vw;
-                font-weight: 500;
-                line-height: 1.32vw;
-                color: #85A0BA;
-                background-color: #fff;
-                border-radius: .3vw;
+                &-txt{
+                    font-size: 1vw;
+                    font-weight: 600;
+                    line-height: 1.4vw;
+                    text-align: center;
+                    color: #85A0BA;
+                }
             }
         }
     }
     &-btn{
-        width: 18.3vw;
+        width: 18vw;
         min-width: 15vw;
         height: 100%;
-        padding: 3vw;
+        padding: 3.9vw 2.5vw 1.7vw;
         background-color: #fff;
         border: .1rem solid #E4EDF5;
         border-radius: .3vw;
         &:focus{border: .1rem solid #008FFF;}
     }
     &-content-tit{
-        font-size: 2vw;
+        font-size: 1.7vw;
         font-weight: 500;
         line-height: 2vw;
         color: #00090F;
@@ -628,21 +683,21 @@ input[type=radio],
         gap: 2vw;
         &[data-style="processing"]::before{
             background: url(../../camelotech/resource/img/img-processing.png) 0 0 no-repeat;
-            background-size: 7vw 7vw;
+            background-size: 6.7vw 6.7vw;
         }
         &[data-style="flow"]::before{
             background: url(../../camelotech/resource/img/img-flow.png) 0 0 no-repeat;
-            background-size: 7vw 7vw;
+            background-size: 6.7vw 6.7vw;
         }
         &[data-style="cartridge"]::before{
             background: url(../../camelotech/resource/img/img-cartridge.png) 0 0 no-repeat;
-            background-size: 7vw 7vw;
+            background-size: 6.7vw 6.7vw;
         }
         &::before{
             content: '';
             display: block;
-            width: 7vw;
-            height: 7vw;
+            width: 6.7vw;
+            height: 6.7vw;
         }
         &::after{
             content: '';
@@ -653,10 +708,30 @@ input[type=radio],
     }
     &-content-txt{
         margin-top: 1vw;
-        font-size: 1.2vw;
+        font-size: 1vw;
         font-weight: 600;
         line-height: 1.4vw;
         color: #747474;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: .3vw;
+        span{
+            color: #008FFF;
+            position: relative;
+            &.on{
+                &::before{
+                    content: '';
+                    width: .3vw;
+                    height: .3vw;
+                    border-radius: 50%;
+                    background-color: #F10000;
+                    position: absolute;
+                    top: -.2vw;
+                    right: -.2vw;
+                }
+            }
+        }
     }
 }
 
