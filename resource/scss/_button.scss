@@ -238,3 +238,16 @@
         }   
     }
 }
+
+
+@include tablet {
+    padding: 10rem 4rem 0;
+}
+  
+@include mobile {
+
+}
+
+@include small {
+
+}

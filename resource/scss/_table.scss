@@ -5,6 +5,7 @@
 }
 
 .tableDefault{
+    thead tr th:last-child{border-right: 0;}
     tr{
         border-bottom: 1px solid #ddd;
         th,
@@ -13,14 +14,14 @@
             border-right: 1px solid #ddd;
             padding: 20px;
         }
+        
+        td{&:last-child{border-right: 0;}}
     }
 
     tfoot{
         background-color: #616161;
         tr{
-            th{
-                text-align: center;
-            }
+            th{text-align: center;}
         }
     }
 }
@@ -59,14 +60,10 @@
     text-align: center;
 }
 
-.tableDefault2 th{
-    background-color: #616161;
-}
+.tableDefault2 th{background-color: #616161;}
 
 /* class */
-.tbBr{
-    border-right: 1px solid #ddd !important;
-}
+.tbBr{border-right: 1px solid #ddd !important;}
 
 table .t_left{
     text-align: left !important;

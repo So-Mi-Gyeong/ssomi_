@@ -459,6 +459,9 @@ table + p {
   border-top: 1px solid #fff;
 }
 
+.tableDefault thead tr th:last-child {
+  border-right: 0;
+}
 .tableDefault tr {
   border-bottom: 1px solid #ddd;
 }
@@ -467,6 +470,9 @@ table + p {
   text-align: left;
   border-right: 1px solid #ddd;
   padding: 20px;
+}
+.tableDefault tr td:last-child {
+  border-right: 0;
 }
 .tableDefault tfoot {
   background-color: #616161;
@@ -5077,13 +5083,14 @@ body::-webkit-scrollbar-track {
 
 /* .ui-content */
 .ui-content {
-  width: 1200px;
+  width: 100%;
+  max-width: 120rem;
   margin: 0 auto;
   color: #fff;
-  padding: 100px 0;
+  padding: 10rem 0;
 }
 .ui-content .wrap {
-  margin-top: 100px;
+  margin-top: 10rem;
 }
 .ui-content .wrap.noMargin {
   margin-top: 0;

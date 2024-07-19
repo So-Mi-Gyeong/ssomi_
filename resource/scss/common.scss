@@ -54,22 +54,21 @@ body{
     margin: 0 auto;
     background-color: #282726;
     overflow: auto;
-    &::-webkit-scrollbar {
-        display: none;
-    }
+    &::-webkit-scrollbar {display: none;}
 }
 
 /* .ui-content */
 .ui-content{
-    width: 1200px;
+    width: 100%;
+    max-width: 120rem;
     margin: 0 auto;
     color: #fff;
-    padding: 100px 0;
+    padding: 10rem 0;
+    position: relative;
+    box-sizing: border-box;
     .wrap{
-        margin-top: 100px;
-        &.noMargin{
-            margin-top: 0;
-        }
+        margin-top: 10rem;
+        &.noMargin{margin-top: 0;}
         &.flexWrap{
             display: flex;
             justify-content: center;
@@ -121,8 +120,6 @@ body{
 
 // pagination 간격
 h3 + .pagination-wrap,
-.pagination-wrap + .pagination-wrap{
-    margin-top: 5rem;
-}
+.pagination-wrap + .pagination-wrap{margin-top: 5rem;}
 
 /* ==================================== accessibility.html ================================= */
