@@ -81,65 +81,48 @@ body{
 /* ==================================== button.html ================================= */
 
 /* button */
-.btn,
-.btnWhite{
-    &.focus{
-        box-shadow: 3px 3px 15px #3770ff76;
-    }
-}
-
-.btnTxt{
-    &.focus{
-        border: 1px solid #3771ff;
-        padding: 5px;
-        border-radius: 0;
-    }
-}
-
 .btn{
-    &.hover{
-        background: linear-gradient(#3061db, #2935b5);
-    }
-}
+    &-default{
+        min-height: 5rem;
+        padding: 0 1rem;
+        text-align: center;
+        position: relative;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        text-decoration: none;
+        z-index: 0;
+        box-sizing: border-box;
 
-.btnWhite{
-    &.hover{
-        background-color: #3061db;
-        border: 1px solid #3061db;
-        color: #fff;
+        &[data-type="disabled"]{
+            color: #000;
+            background-color: #eee;
+            box-shadow: none;
+            cursor: default;
+            opacity: .3;
+            &:hover{background-color: #eee;}
+            &:focus{
+                box-shadow: none;
+                border: 0;
+                padding: 0;
+            }
+        }
     }
-}
-
-.btnTxt{
-    &.hover{
-        color: #224396;
-    }
-}
-
-.btn{
-    &.active{
-        background: linear-gradient(#3061db, #2935b5);
-        box-shadow: none;
-    }
-}
-.btnWhite{
-    &.active{
-        background-color: #3061db;
-        border: 1px solid #3061db;
-        color: #fff;
-    }
-}
-
-.btnTxt{
-    &.active{
-        color: #224396;
+    &-txt{
+        width: auto;
+        height: auto;
+        line-height: 1;
+        padding: 0;
+        background: transparent;
+        text-decoration: underline;
+        box-sizing: border-box;
     }
 }
 
 // pagination 간격
-h3 + .ui-pagination,
-.ui-pagination + .ui-pagination{
-    margin-top: 50px;
+h3 + .pagination-wrap,
+.pagination-wrap + .pagination-wrap{
+    margin-top: 5rem;
 }
 
 /* ==================================== accessibility.html ================================= */
