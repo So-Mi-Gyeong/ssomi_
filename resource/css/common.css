@@ -4128,122 +4128,122 @@ table .t_left {
   color: #000;
 }
 
-.ui-content.cursor {
+.cursor {
   text-align: center;
   height: 100vh;
 }
-.ui-content.cursor .cursors {
+.cursor-wrap {
   display: flex;
   flex-wrap: wrap;
-  margin-top: 50px;
+  margin-top: 5rem;
 }
-.ui-content.cursor .cursors > div {
-  flex: 150px;
-  padding: 10px 2px;
-  white-space: nowrap;
-  border: 1px solid #eee;
-  border-radius: 5px;
-  margin: 0 5px 5px 0;
-}
-.ui-content.cursor .cursors > div:hover {
-  background: #000;
-  color: #000;
-}
-.ui-content.cursor .cursors .auto {
+.cursor-wrap .auto {
   cursor: auto;
 }
-.ui-content.cursor .cursors .default {
+.cursor-wrap .default {
   cursor: default;
 }
-.ui-content.cursor .cursors .none {
+.cursor-wrap .none {
   cursor: none;
 }
-.ui-content.cursor .cursors .context-menu {
+.cursor-wrap .context-menu {
   cursor: context-menu;
 }
-.ui-content.cursor .cursors .help {
+.cursor-wrap .help {
   cursor: help;
 }
-.ui-content.cursor .cursors .pointer {
+.cursor-wrap .pointer {
   cursor: pointer;
 }
-.ui-content.cursor .cursors .progress {
+.cursor-wrap .progress {
   cursor: progress;
 }
-.ui-content.cursor .cursors .wait {
+.cursor-wrap .wait {
   cursor: wait;
 }
-.ui-content.cursor .cursors .cell {
+.cursor-wrap .cell {
   cursor: cell;
 }
-.ui-content.cursor .cursors .crosshair {
+.cursor-wrap .crosshair {
   cursor: crosshair;
 }
-.ui-content.cursor .cursors .text {
+.cursor-wrap .text {
   cursor: text;
 }
-.ui-content.cursor .cursors .vertical-text {
+.cursor-wrap .vertical-text {
   cursor: vertical-text;
 }
-.ui-content.cursor .cursors .alias {
+.cursor-wrap .alias {
   cursor: alias;
 }
-.ui-content.cursor .cursors .copy {
+.cursor-wrap .copy {
   cursor: copy;
 }
-.ui-content.cursor .cursors .move {
+.cursor-wrap .move {
   cursor: move;
 }
-.ui-content.cursor .cursors .no-drop {
+.cursor-wrap .no-drop {
   cursor: no-drop;
 }
-.ui-content.cursor .cursors .not-allowed {
+.cursor-wrap .not-allowed {
   cursor: not-allowed;
 }
-.ui-content.cursor .cursors .all-scroll {
+.cursor-wrap .all-scroll {
   cursor: all-scroll;
 }
-.ui-content.cursor .cursors .col-resize {
+.cursor-wrap .col-resize {
   cursor: col-resize;
 }
-.ui-content.cursor .cursors .row-resize {
+.cursor-wrap .row-resize {
   cursor: row-resize;
 }
-.ui-content.cursor .cursors .n-resize {
+.cursor-wrap .n-resize {
   cursor: n-resize;
 }
-.ui-content.cursor .cursors .e-resize {
+.cursor-wrap .e-resize {
   cursor: e-resize;
 }
-.ui-content.cursor .cursors .s-resize {
+.cursor-wrap .s-resize {
   cursor: s-resize;
 }
-.ui-content.cursor .cursors .w-resize {
+.cursor-wrap .w-resize {
   cursor: w-resize;
 }
-.ui-content.cursor .cursors .ns-resize {
+.cursor-wrap .ns-resize {
   cursor: ns-resize;
 }
-.ui-content.cursor .cursors .ew-resize {
+.cursor-wrap .ew-resize {
   cursor: ew-resize;
 }
-.ui-content.cursor .cursors .ne-resize {
+.cursor-wrap .ne-resize {
   cursor: ne-resize;
 }
-.ui-content.cursor .cursors .nw-resize {
+.cursor-wrap .nw-resize {
   cursor: nw-resize;
 }
-.ui-content.cursor .cursors .se-resize {
+.cursor-wrap .se-resize {
   cursor: se-resize;
 }
-.ui-content.cursor .cursors .sw-resize {
+.cursor-wrap .sw-resize {
   cursor: sw-resize;
 }
-.ui-content.cursor .cursors .nesw-resize {
+.cursor-wrap .nesw-resize {
   cursor: nesw-resize;
 }
-.ui-content.cursor .cursors .nwse-resize {
+.cursor-wrap .nwse-resize {
   cursor: nwse-resize;
+}
+.cursor-item {
+  flex: 15rem;
+  padding: 1rem 0.2rem;
+  white-space: nowrap;
+  border: 0.1rem solid #eee;
+  border-radius: 0.5rem;
+  margin: 0 0.5rem 0.5rem 0;
+}
+.cursor-item:hover {
+  background: #000;
+  color: #000;
 }
 
 .grid-container {
