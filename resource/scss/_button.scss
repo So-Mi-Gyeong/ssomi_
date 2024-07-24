@@ -12,6 +12,7 @@
             line-height: 1;
             color: #fff;
         }
+
         //상태별 스타일
         &:focus{
             border: .1rem solid #3771ff;
@@ -111,6 +112,60 @@
         margin: 0 auto;
         text-align: center;
         box-sizing: border-box;
+        &[data-style="text"],
+        &[data-style="circle"]{
+            .pagination-item{
+                &.pre,
+                &.next{
+                    position: relative;
+                    background: #fff;
+                    border: .1rem solid #fff;
+                    .pagination-btn{
+                        &::before{
+                            content: '';
+                            width: 1.2rem;
+                            height: 1.2rem;
+                            background: url(../img/ico_nextBlack.png) 0 0 no-repeat;
+                            background-size: 1.2rem;
+                            position: absolute;
+                            top: 50%;
+                            left: 50%;
+                            transform: translate(-50%, -50%);
+                        }
+                    }
+                }
+                &.pre{
+                    .pagination-btn::before{transform: translate(-50%, -50%) scaleX(-1);}
+                }
+            }
+        }
+        &[data-style="circle"]{
+            .pagination-list{gap: .8rem;}
+            .pagination-item{
+                background: none;
+                border: 0;
+                border-radius: 0;
+                &.pre,
+                &.next{
+                    background: transparent;
+                    border: .1rem solid transparent;
+                    .pagination-btn{
+                        &::before{background-image: url(../img/ico_nextWhite.png);}
+                    }
+                }
+            }
+            .pagination-btn{
+                min-width: 4rem;
+                color: #fff;
+                border: .1rem solid #fff;
+                border-radius: 50%;
+                &:active,
+                &:focus{
+                    color: #337ab7;
+                    border: .1rem solid #337ab7ed;
+                }
+            }
+        }
     }
     &-list{
         display: flex;
@@ -135,14 +190,6 @@
             background-color: #eee;
             button{color: #23527c;}
         }
-        &.active{
-            background-color: #337ab7;
-            border-color: #337ab7;
-            button{
-                color: #fff;
-                cursor: default;
-            }
-        }
     }
     &-btn{
         width: 100%;
@@ -155,85 +202,6 @@
             size: 1.2rem;
             weight: 500;
         }
-    }
-
-    &.textStyle,
-    &.circleStyle{
-        .inner-pagination{
-            li{
-                &.link-page{
-                    background: transparent;
-                    border: .1rem solid transparent;
-                    button{color: #fff;}
-                }
-                &.pre,
-                &.next{
-                    position: relative;
-                    background: #fff;
-                    border: .1rem solid #fff;
-                    >button{
-                        &::before{
-                            content: '';
-                            width: 1.6rem;
-                            height: 1.6rem;
-                            background: url(../img/ico_nextBlack.png) 0 0 no-repeat;
-                            position: absolute;
-                            top: 50%;
-                            left: 50%;
-                            transform: translate(-50%, -50%);
-                        }
-                    }
-                    &.active{
-                        background-color: #fff;
-                        border-color: #fff;
-                        button{cursor: pointer;}
-                    }
-                }
-                &.pre{
-                    >button{
-                        &::before{
-                            transform: translate(-50%, -50%) scaleX(-1);
-                        }
-                    }
-                }
-                &.active{
-                    background-color: #e8444b;
-                    border: .1rem solid #e8444b;
-                    margin: 0;
-                    button{
-                        color: #fff;
-                        cursor: default;
-                    }
-                }
-            }
-        }
-    }
-    &.circleStyle{
-        .inner-pagination{
-            .link-page{
-                margin: .5rem;
-                &.active{
-                    margin: .5rem;
-                    background-color: transparent;
-                    border: .1rem solid #fff;
-                    border-radius: 50%;
-                }
-                &.pre,
-                &.next{
-                    background: transparent;
-                    border: .1rem solid transparent;
-                    >button{
-                        &::before{
-                            background: url(../img/ico_nextWhite.png) 0 0 no-repeat;
-                        }
-                    }
-                    &.active{
-                        background: transparent;
-                        border: .1rem solid transparent;
-                    }
-                }
-            }
-        }   
     }
 }
     

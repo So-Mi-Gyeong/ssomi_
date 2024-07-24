@@ -648,7 +648,7 @@ input[type=radio],
   flex-wrap: wrap;
 }
 .manufacturing-item {
-  width: 18.3333333333vw;
+  width: auto;
   height: 21vw;
   box-sizing: border-box;
   display: flex;

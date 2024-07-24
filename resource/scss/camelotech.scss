@@ -645,8 +645,9 @@ input[type=radio],
         gap: 1.7vw;
         flex-wrap: wrap;
     }
-    &-item{ 
-        width: calc((220 / 1200) * 100vw);
+    &-item{
+        width: auto; 
+        // width: calc((220 / 1200) * 100vw);
         height: 21vw;
         box-sizing: border-box;
         display: flex;
