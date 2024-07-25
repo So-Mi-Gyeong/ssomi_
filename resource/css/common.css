@@ -58,6 +58,8 @@ a {
 
 /* button */
 button {
+  padding: 0;
+  margin: 0;
   background: transparent;
   outline: 0;
   border: 0;
@@ -4635,9 +4637,374 @@ table .t_left {
   border-left: 0;
 }
 
+.ui-content.dropdown {
+  height: 100vh;
+}
+.ui-content.dropdown .cate-area {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bold;
+  position: relative;
+  background-color: #fff;
+  border-bottom: 1px solid #999;
+}
+.ui-content.dropdown .cate-area .dropdownmenu .dropdownmenuBtn.active {
+  color: #4737df;
+}
+.ui-content.dropdown .cate-area .dropdownmenu.select {
+  width: 50%;
+  margin: 0 auto;
+  padding: 2rem 0;
+  border-right: 1px solid #999;
+}
+.ui-content.dropdown .cate-area .dropdownmenu.select a {
+  text-decoration: none;
+  color: #000;
+}
+.ui-content.dropdown .cate-area .dropdownmenu.select .dropdown-layer {
+  display: none;
+  position: absolute;
+  top: 6rem;
+  right: 1.4rem;
+  left: 1.4rem;
+  box-shadow: 0 1px 5px 1px #999;
+  border-radius: 1rem;
+  z-index: 3;
+  width: auto;
+  background: #fff;
+  overflow: hidden;
+}
+.ui-content.dropdown .cate-area .dropdownmenu.select .dropdown-layer .isDropList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.ui-content.dropdown .cate-area .dropdownmenu.select .dropdown-layer .isDropList li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  float: left;
+  width: 33%;
+  height: 6rem;
+  border-right: 1px solid #999;
+  position: relative;
+}
+.ui-content.dropdown .cate-area .dropdownmenu.select .dropdown-layer .isDropList li.active {
+  background-color: #eff2f9;
+}
+.ui-content.dropdown .cate-area .dropdownmenu.select .dropdown-layer .isDropList li:nth-of-type(1):before {
+  display: none;
+}
+.ui-content.dropdown .cate-area .dropdownmenu.select .dropdown-layer .isDropList li:nth-of-type(3n) {
+  border-right: 0;
+}
+.ui-content.dropdown .cate-area .dropdownmenu.select .dropdown-layer .isDropList li:nth-of-type(3n+1):before {
+  content: "";
+  width: calc(300% + 0.2727rem);
+  height: 1px;
+  background: #999;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.ui-content.dropdown .cate-area .dropdownmenu.select .dropdown-layer .isDropList li a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  font-size: 2rem;
+  text-decoration: none;
+  color: #333;
+}
+.ui-content.dropdown .cate-area .dropdownmenu.select .dropdown-layer .isDropList li a.active {
+  color: #4737df;
+}
+.ui-content.dropdown .cate-area .dropdownmenu.filter {
+  width: 50%;
+  margin: 0 auto;
+  padding: 2rem 0;
+  position: relative;
+}
+.ui-content.dropdown .cate-area .dropdownmenu.filter .isDropList {
+  display: none;
+  width: 90%;
+  max-height: -webkit-max-content;
+  visibility: visible;
+  min-width: 5rem;
+  overflow: hidden;
+  overflow-y: auto;
+  background: #Fff;
+  position: absolute;
+  top: 6rem;
+  right: 5%;
+  box-shadow: 0 1px 5px 1px #999;
+}
+.ui-content.dropdown .cate-area .dropdownmenu.filter .isDropList ul {
+  list-style: none;
+  margin: 0;
+  padding: 1rem 0;
+}
+.ui-content.dropdown .cate-area .dropdownmenu.filter .isDropList ul li {
+  background-color: #fff;
+  min-height: 5rem;
+  font-size: 2rem;
+  line-height: 5rem;
+}
+.ui-content.dropdown .cate-area .dropdownmenu.filter .isDropList ul li.active {
+  background-color: #eff2f9;
+}
+.ui-content.dropdown .cate-area .dropdownmenu.filter .isDropList ul li a {
+  text-decoration: none;
+  color: #333;
+  display: block;
+  padding: 1rem 1.5rem;
+  width: 100%;
+  min-height: 4rem;
+  color: #666;
+  box-sizing: border-box;
+}
+.ui-content.dropdown .cate-area .dropdownmenu.filter .isDropList ul li a.active {
+  color: #4737df;
+}
+.ui-content.dropdown .phone-num {
+  width: 100%;
+}
+.ui-content.dropdown .phone-num a span {
+  color: #000;
+  font-size: 2rem;
+}
+.ui-content.dropdown .phone-num .myphoneNum {
+  display: block;
+  width: 30rem;
+  min-width: 5rem;
+  max-height: 23rem;
+  overflow: hidden;
+  overflow-y: auto;
+  background-color: #fff;
+  border-radius: 0.6rem;
+  padding: 1.5rem 1rem;
+  box-sizing: border-box;
+}
+.ui-content.dropdown .phone-num .myphoneNum.numShow {
+  border-radius: 0.6rem 0.6rem 0 0;
+}
+.ui-content.dropdown .phone-num .myphoneNum.numHide {
+  border-radius: 0.6rem;
+}
+.ui-content.dropdown .phone-num .num-list {
+  display: none;
+  width: 30rem;
+  min-width: 5rem;
+  max-height: 23rem;
+  overflow-x: hidden;
+  overflow-y: auto;
+  background-color: #fff;
+  box-shadow: 3px 5px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 0px 0px 0.6rem 0.6rem;
+}
+.ui-content.dropdown .phone-num .num-list ul {
+  width: 100%;
+  padding-left: 0;
+  margin: 0;
+  list-style: none;
+  padding: 1rem 0;
+}
+.ui-content.dropdown .phone-num .num-list ul li {
+  padding: 1rem 0;
+  line-height: 1.5rem;
+  background-color: #fff;
+}
+.ui-content.dropdown .phone-num .num-list ul li a {
+  font-size: 1.8rem;
+  color: #666;
+  padding: 1rem 1.5rem;
+  line-height: 2rem;
+  display: flex;
+  text-align: left;
+}
+.ui-content.dropdown .phone-num .num-list ul li a i.badge-circle {
+  color: #fff;
+  display: inline-block;
+  width: 2rem;
+  height: 2rem;
+  line-height: 2.1rem;
+  font-size: 1.2rem;
+  font-weight: 500;
+  text-align: center;
+  border-radius: 100%;
+  margin-right: 0.5rem;
+  font-style: normal;
+}
+.ui-content.dropdown .phone-num .num-list ul li a i.badge-line {
+  width: auto;
+  max-width: -moz-max-content;
+  max-width: max-content;
+  height: 1.5rem;
+  line-height: 1.6rem;
+  padding: 0 0.5rem;
+  border-radius: 0.75rem;
+  border: 1px solid #ff5438;
+  font-size: 1rem;
+  display: inline-block;
+  white-space: nowrap;
+  margin: 0.2rem 0 0 1rem;
+  font-style: normal;
+}
+.ui-content.dropdown .phone-num .num-list ul li a i.violet {
+  background: #8358cb;
+}
+.ui-content.dropdown .phone-num .num-list ul li a i.gold {
+  background: #d6ad75;
+}
+.ui-content.dropdown .phone-num .num-list ul li a i.silver {
+  background: #aebad4;
+}
+.ui-content.dropdown .phone-num .num-list ul li a i.orange {
+  color: #ff5438;
+}
+.ui-content.dropdown .phone-num .num-list ul li.disable {
+  pointer-events: none;
+}
+.ui-content.dropdown .phone-num .num-list ul li.disable a {
+  color: #dbdbdb !important;
+}
+
 .dropdown-menu {
+  position: relative;
+}
+.dropdown-menu-cate {
+  width: 100%;
   display: flex;
   justify-content: center;
+}
+.dropdown-menu-cate .menu-cate-btn {
+  width: 50%;
+  height: 6rem;
+  background-color: #fff;
+}
+.dropdown-menu-cate .menu-cate-btn + .dropdown-menu-btn {
+  border-left: 0.1rem solid #999;
+}
+.dropdown-menu-cate .menu-cate-btn span {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #000;
+}
+.dropdown-menu-list {
+  border-radius: 1rem;
+  background-color: #fff;
+  box-shadow: 0 0.1rem 0.5rem 0.1rem #999;
+  position: relative;
+  overflow: hidden;
+}
+.dropdown-menu-list .menu-list-btn {
+  width: 100%;
+}
+.dropdown-menu-list .menu-list-btn span {
+  font-size: 2rem;
+  font-weight: 700;
+}
+.dropdown-menu-list[data-type=select] {
+  width: 100%;
+}
+.dropdown-menu-list[data-type=select] .menu-list-wrap {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+.dropdown-menu-list[data-type=select] .menu-list-item {
+  position: relative;
+  border-right: 0.1rem solid #999;
+}
+.dropdown-menu-list[data-type=select] .menu-list-item:nth-of-type(3n) {
+  border-right: 0;
+}
+.dropdown-menu-list[data-type=select] .menu-list-item:nth-of-type(3n+1)::before {
+  content: "";
+  width: calc(300% + 0.2727rem);
+  height: 0.1rem;
+  background-color: #999;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.dropdown-menu-list[data-type=select] .menu-list-btn {
+  min-height: 6rem;
+  padding: 1rem;
+}
+.dropdown-menu-list[data-type=select] .menu-list-btn:hover, .dropdown-menu-list[data-type=select] .menu-list-btn:focus {
+  background-color: #eff2f9;
+}
+.dropdown-menu-list[data-type=select] .menu-list-btn:hover span, .dropdown-menu-list[data-type=select] .menu-list-btn:focus span {
+  color: #4737df;
+}
+.dropdown-menu-list[data-type=filter] {
+  width: 50%;
+  position: absolute;
+  top: 6rem;
+  right: 0;
+}
+.dropdown-menu-list[data-type=filter] .menu-list-btn {
+  width: 100%;
+  min-height: 6rem;
+  padding: 1rem 1.5rem;
+  background-color: #fff;
+}
+.dropdown-menu-list[data-type=filter] .menu-list-btn span {
+  color: #666;
+}
+.dropdown-menu-list[data-type=filter] .menu-list-btn:hover, .dropdown-menu-list[data-type=filter] .menu-list-btn:focus {
+  background-color: #4737df;
+}
+.dropdown-menu-list[data-type=filter] .menu-list-btn:hover span, .dropdown-menu-list[data-type=filter] .menu-list-btn:focus span {
+  color: #fff;
+}
+
+.dropdown-phonenum-select {
+  width: 30rem;
+  min-width: 5rem;
+  max-height: 23rem;
+  padding: 1.5rem 1rem;
+  border-radius: 0.6rem 0.6rem 0 0;
+  background-color: #fff;
+  box-sizing: border-box;
+  overflow: hidden;
+  overflow-y: auto;
+}
+.dropdown-phonenum-select .dropdown-phonenum-btn span {
+  color: #000;
+  font-size: 2rem;
+  font-weight: 500;
+}
+.dropdown-phonenum-list {
+  width: 30rem;
+  max-height: 23rem;
+  overflow-x: hidden;
+  overflow-y: auto;
+  border-radius: 0 0 0.6rem 0.6rem;
+  background-color: #fff;
+  box-shadow: 0.3rem 0.5rem 1rem rgba(0, 0, 0, 0.1);
+}
+.dropdown-phonenum-list .phonenum-list-wrap {
+  display: flex;
+  flex-direction: column;
+}
+.dropdown-phonenum-list .phonenum-list-btn {
+  width: 100%;
+  min-height: 6rem;
+  padding: 1rem 1.5rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.dropdown-phonenum-list .phonenum-list-btn span {
+  color: #666;
+  font-size: 1.8rem;
+  font-weight: 500;
 }
 
 .ui-content.netflix {
