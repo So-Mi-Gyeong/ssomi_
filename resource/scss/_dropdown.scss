@@ -1,260 +1,260 @@
-.ui-content{
-    &.dropdown{
-        height: 100vh;
-        .cate-area{
-            width: 100%;
-            max-width: 1200px;
-            margin: 0 auto;
-            display: flex;
-            text-align: center;
-            font-size: 2rem;
-            font-weight: bold;
-            position: relative;
-            background-color: #fff;
-            border-bottom: 1px solid #999;
-            .dropdownmenu{
-                .dropdownmenuBtn{
-                    &.active{color: #4737df;}
-                }
-                &.select{
-                    width: 50%;
-                    margin: 0 auto;
-                    padding: 2rem 0;
-                    border-right: 1px solid #999;
-                    a{
-                        text-decoration: none;
-                        color: #000;
-                    }
-                    .dropdown-layer{
-                        display: none;
-                        position: absolute;
-                        top: 6rem;
-                        right: 1.4rem;
-                        left: 1.4rem;
-                        box-shadow: 0 1px 5px 1px #999;
-                        border-radius: 1rem;
-                        z-index: 3;
-                        width: auto;
-                        background: #fff;
-                        overflow: hidden;
-                        .isDropList{
-                            list-style: none;
-                            margin: 0;
-                            padding: 0;
-                            li{
-                                display: flex;
-                                align-items: center;
-                                justify-content: center;
-                                float: left;
-                                width: 33%;
-                                height: 6rem;
-                                border-right: 1px solid #999;
-                                position: relative;
-                                &.active{
-                                    background-color: #eff2f9;
-                                }
-                                &:nth-of-type(1){
-                                    &:before{
-                                        display: none;
-                                    }
-                                }
-                                &:nth-of-type(3n){
-                                    border-right: 0;
-                                }
-                                &:nth-of-type(3n+1){
-                                    &:before{
-                                        content: '';
-                                        width: calc(300% + 0.2727rem);
-                                        height: 1px;
-                                        background: #999;
-                                        position: absolute;
-                                        top: 0;
-                                        left: 0;
-                                    }
-                                }
-                                a{
-                                    display: flex;
-                                    align-items: center;
-                                    justify-content: center;
-                                    width: 100%;
-                                    height: 100%;
-                                    font-size: 2rem;
-                                    text-decoration: none;
-                                    color: #333;
-                                    &.active{
-                                        color: #4737df;
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
-    
-                &.filter{
-                    width: 50%;
-                    margin: 0 auto;
-                    padding: 2rem 0;
-                    position: relative;
-                    .isDropList{
-                        display: none;
-                        width: 90%;
-                        max-height: -webkit-max-content;
-                        visibility: visible;
-                        min-width: 5rem;
-                        overflow: hidden;
-                        overflow-y: auto;
-                        background: #Fff;
-                        position: absolute;
-                        top: 6rem;
-                        right: 5%;
-                        box-shadow: 0 1px 5px 1px #999;
-                        ul{
-                            list-style: none;
-                            margin: 0;
-                            padding: 1rem 0;
-                            li{
-                                background-color: #fff;
-                                min-height: 5rem;
-                                font-size: 2rem;
-                                line-height: 5rem;
-                                &.active{
-                                    background-color: #eff2f9;
-                                }
-                                a{
-                                    text-decoration: none;
-                                    color: #333;
-                                    display: block;
-                                    padding: 1rem 1.5rem;
-                                    width: 100%;
-                                    min-height: 4rem;
-                                    color: #666;
-                                    box-sizing: border-box;
-                                    &.active{
-                                        color: #4737df;
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        }
-        .phone-num{
-            width: 100%;
-            a{
-                span{
-                    color: #000;
-                    font-size: 2rem;
-                }
-            }
-            .myphoneNum{
-                display: block;
-                width: 30rem;
-                min-width: 5rem;
-                max-height: 23rem;
-                overflow: hidden;
-                overflow-y: auto;
-                background-color: #fff;
-                border-radius: 0.6rem;
-                padding: 1.5rem 1rem;
-                box-sizing: border-box;
-                &.numShow{
-                    border-radius: 0.6rem 0.6rem 0 0;
-                }
-                &.numHide{
-                    border-radius: 0.6rem;
-                }
-            }
-            .num-list{
-                display: none;
-                width: 30rem;
-                min-width: 5rem;
-                max-height: 23rem;
-                overflow-x: hidden;
-                overflow-y: auto;
-                background-color: #fff;
-                box-shadow: 3px 5px 10px rgb(0 0 0 / 10%);
-                border-radius: 0px 0px .6rem .6rem;
-                ul{
-                    width: 100%;
-                    padding-left: 0;
-                    margin: 0;
-                    list-style: none;
-                    padding: 1rem 0;
-                    li{
-                        padding: 1rem 0;
-                        line-height: 1.5rem;
-                        background-color: #fff;
-                        a{
-                            font-size: 1.8rem;
-                            color: #666;
-                            padding: 1rem 1.5rem;
-                            line-height: 2rem;
-                            display: flex;
-                            text-align: left;
-                            i{
-                                &.badge-circle{
-                                    color: #fff;
-                                    display: inline-block;
-                                    width: 2rem;
-                                    height: 2rem;
-                                    line-height: 2.1rem;
-                                    font-size: 1.2rem;
-                                    font-weight: 500;
-                                    text-align: center;
-                                    border-radius: 100%;
-                                    margin-right: 0.5rem;
-                                    font-style: normal;
-                                }
-                                &.badge-line{
-                                    width: auto;
-                                    max-width: max-content;
-                                    height: 1.5rem;
-                                    line-height: 1.6rem;
-                                    padding: 0 0.5rem;
-                                    border-radius: 0.75rem;
-                                    border: 1px solid #ff5438;
-                                    font-size: 1rem;
-                                    display: inline-block;
-                                    white-space: nowrap;
-                                    margin: 0.2rem 0 0 1rem;
-                                    font-style: normal;
-                                }
-                                &.violet{
-                                    background: #8358cb;
-                                }
-                                &.gold{
-                                    background: #d6ad75;
-                                }
-                                &.silver{
-                                    background: #aebad4;
-                                }
-                                &.orange{
-                                    color: #ff5438;
-                                }
-                            }
-                        }
-                        &.disable{
-                            pointer-events: none;
-                            a{
-                                color: #dbdbdb !important;
-                            }
-                        }
-                    }
-                }
-            }
-        }
-    }
-}
-
-// .dropdown{
-//     &-menu{
-//         display: flex;
-//         justify-content: center;
-        
-//         &-btn{
+// .ui-content{
+//     &.dropdown{
+//         height: 100vh;
+//         .cate-area{
+//             width: 100%;
+//             max-width: 1200px;
+//             margin: 0 auto;
+//             display: flex;
+//             text-align: center;
+//             font-size: 2rem;
+//             font-weight: bold;
+//             position: relative;
 //             background-color: #fff;
+//             border-bottom: 1px solid #999;
+//             .dropdownmenu{
+//                 .dropdownmenuBtn{
+//                     &.active{color: #4737df;}
+//                 }
+//                 &.select{
+//                     width: 50%;
+//                     margin: 0 auto;
+//                     padding: 2rem 0;
+//                     border-right: 1px solid #999;
+//                     a{
+//                         text-decoration: none;
+//                         color: #000;
+//                     }
+//                     .dropdown-layer{
+//                         display: none;
+//                         position: absolute;
+//                         top: 6rem;
+//                         right: 1.4rem;
+//                         left: 1.4rem;
+//                         box-shadow: 0 1px 5px 1px #999;
+//                         border-radius: 1rem;
+//                         z-index: 3;
+//                         width: auto;
+//                         background: #fff;
+//                         overflow: hidden;
+//                         .isDropList{
+//                             list-style: none;
+//                             margin: 0;
+//                             padding: 0;
+//                             li{
+//                                 display: flex;
+//                                 align-items: center;
+//                                 justify-content: center;
+//                                 float: left;
+//                                 width: 33%;
+//                                 height: 6rem;
+//                                 border-right: 1px solid #999;
+//                                 position: relative;
+//                                 &.active{
+//                                     background-color: #eff2f9;
+//                                 }
+//                                 &:nth-of-type(1){
+//                                     &:before{
+//                                         display: none;
+//                                     }
+//                                 }
+//                                 &:nth-of-type(3n){
+//                                     border-right: 0;
+//                                 }
+//                                 &:nth-of-type(3n+1){
+//                                     &:before{
+//                                         content: '';
+//                                         width: calc(300% + 0.2727rem);
+//                                         height: 1px;
+//                                         background: #999;
+//                                         position: absolute;
+//                                         top: 0;
+//                                         left: 0;
+//                                     }
+//                                 }
+//                                 a{
+//                                     display: flex;
+//                                     align-items: center;
+//                                     justify-content: center;
+//                                     width: 100%;
+//                                     height: 100%;
+//                                     font-size: 2rem;
+//                                     text-decoration: none;
+//                                     color: #333;
+//                                     &.active{
+//                                         color: #4737df;
+//                                     }
+//                                 }
+//                             }
+//                         }
+//                     }
+//                 }
+    
+//                 &.filter{
+//                     width: 50%;
+//                     margin: 0 auto;
+//                     padding: 2rem 0;
+//                     position: relative;
+//                     .isDropList{
+//                         display: none;
+//                         width: 90%;
+//                         max-height: -webkit-max-content;
+//                         visibility: visible;
+//                         min-width: 5rem;
+//                         overflow: hidden;
+//                         overflow-y: auto;
+//                         background: #Fff;
+//                         position: absolute;
+//                         top: 6rem;
+//                         right: 5%;
+//                         box-shadow: 0 1px 5px 1px #999;
+//                         ul{
+//                             list-style: none;
+//                             margin: 0;
+//                             padding: 1rem 0;
+//                             li{
+//                                 background-color: #fff;
+//                                 min-height: 5rem;
+//                                 font-size: 2rem;
+//                                 line-height: 5rem;
+//                                 &.active{
+//                                     background-color: #eff2f9;
+//                                 }
+//                                 a{
+//                                     text-decoration: none;
+//                                     color: #333;
+//                                     display: block;
+//                                     padding: 1rem 1.5rem;
+//                                     width: 100%;
+//                                     min-height: 4rem;
+//                                     color: #666;
+//                                     box-sizing: border-box;
+//                                     &.active{
+//                                         color: #4737df;
+//                                     }
+//                                 }
+//                             }
+//                         }
+//                     }
+//                 }
+//             }
+//         }
+//         .phone-num{
+//             width: 100%;
+//             a{
+//                 span{
+//                     color: #000;
+//                     font-size: 2rem;
+//                 }
+//             }
+//             .myphoneNum{
+//                 display: block;
+//                 width: 30rem;
+//                 min-width: 5rem;
+//                 max-height: 23rem;
+//                 overflow: hidden;
+//                 overflow-y: auto;
+//                 background-color: #fff;
+//                 border-radius: 0.6rem;
+//                 padding: 1.5rem 1rem;
+//                 box-sizing: border-box;
+//                 &.numShow{
+//                     border-radius: 0.6rem 0.6rem 0 0;
+//                 }
+//                 &.numHide{
+//                     border-radius: 0.6rem;
+//                 }
+//             }
+//             .num-list{
+//                 display: none;
+//                 width: 30rem;
+//                 min-width: 5rem;
+//                 max-height: 23rem;
+//                 overflow-x: hidden;
+//                 overflow-y: auto;
+//                 background-color: #fff;
+//                 box-shadow: 3px 5px 10px rgb(0 0 0 / 10%);
+//                 border-radius: 0px 0px .6rem .6rem;
+//                 ul{
+//                     width: 100%;
+//                     padding-left: 0;
+//                     margin: 0;
+//                     list-style: none;
+//                     padding: 1rem 0;
+//                     li{
+//                         padding: 1rem 0;
+//                         line-height: 1.5rem;
+//                         background-color: #fff;
+//                         a{
+//                             font-size: 1.8rem;
+//                             color: #666;
+//                             padding: 1rem 1.5rem;
+//                             line-height: 2rem;
+//                             display: flex;
+//                             text-align: left;
+//                             i{
+//                                 &.badge-circle{
+//                                     color: #fff;
+//                                     display: inline-block;
+//                                     width: 2rem;
+//                                     height: 2rem;
+//                                     line-height: 2.1rem;
+//                                     font-size: 1.2rem;
+//                                     font-weight: 500;
+//                                     text-align: center;
+//                                     border-radius: 100%;
+//                                     margin-right: 0.5rem;
+//                                     font-style: normal;
+//                                 }
+//                                 &.badge-line{
+//                                     width: auto;
+//                                     max-width: max-content;
+//                                     height: 1.5rem;
+//                                     line-height: 1.6rem;
+//                                     padding: 0 0.5rem;
+//                                     border-radius: 0.75rem;
+//                                     border: 1px solid #ff5438;
+//                                     font-size: 1rem;
+//                                     display: inline-block;
+//                                     white-space: nowrap;
+//                                     margin: 0.2rem 0 0 1rem;
+//                                     font-style: normal;
+//                                 }
+//                                 &.violet{
+//                                     background: #8358cb;
+//                                 }
+//                                 &.gold{
+//                                     background: #d6ad75;
+//                                 }
+//                                 &.silver{
+//                                     background: #aebad4;
+//                                 }
+//                                 &.orange{
+//                                     color: #ff5438;
+//                                 }
+//                             }
+//                         }
+//                         &.disable{
+//                             pointer-events: none;
+//                             a{
+//                                 color: #dbdbdb !important;
+//                             }
+//                         }
+//                     }
+//                 }
+//             }
 //         }
 //     }
 // }
+
+.dropdown{
+    &-menu{
+        display: flex;
+        justify-content: center;
+        
+        // &-btn{
+        //     background-color: #fff;
+        // }
+    }
+}
 

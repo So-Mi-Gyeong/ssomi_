@@ -173,7 +173,7 @@ header.blackStyle .ui-menu-item a:focus {
   color: #fff;
 }
 
-@media all and (max-width: 758px) {
+@media all and (max-width: 499px) {
   header.blackStyle .ui-menu-nav.open {
     background-color: #fff;
   }
@@ -194,7 +194,28 @@ header.blackStyle .ui-menu-item a:focus {
     width: 100%;
   }
 }
-@media (min-width: 759px) and (max-width: 1100px) {
+@media (min-width: 500px) and (max-width: 757px) {
+  header.blackStyle .ui-menu-nav.open {
+    background-color: #fff;
+  }
+  header.blackStyle .ui-menu-nav.open::before {
+    background: url(../img/ico_menu_black.png) -30px 0 no-repeat;
+  }
+  .ui-menu-nav.open {
+    background-color: #000;
+    border-radius: 50%;
+    left: 90%;
+    margin-top: 2%;
+    z-index: 999;
+  }
+  .ui-menu-nav.open::before {
+    background: url(../img/ico_menu_white.png) -30px 0 no-repeat;
+  }
+  .ui-menu-list.open {
+    width: 100%;
+  }
+}
+@media (min-width: 758px) and (max-width: 1360px) {
   .ui-menu-list {
     width: 50%;
     left: -50%;
