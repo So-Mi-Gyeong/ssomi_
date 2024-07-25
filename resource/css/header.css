@@ -54,6 +54,11 @@ a {
   text-decoration: none;
 }
 
+i,
+em {
+  font-style: normal;
+}
+
 /* button */
 button {
   padding: 0;
