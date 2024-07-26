@@ -1,66 +1,66 @@
 $(document).ready(function(){
     //*********************** dropdown-catearea(dropdown.html) *********************** 
-    //.dropdownmenu을 클릭 시 text color 변경
-    $(".dropdownmenuBtn").click(function(){
-      if($(this).hasClass("active")){//.dropdownmenuBtn이 .active를 가지고 있다면
-        $(this).removeClass("active"); //클릭한 dropdownmenuBtn 에 remove active
-      }else{
-        $(".dropdownmenuBtn").removeClass("active");//this 외 .dropdownmenuBtn 초기화
-        $(this).addClass("active"); //.active가 없다면 클릭한 dropdownmenuBtn 에 add active
-      }
-    });
-  
-    //카테고리 전체 클릭 이벤트
-    $(".btn-select").click(function(){
-        $(".filter .isDropList").hide();//혜택 종류 전체 list hide
-        $(".dropdown-layer .isDropList li").removeClass('active');//list 전체 li에 bg 초기화
-        $(".dropdown-layer .isDropList li a").removeClass('active');//list 전체 a에 color 초기화
-        $(".dropdown-layer").toggle();
-        
-        $(".dropdown-layer .isDropList li").click(function(){
-            $(".dropdown-layer .isDropList li").removeClass('active');//선택자 외 li에 bg 초기화
-            $(".dropdown-layer .isDropList li a").removeClass('active');//선택자 외 a에 color 초기화
+    const listSelect = $(".dropdown-menu-list[data-type='select']"); 
+    const listFilter = $(".dropdown-menu-list[data-type='filter']"); 
 
-            $(this).addClass('active');//선택한 li에 bg 변경
-            $(this).children("a").addClass('active');//선택한 li의 자식요소(a)에 color 변경
-        });
-    });
-  
-    //혜택 종류 전체 클릭 이벤트
-    $(".btn-filter").click(function(){
-        $(".dropdown-layer").hide();//카테고리 전체 list hide
-        $(".filter .isDropList ul li").removeClass('active');//list 전체 li에 bg 초기화
-        $(".filter .isDropList ul li a").removeClass('active');//list 전체 a에 color 초기화
-        $(".filter .isDropList").toggle();
-        
-        $(".filter .isDropList ul li").click(function(){
-            $(".filter .isDropList ul li").removeClass('active');//선택자 외 li에 bg 초기화
-            $(".filter .isDropList ul li a").removeClass('active');//선택자 외 a에 color 초기화
-            $(this).addClass('active');//선택한 li에 bg 변경
-            $(this).children("a").addClass('active');//선택한 li의 자식요소(a)에 color 변경
-        });
+    //공통 색상 클래스 정의
+    const activeColor = "#4737df";
+    const defaultColor = "#000"
+
+    //색상 적용 함수
+    function updateColors(activeType) {
+      $(".menu-cate-btn").each(function() {
+        const btnType = $(this).data("type");
+        const color = btnType === activeType ? activeColor : defaultColor; //'btnType'과 'activeType'이 같으면 'color' 변수에 'activeColr' 그렇지 않으면 'defaultColor' 
+        $(this).children("span").css("color", color);
+      });
+    }
+
+    // 메뉴 버튼 클릭 이벤트
+    $(".menu-cate-btn").click(function() {
+      const type = $(this).data("type");
+      const isSelectType = type === 'select';
+
+      // 상태에 따라 목록 토글 및 색상 업데이트
+      if(isSelectType) {
+        const isVisible = listSelect.is(":visible");
+        listSelect.toggle(!isVisible);   
+        listFilter.hide();
+      } else {
+        const isVisible = listFilter.is(":visible");
+        listFilter.toggle(!isVisible);
+        listSelect.hide();
+      }
+
+      //색상 업데이트
+      updateColors(type);
     });
 
     //*********************** dropdown(dropdown.html) ***********************  
-    $(".isclick").click(function(){
+    //드롭다운 버튼 클릭 시 동작
+    $(".dropdown-phonenum-btn").click(function(){
+      var isVisible = $(".dropdown-phonenum-list").is(":visible");//드롭다운 리스트가 현재 보이는지 확인
 
-      //border style 변경
-      if($(this).hasClass("numShow")){//isclick이 .numShow를 가지고 있다면
-        $(this).addClass("numHide").removeClass("numShow"); //.numHide를 add, .numShow를 remove
-      }else{
-        $(this).addClass("numShow").removeClass("numHide"); //.numShow를 add, .numHide를 remove
+      if(isVisible){
+        //리스트가 보일 때 : 리스트 숨기고 버튼의 border-radius 를 초기화
+        $(".dropdown-phonenum-list").hide();
+        $(this).css("border-radius", ".6rem");
+      } else {
+        //리스트가 숨겨져 있을 때 : 리스트 보이게 하고 버튼의 border-radius를 변경
+        $(".dropdown-phonenum-list").show();
+        $(this).css("border-radius", ".6rem .6rem 0 0");
       }
+    });
 
-      $(".num-list").toggle();//number_list_box open
-      
-      $(".num-list ul li").css("background-color","#fff");//.num-list를 닫으면 li bg 초기화
-      $(".num-list ul li").click(function(){
-          $(".num-list ul li").css("background-color","#fff");//li 클릭 시 나머지 li bg 초기화
-          $(".num-list ul li a").css("color","#666");//li 클릭 시 나머지 a 글자색 초기화
+    //리스트 항목 클릭 시 동작
+    $(".phonenum-list-item").click(function() {
+      //모든 리스트 항목의 배경색과 글자색을 초기화
+      $(".phonenum-list-item").css("background-color", "#fff");
+      $(".phonenum-list-txt").css("color", "#666");
 
-          $(this).css("background-color","#ddd");//클릭 된 li bg 변경
-          $(this).children("a").css("color","#4737df");//클릭 된 li a 글자색 변경
-      });
+      //클릭된 항목의 배경색과 글자색을 변경
+      $(this).css("background-color", "#ddd");
+      $(this).find(".phonenum-list-txt").css("color", "#4737df");
     });
     
     //*********************** input script(inp_acco.html) ***********************

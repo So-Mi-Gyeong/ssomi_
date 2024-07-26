@@ -95,23 +95,23 @@
 
 //phonenum
 .dropdown-phonenum{
-    &-select{
-        width: 30rem;
-        min-width: 5rem;
+    &-select{width: 30rem;}
+    &-btn{
+        width: 100%;
         max-height: 23rem;
         padding: 1.5rem 1rem;
-        border-radius: 0.6rem 0.6rem 0 0;
+        // border-radius: .6rem .6rem 0 0;
+        border-radius: .6rem;
         background-color: #fff;
         box-sizing: border-box;
         overflow: hidden;
         overflow-y: auto;
-        .dropdown-phonenum-btn{
-            span{
-                color: #000;
-                font: {
-                    size: 2rem;
-                    weight: 500;
-                }
+        text-align: left;
+        span{
+            color: #000;
+            font: {
+                size: 2rem;
+                weight: 500;
             }
         }
     }
@@ -156,29 +156,29 @@
                     weight: 500;
                 }
             }
-            span{
-                color: #666;
-                font: {
-                    size: 1.8rem;
-                    weight: 500;
-                };
-            }
-            .suspension{
-                width: auto;
-                height: 1.5rem;
-                padding: 0 .5rem;
-                color: #ff5438;
-                border: .1rem solid #ff5438;
-                border-radius: .75rem;
-                text-align: center;
-                font: {
-                    size: 1rem;
-                    weight: 300;
-                };
-            }
             &.violet::before{background-color: #8358cb;}
             &.gold::before{background-color: #d6ad75;}
             &.silver::before{background-color: #aebad4;}
+        }
+        .phonenum-list-txt{
+            color: #666;
+            font: {
+                size: 1.8rem;
+                weight: 500;
+            };
+        }
+        .suspension{
+            width: auto;
+            height: 1.5rem;
+            padding: 0 .5rem;
+            color: #ff5438;
+            border: .1rem solid #ff5438;
+            border-radius: .75rem;
+            text-align: center;
+            font: {
+                size: 1rem;
+                weight: 300;
+            };
         }
     }
 }

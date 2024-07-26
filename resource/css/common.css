@@ -4739,16 +4739,19 @@ table .t_left {
 
 .dropdown-phonenum-select {
   width: 30rem;
-  min-width: 5rem;
+}
+.dropdown-phonenum-btn {
+  width: 100%;
   max-height: 23rem;
   padding: 1.5rem 1rem;
-  border-radius: 0.6rem 0.6rem 0 0;
+  border-radius: 0.6rem;
   background-color: #fff;
   box-sizing: border-box;
   overflow: hidden;
   overflow-y: auto;
+  text-align: left;
 }
-.dropdown-phonenum-select .dropdown-phonenum-btn span {
+.dropdown-phonenum-btn span {
   color: #000;
   font-size: 2rem;
   font-weight: 500;
@@ -4790,12 +4793,21 @@ table .t_left {
   font-size: 1.2rem;
   font-weight: 500;
 }
-.dropdown-phonenum-list .phonenum-list-btn span {
+.dropdown-phonenum-list .phonenum-list-btn.violet::before {
+  background-color: #8358cb;
+}
+.dropdown-phonenum-list .phonenum-list-btn.gold::before {
+  background-color: #d6ad75;
+}
+.dropdown-phonenum-list .phonenum-list-btn.silver::before {
+  background-color: #aebad4;
+}
+.dropdown-phonenum-list .phonenum-list-txt {
   color: #666;
   font-size: 1.8rem;
   font-weight: 500;
 }
-.dropdown-phonenum-list .phonenum-list-btn .suspension {
+.dropdown-phonenum-list .suspension {
   width: auto;
   height: 1.5rem;
   padding: 0 0.5rem;
@@ -4805,15 +4817,6 @@ table .t_left {
   text-align: center;
   font-size: 1rem;
   font-weight: 300;
-}
-.dropdown-phonenum-list .phonenum-list-btn.violet::before {
-  background-color: #8358cb;
-}
-.dropdown-phonenum-list .phonenum-list-btn.gold::before {
-  background-color: #d6ad75;
-}
-.dropdown-phonenum-list .phonenum-list-btn.silver::before {
-  background-color: #aebad4;
 }
 
 .ui-content.netflix {
