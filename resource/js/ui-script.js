@@ -5,7 +5,7 @@ $(document).ready(function(){
 
     //공통 색상 클래스 정의
     const activeColor = "#4737df";
-    const defaultColor = "#000"
+    const defaultColor = "#000";
 
     //색상 적용 함수
     function updateColors(activeType) {

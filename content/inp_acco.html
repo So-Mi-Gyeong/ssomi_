@@ -21,78 +21,9 @@
     <div class="container">
       <div class="ui-content input">
         <h2>INPUT / ACCORDIAN</h2>
-        <!-- nike -->
-        <div class="checkbox-area">
-            <div class="checkwrap">
-                <div class="checkbox">
-                    <div class="logo area">
-                    <img src="../../ssomi_2024/resource/img/img-nike_logo.png" alt="나이키로고">
-                    <h1>NIKE<br><span>유한회사 나이키코리아</span></h1>
-                    </div>
-                    <div class="slide">
-                    <div class="area terms">
-                        <dl>
-                        <dt class="allcheck">
-                            <input type="checkbox" id="chkAll" class="chkAll" onclick="clickAll()">
-                            <label for="chkAll" class="chk-label">전체 동의하기</label>
-                        </dt>
-                        <dd class="allcheck-txt">
-                            <p>
-                            전체동의는 카카오 및 유한회사 나이키코리아의 서비스 동의를 포함하고 있습니다. 
-                            전체동의는 선택목적에 대한 동의를 포함하고 있으며,
-                            선택목적에 대한 동의를 거부해도 서비스 이용이 가능합니다.
-                            </p>
-                        </dd>
-                        </dl>
-                    </div>
-                    <div class="area terms">
-                        <dl>
-                        <dt>카카오 동의 항목</dt>
-                        <dd>
-                            <input type="checkbox" id="chk01" name="chk" class="inpCheck">
-                            <label for="chk01" class="small-chk">[필수] 카카오 개이정보 제3자 제공 동의</label>
-                            <button type="button" class="termsBtn">보기</button>
-                        </dd>
-                        </dl>
-                    </div>
-                    <div class="area terms">
-                        <dl>
-                        <dt>NIKE 서비스 동의</dt>
-                        <dd>
-                            <input type="checkbox" id="chk02" name="chk" class="inpCheck">
-                            <label for="chk02" class="small-chk">[필수] 이용약관</label>
-                            <button type="button" class="termsBtn">보기</button>
-                        </dd>
-                        </dl>
-                    </div>
-                    <div class="area terms">
-                        <dl>
-                        <dt>NIKE 서비스 동의</dt>
-                        <dd>
-                            <input type="checkbox" id="chk03" name="chk" class="inpCheck">
-                            <label for="chk03" class="small-chk">[필수] 이용약관</label>
-                            <button type="button" class="termsBtn">보기</button>
-                        </dd>
-                        </dl>
-                    </div>
-                    <div class="area terms">
-                        <dl>
-                        <dt>NIKE 서비스 동의</dt>
-                        <dd>
-                            <input type="checkbox" id="chk04" name="chk" class="inpCheck">
-                            <label for="chk04" class="small-chk">[필수] 이용약관</label>
-                            <button type="button" class="termsBtn">보기</button>
-                        </dd>
-                        </dl>
-                    </div>
-                    </div>
-                    <button type="button" class="continue-btn">동의하고 계속하기</button>
-                </div>
-            </div>
-        </div>
-  
-        <!-- 건강검진 -->
-        <div class="container accordian">
+
+        <!-- accordian -->
+        <div class="wrap container accordian">
           <div class="boxwrap">
             <h2><strong>건강검진 정보를</strong><br>연동해주세요</h2>
             <p>건강검진 결과 및 건강분석 서비스 이용을 위한<br>약관에 동의해 주세요.</p>
@@ -106,7 +37,7 @@
                     <div class="terms-subtxt">
                       <input type="checkbox" id="inp01-1" data-name="aaa" class="ui-check-child">
                       <label for="inp01-1">건강검진 서비스 이용 약관 동의(필수)</label>
-                      <button type="button" class="termsBtn">보기</button>
+                      <button type="button" class="checkbox-content-btn">보기</button>
                     </div>
                     <form>
                       <textarea>귀하는 개인(신용)정보의 수집. 이용 및 조회, 제공에 관한 동의를 거부하실 수 있으며, 개인의 신용도 등을 평가하기</textarea>
@@ -125,7 +56,7 @@
                     <div class="terms-subtxt">
                       <input type="checkbox" id="inp02-1" data-name="bbb" class="ui-check-child">
                       <label for="inp02-1">개인정보 수집ㆍ이용 동의 (필수)</label>
-                      <button type="button" class="termsBtn">보기</button>
+                      <button type="button" class="checkbox-content-btn">보기</button>
                     </div>
                     <form>
                       <textarea>귀하는 개인(신용)정보의 수집. 이용 및 조회, 제공에 관한 동의를 거부하실 수 있으며, 개인의 신용도 등을 평가하기</textarea>
@@ -135,7 +66,7 @@
                     <div class="terms-subtxt">
                       <input type="checkbox" id="inp02-2" class="ui-check-child">
                       <label for="inp02-2">건강정보(민감정보) 수집·이용 동의(필수)</label>
-                      <button type="button" class="termsBtn">보기</button>
+                      <button type="button" class="checkbox-content-btn">보기</button>
                     </div>
                     <form>
                       <textarea>귀하는 개인(신용)정보의 수집. 이용 및 조회, 제공에 관한 동의를 거부하실 수 있으며, 개인의 신용도 등을 평가하기</textarea>
@@ -145,7 +76,7 @@
                     <div class="terms-subtxt">
                       <input type="checkbox" id="inp02-3" class="ui-check-child">
                       <label for="inp02-3">개인정보 제3자 제공 동의(필수)</label>
-                      <button type="button" class="termsBtn">보기</button>
+                      <button type="button" class="checkbox-content-btn">보기</button>
                     </div>
                     <form>
                       <textarea>귀하는 개인(신용)정보의 수집. 이용 및 조회, 제공에 관한 동의를 거부하실 수 있으며, 개인의 신용도 등을 평가하기</textarea>
@@ -157,46 +88,116 @@
             <button type="button" class="termsStartBtn" disabled>시작하기</button>
           </div>
         </div>
+
+        <!-- input -->
+        <div class="container">
+          <!-- nike -->
+          <div class="checkbox" data-type="nike">
+              <div class="checkbox-wrap">
+                  <div class="checkbox-type">
+                      <div class="checkbox-logo">
+                        <img src="../../ssomi_2024/resource/img/img-nike_logo.png" alt="나이키로고">
+                        <h1>NIKE<br><span>유한회사 나이키코리아</span></h1>
+                      </div>
+                      <ul class="checkbox-content">
+                        <li class="checkbox-content-wrap" data-style="allCheck">
+                            <div class="checkbox-content-item">
+                              <div class="checkbox-content-tit">
+                                  <input type="checkbox" id="chkAll" class="checkbox-content-inp" onclick="clickAll()">
+                                  <label for="chkAll" class="checkbox-content-label">전체 동의하기</label>
+                              </div>
+                              <p class="checkbox-content-txt">
+                                전체동의는 카카오 및 유한회사 나이키코리아의 서비스 동의를 포함하고 있습니다. 전체동의는 선택목적에 대한 동의를 포함하고 있으며, 선택목적에 대한 동의를 거부해도 서비스 이용이 가능합니다.
+                              </p>
+                            </div>
+                        </li>
+                        <li class="checkbox-content-wrap">
+                            <div class="checkbox-content-item">
+                              <div class="checkbox-content-tit">카카오 동의 항목</div>
+                              <div class="checkbox-content-txt">
+                                  <input type="checkbox" id="chk01" name="chk" class="checkbox-content-inp">
+                                  <label for="chk01" class="checkbox-content-label">[필수] 카카오 개이정보 제3자 제공 동의</label>
+                                  <button type="button" class="checkbox-content-btn">보기</button>
+                              </div>
+                            </div>
+                        </li>
+                        <li class="checkbox-content-wrap">
+                          <div class="checkbox-content-item">
+                            <div class="checkbox-content-tit">NIKE 서비스 동의</div>
+                            <div class="checkbox-content-txt">
+                                <input type="checkbox" id="chk02" name="chk" class="checkbox-content-inp">
+                                <label for="chk02" class="checkbox-content-label">[필수] 이용약관</label>
+                                <button type="button" class="checkbox-content-btn">보기</button>
+                            </div>
+                          </div>
+                        </li>
+                        <li class="checkbox-content-wrap">
+                          <div class="checkbox-content-item">
+                            <div class="checkbox-content-tit">NIKE 서비스 동의</div>
+                            <div class="checkbox-content-txt">
+                                <input type="checkbox" id="chk03" name="chk" class="checkbox-content-inp">
+                                <label for="chk03" class="checkbox-content-label">[필수] 이용약관</label>
+                                <button type="button" class="checkbox-content-btn">보기</button>
+                            </div>
+                          </div>
+                        </li>
+                        <li class="checkbox-content-wrap">
+                          <div class="checkbox-content-item">
+                            <div class="checkbox-content-tit">NIKE 서비스 동의</div>
+                            <div class="checkbox-content-txt">
+                                <input type="checkbox" id="chk04" name="chk" class="checkbox-content-inp">
+                                <label for="chk04" class="checkbox-content-label">[필수] 이용약관</label>
+                                <button type="button" class="checkbox-content-btn">보기</button>
+                            </div>
+                          </div>
+                        </li>
+                      </ul>
+                      <button type="button" class="continue-btn">동의하고 계속하기</button>
+                  </div>
+              </div>
+          </div>
   
-        <!-- checkbox -->
-        <div class="wrap">
-          <div class="custom">
+          <div class="checkbox" data-type="custom">
             <input type="checkbox" id="agree-chk">
             <label for="agree-chk"><em></em>약관을 충분히 이해하였으며 동의 합니다.</label>
           </div>
-          <div class="grade">
+  
+          <div class="checkbox" data-type="grade">
             <input type="radio" name="grade" id="grade-chk1"><label for="grade-chk1"><em></em>초등학생</label>
             <input type="radio" name="grade" id="grade-chk2"><label for="grade-chk2"><em></em>중학생</label>
             <input type="radio" name="grade" id="grade-chk3"><label for="grade-chk3"><em></em>고등학생</label>
             <input type="radio" name="grade" id="grade-chk4"><label for="grade-chk4"><em></em>대학생</label>
           </div>
-          <form class="fontawesome">
-            <input type="checkbox" id="chk1">
-            <label for="chk1">HTML</label>
-            <input type="checkbox" id="chk2">
-            <label for="chk2">CSS</label>
-            <input type="checkbox" id="chk3">
-            <label for="chk3">jQuery</label>
-            <input type="checkbox" id="chk4">
-            <label for="chk4">UIKit</label>
-          </form>
-        </div>
   
-        <!-- emailbox -->
-        <div class="wrap flexWrap">
-          <form class="login">
-            <span>Email</span>
-            <input type="email" placeholder="Email Address">
-            <span>Password</span>
-            <input type="password" placeholder="Password">
-            <p>
-              <label>
-                <input type="checkbox"> Keep me logged in
-              </label>
-              <a href="#none">Forgot Your Password?</a>
-            </p>
-            <button>Log in</button>
-          </form>
+          <div class="checkbox" data-type="fontawesome">
+            <form>
+              <input type="checkbox" id="chk1">
+              <label for="chk1">HTML</label>
+              <input type="checkbox" id="chk2">
+              <label for="chk2">CSS</label>
+              <input type="checkbox" id="chk3">
+              <label for="chk3">jQuery</label>
+              <input type="checkbox" id="chk4">
+              <label for="chk4">UIKit</label>
+            </form>
+          </div>
+    
+          <!-- emailbox -->
+          <div class="wrap flexWrap">
+            <form class="login">
+              <span>Email</span>
+              <input type="email" placeholder="Email Address">
+              <span>Password</span>
+              <input type="password" placeholder="Password">
+              <p>
+                <label>
+                  <input type="checkbox"> Keep me logged in
+                </label>
+                <a href="#none">Forgot Your Password?</a>
+              </p>
+              <button>Log in</button>
+            </form>
+          </div>
         </div>
       </div>
     </div>
