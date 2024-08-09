@@ -123,4 +123,44 @@ body{
 h3 + .pagination-wrap,
 .pagination-wrap + .pagination-wrap{margin-top: 5rem;}
 
-/* ==================================== accessibility.html ================================= */
+/* ==================================== box ================================= */
+.box{
+    &-wrap{
+        width: 100%;
+        margin: 0 auto;
+        padding: 4.8rem 2.4rem 2.4rem 2.4rem;
+        background-color: #fff;
+        box-sizing: border-box;
+    }
+    &-title{
+        &-wrap{
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+        &-tit{
+            line-height: 1.5;
+            color: #000;
+            font: {
+                size: 3rem;
+                weight: 700;
+            }
+            
+            span{
+                font: {
+                    size: 3rem;
+                    weight: 500;
+                }
+            }
+        }
+        &-txt{
+            margin-top: 0;
+            line-height: 1.5;
+            color: #666;
+            font: {
+                size: 1.6rem;
+                weight: 500;
+            }
+        }
+    }
+}
