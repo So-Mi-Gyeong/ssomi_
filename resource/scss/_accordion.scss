@@ -1,5 +1,5 @@
 .accordian{
-    max-width: 500px;
+    max-width: 50rem;
     margin: 0 auto;
     padding: 0;
     font-size: 62.5%;
@@ -17,12 +17,12 @@
         }
     }
     textarea{
-    line-height: 17.38px;
-    font-size: 1.2em;
-    padding: 16px;
+    line-height: 1.8rem;
+    font-size: 1.2rem;
+    padding: 1.6rem;
     background-color: #fff;
-    border: 1px solid #ddd;
-    border-radius: 4px;
+    border: .1rem solid #ddd;
+    border-radius: .4rem;
     box-sizing: border-box;
         &:focus{
             outline: none;
@@ -33,32 +33,32 @@
     }
       /* button */
     .termsBtn{
-        width: 50px;
-        height: 28px;
-        font-size: 1.4em;
+        width: 5rem;
+        height: 2.8rem;
+        font-size: 1.4rem;
         font-weight: 500;
         color: #666;
         background-color: #f3f3f3;
-        border-radius: 4px;
+        border-radius: .4rem;
         text-align: center;
         cursor: pointer;
       }
       .termsStartBtn{
         width: 100%;
-        height: 60px;
+        height: 6rem;
         background-color: #019af9;
         color: #fff;
-        font-size: 1.8em;
+        font-size: 1.8rem;
         font-weight: 700;
-        border-radius: 10px;
+        border-radius: 1rem;
       }
       .accoClick{
         display: inline-block;
-        width: 16px;
-        height: 16px;
+        width: 1.6rem;
+        height: 1.6rem;
         background: url('../img/acco-ico-check.png') -38px -5px no-repeat;
         position: absolute;
-        top: 7px;
+        top: .7rem;
         right: 0;
         cursor: pointer;
       }
@@ -70,41 +70,41 @@
       .boxwrap{
         width: 100%;
         margin: 0 auto;
-        padding: 48px 24px 24px 24px;
+        padding: 4.8rem 2.4rem 2.4rem 2.4rem;
         box-sizing: border-box;
         background-color: #fff;
         h2{
-            font-size: 3em;
+            font-size: 3rem;
             font-weight: 400;
             color: #000;
         }
         p{
-            font-size: 1.6em;
+            font-size: 1.6rem;
             color: #666;
-            padding: 20px 0 36px 0;
+            padding: 2rem 0 3.6rem 0;
         }
         .accordian-area{
             &+.accordian-area,
             &+.termsStartBtn{
-                margin-top: 32px;
+                margin-top: 3.2rem;
             }
             .terms{
                 > label{
-                    font-size: 1.6em;
+                    font-size: 1.6rem;
                     font-weight: 500;
                     display: flex;
                     align-items: center;
                     position: relative;
-                    padding-bottom: 19px;
-                    border-bottom: 1px solid #ddd;
+                    padding-bottom: 1.9rem;
+                    border-bottom: .1rem solid #ddd;
                     &::before{
                         content: '';
                         display: inline-block;
-                        width: 24px;
-                        height: 24px;
+                        width: 2.4rem;
+                        height: 2.4rem;
                         background: #ddd url('../img/acco-ico-check.png') -5px -2px no-repeat;
                         border-radius: 50%;
-                        margin-right: 8px;
+                        margin-right: .8rem;
                     }
                 }
                 > input{
@@ -121,7 +121,7 @@
                 }
                 .termsBox{
                     .terms-content{
-                        margin-top: 24px;
+                        margin-top: 2.4rem;
                         .terms-subtxt{
                             display: flex;
                             align-items: center;
@@ -137,7 +137,7 @@
                                 }
                             }
                             >label{
-                                font-size: 1.4em;
+                                font-size: 1.4rem;
                                 font-weight: 400;
                                 color: #666;
                                 &::before{
@@ -147,7 +147,7 @@
                                     height: 16px;
                                     background: url('../img/acco-ico-check.png') -38px -33px no-repeat;
                                     border-radius: 50%;
-                                    margin-right: 8px;
+                                    margin-right: .8rem;
                                 }
                             }
                             >.termsBtn{
@@ -158,9 +158,9 @@
                         >form{
                             >textarea{
                                 width: 100%;
-                                height: 64px;
+                                height: 6.4rem;
                                 color: #666;
-                                margin-top: 16px; 
+                                margin-top: 1.6rem; 
                             }
                         }
                     }

@@ -4377,7 +4377,7 @@ table .t_left {
 }
 
 .accordian {
-  max-width: 500px;
+  max-width: 50rem;
   margin: 0 auto;
   padding: 0;
   font-size: 62.5%;
@@ -4398,12 +4398,12 @@ table .t_left {
   background-color: #ddd;
 }
 .accordian textarea {
-  line-height: 17.38px;
-  font-size: 1.2em;
-  padding: 16px;
+  line-height: 1.8rem;
+  font-size: 1.2rem;
+  padding: 1.6rem;
   background-color: #fff;
-  border: 1px solid #ddd;
-  border-radius: 4px;
+  border: 0.1rem solid #ddd;
+  border-radius: 0.4rem;
   box-sizing: border-box;
 }
 .accordian textarea:focus {
@@ -4413,32 +4413,32 @@ table .t_left {
   position: relative;
 }
 .accordian .termsBtn {
-  width: 50px;
-  height: 28px;
-  font-size: 1.4em;
+  width: 5rem;
+  height: 2.8rem;
+  font-size: 1.4rem;
   font-weight: 500;
   color: #666;
   background-color: #f3f3f3;
-  border-radius: 4px;
+  border-radius: 0.4rem;
   text-align: center;
   cursor: pointer;
 }
 .accordian .termsStartBtn {
   width: 100%;
-  height: 60px;
+  height: 6rem;
   background-color: #019af9;
   color: #fff;
-  font-size: 1.8em;
+  font-size: 1.8rem;
   font-weight: 700;
-  border-radius: 10px;
+  border-radius: 1rem;
 }
 .accordian .accoClick {
   display: inline-block;
-  width: 16px;
-  height: 16px;
+  width: 1.6rem;
+  height: 1.6rem;
   background: url("../img/acco-ico-check.png") -38px -5px no-repeat;
   position: absolute;
-  top: 7px;
+  top: 0.7rem;
   right: 0;
   cursor: pointer;
 }
@@ -4448,40 +4448,40 @@ table .t_left {
 .accordian .boxwrap {
   width: 100%;
   margin: 0 auto;
-  padding: 48px 24px 24px 24px;
+  padding: 4.8rem 2.4rem 2.4rem 2.4rem;
   box-sizing: border-box;
   background-color: #fff;
 }
 .accordian .boxwrap h2 {
-  font-size: 3em;
+  font-size: 3rem;
   font-weight: 400;
   color: #000;
 }
 .accordian .boxwrap p {
-  font-size: 1.6em;
+  font-size: 1.6rem;
   color: #666;
-  padding: 20px 0 36px 0;
+  padding: 2rem 0 3.6rem 0;
 }
 .accordian .boxwrap .accordian-area + .accordian-area, .accordian .boxwrap .accordian-area + .termsStartBtn {
-  margin-top: 32px;
+  margin-top: 3.2rem;
 }
 .accordian .boxwrap .accordian-area .terms > label {
-  font-size: 1.6em;
+  font-size: 1.6rem;
   font-weight: 500;
   display: flex;
   align-items: center;
   position: relative;
-  padding-bottom: 19px;
-  border-bottom: 1px solid #ddd;
+  padding-bottom: 1.9rem;
+  border-bottom: 0.1rem solid #ddd;
 }
 .accordian .boxwrap .accordian-area .terms > label::before {
   content: "";
   display: inline-block;
-  width: 24px;
-  height: 24px;
+  width: 2.4rem;
+  height: 2.4rem;
   background: #ddd url("../img/acco-ico-check.png") -5px -2px no-repeat;
   border-radius: 50%;
-  margin-right: 8px;
+  margin-right: 0.8rem;
 }
 .accordian .boxwrap .accordian-area .terms > input:checked + label::before {
   background-color: #019af9;
@@ -4490,7 +4490,7 @@ table .t_left {
   background: url("../img/acco-ico-check.png") -67px -5px no-repeat;
 }
 .accordian .boxwrap .accordian-area .terms .termsBox .terms-content {
-  margin-top: 24px;
+  margin-top: 2.4rem;
 }
 .accordian .boxwrap .accordian-area .terms .termsBox .terms-content .terms-subtxt {
   display: flex;
@@ -4504,7 +4504,7 @@ table .t_left {
   background: url("../img/acco-ico-check.png") -10px -33px no-repeat;
 }
 .accordian .boxwrap .accordian-area .terms .termsBox .terms-content .terms-subtxt > label {
-  font-size: 1.4em;
+  font-size: 1.4rem;
   font-weight: 400;
   color: #666;
 }
@@ -4515,7 +4515,7 @@ table .t_left {
   height: 16px;
   background: url("../img/acco-ico-check.png") -38px -33px no-repeat;
   border-radius: 50%;
-  margin-right: 8px;
+  margin-right: 0.8rem;
 }
 .accordian .boxwrap .accordian-area .terms .termsBox .terms-content .terms-subtxt > .termsBtn {
   position: absolute;
@@ -4523,9 +4523,9 @@ table .t_left {
 }
 .accordian .boxwrap .accordian-area .terms .termsBox .terms-content > form > textarea {
   width: 100%;
-  height: 64px;
+  height: 6.4rem;
   color: #666;
-  margin-top: 16px;
+  margin-top: 1.6rem;
 }
 
 .ui-content.chart .skill-progress {
@@ -4967,14 +4967,12 @@ html {
   font-size: 62.5%;
 }
 
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 374px) {
   html {
-    font-size: 50%;
+    font-size: 2.66vw;
   }
-}
-@media screen and (max-width: 360px) {
-  html {
-    font-size: 56.25%;
+  .container .ui-content {
+    padding: 5vw;
   }
 }
 /* scroll */
