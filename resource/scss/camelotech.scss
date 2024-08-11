@@ -132,7 +132,7 @@ input[type=radio],
     box-sizing: border-box;
 }
 .header{
-    width: calc(100% - 20vw);
+    width: calc(100% - 11vw);
     position: fixed;
     bottom: 0;
     right: 0;
@@ -144,17 +144,28 @@ input[type=radio],
         align-items: center;
     }
     &-info{
+        min-width: 18vw;
+        padding: 0 2rem;
         height: 100%;
         padding: 1rem 2rem;
         display: flex;
         justify-content: flex-start;
         align-items: center;
         background-color: #fff;
+        &-name{
+            color: #254667;
+        }
+        &-btn{
+            height: 1.7vw;
+            padding: 0 .8vw;
+            color: #254667;
+            background-color: #e4edf5;
+        }
     }
     &-action{
         width: 100%;
         height: 100%;
-        padding: 1rem 2rem;
+        padding: 0 2rem;
         display: flex;
         justify-content: flex-start;
         align-items: center;
@@ -188,7 +199,7 @@ input[type=radio],
             gap: .8rem;
         }
         &-name{
-            
+            font-size: 0.8vw;
         }
         &-btn{
             min-height: 4rem;
@@ -221,13 +232,16 @@ input[type=radio],
 .content{
     width: 100%;
     height: 100vh;
-    display: grid;
-    grid-template-columns: 1fr 4fr;
+    display: flex;
+    justify-content: flex-start;
+    // display: grid;
+    // grid-template-columns: 1fr 4fr;
 }
 
 // main left
 .main{
     &-bar-wrap{
+        width: 12.5vw;
         background-color: #EAF6FF;
         &::before{
             content: '';
@@ -374,7 +388,7 @@ input[type=radio],
     &-list{
         width: 100%;
         display: flex;
-        justify-content: center;
+        justify-content: flex-start;
         align-items: center;
         gap: 2vw;
         flex-wrap: wrap;
@@ -383,7 +397,7 @@ input[type=radio],
         height: 21vw;
         box-sizing: border-box;
         &[data-style="temperature"]{
-            min-width: 22vw;
+            min-width: 21vw;
             border: .1rem solid #E4EDF5;
             border-radius: .3vw;
             background-color: #EDF5FC;
@@ -550,6 +564,23 @@ input[type=radio],
         font-weight: 600;
         line-height: 1.4vw;
         color: #747474;
+        span{
+            color: #008fff;
+            margin-left: .6rem;
+            &.on{
+                position: relative;
+                &::before{
+                    content: '';
+                    width:0.3vw;
+                    height: 0.3vw;
+                    border-radius: 50%;
+                    background-color: #f10000;
+                    position: absolute;
+                    top: -0.3vw;
+                    right: -0.3vw;
+                }
+            }
+        }
     }
 }
 
