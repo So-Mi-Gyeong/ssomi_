@@ -2,6 +2,9 @@
 html {
   font-size: 62.5%;
 }
+html * {
+  font-family: "base";
+}
 
 @media screen and (max-width: 320px) {
   html {
@@ -95,20 +98,159 @@ input[type=radio],
   padding: 0 !important;
 }
 
+/* ============================= font ============================= */
+@font-face {
+  font-family: "Base";
+  font-weight: 900;
+  font-display: swap;
+  src: local("Pretendard Black"), url(../font/pretendard/Pretendard-Black.subset.woff2) format("woff2"), url(../font/pretendard/Pretendard-Black.subset.woff) format("woff");
+}
+@font-face {
+  font-family: "Base";
+  font-weight: 800;
+  font-display: swap;
+  src: local("Pretendard ExtraBold"), url(../font/pretendard/Pretendard-ExtraBold.subset.woff2) format("woff2"), url(../font/pretendard/Pretendard-ExtraBold.subset.woff) format("woff");
+}
+@font-face {
+  font-family: "Base";
+  font-weight: 700;
+  font-display: swap;
+  src: local("Pretendard Bold"), url(../font/pretendard/Pretendard-Bold.subset.woff2) format("woff2"), url(../font/pretendard/Pretendard-Bold.subset.woff) format("woff");
+}
+@font-face {
+  font-family: "Base";
+  font-weight: 600;
+  font-display: swap;
+  src: local("Pretendard SemiBold"), url(../font/pretendard/Pretendard-SemiBold.subset.woff2) format("woff2"), url(../font/pretendard/Pretendard-SemiBold.subset.woff) format("woff");
+}
+@font-face {
+  font-family: "Base";
+  font-weight: 500;
+  font-display: swap;
+  src: local("Pretendard Medium"), url(../font/pretendard/Pretendard-Medium.subset.woff2) format("woff2"), url(../font/pretendard/Pretendard-Medium.subset.woff) format("woff");
+}
+@font-face {
+  font-family: "Base";
+  font-weight: 400;
+  font-display: swap;
+  src: local("Pretendard Regular"), url(../font/pretendard/Pretendard-Regular.subset.woff2) format("woff2"), url(../font/pretendard/Pretendard-Regular.subset.woff) format("woff");
+}
+@font-face {
+  font-family: "Base";
+  font-weight: 300;
+  font-display: swap;
+  src: local("Pretendard Light"), url(../font/pretendard/Pretendard-Light.subset.woff2) format("woff2"), url(../font/pretendard/Pretendard-Light.subset.woff) format("woff");
+}
+@font-face {
+  font-family: "Base";
+  font-weight: 200;
+  font-display: swap;
+  src: local("Pretendard ExtraLight"), url(../font/pretendard/Pretendard-ExtraLight.subset.woff2) format("woff2"), url(../font/pretendard/Pretendard-ExtraLight.subset.woff) format("woff");
+}
+@font-face {
+  font-family: "Base";
+  font-weight: 100;
+  font-display: swap;
+  src: local("Pretendard Thin"), url(../font/pretendard/Pretendard-Thin.subset.woff2) format("woff2"), url(../font/pretendard/Pretendard-Thin.subset.woff) format("woff");
+}
 /* ============================= 공통 ============================= */
+.date-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3vw;
+  position: absolute;
+  top: 3.3vw;
+  right: 2.5vw;
+  text-align: right;
+}
+.date-wrap .today {
+  font-size: 1vw;
+  font-weight: 300;
+  line-height: 1.2vw;
+  color: #747474;
+}
+.date-wrap .time {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.3vw;
+  font-weight: 500;
+  line-height: 1.6vw;
+  color: #747474;
+}
+.date-wrap .time span {
+  font-size: 1.3vw;
+  font-weight: 300;
+  line-height: 1.6vw;
+  color: #747474;
+}
+
+.main-select-wrap {
+  margin-top: 0.3vw;
+  position: relative;
+}
+.main-select-wrap.is-val .main-select-tit::after {
+  transform: rotate(180deg);
+}
+.main-select-wrap.is-val .main-select-val {
+  display: block;
+}
+.main-select-btn {
+  width: 9.8vw;
+  height: 1.8vw;
+  background-color: #fff;
+  border-radius: 0.3vw;
+}
+.main-select-tit {
+  font-size: 0.8vw;
+  font-weight: 600;
+  color: #00090F;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.main-select-tit::after {
+  content: "";
+  display: block;
+  width: 1.2vw;
+  height: 1.2vw;
+  background: url(../../camelotech/resource/img/ico-arrow.png) 0 0 no-repeat;
+  background-size: 1.2vw 1.2vw;
+}
+.main-select-val {
+  display: none;
+  width: 9.8vw;
+  padding: 0.2vw;
+  background-color: #fff;
+  border-radius: 0.3vw;
+  position: absolute;
+  top: 2vw;
+  left: 0;
+  box-sizing: border-box;
+}
+.main-select-val .select-val-item {
+  width: 100%;
+  min-height: 1.7vw;
+  line-height: 2;
+  padding: 0.3vw 0.7vw;
+  font-size: 0.8vw;
+  font-weight: 600;
+  text-align: left;
+  color: #00090F;
+  background-color: #fff;
+  border-radius: 0.3vw;
+}
+.main-select-val .select-val-item:focus {
+  background-color: #E4EDF5;
+}
+
 .data-state {
   font-size: 0.8vw;
   font-weight: 600;
   line-height: 1.2vw;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
   gap: 0.3vw;
 }
 .data-state::before {
@@ -143,49 +285,150 @@ input[type=radio],
   background-color: #F10000;
 }
 
+/* ============================= 버튼 ============================= */
+.camel-btn {
+  width: 100%;
+  min-height: 2.7vw;
+  font-size: 1vw;
+  font-weight: 500;
+  line-height: 1.2vw;
+  text-align: center;
+  border-radius: 0.3vw;
+}
+.camel-btn-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.8vw;
+}
+.camel-btn[data-style=primary] {
+  color: #85A0BA;
+  background-color: #E4EDF5;
+}
+.camel-btn[data-style=primary-skyblue] {
+  color: #fff;
+  background-color: #002943;
+}
+
+/* ============================= 팝업 ============================= */
+.camel-modal {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  justify-content: center;
+  align-items: center;
+}
+.camel-modal[aria-hidden=false] {
+  display: flex;
+}
+.camel-modal::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 0;
+  opacity: 1;
+}
+.camel-modal-wrap {
+  position: relative;
+  display: block;
+  width: 100%;
+  max-width: 33.3vw;
+  padding: 2.5vw 2.9vw;
+  border: 0.1rem solid #E4EDF5;
+  border-radius: 0.3vw;
+  background-color: #fff;
+}
+.camel-modal-head {
+  min-height: 2vw;
+  position: relative;
+}
+.camel-modal-body {
+  margin-top: 1.3vw;
+  text-align: center;
+}
+.camel-modal-foot {
+  margin-top: 3.7vw;
+}
+.camel-modal-close {
+  width: 2vw;
+  height: 2vw;
+  padding: 0;
+  position: absolute;
+  right: 0;
+}
+.camel-modal-close::before {
+  content: "";
+  display: block;
+  width: 2vw;
+  height: 2vw;
+  background: url(../../camelotech/resource/img/ico-close.png);
+  background-size: 2vw;
+}
+.camel-modal-tit {
+  font-size: 1.7vw;
+  font-weight: 500;
+  color: #00090F;
+}
+.camel-modal-tit + .camel-modal-txt {
+  margin-top: 1.7vw;
+}
+.camel-modal-txt {
+  font-size: 1.2vw;
+  font-weight: 300;
+  color: #747474;
+}
+
 /* ============================= 개별 ============================= */
 .wrapper {
   width: 100%;
   position: relative;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 .header {
+<<<<<<< HEAD
   width: calc(100% - 11vw);
+=======
+  max-width: 87.5vw;
+  height: 5rem;
+>>>>>>> 5230a5259085ef2741da35e67fa41f273dbe6316
   position: fixed;
   bottom: 0;
   right: 0;
   z-index: 9;
 }
 .header-wrap {
-  height: 5rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
+  height: 100%;
   display: flex;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: flex-start;
+  align-items: center;
 }
 .header-info {
+<<<<<<< HEAD
   min-width: 18vw;
   padding: 0 2rem;
+=======
+  min-width: 26.5vw;
+>>>>>>> 5230a5259085ef2741da35e67fa41f273dbe6316
   height: 100%;
-  padding: 1rem 2rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
+  min-height: 3vw;
+  padding: 0 2rem;
   display: flex;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: space-between;
+  align-items: center;
   background-color: #fff;
 }
+<<<<<<< HEAD
 .header-info-name {
   color: #254667;
 }
@@ -201,65 +444,88 @@ input[type=radio],
   padding: 0 2rem;
   display: -webkit-box;
   display: -ms-flexbox;
+=======
+.header-info-wrap {
+>>>>>>> 5230a5259085ef2741da35e67fa41f273dbe6316
   display: flex;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  gap: 1.6rem;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1.3vw;
+}
+.header-info-name {
+  font-size: 1vw;
+  font-weight: 600;
+  color: #254667;
+}
+.header-info-btn {
+  min-height: 1.7vw;
+  padding: 0 0.8vw;
+  font-size: 0.8vw;
+  font-weight: 600;
+  color: #254667;
+  background-color: #E4EDF5;
+  border-radius: 0.3vw;
+}
+.header-action {
+  height: 100%;
+  padding: 0 2vw;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0.8vw;
   background-color: #002943;
 }
 .header-action[data-type=action02] .header-action-item:last-child {
-  width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
 }
 .header-action-list {
   width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: space-between;
+  align-items: center;
   color: #fff;
-  gap: 1.6rem;
+  gap: 0.8vw;
 }
 .header-action-item {
   width: 100%;
 }
 .header-action-item[data-action=true] .header-action-name {
-  padding: 0.5rem;
-  border: 0.1rem solid #1F9D00;
-  border-radius: 0.5rem;
+  color: #85A0BA;
+}
+.header-action-item[data-action=true] .header-action-name[data-color=green] {
+  padding: 0.2vw 0.5vw;
+  color: #32FF00;
+  border: 0.1rem solid #32FF00;
+  border-radius: 0.3vw;
+}
+.header-action-item[data-action=true] .header-action-name[data-color=green] + .progress-container {
+  background-color: #254667;
+}
+.header-action-item[data-action=true] .progress-container {
+  background-color: #85A0BA;
 }
 .header-action-wrap {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: flex-start;
+  align-items: center;
   gap: 0.8rem;
 }
 .header-action-name {
   font-size: 0.8vw;
+<<<<<<< HEAD
+=======
+  font-weight: 600;
+  color: #254667;
+>>>>>>> 5230a5259085ef2741da35e67fa41f273dbe6316
 }
 .header-action-btn {
-  min-height: 4rem;
-  padding: 0 2rem;
-  font-size: 2rem;
-  font-weight: 500;
+  width: 5.8vw;
+  height: 1.7vw;
+  font-size: 0.8vw;
+  font-weight: 600;
   color: #fff;
-  border-radius: 0.8rem;
+  border-radius: 0.3vw;
   background-color: #008fff;
 }
 .header-action-btn[data-type=reserve] {
@@ -267,8 +533,8 @@ input[type=radio],
 }
 .header .progress-container {
   width: 100%;
-  min-width: 120px;
-  background-color: #85a0ba;
+  min-width: 6.9vw;
+  background-color: #254667;
   border-radius: 25px;
   overflow: hidden;
 }
@@ -277,19 +543,23 @@ input[type=radio],
   width: 0;
   background-color: #32ff00;
   border-radius: 25px 0 0 25px;
-  -webkit-transition: width 0.5s ease-in-out;
   transition: width 0.5s ease-in-out;
 }
 
 .content {
   width: 100%;
   height: 100vh;
+<<<<<<< HEAD
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
+=======
+  display: flex;
+  justify-content: flex-start;
+>>>>>>> 5230a5259085ef2741da35e67fa41f273dbe6316
 }
 
 .main-bar-wrap {
@@ -306,43 +576,33 @@ input[type=radio],
 }
 .main-logo {
   position: absolute;
-  top: 2vw;
-  left: 2vw;
+  top: 3.6vw;
+  left: 1.7vw;
 }
 .main-logo img {
-  width: 9vw;
-  height: 1vw;
+  width: 9.2vw;
+  height: 1.1vw;
 }
-
 .main-facility-wrap {
   padding: 3vw 1vw 2vw;
 }
 .main-facility-title {
-  font-size: 1.2vw;
+  margin-bottom: 2.3vw;
+  font-size: 1vw;
   font-weight: 600;
   color: #00090F;
 }
 .main-setting-menu {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   gap: 2vw;
   position: absolute;
   bottom: 2vw;
   left: 1vw;
 }
 .main-setting-list {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   gap: 0.7vw;
 }
 .main-setting-item {
@@ -361,15 +621,9 @@ input[type=radio],
   background: url(../../camelotech/resource/img/ico-power.png) 0 0 no-repeat;
 }
 .main-setting-item[data-icon] {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: flex-start;
+  align-items: center;
 }
 .main-setting-item[data-icon]::before {
   content: "";
@@ -378,6 +632,11 @@ input[type=radio],
   height: 1vw;
   background-size: 1vw;
 }
+.main-setting-btn {
+  font-size: 0.8vw;
+  font-weight: 600;
+  color: #254667;
+}
 .main-setting-ver {
   font-size: 0.9vw;
   font-weight: 400;
@@ -385,31 +644,24 @@ input[type=radio],
 }
 
 .content-body {
-  width: 100%;
+  width: calc(100% - 12.5vw);
   padding: 3.3vw 2.5vw 0;
   background-color: #F5FBFF;
   position: relative;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 .content-body .content-body-title[data-style=img] img {
-  width: 8vw;
-  height: 2vw;
+  width: 7.9vw;
+  height: 2.1vw;
 }
 .content-body .content-body-title[data-style=text] {
   font-size: 2vw;
   font-weight: 600;
   line-height: 2.3vw;
   color: #000E16;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: flex-start;
+  align-items: center;
   gap: 0.7vw;
 }
 .content-body .content-body-title[data-style=text] span {
@@ -419,48 +671,16 @@ input[type=radio],
   color: #000E16;
 }
 
-.date-wrap {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  gap: 0.3vw;
-  position: absolute;
-  top: 2.9vw;
-  right: 2.5vw;
-  text-align: right;
-}
-.date-wrap .today {
-  font-size: 1.2vw;
-  font-weight: 300;
-  line-height: 1.2vw;
-  color: #747474;
-}
-.date-wrap .time {
-  font-size: 1vw;
-  font-weight: 500;
-  line-height: 2vw;
-  color: #747474;
-}
-.date-wrap .time span {
-  font-size: 1vw;
-  font-weight: 300;
-  line-height: 2vw;
-  color: #747474;
-}
-
 .manufacturing-wrap {
   width: 100%;
   margin-top: 11vw;
 }
 .manufacturing-list {
   width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
+  max-width: 100vw;
+  margin: 0 auto;
   display: flex;
+<<<<<<< HEAD
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
@@ -470,95 +690,105 @@ input[type=radio],
   gap: 2vw;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+=======
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1.7vw;
+  flex-wrap: wrap;
+>>>>>>> 5230a5259085ef2741da35e67fa41f273dbe6316
 }
 .manufacturing-item {
+  width: auto;
   height: 21vw;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 .manufacturing-item[data-style=temperature] {
+<<<<<<< HEAD
   min-width: 21vw;
+=======
+  width: 22.5vw;
+>>>>>>> 5230a5259085ef2741da35e67fa41f273dbe6316
   border: 0.1rem solid #E4EDF5;
   border-radius: 0.3vw;
   background-color: #EDF5FC;
 }
 .manufacturing-item[data-style=temperature] .temp-wrap {
+  width: 22.5vw;
   height: 100%;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  padding: 1.2vw;
+  box-sizing: border-box;
+  padding: 1vw;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
   grid-gap: 2vw;
 }
 .manufacturing-item[data-style=temperature] .temp-list {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   gap: 0.3vw;
   position: relative;
 }
 .manufacturing-item[data-style=temperature] .temp-list:nth-of-type(1)::after {
   content: "";
   width: 0.1vw;
-  height: 100%;
+  height: calc(100% + 1.2vw);
   background-color: #E4EDF5;
   position: absolute;
-  bottom: -0.1vw;
-  right: -0.9vw;
+  bottom: -1.2vw;
+  right: -1vw;
 }
 .manufacturing-item[data-style=temperature] .temp-list:nth-of-type(2)::after {
   content: "";
-  width: 100%;
+  width: calc(100% + 1.2vw);
   height: 0.1vw;
   background-color: #E4EDF5;
   position: absolute;
-  bottom: -0.9vw;
-  left: -0.1vw;
+  bottom: -1.2vw;
+  left: -1.2vw;
 }
 .manufacturing-item[data-style=temperature] .temp-list:nth-of-type(3)::after {
   content: "";
-  width: 100%;
+  width: calc(100% + 1.2vw);
   height: 0.1vw;
   background-color: #E4EDF5;
   position: absolute;
-  top: -0.1vw;
-  right: -0.1vw;
+  top: -0.9vw;
+  right: -1.2vw;
 }
 .manufacturing-item[data-style=temperature] .temp-list:nth-of-type(4)::after {
   content: "";
   width: 0.1vw;
-  height: 100%;
+  height: calc(100% + 1.2vw);
   background-color: #E4EDF5;
   position: absolute;
-  top: -0.1vw;
-  left: -0.1vw;
+  top: -1.1vw;
+  left: -1.1vw;
+}
+.manufacturing-item[data-style=temperature] .temp-list-btn {
+  min-height: 3.2vw;
+  padding: 0 1.3vw;
+  margin-top: 1.3vw;
+  font-size: 0.9vw;
+  font-weight: 500;
+  line-height: 1.1vw;
+  color: #85A0BA;
+  background-color: #fff;
+  border-radius: 0.3vw;
 }
 .manufacturing-item[data-style=temperature] .temp-item {
   font-size: 2.5vw;
   font-weight: 300;
   line-height: 3vw;
   color: #85A0BA;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
   gap: 0.1vw;
 }
 .manufacturing-item[data-style=temperature] .temp-item::before {
@@ -584,27 +814,20 @@ input[type=radio],
   background-size: 2.5vw;
 }
 .manufacturing-item[data-style=temperature] .temp-item-txt {
-  font-size: 1.2vw;
+  font-size: 1vw;
   font-weight: 600;
   line-height: 1.4vw;
   text-align: center;
   color: #85A0BA;
 }
-.manufacturing-item[data-style=temperature] .temp-list-btn {
-  min-height: 3.2vw;
-  padding: 0 0.1vw;
-  margin-top: 1.3vw;
-  font-size: 0.9vw;
-  font-weight: 500;
-  line-height: 1.32vw;
-  color: #85A0BA;
-  background-color: #fff;
-  border-radius: 0.3vw;
+.manufacturing-item:nth-last-child(1) {
+  align-self: flex-start;
 }
 .manufacturing-btn {
+  width: 18vw;
   min-width: 15vw;
   height: 100%;
-  padding: 3vw;
+  padding: 3.9vw 2.5vw 1.7vw;
   background-color: #fff;
   border: 0.1rem solid #E4EDF5;
   border-radius: 0.3vw;
@@ -613,39 +836,32 @@ input[type=radio],
   border: 0.1rem solid #008FFF;
 }
 .manufacturing-content-tit {
-  font-size: 2vw;
+  font-size: 1.7vw;
   font-weight: 500;
   line-height: 2vw;
   color: #00090F;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: column;
+  align-items: center;
   gap: 2vw;
 }
 .manufacturing-content-tit[data-style=processing]::before {
   background: url(../../camelotech/resource/img/img-processing.png) 0 0 no-repeat;
-  background-size: 7vw 7vw;
+  background-size: 6.7vw 6.7vw;
 }
 .manufacturing-content-tit[data-style=flow]::before {
   background: url(../../camelotech/resource/img/img-flow.png) 0 0 no-repeat;
-  background-size: 7vw 7vw;
+  background-size: 6.7vw 6.7vw;
 }
 .manufacturing-content-tit[data-style=cartridge]::before {
   background: url(../../camelotech/resource/img/img-cartridge.png) 0 0 no-repeat;
-  background-size: 7vw 7vw;
+  background-size: 6.7vw 6.7vw;
 }
 .manufacturing-content-tit::before {
   content: "";
   display: block;
-  width: 7vw;
-  height: 7vw;
+  width: 6.7vw;
+  height: 6.7vw;
 }
 .manufacturing-content-tit::after {
   content: "";
@@ -655,16 +871,26 @@ input[type=radio],
 }
 .manufacturing-content-txt {
   margin-top: 1vw;
-  font-size: 1.2vw;
+  font-size: 1vw;
   font-weight: 600;
   line-height: 1.4vw;
   color: #747474;
+<<<<<<< HEAD
 }
 .manufacturing-content-txt span {
   color: #008fff;
   margin-left: 0.6rem;
 }
 .manufacturing-content-txt span.on {
+=======
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.3vw;
+}
+.manufacturing-content-txt span {
+  color: #008FFF;
+>>>>>>> 5230a5259085ef2741da35e67fa41f273dbe6316
   position: relative;
 }
 .manufacturing-content-txt span.on::before {
@@ -672,8 +898,16 @@ input[type=radio],
   width: 0.3vw;
   height: 0.3vw;
   border-radius: 50%;
+<<<<<<< HEAD
   background-color: #f10000;
   position: absolute;
   top: -0.3vw;
   right: -0.3vw;
 }
+=======
+  background-color: #F10000;
+  position: absolute;
+  top: -0.2vw;
+  right: -0.2vw;
+}/*# sourceMappingURL=camelotech.css.map */
+>>>>>>> 5230a5259085ef2741da35e67fa41f273dbe6316

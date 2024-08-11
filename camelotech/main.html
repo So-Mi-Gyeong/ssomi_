@@ -3,9 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>카멜로테크</title>
-
     <link rel="stylesheet" href="../resource/css/camelotech.css">
 </head>
 <body>
@@ -13,42 +11,44 @@
         <header class="header">
             <div class="header-wrap">
                 <div class="header-info">
-                    <div class="data-state" data-type="green">제조중</div>
-                    <div class="header-info-name"><span>정문수</span>님</div>
+                    <div class="header-info-wrap">
+                        <div class="data-state" data-type="green">제조중</div>
+                        <div class="header-info-name"><span>정문수</span> 님</div>
+                    </div>
                     <button type="button" class="header-info-btn">제조 현황 보기</button>
                 </div>  
                 <!-- 예열/세척 만 있는 경우 data-type="action" 추가 -->
                 <div class="header-action" data-type="action">
                     <ul class="header-action-list">
-                        <li class="header-action-item manufacturing">
+                        <li class="header-action-item" data-action="true">
                             <div class="header-action-wrap">
                                 <span class="header-action-name">세척</span>
                                 <div class="progress-container">
-                                    <div class="progress-bar" data-percentage="50">50%</div>
+                                    <div class="progress-bar">50%</div>
                                 </div>
                             </div>
                         </li>
-                        <li class="header-action-item booting">
+                        <li class="header-action-item" data-action="true">
                             <div class="header-action-wrap">
                                 <span class="header-action-name">온수투입</span>
                                 <div class="progress-container">
-                                    <div class="progress-bar" data-percentage="30">30%</div>
+                                    <div class="progress-bar">30%</div>
                                 </div>
                             </div>
                         </li>
-                        <li class="header-action-item idle" data-action="true">
+                        <li class="header-action-item" data-action="true">
                             <div class="header-action-wrap">
                                 <span class="header-action-name" data-color="green">재료투입</span>
                                 <div class="progress-container">
-                                    <div class="progress-bar" data-percentage="70">70%</div>
+                                    <div class="progress-bar" data-percentage="80">70%</div>
                                 </div>
                             </div>
                         </li>
-                        <li class="header-action-item error">
+                        <li class="header-action-item">
                             <div class="header-action-wrap">
                                 <span class="header-action-name">교반중</span>
                                 <div class="progress-container">
-                                    <div class="progress-bar" data-percentage="10">10%</div>
+                                    <div class="progress-bar">10%</div>
                                 </div>
                             </div>
                         </li>
@@ -71,16 +71,22 @@
                     <h1 class="main-logo"><img src="../camelotech/resource/img/img-logo.png" alt="카멜로테크 로고 이미지"></h1>
                     <div class="main-facility-wrap">
                         <h3 class="main-facility-title">경희청담한의원</h3>
-                        <!-- <dl class="main-facility-selection">
-                            <dt>설비 선택</dt>
-                            <dd><input type="text"></dd>
-                        </dl> -->
+                        <div class="main-select-wrap"><!-- 선택값이 있는 경우 class="is-val"추가 -->
+                            <button type="button" class="main-select-btn">
+                                <span class="main-select-tit">설비 No. 1</span>
+                            </button>
+                            <span class="main-select-val">
+                                <button type="button" class="select-val-item" data-select="true" onclick="showModal()">설비 No. 1</button>
+                                <!-- <button type="button" class="select-val-item" data-select="true" onclick="showModal()">설비 No. 1</button> -->
+                                <button type="button" class="select-val-item">김원장님 전용 설비</button>
+                            </span>
+                        </div>
                     </div>
                     <div class="main-setting-menu">
                         <ul class="main-setting-list">
-                            <li class="main-setting-item" data-icon="report">알림</li>
-                            <li class="main-setting-item" data-icon="settings">환경설정</li>
-                            <li class="main-setting-item" data-icon="power">종료</li>
+                            <li class="main-setting-item" data-icon="report"><button type="button" class="main-setting-btn">알림</button></li>
+                            <li class="main-setting-item" data-icon="settings"><button type="button" class="main-setting-btn">환경설정</button></li>
+                            <li class="main-setting-item" data-icon="power"><button type="button" class="main-setting-btn">종료</button></li>
                         </ul>
                         <span class="main-setting-ver">HAP Ver 1.0</span>
                     </div>
@@ -128,7 +134,7 @@
                                     <div class="temp-list">
                                         <span class="temp-item-state data-state" data-type="green">정상</span>
                                         <span class="temp-item" data-style="thermometer">24</span>
-                                        <span class="temp-item-txt">카트리지 온도</span>
+                                        <span class="temp-item-txt">카트리 지 온도</span>
                                     </div>
                                     <div class="temp-list">
                                         <span class="temp-item-state data-state" data-type="green">정상</span>
@@ -152,16 +158,55 @@
             </div>
         </div>
     </div>
+    <!-- modal -->
+    <div class="camel-modal" id="myModal">
+        <div class="camel-modal-wrap">
+            <div class="camel-modal-head">
+                <button type="button" class="camel-modal-close" data-icon="pop-close" aria-label="창닫기" onclick="hideModal()"></button>
+            </div>
+            <div class="camel-modal-body">
+                <p class="camel-modal-tit">설비 선택</p>
+                <p class="camel-modal-txt">설비 No. 1으로 변경하시겠습니까?</p>
+            </div>
+            <div class="camel-modal-foot">
+                <div class="camel-btn-wrap">
+                    <button type="button" class="camel-btn" data-style="primary-skyblue" onclick="hideModal()">예</button>
+                    <button type="button" class="camel-btn" data-style="primary" onclick="hideModal()">아니오</button>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 <script>
-document.addEventListener("DOMContentLoaded", function() {
-    const progressBars = document.querySelectorAll(".progress-bar");
+    function showModal() {
+        const modal = document.getElementById('myModal');
+        modal.style.display = 'flex'; // 모달을 보이도록 설정
+    }
 
-    progressBars.forEach(bar => {
-        const percentage = bar.getAttribute("data-percentage");
-        bar.style.width = `${percentage}%`;
-        bar.textContent = `${percentage}%`;
+    function hideModal() {
+        const modal = document.getElementById('myModal');
+        modal.style.display = 'none'; // 모달을 숨김
+    }
+
+    // 페이지 로딩 후 실행될 초기화 함수
+    document.addEventListener("DOMContentLoaded", function() {
+        // progress bar 초기화
+        const progressBars = document.querySelectorAll(".progress-bar");
+        progressBars.forEach(bar => {
+            const percentage = bar.getAttribute("data-percentage");
+            bar.style.width = `${percentage}%`;
+            bar.textContent = `${percentage}%`;
+        });
+
+        // 설비 선택 버튼 토글
+        const selectBtns = document.querySelectorAll('.main-select-btn');
+        selectBtns.forEach(btn => {
+            btn.addEventListener('click', function() {
+                const parent = this.parentElement;
+                const selectVal = parent.querySelector('.main-select-val');
+                parent.classList.toggle('is-val');
+            });
+        });
     });
-});
 </script>
 </html>

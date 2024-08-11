@@ -54,8 +54,15 @@ a{
     text-decoration: none;
 }
 
+i,
+em{
+    font-style: normal;
+}
+
 /* button */
 button{
+    padding: 0;
+    margin: 0;
     background: transparent;
     outline: 0;
     border: 0;

@@ -55,8 +55,15 @@ a {
   text-decoration: none;
 }
 
+i,
+em {
+  font-style: normal;
+}
+
 /* button */
 button {
+  padding: 0;
+  margin: 0;
   background: transparent;
   outline: 0;
   border: 0;
@@ -166,76 +173,49 @@ table + p {
   z-index: 999;
 }
 .container .loading .loading-wrap {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
   position: absolute;
   top: 50%;
   left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
 }
 .container .loading .loading-wrap span {
   display: inline-block;
   width: 20px;
   height: 20px;
   border-radius: 50%;
-  -webkit-animation: loading 1s linear infinite;
-          animation: loading 1s linear infinite;
+  animation: loading 1s linear infinite;
   margin-right: 6px;
   background-color: #fff;
 }
 .container .loading .loading-wrap span:nth-of-type(2) {
-  -webkit-animation-delay: 0.2s;
-          animation-delay: 0.2s;
+  animation-delay: 0.2s;
 }
 .container .loading .loading-wrap span.squareBox {
-  -webkit-animation-delay: 0.4s;
-          animation-delay: 0.4s;
+  animation-delay: 0.4s;
   margin-right: 0;
-}
-@-webkit-keyframes loading {
-  0%, 100% {
-    opacity: 0;
-    -webkit-transform: scale(0.5);
-            transform: scale(0.5);
-  }
-  50% {
-    opacity: 1;
-    -webkit-transform: scale(1.2);
-            transform: scale(1.2);
-  }
 }
 @keyframes loading {
   0%, 100% {
     opacity: 0;
-    -webkit-transform: scale(0.5);
-            transform: scale(0.5);
+    transform: scale(0.5);
   }
   50% {
     opacity: 1;
-    -webkit-transform: scale(1.2);
-            transform: scale(1.2);
+    transform: scale(1.2);
   }
 }
 .container .wrap {
   width: 100%;
   height: 100vh;
   overflow: hidden;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   padding: 2rem;
   position: sticky;
   top: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   background-color: #dedbd1;
 }
 .container .wrap.square {
@@ -287,8 +267,7 @@ table + p {
   margin: 0 auto;
   position: relative;
   top: 50%;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
+  transform: translateY(-50%);
 }
 .container .square-wrap:hover {
   cursor: pointer;
@@ -317,21 +296,17 @@ table + p {
   height: inherit;
   border: 0.1rem solid #fff;
   border-radius: 45% 60% 65% 35%/40% 45% 55% 60%;
-  -webkit-transition: 0.5s;
   transition: 0.5s;
 }
 .container .square-item:nth-child(1) {
-  -webkit-animation: circle 6s linear infinite;
-          animation: circle 6s linear infinite;
+  animation: circle 6s linear infinite;
 }
 .container .square-item:nth-child(2) {
-  -webkit-animation: circle 4s linear infinite;
-          animation: circle 4s linear infinite;
+  animation: circle 4s linear infinite;
   animation-direction: reverse;
 }
 .container .square-item:nth-child(3) {
-  -webkit-animation: circle 10s linear infinite;
-          animation: circle 10s linear infinite;
+  animation: circle 10s linear infinite;
 }
 .container .square-content {
   width: 70%;
@@ -340,8 +315,7 @@ table + p {
   position: absolute;
   top: 50%;
   left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
 }
 .container .square-content.skill {
   text-align: center;
@@ -362,29 +336,16 @@ table + p {
   border-radius: 45% 60% 65% 35%/40% 45% 55% 60%;
   padding: 0.9rem;
   display: block;
-  width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
   margin: 1.2rem auto 0;
 }
-@-webkit-keyframes circle {
-  0% {
-    -webkit-transform: rotate(0);
-            transform: rotate(0);
-  }
-  100% {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
-  }
-}
 @keyframes circle {
   0% {
-    -webkit-transform: rotate(0);
-            transform: rotate(0);
+    transform: rotate(0);
   }
   100% {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
+    transform: rotate(360deg);
   }
 }
 
@@ -428,20 +389,17 @@ table + p {
     right: 1rem;
   }
   .container .square {
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
+    flex-wrap: wrap;
     height: auto;
     padding: 6rem 0 9rem;
   }
   .container .square-wrap {
     top: 0;
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
+    transform: translateY(0);
   }
   .container .square-item {
     top: 0;
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
+    transform: translateY(0);
     padding: 1rem;
   }
   .container .square-item:last-child {
@@ -506,8 +464,7 @@ table + p {
     width: 80%;
     height: 400px;
     top: 0;
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
+    transform: translateY(0);
     margin-bottom: 3rem;
   }
   .container .square-wrap:last-child {
@@ -580,8 +537,7 @@ table + p {
     width: 90%;
     top: 0;
     left: 50%;
-    -webkit-transform: translateX(-50%);
-            transform: translateX(-50%);
+    transform: translateX(-50%);
     margin: 0;
   }
   .container .square-wrap + .square-wrap {
@@ -601,4 +557,4 @@ table + p {
     line-height: 1.3rem;
     font-size: 0.8rem;
   }
-}
+}/*# sourceMappingURL=portfolio.css.map */
