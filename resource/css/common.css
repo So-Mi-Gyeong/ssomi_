@@ -3741,6 +3741,9 @@ table .t_left {
   background-color: #ff404e;
   box-sizing: border-box;
 }
+.ui-content.popup [data-type=sk-popup] .event * {
+  word-break: keep-all;
+}
 .ui-content.popup [data-type=sk-popup] .event .event-box {
   padding: 0 2.5rem;
   box-sizing: border-box;
@@ -3793,22 +3796,40 @@ table .t_left {
   color: #ff404e;
   text-decoration: underline;
 }
-.ui-content.popup [data-type=sk-popup] .event .event-box .use-method .step .list-title {
-  font-size: 1.3rem;
-  text-align: left;
-  /* .list-title > .list-txt{
-      padding-left: 1em;
-  } */
+.ui-content.popup [data-type=sk-popup] .event .event-box .use-method .step .step-list-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
 }
-.ui-content.popup [data-type=sk-popup] .event .event-box .use-method .step .list-title::before {
-  content: "·";
-  color: #ff404e;
-  padding-right: 0.45rem;
+.ui-content.popup [data-type=sk-popup] .event .event-box .use-method .step .step-list-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
 }
-.ui-content.popup [data-type=sk-popup] .event .event-box .use-method .step .period {
-  padding-left: 1.4rem;
-  text-align: left;
+.ui-content.popup [data-type=sk-popup] .event .event-box .use-method .step .step-list-tit {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.8rem;
+  font-size: 1.6rem;
+}
+.ui-content.popup [data-type=sk-popup] .event .event-box .use-method .step .step-list-tit::before {
+  content: "";
+  display: block;
+  width: 0.4rem;
+  height: 0.4rem;
+  border-radius: 50%;
+  background-color: #ff404e;
+}
+.ui-content.popup [data-type=sk-popup] .event .event-box .use-method .step .step-list-txt {
+  margin-top: 0;
+  text-align: center;
   font-size: 1.2rem;
+}
+.ui-content.popup [data-type=sk-popup] .event .event-box .use-method .step .step-list-info {
+  font-size: 1rem;
+  font-weight: 300;
+  color: #999;
 }
 .ui-content.popup [data-type=sk-popup] .event .event-box .use-method .step .check {
   display: flex;
@@ -3910,6 +3931,10 @@ table .t_left {
   text-align: left;
 }
 .ui-content.popup [data-type=sk-popup] .event .event-box .use-method .step.event-info ul li {
+  display: flex;
+  justify-content: flex-start;
+  align-items: baseline;
+  gap: 0.8rem;
   font-size: 1.3rem;
   line-height: 1.8rem;
   margin-bottom: 1rem;
@@ -3918,8 +3943,7 @@ table .t_left {
 }
 .ui-content.popup [data-type=sk-popup] .event .event-box .use-method .step.event-info ul li::before {
   content: "-";
-  position: absolute;
-  left: 0;
+  display: block;
 }
 .ui-content.popup [data-type=sk-popup] .event .event-box .use-method .step.event-info ul li:last-child {
   margin-bottom: 0;

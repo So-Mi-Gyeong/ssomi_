@@ -3182,6 +3182,7 @@
         }
         [data-type="sk-popup"]{
             .event{
+                *{word-break: keep-all;}
                 background-color: #ff404e;
                 box-sizing: border-box;
                 .event-box{
@@ -3231,22 +3232,42 @@
                                 color: #ff404e;
                                 text-decoration: underline;
                             }
-                            .list-title{
-                                font-size: 1.3rem;
-                                text-align: left;
-                                &::before{
-                                    content: '·';
-                                    color: #ff404e;
-                                    padding-right: .45rem;
+                            .step-list{
+                                &-wrap{
+                                    display: flex;
+                                    flex-direction: column;
+                                    gap: 1.6rem;
                                 }
-                                /* .list-title > .list-txt{
-                                    padding-left: 1em;
-                                } */
-                            }
-                            .period{
-                                padding-left: 1.4rem;
-                                text-align: left;
-                                font-size: 1.2rem;
+                                &-item{
+                                    display: flex;
+                                    flex-direction: column;
+                                    gap: .8rem;
+                                }
+                                &-tit{
+                                    display: flex;
+                                    justify-content: center;
+                                    align-items: center;
+                                    gap: .8rem;
+                                    font-size: 1.6rem;
+                                    &::before{
+                                        content: '';
+                                        display: block;
+                                        width: .4rem;
+                                        height: .4rem;
+                                        border-radius: 50%;
+                                        background-color: #ff404e;
+                                    }
+                                }
+                                &-txt{
+                                    margin-top: 0;
+                                    text-align: center;
+                                    font-size: 1.2rem;
+                                }
+                                &-info{
+                                    font-size: 1rem;
+                                    font-weight: 300;
+                                    color: #999;
+                                }
                             }
                             .check{
                                 display: flex;
@@ -3352,6 +3373,10 @@
                                 ul{
                                     text-align: left;
                                     li{
+                                        display: flex;
+                                        justify-content: flex-start;
+                                        align-items: baseline;
+                                        gap: .8rem;
                                         font-size: 1.3rem;
                                         line-height: 1.8rem;
                                         margin-bottom: 1rem;
@@ -3359,8 +3384,9 @@
                                         position: relative;
                                         &::before{
                                             content: '-';
-                                            position: absolute;
-                                            left: 0;
+                                            display: block;
+                                            // position: absolute;
+                                            // left: 0;
                                         }
                                         &:last-child{
                                             margin-bottom: 0;
