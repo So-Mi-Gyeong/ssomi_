@@ -262,7 +262,7 @@ table + p {
   left: 59.4rem;
 }
 .pf-txt h2 {
-  font-size: 15rem;
+  font-size: 12rem;
 }
 .pf-txt .sub-txt {
   position: absolute;
@@ -448,7 +448,6 @@ table + p {
   .pf-txt h2 {
     position: absolute;
     right: 2rem;
-    font-size: 12rem;
   }
   .pf-txt .sub-txt {
     position: absolute;
