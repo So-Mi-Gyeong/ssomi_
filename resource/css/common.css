@@ -3666,19 +3666,24 @@ table .t_left {
 }
 .ui-content.popup {
   width: 100%;
-  background-color: #fff;
 }
-.ui-content.popup .show {
+.ui-content.popup .boxwrap {
+  max-width: 50rem;
+  margin: 0 auto;
+}
+.ui-content.popup [data-type=call-popup] {
   width: 100%;
   height: 100vh;
+  position: relative;
+  background-color: #fff;
   /* dim */
 }
-.ui-content.popup .show .layerWrap {
+.ui-content.popup [data-type=call-popup] .layerWrap {
   z-index: 2;
-  width: 16.5rem;
+  width: 25rem;
   height: auto;
   background-color: #fff;
-  border: 1px solid #d9d9d9;
+  border: 0.1rem solid #d9d9d9;
   border-radius: 0.7rem;
   overflow: hidden;
   position: absolute;
@@ -3686,39 +3691,39 @@ table .t_left {
   left: 50%;
   transform: translate(-50%, -50%);
 }
-.ui-content.popup .show .layerWrap .txt {
-  padding: 25px 20px 25px;
+.ui-content.popup [data-type=call-popup] .layerWrap .txt {
+  padding: 2.5rem 2rem 2.5rem;
 }
-.ui-content.popup .show .layerWrap .txt h2 {
-  font-size: 17px;
+.ui-content.popup [data-type=call-popup] .layerWrap .txt h2 {
+  font-size: 1.7rem;
   font-weight: 600;
   color: #222;
-  padding-bottom: 15px;
+  padding-bottom: 1.5rem;
 }
-.ui-content.popup .show .layerWrap .txt p {
-  font-size: 14px;
+.ui-content.popup [data-type=call-popup] .layerWrap .txt p {
+  font-size: 1.4rem;
   color: #666;
-  line-height: 18px;
+  line-height: 1.8rem;
 }
-.ui-content.popup .show .layerWrap .layerBtn {
+.ui-content.popup [data-type=call-popup] .layerWrap .layerBtn {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-top: 1px solid #d9d9d9;
+  border-top: 0.1rem solid #d9d9d9;
 }
-.ui-content.popup .show .layerWrap .layerBtn a {
+.ui-content.popup [data-type=call-popup] .layerWrap .layerBtn a {
   width: 100%;
   text-align: center;
-  font-size: 16px;
+  font-size: 1.6rem;
   font-weight: 600;
   background-color: #fff;
   color: #999;
   padding: 1rem;
 }
-.ui-content.popup .show .layerWrap .layerBtn a.confirm {
+.ui-content.popup [data-type=call-popup] .layerWrap .layerBtn a.confirm {
   color: #4737df;
 }
-.ui-content.popup .show .layerDimmed {
+.ui-content.popup [data-type=call-popup] .layerDimmed {
   opacity: 0.6;
   position: absolute;
   left: 0;
@@ -3729,35 +3734,33 @@ table .t_left {
   background-color: #000;
   transition-duration: 0.4s;
 }
-.ui-content.popup .boxwrap {
-  max-width: 500px;
-  margin: 0 auto;
+.ui-content.popup [data-type=sk-popup] {
   /* popup */
 }
-.ui-content.popup .boxwrap .event {
+.ui-content.popup [data-type=sk-popup] .event {
   background-color: #ff404e;
   box-sizing: border-box;
 }
-.ui-content.popup .boxwrap .event .event-box {
+.ui-content.popup [data-type=sk-popup] .event .event-box {
   padding: 0 2.5em;
   box-sizing: border-box;
 }
-.ui-content.popup .boxwrap .event .event-box .use-method {
+.ui-content.popup [data-type=sk-popup] .event .event-box .use-method {
   background-color: #fff;
   border-radius: 1em;
 }
-.ui-content.popup .boxwrap .event .event-box .use-method + .use-method {
+.ui-content.popup [data-type=sk-popup] .event .event-box .use-method + .use-method {
   margin-top: 2.5em;
 }
-.ui-content.popup .boxwrap .event .event-box .use-method .step {
+.ui-content.popup [data-type=sk-popup] .event .event-box .use-method .step {
   padding: 2.4em 3.25em 4em 3.25em;
   text-align: center;
   box-sizing: border-box;
 }
-.ui-content.popup .boxwrap .event .event-box .use-method .step.line {
+.ui-content.popup [data-type=sk-popup] .event .event-box .use-method .step.line {
   position: relative;
 }
-.ui-content.popup .boxwrap .event .event-box .use-method .step.line::before {
+.ui-content.popup [data-type=sk-popup] .event .event-box .use-method .step.line::before {
   content: "";
   width: calc(100% - 70px);
   margin: 0 auto;
@@ -3767,57 +3770,57 @@ table .t_left {
   left: 50%;
   transform: translateX(-50%);
 }
-.ui-content.popup .boxwrap .event .event-box .use-method .step.line-img {
+.ui-content.popup [data-type=sk-popup] .event .event-box .use-method .step.line-img {
   background: url("./resource/img/event/ico-dotline-pink.jpg") 0 0 no-repeat;
   background-size: 100% 12.5px;
 }
-.ui-content.popup .boxwrap .event .event-box .use-method .step h2 {
+.ui-content.popup [data-type=sk-popup] .event .event-box .use-method .step h2 {
   font-size: 2.1em;
   margin-bottom: 20px;
   letter-spacing: -1px;
 }
-.ui-content.popup .boxwrap .event .event-box .use-method .step h2.que-img {
+.ui-content.popup [data-type=sk-popup] .event .event-box .use-method .step h2.que-img {
   background: url("../img/event/ico-questionMark.jpg") 50% 40px no-repeat;
   background-size: 86.5px 94.5px;
   padding-bottom: 126.5px;
   margin-bottom: 0;
 }
-.ui-content.popup .boxwrap .event .event-box .use-method .step h3 {
+.ui-content.popup [data-type=sk-popup] .event .event-box .use-method .step h3 {
   font-size: 1.8em;
   margin-bottom: 25px;
 }
-.ui-content.popup .boxwrap .event .event-box .use-method .step .step-style {
+.ui-content.popup [data-type=sk-popup] .event .event-box .use-method .step .step-style {
   color: #ff404e;
   text-decoration: underline;
 }
-.ui-content.popup .boxwrap .event .event-box .use-method .step .list-title {
+.ui-content.popup [data-type=sk-popup] .event .event-box .use-method .step .list-title {
   font-size: 1.3em;
   text-align: left;
   /* .list-title > .list-txt{
       padding-left: 1em;
   } */
 }
-.ui-content.popup .boxwrap .event .event-box .use-method .step .list-title::before {
+.ui-content.popup [data-type=sk-popup] .event .event-box .use-method .step .list-title::before {
   content: "·";
   color: #ff404e;
   padding-right: 0.45em;
 }
-.ui-content.popup .boxwrap .event .event-box .use-method .step .period {
+.ui-content.popup [data-type=sk-popup] .event .event-box .use-method .step .period {
   padding-left: 1.4em;
   text-align: left;
   font-size: 1.2em;
 }
-.ui-content.popup .boxwrap .event .event-box .use-method .step .check {
+.ui-content.popup [data-type=sk-popup] .event .event-box .use-method .step .check {
   text-align: left;
 }
-.ui-content.popup .boxwrap .event .event-box .use-method .step .check input[type=checkbox] {
+.ui-content.popup [data-type=sk-popup] .event .event-box .use-method .step .check input[type=checkbox] {
   display: none;
 }
-.ui-content.popup .boxwrap .event .event-box .use-method .step .check input[type=checkbox]:checked + label::before {
+.ui-content.popup [data-type=sk-popup] .event .event-box .use-method .step .check input[type=checkbox]:checked + label::before {
   background: url("./resource/img/event/ico-checkbox-select.jpg") 0 0 no-repeat;
   background-size: 100% 100%;
 }
-.ui-content.popup .boxwrap .event .event-box .use-method .step .check label {
+.ui-content.popup [data-type=sk-popup] .event .event-box .use-method .step .check label {
   display: block;
   padding-left: 24px;
   position: relative;
@@ -3825,7 +3828,7 @@ table .t_left {
   line-height: 1.7em;
   color: #000;
 }
-.ui-content.popup .boxwrap .event .event-box .use-method .step .check label::before {
+.ui-content.popup [data-type=sk-popup] .event .event-box .use-method .step .check label::before {
   content: "";
   width: 17px;
   height: 17px;
@@ -3835,7 +3838,7 @@ table .t_left {
   top: 2px;
   left: 0;
 }
-.ui-content.popup .boxwrap .event .event-box .use-method .step .clickBtn {
+.ui-content.popup [data-type=sk-popup] .event .event-box .use-method .step .clickBtn {
   width: 100%;
   height: 46px;
   line-height: 46px;
@@ -3846,12 +3849,12 @@ table .t_left {
   font-size: 1.5em;
   box-sizing: border-box;
 }
-.ui-content.popup .boxwrap .event .event-box .use-method .step .phone-info > h2 {
+.ui-content.popup [data-type=sk-popup] .event .event-box .use-method .step .phone-info > h2 {
   text-align: left;
   font-size: 1.5em;
 }
-.ui-content.popup .boxwrap .event .event-box .use-method .step .phone-info .phone-num > .tel,
-.ui-content.popup .boxwrap .event .event-box .use-method .step .phone-info .phone-num > input[type=tel] {
+.ui-content.popup [data-type=sk-popup] .event .event-box .use-method .step .phone-info .phone-num > .tel,
+.ui-content.popup [data-type=sk-popup] .event .event-box .use-method .step .phone-info .phone-num > input[type=tel] {
   width: 50px;
   height: 35px;
   background-color: #fff;
@@ -3861,7 +3864,7 @@ table .t_left {
   padding: 0 8.5px;
   font-size: 1.3em;
 }
-.ui-content.popup .boxwrap .event .event-box .use-method .step .phone-info .smsBtn {
+.ui-content.popup [data-type=sk-popup] .event .event-box .use-method .step .phone-info .smsBtn {
   width: 67.5px;
   height: 35px;
   background-color: #cc1a28;
@@ -3870,13 +3873,13 @@ table .t_left {
   margin-left: 0.5em;
   font-size: 1.3em;
 }
-.ui-content.popup .boxwrap .event .event-box .use-method .step.event-info h2 {
+.ui-content.popup [data-type=sk-popup] .event .event-box .use-method .step.event-info h2 {
   color: #ff404e;
   font-size: 1.8em !important;
   position: relative;
   padding-top: 36.5px;
 }
-.ui-content.popup .boxwrap .event .event-box .use-method .step.event-info h2::before {
+.ui-content.popup [data-type=sk-popup] .event .event-box .use-method .step.event-info h2::before {
   content: "";
   width: 20px;
   height: 20px;
@@ -3887,38 +3890,38 @@ table .t_left {
   left: 50%;
   transform: translateX(-50%);
 }
-.ui-content.popup .boxwrap .event .event-box .use-method .step.event-info ul {
+.ui-content.popup [data-type=sk-popup] .event .event-box .use-method .step.event-info ul {
   text-align: left;
 }
-.ui-content.popup .boxwrap .event .event-box .use-method .step.event-info ul li {
+.ui-content.popup [data-type=sk-popup] .event .event-box .use-method .step.event-info ul li {
   font-size: 1.3em;
   line-height: 18px;
   margin-bottom: 10px;
   padding-left: 5px;
   position: relative;
 }
-.ui-content.popup .boxwrap .event .event-box .use-method .step.event-info ul li::before {
+.ui-content.popup [data-type=sk-popup] .event .event-box .use-method .step.event-info ul li::before {
   content: "-";
   position: absolute;
   left: 0;
 }
-.ui-content.popup .boxwrap .event .event-box .use-method .step.event-info ul li:last-child {
+.ui-content.popup [data-type=sk-popup] .event .event-box .use-method .step.event-info ul li:last-child {
   margin-bottom: 0;
 }
-.ui-content.popup .boxwrap .event .event-box .notion {
+.ui-content.popup [data-type=sk-popup] .event .event-box .notion {
   padding: 26px 0 49px 0;
 }
-.ui-content.popup .boxwrap .event .event-box .notion h2 {
+.ui-content.popup [data-type=sk-popup] .event .event-box .notion h2 {
   font-size: 1.6em;
   color: #fff;
   margin-bottom: 16px;
 }
-.ui-content.popup .boxwrap .event .event-box .notion .notion-list li {
+.ui-content.popup [data-type=sk-popup] .event .event-box .notion .notion-list li {
   color: #fff;
   font-size: 1.3em;
   line-height: 18px;
 }
-.ui-content.popup .boxwrap .popup-wrap {
+.ui-content.popup [data-type=sk-popup] .popup-wrap {
   position: fixed;
   top: 0;
   left: 0;
@@ -3926,10 +3929,10 @@ table .t_left {
   bottom: 0;
   display: none;
 }
-.ui-content.popup .boxwrap .popup-wrap.open {
+.ui-content.popup [data-type=sk-popup] .popup-wrap.open {
   display: block;
 }
-.ui-content.popup .boxwrap .popup-wrap .popup-bg {
+.ui-content.popup [data-type=sk-popup] .popup-wrap .popup-bg {
   background-color: rgba(0, 0, 0, 0.3);
   position: fixed;
   top: 0;
@@ -3937,7 +3940,7 @@ table .t_left {
   right: 0;
   bottom: 0;
 }
-.ui-content.popup .boxwrap .popup-wrap .popup {
+.ui-content.popup [data-type=sk-popup] .popup-wrap .popup {
   width: calc(100% - 5em);
   max-width: 400px;
   background-color: #fff;
@@ -3949,21 +3952,21 @@ table .t_left {
   border-radius: 10px;
   box-sizing: border-box;
 }
-.ui-content.popup .boxwrap .popup-wrap .popup h2 {
+.ui-content.popup [data-type=sk-popup] .popup-wrap .popup h2 {
   font-size: 1.7em;
   letter-spacing: -1px;
   margin-bottom: 16px;
 }
-.ui-content.popup .boxwrap .popup-wrap .popup ul {
+.ui-content.popup [data-type=sk-popup] .popup-wrap .popup ul {
   padding-bottom: 18px;
   margin-bottom: 20px;
   border-bottom: 1px solid #e6e6e6;
 }
-.ui-content.popup .boxwrap .popup-wrap .popup ul li {
+.ui-content.popup [data-type=sk-popup] .popup-wrap .popup ul li {
   font-size: 1.2em;
   line-height: 17px;
 }
-.ui-content.popup .boxwrap .popup-wrap .popup p {
+.ui-content.popup [data-type=sk-popup] .popup-wrap .popup p {
   font-size: 1.2em;
   line-height: 17px;
 }

@@ -19,27 +19,25 @@
   <script type="text/javascript" src="../../ssomi_2024/resource/js/event.js"></script>
 </head>
 <body>
-  <header id="menu" class="blackStyle"></header>
+  <header id="menu"></header>
   <!-- 1. font-weight / line-height
   2. step border-bottom padding -->
   <div class="container">
     <div class="ui-content popup">
-      <div class="wrap">
-        <div class="show">
-          <div class="layerWrap">
-            <div class="txt">
-              <h2>전화연결</h2>
-              <p>롯데시네마 판교점으로 전화를 연결 하시겠습니까?</p>
-            </div>
-            <div class="layerBtn">
-              <a href="#none" class="cancel">취소</a>
-              <a href="#none" class="confirm">연결</a>
-            </div>
+      <div class="wrap" data-type="call-popup">
+        <div class="layerWrap">
+          <div class="txt">
+            <h2>전화연결</h2>
+            <p>롯데시네마 판교점으로 전화를 연결 하시겠습니까?</p>
           </div>
-          <div class="layerDimmed"></div>
+          <div class="layerBtn">
+            <a href="#none" class="cancel">취소</a>
+            <a href="#none" class="confirm">연결</a>
+          </div>
         </div>
+        <div class="layerDimmed"></div>
       </div>
-      <div class="wrap">
+      <div class="wrap" data-type="sk-popup">
         <div class="boxwrap">
           <div class="event">
             <div class="event-bg">
