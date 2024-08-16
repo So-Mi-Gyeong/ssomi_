@@ -371,7 +371,7 @@ table + p {
 .career {
   background-image: url(../img/main03.png);
   background-size: 100% 183%;
-  background-position: 0rem 0;
+  background-position: 0rem -70rem;
   background-repeat: no-repeat;
 }
 .career .pf-txt {
@@ -472,6 +472,9 @@ table + p {
   .container .square-item:last-child {
     margin-bottom: 0;
   }
+  .career {
+    background-position: 0rem -68rem;
+  }
 }
 @media (min-width: 500px) and (max-width: 757px) {
   .container .wrap {
@@ -520,6 +523,9 @@ table + p {
   .container .square-content p {
     text-align: center;
     font-size: 1.6rem;
+  }
+  .career {
+    background-position: 0rem -35rem;
   }
   .career .pf-txt {
     justify-content: center;
@@ -594,6 +600,10 @@ table + p {
   .container .square .container .wrap.career {
     background-size: 225% 183%;
     background-position: -13rem 0;
+  }
+  .career {
+    background-size: 100% 130%;
+    background-position: 0rem -15rem;
   }
   .career .pf-txt {
     justify-content: center;

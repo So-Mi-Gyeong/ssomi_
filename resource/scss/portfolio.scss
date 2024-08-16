@@ -146,7 +146,7 @@
 .career{
     background-image: url(../img/main03.png);
     background-size: 100% 183%;
-    background-position: 0rem 0;
+    background-position: 0rem -70rem;
     background-repeat: no-repeat;
     .pf-txt{
         display: flex;
@@ -238,6 +238,9 @@
             &:last-child{margin-bottom: 0;}
         }
     }
+    .career{
+        background-position: 0rem -68rem;
+    }
 }
 @include mobile {
     .container .wrap{
@@ -286,9 +289,12 @@
             font-size: 1.6rem;
         }
     }
-    .career .pf-txt{
-        justify-content: center;
-        text-align: center;
+    .career{
+        background-position: 0rem -35rem;
+        .pf-txt{
+            justify-content: center;
+            text-align: center;
+        }
     }
 }
 @include small {
@@ -357,8 +363,12 @@
             background-position: -13rem 0;
         }
     }
-    .career .pf-txt{
-        justify-content: center;
-        text-align: center;
+    .career{
+        background-size: 100% 130%;
+        background-position: 0rem -15rem;
+        .pf-txt{
+            justify-content: center;
+            text-align: center;
+        }
     }
 }
