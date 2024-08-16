@@ -3185,25 +3185,23 @@
                 background-color: #ff404e;
                 box-sizing: border-box;
                 .event-box{
-                    padding: 0 2.5em;
+                    padding: 0 2.5rem;
                     box-sizing: border-box;
                     .use-method{
                         background-color: #fff;
-                        border-radius: 1em;
-                        &+.use-method{
-                            margin-top: 2.5em;
-                        }
+                        border-radius: 1rem;
+                        &+.use-method{margin-top: 2.5rem;}
                         .step{
-                            padding: 2.4em 3.25em 4em 3.25em;
+                            padding: 2.4rem 3.25rem 4rem 3.25rem;
                             text-align: center;
                             box-sizing: border-box;
                             &.line{
                                 position: relative;
                                 &::before{
                                     content: '';
-                                    width: calc(100% - 70px);
+                                    width: calc(100% - 7rem);
                                     margin: 0 auto;
-                                    border-top: 1px solid #e6e6e6;
+                                    border-top: .1rem solid #e6e6e6;
                                     position: absolute;
                                     top: 0;
                                     left: 50%;
@@ -3211,130 +3209,142 @@
                                 }
                             }
                             &.line-img{
-                                background: url('./resource/img/event/ico-dotline-pink.jpg') 0 0 no-repeat;
-                                background-size: 100% 12.5px;
+                                background: url('../img/event/ico-dotline-pink.jpg') 0 0 no-repeat;
+                                background-size: 100% 1.25rem;
                             }
                             h2{
-                                font-size: 2.1em;
-                                margin-bottom: 20px;
-                                letter-spacing: -1px;
+                                font-size: 2.1rem;
+                                margin-bottom: 2rem;
+                                letter-spacing: -.1rem;
                                 &.que-img{
                                     background: url('../img/event/ico-questionMark.jpg') 50% 40px no-repeat;
-                                    background-size: 86.5px 94.5px;
-                                    padding-bottom: 126.5px;
+                                    background-size: 8.65rem 9.45rem;
+                                    padding-bottom: 12.65rem;
                                     margin-bottom: 0;
                                 }
                             }
                             h3{
-                                font-size: 1.8em;
-                                margin-bottom: 25px;
+                                font-size: 1.8rem;
+                                margin-bottom: 2.5rem;
                             }
                             .step-style{
                                 color: #ff404e;
                                 text-decoration: underline;
                             }
                             .list-title{
-                                font-size: 1.3em;
+                                font-size: 1.3rem;
                                 text-align: left;
                                 &::before{
                                     content: '·';
                                     color: #ff404e;
-                                    padding-right: .45em;
+                                    padding-right: .45rem;
                                 }
                                 /* .list-title > .list-txt{
                                     padding-left: 1em;
                                 } */
                             }
                             .period{
-                                padding-left: 1.4em;
+                                padding-left: 1.4rem;
                                 text-align: left;
-                                font-size: 1.2em;
+                                font-size: 1.2rem;
                             }
                             .check{
-                                text-align:left;
-                                input[type=checkbox]{
-                                    display: none;
-                                    &:checked{
-                                        & + label{
-                                            &::before{
-                                                background: url('./resource/img/event/ico-checkbox-select.jpg') 0 0 no-repeat;
-                                                background-size: 100% 100%;
+                                display: flex;
+                                flex-direction: column;
+                                gap: 1.6rem;
+                                .check-inp-wrap{
+                                    display: flex;
+                                    justify-content: flex-start;
+                                    align-items: center;
+                                    input[type=checkbox]{
+                                        display: none;
+                                        &:checked{
+                                            & + label{
+                                                &::before{
+                                                    background: url('../img/event/ico-checkbox-select.jpg') 0 0 no-repeat;
+                                                    background-size: 100% 100%;
+                                                }
                                             }
                                         }
                                     }
-                                }
-                                label{
-                                    display: block;
-                                    padding-left: 24px;
-                                    position: relative;
-                                    font-size: 1.3em;
-                                    line-height: 1.7em;
-                                    color: #000;
-                                    &::before{
-                                        content: '';
-                                        width: 17px;
-                                        height: 17px;
-                                        background: url('./resource/img/event/ico-checkbox-empty.jpg') 0 0 no-repeat;
-                                        background-size: 100% 100%;
-                                        position: absolute; 
-                                        top: 2px;
-                                        left: 0;
+                                    label{
+                                        display: flex;
+                                        justify-content: flex-end;
+                                        align-items: center;
+                                        gap: .8rem;
+                                        position: relative;
+                                        font-size: 1.3rem;
+                                        line-height: 1.7rem;
+                                        color: #000;
+                                        &::before{
+                                            content: '';
+                                            display: block;
+                                            width: 1.7rem;
+                                            height: 1.7rem;
+                                            background: url('../img/event/ico-checkbox-empty.jpg') 0 0 no-repeat;
+                                            background-size: 100% 100%;
+                                        }
                                     }
                                 }
                             }
                             .clickBtn{
                                 width: 100%;
-                                height: 46px;
-                                line-height: 46px;
+                                height: 4.6rem;
+                                line-height: 4.6rem;
                                 background-color: #0d0d0d;
                                 color: #fff;
-                                border-radius: 10px;
-                                margin: 20px 0 25px 0;
-                                font-size: 1.5em;
+                                border-radius: 1rem;
+                                margin: 2rem 0 2.5rem 0;
+                                font-size: 1.5rem;
                                 box-sizing: border-box;
                             }
                             .phone-info{
                                 >h2{
                                     text-align: left;
-                                    font-size: 1.5em;
+                                    font-size: 1.5rem;
                                 }
                                 .phone-num{
+                                    display: flex;
+                                    justify-content: center;
+                                    align-items: center;
+                                    gap: .3rem;
                                     > .tel,
                                     > input[type=tel]{
-                                        width: 50px;
-                                        height: 35px;
+                                        width: 6rem;
+                                        height: 3.5rem;
                                         background-color: #fff;
-                                        border: 1px solid #d2d2d2;
-                                        border-radius: 3px;
+                                        border: .1rem solid #d2d2d2;
+                                        border-radius: .3rem;
                                         box-sizing: border-box;
-                                        padding: 0 8.5px;
-                                        font-size: 1.3em;
+                                        padding: 0 .85rem;
+                                        font-size: 1.3rem;
                                     }
+                                    span{color: #333;}
                                 }
                                 .smsBtn{
-                                    width: 67.5px;
-                                    height: 35px;
+                                    width: 6.75rem;
+                                    height: 3.5rem;
                                     background-color: #cc1a28;
                                     color: #fff;
-                                    border-radius: 3px;
-                                    margin-left: .5em;
-                                    font-size: 1.3em;
+                                    border-radius: .3rem;
+                                    margin-left: .5rem;
+                                    font-size: 1.3rem;
                                 }
                             }
                             &.event-info{
                                 h2{
                                     color: #ff404e;
-                                    font-size: 1.8em !important;
+                                    font-size: 1.8rem !important;
                                     position: relative;
-                                    padding-top: calc(60.5px - 24px);
+                                    padding-top: calc(6.05rem - 2.4rem);
                                     &::before{
                                         content: '';
-                                        width: 20px;
-                                        height: 20px;
-                                        background: url('./resource/img/event/ico-announcement.png') 0 0 no-repeat;
+                                        width: 2rem;
+                                        height: 2rem;
+                                        background: url('../img/event/ico-announcement.png') 0 0 no-repeat;
                                         background-size: 100% 100%;
                                         position: absolute;
-                                        top: 11px;
+                                        top: 1.1rem;
                                         left: 50%;
                                         transform: translateX(-50%);
                                     }
@@ -3342,10 +3352,10 @@
                                 ul{
                                     text-align: left;
                                     li{
-                                        font-size: 1.3em;
-                                        line-height: 18px;
-                                        margin-bottom: 10px;
-                                        padding-left: 5px;
+                                        font-size: 1.3rem;
+                                        line-height: 1.8rem;
+                                        margin-bottom: 1rem;
+                                        padding-left: .5rem;
                                         position: relative;
                                         &::before{
                                             content: '-';
@@ -3362,17 +3372,17 @@
                     }
                     
                     .notion{
-                        padding: 26px 0 49px 0;
+                        padding: 2.6rem 0 4.9rem 0;
                         h2{
-                            font-size: 1.6em;
+                            font-size: 1.6rem;
                             color: #fff;
-                            margin-bottom: 16px;
+                            margin-bottom: 1.6rem;
                         }
                         .notion-list{
                             li{
                                 color: #fff;
-                                font-size: 1.3em;
-                                line-height: 18px;
+                                font-size: 1.3rem;
+                                line-height: 1.8rem;
                             }
                         }
                     }
@@ -3386,9 +3396,7 @@
                 right: 0;
                 bottom: 0;
                 display: none;
-                &.open{
-                    display: block;
-                }
+                &.open{display: block;}
                 .popup-bg{
                     background-color:rgba(0,0,0,.3); 
                     position: fixed;
@@ -3398,33 +3406,33 @@
                     bottom: 0;
                 }
                 .popup{
-                    width: calc(100% - 5em);
-                    max-width: 400px;
+                    width: calc(100% - 5rem);
+                    max-width: 40rem;
                     background-color: #fff;
                     position: absolute;
                     top: 50%;
                     left: 50%;
                     transform: translate(-50%, -50%);
-                    padding: 2.8em 2.5em 3.5em 2.5em;
-                    border-radius: 10px;
+                    padding: 2.8rem 2.5rem 3.5rem 2.5rem;
+                    border-radius: 1rem;
                     box-sizing: border-box;
                     h2{
-                        font-size: 1.7em;
-                        letter-spacing: -1px;
-                        margin-bottom: 16px;
+                        font-size: 1.7rem;
+                        letter-spacing: -.1rem;
+                        margin-bottom: 1.6rem;
                     }
                     ul{
-                        padding-bottom: 18px;
-                        margin-bottom: 20px;
-                        border-bottom: 1px solid #e6e6e6;
+                        padding-bottom: 1.8rem;
+                        margin-bottom: 2rem;
+                        border-bottom: .1rem solid #e6e6e6;
                         li{
-                            font-size: 1.2em;
-                            line-height: 17px;
+                            font-size: 1.2rem;
+                            line-height: 1.7rem;
                         }
                     }
                     p{
-                        font-size: 1.2em;
-                        line-height: 17px;
+                        font-size: 1.2rem;
+                        line-height: 1.7rem;
                     }
                 }
             }

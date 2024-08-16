@@ -41,7 +41,7 @@
         <div class="boxwrap">
           <div class="event">
             <div class="event-bg">
-              <img src="../img/event/event-img.png" alt="">
+              <img src="../resource/img/event/event-img.png" alt="">
             </div>
             <div class="event-box">
               <div class="use-method">
@@ -105,10 +105,14 @@
                 <div class="step">
                   <h2>이벤트 참여하기</h2>
                   <div class="check">
-                    <input type="checkbox" id="personal-info">
-                    <label for="personal-info">혜택 제공을 위한 개인정보 수집,활용 및 취급 위탁에 동의합니다.</label>
-                    <input type="checkbox" id="customer-info">
-                    <label for="customer-info">혜택 제공을 위하여 SKT-SKTL간 고객 정보 확인에 동의합니다.</label>
+                    <div class="check-inp-wrap">
+                      <input type="checkbox" id="personal-info">
+                      <label for="personal-info">혜택 제공을 위한 개인정보 수집,활용 및 취급 위탁에 동의합니다.</label>
+                    </div>
+                    <div class="check-inp-wrap">
+                      <input type="checkbox" id="customer-info">
+                      <label for="customer-info">혜택 제공을 위하여 SKT-SKTL간 고객 정보 확인에 동의합니다.</label>
+                    </div>
                   </div>
                   <button type="button" class="clickBtn">자세히 보기(Click)</button>
                   <div class="phone-info">
@@ -182,26 +186,26 @@
   </div>
   <script>
     const myPop = {
-    clickBtn: null,
-    popupWrap: null,
-    popupBg: null,
-    popup: null,
-    
-    Init: function() {
-      clickBtn = document.querySelector('.clickBtn');
-      popupWrap = document.querySelector('.popup-wrap');
-      popupBg = document.querySelector('.popup-bg');
-      popup = document.querySelector('.popup');
+      clickBtn: null,
+      popupWrap: null,
+      popupBg: null,
+      popup: null,
+      
+      Init: function() {
+        clickBtn = document.querySelector('.clickBtn');
+        popupWrap = document.querySelector('.popup-wrap');
+        popupBg = document.querySelector('.popup-bg');
+        popup = document.querySelector('.popup');
 
-      //popup
-      clickBtn.addEventListener('click', function(){
-        popupWrap.classList.add('open'); 
-        document.getElementsByTagName('body')[0].style.overflow = 'hidden';
-      });
-      popupBg.addEventListener('click', function(){
-        popupWrap.classList.remove('open'); 
-        document.getElementsByTagName('body')[0].style.overflow = 'auto';
-      });
+        //popup
+        clickBtn.addEventListener('click', function(){
+          popupWrap.classList.add('open'); 
+          document.getElementsByTagName('body')[0].style.overflow = 'hidden';
+        });
+        popupBg.addEventListener('click', function(){
+          popupWrap.classList.remove('open'); 
+          document.getElementsByTagName('body')[0].style.overflow = 'auto';
+        });
       }
     }
 
