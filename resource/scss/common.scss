@@ -60,6 +60,22 @@ body{
     background-color: #282726;
     overflow: auto;
     &::-webkit-scrollbar {display: none;}
+
+    &[data-bg="red"]{
+        .typingArea{
+            background-color:#650911;
+            .typingBox{color:#fff;}
+        }
+    }
+    &[data-bg="orange"]{
+        .typingArea{
+            background-color:#F6F0E4;
+            .typingBox{
+                color:#BC5542;
+                text-shadow: .1rem .5rem 1rem #474747;
+            }
+        }
+    }
 }
 
 /* .ui-content */

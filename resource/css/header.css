@@ -88,33 +88,13 @@ input[type=radio],
 
 /* ============================================================== */
 /* ==================================== menu ================================= */
-header.blackStyle .ui-menu-nav::before {
-  background: url(../img/ico_menu_black.png) 0 0 no-repeat;
-}
-header.blackStyle .ui-menu-nav.open::before {
-  background: url(../img/ico_menu_black.png) -36px 0 no-repeat;
-}
-header.blackStyle .ui-menu-item {
-  background-color: #222;
-  border-bottom: 1px solid #fff;
-}
-header.blackStyle .ui-menu-item a {
-  color: #fff;
-}
-header.blackStyle .ui-menu-item a:hover {
-  background-color: #333;
-}
-header.blackStyle .ui-menu-item a:focus {
-  background-color: rgb(12, 12, 12);
-}
-
 .ui-menu {
   position: relative;
   z-index: 9999;
 }
 .ui-menu-nav {
-  width: 30px;
-  height: 30px;
+  width: 3rem;
+  height: 3rem;
   padding: 0;
   position: fixed;
   top: 0;
@@ -124,8 +104,8 @@ header.blackStyle .ui-menu-item a:focus {
 }
 .ui-menu-nav::before {
   content: "";
-  width: 50px;
-  height: 30px;
+  width: 5rem;
+  height: 3rem;
   background: url(../img/ico_menu_white.png) 0 0 no-repeat;
   background-size: 100% 100%;
   display: block;
@@ -156,9 +136,10 @@ header.blackStyle .ui-menu-item a:focus {
 }
 .ui-menu-item {
   width: 100%;
-  background-color: #dedbd1;
-  border-bottom: 1px solid #222;
+  background-color: #BFBEBC;
+  border-bottom: 0.1rem solid #fff;
   box-sizing: border-box;
+  opacity: 0.9;
 }
 .ui-menu-item:last-child {
   border-bottom: 0;
@@ -166,8 +147,8 @@ header.blackStyle .ui-menu-item a:focus {
 .ui-menu-item a {
   display: inline-block;
   width: 100%;
-  padding: 25px;
-  color: #222;
+  padding: 2.5rem;
+  color: #fff;
   box-sizing: border-box;
   font-size: 1rem;
   font-weight: 500;
@@ -181,12 +162,6 @@ header.blackStyle .ui-menu-item a:focus {
 }
 
 @media all and (max-width: 499px) {
-  header.blackStyle .ui-menu-nav.open {
-    background-color: #fff;
-  }
-  header.blackStyle .ui-menu-nav.open::before {
-    background: url(../img/ico_menu_black.png) -30px 0 no-repeat;
-  }
   .ui-menu-nav.open {
     background-color: #000;
     border-radius: 50%;
@@ -195,19 +170,13 @@ header.blackStyle .ui-menu-item a:focus {
     z-index: 999;
   }
   .ui-menu-nav.open::before {
-    background: url(../img/ico_menu_white.png) -30px 0 no-repeat;
+    background: url(../img/ico_menu_white.png) -3rem 0 no-repeat;
   }
   .ui-menu-list.open {
     width: 100%;
   }
 }
 @media (min-width: 500px) and (max-width: 757px) {
-  header.blackStyle .ui-menu-nav.open {
-    background-color: #fff;
-  }
-  header.blackStyle .ui-menu-nav.open::before {
-    background: url(../img/ico_menu_black.png) -30px 0 no-repeat;
-  }
   .ui-menu-nav.open {
     background-color: #000;
     border-radius: 50%;
@@ -216,7 +185,7 @@ header.blackStyle .ui-menu-item a:focus {
     z-index: 999;
   }
   .ui-menu-nav.open::before {
-    background: url(../img/ico_menu_white.png) -30px 0 no-repeat;
+    background: url(../img/ico_menu_white.png) -3rem 0 no-repeat;
   }
   .ui-menu-list.open {
     width: 100%;
