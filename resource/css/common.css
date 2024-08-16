@@ -5071,10 +5071,10 @@ body::-webkit-scrollbar-track {
   color: #fff;
 }
 .container[data-bg=orange] .typingArea {
-  background-color: #F6F0E4;
+  background-color: #BC5542;
 }
 .container[data-bg=orange] .typingArea .typingBox {
-  color: #BC5542;
+  color: #F6F0E4;
   text-shadow: 0.1rem 0.5rem 1rem #474747;
 }
 
