@@ -3,7 +3,7 @@
 /* ==================================== menu ================================= */
 header{
     // &.blackStyle{
-    //     .ui-menu-nav{
+    //     .ui-menu-btn{
     //         &::before{background: url(../img/ico_menu_black.png) 0 0 no-repeat;}
     //         &.open::before{background: url(../img/ico_menu_black.png) -3.6rem 0 no-repeat;}
     //     }
@@ -21,7 +21,7 @@ header{
 .ui-menu{
     position: relative;
     z-index: 9999;
-    &-nav{
+    &-btn{
         width: 3rem;
         height: 3rem;
         padding: 0;
@@ -84,62 +84,62 @@ header{
         }
     }
 }
-@include small{
-    // header{
-    //     &.blackStyle{
-    //         .ui-menu-nav{
-    //             &.open{
-    //                 background-color: #fff;
-    //                 &::before{background: url(../img/ico_menu_black.png) -3rem 0 no-repeat;}
-    //             }
-    //         }
-    //     }
-    // }
-    .ui-menu-nav{
-        &.open{
-            background-color: #000;
-            border-radius: 50%;
-            left: 90%;
-            margin-top: 2%;
-            z-index: 999;
-            &::before{background: url(../img/ico_menu_white.png) -3rem 0 no-repeat;}
-        }
-    }
-    .ui-menu-list{
-        &.open{width: 100%;}
-    }
-}
-@include mobile{
-    // header{
-    //     &.blackStyle{
-    //         .ui-menu-nav{
-    //             &.open{
-    //                 background-color: #fff;
-    //                 &::before{background: url(../img/ico_menu_black.png) -3rem 0 no-repeat;}
-    //             }
-    //         }
-    //     }
-    // }
-    .ui-menu-nav{
-        &.open{
-            background-color: #000;
-            border-radius: 50%;
-            left: 90%;
-            margin-top: 2%;
-            z-index: 999;
-            &::before{background: url(../img/ico_menu_white.png) -3rem 0 no-repeat;}
-        }
-    }
-    .ui-menu-list{
-        &.open{width: 100%;}
-    }
-}
-@include tablet {
-    .ui-menu-list{
-        width: 50%;
-        left: -50%;
-    }
-    .ui-menu-nav{
-        &.open{left: 50%;}
-    }
-}
+// @include small{
+//     // header{
+//     //     &.blackStyle{
+//     //         .ui-menu-btn{
+//     //             &.open{
+//     //                 background-color: #fff;
+//     //                 &::before{background: url(../img/ico_menu_black.png) -3rem 0 no-repeat;}
+//     //             }
+//     //         }
+//     //     }
+//     // }
+//     .ui-menu-btn{
+//         &.open{
+//             background-color: #000;
+//             border-radius: 50%;
+//             left: 90%;
+//             margin-top: 2%;
+//             z-index: 999;
+//             &::before{background: url(../img/ico_menu_white.png) -3rem 0 no-repeat;}
+//         }
+//     }
+//     .ui-menu-list{
+//         &.open{width: 100%;}
+//     }
+// }
+// @include mobile{
+//     // header{
+//     //     &.blackStyle{
+//     //         .ui-menu-btn{
+//     //             &.open{
+//     //                 background-color: #fff;
+//     //                 &::before{background: url(../img/ico_menu_black.png) -3rem 0 no-repeat;}
+//     //             }
+//     //         }
+//     //     }
+//     // }
+//     .ui-menu-btn{
+//         &.open{
+//             background-color: #000;
+//             border-radius: 50%;
+//             left: 90%;
+//             margin-top: 2%;
+//             z-index: 999;
+//             &::before{background: url(../img/ico_menu_white.png) -3rem 0 no-repeat;}
+//         }
+//     }
+//     .ui-menu-list{
+//         &.open{width: 100%;}
+//     }
+// }
+// @include tablet {
+//     .ui-menu-list{
+//         width: 50%;
+//         left: -50%;
+//     }
+//     .ui-menu-btn{
+//         &.open{left: 50%;}
+//     }
+// }

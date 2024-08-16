@@ -92,7 +92,7 @@ input[type=radio],
   position: relative;
   z-index: 9999;
 }
-.ui-menu-nav {
+.ui-menu-btn {
   width: 3rem;
   height: 3rem;
   padding: 0;
@@ -102,7 +102,7 @@ input[type=radio],
   transition: 0.5s;
   overflow: hidden;
 }
-.ui-menu-nav::before {
+.ui-menu-btn::before {
   content: "";
   width: 5rem;
   height: 3rem;
@@ -110,11 +110,11 @@ input[type=radio],
   background-size: 100% 100%;
   display: block;
 }
-.ui-menu-nav.open {
+.ui-menu-btn.open {
   left: 30%;
   transition: 0.5s;
 }
-.ui-menu-nav.open::before {
+.ui-menu-btn.open::before {
   background: url(../img/ico_menu_white.png) -36px 0 no-repeat;
 }
 .ui-menu-list {
@@ -159,44 +159,4 @@ input[type=radio],
 .ui-menu-item a:focus {
   background-color: #222;
   color: #fff;
-}
-
-@media all and (max-width: 499px) {
-  .ui-menu-nav.open {
-    background-color: #000;
-    border-radius: 50%;
-    left: 90%;
-    margin-top: 2%;
-    z-index: 999;
-  }
-  .ui-menu-nav.open::before {
-    background: url(../img/ico_menu_white.png) -3rem 0 no-repeat;
-  }
-  .ui-menu-list.open {
-    width: 100%;
-  }
-}
-@media (min-width: 500px) and (max-width: 757px) {
-  .ui-menu-nav.open {
-    background-color: #000;
-    border-radius: 50%;
-    left: 90%;
-    margin-top: 2%;
-    z-index: 999;
-  }
-  .ui-menu-nav.open::before {
-    background: url(../img/ico_menu_white.png) -3rem 0 no-repeat;
-  }
-  .ui-menu-list.open {
-    width: 100%;
-  }
-}
-@media (min-width: 758px) and (max-width: 1360px) {
-  .ui-menu-list {
-    width: 50%;
-    left: -50%;
-  }
-  .ui-menu-nav.open {
-    left: 50%;
-  }
 }/*# sourceMappingURL=header.css.map */

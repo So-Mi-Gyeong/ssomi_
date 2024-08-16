@@ -20,7 +20,7 @@ $(document).ready(function(){
     function headerNav(header_result) {
         $("#menu").html($(header_result).filter(".wrap"));
          //*********************** menu ***********************
-        const uinavs = document.querySelectorAll('.wrap .ui-menu .ui-menu-nav');
+        const uinavs = document.querySelectorAll('.wrap .ui-menu .ui-menu-btn');
         for(let i = 0; i < uinavs.length; i++) {
             uinavs[i].addEventListener('click', act); //click -> act()실행
         }
