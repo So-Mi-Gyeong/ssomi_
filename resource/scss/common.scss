@@ -16,7 +16,10 @@
 '_dropdown.scss', 
 '_netflix.scss';
 
-html {font-size: 62.5%;}
+html {
+    font-size: 62.5%;
+    font-family: 'base';
+}
 
 // @media screen and (max-width: 320px) {
 //     html {font-size: 50%;}

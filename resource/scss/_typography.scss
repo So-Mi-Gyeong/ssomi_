@@ -1,14 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600;1,700&display=swap');
+.playfair{
+    font-family: 'Playfair Display', serif;
+    *{
+        font-family: 'Playfair Display', serif;
+    }
+}
+
+@font-face {
+	font-family: 'Base';
+	font-weight: 900;
+	font-display: swap;
+	src: local('Pretendard Black'), url(../font/pretendard/Pretendard-Black.subset.woff2) format('woff2'), url(../font/pretendard/Pretendard-Black.subset.woff) format('woff');
+}
+
+@font-face {
+	font-family: 'Base';
+	font-weight: 800;
+	font-display: swap;
+	src: local('Pretendard ExtraBold'), url(../font/pretendard/Pretendard-ExtraBold.subset.woff2) format('woff2'), url(../font/pretendard/Pretendard-ExtraBold.subset.woff) format('woff');
+}
+
+@font-face {
+	font-family: 'Base';
+	font-weight: 700;
+	font-display: swap;
+	src: local('Pretendard Bold'), url(../font/pretendard/Pretendard-Bold.subset.woff2) format('woff2'), url(../font/pretendard/Pretendard-Bold.subset.woff) format('woff');
+}
+
+@font-face {
+	font-family: 'Base';
+	font-weight: 600;
+	font-display: swap;
+	src: local('Pretendard SemiBold'), url(../font/pretendard/Pretendard-SemiBold.subset.woff2) format('woff2'), url(../font/pretendard/Pretendard-SemiBold.subset.woff) format('woff');
+}
+
+@font-face {
+	font-family: 'Base';
+	font-weight: 500;
+	font-display: swap;
+	src: local('Pretendard Medium'), url(../font/pretendard/Pretendard-Medium.subset.woff2) format('woff2'), url(../font/pretendard/Pretendard-Medium.subset.woff) format('woff');
+}
+
+@font-face {
+	font-family: 'Base';
+	font-weight: 400;
+	font-display: swap;
+	src: local('Pretendard Regular'), url(../font/pretendard/Pretendard-Regular.subset.woff2) format('woff2'), url(../font/pretendard/Pretendard-Regular.subset.woff) format('woff');
+}
+
+@font-face {
+	font-family: 'Base';
+	font-weight: 300;
+	font-display: swap;
+	src: local('Pretendard Light'), url(../font/pretendard/Pretendard-Light.subset.woff2) format('woff2'), url(../font/pretendard/Pretendard-Light.subset.woff) format('woff');
+}
+
+@font-face {
+	font-family: 'Base';
+	font-weight: 200;
+	font-display: swap;
+	src: local('Pretendard ExtraLight'), url(../font/pretendard/Pretendard-ExtraLight.subset.woff2) format('woff2'), url(../font/pretendard/Pretendard-ExtraLight.subset.woff) format('woff');
+}
+
+@font-face {
+	font-family: 'Base';
+	font-weight: 100;
+	font-display: swap;
+	src: local('Pretendard Thin'), url(../font/pretendard/Pretendard-Thin.subset.woff2) format('woff2'), url(../font/pretendard/Pretendard-Thin.subset.woff) format('woff');
+}
+
 h2{font-size: 2.5rem;}
 h3{font-size: 2rem;}
 h4{font-size: 1.8rem;}
-p{font-size: 16px;line-height: 1.5;}
+p{font-size: 1.6rem;line-height: 1.5;}
 
 /* text */
 h2 + h3,
-h2 + div > h3{margin-top: 5rem;}
+h2 + div > h3{margin-top: 4.8rem;}
 
 h3 + h4,
-p + h4 {margin-top: 2rem;}
+p + h4 {margin-top: 1.6rem;}
 
 h2 + p,
 h3 + p,
@@ -18,11 +89,11 @@ h3 + .listDefault,
 h4 + .listDefault,
 h2 + table,
 h3 + table,
-h4 + table{margin-top: 1rem;}
+h4 + table{margin-top: 1.6rem;}
 
-p + p{margin-top: .5rem;}
+p + p{margin-top: .8rem;}
 
-strong + p{margin-top: 1rem;}
+strong + p{margin-top: 1.6rem;}
 
 
 /* list */
@@ -31,11 +102,11 @@ table + .listDefault,
 .listDefault + p,
 p + .listDefault,
 .listDefault + h3,
-.listDefault + h4{margin-top: 2rem;}
+.listDefault + h4{margin-top: 1.6rem;}
 
 /* table */
 table {
-    & + table{margin-top: 5rem;}
-    & + p{margin-top: 1rem;}
+    & + table{margin-top: 4.8rem;}
+    & + p{margin-top: .8rem;}
 }
 

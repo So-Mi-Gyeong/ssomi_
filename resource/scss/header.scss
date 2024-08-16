@@ -63,7 +63,7 @@ html {font-size: 62.5%;}
             color:#fff;
             box-sizing: border-box;
             font: {
-                size: 1rem;
+                size: 1.5rem;
                 weight: 500;
             }
             &:hover{background-color: rgba(255, 255, 255, 0.195);}
@@ -74,42 +74,3 @@ html {font-size: 62.5%;}
         }
     }
 }
-// @include small{
-//     .ui-menu-btn{
-//         &.open{
-//             background-color: #000;
-//             border-radius: 50%;
-//             left: 90%;
-//             margin-top: 2%;
-//             z-index: 999;
-//             &::before{background: url(../img/ico_menu_white.png) -3rem 0 no-repeat;}
-//         }
-//     }
-//     .ui-menu-list{
-//         &.open{width: 100%;}
-//     }
-// }
-// @include mobile{
-//     .ui-menu-btn{
-//         &.open{
-//             background-color: #000;
-//             border-radius: 50%;
-//             left: 90%;
-//             margin-top: 2%;
-//             z-index: 999;
-//             &::before{background: url(../img/ico_menu_white.png) -3rem 0 no-repeat;}
-//         }
-//     }
-//     .ui-menu-list{
-//         &.open{width: 100%;}
-//     }
-// }
-// @include tablet {
-//     .ui-menu-list{
-//         width: 100%;
-//         left: -100%;
-//     }
-//     .ui-menu-btn{
-//         &.open{left: 50%;}
-//     }
-// }
