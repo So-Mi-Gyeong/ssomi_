@@ -1,0 +1,85 @@
+
+.mdl-tab {
+    display: flex;
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    justify-content: center;
+    min-height: 4rem;
+
+    &[data-space="x3"] {
+        .mdl-tab-wrap {
+            &::before,
+            &::after {min-width: $x2-5;}
+        }
+    }
+    &[data-scroll="true"] .mdl-tab-wrap {
+        width: auto;
+        padding:0 $x3;
+    }
+    &[data-scroll="false"] .mdl-tab-wrap {
+        width: 100%;
+        max-width: calc($maxwidth);
+        margin: 0 auto;
+        padding:0 $x3;
+    } 
+
+    &[data-fix="true"] {
+        position: fixed;
+        max-width: 100vw !important;
+        width: 100% !important;
+        padding:  0;
+        min-height:5.6rem;
+        top: 5.6rem;
+        z-index: 1;
+        background: linear-gradient(rgba(255,255,255,1) 70%,rgba(255,255,255,0));
+        -webkit-transform: translateZ(0);
+        transform: translateZ(0);
+    }
+
+    &-wrap{
+        position: relative;
+        display: flex;
+        gap: 0 $x0_5;
+        overflow: hidden;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        &::-webkit-scrollbar {display: none;}
+    }
+
+    &-btn {
+        border: .1rem solid var(--line_base);
+        padding: $x2 2rem;
+        @include setRound(1.9rem);
+        height: 3.8rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: var(--gray_0);
+
+        &[aria-selected="true"] {
+            background-color: var(--gray_100);
+            border-color:var(--gray_100);
+
+            span {
+                font-weight: 700;
+                color:var(--gray_0);
+            }
+        }
+
+        span {
+            color:var(--gray_70);
+            font-family: 'KBF';
+            font-size: 1.4rem;
+            line-height: 1;
+            white-space:nowrap;
+        }
+    }
+}
+
+@media screen and (min-width:401px) {
+    .mdl-tab[data-scroll="false"] .mdl-tab-wrap {
+        &::after,
+        &::before {display: none;}
+    }
+}

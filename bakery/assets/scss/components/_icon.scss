@@ -1,0 +1,580 @@
+[data-icon-before]::before,
+[data-icon]::before {
+    content:"";
+    display: block;
+    position: relative;
+    width: 2.4rem;
+    height: 2.4rem;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: 2.4rem;
+}
+[data-icon-after]::after {
+    content:"";
+    display: block;
+    position: relative;
+    width: 2.4rem;
+    height: 2.4rem;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: 2.4rem;
+}
+
+.ocr-hbtn[data-icon-before]::before,
+.ocr-hbtn[data-icon]::before,
+.ocr-hbtn[data-icon-after]::after {
+    width: 3rem;
+    height: 3rem;
+}
+
+/*======= common =======*/
+[data-icon-before="close"]::before,
+[data-icon="close"]::before,
+[data-icon-after="close"]::after {
+    background-image: url(../img/common/ico_close.svg);
+}
+
+[data-icon-before="close_large_white"]::before,
+[data-icon="close_large_white"]::before,
+[data-icon-after="close_large_white"]::after {
+    width: 3rem;
+    height: 3rem;
+    background-image: url(../img/common/ico_tit_close.png);
+}
+
+[data-icon-before="close_large_dark"]::before,
+[data-icon="close_large_dark"]::before,
+[data-icon-after="close_large_dark"]::after {
+    width: 3rem;
+    height: 3rem;
+    background-image: url(../img/common/ico_tit_close_dark.png);
+}
+
+
+
+[data-icon-before="check-toast"]::before,
+[data-icon="check-toast"]::before,
+[data-icon-after="check-toast"]::after {
+    width: 2.2rem;
+    height: 2.2rem;
+    min-width: 2.2rem;
+    min-height: 2.2rem;
+    background-image: url(../img/common/ico_check_toast.svg);
+    background-size: cover;
+}
+
+[data-icon-before="plus"]::before,
+[data-icon="plus"]::before,
+[data-icon-after="plus"]::after {
+    width: 2.6rem;
+    height: 2.6rem;
+    background-size: cover;
+    background-image: url(../img/common/ico_plus_dark.svg);
+}
+
+[data-icon-before="refresh"]::before,
+[data-icon="refresh"]::before,
+[data-icon-after="refresh"]::after {
+    width: 4.0rem;
+    height: 4.0rem;
+    @include setRound(50%);
+    background-color: #F7F7F7;
+    background-image:  url(../img/common/ico_refresh.svg);
+}
+
+[data-icon-before="ico_card_logo"]::before,
+[data-icon="ico_card_logo"]::before,
+[data-icon-after="ico_card_logo"]::after {
+    width: 5rem;
+    height: 3.6rem;
+    background-image: url(../../assets/img/icon/ico_card_logo.png);
+    background-size: cover;
+}
+
+[data-icon-before="ico-clover"]::before,
+[data-icon="ico-cloverr"]::before,
+[data-icon-after="ico-cloverr"]::after {
+    background-image: url(../../assets/img/icon/ico_clover.png);
+    background-size: cover;
+}
+
+[data-icon-before="ico_hand"]::before,
+[data-icon="ico_handr"]::before,
+[data-icon-after="ico_hand"]::after {
+    background-image: url(../../assets/img/icon/ico_hand.png);
+    background-size: cover;
+}
+
+[data-icon-before="ico_bread"]::before,
+[data-icon="ico_breadr"]::before,
+[data-icon-after="ico_bread"]::after {
+    background-image: url(../../assets/img/icon/ico_bread.png);
+    background-size: cover;
+}
+
+[data-icon-before="ico_cooked_rice"]::before,
+[data-icon="ico_cooked_ricer"]::before,
+[data-icon-after="ico_cooked_rice"]::after {
+    background-image: url(../../assets/img/icon/ico_cooked_rice.png);
+    background-size: cover;
+}
+
+[data-icon-before="ico_flatbread"]::before,
+[data-icon="ico_flatbreadr"]::before,
+[data-icon-after="ico_flatbread"]::after {
+    background-image: url(../../assets/img/icon/ico_flatbread.png);
+    background-size: cover;
+}
+
+[data-icon-before="ico_oven"]::before,
+[data-icon="ico_ovenr"]::before,
+[data-icon-after="ico_oven"]::after {
+    background-image: url(../../assets/img/icon/ico_oven.png);
+    background-size: cover;
+}
+
+/*======= info =======*/
+[data-icon-before="info"]::before,
+[data-icon="info"]::before,
+[data-icon-after="info"]::after {
+    background-image: url(../img/common/ico_info.svg);
+}
+
+[data-icon-before="info-large"]::before,
+[data-icon="info-large"]::before,
+[data-icon-after="info-large"]::after {
+    width: 2.6rem;
+    height: 2.6rem;
+    background-image: url(../img/common/ico_info3.svg);
+}
+
+[data-icon="notice"]::before{
+    background-image: url(../img/common/ico_notice.svg);
+}
+
+[data-icon-before="ico_info_red"]::before,
+[data-icon="ico_info_red"]::before,
+[data-icon-after="ico_info_red"]::after {
+    width: 1.6rem;
+    height: 1.6rem;
+    background-size: 1.6rem;
+    background-image: url(../img/common/ico_info_red.png);
+}
+
+/*======= arrow =======*/
+[data-icon-before="arrow-up-gray"]::before,
+[data-icon="arrow-up-gray"]::before,
+[data-icon-after="arrow-up-gray"]::after {
+    background-image: url(../img/common/ico_arrow_up_gray.svg);
+    background-size: 1.6rem;
+}
+
+[aria-pressed="true"] {
+    &[data-icon-before="arrow-up-gray"]::before,
+    &[data-icon="arrow-up-gray"]::before,
+    &[data-icon-after="arrow-up-gray"]::after {
+        background-image: url(../img/common/ico_arrow_down_gray.svg);
+        background-size: 1.6rem;
+    }
+}
+
+[data-icon-before="arrow"]::before,
+[data-icon="arrow"]::before,
+[data-icon-after="arrow"]::after {
+    background-image: url(../img/common/ico_arrow.svg);
+}
+
+[data-icon-before="arrow-dark"]::before,
+[data-icon="arrow-dark"]::before,
+[data-icon-after="arrow-dark"]::after {
+    background-image: url(../img/common/ico_arrow_dark.svg);
+}
+[data-icon-before="arrow-white"]::before,
+[data-icon="arrow-white"]::before,
+[data-icon-after="arrow-white"]::after {
+    background-image: url(../img/common/ico_arrow_white.svg);
+  
+}
+
+[data-icon-before="arrow-gray"]::before,
+[data-icon="arrow-gray"]::before,
+[data-icon-after="arrow-gray"]::after {
+    background-size: 0.7rem 1rem;
+    background-image: url(../img/common/ico_arrow_gray.svg);
+}
+
+[data-icon-before="arrow-long"]::before,
+[data-icon="arrow-long"]::before,
+[data-icon-after="arrow-long"]::after {
+    background-image: url(../img/common/ico_arrow_long.svg);
+}
+
+[data-icon-before="arrow-long-dark"]::before,
+[data-icon="arrow-long-dark"]::before,
+[data-icon-after="arrow-long-dark"]::after {
+    background-image: url(../img/common/ico_arrow_long_dark.svg);
+}
+
+[data-icon-before="arrow-long2-dark"]::before,
+[data-icon="arrow-long2-dark"]::before,
+[data-icon-after="arrow-long2-dark"]::after {
+    background-image: url(../img/common/ico_arrow_long2_dark.svg);
+}
+
+[data-icon-before="arrow-long-gray"]::before,
+[data-icon="arrow-long-gray"]::before,
+[data-icon-after="arrow-long-gray"]::after {
+    background-image: url(../img/common/ico_arrow_long_gray.svg);
+    width: 2.7rem;
+    height: 1.4rem;
+}
+
+[data-icon="doubleArrowDown"] {
+    position: relative;
+    display: block;
+    margin: 0;
+    width: 4rem;
+    height: 4rem;
+    background-color: transparent;
+    border:0;
+ 
+    &::before,
+    &::after {
+        content: "";
+        display: block;
+        width: 1.8rem;
+        background: url(../img/common/ico_arrow_down.svg) no-repeat 50% 50%/ 100%;
+        height: 1rem;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -.5rem);
+        animation-duration: 1s;
+        animation-name: ocr_downMove;
+        animation-iteration-count: infinite;
+        animation-timing-function: ease-in;
+    }
+    &::before {
+        animation-delay: .5s;
+    }
+}
+
+[data-icon="singleArrowUp"] {
+    position: relative;
+    display: block;
+    margin: 0;
+    width: 3.2rem;
+    height: 3.2rem;
+    border-radius: 50%;
+    background-color: $gray-100;
+    border:0;
+  
+    &::after {
+        content: "";
+        display: block;
+        width: 1rem;
+        background: url(../img/common/ico_arrow_up.svg) no-repeat 50% 50%/ 100%;
+        height: .7rem;
+        position: absolute;
+        margin-top: -.35rem;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, 0);
+        animation-duration: 1s;
+        animation-name: ocr_upMove;
+        animation-iteration-count: infinite;
+        animation-timing-function: ease-in;
+    }
+}
+
+[data-icon="ico-arrow"]::before{
+    background-image: url(../../assets/img/common/ico_bread_back.svg);
+    background-size: cover;
+}
+
+[data-icon-before="ico_arrow_down"]::before,
+[data-icon="ico_arrow_down"]::before,
+[data-icon-after="ico_arrow_down"]::after {
+    width: 1.1rem;
+    height: 0.75rem;
+    background-image: url(../../assets/img/common/ico_arrow_down.png);
+    background-size: cover;
+}
+
+/*======= sprite =======*/
+[data-icon="bread"]::before{
+    content:"";
+    display: block;
+    background-image: url(../../assets/img/icon/ico_sprite_list.png);
+}
+
+[data-sp="01"]{
+    &::before{
+        background-position: 0rem 0rem;
+        background-size: 24rem;
+    }
+}
+[data-sp="02"]{
+    &::before{
+        background-position: -2.4rem 0rem;
+        background-size: 24rem;
+    }
+}
+[data-sp="03"]{
+    &::before{
+        background-position: -4.8rem 0rem;
+        background-size: 24rem;
+    }
+}
+[data-sp="04"]{
+    &::before{
+        background-position:-7.2rem 0rem;
+        background-size: 24rem;
+    }
+}
+[data-sp="05"]{
+    &::before{
+        background-position: -9.6rem 0rem;
+        background-size: 24rem;
+    }
+}
+[data-sp="06"]{
+    &::before{
+        background-position: -12rem -.2rem;
+        background-size: 24rem;
+    }
+}
+[data-sp="07"]{
+    &::before{
+        background-position: -14.4rem 0rem;
+        background-size: 24rem;
+    }
+}
+[data-sp="08"]{
+    &::before{
+        background-position: -16.8rem -.2rem;
+        background-size: 24rem;
+    }
+}
+[data-sp="09"]{
+    &::before{
+        background-position: -19.2rem -.2rem;
+       background-size: 24rem;
+    }
+}
+[data-sp="10"]{
+    &::before{
+        background-position: -21.6rem -.2rem;
+       background-size: 24rem;
+    }
+}
+[data-sp="11"]{
+    &::before{
+        background-position: 0rem -2.6rem;
+       background-size: 24rem;
+    }
+}
+[data-sp="12"]{
+    &::before{
+        background-position: -2.4rem -2.6rem;
+       background-size: 24rem;
+    }
+}
+[data-sp="13"]{
+    &::before{
+        background-position: -4.8rem -2.6rem;
+       background-size: 24rem;
+    }
+}
+[data-sp="14"]{
+    &::before{
+        background-position: -7.2rem -2.6rem;
+       background-size: 24rem;
+    }
+}
+[data-sp="15"]{
+    &::before{
+        background-position: -9.6rem -2.6rem;
+       background-size: 24rem;
+    }
+}
+[data-sp="16"]{
+    &::before{
+        background-position: -12rem -2.6rem;
+       background-size: 24rem;
+    }
+}
+[data-sp="17"]{
+    &::before{
+        background-position: -14.4rem -2.6rem;
+       background-size: 24rem;
+    }
+}
+[data-sp="18"]{
+    &::before{
+        background-position: -16.8rem -2.6rem;
+       background-size: 24rem;
+    }
+}
+[data-sp="19"]{
+    &::before{
+        background-position: -19.2rem -2.6rem;
+       background-size: 24rem;
+    }
+}
+[data-sp="20"]{
+    &::before{
+        background-position: -21.6rem -2.6rem;
+       background-size: 24rem;
+    }
+}
+[data-sp="21"]{
+    &::before{
+        background-position: 0rem -5rem;
+       background-size: 24rem;
+    }
+}
+[data-sp="22"]{
+    &::before{
+        background-position: -2.4rem -5rem;
+       background-size: 24rem;
+    }
+}
+[data-sp="23"]{
+    &::before{
+        background-position: -4.8rem -5rem;
+       background-size: 24rem;
+    }
+}
+[data-sp="24"]{
+    &::before{
+        background-position: -7.2rem -5rem;
+       background-size: 24rem;
+    }
+}
+[data-sp="25"]{
+    &::before{
+        background-position: -9.6rem -5rem;
+       background-size: 24rem;
+    }
+}
+[data-sp="26"]{
+    &::before{
+        background-position: -12rem -5rem;
+       background-size: 24rem;
+    }
+}
+[data-sp="27"]{
+    &::before{
+        background-position: -14.4rem -5rem;
+       background-size: 24rem;
+    }
+}
+[data-sp="28"]{
+    &::before{
+        background-position: -16.8rem -5rem;
+       background-size: 24rem;
+    }
+}
+[data-sp="29"]{
+    &::before{
+        background-position: -19.2rem -5rem;
+       background-size: 24rem;
+    }
+}
+[data-sp="30"]{
+    &::before{
+        background-position: -21.6rem -5rem;
+       background-size: 24rem;
+    }
+}
+[data-sp="31"]{
+    &::before{
+        background-position: 0rem -7.5rem;
+       background-size: 24rem;
+    }
+}
+[data-sp="32"]{
+    &::before{
+         background-position: -2.4rem -7.5rem;
+       background-size: 24rem;
+    }
+}
+[data-sp="33"]{
+    &::before{
+        background-position: -4.8rem -7.5rem;
+        background-size: 24rem;
+    }
+}
+[data-sp="34"]{
+    &::before{
+        background-position: -7.2rem -7.5rem;
+        background-size: 24rem;
+    }
+}
+[data-sp="35"]{
+    &::before{
+        background-position: -9.6rem -7.5rem;
+        background-size: 24rem;
+    }
+}
+[data-sp="36"]{
+    &::before{
+        background-position: -12rem -7.5rem;
+        background-size: 24rem;
+    }
+}
+[data-sp="37"]{
+    &::before{
+        background-position: -14.4rem -7.5rem;
+        background-size: 24rem;
+    }
+}
+[data-sp="38"]{
+    &::before{
+        background-position: -16.8rem -7.5rem;
+        background-size: 24rem;
+    }
+}
+[data-sp="39"]{
+    &::before{
+        background-position: -19.2rem -7.5rem;
+        background-size: 24rem;
+    }
+}
+[data-sp="40"]{
+    &::before{
+        background-position: -21.6rem -7.5rem;
+        background-size: 24rem;
+    }
+}
+[data-sp="41"]{
+    &::before{
+        background-position: 0rem -9.8rem;
+        background-size: 24rem;
+    }
+}
+[data-sp="42"]{
+    &::before{
+        background-position: -2.4rem -9.8rem;
+        background-size: 24rem;
+    }
+}
+[data-sp="43"]{
+    &::before{
+        background-position: -4.8rem -9.8rem;
+        background-size: 24rem;
+    }
+}
+[data-sp="44"]{
+    &::before{
+        background-position: -7.2rem -9.8rem;
+        background-size: 24rem;
+    }
+}
+[data-sp="45"]{
+    &::before{
+        background-position: -9.6rem -9.8rem;
+        background-size: 24rem;
+    }
+}

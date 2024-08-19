@@ -1,0 +1,285 @@
+.mdl-list {
+    width: 100%;
+    position: relative;
+    
+    //list 기본유형
+    &[data-col] {
+        .mdl-list-wrap {
+            flex-direction: row;
+            gap: $x1-5;
+        }
+    }
+    &[data-line="true"] {
+        .mdl-list-item + .mdl-list-item::before {
+            content: "";
+            display: block;
+            position: absolute;
+            top: calc(($x2 / 2 * -1) - .1rem);
+            width: 100%;
+            height: .1rem;
+            border-top: .1rem solid var(--line_light);
+        }
+    }
+    &[data-type="wrap"] {
+        &[data-col="2"] {
+            .mdl-list-wrap {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: $x1;
+            }
+            .mdl-list-item {min-width: 50%;}
+        }
+        &[data-col="3"] {
+            .mdl-list-wrap {
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr ;
+                gap: $x1;
+            }
+            .mdl-list-item {min-width: 33.33%;}
+        }  
+        &[data-col="4"] {
+            .mdl-list-wrap {
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr 1fr;
+                gap: $x1;
+            }
+            .mdl-list-item {min-width: 25%;}
+        }  
+        &[data-col="5"] {
+            .mdl-list-wrap {
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+                gap: $x1;
+            }
+            .mdl-list-item {min-width: 20%;}
+        }
+        &[data-col="6"] {
+            .mdl-list-wrap {
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+                gap: $x1;
+            }
+            .mdl-list-item {min-width: 16.66%;}
+        }  
+
+        .mdl-list-wrap {
+            flex-wrap: wrap;
+            gap: $x1;
+        }
+    }
+    &-wrap {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        gap:$x2;
+    }
+    &-item {
+        position: relative;
+        width: 100%;
+    }
+
+    //심리검사 체크리스트
+    .mdl-input{
+        width: 100%;
+        min-height: 9.4rem;
+        padding: 2.4rem 2.2rem;
+        background-color: var(--gray_0);
+        border: 1px solid var(--line);
+        border-radius: 2.4rem;
+        box-shadow: 0.1rem 0.2rem 0 var(--line);
+    }
+    .mdl-input-txt{
+        font-size: 1.6rem;
+        font-weight: 300;
+        line-height: 2.4rem;
+        color: var(--gray_95);
+    }
+    .mdl-input-wrap{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: .5rem;
+        margin-top: 2.2rem;
+    }
+    .mdl-input-item{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        &[data-ox="x"]{
+            .mdl-input-label::before{background-image: url(../../assets/img/icon/ico_ox_gray_x.png);}
+            input[type="radio"]:checked + label{
+                background-color: #FFE3E2;
+                &::before{background-image: url(../../assets/img/icon/ico_ox_x.png);}
+            }
+        }
+        &[data-ox="o"]{
+            .mdl-input-label::before{background-image: url(../../assets/img/icon/ico_ox_gray_o.png);}
+            input[type="radio"]:checked + label{
+                background-color: #CDE1FC;
+                &::before{background-image: url(../../assets/img/icon/ico_ox_o.png);}
+            }
+        }
+    }
+    .mdl-input-label{        
+        width: 100%;
+        height: 4rem;
+        border-radius: 1.2rem;
+        background-color: #F9FAFC;
+        position: relative;
+        &::before{
+            content: '';
+            display: block;
+            width: 2.4rem;
+            height: 2.4rem;
+            margin: 0 auto;
+            background-size: 100% 100%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    }
+    .mdl-input[data-type="blank"]{
+        padding: 1.6rem 0;
+        background-color: transparent;
+        border: 0;
+        box-shadow: none;
+        & + .mdl-input[data-type="blank"]{margin-top: 1.6rem;}
+        .line{
+            display: inline-block;
+            min-width: 12.8rem;    
+            margin: 0 .4rem;
+            padding: 0 .5rem;
+            border-bottom: .1rem solid var(--line);
+            &[data-style="small"]{min-width: 6.9rem;}
+            &[data-style="large"]{min-width: 17rem;}
+        }
+        .mdl-input-wrap{
+            align-items: stretch;
+            input[type="radio"]:checked  + .mdl-input-item{
+                &::before{
+                    border: .1rem solid transparent;
+                    background-color: var(--txt_tertiary);
+                }
+                &::after{
+                    content: '';
+                    width: 1rem;
+                    height: 1rem;
+                    background-color: #fff;
+                    border-radius: 50%;
+                    position: absolute;
+                    right: 2.3rem;
+                }
+            }
+        }
+        .mdl-input-item{
+            width: 100%;
+            min-height: 7.4rem;
+            padding: 1.6rem 5rem 1.6rem 1.6rem;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            background-color: var(--gray_0);
+            border: 1px solid var(--line);
+            border-radius: 2.4rem;
+            box-shadow: .1rem .2rem 0 var(--line);
+            position: relative;
+            overflow: hidden;
+            word-break: keep-all;
+            &::before{
+                content: '';
+                width: 2.4rem;
+                height: 2.4rem;
+                background-color: transparent;
+                border: .1rem solid var(--line_gray);
+                border-radius: 50%;
+                position: absolute;
+                right: 1.6rem;
+            }
+        }
+        .mdl-input-blank{
+            display: block;
+            text-align: center;
+            font-size: 1.6rem;
+            font-weight: 700;
+            color: var(--line);
+        }
+        .mdl-input-txt{
+            font-size: 1.3rem;
+            font-weight: 300;
+            line-height: 1.95rem;
+            &[data-word="break"]{word-break: break-all;}
+        }
+    }
+    p[data-icon-before="ico_info_red"]{
+        font-size: 1.4rem;
+        font-weight: 500;
+        margin-top: 1.6rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: var(--gray_95);
+        &::before{margin-right: .8rem;}
+    }
+
+    //심리검사 동료유형
+    [data-style="colleague"]{
+        padding: 0 .8rem 1.6rem;
+        border-bottom: .1rem solid #ededed;
+        align-items: center;
+        .mdl-item-group{
+            &:first-of-type{
+                width: 20rem;
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                gap: 1.6rem;
+            }
+            p{
+                font-size: 1.4rem;
+                line-height: 1.4rem;
+                color: var(--txt_tertiary);
+                margin-top: .6rem;
+                &.no-data{color: #888;}
+            }
+        }
+        .mdl-item-img{
+            width: 4.8rem;
+            height: 4.8rem;
+            border: .1rem solid var(--gray_40);
+            border-radius: 50%;
+            overflow: hidden;
+            position: relative;
+            &::before{
+                content: '';
+                display: block;
+                width: 4.8rem;
+                height: 4.8rem;
+                background-image: url(../../assets/img/icon/ico_colleague_default.jpg);
+                background-size: 100% 100%;
+            }
+
+            img{
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                width: 110%;
+                background-color: #fff;
+                object-fit: cover;
+                max-width:none;
+                min-width: 100%;
+                min-height: 100%;
+            }
+            &.no-data{
+                &::before{background-image: url(../../assets/img/icon/ico_colleague_default02.jpg);}
+            }
+        }
+        .mdl-item-tit{
+            font-size: 2rem;
+            line-height: 2rem;
+            color: var(--gray_100);
+        }
+    }
+}

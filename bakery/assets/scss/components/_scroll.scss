@@ -1,0 +1,26 @@
+.mdl-scroll {
+    position: relative;
+    display: flex;
+    gap: $x2;
+    overflow: hidden;
+    
+    &-wrap{
+        position: relative;
+        width: 100%;
+        display: flex;
+        gap: $x2;
+        overflow: hidden;
+    }
+
+    & .mdl-scroll-wrap,
+    &[data-orient="horizontal"] .mdl-scroll-wrap {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+    &[data-orient="vertical"] .mdl-scroll-wrap {
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+    
+    .mdl-scroll-wrap::-webkit-scrollbar {display: none;}
+}

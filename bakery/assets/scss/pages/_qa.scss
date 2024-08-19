@@ -1,0 +1,52 @@
+.ocr-bakery[data-page="qa"]{
+    .mdl-wrap{margin: 1.6rem auto 6.8rem;}
+    .mdl-subject{
+        .mdl-subject-group{
+            margin: 0 auto;
+            text-align: center;
+        }
+        .mdl-subject-txt{
+            margin: 1.2rem auto 0;
+            text-align: center;
+        }   
+    }
+    .mdl-list-wrap{gap: 1.2rem;}
+    .mdl-list{margin-top: 5rem;}
+    .mdl-btn-wrap{margin-bottom: 1.8rem;}
+
+    .ocr-bakery-baking{
+        width: 100%;
+        margin:  4rem auto 0;
+        border-bottom: .1rem solid #865735;
+        position: relative;
+        &-img{
+            width: 20rem;
+            height: 11.5rem;
+            margin: 0 auto;
+            position: relative;
+            &::before{
+                content: '';
+                display: block;
+                width: 8.2rem;
+                height: 6.8rem;
+                background-size: 100% 100%;
+                left: -1.4rem;
+            }
+            &[data-icon="material01"]::before{background-image: url(../../assets/img/icon/ico_qa_list01.png);}
+            &[data-icon="material02"]::before{background-image: url(../../assets/img/icon/ico_qa_list02.png);}
+            &[data-icon="material03"]::before{background-image: url(../../assets/img/icon/ico_qa_list03.png);}
+            &[data-icon="material04"]::before{
+                height: 8.1rem;
+                background-image: url(../../assets/img/icon/ico_qa_list04.png);
+            }
+            &[data-icon="material05"]::before{background-image: url(../../assets/img/icon/ico_qa_list05.png);}
+            &[data-icon="material06"]::before{background-image: url(../../assets/img/icon/ico_qa_list06.png);}
+        }
+        &-img2{
+            position: absolute;
+            bottom: -1.8rem;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }
+}

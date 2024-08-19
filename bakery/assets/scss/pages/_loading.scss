@@ -1,0 +1,69 @@
+.ocr-bakery[data-page="loading"] {
+    .mdl-wrap {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+    }
+    .mdl-subject {
+        width: 100%;
+        justify-content: center;
+        margin-top:5vh;
+    }
+    .mdl-subject-tit {
+        width:100%;
+        display: flex;
+        justify-content: center;
+        margin-bottom: $x3;
+
+        img {
+            display: block;
+            width: 24rem;
+        }
+    }
+}
+.ocr-bakery-loading-step {
+    margin-top: $x5 !important;
+    display: flex;
+    flex-direction: column;
+    gap:$x3-5;
+
+    li {
+        position: relative;
+        display: flex;
+        gap:$x1-5;
+        align-items: center;
+        span{
+            font-size: 1.6rem;
+            font-weight: 600;
+            color: #999;
+        }
+        &::before{
+            content:"";
+            display: block;
+            border-radius: 50%;
+            width: 4rem;
+            height: 4rem;
+            background: url(../img/common/loading_step.png) no-repeat 0 0 / 12rem;
+            background-color: #fff;
+        }
+        &:nth-child(2)::before {background-position: -4rem 0;}
+        &:nth-child(3)::before {background-position: -8rem 0;}
+
+        &.on {
+            span{color: #79522C;}
+            &::before {background-color: #79522C;}
+        }
+    }
+
+    li + li::after{
+        content:"";
+        display: block;
+        position: absolute;
+        top: -2.2rem;
+        left: 2rem;
+        width: 4rem;
+        height: 1.6rem;
+        border-left:.1rem dashed #79522C;
+    }
+}

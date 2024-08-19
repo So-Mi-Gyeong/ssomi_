@@ -1,0 +1,363 @@
+.mdl-modal {
+    $mh: 0;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 99;
+    top:0;
+    left:0;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: $x3;
+    display: none;
+
+    //modal 기본유형
+    &-wrap{
+        position: relative;
+        z-index:1;
+        background-color: var(--gray_0);
+        padding: 6.4rem 2rem 4rem;
+        box-shadow: 0 .8rem 2rem rgba(0,0,0,8%); 
+        @include setRound($x3);
+        opacity: 0;
+        max-width: 40rem;
+        width: 100%;
+    }
+    &-close {
+        width: 3rem;
+        height: 3rem;
+        position: absolute;
+        right: $x1-5;
+        top: 5.7rem;
+        z-index: 10;
+    }
+    &-header {
+        display: flex;
+        width: 100%;
+        min-height:5.4rem;
+        padding: $x3 $x3 0; 
+    }
+    &-tit {
+        color:var(--gray_100);
+        font-family: 'KBF';
+        font-size: 1.8rem;
+        font-weight: 700;
+        margin-top: $x0-5;
+        margin-bottom: $x3;
+    }
+    &-body {
+        position: relative;
+        width: 100%;
+        padding: 0 $x3 $x3; 
+        height: 100%;
+        // height: calc(100vh - ($x7 + env(safe-area-inset-top) + env(safe-area-inset-bottom) + 5.4rem));
+        max-height: calc(106vh - ($x7 + env(safe-area-inset-top) + env(safe-area-inset-bottom) + 5.4rem));
+        overflow: auto;
+
+        p {
+            font-family: 'KBF';
+            font-size: 1.3rem;
+            color: var(--gray_80);
+            line-height: 1.5;
+            font-weight: 200;
+            word-break: keep-all;
+            text-align: left;
+        }
+    }
+    &::before {
+        content:"";
+        display: block;
+        position: absolute;
+        top:0;
+        left:0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0,0,0,70%);
+        z-index: 0;
+        opacity: 0;
+    }
+
+    &[data-type="bakery-cardB"]{
+        padding: 0;
+        align-items: flex-end;
+
+        &[aria-hidden="false"] {
+            display: flex;
+
+            .mdl-modal-wrap {
+                animation-name: modalShowBottom;
+                animation-delay: .2s;
+                animation-duration: .2s;
+                animation-iteration-count: 1;animation-timing-function:ease-in; 
+                animation-fill-mode:forwards;
+            }
+            [data-style="btn-text"]{
+                display: block;
+                width: auto;
+                margin: $x3 auto 0;
+            }
+        }
+        &[aria-hidden="true"] {
+            display: flex;
+
+            .mdl-modal-wrap {
+                opacity: 1;
+                animation-name: modalHideBottom;
+                animation-delay: 0;
+                animation-duration: .2s;
+                animation-iteration-count: 1;animation-timing-function:ease-in; 
+                animation-fill-mode:forwards;
+            }
+        }
+        
+        .mdl-modal-wrap{
+            max-width: 100%;
+            height: 100%;
+            padding: 0;
+            background-color: transparent;
+            box-shadow: none !important;
+            display: flex;
+            align-items: flex-end;
+            .mdl-subject-group{padding:0 $x4;}
+            .mdl-subject{
+                display: block;
+                padding: 6.4rem 3rem;
+                margin: 0 auto 0;
+                position: relative;
+                min-height:$mh;
+                background-color: #FFE0B0;
+                border-radius: 4.8rem 4.8rem 0 0;
+                box-shadow: 0 -1rem 1rem rgba(0, 0, 0, 0.25);
+    
+                &-group{align-items: center;}
+    
+                &-em{
+                    font-size: 1.6rem;
+                    font-weight: 300;
+                    text-align: center;
+                    color: var(--txt_secondary);
+                }
+                &-tit{
+                    font-size: 2.4rem;
+                    font-weight: 700;
+                    text-align: center;
+                    color: var(--txt_primary);
+                    margin-bottom: 0;
+                }
+                &-img{
+                    width: 19.9rem;
+                    height: 13.2rem;
+                    position: absolute;
+                    top: -9.5rem;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    &[data-bakery="1"]{background: url('../img/icon/ico_bread01.png') no-repeat 50% 100% / cover;}
+                    &[data-bakery="2"]{background: url('../img/icon/ico_bread02.png') no-repeat 50% 100% / cover;}
+                    &[data-bakery="3"]{background: url('../img/icon/ico_bread03.png') no-repeat 50% 100% / cover;}
+                    &[data-bakery="4"]{background: url('../img/icon/ico_bread04.png') no-repeat 50% 100% / cover;}
+                    &[data-bakery="5"]{background: url('../img/icon/ico_bread05.png') no-repeat 50% 100% / cover;}
+                    &[data-bakery="6"]{background: url('../img/icon/ico_bread06.png') no-repeat 50% 100% / cover;}
+                    &[data-bakery="7"]{background: url('../img/icon/ico_bread07.png') no-repeat 50% 100% / cover;}
+                    &[data-bakery="8"]{background: url('../img/icon/ico_bread08.png') no-repeat 50% 100% / cover;}
+                }
+            }
+    
+            [data-icon="ico-arrow"]{
+                position: absolute;
+                top: 11rem;
+                transform: translateY(-50%);
+                &[data-btn="before"]{left: 3rem;}
+                &[data-btn="after"]{
+                    right: 3rem;
+                    transform: translateY(-50%) rotate(180deg);
+                }
+            }
+            .mdl-box{
+                margin-top: 2.4rem;
+                background-color: rgba(255, 255, 255, 0.6);
+                padding: 3.2rem 2.4rem;
+                box-shadow: none !important;
+                .mdl-subject-txt{
+                    height: auto;
+                    margin-top: 0;
+                    font-size: 1.6rem ;
+                    font-weight: 500;
+                    color: var(--txt_primary);
+                }
+            }
+            .mdl-bul-dot li::before{background-color:var(--gray_80)}
+        }
+        .mdl-modal-close::before{
+            width: 3rem;
+            height: 3rem;
+            background-image: url(../img/common/ico_tit_close.png);
+        }
+        .mdl-modal-body{
+            padding: 0;
+            overflow-x: hidden;
+            overflow-y: auto;
+            height: 100%;
+             max-height: 100%;
+            display: flex;
+            align-items: flex-end;
+        }
+
+        .mdl-subject{height: 100%;}
+
+        .ocr-bread-swiper{
+            overflow: visible;
+            width: 100%;
+
+            &::after{
+                content:"";
+                display: block;
+                position: absolute;
+                bottom:0; 
+                left:0;
+               
+                width: 100%;
+                height:calc(100% - 9.5rem);;
+            }
+
+            .mdl-wrap{
+                position: absolute;
+                top:0;
+                left:50%;
+                z-index: 10;
+                transform: translate(-50%, 0);
+            }
+        }
+        .swiper-wrapper{
+            overflow: visible;
+        }
+        .swiper-slide{display: flex;height:auto; max-width:40rem; }
+    }
+    &[data-type="bottom"] {
+        padding: 0;
+        align-items: flex-end;
+
+        .mdl-modal-wrap {
+            max-width: 100%;
+            border-bottom-left-radius: 0;
+            border-bottom-right-radius: 0;
+        }
+        .mdl-modal-body{
+            padding: 0;
+            .mdl-subject-group{
+                width: 100%;
+                align-items: flex-start;
+                .mdl-subject-tit{
+                    width: 100%;
+                    text-align: left;
+                    & + .mdl-subject-txt{margin-top: 2.4rem;}
+                    & + .mdl-bul-dot{margin-top: 1.6rem;}
+                }
+            }
+            .mdl-subject{justify-content: flex-start;}
+            .mdl-subject-txt{
+                font-size: 1.6rem;
+                font-weight: 300;
+            }
+            .mdl-bul-dot{
+                li{
+                    &::before{
+                        min-width: 0.3rem;
+                        min-height: 0.3rem;
+                        max-width: 0.3rem;
+                        max-height: 0.3rem;
+                        margin-right: .9rem;
+                        background-color: var(--gray_100);
+                    }
+                    div{
+                        font-size: 1.6rem;
+                        font-weight: 300;
+                    }
+                }
+            }
+        }      
+
+        &[aria-hidden="false"] {
+            display: flex;
+
+            .mdl-modal-wrap {
+                animation-name: modalShowBottom;
+                animation-delay: .2s;
+                animation-duration: .2s;
+                animation-iteration-count: 1;animation-timing-function:ease-in; 
+                animation-fill-mode:forwards;
+            }
+            [data-style="btn-text"]{
+                display: block;
+                width: auto;
+                margin: $x3 auto 0;
+            }
+        }
+        &[aria-hidden="true"] {
+            display: flex;
+
+            .mdl-modal-wrap {
+                opacity: 1;
+                animation-name: modalHideBottom;
+                animation-delay: 0;
+                animation-duration: .2s;
+                animation-iteration-count: 1;animation-timing-function:ease-in; 
+                animation-fill-mode:forwards;
+            }
+        }
+    }
+}
+
+@keyframes modalDimShow {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+@keyframes modalShow {
+    0% {
+        opacity: 0; 
+        transform: scale3d(0.3, 0.3, 0.3);
+    }
+    100% {
+        opacity: 1;
+        transform: scale3d(1, 1, 1);
+    }
+}
+@keyframes modalDimHide{
+    0% {opacity: 1;}
+    100% {opacity: 0;}
+}
+@keyframes modalHide{
+    0% {
+        opacity: 1;
+        transform: scale3d(1, 1, 1);
+    }
+    100% {
+        opacity: 0; 
+        transform: scale3d(0.3, 0.3, 0.3);
+    }
+}
+
+
+@keyframes modalShowBottom {
+    0% {
+        opacity: 0; 
+        transform: translate(0, 50vh);
+    }
+    100% {
+        opacity: 1;
+        transform: translate(0, 0);
+    }
+}
+@keyframes modalHideBottom {
+    0% {
+        opacity: 1; 
+        transform: translate(0, 0);
+    }
+    100% {
+        opacity: 0;
+        transform: translate(0, 50vh);
+    }
+}
+
+[data-id="NMMC_3_10L"] .mdl-modal-close{top:$x1-5}

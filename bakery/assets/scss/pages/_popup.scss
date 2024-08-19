@@ -1,0 +1,59 @@
+.ocr-bakery[data-page="popup"]{
+    background-color: #fff;
+    .ocr-header{background-color: #fff;}
+    .mdl-wrap{
+        position: relative;
+        width: 100%;
+        max-width: 40rem;
+        margin: 0 auto;
+    }
+    
+    .mdl-modal-wrap{
+        height: 100%;
+        border-radius: 0;
+    }
+    .mdl-modal-body{
+        padding: 0;
+        overflow: hidden;
+    }
+    .mdl-subject-tit{
+        font-size: 2.4rem;
+        line-height: 3.6rem;
+        &[data-icon-after="ico_bread"]{
+            display: inline-block;
+            &::after{
+                display: inline-block;
+                margin-left: 0.4rem;
+                transform: translateY(0.4rem);
+            }
+        }
+    }
+
+    [data-typo="body-s"]{
+        margin-top: 2.4rem;
+        color: var(--gray_80);
+    }
+
+    .mdl-box[data-color="gray"]{
+        padding: 3.2rem 2rem;
+        letter-spacing: -.1rem;
+        box-shadow: none !important;
+        .mdl-definition-head{
+            font-size: 1.6rem;
+            font-weight: 500;
+            margin-left: .4rem;
+        }
+        .mdl-definition-body{
+            font-size: 1.4rem;
+            font-weight: 300;
+        }
+        .mdl-definition[data-body=dot] .mdl-definition-body::before{top: .8rem;}
+    }
+
+    .mdl-definition .mdl-definition-head{ margin-bottom: 2.4rem;}
+
+    .ocr-footer{
+        padding: 2rem 2rem 3.4rem;
+        border-top: 0;
+    }
+}

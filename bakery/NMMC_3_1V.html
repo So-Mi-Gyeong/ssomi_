@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <meta name="format-detection" content="telephone=no, address=no, email=no">
+    <title>오케어 베이커리</title>
+    <link rel="stylesheet" type="text/css" href="../bakery/assets/css/main.css">
+    <link rel="stylesheet" href="../bakery/assets/js/lib/swiper-bundle.min.css" />
+</head>
+<body class="ocr-bakery" data-page="main">
+    <div class="ocr-wrap">
+        <header class="ocr-header" data-id="header" data-title="오케어 베이커리" data-type="main"></header>
+        <main class="ocr-body"> 
+            <div class="mdl-wrap">
+                <div class="mdl-subject">
+                    <div class="mdl-subject-group">
+                        <em class="mdl-subject-em mb-x2" data-typo="body">빵으로 알아보는 내 성격은?</em>
+                        <h2 class="mdl-subject-tit"><img src="../bakery/assets/img/logo.png"  alt="오케어 베이커리"></h2>
+                        <p class="mdl-subject-txt">세상에 하나뿐인 나를 닮은 빵을 <br>만들어보세요.</p>
+                    </div>
+                </div> 
+            </div>
+            <div class="ocr-bakery-baking">
+                <div class="ocr-bakery-baking-img" data-id="nmmc_3_1v_ani"></div>
+            </div>
+            <div class="mdl-wrap"> 
+                <div class="mdl-paragraph" data-align="center"><p>총 <b>1,824</b>명이 빵을 구웠어요!</p></div>
+                <div class="mdl-btn-wrap plr-x5">
+                    <button type="button" class="mdl-btn" data-style="special" data-icon-after="ico_bread"><span>나만의 빵 만들기</span></button>
+                </div>
+                <div class="mdl-btn-wrap plr-x5 mt-x2">
+                    <button type="button" class="mdl-btn" data-style="second">
+                        <span>결과 다시보기</span>
+                    </button>
+                </div>
+            </div>
+        </main>
+    </div> 
+    
+    <section class="mdl-modal" data-id="NMMC_3_10L" data-type="bottom">
+        <div class="mdl-modal-wrap">
+            <button type="button" class="mdl-modal-close" data-icon="close_large_dark" aria-label="창닫기" onclick="OcareUI.modal.hide('NMMC_3_10L')"></button>
+            <div class="mdl-modal-body">
+                <div class="mdl-subject">
+                    <div class="mdl-subject-group">
+                        <h1 class="mdl-subject-tit" data-typo="title">오케어 베이커리란?</h1>
+                        <p class="mdl-subject-txt">
+                            내 성격유형을 쉽고 재미있게 확인할 수 있는 검사예요. <br>
+                            간단한 자기보고식 검사 문항으로 내 성격과 닮은 빵을 알 수 있어요.
+                        </p>
+                    </div>
+                </div>
+                <div class="mdl-subject mt-x5">
+                    <div class="mdl-subject-group">
+                        <h2 class="mdl-subject-tit" data-typo="body-l">검사대상 및 문항</h2>
+                        <ul class="mdl-bul-dot">
+                            <li><div>어른이라면 누구나 검사할 수 있어요.</div></li>
+                            <li><div>사고, 감정, 행동에 관한 질문 40개로 구성돼요.</div></li>
+                            <li><div>검사시간은 5분 정도 걸려요.</div></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="mdl-modal-footer mt-x7">
+                <div class="mdl-btn-wrap">
+                    <button type="button" class="mdl-btn" data-style="primary"><span>시작하기</span></button>
+                </div>
+                <button type="button" class="mdl-btn" data-style="btn-text"><span>다시 보지 않기</span></button>
+            </div>
+        </div>
+    </section>
+    
+    <script src="../bakery/assets/js/lib/swiper-bundle.js"></script>
+    <script src="../bakery/assets/js/ui.bread.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            OcareUI.include.init({
+                src: '../bakery/inc/header.html',
+                id: 'header',
+            });
+
+            OcareUI.exe.nmmc_3_1v_ani = new AniBgMake({
+                id: 'nmmc_3_1v_ani',
+                fps: 8,
+                loop: true,
+                speed:120,
+                delay: 3000 //ms
+            });
+
+            OcareUI.modal.show('NMMC_3_10L')
+        });
+	</script>
+</body>
+</html>
+

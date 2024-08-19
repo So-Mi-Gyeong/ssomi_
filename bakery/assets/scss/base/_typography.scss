@@ -1,0 +1,46 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap');
+/*BASE(Noto)*/
+/*KB font*/
+@font-face { 
+	font-family: 'KBF'; 
+	font-style: normal; 
+	font-weight: 300; 
+	src: local(""), 
+		url("../fonts/kbfg/KBFGDISPLAYL.woff") format("woff"), 
+		url("../fonts/kbfg/KBFGDISPLAYL.woff2") format("woff2");
+}
+@font-face { 
+	font-family: 'KBF'; 
+	font-style: normal; 
+	font-weight: 400; 
+	src: local(""), 
+		url("../fonts/kbfg/KBFGDISPLAYM.woff") format("woff"), 
+		url("../fonts/kbfg/KBFGDISPLAYM.woff2") format("woff2");
+}
+@font-face { 
+	font-family: 'KBF'; 
+	font-style: italic; 
+	font-weight: 400; 
+	src: local(""), 
+		url("../fonts/kbfg/KBFGDISPLAYMI.woff") format("woff"), 
+		url("../fonts/kbfg/KBFGDISPLAYMI.woff2") format("woff2");
+}
+@font-face { 
+	font-family: 'KBF'; 
+	font-style: normal; 
+	font-weight: 700; 
+	src: local(""), 
+		url("../fonts/kbfg/KBFGDISPLAYB.woff") format("woff"), 
+		url("../fonts/kbfg/KBFGDISPLAYB.woff2") format("woff2");
+}
+/*nanum font*/
+@font-face { 
+	font-family: 'Nanum Pen Script', cursive;
+	font-style: normal; 
+	font-weight: 400; 
+	src: local(""), 
+		url("../../fonts/nanum/nanumpen.woff2") format("woff2");
+}
+
+

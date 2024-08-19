@@ -1,0 +1,12 @@
+.ocr-wrap {
+    position: relative;
+    height: 100dvh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    -webkit-overflow-scrolling: touch;
+    -webkit-box-orient: vertical;
+    width: 100%;
+    min-width: 28rem;
+}
+

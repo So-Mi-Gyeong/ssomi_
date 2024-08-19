@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <meta name="format-detection" content="telephone=no, address=no, email=no">
+    <title>Guide</title>
+    <link rel="stylesheet" type="text/css" href="../assets/css/main.css">
+</head>
+<body>
+    <div class="ocr-wrap">
+        <header class="ocr-header" data-id="header" data-title="Banner"></header>
+        <main class="ocr-body"> 
+            <div class="mdl-wrap" data-gap="full">
+                <div class="mdl-tab">
+                    <div class="mdl-tab-wrap" >
+                        <button type="button" class="mdl-tab-btn" data-tab="guide" data-id="attribute" data-callback="guide">
+                            <span>attribute</span>
+                        </button>
+                        <button type="button" class="mdl-tab-btn" data-tab="guide" data-id="banner" data-callback="guide">
+                            <span>banner</span>
+                        </button>
+                        <button type="button" class="mdl-tab-btn" data-tab="guide" data-callback="guide" data-id="box">
+                            <span>box</span>
+                        </button>
+                        <button type="button" class="mdl-tab-btn" data-tab="guide" data-callback="guide" data-id="bullet">
+                            <span>bullet</span>
+                        </button>
+                        <button type="button" class="mdl-tab-btn" data-tab="guide" data-callback="guide" data-id="button">
+                            <span>button</span>
+                        </button>
+                        <button type="button" class="mdl-tab-btn" data-tab="guide" data-callback="guide" data-id="hash">
+                            <span>hash</span>
+                        </button>
+                        <button type="button" class="mdl-tab-btn" data-tab="guide" data-callback="guide" data-id="icon">
+                            <span>icon</span>
+                        </button>
+                        <button type="button" class="mdl-tab-btn" data-tab="guide" data-callback="guide" data-id="item">
+                            <span>item</span>
+                        </button>
+                        <button type="button" class="mdl-tab-btn" data-tab="guide" data-callback="guide" data-id="list">
+                            <span>list</span>
+                        </button>
+                        <button type="button" class="mdl-tab-btn" data-tab="guide" data-callback="guide" data-id="modal">
+                            <span>modal</span>
+                        </button>
+                        <button type="button" class="mdl-tab-btn" data-tab="guide" data-callback="guide" data-id="title">
+                            <span>title</span>
+                        </button>
+                        <button type="button" class="mdl-tab-btn" data-tab="guide" data-callback="guide" data-id="tooltip">
+                            <span>tooltip</span>
+                        </button>
+                        <button type="button" class="mdl-tab-btn" data-tab="guide" data-callback="guide" data-id="typography">
+                            <span>typography</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mdl-wrap mt-x4">
+                <div>
+                    <section class="mdl-tab-pnl" data-tab="guide" data-id="guide" aria-hidden="true">
+                        <h1 class="a11y-hidden">탭1</h1>
+                        async: true
+                        
+                    </section>
+                </div>
+            </div> 
+        </main>
+    </div>                
+    
+    <script defer src="../assets/js/ui.bread.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            OcareUI.include.init({
+                src: '../html/inc/header.html',
+                id: 'header',
+            });
+
+            //tab2 callback 
+            OcareUI.callback.tab.guide = (v) => {
+                const link = './inc/' + v.current + '.html';
+                
+                fetch(link).then(response => response.text()).then(data => {
+                    const pnl = document.querySelector('.mdl-tab-pnl[data-id="'+ 
+                    v.id +'"]');
+
+					pnl.innerHTML = data;
+					document.querySelector('.ocr-header-tit').setAttribute('aria-label', v.current);
+                    
+                    switch (v.current) {
+                        case 'button' :
+                            OcareUI.form.init();
+                            break;
+                        case 'accordion': 
+                            OcareUI.exe.accoName = new OcareAcco({
+                                id: 'idName',
+                                current: [1]
+                            });
+                            OcareUI.exe.accoName2 = new OcareAcco({
+                                id: 'idName2',
+                                current: [0]
+                            })
+                        break;
+                        case 'tab': 
+                            OcareUI.callback.tab.tab1_1 = (v) => {
+                                console.log(v);
+                            }
+                            OcareUI.callback.tab.tab1_2 = (v) => {
+                                console.log(v);
+                            }
+                            OcareUI.callback.tab.tab1_3 = (v) => {
+                                console.log(v);
+                            }
+                            OcareUI.exe.tab1 = new OcareTab({
+                                tab: 'tab1', //data-tab
+                                current: 'tab1_2', //data-id
+                            });
+                            
+                            //tab2 callback 
+                            OcareUI.callback.tab.tab2_1 = (v) => {
+                                console.log(v);
+                            }
+                            OcareUI.callback.tab.tab2_2 = (v) => {
+                                console.log(v);
+                            }
+                            OcareUI.exe.tab2 = new OcareTab({
+                                tab: 'tab2', //data-tab
+                                current: 'tab2_1', //data-id
+                                async: true
+                            });
+                        break;  
+
+                        case 'piechart':
+                            OcareUI.exe.stampPieGraph = new DrawPieGraph({
+                                id: 'stampMission',
+                                wrap: 240,
+                                size: 200,
+                                linewidth: 16,
+                                bgcolor: "#eee",
+                                linecolor: ["#FFD700", "#ffe600"],
+                                step: 9,
+                                num: 4,//현재 스탬프 갯수
+                            });
+
+                            OcareUI.exe.stampPieGraph.lineDraw();
+                        break;
+
+                        case 'layout':
+                            OcareUI.include.init({
+                                src: '../inc/header.html',
+                                id: 'header_test',
+                            });
+                            OcareUI.include.init({
+                                src: '../inc/footer.html',
+                                id: 'footer_test'
+                            });
+
+                            OcareUI.include.init({
+                                src: '../inc/header.html',
+                                id: 'header_test2',
+                            });
+                            OcareUI.include.init({
+                                src: '../inc/footer.html',
+                                id: 'footer_test2'
+                            });
+
+                            OcareUI.include.init({
+                                src: '../inc/header.html',
+                                id: 'header_test3',
+                            });
+
+                            OcareUI.include.init({
+                                src: '../inc/header.html',
+                                id: 'header_test4',
+                            });
+                           
+                        break; 
+                    }
+				});
+            }
+            OcareUI.exe.tab2 = new OcareTab({
+                tab: 'guide', //data-tab
+                current: 'button', //data-id
+                async: true
+            });
+        });
+	</script>
+</body>
+</html>
+

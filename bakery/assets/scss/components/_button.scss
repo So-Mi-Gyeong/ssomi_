@@ -1,0 +1,308 @@
+.mdl-btn {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: auto;
+    height: auto;
+    text-decoration: none;
+    z-index: 0; 
+
+    &:disabled {pointer-events: none;}
+    &:disabled > span {text-decoration: none !important;}
+ 
+    > span {
+        font-size: 1.6rem;
+        font-weight: 300;
+        flex: 0 auto;
+        display: block;
+        text-align: center;
+        line-height: 1;
+        color: var(--gray_70);
+        font-family: 'KBF';
+    }
+
+    //size
+    &[data-style] {
+        flex:auto;
+        width: 100%;
+    }
+    &[data-style] > span {
+        color: $gray-100;
+        font-weight: 500;
+        font-family: 'KBF';
+    }
+
+    &[data-style="primary"]{
+        background-color: #FFD700;
+        min-height: 5.6rem;
+        border-radius: 2.8rem;
+        span{color: #1D1C19;}
+    }
+    &[data-style="second"]{
+        background-color: #444;
+        min-height: 5.6rem;
+        border-radius: 2.8rem;
+        span{color: #fff;}
+    }
+    &[data-style="line"]{
+        min-height: 5.6rem;
+        border-radius: 2.8rem;
+        border: .1rem solid #ddd !important;
+        span{color: #fff;}
+    }
+
+    &[data-style="special"]{
+        height: 5.2rem;
+        background-color: #FCE300;
+        box-shadow: .5rem .5rem 0 #433029;
+        border: .1rem solid #433029;
+        border-radius: 2.8rem;
+
+        &::after{margin-left: .4rem;}
+        span{
+            color: #433029;
+            font-weight: 700;
+        }
+    }
+
+    &[data-style="special"]:disabled{
+        background-color: #444;
+        span{color: #fff;}
+    }
+
+    &[data-style="btn-text"]{
+        width: fit-content;
+        span{
+            font-size: 1.4rem;
+            font-weight: 300;
+            color: #999;
+            text-decoration: underline;
+        }
+    }
+
+    //mdl-btn-wrap //56 >> popup 52 >> picker 50
+    .mdl-btn-wrap &[data-style] {
+        flex:auto;
+        width: 100%;
+    }
+
+    .mdl-btn-wrap &[data-style="primary-line"],
+    .mdl-btn-wrap &[data-style="primary-gray"],
+    .mdl-btn-wrap &[data-style="primary"] {
+        height: 5.6rem;
+        border-radius: 2.8rem;
+    } 
+
+    .mdl-modal .mdl-btn-wrap &[data-style="primary-line"],
+    .mdl-modal .mdl-btn-wrap &[data-style="primary-gray"],
+    .mdl-modal .mdl-btn-wrap &[data-style="primary"] {
+        height: 5.2rem;
+        border-radius: 2.6rem;
+    } 
+
+    .mdl-modal .mdl-btn-wrap &[data-style="second-line"],
+    .mdl-modal .mdl-btn-wrap &[data-style="second-gray"],
+    .mdl-modal .mdl-btn-wrap &[data-style="second"] {
+        height: 3rem;
+        border-radius: 1.5rem;
+    } 
+
+    &-wrap {
+        width: 100%;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: $x2;
+
+         //shape
+        &[data-align="left"] {
+            justify-content: flex-start;
+        }
+        &[data-align="center"] {
+            justify-content: center;
+        }
+        &[data-align="right"] {
+            justify-content: flex-end;
+        }
+    }
+}
+
+.mdl-form2 {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: $x1;
+
+    //멀티
+    &[data-state="error"] {
+        .mdl-form2-bg {border-color: $error !important;}
+        .mdl-form2-msg {display: block;}
+    }
+
+    //형제
+    & + .mdl-form2 {margin-top: $x2;}
+    & + .mdl-form2[data-chain="true"] {margin-top: $x0-5;}
+
+    //자식
+    b {font-weight: 600 !important;}
+    .mdl-btn[data-shape="round-line"] {
+        height: 3rem;
+        font-size: 1.3rem;
+        color: $gray-80;
+        border-color: $gray-50 ;
+        border-radius: 1.5rem;
+        width: auto;
+        padding:0 $x1-5;
+        background-color: $gray-0;
+
+        span {font: inherit;}
+    }
+    .mdl-form2-inp:focus ~ .mdl-form2-clear {
+        animation: clearShow;
+        animation-duration: .2s;
+        animation-iteration-count: 1;
+        animation-fill-mode: forwards;
+    }
+
+    //개별
+    &-label {
+        font-weight: 600;
+        font-size: 1.3rem;
+        color: $gray-80;
+    }
+    &-group {
+        display: flex;
+        align-items: center;
+        gap: $x1;
+    }
+    &-item {
+        position: relative;
+        padding: $x2;
+    }
+    &-head {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: $x1;
+    }
+    &-body {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: $x1;
+    }
+    &-msg {
+        display: none;
+        color: $error;
+        font-size: 1.3rem;
+        padding: 0 $x1;
+    }
+    &-bg {
+        position: absolute;
+        top:0; 
+        left:0; 
+        width:100%;
+        height: 100%;
+        border:0.1rem solid $gray-50;
+        pointer-events: none;
+        background-color: $gray-0;
+        z-index: -1;
+        border-radius: $x2;
+    }
+    &-clear {
+        animation: clearHide;
+        animation-duration: .2s;
+        animation-iteration-count: 1;
+        animation-fill-mode: forwards;
+
+        &:focus {
+            display: block !important;
+            animation: clearShow;
+            animation-play-state: unset;
+        }
+    }
+   
+} 
+@keyframes clearHide {
+    0% {opacity: 1;}
+    99% {opacity: 0;}
+    100% {opacity: 0; pointer-events: none;}
+}
+@keyframes clearShow {
+    0% {opacity: 0; }
+    0% {opacity: 0; }
+    100% {opacity: 1; }
+}
+
+.mdl-form2-inp {
+    background-color: transparent;
+    position: relative;
+    flex: 1;
+    width: 100%;
+    height: 3rem;
+    display: block;
+    font-size: 1.6rem;
+    color: $gray-100;
+    text-align: left;
+}
+input.mdl-form2-inp {
+    &:focus {outline: 0;}
+    &:focus ~ .mdl-form2-bg,
+    &:not(:read-only):focus ~ .mdl-form2-bg {
+        background-color: $gray-0 !important;
+        border-color: $gray-100 !important;
+    }
+    &:read-only:focus ~ .mdl-form2-bg,
+    &:read-only ~ .mdl-form2-bg,
+    &:disabled ~ .mdl-form2-bg {
+        background-color: $gray-20 !important;
+        border-color: $gray-40 !important;
+    }
+    &:read-only {color: $gray-100;}
+    &:disabled {
+        color: $gray-60;
+        & ~ .mdl-btn[data-icon="btn-close"] {display: none;}
+    }
+}
+button.mdl-form2-inp {
+    &::before{
+        content:attr(aria-label);
+        color: $gray-100;
+        position: relative; 
+        font: inherit;
+        letter-spacing: inherit;
+    }
+    &::after{
+        display: none;
+        content:attr(data-placeholder);
+        color: $gray-50;
+        position: absolute; 
+        top: .6rem; 
+        left: 0;
+        font: inherit;
+        letter-spacing: inherit;
+    }
+    &:focus {outline: 0;}
+    &:focus ~ .mdl-form2-bg,
+    &:not([data-state="read-only"]):focus ~ .mdl-form2-bg {
+        background-color: $gray-0 !important;
+        border-color: $gray-100 !important;
+    }
+    &[data-state="disabled"] ~ .mdl-form2-bg,
+    &[data-state="read-only"] ~ .mdl-form2-bg,
+    &[data-state="read-only"]:focus ~ .mdl-form2-bg {
+        background-color: $gray-20 !important;
+        border-color: $gray-40 !important;
+    }
+    &[data-state="read-only"]{color: $gray-100;}
+    &[data-state="disabled"],
+    &:disabled {
+        color: $gray-60;
+        & ~ .mdl-btn[data-icon="btn-close"] {display: none;}
+    }
+
+    &[data-value=""]::after {display: block;}
+}

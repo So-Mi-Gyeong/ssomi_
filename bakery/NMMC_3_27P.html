@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <meta name="format-detection" content="telephone=no, address=no, email=no">
+    <title>오케어 베이커리</title>
+    <link rel="stylesheet" type="text/css" href="../bakery/assets/css/main.css">
+</head>
+<body class="ocr-bakery" data-page="popup">
+    <div class="ocr-wrap">
+        <header class="ocr-header" data-id="header_test4" data-type="popup" data-title="팝업페이지">
+            <div class="ocr-header-wrap">
+                <h1 class="ocr-header-tit" aria-label=""></h1>
+                <div class="ocr-header-group" data-type="popup">
+                    <button type="button" class="ocr-hbtn" data-icon="popupclose" aria-label="팝업닫기"></button>
+                </div>
+            </div>
+        </header>
+        <main class="ocr-body">
+            <div class="mdl-wrap">
+                <div class="mdl-subject-group">
+                    <h2 class="mdl-subject-tit" data-icon-after="ico_bread">내 동료들은<br>어떤 빵을 닮았을까요?</h2>
+                </div>
+                <div class="mdl-subject" data-type="no-data">
+                    <div class="mdl-subject-img"></div>
+                    <p class="mdl-subject-em">아직 동료들이 없어요...</p>
+                </div>
+                <div class="mdl-box mt-x5" data-color="gray">
+                    <dl class="mdl-definition" data-body="dot">
+                        <div class="mdl-definition-item">
+                            <dt class="mdl-definition-head">동료의 성격유형검사를 완료하면<br>빵 유형도 알 수 있어요!</dt>
+                            <dd class="mdl-definition-body">동료의 초대코드를 받아서 오케어 성격유형검사에 접속</dd>
+                            <dd class="mdl-definition-body">초대코드를 넣고, 해당 동료의 성격유형검사를 완료</dd>
+                            <dd class="mdl-definition-body">동료 목록에 해당 동료가 등장!</dd>
+                        </div>
+                    </dl>
+                </div>
+            </div>
+        </main>
+        <footer class="ocr-footer">
+            <div class="mdl-wrap">
+                <div class="mdl-btn-wrap">
+                    <button type="button" class="mdl-btn" data-style="primary"><span>오케어 성격유형검사 바로가기</span></button>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+
+    <script src="../bakery/assets/js/lib/swiper-bundle.js"></script>
+    <script src="../bakery/assets/js/ui.bread.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            OcareUI.include.init({
+                src: '../bakery/inc/header.html',
+                id: 'header',
+            });
+        });
+	</script>
+</body>
+</html>
+

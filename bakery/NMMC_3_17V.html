@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <meta name="format-detection" content="telephone=no, address=no, email=no">
+    <title>오케어 베이커리</title>
+    <link rel="stylesheet" type="text/css" href="../bakery/assets/css/main.css">
+    <link rel="stylesheet" href="../bakery/assets/js/lib/swiper-bundle.min.css" />
+</head>
+<body class="ocr-bakery" data-page="loading">
+    <div class="ocr-wrap">
+        <header class="ocr-header" data-id="header" data-title="오케어 베이커리" data-type="sub"></header>
+        <main class="ocr-body"> 
+            <div class="mdl-wrap">
+                <div class="mdl-subject">
+                    <div class="mdl-subject-group">
+                        <h2 class="mdl-subject-tit"><img src="../bakery/assets/img/common/loading_tit.png" alt="baking time"></h2>
+                        <p class="mdl-subject-txt"><div class="ocr-bakery-loading-img" data-id="loading"></div></p>
+                    </div>
+                </div>
+                <ol class="ocr-bakery-loading-step">
+                    <li class="on"><span>반죽하기</span></li>
+                    <li><span>모양 만들기</span></li>
+                    <li><span>오븐에 굽기</span></li>
+                </ol>
+            </div>
+        </main>
+    </div>                
+    
+    <script src="../bakery/assets/js/lib/swiper-bundle.js"></script>
+    <script src="../bakery/assets/js/ui.bread.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            OcareUI.include.init({
+                src: '../bakery/inc/header.html',
+                id: 'header',
+            });
+
+            OcareUI.loading.init();
+        });
+	</script>
+</body>
+</html>
+

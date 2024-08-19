@@ -1,0 +1,39 @@
+.ocr-bakery[data-page="result"]{
+    background-color: #724B2F;
+    .ocr-header{background-color: #724B2F;}
+    .ocr-header-tit[aria-label]::before{color: #fff;}
+    .ocr-body{padding: 0 0 5rem 0; margin-top: 1rem;}
+    .page-down{
+        position: relative;
+        display: block;
+        margin: 4rem auto 6.4rem;
+        width: 2rem;
+        height: .6rem;
+        &::before{
+            content: "";
+            display: block;
+            width: 2rem;
+            height: .6rem;
+            background: url(../../assets/img/common/ico_arrow_down.png) no-repeat 50% 50%/ 100%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -0.5rem);
+        }
+    }
+    [data-style="img-title"] .mdl-subject-tit{
+        font-size: 3.2rem;
+        font-weight: 400;
+    }
+    .mdl-subject-tit{
+        font-size: 2.4rem;
+        font-weight: 700;
+    }
+    .mdl-box[data-shape="line"]{padding: 3.2rem 2.4rem;}
+    .mdl-btn-wrap{
+        display: block;
+        padding: 0 2rem;
+        .mdl-btn + .mdl-btn{margin-top: 1.6rem;}
+    }
+
+}

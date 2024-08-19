@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <meta name="format-detection" content="telephone=no, address=no, email=no">
+    <title>오케어 베이커리</title>
+    <link rel="stylesheet" type="text/css" href="../bakery/assets/css/main.css">
+</head>
+<body class="ocr-bakery" data-page="popup">
+    <div class="ocr-wrap">
+        <header class="ocr-header" data-id="header_test4" data-type="popup" data-title="팝업페이지">
+            <div class="ocr-header-wrap">
+                <h1 class="ocr-header-tit" aria-label=""></h1>
+                <div class="ocr-header-group" data-type="popup">
+                    <button type="button" class="ocr-hbtn" data-icon="popupclose" aria-label="팝업닫기"></button>
+                </div>
+            </div>
+        </header>
+        <main class="ocr-body"> 
+            <div class="mdl-wrap">
+                <div class="mdl-subject-group">
+                    <h2 class="mdl-subject-tit" data-icon-after="ico_bread">내 동료들은<br>어떤 빵을 닮았을까요?</h2>
+                    <p data-typo="body-s">내가 이전에 오케어 성격유형검사를 해준 동료들이에요.</p>
+                </div>
+                <div class="mdl-list mt-x4">
+                    <ul class="mdl-list-wrap">
+                        <!-- 
+                            쇼콜라 -> ico_colleague01.png
+                            단팥빵 -> ico_colleague02.png
+                            스콘 -> ico_colleague03.png
+                            단호박빵 -> ico_colleague04.png
+                            맘모스빵 -> ico_colleague05.png
+                            카눌레 -> ico_colleague06.png
+                            슈크림빵 -> ico_colleague07.png
+                            바게트 -> ico_colleague08.png
+                        -->
+                        <li class="mdl-list-item">
+                            <div class="mdl-item" data-style="colleague" data-type="list">
+                                <div class="mdl-item-group">
+                                    <div class="mdl-item-img"><img src="../bakery/assets/img/character-default.png" alt=""></div>
+                                    <div class="mdl-item-img"><img src="../bakery/assets/img/icon/ico_colleague01.png" alt=""></div>
+                                </div>
+                                <div class="mdl-item-group">
+                                    <strong class="mdl-item-tit"><span>김케어</span> 님은</strong>
+                                    <p>쇼콜라 케이크를 닮았어요</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="mdl-list-item">
+                            <div class="mdl-item" data-style="colleague" data-type="list">
+                                <div class="mdl-item-group">
+                                    <div class="mdl-item-img"><img src="../bakery/assets/img/mpd_9_352_1.jpg" alt=""></div>
+                                    <div class="mdl-item-img"><img src="../bakery/assets/img/icon/ico_colleague02.png" alt=""></div>
+                                </div>
+                                <div class="mdl-item-group">
+                                    <strong class="mdl-item-tit"><span>이케어</span> 님은</strong>
+                                    <p>단호박빵을 닮았어요</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="mdl-list-item">
+                            <div class="mdl-item" data-style="colleague" data-type="list">
+                                <div class="mdl-item-group">
+                                    <div class="mdl-item-img"></div>
+                                    <div class="mdl-item-img no-data"></div>
+                                </div>
+                                <div class="mdl-item-group">
+                                    <strong class="mdl-item-tit"><span>박케어</span> 님은 아직</strong>
+                                    <p class="no-data">빵검사를 하지 않았어요</p>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <button type="button" class="mdl-banner mt-x7" data-shape="round" data-style="ocr-test">
+                    <span class="mdl-banner-group">
+                        <span class="mdl-banner-txt">더 많은 동료를 만들고 싶다면?</span>
+                        <span class="mdl-banner-tit">오케어 성격유형검사</span>
+                    </span>
+                </button>
+            </div>
+        </main>
+    </div>
+
+
+    <script src="../bakery/assets/js/lib/swiper-bundle.js"></script>
+    <script src="../bakery/assets/js/ui.bread.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            OcareUI.include.init({
+                src: '../bakery/inc/header.html',
+                id: 'header',
+            });
+        });
+	</script>
+</body>
+</html>
+
