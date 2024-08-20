@@ -133,8 +133,8 @@
             </div>
             <div class="mdl-wrap">
                 <div class="mdl-btn-wrap">
-                    <button type="button" class="mdl-btn" data-style="second"><span>이전</span></button>
-                    <button type="button" class="mdl-btn" data-style="primary"><span>다음</span></button>
+                    <button type="button" class="mdl-btn" data-style="second" id="prevBtn"><span>이전</span></button>
+                    <button type="button" class="mdl-btn" data-style="primary" id="nextBtn"><span>다음</span></button>
                 </div>
             </div>
         </main>
@@ -160,6 +160,18 @@
             OcareUI.toast.show({
 				conts: '<div class="mdl-toast-wrap"><em class="mdl-toast-em" data-type="obtain" data-icon="step04">축하합니다</em><h2 class="mdl-toast-tit">우유를 담았어요!</h2></div>'
 			});
+
+            //페이지 이동 이벤트
+            const prevBtn = document.getElementById('prevBtn');
+            const nextBtn = document.getElementById('nextBtn');
+
+            prevBtn.addEventListener('click', function(){
+                window.location.href = 'NMMC_3_13V.html';
+            });
+            
+            nextBtn.addEventListener('click', function(){
+                window.location.href = 'NMMC_3_15V.html';
+            });
         });
 	</script>
 </body>

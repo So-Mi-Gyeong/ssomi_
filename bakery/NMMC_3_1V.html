@@ -27,7 +27,7 @@
             <div class="mdl-wrap"> 
                 <div class="mdl-paragraph" data-align="center"><p>총 <b>1,824</b>명이 빵을 구웠어요!</p></div>
                 <div class="mdl-btn-wrap plr-x5">
-                    <button type="button" class="mdl-btn" data-style="special" data-icon-after="ico_bread"><span>나만의 빵 만들기</span></button>
+                    <button type="button" class="mdl-btn page-move" data-style="special" data-icon-after="ico_bread"><span>나만의 빵 만들기</span></button>
                 </div>
                 <div class="mdl-btn-wrap plr-x5 mt-x2">
                     <button type="button" class="mdl-btn" data-style="second">
@@ -64,9 +64,9 @@
             </div>
             <div class="mdl-modal-footer mt-x7">
                 <div class="mdl-btn-wrap">
-                    <button type="button" class="mdl-btn" data-style="primary"><span>시작하기</span></button>
+                    <button type="button" class="mdl-btn page-move" data-style="primary"><span>시작하기</span></button>
                 </div>
-                <button type="button" class="mdl-btn" data-style="btn-text"><span>다시 보지 않기</span></button>
+                <button type="button" class="mdl-btn" data-style="btn-text" onclick="OcareUI.modal.hide('NMMC_3_10L')"><span>다시 보지 않기</span></button>
             </div>
         </div>
     </section>
@@ -88,7 +88,16 @@
                 delay: 3000 //ms
             });
 
-            OcareUI.modal.show('NMMC_3_10L')
+            OcareUI.modal.show('NMMC_3_10L');
+            
+            // 페이지 이동 이벤트(NMMC_3_11V)
+            const pagemoveBtns = document.getElementsByClassName('page-move');
+        
+            Array.from(pagemoveBtns).forEach(btn => {
+                btn.addEventListener('click', function() {
+                    window.location.href = 'NMMC_3_11V.html';
+                });
+            });
         });
 	</script>
 </body>
