@@ -86,7 +86,7 @@
                 <div class="mdl-subject">
                     <div class="mdl-subject-group"><h2 class="mdl-subject-tit">내 동료들은 어떤 빵을<br>닮았을까요?</h2></div>
                     <div class="mdl-subject-img" data-line="true"><img src="../bakery/assets/img/icon/ico_qa_character.png" alt=""></div>
-                    <button type="button" class="mdl-btn" data-style="primary"><span>자세히보기</span></button>
+                    <button type="button" class="mdl-btn" data-style="primary" id="detailsBtn"><span>자세히보기</span></button>
                 </div>
             </div>
             <div class="mdl-wrap mt-x6" data-type="customer-service">
@@ -119,8 +119,8 @@
             </div>
             <div class="mdl-wrap mt-x8-5">
                 <div class="mdl-btn-wrap">
-                    <button type="button" class="mdl-btn" data-style="line"><span>또 어떤 빵들이 있을까요?</span></button>
-                    <button type="button" class="mdl-btn" data-style="special" data-icon-after="ico_bread"><span>다시 만들기</span></button>
+                    <button type="button" class="mdl-btn" data-style="line" id="breadBtn"><span>또 어떤 빵들이 있을까요?</span></button>
+                    <button type="button" class="mdl-btn" data-style="special" data-icon-after="ico_bread" id="retryBtn"><span>다시 만들기</span></button>
                 </div>
             </div>
         </main>
@@ -133,6 +133,23 @@
             OcareUI.include.init({
                 src: '../bakery/inc/header.html',
                 id: 'header',
+            });
+
+            //페이지 이동 이벤트
+            const breadBtn = document.getElementById('breadBtn');
+            const retryBtn = document.getElementById('retryBtn');
+            const detailsBtn = document.getElementById('detailsBtn');
+
+            breadBtn.addEventListener('click', function(){
+                window.location.href = 'NMMC_3_23V.html';
+            });
+            
+            retryBtn.addEventListener('click', function(){
+                window.location.href = 'NMMC_3_1V.html';
+            });
+            
+            detailsBtn.addEventListener('click', function(){
+                window.location.href = 'NMMC_3_26P.html';
             });
         });
 	</script>

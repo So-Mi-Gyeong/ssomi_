@@ -39,6 +39,13 @@
 
             OcareUI.loading.init();
         });
+
+        // 페이지가 로드된 후 3초(3000ms) 후에 redirect 함수 호출
+        window.onload = function() {
+            setTimeout(function() {
+                window.location.href = "NMMC_3_18V.html"; // 이동할 페이지의 URL을 여기에 입력하세요.
+            }, 4000);
+        };
 	</script>
 </body>
 </html>

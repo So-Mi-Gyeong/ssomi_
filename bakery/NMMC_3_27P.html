@@ -41,7 +41,7 @@
         <footer class="ocr-footer">
             <div class="mdl-wrap">
                 <div class="mdl-btn-wrap">
-                    <button type="button" class="mdl-btn" data-style="primary"><span>오케어 성격유형검사 바로가기</span></button>
+                    <button type="button" class="mdl-btn" data-style="primary" id="alltypeBtn"><span>성격유형검사 바로가기</span></button>
                 </div>
             </div>
         </footer>
@@ -55,6 +55,12 @@
             OcareUI.include.init({
                 src: '../bakery/inc/header.html',
                 id: 'header',
+            });
+
+            const alltypeBtn = document.getElementById('alltypeBtn');
+
+            alltypeBtn.addEventListener('click', function(){
+                window.location.href = 'NMMC_3_2L.html';
             });
         });
 	</script>

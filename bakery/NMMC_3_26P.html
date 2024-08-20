@@ -13,7 +13,7 @@
             <div class="ocr-header-wrap">
                 <h1 class="ocr-header-tit" aria-label=""></h1>
                 <div class="ocr-header-group" data-type="popup">
-                    <button type="button" class="ocr-hbtn" data-icon="popupclose" aria-label="팝업닫기"></button>
+                    <button type="button" class="ocr-hbtn" data-icon="popupclose" aria-label="팝업닫기" id="popCloseBtn"></button>
                 </div>
             </div>
         </header>
@@ -91,6 +91,13 @@
             OcareUI.include.init({
                 src: '../bakery/inc/header.html',
                 id: 'header',
+            });
+
+            const popCloseBtn = document.getElementById('popCloseBtn');
+            
+            //이전 페이지 이동
+            popCloseBtn.addEventListener('click', function(){
+                window.history.back();
             });
         });
 	</script>
