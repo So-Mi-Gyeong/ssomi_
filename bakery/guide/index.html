@@ -82,8 +82,7 @@
                 const link = './inc/' + v.current + '.html';
                 
                 fetch(link).then(response => response.text()).then(data => {
-                    const pnl = document.querySelector('.mdl-tab-pnl[data-id="'+ 
-                    v.id +'"]');
+                    const pnl = document.querySelector('.mdl-tab-pnl[data-id="'+ v.id +'"]');
 
 					pnl.innerHTML = data;
 					document.querySelector('.ocr-header-tit').setAttribute('aria-label', v.current);
@@ -153,7 +152,7 @@
                             });
                             OcareUI.include.init({
                                 src: '../inc/footer.html',
-                                id: 'footer_test'
+                                id: 'footer_test',
                             });
 
                             OcareUI.include.init({
@@ -162,7 +161,7 @@
                             });
                             OcareUI.include.init({
                                 src: '../inc/footer.html',
-                                id: 'footer_test2'
+                                id: 'footer_test2',
                             });
 
                             OcareUI.include.init({
