@@ -6332,7 +6332,7 @@
   display: block;
 }
 .magazine [data-icon=info-large]::before {
-  background-image: url(../img/common/ico_info3.svg);
+  background-image: url(../img/magazine/common/ico_info3.svg);
 }
 .magazine [data-icon-after=face-amazed]::after {
   background-image: url(../img/icon/mg_faceamazed.gif);
