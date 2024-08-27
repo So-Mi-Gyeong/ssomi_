@@ -645,7 +645,6 @@ input[type=radio],
   align-items: center;
   flex-wrap: wrap;
   gap: 1.7vw;
-  flex-wrap: wrap;
 }
 .manufacturing-item {
   width: auto;
