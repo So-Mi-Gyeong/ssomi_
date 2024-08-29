@@ -387,22 +387,22 @@ input[type=radio],
     position: relative;
     box-sizing: border-box;
 }
-.header{
-    max-width: 87.5vw;
+.status{
+    width: calc(100% - 12.5vw);
     height: 5rem;
-    // width: calc(100% - 12.5vw);
     position: fixed;
     bottom: 0;
     right: 0;
     z-index: 9;
     &-wrap{
+        width: 100%;
         height: 100%;
         display: flex;
-        justify-content: flex-start;
+        justify-content: flex-end;
         align-items: center;
     }
     &-info{
-        min-width: 26.5vw;
+        width: 100%;
         height: 100%;
         min-height: 3vw;
         padding: 0 2rem;
@@ -440,7 +440,7 @@ input[type=radio],
         gap: .8vw;
         background-color: #002943;
         &[data-type="action02"]{
-            .header-action-item:last-child{width: fit-content;}
+            .status-action-item:last-child{width: fit-content;}
         }
         &-list{
             width: 100%;
@@ -453,7 +453,7 @@ input[type=radio],
         &-item{
             width: 100%;
             &[data-action="true"]{
-                .header-action-name{
+                .status-action-name{
                     color: #85A0BA;
                     &[data-color="green"]{
                         padding: .2vw .5vw;
