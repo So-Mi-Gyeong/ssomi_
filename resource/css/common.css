@@ -594,9 +594,24 @@ table .t_left {
   top: 0;
 }
 
+.test-box {
+  width: 100px;
+  border: 0.1rem solid red;
+  aspect-ratio: 1/1;
+}
+
 .nav-wrap {
   height: 30rem;
   position: relative;
+}
+.nav-wrap * {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+.nav-wrap a {
+  text-decoration: none;
+  color: inherit;
 }
 .nav-item {
   width: 35rem;
@@ -606,21 +621,22 @@ table .t_left {
   transform: translate(-50%, -50%);
   border-bottom: 0.1rem solid #aaa;
 }
-.nav details {
+.nav-item details {
   margin-top: 0.5rem;
   border-top: 0.1rem solid #aaa;
 }
-.nav summary {
+.nav-item summary {
   display: flex;
   justify-content: space-between;
   position: relative;
   padding: 1rem 1rem;
   cursor: pointer;
+  list-style: none;
 }
-.nav summary::after {
+.nav-item summary::after {
   content: "-";
 }
-[open] .nav summary::after {
+[open] .nav-item summary::after {
   content: "+";
 }
 .nav-list {

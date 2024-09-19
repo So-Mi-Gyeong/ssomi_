@@ -1,10 +1,24 @@
 // input
 // .ui-content.input{h2, h3, h4 {color: #fff;}}
 
+.test-box{
+    width: 100px;
+    border: .1rem solid red;
+    aspect-ratio: 1 / 1;
+}
 .nav{
     &-wrap{
         height: 30rem;
         position: relative;
+        *{
+            padding: 0;
+            margin: 0;
+            list-style: none;
+        }
+        a{
+            text-decoration: none;
+            color: inherit;
+        }
     }
     &-item{
         width: 35rem;
@@ -13,23 +27,24 @@
         inset: 50% auto auto 50%;
         transform: translate(-50%, -50%);
         border-bottom: .1rem solid #aaa;
-    }
-    details{
-        margin-top: .5rem;
-        border-top: .1rem solid #aaa;
-    }
-    summary{
-        display: flex;
-        justify-content: space-between;
-        position: relative;
-        padding: 1rem 1rem;
-        cursor: pointer;
-        &::after{
-            content: '-';
+        details{
+            margin-top: .5rem;
+            border-top: .1rem solid #aaa;
         }
-        [open] & {
+        summary{
+            display: flex;
+            justify-content: space-between;
+            position: relative;
+            padding: 1rem 1rem;
+            cursor: pointer;
+            list-style: none;
             &::after{
-                content: '+';
+                content: '-';
+            }
+            [open] & {
+                &::after{
+                    content: '+';
+                }
             }
         }
     }
