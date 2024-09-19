@@ -594,6 +594,104 @@ table .t_left {
   top: 0;
 }
 
+.nav-wrap {
+  height: 30rem;
+  position: relative;
+}
+.nav-item {
+  width: 35rem;
+  padding-bottom: 0.5rem;
+  position: absolute;
+  inset: 50% auto auto 50%;
+  transform: translate(-50%, -50%);
+  border-bottom: 0.1rem solid #aaa;
+}
+.nav details {
+  margin-top: 0.5rem;
+  border-top: 0.1rem solid #aaa;
+}
+.nav summary {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  padding: 1rem 1rem;
+  cursor: pointer;
+}
+.nav summary::after {
+  content: "-";
+}
+[open] .nav summary::after {
+  content: "+";
+}
+.nav-list {
+  padding: 1rem 2rem;
+  border-top: 0.1rem solid #aaa;
+}
+.nav-list a {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  line-height: 1.6;
+  color: gray;
+}
+.nav-list a::after {
+  content: "";
+  width: 0.5rem;
+  aspect-ratio: 1;
+  transform: rotate(-45deg);
+  border-right: 0.1rem solid #aaa;
+  border-bottom: 0.1rem solid #aaa;
+}
+
+.input-acttion-wrap {
+  width: 40rem;
+  margin: 0 auto;
+  padding: 5rem 0;
+  background-color: slateblue;
+  box-sizing: border-box;
+}
+.input-acttion-wrap form {
+  width: 30rem;
+  display: grid;
+  margin: auto;
+  gap: 0.5rem;
+}
+.input-acttion-item {
+  background: linear-gradient(to right, #fff, #fff) no-repeat left/100% 10rem;
+  border-radius: 1rem;
+  overflow: hidden;
+  transition: 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+}
+.input-acttion-item input {
+  width: 100%;
+  padding: 1rem 1.5rem;
+  border: none;
+  box-sizing: border-box;
+  font-size: 2rem;
+  color: slateblue;
+  transition: 0.5s;
+  background-color: transparent;
+}
+.input-acttion-item input::-moz-placeholder {
+  color: rgba(106, 90, 205, 0.3);
+}
+.input-acttion-item input::placeholder {
+  color: rgba(106, 90, 205, 0.3);
+}
+.input-acttion-item input:focus {
+  outline: none;
+  color: #fff;
+}
+.input-acttion-item input:focus::-moz-placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+.input-acttion-item input:focus::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+.input-acttion:has(input:focus) {
+  background: linear-gradient(to right, #fff, #fff) no-repeat 1.5rem center/0 10rem;
+}
+
 .checkbox[data-type=nike] {
   height: 80rem;
   position: relative;
