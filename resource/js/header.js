@@ -41,6 +41,7 @@ $(document).ready(function(){
             //     });
             // }
 
+            //header scroll
             if(menu.classList.contains('open')){
                 body.style.overflow = 'hidden';
             }else{
