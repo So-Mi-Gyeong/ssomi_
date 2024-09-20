@@ -19,12 +19,16 @@ $(document).ready(function(){
  
     function headerNav(header_result) {
         $("#menu").html($(header_result).filter(".wrap"));
+
          //*********************** menu ***********************
         const uinavs = document.querySelectorAll('.wrap .ui-menu .ui-menu-btn');
+        const body = document.querySelector('body');
+
         for(let i = 0; i < uinavs.length; i++) {
             uinavs[i].addEventListener('click', act); //click -> act()실행
         }
-
+        
+        //클릭 이벤트
         function act() {
             this.classList.toggle('open');
             
@@ -36,6 +40,12 @@ $(document).ready(function(){
             //         menu.classList.remove('open');
             //     });
             // }
+
+            if(menu.classList.contains('open')){
+                body.style.overflow = 'hidden';
+            }else{
+                body.style.overflow = 'auto';   
+            }
         }
     }
 });
