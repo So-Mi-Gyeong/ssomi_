@@ -594,12 +594,6 @@ table .t_left {
   top: 0;
 }
 
-.test-box {
-  width: 100px;
-  border: 0.1rem solid red;
-  aspect-ratio: 1/1;
-}
-
 .nav-wrap {
   height: 30rem;
   position: relative;
