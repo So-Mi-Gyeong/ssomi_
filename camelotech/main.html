@@ -108,7 +108,12 @@
                                 </div>
                                 <button type="button" class="status-info-btn">제조 현황 보기</button>
                             </div>  
-                            <!-- 예열/세척 만 있는 경우 data-type="action" 추가 -->
+                            <!-- 
+                                예열/세척 만 있는 경우 data-type="action" 추가
+
+                                완료 -> .status-action-item 에 data-action="true" 추가
+                                진행중 -> .status-action-item 에 data-action="true" / .status-action-name에 data-color="green" 추가
+                             -->
                             <div class="status-action" data-type="action">
                                 <ul class="status-action-list">
                                     <li class="status-action-item" data-action="true">

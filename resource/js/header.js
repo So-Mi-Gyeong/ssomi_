@@ -28,7 +28,7 @@ $(document).ready(function(){
             uinavs[i].addEventListener('click', act); //click -> act()실행
         }
         
-        //클릭 이벤트
+        //메뉴 open/close
         function act() {
             this.classList.toggle('open');
             
@@ -45,9 +45,25 @@ $(document).ready(function(){
             if(menu.classList.contains('open')){
                 body.style.overflow = 'hidden';
             }else{
-                body.style.overflow = 'auto';   
+                body.style.overflow = 'auto';
             }
         }
+
+        //같은 페이지 반복 막기
+        // var menuItem = document.querySelectorAll('.ui-menu-item a');
+
+        // for(let i = 0; i < menuItem.length; i++){
+        //     menuItem[i].addEventListener('click', repetition);
+        // }
+
+        // function repetition(e) {
+        //     e.preventDefault();
+        //     if(this.getAttribute('id') === 내가 머무는 곳 id){
+        //         menu click 멈추기
+        //     }else{
+        //         menu click 진행
+        //     }
+        // }
     }
 });
 
