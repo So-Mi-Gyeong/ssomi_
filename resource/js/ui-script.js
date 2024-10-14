@@ -1,4 +1,14 @@
 $(document).ready(function(){
+    //*********************** UI-Tab(tab.html) *********************** 
+    const tabBtn = document.querySelectorAll('.ui-tab-item');
+
+    tabBtn.forEach((btn) => {
+      btn.addEventListener('click', () => {
+        tabBtn.forEach((item) => item.setAttribute('aria-selected', 'false'));
+        btn.setAttribute('aria-selected', 'true')
+      });
+    });
+
     //*********************** dropdown-catearea(dropdown.html) *********************** 
     const listSelect = $(".dropdown-menu-list[data-type='select']"); 
     const listFilter = $(".dropdown-menu-list[data-type='filter']"); 

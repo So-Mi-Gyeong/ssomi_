@@ -189,3 +189,38 @@ h3 + .pagination-wrap,
         }
     }
 }
+
+/* ==================================== Tab ================================= */
+.ui-tab{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: .8rem;
+    &-item{
+        min-width: 7.6rem;
+        height: 3.4rem;
+        padding: 0 1.2rem;
+        font-size: 1.5rem;
+        font-weight: 300;
+        background-color: #fff;
+        border-radius: 3rem;
+        border: .1rem solid #ccc;
+        &[aria-selected="true"]{
+            color: #fff;
+            border: .1rem solid #000;
+            background-color: #000;
+        }
+        span{
+            font-size: 1.4rem;
+            font-weight: 700;
+        }
+    }
+}
+
+@media all and (max-width: #{$breakpoint-mobile - 1px}) {
+    .ui-tab{
+        &-item{
+            span{font-size: 3.2vw;}
+        }
+    }
+}

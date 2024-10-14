@@ -77,16 +77,16 @@ caption,
 input[type=checkbox],
 input[type=radio],
 .ally-hidden {
-  position: absolute !important;
-  width: 1px !important;
-  height: 1px !important;
-  color: transparent !important;
-  overflow: hidden !important;
-  clip: rect(1px, 1px, 1px, 1px);
-  -webkit-clip-path: inset(50%);
-          clip-path: inset(50%);
-  margin: 0 !important;
-  padding: 0 !important;
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0); /* 구형 브라우저를 위해 사용 */
+  -webkit-clip-path: polygon(0 0, 0 0, 0 0);
+          clip-path: polygon(0 0, 0 0, 0 0); /* inset(50%) 와 동일한 표현 */
+  border: 0;
 }
 
 /* ============================================================== */
@@ -1024,6 +1024,55 @@ table .t_left {
 }
 .login button:hover {
   background-color: #207791;
+}
+
+.character {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3.2rem;
+}
+.character-skin-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.6rem;
+}
+.character-skin-list li {
+  position: relative;
+}
+.character-skin-list li input:checked + label::after {
+  content: "";
+  position: absolute;
+  left: -1rem;
+  top: -1rem;
+  width: calc(100% + 1rem);
+  height: calc(100% + 1rem);
+  background: url(../img/ic-character-check-big.svg) no-repeat center center;
+  background-size: 2.2rem auto;
+  border-radius: 50%;
+  border: 0.5rem solid #FFD700;
+}
+.character-skin-list li input#skin01 + label {
+  background-color: #ffe1d2;
+}
+.character-skin-list li input#skin02 + label {
+  background-color: #ffd0bd;
+}
+.character-skin-list li input#skin03 + label {
+  background-color: #ffb69c;
+}
+.character-skin-list li input#skin04 + label {
+  background-color: #f49578;
+}
+.character-skin-list li input#skin05 + label {
+  background-color: #db7158;
+}
+.character-skin-list li label {
+  display: block;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
 }
 
 .ui-content {
@@ -5568,4 +5617,37 @@ h3 + .pagination-wrap,
   color: #666;
   font-size: 1.6rem;
   font-weight: 500;
+}
+
+/* ==================================== Tab ================================= */
+.ui-tab {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.8rem;
+}
+.ui-tab-item {
+  min-width: 7.6rem;
+  height: 3.4rem;
+  padding: 0 1.2rem;
+  font-size: 1.5rem;
+  font-weight: 300;
+  background-color: #fff;
+  border-radius: 3rem;
+  border: 0.1rem solid #ccc;
+}
+.ui-tab-item[aria-selected=true] {
+  color: #fff;
+  border: 0.1rem solid #000;
+  background-color: #000;
+}
+.ui-tab-item span {
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+
+@media all and (max-width: 499px) {
+  .ui-tab-item span {
+    font-size: 3.2vw;
+  }
 }/*# sourceMappingURL=common.css.map */
