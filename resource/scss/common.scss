@@ -31,8 +31,8 @@ html {
 //     html {font-size: 56.25%;}
 // }
 @media screen and (max-width: 374px) {
-    html {font-size: 2vw;}
-    html * {font-size: 4vw;}
+    .container {font-size: 2vw;}
+    .container * {font-size: 4vw;}
     .container .ui-content{padding: 5vw;}
 }
 
