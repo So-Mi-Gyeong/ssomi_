@@ -30,7 +30,7 @@ html {
 //     html {font-size: 56.25%;}
 // }
 @media screen and (max-width: 374px) {
-    html {font-size: 2.66vw;}
+    html {font-size: 2vw;}
     .container .ui-content{padding: 5vw;}
 }
 
@@ -213,14 +213,7 @@ h3 + .pagination-wrap,
         span{
             font-size: 1.4rem;
             font-weight: 700;
-        }
-    }
-}
-
-@media all and (max-width: #{$breakpoint-mobile - 1px}) {
-    .ui-tab{
-        &-item{
-            span{font-size: 3.2vw;}
+            word-break: keep-all;
         }
     }
 }

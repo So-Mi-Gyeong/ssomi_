@@ -5,7 +5,7 @@ $(document).ready(function(){
     tabBtn.forEach((btn) => {
       btn.addEventListener('click', () => {
         tabBtn.forEach((item) => item.setAttribute('aria-selected', 'false'));
-        btn.setAttribute('aria-selected', 'true')
+        btn.setAttribute('aria-selected', 'true');
       });
     });
 
