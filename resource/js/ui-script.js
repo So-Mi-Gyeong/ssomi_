@@ -75,33 +75,30 @@ $(document).ready(function(){
     
     //*********************** input script(inp_acco.html) ***********************
     const all = document.querySelector('#chkAll');
-    var inp = document.getElementsByName('chk');
-    var agreeBtn = document.querySelector('.continue-btn');
-    var chknum = 0;
+    const inp = document.querySelectorAll('input[name="chk"]');
+    const agreeBtn = document.querySelector('.continue-btn');
+    let chknum = 0;
 
     //전체선택 외 버튼 리스너
-    for (var i =0 ; i < inp.length; i++) {
-        //inp을 클릭 할 때마다 숫자를 증감시켜 전체 체크가 되었는지 파악 후 '전체동의하기'버튼에 checked
-        inp[i].addEventListener("click", function () {
-            if (this.checked) {chknum++;} // this에 checked가 되면 chknum 증가
-            else {chknum--;} // this에 checked가 안되면 chknum 감소
-            if (chknum == inp.length) {all.checked = true} // chknum이 inp.length와 같으면 '전체 동의하기'에 checked
-            else {all.checked = false} // chknum이 inp.length와 같지 않으면 '전체 동의하기'에 checked 해제
-        });
-    }
+    inp.forEach(function(checkbox){
+      checkbox.addEventListener("click", function(){
+        if(this.checked) {
+          chknum++;
+        }else{
+          chknum--;
+        }
+        all.checked = (chknum === inp.length); //chknum이 inp.length와 같으면 '전체 동의하기'에 checked
+      });
+    });
 
     //전체선택/해제
-    function clickAll(){
-        for(var i = 0, len = inp.length; i < len; i++){ 
-        if(all.checked == true){ //'전체동의 버튼'에 checked = true 이면
-            inp[i].checked = true; //하위 checkbox에 checked
-            chknum = inp.length // chknum에 inp.length 입력
-        }else{//'전체동의 버튼'에 checked = false 이면
-            inp[i].checked = false; //하위 checkbox에 checked 해제
-            chknum = 0 //chknum 초기화
-        }
-        } 
-    } 
+    function clickAll() {
+      const checked = all.checked; //'전체동의 버튼'의 상태를 저장
+      inp.forEach(function(checkbox){
+        checkbox.checked = checked; // 하위 checkbox에 checked 상태 반영
+      });
+      chknum = checked ? inp.length : 0; // chknum = checked 면 inp.length를 할당, 아니면
+    }
     all.addEventListener("click", clickAll);
 
     //동의하고계속하기
