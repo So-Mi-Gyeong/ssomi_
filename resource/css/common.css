@@ -5472,6 +5472,9 @@ html {
   html {
     font-size: 2vw;
   }
+  html * {
+    font-size: 4vw;
+  }
   .container .ui-content {
     padding: 5vw;
   }

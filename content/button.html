@@ -125,35 +125,49 @@
                 <li><b>Progress/Loading</b> - 작업이 즉시 수행되지 않고 무엇인가 작업을 완료하는 중임을 알릴 때 사용</li>
                 <li><b>Disabled</b> - 현재는 비활성화된 상태이지만 나중엔 활성화할 수 있음</li>
             </ul>
-            <h3>PAGINATION</h3>
-            <div class="pagination-wrap">
-                <ul class="pagination-list">
-                    <li class="pagination-item"><button type="button" class="pagination-btn">First</button></li>
-                    <li class="pagination-item"><button type="button" class="pagination-btn">Previous</button></li>
-                    <li class="pagination-item"><button type="button" class="pagination-btn">1</button></li>
-                    <li class="pagination-item"><button type="button" class="pagination-btn">2</button></li>
-                    <li class="pagination-item"><button type="button" class="pagination-btn">3</button></li>
-                    <li class="pagination-item"><button type="button" class="pagination-btn">Next</button></li>
-                    <li class="pagination-item"><button type="button" class="pagination-btn">Last</button></li>
-                </ul>
+
+            <div class="wrap pagination">
+                <h3>PAGINATION</h3>
+                <div class="pagination-wrap">
+                    <ul class="pagination-list">
+                        <li class="pagination-item"><button type="button" class="pagination-btn">First</button></li>
+                        <li class="pagination-item"><button type="button" class="pagination-btn">Previous</button></li>
+                        <li class="pagination-item"><button type="button" class="pagination-btn">1</button></li>
+                        <li class="pagination-item"><button type="button" class="pagination-btn">2</button></li>
+                        <li class="pagination-item"><button type="button" class="pagination-btn">3</button></li>
+                        <li class="pagination-item"><button type="button" class="pagination-btn">Next</button></li>
+                        <li class="pagination-item"><button type="button" class="pagination-btn">Last</button></li>
+                    </ul>
+                </div>
+                <div class="pagination-wrap" data-style="text">
+                    <ul class="pagination-list">
+                        <li class="pagination-item pre"><button type="button" class="pagination-btn"></button></li>
+                        <li class="pagination-item"><button type="button" class="pagination-btn">1</button></li>
+                        <li class="pagination-item"><button type="button" class="pagination-btn">2</button></li>
+                        <li class="pagination-item"><button type="button" class="pagination-btn">3</button></li>
+                        <li class="pagination-item next"><button type="button" class="pagination-btn"></button></li>
+                    </ul>
+                </div>
+                <div class="pagination-wrap" data-style="circle">
+                    <ul class="pagination-list">
+                        <li class="pagination-item pre"><button type="button" class="pagination-btn"></button></li>
+                        <li class="pagination-item"><button type="button" class="pagination-btn">1</button></li>
+                        <li class="pagination-item"><button type="button" class="pagination-btn">2</button></li>
+                        <li class="pagination-item"><button type="button" class="pagination-btn">3</button></li>
+                        <li class="pagination-item next"><button type="button" class="pagination-btn"></button></li>
+                    </ul>
+                </div>
             </div>
-            <div class="pagination-wrap" data-style="text">
-                <ul class="pagination-list">
-                    <li class="pagination-item pre"><button type="button" class="pagination-btn"></button></li>
-                    <li class="pagination-item"><button type="button" class="pagination-btn">1</button></li>
-                    <li class="pagination-item"><button type="button" class="pagination-btn">2</button></li>
-                    <li class="pagination-item"><button type="button" class="pagination-btn">3</button></li>
-                    <li class="pagination-item next"><button type="button" class="pagination-btn"></button></li>
-                </ul>
-            </div>
-            <div class="pagination-wrap" data-style="circle">
-                <ul class="pagination-list">
-                    <li class="pagination-item pre"><button type="button" class="pagination-btn"></button></li>
-                    <li class="pagination-item"><button type="button" class="pagination-btn">1</button></li>
-                    <li class="pagination-item"><button type="button" class="pagination-btn">2</button></li>
-                    <li class="pagination-item"><button type="button" class="pagination-btn">3</button></li>
-                    <li class="pagination-item next"><button type="button" class="pagination-btn"></button></li>
-                </ul>
+
+            <div class="wrap tab">
+                <div class="ui-tab">
+                    <button type="button" class="ui-tab-item" aria-selected="true"><span>피부</span></button>
+                    <button type="button" class="ui-tab-item"><span>표정</span></button>
+                    <button type="button" class="ui-tab-item"><span>헤어</span></button>
+                    <button type="button" class="ui-tab-item"><span>의상</span></button>
+                    <button type="button" class="ui-tab-item"><span>신발</span></button>
+                    <button type="button" class="ui-tab-item"><span>악세서리</span></button>
+                </div>
             </div>
         </div>
     </div>
