@@ -1,40 +1,48 @@
 document.addEventListener('DOMContentLoaded', function() {
     //*********************** input script(inp_acco.html) ***********************
-    const all = document.querySelector('#chkAll');
-    const inp = document.querySelectorAll('input[name="chk"]');
-    const agreeBtn = document.querySelector('.continue-btn');
-    let checkedCount  = 0;
+    const aa = () => {
+      const all = document.querySelector('#chkAll');
 
-    //전체선택 외 버튼 리스너
-    inp.forEach(function(checkbox){
-      checkbox.addEventListener("click", function(){
-        checkedCount += this.checked ? 1 : -1;
-        all.checked = (checkedCount === inp.length);
-      });
-    });
+      if (!all) {
+        return false
+      }
 
-    //전체 선택/해제 기능
-    function clickAll() {
-      const isChecked  = all.checked; //'전체동의 버튼'의 상태를 저장
+      const inp = document.querySelectorAll('input[name="chk"]');
+      const agreeBtn = document.querySelector('.continue-btn');
+      let checkedCount  = 0;
+  
+      //전체선택 외 버튼 리스너
       inp.forEach(function(checkbox){
-        checkbox.checked = isChecked; // 하위 checkbox에 checked 상태 반영
+        checkbox.addEventListener("click", function(){
+          checkedCount += this.checked ? 1 : -1;
+          all.checked = (checkedCount === inp.length);
+        });
       });
-      checkedCount  = isChecked ? inp.length : 0; // checkedCount  = checked 면 inp.length를 할당, 아니면
+  
+      //전체 선택/해제 기능
+      function clickAll() {
+        const isChecked  = all.checked; //'전체동의 버튼'의 상태를 저장
+        inp.forEach(function(checkbox){
+          checkbox.checked = isChecked; // 하위 checkbox에 checked 상태 반영
+        });
+        checkedCount  = isChecked ? inp.length : 0; // checkedCount  = checked 면 inp.length를 할당, 아니면
+      }
+      if (agreeBtn) {agreeBtn.addEventListener("click", clickAll);} 
+      else {console.error('Element with class "continue-btn" not found');}
+  
+      //동의하고 계속하기 버튼 기능
+      function agreechk() {
+        inp.forEach(function(checkbox) {
+            checkbox.checked = true;
+        });
+        checkedCount = inp.length;
+        all.checked = true; //전체 선택 체크박스도 checked 상태로 변경
+      }
+      if (agreeBtn) {agreeBtn.addEventListener("click", agreechk);} 
+      else {console.error('Element with class "continue-btn" not found');}
+  
     }
-    if (agreeBtn) {agreeBtn.addEventListener("click", clickAll);} 
-    else {console.error('Element with class "continue-btn" not found');}
-
-    //동의하고 계속하기 버튼 기능
-    function agreechk() {
-      inp.forEach(function(checkbox) {
-          checkbox.checked = true;
-      });
-      checkedCount = inp.length;
-      all.checked = true; //전체 선택 체크박스도 checked 상태로 변경
-    }
-    if (agreeBtn) {agreeBtn.addEventListener("click", agreechk);} 
-    else {console.error('Element with class "continue-btn" not found');}
-
+    aa();
     //*********************** acco script(inp_acco.html) ***********************
     const myAcco = {
       uiWrap: null,
