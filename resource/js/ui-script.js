@@ -1,49 +1,19 @@
 document.addEventListener('DOMContentLoaded', function() {
-    //*********************** input script(inp_acco.html) ***********************
-    const aa = () => {
-      const all = document.querySelector('#chkAll');
+    //*********************** UI-Tab(tab.html) *********************** 
+    const myTab = () => {
+      const tabBtn = document.querySelectorAll('.ui-tab-item');
 
-      if (!all) {
-        return false
-      }
-
-      const inp = document.querySelectorAll('input[name="chk"]');
-      const agreeBtn = document.querySelector('.continue-btn');
-      let checkedCount  = 0;
-  
-      //전체선택 외 버튼 리스너
-      inp.forEach(function(checkbox){
-        checkbox.addEventListener("click", function(){
-          checkedCount += this.checked ? 1 : -1;
-          all.checked = (checkedCount === inp.length);
+      tabBtn.forEach((btn) => {
+        btn.addEventListener('click', () => {
+          tabBtn.forEach((item) => item.setAttribute('aria-selected', 'false'));
+          btn.setAttribute('aria-selected', 'true');
         });
       });
-  
-      //전체 선택/해제 기능
-      function clickAll() {
-        const isChecked  = all.checked; //'전체동의 버튼'의 상태를 저장
-        inp.forEach(function(checkbox){
-          checkbox.checked = isChecked; // 하위 checkbox에 checked 상태 반영
-        });
-        checkedCount  = isChecked ? inp.length : 0; // checkedCount  = checked 면 inp.length를 할당, 아니면
-      }
-      if (agreeBtn) {agreeBtn.addEventListener("click", clickAll);} 
-      else {console.error('Element with class "continue-btn" not found');}
-  
-      //동의하고 계속하기 버튼 기능
-      function agreechk() {
-        inp.forEach(function(checkbox) {
-            checkbox.checked = true;
-        });
-        checkedCount = inp.length;
-        all.checked = true; //전체 선택 체크박스도 checked 상태로 변경
-      }
-      if (agreeBtn) {agreeBtn.addEventListener("click", agreechk);} 
-      else {console.error('Element with class "continue-btn" not found');}
-  
     }
-    aa();
+    myTab();
+
     //*********************** acco script(inp_acco.html) ***********************
+    //건강검진 정보 팝업
     const myAcco = {
       uiWrap: null,
       allInp: null,
@@ -160,84 +130,157 @@ document.addEventListener('DOMContentLoaded', function() {
           }); //--el_child 이벤트 리스너 정의 끝
         }); //uiParent 이벤트 리스너 정의 끝
       } //--Init 메소드 정의 끝
-    } //--mcAcco 정의 끝
+    }
     myAcco.Init();
+
+    //*********************** input script(inp_acco.html) ***********************
+    //나이키 팝업
+    const agreeCheck = () => {
+      const all = document.querySelector('#chkAll');
+
+      if (!all) {
+        return false
+      }
+
+      const inp = document.querySelectorAll('input[name="chk"]');
+      const agreeBtn = document.querySelector('.continue-btn');
+      let checkedCount  = 0;
+  
+      //전체선택 외 버튼 리스너
+      inp.forEach(function(checkbox){
+        checkbox.addEventListener("click", function(){
+          checkedCount += this.checked ? 1 : -1;
+          all.checked = (checkedCount === inp.length);
+        });
+      });
+  
+      //전체 선택/해제 기능
+      function clickAll() {
+        const isChecked  = all.checked; //'전체동의 버튼'의 상태를 저장
+        inp.forEach(function(checkbox){
+          checkbox.checked = isChecked; // 하위 checkbox에 checked 상태 반영
+        });
+        checkedCount  = isChecked ? inp.length : 0; // checkedCount  = checked 면 inp.length를 할당, 아니면
+      }
+      all.addEventListener("click", clickAll);
+  
+      //동의하고 계속하기 버튼 기능
+      function agreechk() {
+        inp.forEach(function(checkbox) {
+            checkbox.checked = true;
+        });
+        checkedCount = inp.length;
+        all.checked = true; //전체 선택 체크박스도 checked 상태로 변경
+      }
+      agreeBtn.addEventListener("click", agreechk);
+      // if (agreeBtn) {agreeBtn.addEventListener("click", agreechk);} 
+      // else {console.error('Element with class "continue-btn" not found');}
+  
+    }
+    agreeCheck();
+
+    //*********************** dropdown-catearea(dropdown.html) *********************** 
+    //skt 메뉴 dropdown
+    const dropdownMenu = () => {
+      const menuButtons = document.querySelectorAll('.menu-cate-btn');
+      const dropdownLists = {
+        select: document.querySelector(".dropdown-menu-list[data-type='select']"),
+        filter: document.querySelector(".dropdown-menu-list[data-type='filter']")
+      }
+      const activeColor = "#4737df";
+      const defaultColor = "#000";
+
+      menuButtons.forEach(btn => {
+        btn.addEventListener('click', () => {
+          const btnType = btn.dataset.type;
+
+          //모든 드롭다운 리스트 숨기기
+          Object.values(dropdownLists).forEach(list => list.style.display = 'none');
+
+          //버튼 색상 초기화
+          menuButtons.forEach(b => {
+            b.querySelector('span').style.color = defaultColor;
+          });
+
+          //선택된 드롭다운 리스트 보여주기
+          if (dropdownLists[btnType].dataset.on === 'true') {
+            dropdownLists[btnType].dataset.on = 'false';
+          } else {
+            dropdownLists[btnType].style.display = 'block';
+            dropdownLists[btnType].dataset.on = 'true';
+            btn.querySelector('span').style.color = activeColor;
+          }
+          
+        });
+      });
+    }
+    dropdownMenu();
+
+    //*********************** phone-dropdown(dropdown.html) ***********************  
+    //핸드폰 번호 droppdown
+    const phoneNumDropdown = () => {
+      const dropdownBtn = document.querySelector('.dropdown-phonenum-btn');
+      const dropdownList = document.querySelectorAll('.dropdown-phonenum-list');
+      const phonenumItems = document.querySelectorAll('.phonenum-list-item');
+    
+      // 드롭다운 버튼 클릭 시 동작
+      dropdownBtn.addEventListener('click', () => {
+        const isVisible = dropdownList[0].style.display === 'block';
+    
+        dropdownList.forEach(list => {
+          list.style.display = isVisible ? 'none' : 'block';
+        });
+    
+        dropdownBtn.style.borderRadius = isVisible ? '.6rem' : '.6rem .6rem 0 0';
+      });
+    
+      // 리스트 항목 클릭 시 동작
+      phonenumItems.forEach(item => {
+        item.addEventListener('click', () => {
+          // 모든 리스트 항목의 배경색과 글자색 초기화
+          phonenumItems.forEach(i => {
+            i.style.backgroundColor = '#fff';
+            const text = i.querySelector('.phonenum-list-txt');
+            if (text) text.style.color = '#666';
+          });
+    
+          // 클릭된 항목의 배경색과 글자색 변경
+          item.style.backgroundColor = '#ddd';
+          const text = item.querySelector('.phonenum-list-txt');
+          if (text) text.style.color = '#4737df';
+        });
+      });
+    }
+    phoneNumDropdown();
 });
 
 $(document).ready(function(){
-    //*********************** UI-Tab(tab.html) *********************** 
-    const tabBtn = document.querySelectorAll('.ui-tab-item');
-
-    tabBtn.forEach((btn) => {
-      btn.addEventListener('click', () => {
-        tabBtn.forEach((item) => item.setAttribute('aria-selected', 'false'));
-        btn.setAttribute('aria-selected', 'true');
-      });
-    });
-
-    //*********************** dropdown-catearea(dropdown.html) *********************** 
-    const listSelect = $(".dropdown-menu-list[data-type='select']"); 
-    const listFilter = $(".dropdown-menu-list[data-type='filter']"); 
-
-    //공통 색상 클래스 정의
-    const activeColor = "#4737df";
-    const defaultColor = "#000";
-
-    //색상 적용 함수
-    function updateColors(activeType) {
-      $(".menu-cate-btn").each(function() {
-        const btnType = $(this).data("type");
-        const color = btnType === activeType ? activeColor : defaultColor; //'btnType'과 'activeType'이 같으면 'color' 변수에 'activeColr' 그렇지 않으면 'defaultColor' 
-        $(this).children("span").css("color", color);
-      });
-    }
-
-    // 메뉴 버튼 클릭 이벤트
-    $(".menu-cate-btn").click(function() {
-      const type = $(this).data("type");
-      const isSelectType = type === 'select';
-
-      // 상태에 따라 목록 토글 및 색상 업데이트
-      if(isSelectType) {
-        const isVisible = listSelect.is(":visible");
-        listSelect.toggle(!isVisible);   
-        listFilter.hide();
-      } else {
-        const isVisible = listFilter.is(":visible");
-        listFilter.toggle(!isVisible);
-        listSelect.hide();
-      }
-
-      //색상 업데이트
-      updateColors(type);
-    });
-
     //*********************** dropdown(dropdown.html) ***********************  
     //드롭다운 버튼 클릭 시 동작
-    $(".dropdown-phonenum-btn").click(function(){
-      var isVisible = $(".dropdown-phonenum-list").is(":visible");//드롭다운 리스트가 현재 보이는지 확인
+    // $(".dropdown-phonenum-btn").click(function(){
+    //   var isVisible = $(".dropdown-phonenum-list").is(":visible");//드롭다운 리스트가 현재 보이는지 확인
 
-      if(isVisible){
-        //리스트가 보일 때 : 리스트 숨기고 버튼의 border-radius 를 초기화
-        $(".dropdown-phonenum-list").hide();
-        $(this).css("border-radius", ".6rem");
-      } else {
-        //리스트가 숨겨져 있을 때 : 리스트 보이게 하고 버튼의 border-radius를 변경
-        $(".dropdown-phonenum-list").show();
-        $(this).css("border-radius", ".6rem .6rem 0 0");
-      }
-    });
+    //   if(isVisible){
+    //     //리스트가 보일 때 : 리스트 숨기고 버튼의 border-radius 를 초기화
+    //     $(".dropdown-phonenum-list").hide();
+    //     $(this).css("border-radius", ".6rem");
+    //   } else {
+    //     //리스트가 숨겨져 있을 때 : 리스트 보이게 하고 버튼의 border-radius를 변경
+    //     $(".dropdown-phonenum-list").show();
+    //     $(this).css("border-radius", ".6rem .6rem 0 0");
+    //   }
+    // });
 
-    //리스트 항목 클릭 시 동작
-    $(".phonenum-list-item").click(function() {
-      //모든 리스트 항목의 배경색과 글자색을 초기화
-      $(".phonenum-list-item").css("background-color", "#fff");
-      $(".phonenum-list-txt").css("color", "#666");
+    // //리스트 항목 클릭 시 동작
+    // $(".phonenum-list-item").click(function() {
+    //   //모든 리스트 항목의 배경색과 글자색을 초기화
+    //   $(".phonenum-list-item").css("background-color", "#fff");
+    //   $(".phonenum-list-txt").css("color", "#666");
 
-      //클릭된 항목의 배경색과 글자색을 변경
-      $(this).css("background-color", "#ddd");
-      $(this).find(".phonenum-list-txt").css("color", "#4737df");
-    });
+    //   //클릭된 항목의 배경색과 글자색을 변경
+    //   $(this).css("background-color", "#ddd");
+    //   $(this).find(".phonenum-list-txt").css("color", "#4737df");
+    // });
 
 
     //*********************** pagination(accessibility.html) ***********************
