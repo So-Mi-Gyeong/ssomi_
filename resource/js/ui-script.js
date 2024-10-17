@@ -222,6 +222,10 @@ document.addEventListener('DOMContentLoaded', function() {
       const dropdownBtn = document.querySelector('.dropdown-phonenum-btn');
       const dropdownList = document.querySelectorAll('.dropdown-phonenum-list');
       const phonenumItems = document.querySelectorAll('.phonenum-list-item');
+
+      if (!dropdownBtn) {
+        return false
+      }
     
       // 드롭다운 버튼 클릭 시 동작
       dropdownBtn.addEventListener('click', () => {

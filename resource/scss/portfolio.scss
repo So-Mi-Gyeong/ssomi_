@@ -1,6 +1,7 @@
 @charset 'utf-8';
 @import "media-query", "reset", 'typography';
 
+html {font-size: 62.5%;}
 .container{
     width: 100%;
     position: sticky;

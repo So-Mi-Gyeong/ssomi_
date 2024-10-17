@@ -216,6 +216,10 @@ table + p {
   margin-top: 0.8rem;
 }
 
+html {
+  font-size: 62.5%;
+}
+
 .container {
   width: 100%;
   position: sticky;
