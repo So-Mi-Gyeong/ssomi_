@@ -2496,35 +2496,33 @@ table .t_left {
   color: #4737df;
 }
 .ui-content.popup [data-type=sk-popup] {
-  /* popup */
-}
-.ui-content.popup [data-type=sk-popup] .event {
   background-color: #ff404e;
   box-sizing: border-box;
+  /* popup */
 }
-.ui-content.popup [data-type=sk-popup] .event * {
+.ui-content.popup [data-type=sk-popup] * {
   word-break: keep-all;
 }
-.ui-content.popup [data-type=sk-popup] .event .event-box {
+.ui-content.popup [data-type=sk-popup] .event-content {
   padding: 0 2.5rem;
   box-sizing: border-box;
 }
-.ui-content.popup [data-type=sk-popup] .event .event-box .use-method {
+.ui-content.popup [data-type=sk-popup] .event-content-box {
   background-color: #fff;
   border-radius: 1rem;
 }
-.ui-content.popup [data-type=sk-popup] .event .event-box .use-method + .use-method {
+.ui-content.popup [data-type=sk-popup] .event-content-box + .use-method {
   margin-top: 2.5rem;
 }
-.ui-content.popup [data-type=sk-popup] .event .event-box .use-method .step {
+.ui-content.popup [data-type=sk-popup] .event-content-box .step {
   padding: 2.4rem 3.25rem 4rem 3.25rem;
   text-align: center;
   box-sizing: border-box;
 }
-.ui-content.popup [data-type=sk-popup] .event .event-box .use-method .step.line {
+.ui-content.popup [data-type=sk-popup] .event-content-box .step.line {
   position: relative;
 }
-.ui-content.popup [data-type=sk-popup] .event .event-box .use-method .step.line::before {
+.ui-content.popup [data-type=sk-popup] .event-content-box .step.line::before {
   content: "";
   width: calc(100% - 7rem);
   margin: 0 auto;
@@ -2534,47 +2532,47 @@ table .t_left {
   left: 50%;
   transform: translateX(-50%);
 }
-.ui-content.popup [data-type=sk-popup] .event .event-box .use-method .step.line-img {
+.ui-content.popup [data-type=sk-popup] .event-content-box .step.line-img {
   background: url("../img/event/ico-dotline-pink.jpg") 0 0 no-repeat;
   background-size: 100% 1.25rem;
 }
-.ui-content.popup [data-type=sk-popup] .event .event-box .use-method .step h2 {
+.ui-content.popup [data-type=sk-popup] .event-content-box .step h2 {
   font-size: 2.1rem;
   margin-bottom: 2rem;
   letter-spacing: -0.1rem;
 }
-.ui-content.popup [data-type=sk-popup] .event .event-box .use-method .step h2.que-img {
+.ui-content.popup [data-type=sk-popup] .event-content-box .step h2.que-img {
   background: url("../img/event/ico-questionMark.jpg") 50% 40px no-repeat;
   background-size: 8.65rem 9.45rem;
   padding-bottom: 12.65rem;
   margin-bottom: 0;
 }
-.ui-content.popup [data-type=sk-popup] .event .event-box .use-method .step h3 {
+.ui-content.popup [data-type=sk-popup] .event-content-box .step h3 {
   font-size: 1.8rem;
   margin-bottom: 2.5rem;
 }
-.ui-content.popup [data-type=sk-popup] .event .event-box .use-method .step .step-style {
+.ui-content.popup [data-type=sk-popup] .event-content-box .step .step-style {
   color: #ff404e;
   text-decoration: underline;
 }
-.ui-content.popup [data-type=sk-popup] .event .event-box .use-method .step .step-list-wrap {
+.ui-content.popup [data-type=sk-popup] .event-content-box .step .step-list-wrap {
   display: flex;
   flex-direction: column;
   gap: 1.6rem;
 }
-.ui-content.popup [data-type=sk-popup] .event .event-box .use-method .step .step-list-item {
+.ui-content.popup [data-type=sk-popup] .event-content-box .step .step-list-item {
   display: flex;
   flex-direction: column;
   gap: 0.8rem;
 }
-.ui-content.popup [data-type=sk-popup] .event .event-box .use-method .step .step-list-tit {
+.ui-content.popup [data-type=sk-popup] .event-content-box .step .step-list-tit {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 0.8rem;
   font-size: 1.6rem;
 }
-.ui-content.popup [data-type=sk-popup] .event .event-box .use-method .step .step-list-tit::before {
+.ui-content.popup [data-type=sk-popup] .event-content-box .step .step-list-tit::before {
   content: "";
   display: block;
   width: 0.4rem;
@@ -2582,34 +2580,34 @@ table .t_left {
   border-radius: 50%;
   background-color: #ff404e;
 }
-.ui-content.popup [data-type=sk-popup] .event .event-box .use-method .step .step-list-txt {
+.ui-content.popup [data-type=sk-popup] .event-content-box .step .step-list-txt {
   margin-top: 0;
   text-align: center;
   font-size: 1.2rem;
 }
-.ui-content.popup [data-type=sk-popup] .event .event-box .use-method .step .step-list-info {
+.ui-content.popup [data-type=sk-popup] .event-content-box .step .step-list-info {
   font-size: 1rem;
   font-weight: 300;
   color: #999;
 }
-.ui-content.popup [data-type=sk-popup] .event .event-box .use-method .step .check {
+.ui-content.popup [data-type=sk-popup] .event-content-box .step .check {
   display: flex;
   flex-direction: column;
   gap: 1.6rem;
 }
-.ui-content.popup [data-type=sk-popup] .event .event-box .use-method .step .check .check-inp-wrap {
+.ui-content.popup [data-type=sk-popup] .event-content-box .step .check .check-inp-wrap {
   display: flex;
   justify-content: flex-start;
   align-items: center;
 }
-.ui-content.popup [data-type=sk-popup] .event .event-box .use-method .step .check .check-inp-wrap input[type=checkbox] {
+.ui-content.popup [data-type=sk-popup] .event-content-box .step .check .check-inp-wrap input[type=checkbox] {
   display: none;
 }
-.ui-content.popup [data-type=sk-popup] .event .event-box .use-method .step .check .check-inp-wrap input[type=checkbox]:checked + label::before {
+.ui-content.popup [data-type=sk-popup] .event-content-box .step .check .check-inp-wrap input[type=checkbox]:checked + label::before {
   background: url("../img/event/ico-checkbox-select.jpg") 0 0 no-repeat;
   background-size: 100% 100%;
 }
-.ui-content.popup [data-type=sk-popup] .event .event-box .use-method .step .check .check-inp-wrap label {
+.ui-content.popup [data-type=sk-popup] .event-content-box .step .check .check-inp-wrap label {
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -2619,7 +2617,7 @@ table .t_left {
   line-height: 1.7rem;
   color: #000;
 }
-.ui-content.popup [data-type=sk-popup] .event .event-box .use-method .step .check .check-inp-wrap label::before {
+.ui-content.popup [data-type=sk-popup] .event-content-box .step .check .check-inp-wrap label::before {
   content: "";
   display: block;
   width: 1.7rem;
@@ -2627,7 +2625,7 @@ table .t_left {
   background: url("../img/event/ico-checkbox-empty.jpg") 0 0 no-repeat;
   background-size: 100% 100%;
 }
-.ui-content.popup [data-type=sk-popup] .event .event-box .use-method .step .clickBtn {
+.ui-content.popup [data-type=sk-popup] .event-content-box .step .clickBtn {
   width: 100%;
   height: 4.6rem;
   line-height: 4.6rem;
@@ -2638,18 +2636,18 @@ table .t_left {
   font-size: 1.5rem;
   box-sizing: border-box;
 }
-.ui-content.popup [data-type=sk-popup] .event .event-box .use-method .step .phone-info > h2 {
+.ui-content.popup [data-type=sk-popup] .event-content-box .step .phone-info > h2 {
   text-align: left;
   font-size: 1.5rem;
 }
-.ui-content.popup [data-type=sk-popup] .event .event-box .use-method .step .phone-info .phone-num {
+.ui-content.popup [data-type=sk-popup] .event-content-box .step .phone-info .phone-num {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 0.3rem;
 }
-.ui-content.popup [data-type=sk-popup] .event .event-box .use-method .step .phone-info .phone-num > .tel,
-.ui-content.popup [data-type=sk-popup] .event .event-box .use-method .step .phone-info .phone-num > input[type=tel] {
+.ui-content.popup [data-type=sk-popup] .event-content-box .step .phone-info .phone-num > .tel,
+.ui-content.popup [data-type=sk-popup] .event-content-box .step .phone-info .phone-num > input[type=tel] {
   width: 6rem;
   height: 3.5rem;
   background-color: #fff;
@@ -2659,10 +2657,10 @@ table .t_left {
   padding: 0 0.85rem;
   font-size: 1.3rem;
 }
-.ui-content.popup [data-type=sk-popup] .event .event-box .use-method .step .phone-info .phone-num span {
+.ui-content.popup [data-type=sk-popup] .event-content-box .step .phone-info .phone-num span {
   color: #333;
 }
-.ui-content.popup [data-type=sk-popup] .event .event-box .use-method .step .phone-info .smsBtn {
+.ui-content.popup [data-type=sk-popup] .event-content-box .step .phone-info .smsBtn {
   width: 6.75rem;
   height: 3.5rem;
   background-color: #cc1a28;
@@ -2671,13 +2669,13 @@ table .t_left {
   margin-left: 0.5rem;
   font-size: 1.3rem;
 }
-.ui-content.popup [data-type=sk-popup] .event .event-box .use-method .step.event-info h2 {
+.ui-content.popup [data-type=sk-popup] .event-content-box .step.event-info h2 {
   color: #ff404e;
   font-size: 1.8rem !important;
   position: relative;
   padding-top: 3.65rem;
 }
-.ui-content.popup [data-type=sk-popup] .event .event-box .use-method .step.event-info h2::before {
+.ui-content.popup [data-type=sk-popup] .event-content-box .step.event-info h2::before {
   content: "";
   width: 2rem;
   height: 2rem;
@@ -2688,10 +2686,10 @@ table .t_left {
   left: 50%;
   transform: translateX(-50%);
 }
-.ui-content.popup [data-type=sk-popup] .event .event-box .use-method .step.event-info ul {
+.ui-content.popup [data-type=sk-popup] .event-content-box .step.event-info ul {
   text-align: left;
 }
-.ui-content.popup [data-type=sk-popup] .event .event-box .use-method .step.event-info ul li {
+.ui-content.popup [data-type=sk-popup] .event-content-box .step.event-info ul li {
   display: flex;
   justify-content: flex-start;
   align-items: baseline;
@@ -2702,22 +2700,22 @@ table .t_left {
   padding-left: 0.5rem;
   position: relative;
 }
-.ui-content.popup [data-type=sk-popup] .event .event-box .use-method .step.event-info ul li::before {
+.ui-content.popup [data-type=sk-popup] .event-content-box .step.event-info ul li::before {
   content: "-";
   display: block;
 }
-.ui-content.popup [data-type=sk-popup] .event .event-box .use-method .step.event-info ul li:last-child {
+.ui-content.popup [data-type=sk-popup] .event-content-box .step.event-info ul li:last-child {
   margin-bottom: 0;
 }
-.ui-content.popup [data-type=sk-popup] .event .event-box .notion {
-  padding: 2.6rem 0 4.9rem 0;
+.ui-content.popup [data-type=sk-popup] .event-notion {
+  padding: 2.6rem 2.5rem 4.9rem;
 }
-.ui-content.popup [data-type=sk-popup] .event .event-box .notion h2 {
+.ui-content.popup [data-type=sk-popup] .event-notion h2 {
   font-size: 1.6rem;
   color: #fff;
   margin-bottom: 1.6rem;
 }
-.ui-content.popup [data-type=sk-popup] .event .event-box .notion .notion-list li {
+.ui-content.popup [data-type=sk-popup] .event-notion .notion-list li {
   color: #fff;
   font-size: 1.3rem;
   line-height: 1.8rem;
