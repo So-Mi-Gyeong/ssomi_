@@ -2427,19 +2427,30 @@ table .t_left {
 }
 .ui-content.popup {
   width: 100%;
+  /* dim */
 }
 .ui-content.popup .boxwrap {
   max-width: 50rem;
   margin: 0 auto;
+}
+.ui-content.popup .layerDimmed {
+  opacity: 0.6;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 1;
+  background-color: #000;
+  transition-duration: 0.4s;
 }
 .ui-content.popup [data-type=call-popup] {
   width: 100%;
   height: 100vh;
   position: relative;
   background-color: #fff;
-  /* dim */
 }
-.ui-content.popup [data-type=call-popup] .layerWrap {
+.ui-content.popup [data-type=call-popup] .layer-popup-wrap {
   z-index: 2;
   width: 25rem;
   height: auto;
@@ -2452,27 +2463,27 @@ table .t_left {
   left: 50%;
   transform: translate(-50%, -50%);
 }
-.ui-content.popup [data-type=call-popup] .layerWrap .txt {
+.ui-content.popup [data-type=call-popup] .layer-popup-txt {
   padding: 2.5rem 2rem 2.5rem;
 }
-.ui-content.popup [data-type=call-popup] .layerWrap .txt h2 {
+.ui-content.popup [data-type=call-popup] .layer-popup-txt h2 {
   font-size: 1.7rem;
   font-weight: 600;
   color: #222;
   padding-bottom: 1.5rem;
 }
-.ui-content.popup [data-type=call-popup] .layerWrap .txt p {
+.ui-content.popup [data-type=call-popup] .layer-popup-txt p {
   font-size: 1.4rem;
   color: #666;
   line-height: 1.8rem;
 }
-.ui-content.popup [data-type=call-popup] .layerWrap .layerBtn {
+.ui-content.popup [data-type=call-popup] .layer-popup-btn {
   display: flex;
   justify-content: space-between;
   align-items: center;
   border-top: 0.1rem solid #d9d9d9;
 }
-.ui-content.popup [data-type=call-popup] .layerWrap .layerBtn a {
+.ui-content.popup [data-type=call-popup] .layer-popup-btn button {
   width: 100%;
   text-align: center;
   font-size: 1.6rem;
@@ -2481,19 +2492,8 @@ table .t_left {
   color: #999;
   padding: 1rem;
 }
-.ui-content.popup [data-type=call-popup] .layerWrap .layerBtn a.confirm {
+.ui-content.popup [data-type=call-popup] .layer-popup-btn button.confirm {
   color: #4737df;
-}
-.ui-content.popup [data-type=call-popup] .layerDimmed {
-  opacity: 0.6;
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100vh;
-  z-index: 1;
-  background-color: #000;
-  transition-duration: 0.4s;
 }
 .ui-content.popup [data-type=sk-popup] {
   /* popup */
