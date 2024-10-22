@@ -289,7 +289,9 @@ table + p {
   /* btn-text */
 }
 .btn-default {
+  width: 5rem;
   min-width: 10rem;
+  max-width: 5rem;
   border: 0.1rem solid transparent;
   border-radius: 0.6rem;
   background: linear-gradient(#3771ff, #313eda);
