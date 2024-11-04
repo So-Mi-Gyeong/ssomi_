@@ -2,6 +2,109 @@
 @import "media-query", "reset", 'typography';
 
 html {font-size: 62.5%;}
+
+/* ======================= 타이핑 ======================= */
+.home{
+    * {font-size: 8vw;}
+    width: 100%;
+    height: 100dvh;
+    margin: 0 auto;
+    background-color: #282726;
+    overflow: auto;
+    &::-webkit-scrollbar {display: none;}
+
+    &[data-bg="red"]{
+        .typingArea{
+            background-color:#650911;
+            .typingBox{color:#fff;}
+        }
+    }
+    &[data-bg="orange"]{
+        .typingArea{
+            background-color:#BC5542; 
+            .typingBox{
+                color:#F6F0E4;
+                text-shadow: .1rem .5rem 1rem #474747;
+            }
+        }
+    }
+    &[data-bg="beige"]{
+        .typingArea{
+            background-color:#dedbd1; 
+            .typingBox{
+                color:#222;
+                text-shadow: .1rem .5rem 1rem #474747;
+            }
+        }
+    }
+}
+.typingArea {
+    width: 100%;
+    height: 100vh;
+    margin: 0 auto;
+    padding: 0;
+    position: relative;
+    &::after{
+      content: '';
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      opacity: 0.1;
+      background: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/662025/grain.jpg') repeat center center;
+      -webkit-animation: grain 0.5s steps(1) infinite;
+      animation: grain 0.5s steps(1) infinite;
+    }
+    .typingBox {
+      width: 100%;
+      margin: 0 auto;
+      position: absolute;
+      top: 50%;
+      left:50%;
+      transform:translate(-50%,-50%);
+      z-index: 9;
+      font-size: 10rem;
+      font-weight: bolder;
+      text-shadow: 1rem 1rem .1rem #000;
+      text-align:center;
+      .typing-txt {
+        display: none;
+        ul{
+          li{
+            &.on{
+              display: inline-block;
+              animation-name: cursor;
+              animation-duration: 0.3s;
+              animation-iteration-count: infinite;
+              font-size: 1rem;
+            }
+          }
+        }
+    }
+  }
+}
+
+@keyframes cursor {
+    0% {border-right: .1rem solid #fff}
+
+    50% {border-right: .1rem solid #000}
+
+    100% {border-right: .1rem solid #fff}
+}
+
+@media (min-width: 0px) and (max-width: 375px) {
+  .typingArea {
+    .typingBox {font-size: 5rem;}
+  }
+}
+
+@media (min-width: 376px) and (max-width: 650px) {
+  .typingArea {
+    .typingBox {font-size: 6rem;}
+  }
+}
+
+/* ======================= 포폴 ======================= */
 .container{
     width: 100%;
     position: sticky;
@@ -145,18 +248,30 @@ html {font-size: 62.5%;}
 }
 
 .career{
-    background-image: url(../img/main03.png);
-    background-size: 100% 183%;
-    background-position: 0rem -70rem;
-    background-repeat: no-repeat;
+    // background-image: url(../img/main03.png);
+    // background-size: 100% 183%;
+    // background-position: 0rem -70rem;
+    // background-repeat: no-repeat;
+    &::after{
+        content: '';
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        opacity: 0.1;
+        background: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/662025/grain.jpg') repeat center center;
+        -webkit-animation: grain 0.5s steps(1) infinite;
+        animation: grain 0.5s steps(1) infinite;
+      }
     .pf-txt{
         display: flex;
         justify-content: flex-end;
         text-align: right;
         &::before{display: none;}
-        .sub-txt{color: #fff;}
+        .sub-txt{color: #222;}
     }
-    .pf-txt-em{color: #fff;}
+    .pf-txt-em{color: #222;}
 }
 
 //로딩ani
