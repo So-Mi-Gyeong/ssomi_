@@ -28,9 +28,7 @@
         &.open{
             left: calc(100% - 2.5rem);
             transition: .5s;
-            &::before{
-                background-position: -2.7rem 0;
-            }
+            &::before{background-position: -2.7rem 0;}
         }
     }
     &-list{

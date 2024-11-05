@@ -20,13 +20,13 @@
             border: .1rem solid #3771ff;
             background-color: #fff;
         }
-        &:hover{background: #94abe6;}
+        &:hover{background-color: #94abe6;}
         &:active{
             background: linear-gradient(#3061db, #2935b5);
             box-shadow: none;
         }
         &:disabled{
-            background: #eee;
+            background-color: #eee;
             span{
                 color: #000;
                 opacity: .3;
@@ -35,17 +35,17 @@
 
         //button color
         &[data-color="white"]{
-            background: #fff;
+            background-color: #fff;
             span{color: #3771ff;}
 
             &:focus{opacity: 1;}
             &:hover{
-                background: #3061db;
+                background-color: #3061db;
                 border: .1rem solid #3061db;
                 span{color: #fff;}
             }
             &:active{
-                background: #3061db;
+                background-color: #3061db;
                 border: 1px solid #3061db;
                 span{color: #fff;}
             }
@@ -55,24 +55,24 @@
                 border: .1rem solid #000;
             }
             &.hover{
-                background: #3061db;
+                background-color: #3061db;
                 border: .1rem solid #3061db;
                 span{color: #fff;}
             }
         }
         &[data-color="gray"]{
-            background: #eee;
+            background-color: #eee;
             span{color: #000;}
 
             &:hover{
-                background: #eee;
+                background-color: #eee;
                 span{color: #000;}
             }
             &:focus,
             &:active{opacity: 1;}
 
             &.hover{
-                background: #eee;
+                background-color: #eee;
                 span{color: #000;}
             }
             &.focus,
@@ -84,10 +84,10 @@
             opacity: .3;
             border: .1rem solid #000;
         }
-        &.hover{background: #94abe6;}
+        &.hover{background-color: #94abe6;}
         &.active{opacity: .3;}
         &.disabled{
-            background: #eee;
+            background-color: #eee;
             span{
                 color: #000;
                 opacity: .3;
@@ -120,7 +120,7 @@
                 &.pre,
                 &.next{
                     position: relative;
-                    background: #fff;
+                    background-color: #fff;
                     border: .1rem solid #fff;
                     .pagination-btn{
                         &::before{

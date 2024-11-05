@@ -9,9 +9,10 @@
 '_table.scss', 
 '_list.scss', 
 '_input.scss', 
+'shorts.scss', 
 '_study.scss', 
 '_slide.scss', 
-'_cursor.scss', 
+// '_cursor.scss', 
 '_grid.scss', 
 '_hover.scss', 
 '_accordion.scss', 
@@ -38,9 +39,7 @@ html {
 
 /* scroll */
 body{
-    &::-webkit-scrollbar {
-        width: 10px;
-    }
+    &::-webkit-scrollbar {width: 10px;}
     &::-webkit-scrollbar-thumb {
         height: 30%;
         background-color: #452f55;
@@ -172,7 +171,6 @@ h3 + .pagination-wrap,
                 size: 3rem;
                 weight: 700;
             }
-            
             span{
                 font: {
                     size: 3rem;

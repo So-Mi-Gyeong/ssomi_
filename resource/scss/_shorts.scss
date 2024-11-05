@@ -1,0 +1,201 @@
+[data-shorts]{
+  position: relative;
+  *{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+  a{
+      text-decoration: none;
+      color: inherit;
+  }
+}
+
+[data-shorts="ep01"]{
+  .nav{
+    &-wrap{
+        height: 30rem;
+        position: relative;
+    }
+    &-item{
+        width: 35rem;
+        padding-bottom: .5rem;
+        position: absolute;
+        inset: 50% auto auto 50%;
+        transform: translate(-50%, -50%);
+        border-bottom: .1rem solid #aaa;
+        details{
+            margin-top: .5rem;
+            border-top: .1rem solid #aaa;
+        }
+        summary{
+            display: flex;
+            justify-content: space-between;
+            position: relative;
+            padding: 1rem 1rem;
+            cursor: pointer;
+            list-style: none;
+            &::after{
+                content: '-';
+            }
+            [open] & {
+                &::after{
+                    content: '+';
+                }
+            }
+        }
+    }
+    &-list{
+        padding: 1rem 2rem;
+        border-top: .1rem solid #aaa;
+        a{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            line-height: 1.6;
+            color: gray;
+            &::after{
+                content: '';
+                width: .5rem;
+                aspect-ratio: 1;
+                transform: rotate(-45deg);
+                border-right: .1rem solid #aaa;
+                border-bottom: .1rem solid #aaa;
+            }
+        }
+    }
+}
+}
+
+[data-shorts="ep02"]{
+  max-width: 43rem;
+  margin: 0 auto;
+  .menu{
+    background-color: #fff;
+    border-radius: 10rem;
+    padding: 2rem 3rem;
+    ul{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 4rem;
+      li{
+        position: relative;
+        &::after{
+          content: "";
+          position: absolute;
+          inset: 0 auto auto 0;
+          z-index: 1;
+          width: 100%;
+          height: 100%;
+          border-radius: .8rem;
+          transition: .5s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+          transform-origin: 110% bottom;
+        }
+        &:hover{
+          &::after{transform: rotate(20deg);}
+          svg{fill: #fff;}
+        }
+        &:nth-child(1)::after{background-color: #3868e3;}
+        &:nth-child(2)::after{background-color: #7438e3;}
+        &:nth-child(3)::after{background-color: #da38e3;}
+        &:nth-child(4)::after{background-color: #e3a438;}
+      }
+    }
+    a{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      z-index: 10;
+      width: 4.5rem;
+      aspect-ratio: 1;
+      background-color: rgba(227, 227, 227, 1);
+      border-radius: .7rem;
+      transition: .5s;
+      &:hover{
+        background-color: rgba(227, 227, 227, .5);
+        backdrop-filter: blur(.5rem);
+      }
+
+      svg{
+        width: 2.3rem;
+        aspect-ratio: 1;
+        fill: #a1a1a1;
+        transition: .5s;
+      }
+    }
+  }
+}
+
+[data-shorts="ep03"]{
+  position: relative;
+  nav{
+    background-color: orange;
+    position: relative;
+  }
+  .social-site{
+    position: absolute;
+    top: 0;
+    inset: auto 0 20rem 50%;
+    transform: translateX(-50%);
+    display: flex;
+    border-radius: 2rem;
+    background-color: #fff;
+    padding: 3rem 4rem;
+    gap: 5rem;
+    box-shadow: 0 .5rem 1rem .5rem rgba(172, 70, 2, .1);
+    list-style: none;
+    margin: 0;
+  }
+  svg{width: 4rem !important;}
+  li{flex: 1;}
+  a{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: .5rem;
+    text-decoration: none;
+    outline: none;
+    &::after{
+      content: attr(data-title);
+      transition: .4s;
+      color: rgba(0, 0, 0, .8);
+    }
+    &:focus,
+    li:hover &{
+      &::after{color: orange;}
+    }
+  }
+  .icon{
+    width: 5rem;
+    transition: .5s;
+    fill: rgba(0, 0, 0, .2);
+    a:focus &,
+    li:hover & {fill: white;}
+  }
+  .svg{
+    position: absolute;
+    inset: 0 0 0 50%;
+    transform: translateX(-50%);
+    width: 5rem;
+    path{
+      stroke: orange;
+      stroke-width: 2;
+      fill: none;
+      stroke-dasharray: 400;
+      stroke-dashoffset: 400;
+      a:focus &,
+      li:hover & {
+        animation: draw 1s forwards linear;
+      }
+    }
+  }
+  @keyframes draw {
+    100% {
+      stroke-dashoffset: 0;
+    }
+  }
+}

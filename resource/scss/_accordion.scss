@@ -12,9 +12,7 @@
         background: transparent;
         border: none;
         cursor: pointer;
-        &:disabled{
-            background-color: #ddd;
-        }
+        &:disabled{background-color: #ddd;}
     }
     textarea{
     line-height: 1.8rem;
@@ -24,14 +22,11 @@
     border: .1rem solid #ddd;
     border-radius: .4rem;
     box-sizing: border-box;
-        &:focus{
-            outline: none;
-        }
+        &:focus{outline: none;}
     }
-    .terms{
-        position: relative;
-    }
-      /* button */
+    .terms{position: relative;}
+
+    /* button */
     .termsBtn{
         width: 5rem;
         height: 2.8rem;
@@ -62,11 +57,9 @@
         right: 0;
         cursor: pointer;
       }
-      .accoClick.active + .termsBox{
-        display: none;
-      }
+      .accoClick.active + .termsBox{display: none;}
       /* //button */
-    
+
       .boxwrap{
         width: 100%;
         margin: 0 auto;
@@ -110,12 +103,8 @@
                 > input{
                     &:checked{
                         &+label{
-                            &::before{
-                                background-color: #019af9;
-                            }
-                            &::after{
-                                background: url('../img/acco-ico-check.png') -67px -5px no-repeat;
-                            }
+                            &::before{background-color: #019af9;}
+                            &::after{background: url('../img/acco-ico-check.png') -67px -5px no-repeat;}
                         }
                     }
                 }
@@ -130,9 +119,7 @@
                                 display: none;
                                 &:checked{
                                     &+label{
-                                        &::before{
-                                            background: url('../img/acco-ico-check.png') -10px -33px no-repeat;
-                                        }
+                                        &::before{background: url('../img/acco-ico-check.png') -10px -33px no-repeat;}
                                     }
                                 }
                             }

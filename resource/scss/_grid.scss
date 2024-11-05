@@ -7,7 +7,7 @@
     h3{color: #55b47d;}
 
     .item{
-        background: darkviolet;
+        background-color: darkviolet;
         border: 2px solid #55b47d;
         padding: 10px;
     }
@@ -18,7 +18,7 @@
     &.fr{
         grid-template-columns: 1fr 1fr 1fr;
         .item{
-            background: orangered;
+            background-color: orangered;
             border: 2px solid orange;
             padding: 10px;
         }
@@ -26,7 +26,7 @@
     &.fr2{
         grid-template-columns: 100px 2fr 1fr;
         .item{
-            background: orangered;
+            background-color: orangered;
             border: 2px solid orange;
             padding: 10px;
         }
@@ -34,7 +34,7 @@
     &.repeat{
         grid-template-columns: repeat(5, 1fr);
         .item{
-            background: #0a3d64;
+            background-color: #0a3d64;
             border: 2px solid #ed7170;
             padding: 10px;
         }
@@ -43,7 +43,7 @@
         grid-template-columns: repeat(3, 1fr);
 	    grid-template-rows: repeat(3, minmax(100px, auto));
         .item{
-            background: #f4d8cf;
+            background-color: #f4d8cf;
             border: 2px solid #a483e2;
             padding: 10px;
             color: #000;
@@ -53,7 +53,7 @@
         grid-template-columns: repeat(auto-fill, minmax(100px, auto));
         grid-template-rows: auto;
         .item{
-            background: #ecb172;
+            background-color: #ecb172;
             border: 2px solid #6795a0;
             padding: 10px;
         }
@@ -62,7 +62,7 @@
         grid-template-columns: repeat(auto-fit, minmax(100px, auto));
         grid-template-rows: auto;
         .item{
-            background: #ecb172;
+            background-color: #ecb172;
             border: 2px solid #6795a0;
             padding: 10px;
         }
