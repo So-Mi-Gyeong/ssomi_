@@ -1,0 +1,1153 @@
+@charset "UTF-8";
+html,
+body,
+div,
+span,
+iframe,
+h1, h2, h3, h4, h5, h6, p, pre,
+a,
+code,
+em,
+img,
+strong, b, u, i,
+dl, dt, dd, ol, ul, li,
+fieldset,
+form,
+label,
+legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article,
+figure, figcaption,
+footer,
+header,
+section {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+/* list */
+ol,
+ul,
+li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* table */
+table {
+  width: 100%;
+  border: 0;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* font */
+body {
+  color: #222;
+  font-size: 16px;
+  font-weight: normal;
+}
+
+a {
+  color: #222;
+  text-decoration: none;
+}
+
+i,
+em {
+  font-style: normal;
+}
+
+/* button */
+button {
+  padding: 0;
+  margin: 0;
+  background: transparent;
+  outline: 0;
+  border: 0;
+  cursor: pointer;
+}
+
+/* hidden */
+caption,
+input[type=checkbox],
+input[type=radio],
+.ally-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0); /* 구형 브라우저를 위해 사용 */
+  -webkit-clip-path: polygon(0 0, 0 0, 0 0);
+          clip-path: polygon(0 0, 0 0, 0 0); /* inset(50%) 와 동일한 표현 */
+  border: 0;
+}
+
+/* ============================================================== */
+.mdl-wrap {
+  width: 100%;
+  max-width: 43rem;
+  margin: 0 auto;
+  position: relative;
+}
+
+.challenge-wrap {
+  width: calc(100vw + 2px);
+  padding: calc(5.6rem + env(safe-area-inset-top) + 1.8rem) 2.4rem 5.7rem;
+  background: linear-gradient(180deg, #245F43 0%, #245F43 46rem, rgb(105, 156, 129) 78.2rem, rgb(255, 255, 255) 100%);
+}
+.challenge-today-walking {
+  display: flex;
+  flex-direction: column;
+  gap: 3.3rem;
+}
+.challenge-today-walking .today-walking-tit {
+  margin-top: 1.8rem;
+  padding-left: 1.3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+.challenge-today-walking .today-walking-tit span {
+  font-size: 1.6rem;
+  font-weight: 500;
+  line-height: 1.6rem;
+  color: #fff;
+}
+.challenge-today-walking .today-walking-tit h2 {
+  font-size: 2.2rem;
+  font-weight: 500;
+  line-height: 2.2rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: baseline;
+  gap: 0.4rem;
+  color: #fff;
+}
+.challenge-today-walking .today-walking-tit h2 span {
+  font-size: 3.6rem;
+  font-weight: 700;
+  line-height: 3.6rem;
+  color: #fff;
+}
+.challenge-today-walking .linkup {
+  height: 3.8rem;
+  padding: 0 1.6rem;
+  font-size: 1.4rem;
+  font-weight: 700;
+  line-height: 0;
+  color: #fff;
+  border-radius: 4rem;
+  background-color: #004036;
+  position: relative;
+}
+.challenge-today-walking .linkup::before {
+  content: "";
+  width: 6.4rem;
+  height: 2.1rem;
+  background: url(../img/challenge/ico-linkup.png) no-repeat 0 0;
+  background-size: 6.4rem;
+  position: absolute;
+  top: -1rem;
+  right: 1.8rem;
+  transition: 0.3s;
+}
+
+.card-walk {
+  padding: 0 0 2.6rem;
+  overflow: hidden;
+}
+.card-walk--list {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 2.8rem;
+  margin-top: 3.2rem;
+}
+.card-walk--type {
+  position: relative;
+  width: 100%;
+  border-top: 0.2rem solid #EF4678;
+  padding: 0 2.4rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 2.4rem;
+}
+.card-walk--type-tit {
+  min-width: 6.3rem;
+  height: 3.3rem;
+  padding: 0 1.5rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 700;
+  font-size: 1.3rem;
+  color: #fff;
+  background-color: #EF4678;
+  border-bottom-left-radius: 0.8rem;
+  border-bottom-right-radius: 0.8rem;
+}
+.card-walk--type + .card-walk--subject {
+  margin-top: 0;
+}
+.card-walk--type .mdl-btn {
+  opacity: 0.4;
+  transform: translateY(0.5rem);
+}
+.card-walk--type .point {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1.6rem;
+  color: #000;
+}
+.card-walk--type .point::before {
+  content: "";
+  display: block;
+  width: 2.2rem;
+  height: 2.4rem;
+  background-image: url(../../assets/img/challenge/m08/ico-point.png);
+  background-size: 2.2rem 2.4rem;
+  background-repeat: no-repeat;
+}
+.card-walk--head {
+  position: relative;
+  width: 100%;
+  font-size: 1.5rem;
+  font-weight: 500;
+  padding: 0 2.4rem 0;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  justify-content: flex-start;
+}
+.card-walk--head .div {
+  width: 1px;
+  height: 1.4rem;
+  background-color: #B1B7C4;
+}
+.card-walk--head b {
+  font: inherit;
+  color: #61697A;
+}
+.card-walk--head span {
+  font: inherit;
+  color: #858C9A;
+}
+.card-walk--head i {
+  font-style: normal;
+  color: #B1B7C4;
+}
+.card-walk--team {
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0 2.4rem 0;
+  margin-top: 1.7rem;
+}
+.card-walk--team strong {
+  display: block;
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #1E1F23;
+  word-break: break-all;
+}
+.card-walk--team::before {
+  content: "";
+  display: block;
+  width: 0.6rem;
+  min-width: 0.6rem;
+  height: 0.6rem;
+  border-radius: 50%;
+  background-color: #9530E8;
+  transform: translateY(-0.3rem);
+}
+.card-walk--team[data-team=leader]::before {
+  width: 2rem;
+  min-width: 2rem;
+  height: 2rem;
+  border-radius: 0;
+  background-color: transparent;
+  transform: translateY(0);
+  background-image: url(../../assets/img/challenge/walk/ico-leader.png);
+  background-size: 2rem;
+}
+.card-walk--subject {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  width: 100%;
+  position: relative;
+  padding: 0 2.4rem;
+  margin-top: 1.2rem;
+}
+.card-walk--subject b[data-marker=yellow]::after {
+  opacity: 0.6;
+  bottom: 0.3rem;
+}
+.card-walk--subject[data-ranking] .card-walk--subject-img {
+  padding-top: 3.4rem;
+}
+.card-walk--subject[data-ranking] .card-walk--subject-tit {
+  font-size: 4.4rem;
+  font-weight: 700;
+  line-height: 1.4;
+}
+.card-walk--subject[data-ranking] .card-walk--subject-tit span {
+  display: block;
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: inherit;
+  line-height: 1;
+}
+.card-walk--subject[data-state=end] {
+  padding-bottom: 2.7rem;
+}
+.card-walk--subject[data-state=end] .card-walk--subject-img {
+  padding-top: 5.5rem;
+}
+.card-walk--subject[data-state=end] .card-walk--subject-img::before {
+  transform: translateY(-0.8rem);
+}
+.card-walk--subject[data-state=end] .card-walk--subject-tit {
+  display: block;
+  font-size: 2rem;
+  font-weight: 300;
+}
+.card-walk--subject[data-state=end] .card-walk--subject-tit b {
+  font: inherit;
+  color: #9530E8;
+  font-weight: 700;
+}
+.card-walk--subject[data-state=before] {
+  margin: 0.1rem 0 0.9rem;
+  align-items: center;
+}
+.card-walk--subject[data-state=before] .card-walk--subject-tit {
+  display: block;
+  font-size: 2.2rem;
+}
+.card-walk--subject[data-state=before] .card-walk--subject-tit b {
+  font: inherit;
+  color: #EF4678;
+  font-weight: 700;
+}
+.card-walk--subject[data-state=before] .card-walk--subject-img {
+  transform: translateY(-0.5rem);
+}
+.card-walk--subject[data-state=none] {
+  align-items: center;
+  margin-top: 2.2rem;
+}
+.card-walk--subject[data-state=none] .card-walk--subject-tit {
+  display: block;
+  font-size: 2.5rem;
+}
+.card-walk--subject[data-state=none] .card-walk--subject-tit b {
+  font: inherit;
+  color: #9530E8;
+  font-weight: 700;
+}
+.card-walk--subject[data-state=none] .card-walk--subject-img {
+  transform: translateY(-0.5rem);
+}
+.card-walk--subject[data-state=none] + .card-walk--time {
+  margin-top: 1.3rem;
+}
+.card-walk--subject[data-state=ready] .card-walk--subject-tit {
+  transform: translate(0.5rem, 1.5rem);
+}
+.card-walk--subject-tit {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #1E1F23;
+  line-height: 1.4;
+}
+.card-walk--subject-tit span {
+  display: block;
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: inherit;
+  line-height: inherit;
+}
+.card-walk--subject-tit b {
+  font-size: 4.4rem;
+  font-weight: 700;
+  line-height: inherit;
+  color: inherit;
+  display: inline-block;
+  transform: translateY(-0.2rem);
+}
+.card-walk--subject-tit b[data-marker=yellow]::after {
+  background-color: rgba(255, 215, 0, 0.6);
+}
+.card-walk--subject-img {
+  position: relative;
+}
+.card-walk--subject-img[data-size=l]::before {
+  width: 10.4rem;
+  height: 10.4rem;
+  background-size: 10.4rem;
+  transform: translate(-0.9rem, -0.4rem);
+}
+.card-walk--subject-img[data-size=m]::before {
+  width: 9rem;
+  height: 9rem;
+  background-size: 9rem;
+  transform: translateY(-0.3rem);
+}
+.card-walk--subject-img::before {
+  content: "";
+  display: block;
+  width: 7rem;
+  height: 7rem;
+  background: url(../img/challenge/walk/walk-team.png) no-repeat 0 0/7rem;
+  transform: translateY(0.5rem);
+}
+.card-walk--subject .mdl-tooltip {
+  position: absolute;
+  top: 0;
+  left: auto;
+  right: 0;
+  background: #EDF0F7;
+  min-height: 3.6rem;
+  border-radius: 1.8rem;
+  padding: 0 1.6rem;
+  display: flex;
+  align-items: center;
+}
+.card-walk--subject .mdl-tooltip::before {
+  background: #EDF0F7;
+  left: 77.4%;
+}
+.card-walk--subject .mdl-tooltip-txt {
+  display: flex;
+  align-items: center;
+  font-size: 1.4rem;
+  font-weight: 300;
+  color: #4E4E4E;
+  gap: 0;
+}
+.card-walk--subject .mdl-tooltip-txt b {
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: #4E4E4E;
+  margin: 0 0.2rem 0 0.6rem;
+}
+.card-walk--time {
+  background-color: #F4F6FA;
+  margin: 3rem 2.4rem 0;
+  width: calc(100% - 4.8rem);
+  min-height: 5.2rem;
+  padding: 0 2.4rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 1.2rem;
+}
+.card-walk--time span {
+  font-size: 1.5rem;
+  font-weight: 300;
+  color: #858C9A;
+}
+.card-walk--time b {
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: #61697A;
+}
+.card-walk--time b[data-end] {
+  color: #EF4678;
+}
+.card-walk--time + .card-walk--link {
+  margin-top: 1.5rem;
+}
+.card-walk--link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 2.4rem 0;
+  width: 100%;
+  flex-direction: column;
+  margin-top: 2.5rem;
+}
+.card-walk--link .mdl-btn {
+  width: 16rem;
+  min-width: 16rem;
+  height: 5.2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #1E1F23;
+  border-radius: 2.6rem;
+}
+.card-walk--link .mdl-btn span {
+  font-size: 1.7rem;
+  font-weight: 700;
+  color: inherit;
+}
+.card-walk--link .mdl-btn[data-color=black] {
+  background-color: #1E1F23;
+  color: #fff;
+}
+.card-walk--link .mdl-btn[data-color=primary] {
+  background-color: #FFD700;
+  color: #1E1F23;
+}
+.card-walk--mission {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 1.4rem;
+  width: 100%;
+  padding: 0 2.2rem;
+  margin-top: 2rem;
+}
+.card-walk--mission-wrap {
+  width: 100%;
+  padding: 2rem 0.8rem;
+  border-radius: 2rem;
+  background-color: #F7F8FA;
+  display: flex;
+  min-height: 7.6rem;
+  justify-content: space-around;
+  position: relative;
+}
+.card-walk--mission-wrap::after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 50%;
+  width: 0.1rem;
+  height: calc(100% - 4rem);
+  border-left: 0.1rem solid #E7E9ED;
+}
+.card-walk--mission-item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-left: 4rem;
+}
+.card-walk--mission-item::before {
+  display: none;
+}
+.card-walk--mission-item[data-icon=participate] .card-walk--mission-tit::before {
+  content: "";
+  background-image: url(../img/challenge/main/sp_NMOK_1_1V_2407.png);
+  background-size: 24rem;
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+.card-walk--mission-item[data-icon=achieve] .card-walk--mission-tit::before {
+  content: "";
+  background-image: url(../img/challenge/main/sp_NMOK_1_1V_2407.png);
+  background-size: 24rem;
+  background-repeat: no-repeat;
+  background-position: -4rem 0;
+}
+.card-walk--mission-tit {
+  width: 100%;
+  font-size: 1.2rem;
+  font-weight: 300;
+  line-height: 1.4;
+  text-align: left;
+  color: #1E1F23;
+}
+.card-walk--mission-tit::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  margin: 0;
+  width: 3.2rem;
+  height: 3.2rem;
+  border-radius: 50%;
+  background: #fff url(../img/challenge/main/sp_x24.png) no-repeat 0 0/auto 3.2rem;
+}
+.card-walk--mission-txt {
+  width: 100%;
+  font-size: 1.4rem;
+  font-weight: 500;
+  line-height: 1.4;
+  text-align: left;
+  color: #1E1F23;
+}
+.card-walk[data-type=person] .card-walk--type {
+  border-top: 0.2rem solid #3084F3;
+}
+.card-walk[data-type=person] .card-walk--type-tit {
+  background-color: #3084F3;
+}
+.card-walk[data-type=person] .card-walk--subject {
+  margin-top: 0.3rem;
+}
+.card-walk[data-type=person] .card-walk--subject-img {
+  padding-top: 1.7rem;
+}
+.card-walk[data-type=person] .card-walk--subject-img[data-size=l]::before {
+  width: 10.4rem;
+  height: 10.4rem;
+  background-size: 10.4rem;
+  transform: translate(-0.8rem, -0.2rem);
+}
+.card-walk[data-type=person] .card-walk--subject-img[data-size=m]::before {
+  width: 9rem;
+  height: 9rem;
+  background-size: 9rem;
+}
+.card-walk[data-type=person] .card-walk--subject-img::before {
+  content: "";
+  display: block;
+  width: 7.8rem;
+  height: 7.8rem;
+  background: url(../img/challenge/walk/walk-person.png) no-repeat 0 0/7.8rem;
+}
+.card-walk[data-type=person] .card-walk--subject-img .mdl-tooltip {
+  top: -0.6rem;
+}
+.card-walk[data-type=person] .card-walk--subject[data-ranking] .card-walk--subject-img::before {
+  transform: translate(0.5rem, 0.8rem);
+}
+.card-walk[data-type=person] .card-walk--subject[data-ranking="1"] .card-walk--subject-tit, .card-walk[data-type=person] .card-walk--subject[data-ranking="2"] .card-walk--subject-tit, .card-walk[data-type=person] .card-walk--subject[data-ranking="3"] .card-walk--subject-tit {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0.7rem;
+}
+.card-walk[data-type=person] .card-walk--subject[data-ranking="1"] .card-walk--subject-tit::after, .card-walk[data-type=person] .card-walk--subject[data-ranking="2"] .card-walk--subject-tit::after, .card-walk[data-type=person] .card-walk--subject[data-ranking="3"] .card-walk--subject-tit::after {
+  content: "";
+  display: block;
+  width: 3.2rem;
+  height: 3.2rem;
+  background: url(../img/challenge/walk/ranking.png) no-repeat 0 0/3.2rem;
+}
+.card-walk[data-type=person] .card-walk--subject[data-state=before] {
+  margin-top: -0.5rem;
+}
+.card-walk[data-type=person] .card-walk--subject[data-state=before] .card-walk--subject-img + .card-walk--time {
+  margin: 0.6rem 2.4rem 0;
+}
+.card-walk[data-type=person] .card-walk--subject[data-state=end] {
+  padding-bottom: 0;
+}
+.card-walk[data-type=person] .card-walk--subject[data-state=end] .card-walk--subject-tit b {
+  color: #3084F3;
+}
+.card-walk[data-type=person] .card-walk--subject[data-state=end] .card-walk--subject-img {
+  padding-top: 6.1rem;
+}
+.card-walk[data-type=person] .card-walk--subject[data-state=end] .mdl-tooltip {
+  top: 1.3rem;
+}
+.card-walk[data-type=person] .card-walk--subject[data-state=end] + .card-walk--time {
+  margin-top: 1.1rem;
+}
+.card-walk[data-type=person] .card-walk--subject[data-state=end-no] .card-walk--subject {
+  margin-top: -2rem;
+}
+.card-walk[data-type=person] .card-walk--subject[data-state=end-no] .card-walk--subject-tit {
+  transform: translateY(-1rem);
+}
+.card-walk[data-type=person] .card-walk--subject[data-state=end-no] .card-walk--subject-img[data-size=m] {
+  padding-top: 0;
+}
+.card-walk[data-type=person] .card-walk--subject[data-state=end-no] .card-walk--subject-img[data-size=m]::before {
+  transform: translate(0rem, 0.4rem);
+}
+.card-walk[data-type=person] .card-walk--subject[data-state=end-no] + .card-walk--time {
+  margin: 2rem 2.4rem 0;
+}
+.card-walk[data-type=person] .mdl-tooltip::before {
+  left: 73%;
+}
+.card-walk[data-type=person] .card-walk--time {
+  margin: 2.9rem 2.4rem 0;
+}
+.card-walk[data-type=person] [data-ranking] {
+  margin-top: 1.9rem;
+}
+.card-walk[data-type=person] [data-ranking] .card-walk--subject-img::before {
+  transform: translate(0.5rem, 0.8rem);
+}
+.card-walk[data-type=person] [data-ranking] + .card-walk--time {
+  margin: 2.4rem 2.4rem 0;
+}
+.card-walk[data-type=team] .card-walk--type {
+  border-top: 0.2rem solid #9530E8;
+}
+.card-walk[data-type=team] .card-walk--type-tit {
+  background-color: #9530E8;
+}
+.card-walk[data-type=everyday] .card-walk--type {
+  border-top: 0.2rem solid #F27759;
+}
+.card-walk[data-type=everyday] .card-walk--type-tit {
+  background-color: #F27759;
+}
+.card-walk[data-type=everyday] .card-walk--subject-tit {
+  line-height: 2.7rem;
+  margin-top: 1rem;
+}
+.card-walk[data-type=everyday] .card-walk--subject-txt {
+  color: #858C9A;
+  line-height: 2.1rem;
+}
+.card-walk[data-type=everyday] [data-state=before] {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 0;
+}
+.card-walk[data-type=everyday] [data-state=before] .card-walk--subject-img {
+  transform: translateY(0.9rem);
+}
+.card-walk[data-type=everyday] [data-state=before] .card-walk--subject-txt {
+  white-space: nowrap;
+  margin-top: 1rem;
+}
+.card-walk[data-type=everyday] [data-state=before] .card-walk--subject-tit {
+  line-height: 2.7rem;
+  margin-top: 0.8rem;
+}
+.card-walk[data-type=everyday] [data-state=before] + .card-walk--link {
+  margin-top: 1.4rem;
+}
+.card-walk[data-type=everyday] .card-walk--graph + .card-walk--link {
+  margin-top: 1.1rem;
+}
+.card-walk[data-type=everyday] .card-walk--subject-img {
+  width: 16rem;
+}
+.card-walk[data-type=theme] .card-walk--type {
+  border-top: 0.2rem solid #25C38F;
+}
+.card-walk[data-type=theme] .card-walk--type-tit {
+  background-color: #25C38F;
+}
+.card-walk[data-type=theme] .card-walk--type .point {
+  position: absolute;
+  top: 1.5rem;
+  right: 2.4rem;
+}
+.card-walk[data-type=rewardball] .card-walk--subject {
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+.card-walk[data-type=rewardball] .card-walk--stepcount {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin-top: 0.8rem;
+}
+.card-walk[data-type=rewardball] .card-walk--stepcount strong {
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: #858C9A;
+}
+.card-walk[data-type=rewardball] .card-walk--stepcount b,
+.card-walk[data-type=rewardball] .card-walk--stepcount span {
+  font-size: 1.6rem;
+  font-weight: 300;
+  color: #858C9A;
+}
+.card-walk[data-type=rewardball] .card-walk--type {
+  border-top: 0.2rem solid #F27759;
+}
+.card-walk[data-type=rewardball] .card-walk--type-tit {
+  background-color: #F27759;
+}
+.card-walk[data-type=rewardball] .card-walk--rewardstep {
+  position: relative;
+  margin: 0 2.4rem 0;
+  width: calc(100% - 4.8rem);
+  display: flex;
+  flex-direction: column;
+  gap: 1.7rem;
+}
+.card-walk[data-type=rewardball] .card-walk--rewardstep::before {
+  content: "";
+  position: absolute;
+  top: 3rem;
+  left: 3.8rem;
+  width: 1rem;
+  height: calc(100% - 6rem);
+  background-color: #F2F5FC;
+  z-index: 1;
+}
+.card-walk[data-type=rewardball] .card-walk--rewardstep .card-walk--rewardstep-bar {
+  position: absolute;
+  top: 3rem;
+  left: 3.8rem;
+  width: 1rem;
+  height: 0;
+  background: linear-gradient(180deg, #FFE108 0.97%, #FFCD20 89.35%);
+  z-index: 2;
+  border-bottom-right-radius: 4rem;
+  border-bottom-left-radius: 4rem;
+}
+.card-walk[data-type=rewardball] .card-walk--rewardstep [data-state=on] ~ .card-walk--rewardstep-bar,
+.card-walk[data-type=rewardball] .card-walk--rewardstep [data-state=complete] ~ .card-walk--rewardstep-bar {
+  height: 7rem;
+}
+.card-walk[data-type=rewardball] .card-walk--rewardstep [data-state=complete] + [data-state=complete] ~ .card-walk--rewardstep-bar,
+.card-walk[data-type=rewardball] .card-walk--rewardstep [data-state=complete] + [data-state=on] ~ .card-walk--rewardstep-bar,
+.card-walk[data-type=rewardball] .card-walk--rewardstep [data-state=on] + [data-state=complete] ~ .card-walk--rewardstep-bar,
+.card-walk[data-type=rewardball] .card-walk--rewardstep [data-state=on] + [data-state=on] ~ .card-walk--rewardstep-bar {
+  height: 17.6rem;
+}
+.card-walk[data-type=rewardball] .card-walk--rewardstep [data-state=on] + [data-state=on] + [data-state=on] ~ .card-walk--rewardstep-bar,
+.card-walk[data-type=rewardball] .card-walk--rewardstep [data-state=on] + [data-state=complete] + [data-state=on] ~ .card-walk--rewardstep-bar,
+.card-walk[data-type=rewardball] .card-walk--rewardstep [data-state=on] + [data-state=on] + [data-state=complete] ~ .card-walk--rewardstep-bar,
+.card-walk[data-type=rewardball] .card-walk--rewardstep [data-state=on] + [data-state=complete] + [data-state=complete] ~ .card-walk--rewardstep-bar,
+.card-walk[data-type=rewardball] .card-walk--rewardstep [data-state=complete] + [data-state=on] + [data-state=on] ~ .card-walk--rewardstep-bar,
+.card-walk[data-type=rewardball] .card-walk--rewardstep [data-state=complete] + [data-state=on] + [data-state=complete] ~ .card-walk--rewardstep-bar,
+.card-walk[data-type=rewardball] .card-walk--rewardstep [data-state=complete] + [data-state=complete] + [data-state=on] ~ .card-walk--rewardstep-bar,
+.card-walk[data-type=rewardball] .card-walk--rewardstep [data-state=complete] + [data-state=complete] + [data-state=complete] ~ .card-walk--rewardstep-bar {
+  height: calc(100% - 6rem);
+}
+.card-walk[data-type=rewardball] .card-walk--rewardstep-item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.card-walk[data-type=rewardball] .card-walk--rewardstep-item[data-state=off] .card-walk--rewardstep-point {
+  background: url(../img/challenge/rewardball/rbs1.png) no-repeat 0 0/8.8rem;
+}
+.card-walk[data-type=rewardball] .card-walk--rewardstep-item[data-state=off] .card-walk--rewardstep-point span {
+  color: #515762;
+}
+.card-walk[data-type=rewardball] .card-walk--rewardstep-item[data-state=off] .card-walk--rewardstep-score {
+  color: #515762;
+}
+.card-walk[data-type=rewardball] .card-walk--rewardstep-item[data-state=ing] .card-walk--rewardstep-point {
+  background: url(../img/challenge/rewardball/rbs4.png) no-repeat 0 0/8.8rem;
+}
+.card-walk[data-type=rewardball] .card-walk--rewardstep-item[data-state=ing] .card-walk--rewardstep-point span {
+  color: #515762;
+}
+.card-walk[data-type=rewardball] .card-walk--rewardstep-item[data-state=ing] .card-walk--rewardstep-score {
+  color: #515762;
+}
+.card-walk[data-type=rewardball] .card-walk--rewardstep-item[data-state=on] .card-walk--rewardstep-point {
+  background: url(../img/challenge/rewardball/rbs2.png) no-repeat 0 0/8.8rem;
+}
+.card-walk[data-type=rewardball] .card-walk--rewardstep-item[data-state=on] .card-walk--rewardstep-point span {
+  color: #1E1F23;
+}
+.card-walk[data-type=rewardball] .card-walk--rewardstep-item[data-state=complete] .card-walk--rewardstep-point {
+  background: url(../img/challenge/rewardball/rbs3.png) no-repeat 0 0/8.8rem;
+}
+.card-walk[data-type=rewardball] .card-walk--rewardstep-item[data-state=complete] .card-walk--rewardstep-point span {
+  color: #1E1F23;
+}
+.card-walk[data-type=rewardball] .card-walk--rewardstep-item .card-walk--rewardstep-point {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 8.8rem;
+  height: 8.8rem;
+  gap: 0.2rem;
+  background: url(../img/challenge/rewardball/rbs1.png) no-repeat 0 0/8.8rem;
+  z-index: 5;
+  padding-right: 0.1rem;
+}
+.card-walk[data-type=rewardball] .card-walk--rewardstep-item .card-walk--rewardstep-point span {
+  font-size: 1.4rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  color: #61697A;
+}
+.card-walk[data-type=rewardball] .card-walk--rewardstep-item .card-walk--rewardstep-point span::before {
+  content: "";
+  display: flex;
+  width: 1.6rem;
+  height: 1.8rem;
+  background: url(../img/challenge/rewardball/ico_medal.png) no-repeat 0 0/1.6rem;
+}
+.card-walk[data-type=rewardball] .card-walk--rewardstep-item .card-walk--rewardstep-score {
+  color: #1E1F23;
+  display: flex;
+  flex-direction: column;
+  font-size: 1.9rem;
+  font-weight: 700;
+  margin-left: 0.8rem;
+  padding-top: 0.8rem;
+}
+.card-walk[data-type=rewardball] .card-walk--rewardstep-item .card-walk--rewardstep-score span {
+  color: #515762;
+  font-size: 1.5rem;
+  font-weight: 500;
+  padding-top: 0.1rem;
+}
+.card-walk[data-type=rewardball] .card-walk--rewardstep-item .card-walk--rewardstep-state * {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4rem;
+  background: #F7F7F7;
+  width: 9.3rem;
+  height: 4rem;
+  margin-left: 2.6rem;
+  font-weight: 500;
+}
+.card-walk[data-type=rewardball] .card-walk--rewardstep-item .card-walk--rewardstep-state .btn-on {
+  display: flex;
+  gap: 0.4rem;
+  color: #515762;
+}
+.card-walk[data-type=rewardball] .card-walk--rewardstep-item .card-walk--rewardstep-state .btn-on::before {
+  content: "";
+  display: flex;
+  width: 1.8rem;
+  height: 1.8rem;
+  background: url(../img/challenge/rewardball/ico_ing.svg) no-repeat 0 0/1.8rem;
+}
+.card-walk[data-type=rewardball] .card-walk--rewardstep-item .card-walk--rewardstep-state button {
+  color: #000;
+  background-color: #FFD700;
+}
+.card-walk[data-type=rewardball] .card-walk--rewardstep-item .card-walk--rewardstep-state button:disabled {
+  background-color: #F7F7F7;
+  color: #999;
+}
+.card-walk[data-type=rewardball] .card-walk--rewardstep-item .card-walk--rewardstep-state .btn-complete {
+  display: flex;
+  gap: 0.3rem;
+  color: #515762;
+  background: #FEF8D9;
+  color: #000;
+}
+.card-walk[data-type=rewardball] .card-walk--rewardstep-item .card-walk--rewardstep-state .btn-complete::before {
+  content: "";
+  display: flex;
+  width: 1.8rem;
+  height: 1.8rem;
+  background: url(../img/challenge/rewardball/ico_check.svg) no-repeat 0 0/1.8rem;
+}
+
+.card-walk--next {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-direction: column;
+}
+.card-walk--next em {
+  color: #61697A;
+}
+.card-walk--next-group {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 0.8rem;
+}
+.card-walk--next-group[data-align=center] {
+  align-items: center;
+}
+.card-walk--next-tit {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #1E1F23;
+  line-height: 1.5;
+  text-align: left;
+}
+.card-walk--next-tit em {
+  color: #61697A;
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+.card-walk--next .card-walk--team {
+  padding: 0;
+  margin-top: 0.6rem;
+  align-items: baseline;
+}
+.card-walk--next .card-walk--link {
+  width: auto;
+  margin-top: 0;
+  padding: 0;
+}
+.card-walk--next .mdl-btn {
+  width: 10rem;
+  min-width: 10rem;
+  height: 3.6rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #1E1F23;
+  border-radius: 1.8rem;
+}
+.card-walk--next .mdl-btn span {
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: inherit;
+}
+.card-walk--next .mdl-btn[data-color=black] {
+  background-color: #1E1F23;
+  color: #fff;
+}
+.card-walk--next .mdl-btn[data-color=primary] {
+  background-color: #FFD700;
+  color: #1E1F23;
+}
+
+.card-walk--next[data-chain=true]::before {
+  width: calc(100% - 4.4rem) !important;
+  left: 2.2rem !important;
+  border-top: 1px dashed #B1B7C4 !important;
+}
+
+.card-walk--link .mdl-btn:disabled {
+  background-color: #E8E8E8;
+}
+.card-walk--link .mdl-btn:disabled span {
+  color: #999999;
+}
+
+[data-card=luckyball] .card-walk--subject {
+  flex-direction: column;
+  align-items: flex-start;
+}
+[data-card=luckyball] .card-walk--graph {
+  width: 100%;
+  min-height: 8.8rem;
+  padding: 4.4rem 3rem 0;
+}
+[data-card=luckyball] .card-walk--graph-item {
+  position: relative;
+  width: calc(100% - 5.7rem) !important;
+  height: 1rem;
+  margin: 0 auto;
+  margin-left: 3rem;
+  border-radius: 0.5rem;
+  background-color: #DCDCDC;
+}
+[data-card=luckyball] .card-walk--graph-bar {
+  position: relative;
+  width: 0;
+  background-color: #FFCD20;
+  border-radius: 0.5rem;
+  height: 100%;
+  transition: width 0.3s ease-in;
+}
+[data-card=luckyball] .card-walk--graph-bar .pointer {
+  display: none !important;
+}
+[data-card=luckyball] .card-walk--graph-txt {
+  margin-top: 3.36rem;
+  justify-content: center;
+  gap: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+[data-card=luckyball] .card-walk--graph-step {
+  min-width: 8rem;
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #777;
+  text-align: center;
+  position: relative;
+  transform: translate(0.2rem, -0.7rem);
+}
+[data-card=luckyball] .card-walk--graph-step::before {
+  content: "";
+  width: 8rem;
+  height: 8.6rem;
+  background: url(../../assets/img/challenge/luckyball.png) no-repeat 0 0;
+  background-size: 32rem;
+  position: absolute;
+  top: -6.4rem;
+  left: 50%;
+  transform: translateX(-50%);
+}
+[data-card=luckyball] .card-walk--graph[data-step="0"] .card-walk--graph-bar {
+  width: 0;
+}
+[data-card=luckyball] .card-walk--graph[data-step="1"] .card-walk--graph-bar {
+  width: 0;
+}
+[data-card=luckyball] .card-walk--graph[data-step="1"] .card-walk--graph-step:nth-of-type(1),
+[data-card=luckyball] .card-walk--graph[data-step="1"] .card-walk--graph-step:nth-of-type(1)::before {
+  color: #1E1F23;
+  background-position: -8rem 0;
+}
+[data-card=luckyball] .card-walk--graph[data-step="2"] .card-walk--graph-bar {
+  width: 50%;
+}
+[data-card=luckyball] .card-walk--graph[data-step="2"] .card-walk--graph-step:nth-of-type(1),
+[data-card=luckyball] .card-walk--graph[data-step="2"] .card-walk--graph-step:nth-of-type(2) {
+  color: #1E1F23;
+}
+[data-card=luckyball] .card-walk--graph[data-step="2"] .card-walk--graph-step:nth-of-type(1)::before {
+  background-position: -8rem 0;
+}
+[data-card=luckyball] .card-walk--graph[data-step="2"] .card-walk--graph-step:nth-of-type(2)::before {
+  background-position: -16rem 0;
+}
+[data-card=luckyball] .card-walk--graph[data-step="3"] .card-walk--graph-bar {
+  width: 100%;
+}
+[data-card=luckyball] .card-walk--graph[data-step="3"] .card-walk--graph-step:nth-of-type(1),
+[data-card=luckyball] .card-walk--graph[data-step="3"] .card-walk--graph-step:nth-of-type(2),
+[data-card=luckyball] .card-walk--graph[data-step="3"] .card-walk--graph-step:nth-of-type(3) {
+  color: #1E1F23;
+}
+[data-card=luckyball] .card-walk--graph[data-step="3"] .card-walk--graph-step:nth-of-type(1)::before {
+  background-position: -8rem 0;
+}
+[data-card=luckyball] .card-walk--graph[data-step="3"] .card-walk--graph-step:nth-of-type(2)::before {
+  background-position: -16rem 0;
+}
+[data-card=luckyball] .card-walk--graph[data-step="3"] .card-walk--graph-step:nth-of-type(3)::before {
+  background-position: -24rem 0;
+}
+
+[data-banner=luckyball] .mdl-banner-group {
+  gap: 0;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: "base";
+}
+
+@media screen and (max-width: 374px) {
+  .container {
+    font-size: 2vw;
+  }
+  .container * {
+    font-size: 4vw;
+  }
+  .container .ui-content {
+    padding: 5vw;
+  }
+}
+/* scroll */
+body::-webkit-scrollbar {
+  width: 10px;
+}
+body::-webkit-scrollbar-thumb {
+  height: 30%;
+  background-color: #452f55;
+  border-radius: 10px;
+}
+body::-webkit-scrollbar-track {
+  background-color: grey;
+  border-radius: 10px;
+  box-shadow: inset 0px 0px 5px white;
+}/*# sourceMappingURL=challenge.css.map */
