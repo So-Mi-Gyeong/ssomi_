@@ -99,7 +99,7 @@ header {
 .ui-menu {
   width: 100%;
   position: relative;
-  background-color: #BFBEBC;
+  background-color: #222;
   z-index: 99;
 }
 .ui-menu-list {
@@ -132,7 +132,7 @@ header {
 .ui-menu-item a {
   display: flex;
   align-items: center;
-  color: #fff;
+  color: #BFBEBC;
   box-sizing: border-box;
   font-size: 1.5rem;
   font-weight: 500;
@@ -146,7 +146,7 @@ header {
 }
 .ui-menu-item a::after {
   content: "|";
-  color: #222;
+  color: #BFBEBC;
   margin-left: 2rem;
 }
 
@@ -161,7 +161,7 @@ header {
   }
   .ui-menu-item {
     width: 100%;
-    border-bottom: 0.1rem solid #fff;
+    border-bottom: 0.1rem solid #BFBEBC;
   }
   .ui-menu-item a {
     display: inline-block;
