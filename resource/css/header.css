@@ -97,17 +97,20 @@ header {
 }
 
 .ui-menu {
+  width: 100%;
   position: relative;
   background-color: #BFBEBC;
 }
 .ui-menu-list {
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 2rem;
   padding: 2rem;
-  overflow-x: hidden;
-  overflow-y: auto;
+  overflow-x: auto;
+  overflow-y: hidden;
+  box-sizing: border-box;
 }
 .ui-menu-list::-webkit-scrollbar {
   display: none;
@@ -116,18 +119,13 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 2rem;
   box-sizing: border-box;
   opacity: 0.9;
-}
-.ui-menu-item::after {
-  content: "|";
-  color: #222;
 }
 .ui-menu-item:last-child {
   border-bottom: 0;
 }
-.ui-menu-item:last-child::after {
+.ui-menu-item:last-child a::after {
   display: none;
 }
 .ui-menu-item a {
@@ -144,4 +142,33 @@ header {
 .ui-menu-item a:focus {
   background-color: #222;
   color: #fff;
+}
+.ui-menu-item a::after {
+  content: "|";
+  color: #222;
+  margin-left: 2rem;
+}
+
+@media (min-width: 0px) and (max-width: 600px) {
+  .ui-menu-list {
+    flex-direction: column;
+    padding: 0;
+    gap: 0;
+  }
+  .ui-menu-item {
+    width: 100%;
+    border-bottom: 0.1rem solid #fff;
+  }
+  .ui-menu-item a {
+    display: inline-block;
+    width: 100%;
+    padding: 1rem 0;
+    text-align: center;
+  }
+  .ui-menu-item a::after {
+    display: none;
+  }
+  .ui-menu-item:hover {
+    filter: blur(1px);
+  }
 }/*# sourceMappingURL=header.css.map */
