@@ -107,7 +107,6 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 2rem;
   padding: 2rem;
   overflow-x: auto;
   overflow-y: hidden;
@@ -130,6 +129,7 @@ header {
   display: none;
 }
 .ui-menu-item a {
+  padding-left: 2rem;
   display: flex;
   align-items: center;
   color: #BFBEBC;
@@ -138,7 +138,7 @@ header {
   font-weight: 500;
 }
 .ui-menu-item a:hover {
-  background-color: rgba(255, 255, 255, 0.195);
+  color: #fff;
 }
 .ui-menu-item a:focus {
   background-color: #222;
