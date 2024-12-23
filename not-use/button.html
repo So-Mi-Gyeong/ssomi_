@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>BUTTON</title>
+
+    <link rel="stylesheet" href="../../ssomi_2024/resource/css/header.css">
+    <link rel="stylesheet" href="../../ssomi_2024/resource/css/common.css">
+
+    <script src="../../ssomi_2024/resource/js/jquery-3.6.1.min.js"></script>
+    <script src="../../ssomi_2024/resource/js/header.js"></script>
+    <script src="../../ssomi_2024/resource/js/ui-script.js"></script>
+</head>
+<body>
+    <header id="menu"></header>
+    <div class="container button">
+        <div class="ui-content btn-wrap">
+            <section class="wrap">
+                <h2>BUTTON</h2>
+                <p>버튼은 사용자가 수행할 수 있는 작업을 전달합니다. 일반적으로 UI 전체에서 Dialogs, Forms, Toolbars 등의 위치에 배치됩니다.</p>
+                <h3>버튼과 링크의 차이</h3>
+                <ul class="listDefault">
+                    <li><b>링크</b> : "모두 보기(view all)" 페이지, "Roger Wright" 프로필 등과 같이 다른 장소로 이동할 때 사용</li>
+                    <li><b>버튼</b> : "제출(submit)", :병합(merge)", "새로 만들기(create)", "업로드(upload)" 등과 같은 작업을 수행할 때 사용</li>
+                </ul>
+                <table class="tableDefault">
+                    <thead>
+                        <tr>
+                            <th scope="col" id="th-a-1"></th>
+                            <th scope="col" id="th-a-2">Primary</th>
+                            <th scope="col" id="th-a-3">Secondary</th>
+                            <th scope="col" id="th-a-3">Gray</th>
+                            <th scope="col" id="th-a-4">Teriary</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row" id="th-b-1" headers="th-a-1">Normal</th>
+                            <td headers="th-a-2 th-b-1">
+                                <button type="button" class="btn-default"><span>Edit</span></button>
+                            </td>
+                            <td headers="th-a-3 th-b-1">
+                                <button type="button" class="btn-default" data-color="white"><span>Edit</span></button>
+                            </td>
+                            <td headers="th-a-4 th-b-1">
+                                <button type="button" class="btn-default" data-color="gray"><span>Edit</span></button>
+                            </td>
+                            <td headers="th-a-5 th-b-1">
+                                <button type="button" class="btn-txt"><span>Edit</span></button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row" id="th-b-2" headers="th-a-1">Focus</th>
+                            <td headers="th-a-2 th-b-2">
+                                <button type="button" class="btn-default focus"><span>Edit</span></button>
+                            </td>
+                            <td headers="th-a-3 th-b-2">
+                                <button type="button" class="btn-default focus" data-color="white"><span>Edit</span></button>
+                            </td>
+                            <td headers="th-a-4 th-b-2">
+                                <button type="button" class="btn-default focus" data-color="gray"><span>Edit</span></button>
+                            </td>
+                            <td headers="th-a-5 th-b-2">
+                                <button type="button" class="btn-txt focus"><span>Edit</span></button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row" id="th-b-3" headers="th-a-1">Hover</th>
+                            <td headers="th-a-2 th-b-3">
+                                <button type="button" class="btn-default hover"><span>Edit</span></button>
+                            </td>
+                            <td headers="th-a-3 th-b-3">
+                                <button type="button" class="btn-default hover" data-color="white"><span>Edit</span></button>
+                            </td>
+                            <td headers="th-a-4 th-b-3">
+                                <button type="button" class="btn-default hover" data-color="gray"><span>Edit</span></button>
+                            </td>
+                            <td headers="th-a-5 th-b-3">
+                                <button type="button" class="btn-txt hover"><span>Edit</span></button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row" id="th-b-4" headers="th-a-1">Active</th>
+                            <td headers="th-a-2 th-b-4">
+                                <button type="button" class="btn-default active"><span>Edit</span></button>
+                            </td>
+                            <td headers="th-a-3 th-b-4">
+                                <button type="button" class="btn-default active" data-color="white"><span>Edit</span></button>
+                            </td>
+                            <td headers="th-a-4 th-b-4">
+                                <button type="button" class="btn-default active" data-color="gray"><span>Edit</span></button>
+                            </td>
+                            <td headers="th-a-5 th-b-4">
+                                <button type="button" class="btn-txt active"><span>Edit</span></button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row" id="th-b-5" headers="th-a-1">Disabled</th>
+                            <td headers="th-a-2 th-b-5">
+                                <button type="button" class="btn-default disabled"><span>Edit</span></button>
+                            </td>
+                            <td headers="th-a-3 th-b-5">
+                                <button type="button" class="btn-default disabled" data-color="white"><span>Edit</span></button>
+                            </td>
+                            <td headers="th-a-4 th-b-5">
+                                <button type="button" class="btn-default disabled" data-color="gray"><span>Edit</span></button>
+                            </td>
+                            <td headers="th-a-5 th-b-5">
+                                <button type="button" class="btn-txt disabled"><span>Edit</span></button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <ul class="listDefault">
+                    <li><b>Primary</b> - 눈에 띄는 하나의 버튼 (이 스타일을 primary로 정의함)</li>
+                    <li><b>Secondary</b> - 여러 개의 중간</li>
+                    <li><b>Tertiary</b> - 낮은 강조</li>
+                </ul>
+                <ul class="listDefault">
+                    <li><b>Normal</b> - 인터랙티브한 버튼 요소이며 활성화되어 있음</li>
+                    <li><b>Focus</b> - 사용자가 키보드, 마우스 또는 기타 입력 방법을 사용하여 요소를 강조 표시했음</li>
+                    <li><b>Hover</b> - 사용자가 인터랙티브 요소 위에 커서를 놓았을 때 통신</li>
+                    <li><b>Active or pressed or Clicked 사용자</b> - 가 버튼을 탭(선택)함</li>
+                    <li><b>Progress/Loading</b> - 작업이 즉시 수행되지 않고 무엇인가 작업을 완료하는 중임을 알릴 때 사용</li>
+                    <li><b>Disabled</b> - 현재는 비활성화된 상태이지만 나중엔 활성화할 수 있음</li>
+                </ul>
+            </section>
+
+            <section class="wrap tab">
+                <h3>TAB</h3>
+                <div class="ui-tab">
+                    <button type="button" class="ui-tab-item" aria-selected="true"><span>피부</span></button>
+                    <button type="button" class="ui-tab-item"><span>표정</span></button>
+                    <button type="button" class="ui-tab-item"><span>헤어</span></button>
+                    <button type="button" class="ui-tab-item"><span>의상</span></button>
+                    <button type="button" class="ui-tab-item"><span>신발</span></button>
+                    <button type="button" class="ui-tab-item"><span>악세서리</span></button>
+                </div>
+            </section>
+
+            <section class="wrap pagination">
+                <h3>PAGINATION</h3>
+                <div class="pagination-wrap">
+                    <ul class="pagination-list">
+                        <li class="pagination-item"><button type="button" class="pagination-btn">First</button></li>
+                        <li class="pagination-item"><button type="button" class="pagination-btn">Previous</button></li>
+                        <li class="pagination-item"><button type="button" class="pagination-btn">1</button></li>
+                        <li class="pagination-item"><button type="button" class="pagination-btn">2</button></li>
+                        <li class="pagination-item"><button type="button" class="pagination-btn">3</button></li>
+                        <li class="pagination-item"><button type="button" class="pagination-btn">Next</button></li>
+                        <li class="pagination-item"><button type="button" class="pagination-btn">Last</button></li>
+                    </ul>
+                </div>
+                <div class="pagination-wrap" data-style="text">
+                    <ul class="pagination-list">
+                        <li class="pagination-item pre"><button type="button" class="pagination-btn"></button></li>
+                        <li class="pagination-item"><button type="button" class="pagination-btn">1</button></li>
+                        <li class="pagination-item"><button type="button" class="pagination-btn">2</button></li>
+                        <li class="pagination-item"><button type="button" class="pagination-btn">3</button></li>
+                        <li class="pagination-item next"><button type="button" class="pagination-btn"></button></li>
+                    </ul>
+                </div>
+                <div class="pagination-wrap" data-style="circle">
+                    <ul class="pagination-list">
+                        <li class="pagination-item pre"><button type="button" class="pagination-btn"></button></li>
+                        <li class="pagination-item"><button type="button" class="pagination-btn">1</button></li>
+                        <li class="pagination-item"><button type="button" class="pagination-btn">2</button></li>
+                        <li class="pagination-item"><button type="button" class="pagination-btn">3</button></li>
+                        <li class="pagination-item next"><button type="button" class="pagination-btn"></button></li>
+                    </ul>
+                </div>
+            </section>
+        </div>
+    </div>
+</body>
+</html>
