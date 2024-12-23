@@ -284,6 +284,7 @@ html {
   font-weight: bolder;
   text-shadow: 1rem 1rem 0.1rem #000;
   text-align: center;
+  z-index: 1;
 }
 .typingArea .typingBox .typing-txt {
   display: none;
@@ -589,6 +590,9 @@ html {
   }
 }
 @media (min-width: 758px) and (max-width: 1360px) {
+  .container {
+    position: relative;
+  }
   .container .wrap {
     position: relative;
   }
@@ -630,6 +634,9 @@ html {
   }
 }
 @media (min-width: 500px) and (max-width: 757px) {
+  .container {
+    position: relative;
+  }
   .container .wrap {
     height: auto;
     flex-direction: column;
@@ -679,6 +686,9 @@ html {
   }
 }
 @media all and (max-width: 499px) {
+  .container {
+    position: relative;
+  }
   .container .wrap {
     height: auto;
     flex-direction: column;

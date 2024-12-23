@@ -100,6 +100,7 @@ header {
   width: 100%;
   position: relative;
   background-color: #BFBEBC;
+  z-index: 99;
 }
 .ui-menu-list {
   width: 100%;
@@ -150,6 +151,9 @@ header {
 }
 
 @media (min-width: 0px) and (max-width: 600px) {
+  .ui-menu {
+    background-color: #222;
+  }
   .ui-menu-list {
     flex-direction: column;
     padding: 0;

@@ -67,6 +67,7 @@ html {font-size: 62.5%;}
       font-weight: bolder;
       text-shadow: 1rem 1rem .1rem #000;
       text-align:center;
+      z-index: 1;
       .typing-txt {
         display: none;
         ul{
@@ -364,6 +365,7 @@ html {font-size: 62.5%;}
 }
 
 @include tablet {
+    .container{position: relative;}
     .container .wrap{position: relative;}
     .pf{
         &-img-wrap{margin-left: 8rem;}
@@ -401,6 +403,7 @@ html {font-size: 62.5%;}
     }
 }
 @include mobile {
+    .container{position: relative;}
     .container .wrap{
         height: auto;
         flex-direction: column;
@@ -449,6 +452,7 @@ html {font-size: 62.5%;}
     }
 }
 @include small {
+    .container{position: relative;}
     .container .wrap{
         height: auto;
         flex-direction: column;
