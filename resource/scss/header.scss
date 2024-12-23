@@ -58,6 +58,9 @@ header{
 }
 
 @media (min-width: 0px) and (max-width: 600px){
+    header{
+        position: relative;
+    }
     .ui-menu{background-color: #222;}
     .ui-menu-list{
         flex-direction: column;
