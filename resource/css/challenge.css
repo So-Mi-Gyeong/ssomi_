@@ -97,13 +97,41 @@ input[type=radio],
 
 .challenge-wrap {
   width: calc(100vw + 2px);
+  height: 100dvh;
   padding: calc(5.6rem + env(safe-area-inset-top) + 1.8rem) 2.4rem 5.7rem;
   background: linear-gradient(180deg, #245F43 0%, #245F43 46rem, rgb(105, 156, 129) 78.2rem, rgb(255, 255, 255) 100%);
+  position: relative;
+}
+.challenge-wrap::before {
+  content: "";
+  width: 69.1rem;
+  height: 81.2rem;
+  background: url(../../resource/img/challenge/bg.png) no-repeat 0 0;
+  background-size: 69.1rem;
+  position: absolute;
+  top: -1rem;
+  left: 50%;
+  transform: translateX(calc(-50% - 3rem));
+}
+.challenge-wrap::after {
+  content: "";
+  width: 105rem;
+  height: 25.9rem;
+  background: url(../../resource/img/challenge/snow3.png) no-repeat 0 0;
+  background-size: 105rem;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
 }
 .challenge-today-walking {
+  width: -moz-fit-content;
+  width: fit-content;
   display: flex;
   flex-direction: column;
   gap: 3.3rem;
+  position: relative;
+  z-index: 1;
 }
 .challenge-today-walking .today-walking-tit {
   margin-top: 1.8rem;
@@ -157,6 +185,43 @@ input[type=radio],
   transition: 0.3s;
 }
 
+.ani-deer {
+  position: absolute;
+  left: 50%;
+  transform: translateX(calc(-50% + 7.9rem));
+}
+.ani-deer::before {
+  content: "";
+  display: block;
+  width: 4.9rem;
+  height: 5.3rem;
+  background: url(../../resource/img/challenge/ico-deer1.png) no-repeat 0 0;
+  background-size: 4.9rem;
+  position: absolute;
+  top: 2.5rem;
+  left: -0.5rem;
+  z-index: 1;
+  animation: anideer 4s ease-in-out infinite;
+}
+.ani-deer::after {
+  content: "";
+  display: block;
+  width: 3.6rem;
+  height: 3.5rem;
+  background: url(../../resource/img/challenge/ico-deer2.png) no-repeat 0 0;
+  background-size: 3.6rem;
+  position: absolute;
+  top: 5.7rem;
+}
+
+@keyframes anideer {
+  0%, 100% {
+    transform: rotate(-20deg);
+  }
+  0% {
+    transform: rotate(20deg);
+  }
+}
 .card-walk {
   padding: 0 0 2.6rem;
   overflow: hidden;
