@@ -300,7 +300,10 @@ html {font-size: 62.5%;}
         .sub-txt{
             margin-top: 3rem;
             color: #222;
+            position: relative;
             bottom: initial;
+            right: initial;
+            text-align: center;
         }
         strong + p{margin-top: 3rem;}
     }
@@ -394,7 +397,7 @@ html {font-size: 62.5%;}
         }
     }
     .career{
-        background-position: 0rem -68rem;
+        .pf-img-wrap{margin-left: 0;}
     }
 }
 @include mobile {
@@ -442,13 +445,6 @@ html {font-size: 62.5%;}
         &-content p{
             text-align: center;
             font-size: 1.6rem;
-        }
-    }
-    .career{
-        background-position: 0rem -35rem;
-        .pf-txt{
-            justify-content: center;
-            text-align: center;
         }
     }
 }
@@ -519,11 +515,9 @@ html {font-size: 62.5%;}
         }
     }
     .career{
-        background-size: 100% 130%;
-        background-position: 0rem -15rem;
-        .pf-txt{
-            justify-content: center;
-            text-align: center;
+        .pf-img-wrap{
+            width: 20rem;
+            height: 20rem;
         }
     }
 }

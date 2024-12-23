@@ -526,7 +526,10 @@ html {
 .career .pf-txt .sub-txt {
   margin-top: 3rem;
   color: #222;
+  position: relative;
   bottom: initial;
+  right: initial;
+  text-align: center;
 }
 .career .pf-txt strong + p {
   margin-top: 3rem;
@@ -622,8 +625,8 @@ html {
   .container .square-item:last-child {
     margin-bottom: 0;
   }
-  .career {
-    background-position: 0rem -68rem;
+  .career .pf-img-wrap {
+    margin-left: 0;
   }
 }
 @media (min-width: 500px) and (max-width: 757px) {
@@ -673,13 +676,6 @@ html {
   .container .square-content p {
     text-align: center;
     font-size: 1.6rem;
-  }
-  .career {
-    background-position: 0rem -35rem;
-  }
-  .career .pf-txt {
-    justify-content: center;
-    text-align: center;
   }
 }
 @media all and (max-width: 499px) {
@@ -751,12 +747,8 @@ html {
     background-size: 225% 183%;
     background-position: -13rem 0;
   }
-  .career {
-    background-size: 100% 130%;
-    background-position: 0rem -15rem;
-  }
-  .career .pf-txt {
-    justify-content: center;
-    text-align: center;
+  .career .pf-img-wrap {
+    width: 20rem;
+    height: 20rem;
   }
 }/*# sourceMappingURL=portfolio.css.map */
