@@ -89,73 +89,50 @@ input[type=radio],
 
 /* ============================================================== */
 /* ==================================== menu ================================= */
-.ui-menu {
-  position: relative;
-  z-index: 9999;
-}
-.ui-menu-btn {
-  width: 2rem;
-  height: 3rem;
-  padding: 0;
-  position: fixed;
-  top: 1.6rem;
-  left: 0;
-  transition: 0.5s;
-  overflow: hidden;
-  z-index: 99;
-}
-.ui-menu-btn::before {
-  content: "";
-  display: block;
-  width: 3rem;
-  height: 3rem;
-  background-image: url(../img/ico_menu_white.png);
-  background-size: 5rem 3rem;
-  background-repeat: no-repeat;
-  position: relative;
-  z-index: 99;
-}
-.ui-menu-btn.open {
-  left: calc(100% - 2.5rem);
-  transition: 0.5s;
-}
-.ui-menu-btn.open::before {
-  background-position: -2.7rem 0;
-}
-.ui-menu-list {
+header {
   width: 100%;
-  height: 100dvh;
   position: fixed;
   top: 0;
-  left: -100%;
-  transition: 0.5s;
+  z-index: 9;
+}
+
+.ui-menu {
+  position: relative;
+  background-color: #BFBEBC;
+}
+.ui-menu-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  padding: 2rem;
   overflow-x: hidden;
   overflow-y: auto;
 }
 .ui-menu-list::-webkit-scrollbar {
   display: none;
 }
-.ui-menu-list.open {
-  left: 0;
-  transition: 0.5s;
-}
 .ui-menu-item {
-  width: 100%;
-  height: 12.5%;
-  background-color: #BFBEBC;
-  border-bottom: 0.1rem solid #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
   box-sizing: border-box;
   opacity: 0.9;
+}
+.ui-menu-item::after {
+  content: "|";
+  color: #222;
 }
 .ui-menu-item:last-child {
   border-bottom: 0;
 }
+.ui-menu-item:last-child::after {
+  display: none;
+}
 .ui-menu-item a {
   display: flex;
   align-items: center;
-  width: 100%;
-  height: 100%;
-  padding: 2.5rem;
   color: #fff;
   box-sizing: border-box;
   font-size: 1.5rem;

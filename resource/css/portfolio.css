@@ -369,7 +369,7 @@ html {
 }
 .pf-txt .sub-txt {
   position: absolute;
-  bottom: 5rem;
+  bottom: 20rem;
   color: #6f6e74;
 }
 .pf-txt .sub-txt strong {
@@ -387,6 +387,21 @@ html {
   font-size: 1.3rem;
 }
 
+.pf-top::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0.1;
+  background: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/662025/grain.jpg") repeat center center;
+  animation: grain 0.5s steps(1) infinite;
+}
+.pf-top .sub-txt strong {
+  color: #222;
+}
+
 .square-wrap {
   width: 40rem;
   height: 40rem;
@@ -399,7 +414,7 @@ html {
   cursor: pointer;
 }
 .square-wrap:hover .square-item {
-  background-color: crimson;
+  background-color: #dedbd1;
 }
 .square-wrap:hover .square-item:nth-child(1) {
   opacity: 0.3;
@@ -410,11 +425,10 @@ html {
 .square-wrap:hover .square-item:nth-child(3) {
   opacity: 0.8;
 }
-.square-wrap:nth-child(2):hover .square-item {
-  background-color: dodgerblue;
-}
-.square-wrap:nth-child(3):hover .square-item {
-  background-color: yellowgreen;
+.square-wrap:hover .square-content-tit,
+.square-wrap:hover .square-content-txt,
+.square-wrap:hover p {
+  color: #222;
 }
 .square-item {
   position: absolute;
@@ -471,6 +485,14 @@ html {
   }
 }
 
+.career {
+  padding: 4rem !important;
+  height: auto !important;
+  flex-direction: column;
+  justify-content: center !important;
+  align-items: center;
+  gap: 0 !important;
+}
 .career::after {
   content: "";
   width: 100%;
@@ -482,18 +504,38 @@ html {
   background: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/662025/grain.jpg") repeat center center;
   animation: grain 0.5s steps(1) infinite;
 }
+.career .pf-img-wrap {
+  width: 30rem;
+  height: 30rem;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.career .pf-img-wrap img {
+  width: 150%;
+  height: 30rem;
+}
 .career .pf-txt {
-  display: flex;
-  justify-content: flex-end;
-  text-align: right;
+  text-align: center;
+}
+.career .pf-txt * {
+  position: relative;
 }
 .career .pf-txt::before {
   display: none;
 }
 .career .pf-txt .sub-txt {
+  margin-top: 3rem;
   color: #222;
+  bottom: initial;
+}
+.career .pf-txt strong + p {
+  margin-top: 3rem;
 }
 .career .pf-txt-em {
+  display: inline-block;
+  margin-top: 3rem;
+  right: initial;
+  bottom: initial;
   color: #222;
 }
 
