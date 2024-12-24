@@ -703,7 +703,7 @@ html {
   }
   .pf-img-wrap img {
     width: 100%;
-    height: 140vw;
+    height: 99vw;
   }
   .pf-txt {
     display: flex;
@@ -741,6 +741,14 @@ html {
   }
   .container .square-wrap:last-child {
     margin-bottom: 0;
+  }
+  .container .square-wrap:hover .square-content-tit,
+  .container .square-wrap:hover .square-content-txt,
+  .container .square-wrap:hover p {
+    color: #dedbd1;
+  }
+  .container .square-wrap .square-content {
+    color: #dedbd1;
   }
   .container .square-item {
     display: none;
