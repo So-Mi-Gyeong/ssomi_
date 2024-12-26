@@ -1,10 +1,10 @@
 @charset 'utf-8';
-@import "media-query", "reset", 'typography';
+@import "media-query", "reset", 'typography', '_variable';
 
 html {font-size: 62.5%;}
-:root {
-    --point-color: #dedbd1;
-}
+// :root {
+//     --point-color: #dedbd1;
+// }
 /* ======================= 타이핑 ======================= */
 .home{
     * {font-size: 8vw;}
@@ -18,7 +18,7 @@ html {font-size: 62.5%;}
     &[data-bg="red"]{
         .typingArea{
             background-color:#650911;
-            .typingBox{color:#fff;}
+            .typingBox{color:var(--fff);}
         }
     }
     &[data-bg="orange"]{
@@ -34,7 +34,7 @@ html {font-size: 62.5%;}
         .typingArea{
             background-color:var(--point-color); 
             .typingBox{
-                color:#222;
+                color:var(--222);
                 text-shadow: .1rem .5rem 1rem #474747;
             }
         }
@@ -67,7 +67,7 @@ html {font-size: 62.5%;}
       z-index: 9;
       font-size: 10rem;
       font-weight: bolder;
-      text-shadow: 1rem 1rem .1rem #000;
+      text-shadow: 1rem 1rem .1rem var(--000);
       text-align:center;
       z-index: 1;
       .typing-txt {
@@ -88,11 +88,11 @@ html {font-size: 62.5%;}
 }
 
 @keyframes cursor {
-    0% {border-right: .1rem solid #fff}
+    0% {border-right: .1rem solid var(--fff)}
 
-    50% {border-right: .1rem solid #000}
+    50% {border-right: .1rem solid var(--000)}
 
-    100% {border-right: .1rem solid #fff}
+    100% {border-right: .1rem solid var(--fff)}
 }
 
 @media (min-width: 0px) and (max-width: 375px) {
@@ -127,7 +127,7 @@ html {font-size: 62.5%;}
         background-color: var(--point-color);
         &.square{
             margin: 0 auto;
-            background-color: #333;
+            background-color: var(--333);
         }
     }
 }
@@ -151,7 +151,7 @@ html {font-size: 62.5%;}
             width: .2rem;
             height: 108%;
             margin: -2rem 0;
-            background-color: #000;
+            background-color: var(--000);
             position: absolute;
             left: 59.4rem;
         }
@@ -193,7 +193,7 @@ html {font-size: 62.5%;}
         -webkit-animation: grain 0.5s steps(1) infinite;
         animation: grain 0.5s steps(1) infinite;
     }
-    .sub-txt strong{color: #222;}
+    .sub-txt strong{color: var(--222);}
 }
 
 //ani - border
@@ -216,14 +216,14 @@ html {font-size: 62.5%;}
             }
             .square-content-tit,
             .square-content-txt,
-            p{color: #222;}
+            p{color: var(--222);}
         }
     }
     &-item{
         position: absolute;
         width: inherit;
         height: inherit;
-        border: .1rem solid #fff;
+        border: .1rem solid var(--fff);
         border-radius: 45% 60% 65% 35% / 40% 45% 55% 60%;
         transition: .5s;
         &:nth-child(1){animation: circle 6s linear infinite;}
@@ -236,7 +236,7 @@ html {font-size: 62.5%;}
     &-content{
         width: 70%;
         text-align: left;
-        color: #fff;
+        color: var(--fff);
         position: absolute;
         top: 50%;
         left: 50%;
@@ -251,8 +251,8 @@ html {font-size: 62.5%;}
             };
         }
         &-btn{
-            color: #fff;
-            border: .1rem solid #fff;
+            color: var(--fff);
+            border: .1rem solid var(--fff);
             border-radius: 45% 60% 65% 35% / 40% 45% 55% 60%;
             padding: .9rem;
             display: block;
@@ -302,7 +302,7 @@ html {font-size: 62.5%;}
         &::before{display: none;}
         .sub-txt{
             margin-top: 3rem;
-            color: #222;
+            color: var(--222);
             position: relative;
             bottom: initial;
             right: initial;
@@ -315,7 +315,7 @@ html {font-size: 62.5%;}
         margin-top: 3rem;
         right: initial;
         bottom: initial;
-        color: #222;
+        color: var(--222);
     }
 }
 
@@ -344,7 +344,7 @@ html {font-size: 62.5%;}
             border-radius: 50%;
             animation: loading 1s linear infinite;
             margin-right: 6px;
-            background-color: #fff;
+            background-color: var(--fff);
             &:nth-of-type(2){
                 animation-delay: 0.2s;
             }
