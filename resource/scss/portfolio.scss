@@ -2,7 +2,9 @@
 @import "media-query", "reset", 'typography';
 
 html {font-size: 62.5%;}
-
+:root {
+    --point-color: #dedbd1;
+}
 /* ======================= 타이핑 ======================= */
 .home{
     * {font-size: 8vw;}
@@ -30,7 +32,7 @@ html {font-size: 62.5%;}
     }
     &[data-bg="beige"]{
         .typingArea{
-            background-color:#dedbd1; 
+            background-color:var(--point-color); 
             .typingBox{
                 color:#222;
                 text-shadow: .1rem .5rem 1rem #474747;
@@ -122,7 +124,7 @@ html {font-size: 62.5%;}
         position: sticky;
         top: 0;
         box-sizing: border-box;
-        background-color: #dedbd1;
+        background-color: var(--point-color);
         &.square{
             margin: 0 auto;
             background-color: #333;
@@ -207,7 +209,7 @@ html {font-size: 62.5%;}
         &:hover{
             cursor: pointer;
             .square-item{
-                background-color: #dedbd1;
+                background-color: var(--point-color);
                 &:nth-child(1){opacity: 0.3;}
                 &:nth-child(2){opacity: 0.5;}
                 &:nth-child(3){opacity: 0.8;}
@@ -242,7 +244,7 @@ html {font-size: 62.5%;}
         &.skill{text-align: center;}
         &-tit{
             text-align: center;
-            color: #dedbd1;
+            color: var(--point-color);
             font: {
                 size: 4rem;
                 weight: 700;
@@ -502,9 +504,9 @@ html {font-size: 62.5%;}
             &:hover{
                 .square-content-tit,
                 .square-content-txt,
-                p{color: #dedbd1;}
+                p{color: var(--point-color);}
             }
-            .square-content{color: #dedbd1;}
+            .square-content{color: var(--point-color);}
         }
         &-item{
             display: none;
