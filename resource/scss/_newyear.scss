@@ -200,6 +200,7 @@
     }
   }
   [data-contents="3"]{
+    background-color: var(--main-color);
     .title{
       display: flex;
       justify-content: center;
@@ -237,11 +238,16 @@
       max-width: 40rem;
       margin-top: 10rem;
       color: #222;
+      line-height: 1.6;
+      font: {
+        size: 1.8rem;
+        weight: 500;
+      }
     }
   }
   [data-contents="4"],
   [data-contents="5"]{
-    padding: 7rem 3.2rem 3.2rem;
+    padding: 7rem 3.2rem;
     h3{
       color: var(--sub-color);
       background-color: var(--point-color);
@@ -251,17 +257,50 @@
       line-height: 1.6;
       font: {
         size: 1.8rem;
-        weight: 700;
+        weight: 500;
       }
     }
   }
-  [data-contents="5"]{padding-bottom: 15rem;}
+  [data-contents="5"]{padding-top: 0;}
   [data-contents="6"]{
+    position: relative;
+    padding-bottom: 0;
+    &::before{
+      content: '';
+      display: block;
+      width: 8rem;
+      height: 11.2rem;
+      background: url(../../resource/img/newyear/ico-end.gif) no-repeat 0 0;
+      background-size: 8rem;
+      position: absolute;
+      top: 4.1rem;
+      left: 50%;
+      transform: translateX(calc(-50% - -4rem));
+    }
     .contents-box{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
       width: 100%;
-      height: 100dvh;
+      height: 54dvh;
       border-radius: 23rem;
-      background-color: var(--main-color);
+      background-color: var(--point-color);
+      h3{
+        padding: 0;
+        margin: 0;
+        border-radius: 0;
+        color: #fff;
+        background-color: transparent;
+      }
+      p{
+        color: #fff;
+        line-height: 1.6;
+        font: {
+          size: 1.8rem;
+          weight: 700;
+        }
+      }
     }
   }
 }

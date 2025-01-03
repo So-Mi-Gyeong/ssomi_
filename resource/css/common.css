@@ -5749,6 +5749,9 @@ a:focus [data-shorts=ep03] .svg path, li:hover [data-shorts=ep03] .svg path {
   font-size: 1.8rem;
   font-weight: 700;
 }
+.new-year [data-contents="3"] {
+  background-color: var(--main-color);
+}
 .new-year [data-contents="3"] .title {
   display: flex;
   justify-content: center;
@@ -5786,10 +5789,13 @@ a:focus [data-shorts=ep03] .svg path, li:hover [data-shorts=ep03] .svg path {
   max-width: 40rem;
   margin-top: 10rem;
   color: #222;
+  line-height: 1.6;
+  font-size: 1.8rem;
+  font-weight: 500;
 }
 .new-year [data-contents="4"],
 .new-year [data-contents="5"] {
-  padding: 7rem 3.2rem 3.2rem;
+  padding: 7rem 3.2rem;
 }
 .new-year [data-contents="4"] h3,
 .new-year [data-contents="5"] h3 {
@@ -5801,16 +5807,49 @@ a:focus [data-shorts=ep03] .svg path, li:hover [data-shorts=ep03] .svg path {
   color: #222;
   line-height: 1.6;
   font-size: 1.8rem;
-  font-weight: 700;
+  font-weight: 500;
 }
 .new-year [data-contents="5"] {
-  padding-bottom: 15rem;
+  padding-top: 0;
+}
+.new-year [data-contents="6"] {
+  position: relative;
+  padding-bottom: 0;
+}
+.new-year [data-contents="6"]::before {
+  content: "";
+  display: block;
+  width: 8rem;
+  height: 11.2rem;
+  background: url(../../resource/img/newyear/ico-end.gif) no-repeat 0 0;
+  background-size: 8rem;
+  position: absolute;
+  top: 4.1rem;
+  left: 50%;
+  transform: translateX(calc(-50% + 4rem));
 }
 .new-year [data-contents="6"] .contents-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   width: 100%;
-  height: 100dvh;
+  height: 54dvh;
   border-radius: 23rem;
-  background-color: var(--main-color);
+  background-color: var(--point-color);
+}
+.new-year [data-contents="6"] .contents-box h3 {
+  padding: 0;
+  margin: 0;
+  border-radius: 0;
+  color: #fff;
+  background-color: transparent;
+}
+.new-year [data-contents="6"] .contents-box p {
+  color: #fff;
+  line-height: 1.6;
+  font-size: 1.8rem;
+  font-weight: 700;
 }
 
 html {
