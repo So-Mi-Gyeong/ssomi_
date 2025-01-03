@@ -18,7 +18,8 @@
 '_accordion.scss', 
 '_chart.scss', 
 '_dropdown.scss', 
-'_netflix.scss';
+'_netflix.scss',
+'_newyear.scss';
 
 html {
     font-size: 62.5%;
@@ -63,7 +64,7 @@ body{
 .container{
     width: 100%;
     margin: 0 auto;
-    background-color: #282726;
+    background-color: var(--bg-color);
     overflow: auto;
     &::-webkit-scrollbar {display: none;}
 

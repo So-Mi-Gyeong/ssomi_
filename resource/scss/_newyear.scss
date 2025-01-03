@@ -1,0 +1,267 @@
+:root{
+  --wrapWidthSize: 60rem;
+  --contentsWidthSize: 50rem;
+
+  --main-color: #F5E9D7;
+  --sub-color: #F7F0E6;
+  --point-color: #EB3300;
+}
+.new-year{
+  *{font-family: 'base';}
+  position: relative;
+  .container{
+    background-color: var(--main-color);
+  }
+  .ui-content{
+    max-width: 100%;
+    padding: 6rem 4rem 0rem;
+  }
+  .snake{
+    position: absolute;
+    top: 6rem;
+    right: -9rem;
+    img{width: 22rem;}
+  }
+  &--wrap{
+    display: flex;
+    justify-content: center;
+  }
+  &--title{
+    height: calc(100dvh - 12.4rem);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 3.2rem;
+    position: absolute;
+    left: 0;
+    .title-top{
+      display: flex;
+      flex-direction: column;
+      gap: 3.2rem;
+      img{
+        width: 24.7rem;
+        height: 5.88rem;
+      }
+      ul{
+        display: flex;
+        flex-direction: column;
+        gap: 1.6rem;
+        li{
+          h2{
+            font: {
+              size: 3.2rem;
+              weight: 700;
+            };
+            color:  rgb(255, 192, 0);
+          }
+          a{
+            font: {
+              size: 1.4rem;
+              weight: 700;
+            };
+            color: var(--point-color);
+          }
+        }
+      }
+    }
+    .title-bottom{
+      ul{
+        display: flex;
+        flex-direction: column;
+        gap: 1.6rem;
+        li{
+          a{
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            gap: .8rem;
+            font: {
+              size: 1.4rem;
+              weight: 700;
+            };
+            color: var(--point-color);
+            &::after{
+              content: '';
+              display: block;
+              width: 1.6rem;
+              height: 1.6rem;
+              background: url(../../resource/img/newyear/ico-arrow.svg) no-repeat 0 0;
+              background-size: 1.6rem;
+              transform: rotate(180deg);
+            }
+          }
+        }
+      }
+    }
+  }
+  &--bg{
+    width: var(--wrapWidthSize);
+    min-height: calc(100dvh - 6rem);
+    background-color: #fff;
+    position: relative;
+    overflow: hidden;
+    .bg-title{
+      position: absolute;
+      top: 3.2rem;
+      left: 3.2rem;
+      z-index: 9;
+      img{
+        width: 20rem;
+      }
+    }
+  }
+  &--box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: var(--contentsWidthSize);
+    height: 77rem;
+    border-radius: 25rem;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    overflow-y: scroll; /* 세로 스크롤을 가능하게 하고 스크롤바를 숨김 */
+    scrollbar-width: none; /* Firefox에서 스크롤바 숨기기 */
+    -ms-overflow-style: none; /* Internet Explorer에서 스크롤바 숨기기 */
+  }
+  &--contents{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: var(--contentsWidthSize);
+    padding: 15rem 3.2rem;
+    background-color: var(--sub-color);
+    position: relative;
+    text-align: center;
+    h3{
+      width: 30rem;
+      margin-bottom: 5rem;
+      padding: 1.6rem;
+      color: var(--point-color);
+      border-radius: 5rem;
+      background-color: var(--sub-color);
+      line-height: 1.6;
+      text-align: center;
+      font: {
+        size: 3.2rem;
+        weight: 700;
+      };
+    }
+  }
+  [data-contents="1"]{
+    min-height: 100dvh;
+    padding: 0;
+    position: sticky;
+    top: 0;
+    &::before{
+      content: '';
+      display: block;
+      width: 115.2rem;
+      height: 120rem;
+      background: url(../../resource/img/newyear/img-section1Bg.webp) no-repeat 0 0;
+      background-size: 115.2rem;
+    }
+    .img-box{
+      position: absolute;
+      top: 8rem;
+      left: 0;
+    }
+  }
+  [data-contents="2"]{
+    background-color: var(--point-color);
+    &::before{
+      content: '';
+      width: var(--contentsWidthSize);
+      height: 2.2rem;
+      background: url(../../resource/img/newyear/img-section2.svg) no-repeat 0 0;
+      background-size: var(--contentsWidthSize);
+      position: absolute;
+      top: -2rem;
+    }
+    &::after{
+      content: '';
+      width: var(--contentsWidthSize);
+      height: 2.2rem;
+      background: url(../../resource/img/newyear/img-section2.svg) no-repeat 0 0;
+      background-size: var(--contentsWidthSize);
+      position: absolute;
+      bottom: -2rem;
+      transform: rotate(180deg);
+      z-index: 9;
+    }
+    p{
+      color: #fff;
+      line-height: 1.6;
+      font: {
+        size: 1.8rem;
+        weight: 700;
+      };
+    }
+  }
+  [data-contents="3"]{
+    .title{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      top: 9rem;
+      left: -6rem;
+      &::before{
+        content: '';
+        display: block;
+        width: 22rem;
+        height: 18.425rem;
+        background: url(../../resource/img/newyear/img-snake.gif) no-repeat 0 0;
+        background-size: 22rem;
+        transform: scaleX(-1);
+      }
+      span{
+        padding: 1.6rem;
+        color: var(--main-color);
+        border-radius: 5rem;
+        background-color: var(--point-color);
+        position: relative;
+        &::before{
+          content: "";
+          position: absolute;
+          left: -1.4rem;
+          top: 50%;
+          transform: translateY(-50%);
+          border: 0.7rem solid transparent;
+          border-right: 10px solid var(--point-color);
+        }
+      }
+    }
+    p{
+      max-width: 40rem;
+      margin-top: 10rem;
+      color: #222;
+    }
+  }
+  [data-contents="4"],
+  [data-contents="5"]{
+    padding: 7rem 3.2rem 3.2rem;
+    h3{
+      color: var(--sub-color);
+      background-color: var(--point-color);
+    }
+    p{
+      color: #222;
+      line-height: 1.6;
+      font: {
+        size: 1.8rem;
+        weight: 700;
+      }
+    }
+  }
+  [data-contents="5"]{padding-bottom: 15rem;}
+  [data-contents="6"]{
+    .contents-box{
+      width: 100%;
+      height: 100dvh;
+      border-radius: 23rem;
+      background-color: var(--main-color);
+    }
+  }
+}
