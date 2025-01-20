@@ -21,12 +21,13 @@
         <aside class="new-year--title">
           <div class="title-top">
             <img src="../resource/img/newyear/img-year.webp" alt="">
+            <h2 class="netive">NETIVE - UI개발</h2>
             <ul>
-              <li><h2>NETIVE - UI개발</h2></li>
-              <li><a href="#">인사말</a></li>
-              <li><a href="#">소식</a></li>
-              <li><a href="#">2024년은 ...</a></li>
-              <li><a href="#">2025년은 ...</a></li>
+              <li><a href="#greeting">인사말</a></li>
+              <li><a href="#news">소식</a></li>
+              <li><a href="#year2024">2024년은 ...</a></li>
+              <li><a href="#year2025">2025년은 ...</a></li>              
+              <li><a href="#message2025">올해의 한마디</a></li>              
             </ul>
           </div>
           <div class="title-bottom">
@@ -44,7 +45,7 @@
               <section class="new-year--contents" data-contents="1">
                 <div class="img-box"><img src="../resource/img/newyear/img-snake2.gif" alt=""></div>
               </section>
-              <section class="new-year--contents" data-contents="2">
+              <section class="new-year--contents" data-contents="2" id="greeting">
                 <h3>인사말</h3>
                 <p>
                   2025년 새해가 밝았습니다.<br>
@@ -63,13 +64,13 @@
                   새해 복 많이 받으세요! 
                 </p>
               </section>
-              <section class="new-year--contents" data-contents="3">
+              <section class="new-year--contents" data-contents="3" id="news">
                 <div class="title"><span>UI개발그룹의 2024년</span></div>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia hic enim officia quaerat perspiciatis! Maiores exercitationem a ipsam, magnam eveniet voluptate quaerat suscipit! Quod fugiat reprehenderit necessitatibus facilis, repudiandae fuga?<br>
                 <br>
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia hic enim officia quaerat perspiciatis! Maiores exercitationem a ipsam, magnam eveniet voluptate quaerat suscipit! Quod fugiat reprehenderit necessitatibus facilis, repudiandae fuga?</p>
               </section>
-              <section class="new-year--contents" data-contents="4">
+              <section class="new-year--contents" data-contents="4" id="year2024">
                 <h3>2024년</h3>
                 <p>[운영-본사]<br> 키움자산운용 자사 및 ETF 홈페이지 유지보수<br> 북클럽 서비스 앱 구축</p>
                 <p>[운영-여의도]<br> AIG 손해보험 정보시스템 운영</p>
@@ -83,14 +84,14 @@
                 <p>[구축-가디]<br> "한국검인정교과서협회 AI디지털교과서 공동 플랫폼 개선"</p>
                 <p>[구축-본사]<br> 교보 그룹데이터 통합 Phase2 구축</p>
               </section>
-              <section class="new-year--contents" data-contents="5">
+              <section class="new-year--contents" data-contents="5" id="year2025">
                 <h3>2025년</h3>
                 <p>* 신년회</p>
                 <p>* 안랩 창립 30주년 렌딩 페이지 제작</p>
                 <p>* KT닷컴 중고폰 보상 서비스</p>
                 <p>[수주]<br> 스마트 금융시스템 구축사업 /<br> 엔지니어링공제회(LGCNS) /<br> 기,디,퍼,개 / 퍼블 6월 투입 예정</p>
               </section>
-              <section class="new-year--contents" data-contents="6">
+              <section class="new-year--contents" data-contents="6" id="message2025">
                 <div class="contents-box">
                   <h3>HAPPY NEW YEAR</h3>
                   <P>
@@ -107,5 +108,28 @@
         </div>
       </div>
     </div>
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+        let links = document.querySelectorAll('.title-top ul li a[href^="#"]');
+
+        links.forEach(function(link) {
+          link.addEventListener('click', function(event) {
+            event.preventDefault();
+
+            let targetId = this.getAttribute('href').substring(1);
+            let targetSection = document.getElementById(targetId);
+
+            // 해당 section으로 스크롤 이동
+            if (targetSection) {
+              targetSection.scrollIntoView({
+                behavior: 'smooth', 
+                block: 'start'
+              });
+            }
+          });
+        });
+      });
+
+    </script>
   </body>
 </html>

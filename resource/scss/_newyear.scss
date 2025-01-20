@@ -6,6 +6,7 @@
   --sub-color: #F7F0E6;
   --point-color: #EB3300;
 }
+
 .new-year{
   *{font-family: 'base';}
   position: relative;
@@ -42,18 +43,18 @@
         width: 24.7rem;
         height: 5.88rem;
       }
+      .netive{
+        font: {
+          size: 3.2rem;
+          weight: 700;
+        };
+        color:  rgb(255, 192, 0);
+      }
       ul{
         display: flex;
         flex-direction: column;
         gap: 1.6rem;
         li{
-          h2{
-            font: {
-              size: 3.2rem;
-              weight: 700;
-            };
-            color:  rgb(255, 192, 0);
-          }
           a{
             font: {
               size: 1.4rem;
@@ -261,7 +262,6 @@
       }
     }
   }
-  [data-contents="5"]{padding-top: 0;}
   [data-contents="6"]{
     position: relative;
     padding-bottom: 0;

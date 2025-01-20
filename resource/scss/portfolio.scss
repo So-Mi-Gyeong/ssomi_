@@ -5,6 +5,7 @@ html {font-size: 62.5%;}
 // :root {
 //     --point-color: #dedbd1;
 // }
+
 /* ======================= 타이핑 ======================= */
 .home{
     * {font-size: 8vw;}
@@ -86,7 +87,14 @@ html {font-size: 62.5%;}
     }
   }
 }
-
+.typing{
+    ul{
+        li{
+            position: relative;
+            z-index: -1;
+        }
+    }
+}
 @keyframes cursor {
     0% {border-right: .1rem solid var(--fff)}
 
@@ -250,6 +258,7 @@ html {font-size: 62.5%;}
                 weight: 700;
             };
         }
+        p{color: var(--fff);}
         &-btn{
             color: var(--fff);
             border: .1rem solid var(--fff);

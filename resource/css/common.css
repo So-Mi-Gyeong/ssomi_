@@ -5610,15 +5610,15 @@ a:focus [data-shorts=ep03] .svg path, li:hover [data-shorts=ep03] .svg path {
   width: 24.7rem;
   height: 5.88rem;
 }
+.new-year--title .title-top .netive {
+  font-size: 3.2rem;
+  font-weight: 700;
+  color: rgb(255, 192, 0);
+}
 .new-year--title .title-top ul {
   display: flex;
   flex-direction: column;
   gap: 1.6rem;
-}
-.new-year--title .title-top ul li h2 {
-  font-size: 3.2rem;
-  font-weight: 700;
-  color: rgb(255, 192, 0);
 }
 .new-year--title .title-top ul li a {
   font-size: 1.4rem;
@@ -5808,9 +5808,6 @@ a:focus [data-shorts=ep03] .svg path, li:hover [data-shorts=ep03] .svg path {
   line-height: 1.6;
   font-size: 1.8rem;
   font-weight: 500;
-}
-.new-year [data-contents="5"] {
-  padding-top: 0;
 }
 .new-year [data-contents="6"] {
   position: relative;

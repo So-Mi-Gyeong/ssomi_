@@ -217,7 +217,7 @@ table + p {
 }
 
 :root {
-  --bg-color: #282726
+  --bg-color: #282726;
   --point-color: #dedbd1;
   --000: #000;
   --222: #222;
@@ -304,6 +304,11 @@ html {
   animation-duration: 0.3s;
   animation-iteration-count: infinite;
   font-size: 1rem;
+}
+
+.typing ul li {
+  position: relative;
+  z-index: -1;
 }
 
 @keyframes cursor {
@@ -475,6 +480,9 @@ html {
   color: var(--point-color);
   font-size: 4rem;
   font-weight: 700;
+}
+.square-content p {
+  color: var(--fff);
 }
 .square-content-btn {
   color: var(--fff);
