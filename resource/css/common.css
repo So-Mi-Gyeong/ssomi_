@@ -5577,7 +5577,7 @@ a:focus [data-shorts=ep03] .svg path, li:hover [data-shorts=ep03] .svg path {
   background-color: var(--main-color);
 }
 .new-year .ui-content {
-  max-width: 100%;
+  max-width: 1200px;
   padding: 6rem 4rem 0rem;
 }
 .new-year .snake {
@@ -5849,6 +5849,20 @@ a:focus [data-shorts=ep03] .svg path, li:hover [data-shorts=ep03] .svg path {
   font-weight: 700;
 }
 
+@media (min-width: 500px) and (max-width: 757px) {
+  .new-year .ui-content {
+    padding: 0;
+  }
+  .new-year--title {
+    display: none;
+  }
+  .bg-title {
+    display: none;
+  }
+  .new-year--wrap {
+    height: 100dvh;
+  }
+}
 html {
   font-size: 62.5%;
   font-family: "base";
