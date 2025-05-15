@@ -1,0 +1,89 @@
+.neve_8_7{
+    .ollacare-consulting{
+        background-color: #2C2C2C;
+        padding: 5.2rem 2.4rem;
+        &-tit{
+            font-size: 2.4rem;
+            font-weight: 700;
+            line-height: 1.5;
+            color: #fff;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: .9rem;
+            &::before{
+                content: '';
+                display: block;
+                width: 3.2rem;
+                height: 3.2rem;
+                background: url(../img/page/NEVE_8_7V/neve_8_7_medi.png);
+                background-size: 3.2rem;
+            }
+        }
+        &-txt{
+            font-size: 1.6rem;
+            font-weight: 500;
+            color: #F7DD51;
+            text-align: center;
+            margin-top: .9rem;
+        }
+        &-em{
+            font-size: 1.4rem;
+            font-weight: 300;
+            color: #fff;
+            text-align: center;
+            margin-top: 4rem;
+        }
+    }
+    .btn-wrap{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+        margin-top: 1.5rem;
+    }
+    .ollacare-btn{
+        height: 5.7rem;
+        border-radius: .8rem;
+        background-color: #5E3DEA;
+        span{
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #fff;
+        }
+        &[data-icon="google-play"]{
+            span{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: .8rem;
+                &::before{
+                    content: '';
+                    display: block;
+                    width: 2.4rem;
+                    height: 2.4rem;
+                    background: url(../img/page/NEVE_8_7V/neve_8_7_googleplay.png);
+                    background-size: 2.4rem;
+                }
+            }
+        }
+        &[data-icon="app-store"]{
+            margin-left: 0;
+            span{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: .8rem;
+                &::before{
+                    content: '';
+                    display: block;
+                    width: 2.4rem;
+                    height: 2.4rem;
+                    background: url(../img/page/NEVE_8_7V/neve_8_7_apple.png);
+                    background-size: 2.4rem;
+                }
+            }
+        }
+    }
+}

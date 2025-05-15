@@ -1,0 +1,76 @@
+//유의사항
+.mocr-note{
+    background-color: var(--gray_90);
+    margin: 0 -2.4rem;
+    padding: 6.0rem 2.4rem;
+    
+    h2{
+        color: #AEAEAE;
+        font-size: 2.0rem;
+        font-family: 'KBF';
+        text-align: center;
+        margin-bottom: 2.0rem;
+    }
+    .mdl-bul-dot{
+        li{
+            color: #AEAEAE;
+            font-family: 'KBF';
+            font-size: 1.4rem;
+            font-weight: 300;
+            line-height: 2.0rem;
+            &::before{
+                background-color: #AEAEAE;
+                min-width: 0.4rem;
+                min-height: 0.4rem;
+                max-width: 0.4rem;
+                max-height: 0.4rem;
+            }
+            & + li{
+                margin-top: 1.2rem;
+            }
+            .column{
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                color: #AEAEAE;
+                font-size: 1.4rem;
+                font-weight: 300;
+                line-height: 2.0rem;
+                font-family: "KBF";
+                strong{
+                    display: block;
+                    color: #FF612D;
+                    font-family: 'KBF';
+                    font-weight: 300;
+                    font-size: 1.4rem;
+                    margin-top: 0.4rem;
+                }
+                .link-btn{
+                    display: flex;
+                    gap: 1.1rem;
+                    font-family: 'KBF';
+                    font-size: 1.4rem;
+                    font-weight: 500;
+                    color: var(--gray_0);
+                    margin-top: 0.6rem;
+                }
+            }
+            .flex-wrap{
+                display: flex;
+                gap: 0.8rem;
+                b{
+                    color: #AEAEAE;
+                    font-family: 'KBF';
+                    font-size: 1.4rem;
+                    font-weight: 700;
+                }
+                div{
+                    color: #AEAEAE;
+                    font-family: 'KBF';
+                    font-size: 1.4rem;
+                    font-weight: 300;
+                }
+            }
+        }
+    }
+}

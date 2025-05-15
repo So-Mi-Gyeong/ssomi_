@@ -1,0 +1,42 @@
+// 영향을 주지 않는 class명은 data-brand 바깥에 입력
+
+[data-brand="theragen"] {
+    .rnd-linebox {border-width:1px;}
+    .txt-center-box {
+        display: flex;
+        align-items: center;
+        min-height: 4.2rem;
+    }
+    .btn-detail-list{margin-top:5rem;}
+
+    .gene-program-info-wrap .line-top +  .rnd-shadow-card {
+        margin-top:4rem !important;
+    }
+
+    .sale-price{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        padding: 2.2rem 0 0;
+
+        del{
+            display: block;
+            font-size: 1.5rem;
+            color: #C7C7C7;
+            text-decoration: line-through;
+        }
+        strong{
+            display: flex;
+            gap:.8rem;
+            font-size: 2.4rem;
+            font-weight: 700;
+            color:#000;
+            * {font:inherit}
+            span {color:#000;}
+            em {color:#F23A5B}
+        }
+    }
+} 
+.tangram-service-info-wrap{
+    > img + h3{margin-top: 2.4rem;}
+}

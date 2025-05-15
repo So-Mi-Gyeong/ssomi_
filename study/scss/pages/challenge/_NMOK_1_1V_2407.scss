@@ -1,0 +1,975 @@
+.ocr-challenge[data-challenge="7"] {
+    $currentSPimg: url(../img/challenge/main/sp_NMOK_1_1V_2407.png);
+    $currentSPsize: 24rem;
+
+    .ocr-wrap *::after,
+    .ocr-wrap *::before,
+    .ocr-wrap * {font-family: 'KBF';}
+
+    .ocr-body {
+        padding: 0;
+        background:#f5f5f5;
+        &::before{
+            content: '';
+            display: block;
+           
+         }
+        .mdl-line{
+            width: calc(100vw + 4.8rem);
+            min-width: calc(100% + 4.8rem);
+            margin: 4.8rem 0;
+            border-top: 1.3rem solid #ECEDF4;
+        } 
+    }
+    
+    [data-type="walk"] .mdl-subject-em,
+    [data-type="walk-result"] .mdl-subject-em{
+        background-color: #30A1F3;
+        font-size: 1.3rem;
+        font-weight: 700;
+        line-height: 1;
+        padding: 0.4rem 0.8rem;
+        min-height: 2.6rem;
+        border-radius: 0.8rem;
+        padding-top: 0.7rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #fff;
+        &::after{display: none;}
+    }
+    [data-style="team-ready"] .mdl-subject-em,
+    [data-style="team-end"] .mdl-subject-em,
+    [data-style="team"] .mdl-subject-em{
+        background-color: #F3306A;
+    }
+    .challenge-dday{
+        margin-top: 4.8rem;
+        dt{
+            font-size: 1.6rem;
+            font-weight: 500;
+            line-height: 2.2rem;
+        }
+        dd{
+            font-size: 3rem;
+            font-weight: 700;
+            line-height: 4.2rem;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            gap: .4rem;
+            color: #1E1F23;
+            span{
+                font-size: 3rem;
+                font-weight: 700;
+                line-height: 4.2rem;
+                color: #1E1F23;
+            }
+        }
+    }
+    .challenge-head {
+        display: flex;
+        flex-direction: column;
+        gap:3.2rem;
+        margin-top: 2.4rem;
+
+        .mdl-subject {
+            margin-top:0;
+            padding:3.2rem 3.2rem 1.6rem;
+        }
+    }
+    .ocr-challenge-title{
+        width: calc(100% + 1px);
+        margin-left: -1px;
+        padding: calc(5.6rem + env(safe-area-inset-top) + 1.8rem) 2.4rem 5.7rem;
+        background: linear-gradient( #D1F2E5, #7DE0D4);
+        &::before {
+            content: "";
+            pointer-events: none;
+            display: block;
+            position: absolute;
+            bottom:0; 
+            left: 50%;
+            transform: translate(-50%, 0);
+            width: 100%;
+            max-width:100rem;
+            margin-left:0;
+            height: 100%;
+            pointer-events: none;
+            overflow:hidden ;
+            z-index: 0;
+
+            width: 100rem;
+            height: 70rem;
+            background: url(../img/challenge/m07/bg.png)  no-repeat 0 0;
+            background-size: 100rem 70rem;
+            position: absolute;
+            top: -4.7rem;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        
+        .mdl-subject[data-style="title"] {
+            margin: 0;
+            padding: 0;
+            
+            .linkup{
+                height: 2.4rem;
+                padding: 0 .8rem;
+                border-radius: 4rem;
+                background-color: #FFCD20;
+                span{
+                    font-size: 1.2rem;
+                    font-weight: 500;
+                    line-height: 1.6rem;
+                    color: #1E1F23;
+                    position: relative;
+                    display: flex;
+                    justify-content: flex-start;
+                    align-items: center;
+                    gap: .4rem;
+                    &::before{
+                        content: '';
+                        display: block;
+                        width: 1.6rem;
+                        height: 1.6rem;
+                        background: url(../../assets/img/challenge/main/ico-linkup.png) no-repeat 0 0;
+                        background-size: 1.6rem;
+                    }
+                }
+            }
+            &::after{
+                content: '';
+                display: block;
+                position: absolute;
+                bottom: -2.4rem;
+                left: 0;
+                width: 8rem;
+                height: .1rem;
+                border-bottom: .1rem solid #1E1F23;
+                opacity: 20%;
+            }
+            .mdl-subject-group{
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                flex-direction: row;
+            }
+            .mdl-subject-tit{
+                font-size: 1.8rem;
+                font-weight: 700;
+                line-height: 2.4rem;
+                color: #1E1F23;
+            }
+        }
+        .mdl-subject[data-item="text"]{
+            margin-top: 1.6rem;
+            .mdl-subject-group{
+                position: relative;
+                &::after{
+                    content: '';
+                    display: block;
+                    width: 17.4rem;
+                    height: 11.5rem;
+                    background: url(../../assets/img/challenge/m06/ico-participate.png) no-repeat 0 0;
+                    background-size: 17.4rem 11.5rem;
+                    position: absolute;
+                    bottom: 0;
+                    right: 0;
+                    border-bottom: 0;
+                    opacity: 1;
+                }
+            }
+            .mdl-subject-txt{
+                font-size: 1.6rem;
+                line-height: 2.24rem;
+                padding-bottom: 8.7rem;
+            }
+        }
+    }
+    .challenge-graph{
+        min-height: 11.76rem;
+        margin-top: 1rem;
+        background-color: #F1F3F7;
+        border-radius: 2.6rem;
+        padding: 1.6rem;
+        img{
+            width: 27.5rem;
+            position: absolute;
+            top: 1.4rem;
+            left: 0;
+            z-index: 1;
+        }
+        &-item{
+            margin: 0 auto;
+            background-color: #DCDCDC;
+            width: calc(100% - 3rem) !important;
+            margin-left: 1.5rem;
+        }
+        &-bar{
+            margin-top: 2.6rem;
+            .pointer{display: none !important;}
+        }
+        &-txt{
+            margin-top: 3.36rem;
+            justify-content: center;
+            gap: 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        &-step{
+            min-width: 6.4rem; 
+            text-align: center;
+            position: relative;
+            &::before{
+                content: '';
+                width: 6.4rem;
+                height: 6.4rem;
+                background: url(../../assets/img/challenge/m06/luckyball.png) no-repeat 0 0;
+                background-size: 28rem;
+                position: absolute;
+                top: -7.2rem;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+        }
+        &[data-step="0"]{
+            .challenge-graph-bar{width: 0;}
+        }
+        &[data-step="1"]{
+            .challenge-graph-bar{width: 0;}
+            .challenge-graph-step:nth-of-type(1),
+            .challenge-graph-step:nth-of-type(1)::before{
+                background-position: -7rem 0;
+            }
+        }
+        &[data-step="2"]{
+            .challenge-graph-bar{width: 50%;}
+            .challenge-graph-step:nth-of-type(1),
+            .challenge-graph-step:nth-of-type(2){color: #000;}
+            .challenge-graph-step:nth-of-type(1)::before{
+                background-position: -7rem 0;
+            }
+            .challenge-graph-step:nth-of-type(2)::before{
+                background-position: -14rem 0;
+            }
+        }
+        &[data-step="3"]{
+            .challenge-graph-bar{width: 100%;}
+            .challenge-graph-step:nth-of-type(1),
+            .challenge-graph-step:nth-of-type(2),
+            .challenge-graph-step:nth-of-type(3){color: #000;}
+            .challenge-graph-step:nth-of-type(1)::before{
+                background-position: -7rem 0;
+            }
+            .challenge-graph-step:nth-of-type(2)::before{
+                background-position: -14rem 0;
+            }
+            .challenge-graph-step:nth-of-type(3)::before{
+                background-position: -21rem 0;
+            }
+        }
+    }
+    [data-style="luckyball"]{
+        border: .2rem solid #fff;
+        background: linear-gradient(rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 1));
+        backdrop-filter: blur(.5rem);
+        padding: 2.4rem;
+
+        .mdl-subject-tit::before{
+            content: '';
+            width: 2.4rem;
+            height: 2.4rem;
+        }
+        .mdl-subject {
+            margin: 0;
+            padding: 0;
+        }    
+        .mdl-btn-wrap{
+            align-self: flex-end;
+        }
+        .mdl-subject-group{
+            width: 100%;
+        }
+        .mdl-subject-tit{
+            font-size: 2.2rem;
+            font-weight: 700;
+            line-height: 3rem;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            gap: .8rem;
+        }
+        
+        
+        .mdl-bul-care{
+            margin-top: .8rem;
+            div{
+                font-size: 1.2rem;
+                font-weight: 300;
+                line-height: 1.6rem;
+                margin-left: 1.7rem;
+                color: #777;
+                position: relative;
+                transform: translateY(.1rem);
+            }
+            &::before{position: absolute;}
+        }
+        .mdl-btn-wrap{
+            position: relative;
+            margin-top: 1rem;
+            .mdl-btn{
+                border-radius: 2.6rem;
+                background: #FFD700;
+                span{
+                    font-size: 1.8rem;
+                    font-weight: 500;
+                    line-height: 1.8rem;
+                }
+            }
+        }
+    }
+    [data-banner="luckyball"]{
+        width: 100%;
+        height: 13rem;
+        margin: 0 auto 0;
+        border-radius: 3.2rem;
+        background: #8141EE;
+        position: relative;
+        .mdl-banner-em {
+            color:#fff;
+            font-size: 1.3rem;
+            font-weight: 200;
+        }
+        .mdl-banner-tit {
+            color:#fff;
+            font-size: 1.8rem;
+            font-weight: 700;
+            &::after{
+                content:"";
+                display: inline-block; 
+                transform: translateX(.6rem);
+                background-image: url("data:image/svg+xml,%3Csvg width='8' height='14' viewBox='0 0 8 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 13L7 7L1 1' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+                width: .8rem;
+                height: 1.4rem;
+            }
+        }
+        .mdl-tooltip{
+            top: -1.2rem;
+            right: 0.6rem;
+            left:auto;
+            height: 3rem;
+            background-color: #FFD700;
+            &::before {
+                background-color: #FFD700;
+            }
+        }
+        .mdl-tooltip-txt {
+            font-size: 1.3rem;
+            color:#000;
+        }
+        &::after{
+            content: '';
+            width: 10.3rem;
+            height: 8.6rem;
+            background: url(../../assets/img/challenge/main/sp_NMOK_1_1V_2406.png) no-repeat 0 0;
+            background-size: 23.4rem;
+            background-position: -5.9rem -11.1rem;
+            position: absolute;
+            bottom: 2.2rem;
+            right: 1.2rem;
+        }
+    }
+    [data-type="walk"]{
+        .ocr-challenge-mission-item{
+            border: .1rem solid #eee;
+            padding: 0 0 3.2rem;
+            min-height:38rem;
+
+            .mdl-subject{
+                padding-bottom: 0;
+            }
+            .mdl-subject-group{
+                width: 100%;
+                display: flex;
+                flex-direction: row;
+            }
+            .mdl-subject-tit{
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                gap: .8rem;
+                font-size: 2.4rem;
+                font-weight: 700;
+                line-height: 1.5;
+                margin-bottom: 0;
+                span{line-height: 1;}
+                &::after{
+                    display: none;
+                }
+            }
+            .mdl-btn-wrap{
+                position: relative;
+                margin-top: 0;
+                padding: 0 3.2rem;
+                .mdl-btn{
+                    border-radius: 10rem;
+                    background: #1E1F23;
+                    span{color: #fff;}
+                }
+            }
+            .mdl-subject{
+                display: flex;
+                flex-direction: column;
+            }
+            .mdl-subject::after{
+                content: '';
+                display: block;
+                width: 23.8rem;
+                height: 19.6rem;
+                background: url(../../assets/img/challenge/m06/ico-sneakers.png) no-repeat 0 0;
+                background-size: 49rem;
+                background-position: -0.3rem -1.4rem;
+                position: relative;
+                align-self: flex-end;
+            }
+        }
+        .mdl-item-label{
+            font-size: 1.3rem;
+            font-weight: 700;
+            line-height: 1;
+            padding-top: .7rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+        }
+        &[data-style="person"] .mdl-item-label{
+            background-color: #30A1F3;
+        }
+        &[data-style="team"] {
+            .mdl-item-label{
+                background-color: #F3306A;
+            }
+            .mdl-subject::after{
+                background: url(../img/challenge/m06/ico-walk-team.png) no-repeat 50% 50% / cover;
+            }
+        }
+    }
+
+    [data-type="walk-result"]{
+        &[data-my-ranking="1"] [data-style="medal"],
+        &[data-my-ranking="2"] [data-style="medal"],
+        &[data-my-ranking="3"] [data-style="medal"]{
+            display: block !important;
+        }
+        &[data-my-ranking="outside"] {
+            .mdl-subject-tit {
+                font-size: 3.2rem;
+                display: flex;
+                align-items: center;
+                font-weight: 700;
+            }
+        }
+        &[data-my-ranking="end"] {
+            .mdl-subject {align-items: center;}
+            .mdl-subject-tit {
+                font-size: 2rem;
+                color:#777;
+                display: flex;
+                align-items: center;
+                font-weight: 700;
+                letter-spacing:-0.06rem;
+            }
+        }
+        &[data-style="person"]{
+            .mdl-subject{
+                position: relative;
+                &::after{
+                    content: "";
+                    display: block;
+                    width: 23.8rem;
+                    height: 19.6rem;
+                    background: url(../../assets/img/challenge/m06/ico-sneakers.png) no-repeat 0 0;
+                    background-size: 49rem;
+                    background-position: -0.3rem -1.4rem;
+                    position: absolute;
+                    bottom: -3.2rem;
+                    right: 3.2rem;
+                }
+            }
+        }
+        .ocr-challenge-mission-item{
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            border: .1rem solid #eee;
+            padding: 0 0 3rem;
+            min-height: 38rem;
+        }
+        .mdl-subject{
+            flex:1;
+            padding: 6.4rem 3rem 0;
+            display: flex;
+            align-items: flex-end;
+            &-group{
+                position: static;
+                display: flex;
+                gap:1.6rem;
+            }
+            &-em{
+                margin-bottom: 0;
+            }
+            &-date{
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                gap: .8rem;
+                font-size: 1.5rem;
+                font-weight: 300;
+                color: #777;
+                span{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    min-height: 3.2rem;
+                    font-size: 1.4rem;
+                    font-weight: 300;
+                    color: #777;
+                    background-color: rgba(30, 31, 35, 0.1);
+                    padding: 0 .8rem;
+                    border-radius: .8rem;
+                }
+            }
+            &-group{
+                width: 100%;
+                flex: 1;
+                display: flex;
+                flex-direction:column;
+            }
+            &-head{
+                position: absolute;
+                padding: 3.2rem 3rem 0;
+                top:0;
+                left:0;
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+            &-txt{
+                width: 100%;
+                text-align: right;
+                display: flex;
+                justify-content: flex-end;
+                align-items: center;
+                gap: .8rem;
+                font-size: 1.4rem;
+                font-weight: 300;
+                line-height: 1.4rem;
+                color: #1E1F23;
+                margin: 0;
+                position: relative;
+
+                &::before{
+                    content: '';
+                    width: 2.4rem;
+                    height: 2.4rem;
+                    transform: translateX(.6rem);
+                }
+                span{
+                    font-size: 1.6rem;
+                    font-weight: 500;
+                    line-height: 1.6rem;
+                    color: #1E1F23;
+                }
+            }
+            &-tit{
+                width: 100%;
+                display: flex;
+                justify-content: flex-end;
+                align-items: center ;
+                gap: 1.2rem;
+                font-size: 2.4rem;
+                font-weight: 500;
+                line-height: 1.5;
+                color: #1E1F23;
+                text-align: right;
+                margin-bottom: .8rem;
+                strong{
+                    font-size: 6.4rem;
+                    font-weight: 700;
+                    line-height:1;
+                    color: #1E1F23;
+                }
+                span{line-height: 1;}
+                [data-style="medal"]{
+                    content: '';
+                    display: none;
+                    width: 4.4rem;
+                    height: 4.4rem;
+                    background: url(../../assets/img/challenge/main/sp_NMOK_1_1V_2406.png) no-repeat 0;
+                    background-size: 24rem;
+                    background-position: 0 -19.7rem;
+                }
+            }
+        }
+        .mission-state{
+            width: 100%;
+            padding: 0;
+            margin-top: 0;
+            dl{
+                height: 6.4rem;
+                min-height: 6.4rem;;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                flex-direction: row;
+                padding: 0 2.4rem;
+                background-color: #F7F8FA;
+                border-radius: 2.6rem;
+                &::after{display: none;}
+                dt{
+                    width: auto;
+                    font-size: 1.5rem;
+                    font-weight: 500;
+                    color: #777;
+                    &::before{display: none;}
+                }
+                dd{
+                    width: auto;
+                    font-size: 1.8rem;
+                    font-weight: 500;
+                    color: #1E1F23;
+                    
+                    &[data-date="imminent"]{color: #FB3C53;}
+                }
+            }
+        }
+        .mdl-btn-wrap{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            position: relative;
+            margin-top: 1.6rem;
+            padding: 0 3.2rem;
+            .mdl-btn{
+                border-radius: 10rem;
+                background: #FFD700;
+            }
+        }
+        .mdl-btn[data-style="black"]{
+            background-color: #1E1F23;
+            span{color: #fff;}
+        }
+        
+        //팀전
+        [data-icon="leader"]::before{display: none;}
+        &[data-style="team"]{
+            .mdl-team-week{
+                color:#777;
+                font-size: 1.5rem;
+                font-weight: 300;
+                text-align: right;
+                width: 100%;
+            }
+            &[data-my-ranking="end"] .mdl-team-name{
+                font-size: 2.7rem;
+            }
+            .mdl-team-name{
+                width: 100%;
+                display: flex;
+                justify-content: flex-end;
+                font-size: 2.4rem;
+                font-weight: 500;
+                
+                color: #1E1F23;
+                position: relative;
+                &::before{display: none;}
+                &[data-icon="leader"]{
+                    gap: .4rem;
+                    &::before{display: none;}
+                    &::after{
+                        content: '';
+                        display: block;
+                        width: 2.4rem;
+                        height: 2.4rem;
+                        background: url(../../assets/img/challenge/main/sp_NMOK_1_1V_2406.png);
+                        background-size: 24rem;
+                    }
+                }
+            }
+            [data-icon="up"],
+            [data-icon="down"]{
+                &::before{
+                    content: '';
+                    display: block;
+                    width: 4.4rem;
+                    height: 4.4rem;
+                    background: url(../../assets/img/challenge/main/sp_NMOK_1_1V_2406.png);
+                    background-size: 24rem;
+                    position: absolute;
+                    top: 50%;
+                    left: -5.3rem;
+                    transform: translateY(-50%);
+                }
+            }
+        }
+        &[data-style="team-end"],
+        &[data-style="team-ready"]{
+            .mdl-subject-txt{
+                font-size: 1.5rem;
+                font-weight: 500;
+                line-height: 1.5rem;
+                gap: .2rem;
+                span{
+                    font-size: 1.5rem;
+                    font-weight: 500;
+                    line-height: 1.5rem;
+                    color: #777;
+                }
+                &::before{display: none;}
+            }
+            .mdl-subject-tit{
+                flex-direction: column;
+                justify-content: flex-end;
+                align-items: flex-end;
+                gap: 1.6rem;
+                strong+span{
+                    color:#777;
+                }
+                span{
+                    font-size: 2.1rem;
+                    font-weight: 500;
+                    line-height: 2.4rem;
+
+                    &::before{display: none;}
+                    
+                    &[data-icon="leader"]{
+                        display: flex;
+                        justify-content: flex-end;
+                        align-items: center;
+                        gap: .4rem;
+                        &::before{display: none;}
+                        &::after{
+                            content: '';
+                            display: block;
+                            width: 2.4rem;
+                            height: 2.4rem;
+                            background: url(../../assets/img/challenge/main/sp_NMOK_1_1V_2406.png);
+                            background-size: 24rem;
+                            transform: translateY(-.2rem);
+                            background-position: -7.4rem -20.2rem;
+                        }
+                    }
+                }
+                strong{
+                    font-size: 6.4rem;
+                    font-weight: 700;
+                    line-height: 6.4rem;
+                }
+            }
+            .mdl-btn-wrap{
+                .mission-state{margin-top: 0;}
+            }
+        }
+    }
+    .ocr-challenge-mission{
+        gap: 0;
+        padding: 5.6rem 2.4rem;
+
+        .mdl-wrap{padding: 0;}
+        
+        //마음건강
+        [data-type="theme"]{
+            width: 100%;
+            text-align: left;
+            .mdl-subject-tit[data-icon="flag"]{
+                line-height: 3.08rem;
+                color: #1E1F23;
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                gap: .8rem;
+                margin-bottom: 1.6rem;
+                &::before{display: none;}
+                &::after{
+                    content: '';
+                    width: 2.4rem;
+                    height: 2.4rem;
+                }
+            }
+        }
+    }
+    .ocr-challenge-banner{
+        width: 100%;
+        margin-top: 0;
+        .mdl-banner{
+            padding: 2.4rem 2rem;
+            &[data-banner]{
+                border-radius: 3.2rem;
+                &::before{
+                    width: 11.2rem;
+                    height: 11.2rem;
+                    bottom: -2.8rem;
+                    right: -2.3rem;
+                }
+                &::after{
+                    content: '';
+                    display: block;
+                    width: 6rem;
+                    height: 6rem;
+                    background-size: 32rem;
+                    bottom: 1rem;
+                    right: 1.2rem;
+                    position: absolute;
+                    z-index: 1;
+                }
+                .mdl-banner-group{gap: .4rem;}
+                .mdl-banner-em{
+                    font-weight: 300;
+                    line-height: 1.82rem;
+                } 
+            }
+            &[data-banner="guide"]{
+                background-color: #25C38F;
+                &::before{background-color: #1EB881;}
+            }
+            &[data-banner="past"]{
+                    background-color: #28C3E5;
+                    &::before{background-color: #21B9E0;}
+            } 
+        }
+    }
+
+    .mdl-wrap[data-style="team-ready"] span[data-icon="leader"]::after,
+    .mdl-wrap[data-style="team"] .mdl-team-name[data-icon="leader"]::after,
+    .mdl-wrap[data-style="team"] [data-icon="up"]::before,
+    .mdl-wrap[data-style="team"] [data-icon="down"]::before,
+    .mdl-wrap[data-type="walk-result"] .ocr-challenge-mission-item .mdl-subject-txt::before,
+    .mdl-wrap[data-type="walk"] .mdl-subject-tit::after,
+    [data-icon="flag"]::after,
+    [data-item="luckyball"] .ocr-challenge-mission-item .mdl-subject-tit::before,
+    .ocr-challenge-mission-item .point::before,
+    .ocr-challenge-banner .mdl-banner[data-banner=guide]::after,
+    .ocr-challenge-banner .mdl-banner[data-banner=past]::after,
+    .ocr-challenge-mission-item .mission-state dt::before {
+        content:"";
+        background-image: $currentSPimg;
+        background-size: $currentSPsize;
+        background-repeat: no-repeat;
+    }
+
+    .mdl-wrap[data-style="team-ready"] span[data-icon="leader"]::after{
+        background-position: -7.4rem -20.2rem;
+    }
+    .mdl-wrap[data-style="team"] {
+        .mdl-team-name[data-icon="leader"]::after{
+            background-position: -7.4rem -20.2rem;
+        }
+        [data-icon="up"]::before{
+            background-position: -19.6rem -19.6rem;
+        }
+        [data-icon="down"]::before{
+            background-position: -15.2rem -19.6rem;
+        }
+    }
+    .mdl-wrap[data-type="walk-result"] .ocr-challenge-mission-item .mdl-subject-txt::before {
+        background-position: -16rem 0;
+    } 
+    .mdl-wrap[data-type="walk"] .mdl-subject-txt::after {
+        background-position: -4.3rem -20.2rem;
+    }
+    [data-item="luckyball"] .mdl-box.ocr-challenge-mission-item .mdl-subject-tit::before {
+        background-position: -13.4rem -0.4rem;
+    }
+    [data-icon="flag"]::after {
+        background-position: -19.5rem -0.4rem;
+    }
+    .ocr-challenge-mission-item {
+        .mission-state{
+            dt::before {
+                background-position: 0 0;
+            }
+            .n3 dt::before {
+                background-position: -4rem 0;
+            }
+        } 
+        .point::before {
+            background-position: -7.4rem 0.4rem; 
+        }
+        .mdl-subject-tit::before {
+            background: $currentSPimg no-repeat 0 0 / 24rem;
+            background-position: -12rem 0rem;
+        }
+        .mdl-btn-wrap .mdl-btn {
+            height: 5.2rem;
+        }
+    }
+    .ocr-challenge-banner .mdl-banner[data-banner=guide]::after {
+        background-position: -11.7rem -3.3rem;
+        background-size: 25rem;    
+    }
+    .ocr-challenge-banner .mdl-banner[data-banner=past]::after {
+        background-position: -0.1rem -3.5rem;
+        background-size: 25rem;   
+    }
+    .mdl-box[data-chain="true"] {
+        margin-top: -0.4rem !important;
+        &::before {
+            width: calc(100% - 8rem);
+            left: 4rem;
+            border-top: 1px dashed #666666;
+        }
+    }
+    .next-team {
+        border-radius:4rem;
+
+        .mdl-subject{padding:0;}
+        .mdl-subject-group {
+            display: flex;
+            justify-content: center;
+            flex-direction: row;
+            width: 100%;
+        }
+        .mdl-btn-wrap {
+            margin-top: 1.6rem;
+        }
+        .mdl-subject-tit{
+            font-size: 2rem;
+            font-weight: 500 !important;
+            color:#1E1F23 !important;
+            text-align: center;
+            justify-content: center !important;
+            flex-direction: row !important;
+            margin-bottom: 0;
+
+            &[data-icon="leader"]{
+                display: flex;
+                justify-content: flex-end;
+                align-items: center;
+                gap: .4rem;
+                &::before{display: none;}
+                &::after{
+                    content: '';
+                    display: block;
+                    width: 2.4rem;
+                    height: 2.4rem;
+                    background: url(../../assets/img/challenge/main/sp_NMOK_1_1V_2406.png);
+                    background-size: 24rem;
+                    transform: translateY(-.2rem);
+                    background-position: -7.4rem -20.2rem;
+                }
+            }
+        }
+        .mdl-btn-wrap{
+            padding: 0;
+            span {
+                font-weight: 700;
+            }
+        }
+    }
+}  

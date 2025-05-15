@@ -1,0 +1,321 @@
+.mdl-tooltip {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 0.7rem 1.2rem 0.7rem;
+    border-radius: .8rem;
+    background: #FFD700;
+    display: flex;
+    gap:0.8rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: .8rem;
+    min-width: 2.8rem;
+    min-height: 3.4rem;
+    border: .1rem solid #000 !important;
+    box-shadow: 0 1.2rem 3rem rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+
+    &[data-color="gray"] {
+        width: auto;
+        background-color: var(--color-gray-400);
+        border-color:var(--color-gray-400) !important;
+        &::before{
+            background-color: var(--color-gray-400);
+            border-color:var(--color-gray-400) !important;
+        }
+        .mdl-tooltip-txt {
+            background-color: var(--color-gray-400);
+            color: #fff;
+        }
+    }
+
+    .mdl-tooltip-txt{
+        background: #fff;
+    }
+
+    &::before {
+        content:"";
+        display: block;
+        position: absolute;
+        bottom: -0.5rem;
+        width: .8rem;
+        height: .8rem;
+        transform: rotate(45deg);
+        border: .1rem solid #000 !important;
+        border-top: 0 !important;
+        border-left: 0 !important;
+        background: #fff;
+        z-index: 0;
+    }
+    
+    &--close{
+        position: relative;
+        display: block;
+        width:1.8rem;
+        height:1.8rem;
+        background-image: url("data:image/svg+xml,%3Csvg width='18' height='18' viewBox='0 0 18 18' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M3.34318 3.34322L14.6569 14.6569' stroke='%23999EAA' stroke-width='1.4'/%3E%3Cpath d='M14.6568 3.34322L3.34311 14.6569' stroke='%23999EAA' stroke-width='1.4'/%3E%3C/svg%3E%0A");
+        background-position: 50% 50%;
+        background-repeat: no-repeat;
+        background-size: 1.8rem;
+    }
+
+    
+    &.closeBtn{
+        display: flex;
+        justify-content: flex-start;
+        gap: .8rem;
+        &::after{
+            content: '';
+            width: 1.8rem;
+            height: 1.8rem;
+            background-image: url(../../assets/img/common/ico_tooltip_close.png);
+            background-size: 1.8rem;
+        }
+    }
+
+    &-txt {
+        display: flex;
+        position: relative;
+        font: var(--font-b4-500);
+        text-align: left;
+        color: var(--color-gray-150);
+        z-index: 1;
+        width: max-content;
+        gap: .8rem;
+        align-items: center;
+    }
+    &-style {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-around;
+        flex-direction: column;
+        color: #FFF;
+        font-size: 1.2rem;
+        font-weight: 700;
+        padding-left: $x1;
+
+        em{
+            color: #FFD700;
+            font-size: 1.2rem;
+            font-weight: 700;
+        }
+    }
+
+    //data-arrow
+    &[data-arrow="tl"]::before {
+        top: -.5rem;
+        left: 1.6rem;
+        bottom: auto;
+        right: auto;
+        transform: rotate(225deg);
+    }
+    &[data-arrow="tr"]::before {
+        top: -.5rem;
+        right: 1.6rem;
+        bottom: auto;
+        left: auto;
+        transform: rotate(225deg);
+    }
+    &[data-arrow="tc"]::before {
+        top: -.5rem;
+        left: 50%;
+        bottom: auto;
+        right: auto;
+        margin-left: -.4rem;
+        transform: rotate(225deg);
+    }
+    &[data-arrow="bl"]::before {
+        bottom: -.5rem;
+        left: 1.6rem;
+        top: auto;
+        right: auto;
+    }
+    &[data-arrow="br"]::before {
+        bottom: -.5rem;
+        right: 1.6rem;
+        top: auto;
+        left: auto;
+    }
+    &[data-arrow="bc"]::before {
+        bottom: -.5rem;
+        left: 50%;
+        top: auto;
+        right: auto;
+        margin-left: -.4rem;
+    }
+    &[data-eff="fluffy"] {
+        animation-name: fluffy;
+        animation-duration: .8s;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+    }
+
+    &[data-arrow="lt"]::before {
+        top: 1.6rem;
+        left: -0.5rem;
+        bottom: auto;
+        right: auto;
+        transform: rotate(135deg);
+    }
+    &[data-arrow="lb"]::before {
+        top:auto;
+        bottom: 1.6rem !important;
+        left: -0.5rem;
+        bottom: auto;
+        right: auto;
+        transform: rotate(135deg);
+    }
+    &[data-arrow="lc"]::before {
+        top: 50%;
+        left: -0.5rem;
+        bottom: auto;
+        right: auto;
+        margin-top: -0.5rem;
+        transform: rotate(135deg);
+    }
+
+    &[data-arrow="rt"]::before {
+        top: 1.6rem;
+        right: -0.5rem;
+        bottom: auto;
+        left: auto;
+        transform: rotate(315deg);
+    }
+    &[data-arrow="rb"]::before {
+        top:auto;
+        bottom: 1.6rem !important;
+        right: -0.5rem;
+        bottom: auto;
+        left: auto;
+        transform: rotate(315deg);
+    }
+    &[data-arrow="rc"]::before {
+        top: 50%;
+        right: -0.5rem;
+        bottom: auto;
+        left: auto;
+        margin-top: -0.5rem;
+        transform: rotate(315deg);
+    }
+
+    //data-color
+    &[data-color="black"]{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 9.9rem;
+        min-width: 2.8rem;
+        min-height: 2.8rem;
+        padding: 0 $x1;
+        background-color: #000;
+
+        &::before{
+            background: #000;
+            bottom: -0.3rem;
+        }
+    
+        .mdl-tooltip-txt{
+            background-color: #000;
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: #fff;
+        }
+    }
+        
+    &[data-color="charcoal"]{
+        background: #292929;
+        padding: 1.0rem $x2;
+        border-radius: 1.2rem;
+        box-shadow: 0 .4rem .4rem 0 rgba(0, 0, 0, 0.08) !important;
+        &::before{
+            background-color: #292929;
+        }
+        .mdl-tooltip-txt{
+            background: #292929;
+        }
+    }
+    &[data-color="blue"]{
+        .mdl-tooltip-txt{color: #fff;}
+    }
+    
+
+    //aria-hidden
+    &[aria-hidden="true"] {
+        animation:tooltipHide;
+        animation-duration: .2s;
+        animation-iteration-count: 1;
+        animation-fill-mode: forwards;
+    }
+    &[aria-hidden="false"] {
+        animation-delay: .3s;
+        animation:tooltipShow;
+        animation-duration: .3s;
+        animation-iteration-count: 1;
+        animation-fill-mode: forwards;
+    }
+}
+
+// /NEVE_7_23P
+.stamp-relay-item{
+    .mdl-tooltip,
+    .mdl-tooltip::before{background: #3B7AF6;}
+    .mdl-tooltip-txt{color: #fff;}
+}
+
+//NMOK_10_2P
+.ocr-oxquiz{
+    .mdl-tooltip[data-color="white"]::before{
+        box-shadow: none;
+        bottom: -.4rem;
+    }
+}
+
+//NMDP_2_30T
+.mdl-chart-tooltip{
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    margin-left: 0;
+    padding: 0.8rem 1.2rem;
+    position: absolute;
+    bottom: 0.2rem;
+    left: 50%;
+    transform: translate(-50%, -2rem);
+    border: .1rem solid var(--color-gray-600);
+    border-radius: 0.8rem;
+    background-color: #fff;
+    pointer-events: none;
+    opacity: 0;
+    transition: none;
+    &::after{
+        content: "";
+        display: block;
+        width: 0.6rem;
+        height: 0.6rem;
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translate(-0.4rem, 0.4rem) rotate(-220deg) skewY(-12deg);
+        border-top: 1px solid var(--color-gray-600);
+        border-right: 1px solid var(--color-gray-600);
+        background-color: #fff;
+    }
+    strong{
+        font-size: 1rem;
+        font-weight: 700;
+        color: var(--color-gray-100);
+        b{font-weight: 700;}
+    }
+}
+
+@keyframes tooltipShow {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+@keyframes tooltipHide {
+    0% {opacity: 1;}
+    100% {opacity: 0; pointer-events: none;}
+}

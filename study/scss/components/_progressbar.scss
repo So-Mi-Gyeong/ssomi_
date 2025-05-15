@@ -1,0 +1,63 @@
+.mdl-progressbar {
+    position: relative;
+    width: 100%;
+    padding-top: 6.7rem;
+    margin-bottom: 4.8rem;
+
+    &-line {
+        width: 100%;
+        height: .5rem;
+        border-radius: .25rem;
+        background-color: rgba(255, 255, 255, 20%);
+        overflow: hidden;
+    }
+    &-bar {
+        border-radius: .25rem;
+        height: 100%;
+        background-color: var(--gray_0);
+        transition: width .2s ease-in;
+    }
+    &-text {
+        font-size: 1.6rem;
+        font-weight: 800;
+        font-family: 'Base';
+        font-style: normal;
+        color: rgba(255, 255, 255, 30%);
+        position: absolute;
+        right: 0;
+        bottom: 1.4rem;
+
+        strong {
+            font-size: 1.6rem;
+            font-weight: 800;
+            font-family: 'Base';
+            color: var(--gray_0);
+            font-style: normal;
+        }
+    }
+
+    &[aria-valuemax="3"] {
+        &[aria-valuenow="1"] .mdl-progressbar-bar {width: calc((100% / 3) * 1);}
+        &[aria-valuenow="2"] .mdl-progressbar-bar {width: calc((100% / 3) * 2);}
+        &[aria-valuenow="5"] .mdl-progressbar-bar {width: 100%;}
+    }
+
+    &[aria-valuemax="5"] {
+        &[aria-valuenow="1"] .mdl-progressbar-bar {width: calc((100% / 5) * 1);}
+        &[aria-valuenow="2"] .mdl-progressbar-bar {width: calc((100% / 5) * 2);}
+        &[aria-valuenow="3"] .mdl-progressbar-bar {width: calc((100% / 5) * 3);}
+        &[aria-valuenow="4"] .mdl-progressbar-bar {width: calc((100% / 5) * 4);}
+        &[aria-valuenow="5"] .mdl-progressbar-bar {width: 100%;}
+    }
+
+    &[aria-valuemax="7"] {
+        &[aria-valuenow="1"] .mdl-progressbar-bar {width: calc((100% / 7) * 1);}
+        &[aria-valuenow="2"] .mdl-progressbar-bar {width: calc((100% / 7) * 2);}
+        &[aria-valuenow="3"] .mdl-progressbar-bar {width: calc((100% / 7) * 3);}
+        &[aria-valuenow="4"] .mdl-progressbar-bar {width: calc((100% / 7) * 4);}
+        &[aria-valuenow="5"] .mdl-progressbar-bar {width: calc((100% / 7) * 5);}
+        &[aria-valuenow="6"] .mdl-progressbar-bar {width: calc((100% / 7) * 6);}
+        &[aria-valuenow="7"] .mdl-progressbar-bar {width: 100%;}
+    }
+}
+

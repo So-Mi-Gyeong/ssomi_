@@ -1,0 +1,65 @@
+.ods-table{
+  width: 100%;
+
+  //기본
+  .ods-table--tr{
+    border-collapse: separate;
+    & + .ods-table--tr{
+      .ods-table--th,
+      .ods-table--td{padding-top: 0;}
+    }
+  }
+  .ods-table--th{
+    padding: 1.6rem 0;
+    font: var(--font-b4-300);
+    color: var(--color-gray-150);
+  }
+  .ods-table--td{
+    padding: 1.6rem 0;
+    font: var(--font-b1-400);
+    color: var(--color-gray-100);
+  }
+
+  //data-align
+  [data-align="center"]{
+    .ods-table--th,
+    .ods-table--td{text-align: center;}
+  }
+  [data-align="both-ends"]{
+    .ods-table--th{text-align: left;}
+    .ods-table--td{text-align: right;}
+  }
+  &--tbody{
+    .ods-table--tr{
+      &:last-child{
+        .ods-table--th,
+        .ods-table--td{padding: 0 0 2rem;}
+      }
+    }
+  }
+  &--tfoot{
+    .ods-table--th{
+      font: var(--font-b4-700);
+      color: var(--color-gray-50);
+    }
+    .ods-table--td{
+      font: var(--font-b1-700);
+      color: var(--color-gray-50);
+    }
+  }
+
+   //data-style
+  [data-style="line"]{
+    border-top: .1rem solid var(--color-gray-700);
+    .ods-table--tr{
+      &:first-child{
+        .ods-table--td{padding: 2rem 0;}
+      }
+    }
+  }
+
+  //color
+  .negative{
+    color: var(--color-blue-text);
+  }
+}

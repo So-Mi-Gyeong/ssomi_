@@ -1,0 +1,192 @@
+.game-eyes-bingle {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &-board {
+        position: relative;
+        width: 80vw;
+        height: 80vw;
+        max-width: 30rem;
+        max-height: 30rem;
+        border-radius: 50%;
+        background-color: #0DAAD2;
+        border:.1rem solid rgba(27, 69, 97, 0.4) !important;
+        box-shadow: 0 .4rem .8rem rgba(0, 0, 0, 16%) !important;
+    }
+    &-center {
+        position: absolute;
+        background: linear-gradient(135deg, #98D9EA, #0DAAD2) ;
+        border:.1rem solid rgb(13, 170, 210, 40%) !important;
+        width: 3.6rem;
+        height: 3.6rem;
+        border-radius: 50%;
+        z-index: 10;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        &::before{
+            content: "";
+            display: block;
+            width: 1.8rem;
+            height: 1.8rem;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #fff, #9ECEDA) ;
+            border:.1rem solid rgba(255,255,255, 40%) !important;
+        }
+    }
+    &-wrap {
+        position: relative;
+        width: calc(100% - 1rem);
+        height: calc(100% - 1rem);
+        border-radius: 50%;
+        top: .5rem;
+        left: .5rem;
+        background-color: #fff;
+        display: flex;
+        flex-wrap:wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 40%;
+
+        &::after {
+            content: "";
+            display: block;
+            width: .1rem;
+            height: 100%;
+            position: absolute;
+            top:0; 
+            left:50%;
+            border-left:.1rem dashed #ccc;
+        }
+        &::before {
+            content: "";
+            display: block;
+            height: .1rem;
+            width: 100%;
+            position: absolute;
+            top:50%; 
+            left:0;
+            border-top:.1rem dashed #ccc;
+        }
+
+        &[data-state="play"] {
+            .game-eyes-bingle-point {z-index: 0;}
+        }
+    }
+
+    &-btn {
+        position: relative;
+        width:30%;
+        height: 30%;
+
+        &[data-n="0"] {
+            transform: translate(50%, 50%);
+        }
+        &[data-n="1"] {
+            transform: translate(-50%, 50%);
+        }
+        &[data-n="2"] {
+            transform: translate(50%, -50%);
+        }
+        &[data-n="3"] {
+            transform: translate(-50%, -50%);
+        }
+    }
+
+    &-item {
+        display: block;
+        position: absolute;
+        top:0; 
+        left:0;
+        opacity: 0;
+        width:100%;
+        height: 100%;
+
+        border-radius: 50%;
+        background-color: #EDEDED;
+        border:.1rem solid #ccc !important;
+        z-index: 1;
+
+        animation: bingle_setting;
+        animation-duration: 1.3s;
+        animation-fill-mode:forwards;
+        animation-iteration-count: 1;
+    }
+    &-point {
+        display: block;
+        position: absolute;
+        top:50%; 
+        left:50%;
+        width: 3.6rem;
+        height: 3.6rem;
+        background: url(../img/ocare/m8/ball.png) no-repeat 50% 50% / cover;
+        border-radius: 50%;
+        box-shadow: .2rem .4rem .8rem rgba(170, 185, 147, 50%) !important;
+        transform: translate(-50%, -50%);
+        z-index: 2;
+    }
+}
+
+@keyframes bingle_setting {
+    0% {opacity: 0%;}
+    100% {opacity: 100%;}
+}
+
+.game-eyes-search {
+    position: relative;
+    width: 100%;
+
+    &-board {
+        display: flex;
+        max-width:$maxwidth;
+        width: 100%;
+        flex-wrap: wrap;
+        background-color: #fff;
+        border-radius: $x2;
+        border: .1rem solid #111 !important;
+        overflow: hidden;
+
+        &[data-state="search"] {
+           .game-eyes-search-btn::after {opacity: 0;} 
+           .game-eyes-search-btn::before {opacity: 0;} 
+        }
+        &[data-state="complete"] {
+            .game-eyes-search-btn::after {opacity: 1;} 
+            .game-eyes-search-btn::before {opacity: 0;} 
+         }
+    }
+    &-btn {
+        position: relative;
+        border: 1px solid #CCCCCC !important;
+        width:calc(100% /3);
+        padding-top: calc(100% /3);
+
+        &[data-target="m"]::after{
+            content:"";
+            display: block;
+            width: 4rem;
+            height: 4rem;
+            background:url(../img/ocare/m8/searchitem-1.png) no-repeat 0 0 / cover;
+            position: absolute;
+            top:50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 2;
+        }
+        &[data-target="s"]::before{
+            content:"";
+            display: block;
+            width: 4rem;
+            height: 4rem;
+            background:url(../img/ocare/m8/searchitem-2.png) no-repeat 0 0 / cover;
+            position: absolute;
+            top:50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 1;
+        }
+    } 
+}

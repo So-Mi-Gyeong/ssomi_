@@ -1,0 +1,185 @@
+// 영향을 주지 않는 class명은 data-brand 바깥에 입력
+
+/* GDR-골프 */
+[data-brand="gdr"] {
+    * {
+        font-family: 'base';
+        word-break: keep-all;
+
+        .btn-wrap .btn-txt {
+            font-family: 'KBF';
+        }
+    }
+
+    .content {
+        padding: 0;
+    }
+
+    .scrollBox[data-style="popup"] {
+        padding: 2rem 2.4rem 3rem;
+    }
+
+    .brand-body {
+        padding: 4.2rem 2.4rem 2.4rem;
+    }
+
+    .event-program {
+        &-box {
+            margin: 0 auto;
+        }
+
+        &-contents {
+            .btn-wrap {
+                bottom: 17vw;
+                padding: 0 5rem;
+            }
+
+            &[data-type="mall"] .btn-wrap {
+                bottom: 3%;
+            }
+        }
+    }
+
+    .gdr-content {
+        display: flex;
+        flex-direction: column;
+        gap: 2.4rem;
+
+        &+.gdr-content {
+            margin-top: 4.8rem;
+        }
+    }
+
+    .img-box {
+        border-radius: 2.4rem;
+        overflow: hidden;
+    }
+
+    .txt {
+        font-size: 1.4rem;
+        font-weight: 400;
+        line-height: 2rem;
+        color: #444;
+    }
+
+    .btn-wrap[data-style="location"] {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 0;
+
+        .btn-line {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: .8rem;
+            font-weight: 600;
+            color: #444;
+            border: .1rem solid #999;
+        }
+
+        .mdl-bul-care {
+            display: flex;
+            align-items: center;
+            margin: .8rem auto 1.6rem;
+
+            div {
+                font-size: 1.4rem;
+                font-weight: 400;
+                line-height: 2rem;
+                color: #999;
+            }
+        }
+    }
+
+    .card-list {
+        li {
+            gap: 0;
+        }
+
+        .card-body {
+            margin-top: 2.4rem;
+
+            &-tit {
+                font-size: 1.6rem;
+                font-weight: 600;
+                line-height: 2.4rem;
+                color: #000;
+            }
+
+            &-txt {
+                font-size: 1.4rem;
+                font-weight: 400;
+                line-height: 2.4rem;
+                color: #666;
+            }
+        }
+
+        .btn-wrap {
+            margin-top: 1.6rem;
+        }
+    }
+
+    //상품소개
+    .ocr-product-intro {
+        padding: 0 2.4rem;
+
+        &-img {
+            height: 28rem;
+
+            &[data-img="gdr01"] {
+                background: url(../../img/content/gdr/gdr-top01.jpg) no-repeat 50% 50%/cover;
+            }
+
+            &[data-img="gdr02"] {
+                background: url(../../img/content/gdr/gdr-top02.jpg) no-repeat 50% 50%/cover;
+            }
+        }
+
+        [data-style="blue-num"] {
+            margin-top: 2.4rem;
+        }
+
+        .mdl-box[data-style="info"] {
+            margin-top: 3.2rem;
+        }
+
+        .gdr-product {
+            &-content {
+                display: flex;
+                flex-direction: column;
+                gap: 3.2rem;
+                margin: 4rem auto 3.2rem;
+            }
+
+            &-img {
+                border-radius: 2.4rem;
+            }
+
+            &-tit {
+                margin-top: 3.2rem;
+                font-size: 2.6rem;
+                font-weight: 700;
+                line-height: 3.4rem;
+                color: #000;
+                text-align: center;
+            }
+        }
+
+        .mdl-subject {
+            .mdl-subject-txt {
+                width: 100%;
+                text-align: center;
+                font-size: 1.4rem;
+                font-weight: 500;
+            }
+        }
+    }
+
+    //지점위치
+    &.gdr-location {
+        .content {
+            padding: 3.2rem 2.4rem 3rem;
+        }
+    }
+}

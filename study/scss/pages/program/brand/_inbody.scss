@@ -1,0 +1,36 @@
+// 영향을 주지 않는 class명은 data-brand 바깥에 입력
+
+.ocr-product-inbody {
+    > .mdl-wrap {padding: $x6 0;}
+
+    .mdl-wrap[data-style="center"]{
+        img{
+            display: block;
+            max-width: 100%;
+            margin: 0 auto;   
+        }
+    }
+
+    [data-img="mpd_9_356"] {background: url(../../img/mpd_9_356/mpd_9_356_1.jpg) no-repeat 50% 50% / cover;}
+
+    [data-type="h4"]{
+        margin: 2rem 0 0 0;
+        .mdl-subject-tit{
+            text-align: center;
+            width: 100%;
+        }
+        .mdl-subject-txt{
+            font-size: 1.4rem;
+            font-weight: 400;
+            font-family: "Base";
+            line-height: 2rem;
+            color: var(--gray_90);
+        }
+    }
+    .mdl-line{margin: 2rem auto;}
+    .type-h4{
+        margin-bottom: 2.1rem;
+        font-family: "Base";
+        line-height: 2.4rem;
+    } 
+}

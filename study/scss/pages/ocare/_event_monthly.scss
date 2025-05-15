@@ -1,0 +1,665 @@
+//월간이벤트
+
+[data-session="2312"] {
+    *,
+    ::after,
+    ::before{font-family: 'KBF';}
+    .ocr-body{padding: 0;}
+
+    .inner{
+        max-width: 37.5rem;
+        padding: 0 2rem;
+        margin: 0 auto;
+    }
+
+    //section
+    .mdl-wrap[data-style="cover"] {
+        position: relative;
+        width: 100%;
+        max-width: 100% !important;
+        background: url(../img/ocare/m12/cover_bg.jpg) repeat 0 0 ;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 68rem;
+
+        h1{
+            position: relative;
+            z-index: 2;
+            display: block;
+            width: 23.4rem;
+            transform: translate(0,-1.5rem);
+            img{
+                display: block;
+                width: 100%;
+            }
+        }
+        &::before{
+            content: "";
+            position: absolute;
+            display: block;
+            top:0; left:0;
+            width: 100%;
+            height: 100%;
+            display: block;
+            background: url(../img/ocare/m12/cover.jpg) no-repeat 50% -14%/43rem;
+            z-index: 1;
+        }
+        &::after{
+            content: "";
+            display: block;
+            position: absolute;
+            width:100%;
+            bottom:0;
+            left:0;
+            height: 0.6rem;
+            background:radial-gradient(103.84% 94.3% at 32.6% 13.15%, #FFF0D8 0%, #F0C682 40.01%, #A98549 100%);
+            z-index: 3;
+
+        }
+    }
+    .mdl-wrap[data-style="event1"] {
+        background: url(../img/ocare/m12/ev1_bg.jpg) repeat 50% 50%;
+        width: 100%;
+        max-width: 100% !important;
+        padding-bottom: 5rem;
+        &::before{
+            content: "";
+            display: block;
+            position: absolute;
+            width:100%;
+            top:0;
+            left:0;
+            height: 16rem;
+            background: url(../img/ocare/m12/ev1_snow.png) no-repeat 50% 0 / auto 12.6rem;
+        }
+        &::after{
+            content: "";
+            display: block;
+            position: absolute;
+            width:100%;
+            bottom:0;
+            left:0;
+            height: 0.6rem;
+            background:radial-gradient(103.84% 94.3% at 32.6% 13.15%, #FFF0D8 0%, #F0C682 40.01%, #A98549 100%);
+            z-index: 3;
+        }
+
+        h2{
+            display: block;
+            padding: 2.9rem 0;
+        }
+        h3{
+            width: 100%; 
+            text-align: center;
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 2.4rem;
+            color:#000;
+        }
+        p{
+            color:#888;
+            font-weight: 300;
+            font-size: 1.4rem;
+            line-height: 2.1rem;
+            
+            margin-top: 1.6rem;
+            position: relative;
+
+            &::after{
+                content: "";
+                display: block;
+                position: absolute;
+                top: 1.8rem;
+                left: 50%;
+                transform: translate(12rem, 0);
+                background: url(../../../local/assets/img/report2023/c_img2.png) no-repeat 0 0/cover;
+                width: 11.3rem;
+                height: 11.9rem;
+                z-index: 1;
+            }
+        }
+
+        .mdl-box {
+            padding: 4.2rem 2.8rem;
+            & + .mdl-box{margin-top: 1.6rem;}
+            &::after,
+            &::before {
+                content: "";
+                display: block;
+                position: absolute;
+                top:2rem;
+                left:2rem;
+                width: 1.2rem;
+                height: 1.2rem;
+                background: url(../../../local/assets/img/ocare/m12/ev1_dot.png) no-repeat 0 0 / 1.2rem;
+            }
+            &::after{left: auto; right:2rem;}
+        }
+
+        .mdl-box-wrap {
+            &::after,
+            &::before {
+                content: "";
+                display: block;
+                position: absolute;
+                bottom:2rem;
+                left:2rem;
+                width: 1.2rem;
+                height: 1.2rem;
+                background: url(../img/ocare/m12/ev1_dot.png) no-repeat 0 0 / 1.2rem;
+            }
+            &::after{left: auto; right:2rem;}
+        }
+
+        .img1{
+            width: 12rem;
+            height: 12rem;
+            position: relative;
+            margin: .8rem auto 3rem;
+
+            &.n2 img{width: 108%;}
+
+            img{
+                position: absolute;
+                bottom:0; right:0;
+                width: 100%;
+                z-index: 2;
+            }
+
+            &::after{
+                content: "";
+                display: block;
+                position: absolute;
+                top:-2.9rem;
+                left:-2.9rem; 
+                width: 18rem;
+                height: 18rem;
+                z-index: 1;
+                background: url(../img/ocare/m12/ev1_img3.png) no-repeat 0 0 / cover;
+                animation-name: bingle;
+                animation-duration: 16s;
+                animation-iteration-count: infinite;
+                animation-timing-function: linear;
+            }
+        }
+        @keyframes bingle {
+            0%{transform: rotate(0);}
+            0%{transform: rotate(-360deg);}
+        }
+
+        .mdl-bul-dot li{
+            color:#555;
+            font-size: 1.5rem;
+            font-weight: 500;
+            line-height: 2.25rem;
+            
+            margin-top: 1rem;
+            word-break: keep-all;
+        }
+
+    }
+    .mdl-wrap[data-style="event2"]{
+        background: url(../img/ocare/m12/m12_bg3.png) repeat 50% 50%;
+        width: 100%;
+        max-width: 100% !important;
+        position: relative;
+        .inner{
+            padding: 0 2rem 5.8rem;
+            &::before{
+                content: "";
+                display: block;
+                width: 100%;
+                height: 35.5rem;
+                background: url(../../../local/assets/img/ocare/m12/m12_contimg1.png) no-repeat;
+                background-size: 100%;
+            }
+        }
+        &.ocr-event-dim{
+            &::before{
+                z-index: 100;
+                top: 37rem;
+                background: rgba(39, 39, 39, 0.7) url(../../../local/img/event/m_ocare/common/event_timeout.svg) no-repeat center center/69.33vw;
+                height: calc(100% - 37rem);
+            }
+        }
+
+        p{
+            font-size: 1.6rem;
+            font-weight: 300;
+            line-height: 2.24rem;
+            margin-top: -2.8rem;
+            color: #fff;
+            text-align: center;
+        }
+
+        [data-type="stamp"]{
+            width: 100%;
+            padding: 1.6rem;
+            margin-top: 2.4rem;
+            border-radius: 1.6rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: row;
+            box-shadow: none !important;
+    
+            .mdl-subject-group{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: row;
+                position: relative;
+                &::before{
+                    content: '';
+                    width: 2.1rem;
+                    height: 2.4rem;
+                    background: url(../../../local/assets/img/ocare/m12/m12_stamp1.png);
+                    background-size: 100% 100%;
+                    margin-right: .8rem;
+                }
+                dt{
+                    font-size: 1.5rem;
+                    font-weight: 300;
+                    line-height: 2.2rem;
+                }
+                dd{
+                    font-size: 1.5rem;
+                    font-weight: 700;
+                    line-height: 2.2rem;
+                    color: #FF612D;
+                    margin: 0 0 0 1.2rem;
+                }
+            }
+
+            [data-type="remain"]{margin-right: 4.8rem;}
+            [data-type="exhaust"]::before{
+                background: url(../../../local/assets/img/ocare/m12/m12_stamp2.png);
+                background-size: 100% 100%;
+            }
+        }
+
+        .mdl-btn{
+            width: 100%;
+            margin-top: 3.6rem;
+            &::after{background-position: 0 -.1rem;}
+            &:disabled{
+                pointer-events: none;
+                background: var(--gray_20);
+                span{color: var(--gray_100);}
+            }
+            span{
+                font-size: 1.4rem;
+                font-weight: 500;
+                color: #fff;
+            }
+        }
+
+        .mdl-box[data-type="event"]{
+            padding: 4rem 2rem 3.2rem;
+            margin-top: 4rem;
+            border-radius: 1.6rem;
+            [data-typo="title"]{
+                width: 100%;
+                text-align: center;
+                line-height: 2.8rem !important;
+            }
+        } 
+
+        .mdl-list{margin-top: 2.4rem;}
+
+        .mdl-list-wrap{
+            gap: 2rem 1.4rem;
+            .mdl-list-item{
+                &[data-type="enter"],
+                &[data-type="soldout"],
+                &[data-type="exchange"]{
+                    label{
+                        .mdl-list-check{
+                            width: 5.6rem;
+                            height: 5.6rem;
+                            border: 0;
+                            background-color: transparent;
+                            &::before{display: none;}
+                        }
+                        .mdl-list-img{
+                            position: relative;
+                            &::before{
+                                content: '';
+                                width: 100%;
+                                height: 100%;
+                                background-color: #999999;
+                                opacity: 40%;
+                                position: absolute;
+                                top: 0;
+                                left: 0;
+                                z-index: 9;
+                            }
+                            span{
+                                color: #999;
+                                background-color: #eee;
+                            }
+                        }
+                    }
+                    input:checked + label{
+                        border: .2rem solid transparent;
+                        .mdl-list-check{
+                            border: none;
+                            background-color: transparent;
+                            &::before{display: none;}
+                        }
+                    }
+                }
+                &[data-type="enter"]{
+                    .mdl-list-check{
+                        background: url(../../../local/assets/img/ocare/m12/m12_ico_enter.png);
+                        background-size: 100% 100%;
+                    }
+                }
+                &[data-type="soldout"]{
+                    .mdl-list-check{
+                        background: url(../../../local/assets/img/ocare/m12/m12_ico_soldout.png);
+                        background-size: 100% 100%;
+                    }
+                }
+                &[data-type="exchange"]{
+                    .mdl-list-check{
+                        background: url(../../../local/assets/img/ocare/m12/m12_ico_exchange.png);
+                        background-size: 100% 100%;
+                    }
+                }
+                input{
+                    opacity: 0;
+                    filter: alpha(opacity=0);
+                    display: inline-block;
+                    position: absolute;
+                    z-index: -1;
+                    vertical-align: top;
+                    appearance: none;
+                    -moz-appearance: none;
+                    -webkit-appearance: none;
+                    margin: 0;
+                    &:checked + label{
+                        border: .2rem solid #FFD700;
+                        .mdl-list-check{
+                          border: .1rem solid #FFD700;
+                          background-color: #FFD700;
+                          &::before{
+                              background: url(../../../local/assets/img/ocare/m12/m12_ico_check_white.png);
+                              background-size: 100% 100%;
+                          }
+                        }  
+                    }
+                }
+                label{
+                    display: block;
+                    width: 14rem;
+                    height: 14rem;
+                    border: .2rem solid transparent;
+                    border-radius: 1.6rem;
+                    position: relative;
+                    overflow: hidden;
+                    border: .2rem solid transparent;
+                    .mdl-item-check{
+                        border: 0;
+                        background-color: transparent;
+                        &::before{display: none;}
+                    }  
+                }
+                .mdl-list-check{
+                    width: 3.2rem;
+                    height: 3.2rem;
+                    border: .1rem solid #999;
+                    border-radius: 50%;
+                    background-color: #fff;
+                    position: absolute;
+                    top: 1.2rem;
+                    right: 1.2rem;
+                    z-index: 99;
+                    &::before{
+                        content: '';
+                        width: 1.2rem;
+                        height: .8rem;
+                        text-align: center;
+                        background: url(../../../local/assets/img/ocare/m12/m12_ico_check.png);
+                        background-size: 100% 100%;
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                    }
+                }
+                .mdl-list-img{
+                    width: 100%;
+                    height: 100%;
+                    img{
+                        width: 100%;
+                        height: 100%;
+                    }
+                    span{
+                        font-family: 'KBF';
+                        width: 100%;
+                        padding: 0.6rem 0;
+                        font-size: 1.2rem;
+                        font-weight: 700;
+                        text-align: center;
+                        color: #000;
+                        background-color: #FFD700;
+                        position: absolute;
+                        bottom: 0;
+                        left: 0;
+                    }
+                }
+                .mdl-subject-group{
+                    width: 14rem;
+                    margin-top: 1.2rem;
+                }
+                .mdl-subject-em{
+                    display: block;
+                    font-size: 1.4rem;
+                    font-weight: 500;
+                    line-height: 2.2rem;
+                    color: #666;
+                    margin-bottom: 0;
+                }
+                .mdl-subject-tit{
+                    display: block;
+                    margin-top: .4rem;
+                    font-size: 1.6rem;
+                    font-weight: 500;
+                    line-height: 2.2rem;
+                    color: #000;
+                    word-break: keep-all;
+                }
+                .mdl-subject-txt{
+                    width: fit-content;
+                    margin-top: .8rem;
+                    background-color: #000;
+                    padding: 0.4rem 0.9rem 0.5rem 0.45rem;
+                    display: flex;
+                    justify-content: flex-start;
+                    align-items: center;
+                    border-radius: 7.5rem;
+                    &::before{
+                        content: '';
+                        width: 1.5rem;
+                        height: 1.5rem;
+                        background: url(../../../local/assets/img/ocare/m12/m12_ico_stamp.png);
+                        background-size: 100% 100%;
+                        margin-right: .3rem;
+                    }
+                     span{
+                        font-family: 'KBF';
+                        font-size: 1rem;
+                        font-weight: 700;
+                        line-height: 1rem;
+                        color: #fff;
+                     }
+                }
+            }
+        }
+        .mdl-btn-wrap{
+            [data-style="primary"],
+            [data-style="primary-gray"]{
+                span{
+                    font-size: 1.8rem;
+                    font-weight: 500;
+                    color: #000;
+                }
+            }
+            [data-style="primary-gray"]{
+                background-color: #ccc;
+                pointer-events: none;
+                span{color: #888;}
+            }
+        }
+
+        .mdl-banner{
+            max-width: 37.5rem;
+            margin: 0 auto;
+            padding: 3.2rem 2.4rem;
+            border-radius: 0;
+            overflow: visible;
+            &::after{
+                content: '';
+                width: 8rem;
+                height: 8rem;
+                z-index: 1;
+            }
+            span{
+                position: relative;
+                z-index: 1;
+            }
+            &[data-style="point"]{
+                background-color: #037C5D;
+               
+                &::after{
+                    background: url(../../../local/assets/img/ocare/m12/m12_ico_bn1.png);
+                    background-size: 100% 100%;
+                }
+                &
+                .mdl-banner-tit::after{
+                    background: url(../../../local/assets/img/ocare/m12/m12_arrow_white.png);
+                    background-size: 100% 100%;
+                }
+                &::before{
+                    background: #037C5D;
+                    width: 200vw;
+                    position: absolute;
+                    height: 100%;
+                    content: "";
+                    display: block;
+                    left: -100vw;
+                    z-index: 0;
+                    pointer-events: none;
+                }
+            }
+            &[data-style="yearend"]{
+                background-color: #FFD027;
+                &::after{
+                    background: url(../../../local/assets/img/ocare/m12/m12_ico_bn2.png);
+                    background-size: 100% 100%;
+                }
+                .mdl-banner-txt,
+                .mdl-banner-tit{
+                    font-family: 'KBF';
+                    color: #111;
+                    &::after{
+                        background: url(../../../local/assets/img/ocare/m12/m12_arrow_black.png);
+                        background-size: 100% 100%;
+                        background-position-y: -.1rem;
+                    }
+                }
+                &::before{
+                    background: #FFD027;
+                    width: 200vw;
+                    position: absolute;
+                    height: 100%;
+                    content: "";
+                    display: block;
+                    left: -100vw;
+                    z-index: 0;
+                    pointer-events: none;
+                }
+            }
+            .mdl-banner-txt,
+            .mdl-banner-tit{
+                font-weight: 700;
+                line-height: 2.6rem;
+                text-align: left;
+                color: #fff;
+            }
+            .mdl-banner-txt{font-size: 1.6rem;}
+            .mdl-banner-tit{
+                font-size: 1.8rem;
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                &::after{
+                    content: '';
+                    width: 2.6rem;
+                    height: 2.6rem;
+                }
+            }
+        }
+    }
+
+    //꼭알아두세요
+    .mocr-note{
+        padding: 5.6rem 2.4rem 3.4rem;
+        .mdl-wrap{
+            padding: 0 2.4rem;
+            .mdl-bul-dot li .column{
+                em{
+                    font: inherit;
+                    font-size: 1.4rem;
+                    font-weight: 500;
+                    line-height: 2rem;
+                    color: #fff;
+                }
+                .link-btn{
+                    margin-top: .8rem;
+                    display: flex;
+                    justify-content: flex-start;
+                    align-items: center;
+                    gap: 0;
+
+                    &::after{
+                        content: '';
+                        width: 2.6rem;
+                        height: 2.6rem;
+                        background: url(../../../local/assets/img/ocare/m12/m12_arrow_white2.png);
+                        background-size: 100% 100%;
+                        background-position-y: -.1rem;
+                    }
+                }
+            } 
+        } 
+        .flex-wrap{
+            .link-btn{
+                font-size: 1.4rem;
+                font-weight: 300;
+                line-height: 2rem;
+                text-decoration: underline;
+                margin-top: 0.4rem;
+                color: #AEAEAE;
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                &::after{
+                    content: '';
+                    width: 1.6rem;
+                    height: 1.6rem;
+                    background: url(../../../local/assets/img/ocare/m12/m12_arrow_gray.png);
+                    background-size: 100% 100%;
+                    background-position-y: 0.1rem;
+                    margin-left: 0.55rem;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width:374px) {
+    html{font-size:2.66vw;}
+}

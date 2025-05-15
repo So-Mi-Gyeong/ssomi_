@@ -1,0 +1,62 @@
+// 영향을 주지 않는 class명은 data-brand 바깥에 입력
+
+/* 참손길 */
+[data-brand="chamsongil"]{
+    * {
+        font-family: 'base';
+        word-break: keep-all;
+        .btn-wrap .btn-txt{
+            font-family: 'KBF';
+        }
+    }
+    .brand-body{padding: 4.2rem 2.4rem 2.4rem;}
+    .ocr-product-intro-img{
+        &[data-img="cham-con01"]{background: url(../../img/content/chamsongil/chamsongil-top01.jpg) no-repeat 50% 50%/cover;}
+        &[data-img="cham-con02"]{background: url(../../img/content/chamsongil/chamsongil-top02.jpg) no-repeat 50% 50%/cover;}
+        &[data-img="cham-con03"]{background: url(../../img/content/chamsongil/chamsongil-top03.jpg) no-repeat 50% 50%/cover;}
+        &[data-img="cham-con04"]{background: url(../../img/content/chamsongil/chamsongil-top04.jpg) no-repeat 50% 50%/cover;}
+    }
+    .mdl-list[data-type="intro"]{margin-top: 3.2rem;}
+    .mdl-subject[data-type="intro"]{
+        .mdl-subject-tit{
+            font-size: 2.6rem;
+            font-weight: 700;
+            line-height: 3.64rem;
+            color: #000;
+            margin: 3.2rem 0 1.6rem;
+        }
+        .mdl-subject-txt{
+            width: 100%;
+            font-size: 1.6rem;
+            font-weight: 400;
+            line-height: 2.2rem;
+            color: #666;
+            text-align: center;
+        }
+    }
+    .brand-service-info{
+        .service-info-banner{
+            background-color: #E7F2F6;
+            margin-top: 3.2rem;
+        }
+        .chamsongil-banner-tit{
+            color: #51676F;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            &::before{
+                content: '';
+                display: block;
+                width: 1rem;
+                height: 1rem;
+                background: url(../../img/content/chamsongil/chamsongil-banner-icon.png);
+                background-size: 1rem;
+                margin-right: .4rem;
+            }
+        }
+        .chamsongil-banner-txt{
+            margin-top: .3rem;
+            color: #51676F;
+        }
+    }
+}

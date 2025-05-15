@@ -1,0 +1,3376 @@
+@keyframes popupShow22{
+    0% {display: block; opacity: 0; z-index: 0; top: auto; bottom: -100vh;}
+    1% {bottom: -100vh;opacity: 0;top: auto;}
+    100% {bottom: 0;opacity: 1;top: auto;}
+}
+@keyframes popupHide22 {
+    0% {bottom: 0; opacity: 1;}
+    99% {bottom: -100vh;opacity: 0;}
+    100% {opacity: 0;bottom: -100vh;visibility: hidden;}
+}
+.ocr-psytest .wrapper::before{display: none !important;}
+
+.modal-footer{
+    padding-bottom: calc(env(safe-area-inset-bottom) + 4rem);
+}
+.modal .modal-content {
+    width: calc(100% - 4rem)
+}
+
+.modal.full .modal-content,.modal.bottom .modal-content,.modal.bar .modal-content {
+    width: 100%
+}
+
+.modal.alert .modal-content {
+    width: calc(100% - 4rem);
+    max-width: 30rem
+}
+
+.modal {
+    z-index: 100;
+}
+
+.modal.alert {
+    z-index: 101;
+}
+
+.modal-open {
+    overflow-x: hidden;
+    overflow-y: hidden !important
+}
+
+.modal-open #wrap {
+    z-index: 0
+}
+
+.modal.fade {
+    transition: all .33s cubic-bezier(0.685, 0.0473, 0.346, 1) 0s;
+    opacity: 0
+}
+.modal.show::after{content: "";
+    animation-name: fadeIn;
+    animation-delay: .05s;
+    animation-duration: .3s;
+    animation-iteration-count: 1;
+    animation-timing-function:ease-in; 
+    animation-fill-mode:forwards;
+}
+.modal.show.hide::after{content: "";
+    opacity: 1;
+    animation-name: fadeOut;
+    animation-delay: .05s;
+    animation-duration: .3s;
+    animation-iteration-count: 1;
+    animation-timing-function:ease-in; 
+    animation-fill-mode:forwards;
+}
+.modal::after{content: "";
+    opacity: 0;
+    display: block;
+    position: absolute;
+    width: 100%; height: 100%;
+    top:0; left:0; background-color: rgba(0,0,0,0.5); 
+    animation-name: fadeOut;
+        animation-delay: .05s;
+        animation-duration: .3s;
+        animation-iteration-count: 1;animation-timing-function:ease-in; 
+        animation-fill-mode:forwards;
+    }
+.modal.show .modal-dialog{
+    bottom: -100vh;
+    z-index: 1;
+    opacity: 0;
+    animation-name: popupShow22;
+    animation-delay: .1s;
+    animation-duration: .3s;
+    animation-iteration-count: 1;animation-timing-function:ease-in; 
+    animation-fill-mode:forwards;
+}
+.modal.show.hide .modal-dialog{
+    bottom: 0;
+    opacity: 1;
+    animation-name: popupHide22;
+    animation-delay: 0;
+    animation-duration: .3s;
+    animation-iteration-count: 1;animation-timing-function:ease-in; 
+    animation-fill-mode:forwards;
+}
+.modal .h4{
+    font-size: 1.8rem;
+    font-weight: 500;
+    line-height: 1.8rem;
+    font-family: 'KBF';
+}
+.modal.show {
+    opacity: 1;
+}
+.modal-footer {padding:0 2.4rem}
+.modal.full.fade,.modal.drag.fade,.modal.bottom.fade {
+    transform: translate3d(0, 100%, 0);
+    opacity: 0
+}
+.modal .comp{padding:0}
+.modal .section{padding-bottom: 0 !important;}
+.modal.full.show,.modal.drag.show,.modal.bottom.show {
+    transform: translate3d(0, 0, 0);
+    opacity: 1
+}
+.form-msg.error {
+    color: #f04d6a !important;
+}
+.modal .blind {
+    position: absolute;
+    display: inline-block;
+    font-size: .1rem;
+    width: 0.1rem;
+    height: 0.1rem;
+    padding: 0;
+    margin: -0.1rem;
+    visibility: hidden;
+    overflow: hidden;
+    border: 0;
+    clip: rect(0, 0, 0, 0);
+}
+.form-msg.error:after {
+    background-image: url("data:image/svg+xml,%3Csvg width='20' height='19' viewBox='0 0 20 19' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M19.2059 9.5C19.2059 14.4535 15.0358 18.5 9.85294 18.5C4.67011 18.5 0.5 14.4535 0.5 9.5C0.5 4.54647 4.67011 0.5 9.85294 0.5C15.0358 0.5 19.2059 4.54647 19.2059 9.5Z' stroke='%23F04D6A'/%3E%3Cpath d='M10.5724 11.244H9.59736L9.27236 4.718H10.8974L10.5724 11.244ZM9.18136 13.233C9.18136 12.895 9.26803 12.6567 9.44136 12.518C9.6147 12.3793 9.82703 12.31 10.0784 12.31C10.321 12.31 10.529 12.3793 10.7024 12.518C10.8757 12.6567 10.9624 12.895 10.9624 13.233C10.9624 13.571 10.8757 13.8137 10.7024 13.961C10.529 14.1083 10.321 14.182 10.0784 14.182C9.82703 14.182 9.6147 14.1083 9.44136 13.961C9.26803 13.8137 9.18136 13.571 9.18136 13.233Z' fill='%23F04D6A'/%3E%3C/svg%3E%0A")
+}
+
+.form-msg {
+    position: relative;
+    margin-top: 1.6rem;
+    font-size: 1.4rem;
+    padding-left: 2.6rem;
+    line-height: 1.9rem;
+}
+.modal-backdrop {
+    position: fixed;
+    z-index: 8000;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: #000;
+    opacity: .5
+}
+
+.modal.black .modal-content {
+    background: #000
+}
+
+.modal.black .modal-header .modal-title {
+    color: #fff
+}
+
+.modal.black .btn-modal-close {
+    background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M21 20.9999L3 3M21.0001 3L3 21' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A")
+}
+
+.modal.yellow .modal-content {
+    background: #fffde8
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+    outline: 0
+}
+
+.modal .modal-dialog {
+    position: relative;
+    width: auto;
+    height: auto;
+    min-height: 100%;
+    margin: 0 auto;
+    pointer-events: none;
+    -webkit-appearance: none;
+    vertical-align: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    align-items: center
+}
+
+.modal .modal-content {
+    position: relative;
+    margin: 0 auto;
+    border-radius: 4.8rem;
+    background: #fff;
+    background-clip: padding-box;
+    box-shadow: 0 -0.4rem 12rem rgba(0,0,0,.08);
+    pointer-events: auto;
+    outline: 0;
+    transition: box-shadow .15s linear
+}
+
+.modal .modal-header .wrapper {
+    padding: 0 4.8rem 0 4rem;
+    min-height: 5.6rem
+}
+
+.modal .modal-header .modal-title {
+    height: 5.6rem;
+    overflow: hidden;
+    color: #000;
+    font-size: 1.8rem;
+    line-height: 5.6rem;
+    text-align: center;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap
+}
+
+.modal .modal-body {
+    position: relative
+}
+
+.modal .modal-body .wrapper {
+    position: relative;
+    height: auto;
+    padding: 0 0 6.4rem;
+    overflow-y: auto;
+    overflow-x: hidden
+}
+
+.modal .modal-footer {
+    position: relative;
+    z-index: 1
+}
+
+.modal .modal-footer.fix {
+    padding-bottom: 4rem
+}
+
+.modal .btn-modal-close {
+    position: absolute;
+    top: 1.6rem;
+    right: 2.4rem;
+    width: 2.4rem;
+    height: 2.4rem;
+    background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M21 20.9999L3 3M21.0001 3L3 21' stroke='%23000' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+    background-size: 100%
+}
+
+.modal .btn-modal-close span {
+    position: absolute;
+    display: inline-block;
+    font-size: .1rem;
+    width: .1rem;
+    height: .1rem;
+    padding: 0;
+    margin: -0.1rem;
+    visibility: hidden;
+    overflow: hidden;
+    border: 0;
+    clip: rect(0, 0, 0, 0)
+}
+
+.modal .btn-modal-close:after {
+    width: 3.6rem;
+    height: 3.6rem;
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%)
+}
+
+.modal .btn-modal-handle {
+    width: 5.6rem;
+    height: .4rem;
+    background: #e8e8ea;
+    border-radius: .3rem
+}
+
+.modal.full .modal-dialog {
+    height: 100%
+}
+
+.modal.full .modal-content {
+    border-radius: 0
+}
+
+.modal.full .modal-content .governing .governing_title+.info_text+.info_text {
+    margin-top: 1.2rem
+}
+
+.modal.full.complete .modal-title {
+    padding: 0;
+    text-align: center
+}
+
+.modal.full.complete .btn-modal-close {
+    display: none
+}
+
+.modal.bottom .modal-dialog {
+    align-items: end
+}
+
+.modal.bottom .modal-content {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0
+}
+
+.modal.bottom .modal-content.no_header .modal-header {
+    height: 0;
+    opacity: 0
+}
+
+.modal.bottom .modal-content.no_header .modal-body .wrapper .comp:first-child {
+    margin-top: 0
+}
+
+.modal.bottom .modal-header .wrapper {
+    min-height: 6.4rem
+}
+
+.modal.bottom .modal-header .modal-title {
+    height: 6.4rem;
+    line-height: 6.4rem
+}
+
+.modal.bottom .modal-body .wrapper {
+    padding: 0 0 4rem
+}
+
+.modal.bottom .modal-body .wrapper.no_footer {
+    padding-bottom: 5.6rem
+}
+
+.modal.bottom .btn-modal-close {
+    top: 2.4rem;
+    right: 2.4rem
+}
+
+.modal.bottom.drag {
+    transition: opacity .5s,visibility .5s
+}
+
+.modal.bottom.drag[aria-hidden=true] {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none
+}
+
+.modal.bottom.drag[aria-hidden=true] .modal-content {
+    transform: translateY(100%)
+}
+
+.modal.bottom.drag .modal-content {
+    transition: transform .5s,border-radius .5s;
+    transform: translateY(0)
+}
+
+.modal.bottom.drag .modal-content:not(.not_selectable) {
+    transition: transform .5s,border-radius .5s,height .5s
+}
+
+.modal.bottom.drag .modal-header .wrapper {
+    height: 4rem;
+    padding: 0
+}
+
+.modal.bottom.drag .modal-header .wrapper .drag-handler {
+    position: relative;
+    display: block;
+    height: 4rem;
+    cursor: grab
+}
+
+.modal.bottom.drag .modal-header .wrapper .drag-handler:after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 5.6rem;
+    height: .4rem;
+    margin-left: -2.8rem;
+    background: #e8e8ea;
+    border-radius: .3rem
+}
+
+.modal.bottom.drag .modal-body .wrapper .comp:first-child {
+    margin-top: 0
+}
+
+.modal.bottom.drag .modal-body .wrapper .modal-subtitle {
+    margin-top: 0
+}
+
+.modal.bottom.drag .modal-footer.fix {
+    position: fixed;
+    z-index: 10;
+    left: 0;
+    right: 0;
+    bottom: 0
+}
+
+.modal.bottom.drag .btn-modal-close {
+    display: none
+}
+
+.modal.bottom.drag .modal-content {
+    z-index: 100
+}
+
+.modal.bottom.drag .modal-backdrop {
+    z-index: 99
+}
+
+.modal.md .modal-dialog {
+    height: 100%
+}
+
+.modal.md .modal-content {
+    border-radius: 1.6rem
+}
+
+.modal.md .modal-footer {
+    border-radius: 1.6rem
+}
+
+.modal.alert .modal-content {
+    border-radius: 1.6rem
+}
+
+.modal.alert .modal-header .wrapper {
+    padding: 3.2rem 3.2rem .6rem
+}
+
+.modal.alert .modal-header .wrapper .modal-title {
+    padding-right: 0;
+    color: #1f1f21;
+    text-align: center
+}
+
+.modal.alert .modal-body .wrapper {
+    padding: 0 3.2rem 3.2rem;
+    margin-bottom: 0;
+    text-align: center
+}
+
+.modal.alert .modal-body .wrapper .alert_msg {
+    color: #555557
+}
+
+.modal.alert .modal-body .wrapper .alert_msg strong {
+    color: #1f1f21
+}
+
+.modal.alert .modal-footer .btn_area {
+    border-top: .1rem solid #efeff1
+}
+
+.modal.alert .modal-footer .btn_area .alert_btn {
+    font-size: 1.5rem;
+    margin: 0;
+    color: #f8670d
+}
+
+.modal.alert .modal-footer .btn_area .alert_btn+.alert_btn {
+    border-left: .1rem solid #efeff1;
+    border-radius: 0
+}
+
+.modal.alert .modal-footer .btn_area .btn_cancel {
+    color: #555557
+}
+
+.modal.alert.alert_md .modal-content {
+    max-width: 32rem
+}
+
+.modal.alert.alert_md .modal-header .wrapper {
+    padding: 3.2rem 2.8rem 2rem
+}
+
+.modal.alert.alert_md .modal-header .wrapper .modal-title {
+    text-align: left
+}
+
+.modal.alert.alert_md .modal-body .wrapper {
+    padding: 0 2.8rem 3.2rem;
+    text-align: left
+}
+
+.modal.alert.alarm .modal-header .wrapper {
+    padding: 3.2rem 2.8rem 2rem
+}
+
+.modal.alert.alarm .modal-header .wrapper .modal-title {
+    text-align: left
+}
+
+.modal.alert.alarm .modal-body .wrapper {
+    padding: 0 2.8rem 3.2rem;
+    text-align: left
+}
+
+.modal.alert.alarm .modal-footer {
+    padding: 0 2.8rem 3.2rem
+}
+
+.modal.alert.alarm .modal-footer .btn_area {
+    border-top: none
+}
+
+
+
+.btn {
+    color: #000;
+    display: inline-block;
+    font-weight: 500;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    user-select: none;
+    border: .1rem solid rgba(0,0,0,0);
+    box-sizing: border-box;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    padding: 1.8rem 2rem;
+    font-size: 1.6rem;
+    line-height: 1.8rem;
+    border-radius: 10rem
+}
+
+.btn:hover,.btn:focus,.btn.focus {
+    text-decoration: none;
+    outline: 0
+}
+
+.btn:disabled,.btn.disabled {
+    cursor: default;
+    box-shadow: none;
+    pointer-events: none;
+    color: #888 !important;
+    border: rgba(0,0,0,0) !important
+}
+
+.btn.lg {
+    padding: 2.4rem 2rem;
+    font-size: 1.8rem;
+    line-height: 2.2rem;
+    border-radius: 10rem
+}
+
+.btn.md {
+    padding: 1.8rem 2rem;
+    font-size: 1.6rem;
+    line-height: 1.8rem;
+    border-radius: 10rem;
+    color: #1d1c19
+}
+
+.btn.fill01 {
+    background-color: gold
+}
+
+.btn.fill01:not(:disabled):not(.disabled):active,.btn.fill01:not(:disabled):not(.disabled).active {
+    border: .1rem solid rgba(0,0,0,0);
+    position: relative;
+    overflow: hidden
+}
+
+.btn.fill01:not(:disabled):not(.disabled):active:after,.btn.fill01:not(:disabled):not(.disabled).active:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,.1)
+}
+
+.btn.fill02 {
+    background-color: #f5f5f5
+}
+
+.btn.fill02:not(:disabled):not(.disabled):active,.btn.fill02:not(:disabled):not(.disabled).active {
+    border: .1rem solid rgba(0,0,0,0);
+    position: relative;
+    overflow: hidden
+}
+
+.btn.fill02:not(:disabled):not(.disabled):active:after,.btn.fill02:not(:disabled):not(.disabled).active:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,.1)
+}
+
+.btn.line01 {
+    border: .1rem solid #ddd;
+    background-color: #fff
+}
+
+.btn.line01:not(:disabled):not(.disabled):active,.btn.line01:not(:disabled):not(.disabled).active {
+    border: .1rem solid rgba(0,0,0,0);
+    position: relative;
+    overflow: hidden
+}
+
+.btn.line01:not(:disabled):not(.disabled):active:after,.btn.line01:not(:disabled):not(.disabled).active:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,.1)
+}
+
+.btn.more {
+    padding: 1.8rem 2rem;
+    font-size: 1.6rem;
+    line-height: 1.8rem;
+    border-radius: 10rem;
+    min-width: 12rem;
+    padding-top: 1.6rem;
+    padding-bottom: 1.6rem;
+    background-color: #f5f5f5;
+    color: #888
+}
+
+.btn.more:not(:disabled):not(.disabled):active,.btn.more:not(:disabled):not(.disabled).active {
+    border: .1rem solid rgba(0,0,0,0);
+    position: relative;
+    overflow: hidden
+}
+
+.btn.more:not(:disabled):not(.disabled):active:after,.btn.more:not(:disabled):not(.disabled).active:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,.1)
+}
+
+.btn.action {
+    padding: 2.4rem 1.2rem;
+    font-size: 2rem;
+    line-height: 2rem;
+    border-radius: 10rem;
+    height: 7rem;
+    font-weight: 700;
+    background-color: gold
+}
+
+.btn.action:not(:disabled):not(.disabled):active,.btn.action:not(:disabled):not(.disabled).active {
+    border: .1rem solid rgba(0,0,0,0);
+    position: relative;
+    overflow: hidden
+}
+
+.btn.action:not(:disabled):not(.disabled):active:after,.btn.action:not(:disabled):not(.disabled).active:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,.1)
+}
+
+.btn.action .icon {
+    position: relative;
+    display: inline-block;
+    width: 3.3rem;
+    height: 2.2rem;
+    margin-left: .8rem
+}
+
+.btn.action .icon::before {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: -0.4rem;
+    width: 3.3rem;
+    height: 2.2rem;
+    background: url(https://ap-northeast-2-02890046-view.menlosecurity.com/c/0/i/aHR0cDovLzIyMS4xNDcuNDQuMTE3OjExODAvc3ZuL2tib2NhcmUvcHN5Y2hvbG9naWNhbFRlc3Qvd2ViQXBwL3Jlc291cmNlcy9pbWcvaWNvbi9pY29fYnRuX2hhbmQucG5n?b=RNS3UeHJ&k=Jx4NsCbgTYmoVIIHl02H1e_iQn8hz5IV64Ac1hDWMTE~) center center no-repeat;
+    background-size: 100%
+}
+
+.btn.test {
+    padding: 1.4rem 1.6rem;
+    font-size: 1.4rem;
+    line-height: 1.6rem;
+    border-radius: 1.2rem;
+    color: #000;
+    border: .1rem solid #ddd;
+    background-color: #fff
+}
+
+.btn.test:not(:disabled):not(.disabled):active,.btn.test:not(:disabled):not(.disabled).active {
+    border: .1rem solid rgba(0,0,0,0);
+    position: relative;
+    overflow: hidden
+}
+
+.btn.test:not(:disabled):not(.disabled):active:after,.btn.test:not(:disabled):not(.disabled).active:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,.1)
+}
+
+.btn.test.success {
+    cursor: default;
+    box-shadow: none;
+    pointer-events: none;
+    color: #7099e7 !important;
+    border: rgba(0,0,0,0) !important
+}
+
+
+.type-en {
+    display: block;
+    margin-bottom: 2.4rem;
+    font-size: 2.4rem;
+    font-weight: 700;
+    color: #888;
+    line-height: 2.8rem
+}
+
+.fw700 {
+    font-weight: 700
+}
+
+.fw500 {
+    font-weight: 500
+}
+
+.fw400 {
+    font-weight: 400
+}
+
+.fw300 {
+    font-weight: 400
+}
+
+.mgt56 {
+    margin-top: 5.6rem !important
+}
+
+.mgt40 {
+    margin-top: 4rem !important
+}
+
+.mgt24 {
+    margin-top: 2.4rem !important
+}
+
+.mgb50 {
+    margin-bottom: 5rem !important
+}
+
+.pd0 {
+    padding: 0 !important
+}
+
+.pdt40 {
+    padding-top: 4rem !important
+}
+
+.ta-r {
+    text-align: right !important
+}
+
+.content-wrap .section:first-child {
+    padding-top: 5.6rem
+}
+
+.content-wrap .section.section-fix {
+    padding-top: 0
+}
+
+.content-wrap .section.white:last-child .round {
+    border-radius: 4.8rem 4.8rem 0 0
+}
+
+.section .h2,.section .h3,.section .h4,.section.white .h2,.section.white .h3,.section.white .h4 {
+    color: #000
+}
+
+.section.black .h2,.section.black .h3,.section.black .h4 {
+    color: #fff
+}
+
+.section .main-title {
+    position: absolute;
+    left: 50%;
+    top: 10rem;
+    width: 100%;
+    transform: translateX(-50%);
+    text-align: center;
+    z-index: 1;
+    color: #000
+}
+
+.section .main-title .h5 {
+    display: block;
+    margin-top: 3.2rem;
+    color: #666
+}
+
+.section .main-title .h5 b {
+    text-decoration: underline
+}
+
+.section .main-title .h5 span {
+    color: #000
+}
+
+.section-fix+.section {
+    margin-top: 0
+}
+
+.section+.section {
+    margin-top: 5.6rem
+}
+
+.section-fix {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 0;
+    padding-bottom: 4rem;
+    width: 100%;
+    min-height: 100vh
+}
+
+.section-fix .fix-top {
+    position: relative;
+    width: 100%;
+    padding-top: 5.6rem;
+    height: fit-content
+}
+
+.section-fix .fix-bottom {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    width: 100%
+}
+
+.section-fix .fix-bottom .btn-code {
+    display: block;
+    margin: 0 auto;
+    margin-top: 3.2rem;
+    color: #fff;
+    text-decoration: underline;
+    text-align: center
+}
+
+.comp {
+    padding: 0 2rem
+}
+
+.comp+.comp {
+    margin-top: 4.8rem
+}
+
+.round {
+    border-radius: 4.8rem;
+    background: #fff;
+    padding: 6.4rem 2rem 2rem
+}
+
+.btn-area {
+    position: relative;
+    display: flex;
+    margin-top: 2.4rem
+}
+
+.btn-area .btn {
+    flex: 1
+}
+
+.btn-area .btn {
+    margin-right: .4rem
+}
+
+.btn-area .btn:first-child {
+    margin-left: 0
+}
+
+.btn-area .btn:not(:first-child) {
+    margin-left: .4rem
+}
+
+.btn-area .btn:last-child {
+    margin-right: 0
+}
+
+.btn-area.footer,.btn-area.cta {
+    display: flex;
+    margin-top: 0
+}
+
+.btn-area.footer .btn,.btn-area.cta .btn {
+    flex: 1
+}
+
+.btn-area.sub {
+    height: 2rem
+}
+
+.btn-text {
+    margin: 0 auto;
+    color: #999;
+    text-decoration: underline !important
+}
+
+.title-area {
+    display: block;
+    position: relative;
+    text-align: center
+}
+
+.title-area.ta-l {
+    text-align: left
+}
+
+.title-area.img {
+    margin-top: 3.2rem
+}
+
+.title-area.img::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+    width: 9rem;
+    height: 8.5rem;
+    background: url(https://ap-northeast-2-02890046-view.menlosecurity.com/c/0/i/aHR0cDovLzIyMS4xNDcuNDQuMTE3OjExODAvc3ZuL2tib2NhcmUvcHN5Y2hvbG9naWNhbFRlc3Qvd2ViQXBwL3Jlc291cmNlcy9pbWcvaWNvbi9pY29fdHJvcGh5LnBuZw~~?b=RNS3UeHJ&k=X8YwC1_F3UOwc6QREczg4WRIGIEoJIY_oSL5Iy_hxT8~) no-repeat center/100%
+}
+
+.title-area.img .h2 {
+    padding-top: 10.1rem
+}
+
+.title-area .sub-title {
+    font-size: 1.6rem;
+    font-weight: 500;
+    line-height: 2.4rem;
+    color: #fff;
+    opacity: .6
+}
+
+.title-area h2+.sub-title {
+    margin-top: 1.1rem
+}
+
+.section.white .title-area .sub-title,.round .title-area .sub-title {
+    color: #666
+}
+
+.gray-box {
+    padding: 3.2rem 2rem;
+    background: #f7f7f7;
+    border-radius: 2.4rem
+}
+
+.gray-box .h4 {
+    display: block;
+    margin-bottom: 3.2rem
+}
+
+.text-area {
+    color: #666;
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+    font-weight: 300
+}
+
+.text-area.yellow {
+    margin-top: 3.2rem !important
+}
+
+.title-area+.text-area {
+    margin-top: 2.4rem
+}
+
+.title-area+.gray-box {
+    margin-top: 3.2rem
+}
+
+.title-area+.line-box {
+    margin-top: 3.2rem
+}
+
+.gray-box+.title-area {
+    margin-top: 5.6rem
+}
+
+.text-area+.title-area {
+    margin-top: 4rem
+}
+
+.check-area+.title-area {
+    margin-top: 4rem
+}
+
+.total-list+.btn-area {
+    margin-top: 4rem
+}
+
+input[type=text],input[type=number],input[type=password] {
+    width: 100%;
+    height: 5.3rem;
+    outline: none;
+    font-size: 1.8rem;
+    font-weight: 500;
+    line-height: 2.7rem;
+    color: #000;
+    background-color: rgba(0,0,0,0);
+    border-bottom: .1rem solid #ddd;
+    caret-color: gold;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border-radius: 0
+}
+
+input[type=text][readonly=readonly],input[type=number][readonly=readonly],input[type=password][readonly=readonly] {
+    background-color: #f9f9fb
+}
+
+input[type=text]:disabled,input[type=number]:disabled,input[type=password]:disabled {
+    color: #888;
+    background-color: #f7f7f7
+}
+
+input[type=text]::-webkit-input-placeholder,input[type=number]::-webkit-input-placeholder,input[type=password]::-webkit-input-placeholder {
+    color: #aaa;
+    font-size: 1.6rem;
+    font-weight: 300
+}
+
+input[type=text]::-moz-placeholder,input[type=number]::-moz-placeholder,input[type=password]::-moz-placeholder {
+    color: #aaa;
+    font-size: 1.6rem;
+    font-weight: 300
+}
+
+input[type=text]:-ms-input-placeholder,input[type=number]:-ms-input-placeholder,input[type=password]:-ms-input-placeholder {
+    color: #aaa;
+    font-size: 1.6rem;
+    font-weight: 300
+}
+
+input[type=text]::-ms-input-placeholder,input[type=number]::-ms-input-placeholder,input[type=password]::-ms-input-placeholder {
+    color: #aaa;
+    font-size: 1.6rem;
+    font-weight: 300
+}
+
+input[type=text]::placeholder,input[type=number]::placeholder,input[type=password]::placeholder {
+    color: #aaa;
+    font-size: 1.6rem;
+    font-weight: 300
+}
+
+input[type=text][type=number]::-webkit-inner-spin-button,input[type=text][type=number]::-webkit-outer-spin-button,input[type=number][type=number]::-webkit-inner-spin-button,input[type=number][type=number]::-webkit-outer-spin-button,input[type=password][type=number]::-webkit-inner-spin-button,input[type=password][type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none
+}
+
+input[type=text]::-ms-check,input[type=number]::-ms-check,input[type=password]::-ms-check {
+    display: none
+}
+
+input[type=radio].btn-radio {
+    position: absolute;
+    z-index: -1;
+    left: 50%;
+    top: 50%
+}
+
+input[type=radio].btn-radio+label {
+    display: block;
+    padding: 2.4rem 2rem;
+    font-size: 1.8rem;
+    line-height: 2.2rem;
+    border-radius: 10rem;
+    color: #000;
+    background-color: #f5f5f5;
+    text-align: center
+}
+
+input[type=radio].btn-radio:checked+label {
+    background-color: gold
+}
+
+input[type=radio].btn-radio:disabled+label {
+    background-color: #f7f7f7;
+    color: #888
+}
+
+input[type=radio].btn-radio:checked:disabled+label {
+    background-color: #f7f7f7;
+    color: #888
+}
+
+input[type=checkbox].btn-checkbox {
+    position: absolute;
+    z-index: -1;
+    left: 50%;
+    top: 50%
+}
+
+input[type=checkbox].btn-checkbox+label {
+    display: inline-block;
+    padding: 1.8rem .5rem;
+    font-size: 1.4rem;
+    font-weight: 300;
+    line-height: 1.6rem;
+    border-radius: .8rem;
+    border: .1rem solid #eaeaea;
+    color: #666;
+    background-color: #fff;
+    text-align: center
+}
+
+input[type=checkbox].btn-checkbox:checked+label {
+    color: #fff;
+    font-weight: 700;
+    border-color: .1rem solid #000;
+    background-color: #000
+}
+
+input[type=checkbox].btn-checkbox:disabled+label {
+    background-color: #f7f7f7;
+    color: #888
+}
+
+input[type=checkbox].btn-checkbox:checked:disabled+label {
+    background-color: #f7f7f7;
+    color: #888
+}
+
+.form-msg {
+    position: relative;
+    margin-top: 1.6rem;
+    font-size: 1.4rem;
+    padding-left: 2.6rem;
+    line-height: 1.9rem
+}
+
+.form-msg:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 1.9rem;
+    height: 1.9rem;
+    margin-top: -0.95rem;
+    background-repeat: no-repeat;
+    background-size: 100% 100%
+}
+
+.form-msg.error {
+    color: #f04d6a
+}
+
+.form-msg.error:after {
+    background-image: url("data:image/svg+xml,%3Csvg width='20' height='19' viewBox='0 0 20 19' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M19.2059 9.5C19.2059 14.4535 15.0358 18.5 9.85294 18.5C4.67011 18.5 0.5 14.4535 0.5 9.5C0.5 4.54647 4.67011 0.5 9.85294 0.5C15.0358 0.5 19.2059 4.54647 19.2059 9.5Z' stroke='%23F04D6A'/%3E%3Cpath d='M10.5724 11.244H9.59736L9.27236 4.718H10.8974L10.5724 11.244ZM9.18136 13.233C9.18136 12.895 9.26803 12.6567 9.44136 12.518C9.6147 12.3793 9.82703 12.31 10.0784 12.31C10.321 12.31 10.529 12.3793 10.7024 12.518C10.8757 12.6567 10.9624 12.895 10.9624 13.233C10.9624 13.571 10.8757 13.8137 10.7024 13.961C10.529 14.1083 10.321 14.182 10.0784 14.182C9.82703 14.182 9.6147 14.1083 9.44136 13.961C9.26803 13.8137 9.18136 13.571 9.18136 13.233Z' fill='%23F04D6A'/%3E%3C/svg%3E%0A")
+}
+
+.form-area {
+    position: relative;
+    margin-top: 3.2rem
+}
+
+.form-area .form-item {
+    margin-bottom: 1.2rem
+}
+
+.form-area .form-item:last-child {
+    margin-bottom: 0
+}
+
+.check-area {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .4rem .4rem;
+    justify-content: space-between;
+    margin-top: 3.2rem
+}
+
+.check-area>* {
+    width: calc( 33.3333333333% - 0.4rem )
+}
+
+.check-area.no_pad {
+    gap: 0
+}
+
+.check-area.no_pad>* {
+    width: 33.3333333333%
+}
+
+.check-area:first-child {
+    margin-top: 4rem
+}
+
+.check-area .form-item {
+    position: relative;
+    display: flex
+}
+
+.check-area .form-item .btn-checkbox+label {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center
+}
+
+.motion-arrow {
+    margin-top: 2.5rem;
+    width: 100%;
+    position: relative;
+    height: 2rem;
+    background: url("data:image/svg+xml,%3Csvg width='22' height='8' viewBox='0 0 22 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M21 1L11 7L1 1' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A") center center no-repeat;
+    background-size: auto
+}
+
+.comp.hand_motion {
+    display: flex;
+    align-items: center;
+    flex-direction: column-reverse;
+    position: relative;
+    width: 100%
+}
+
+.comp.hand_motion .title-area {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: #fff;
+    line-height: 3rem
+}
+
+.comp.hand_motion .title-area .name-point {
+    font-size: inherit;
+    font-weight: inherit;
+    line-height: inherit;
+    color: gold
+}
+
+.comp.hand_motion .motion-area {
+    position: relative;
+    width: 27rem;
+    height: 27rem;
+    margin-bottom: 4rem
+}
+
+.comp.hand_motion .motion-area .motion-wrap .hand {
+    position: absolute;
+    left: 50%;
+    bottom: -1.7rem;
+    transform: translateX(-50%);
+    width: 24.2rem;
+    height: 19.1rem;
+    background: url(https://ap-northeast-2-02890046-view.menlosecurity.com/c/0/i/aHR0cDovLzIyMS4xNDcuNDQuMTE3OjExODAvc3ZuL2tib2NhcmUvcHN5Y2hvbG9naWNhbFRlc3Qvd2ViQXBwL3Jlc291cmNlcy9pbWcvbW90aW9uL2hhbmQvaGFuZC5wbmc~?b=RNS3UeHJ&k=zuK1fNQiaQDbX-b163kUYYjE2LcyaXddqMQ8Dy8ppZg~) no-repeat center/100%
+}
+
+.comp.hand_motion .motion-area .motion-wrap .question {
+    position: absolute;
+    left: 10.3rem;
+    top: 2.2rem;
+    width: 10.5rem;
+    height: 11.9rem;
+    transform: rotate(10deg);
+    display: none;
+    background: url(https://ap-northeast-2-02890046-view.menlosecurity.com/c/0/i/aHR0cDovLzIyMS4xNDcuNDQuMTE3OjExODAvc3ZuL2tib2NhcmUvcHN5Y2hvbG9naWNhbFRlc3Qvd2ViQXBwL3Jlc291cmNlcy9pbWcvbW90aW9uL2hhbmQvcXVlc3Rpb24ucG5n?b=RNS3UeHJ&k=i2fAaAN9qyp0Q9BSS-bYBc57gO1hIFlOkGTCkLfBzZ0~) no-repeat center/100%
+}
+
+.comp.hand_motion .motion-area .motion-wrap .deco {
+    position: absolute;
+    width: 100%;
+    height: 100%
+}
+
+.comp.hand_motion .motion-area .motion-wrap .deco>span {
+    position: absolute;
+    background-repeat: no-repeat;
+    background-size: 100%
+}
+
+.comp.hand_motion .motion-area .motion-wrap .deco .i01 {
+    left: 8rem;
+    top: 2rem;
+    width: 1.3rem;
+    height: 1.4rem;
+    background-image: url(https://ap-northeast-2-02890046-view.menlosecurity.com/c/0/i/aHR0cDovLzIyMS4xNDcuNDQuMTE3OjExODAvc3ZuL2tib2NhcmUvcHN5Y2hvbG9naWNhbFRlc3Qvd2ViQXBwL3Jlc291cmNlcy9pbWcvbW90aW9uL2hhbmQvZGVjbzAxLnBuZw~~?b=RNS3UeHJ&k=QOvJojvlN2iFF98eEHeLJX0XyaMOTfFp-zymlB9Pqe4~)
+}
+
+.comp.hand_motion .motion-area .motion-wrap .deco .i03 {
+    left: 6rem;
+    top: 6rem;
+    width: 1.6rem;
+    height: 1.6rem;
+    background-image: url(https://ap-northeast-2-02890046-view.menlosecurity.com/c/0/i/aHR0cDovLzIyMS4xNDcuNDQuMTE3OjExODAvc3ZuL2tib2NhcmUvcHN5Y2hvbG9naWNhbFRlc3Qvd2ViQXBwL3Jlc291cmNlcy9pbWcvbW90aW9uL2hhbmQvZGVjbzAzLnBuZw~~?b=RNS3UeHJ&k=z-5bzO1VdTH4_4Iejg6OuT7xQJj3z_xXscaobDJvsao~)
+}
+
+.comp.hand_motion .motion-area .motion-wrap .deco .i05 {
+    left: 7rem;
+    top: 11rem;
+    width: 1.3rem;
+    height: 1.3rem;
+    background-image: url(https://ap-northeast-2-02890046-view.menlosecurity.com/c/0/i/aHR0cDovLzIyMS4xNDcuNDQuMTE3OjExODAvc3ZuL2tib2NhcmUvcHN5Y2hvbG9naWNhbFRlc3Qvd2ViQXBwL3Jlc291cmNlcy9pbWcvbW90aW9uL2hhbmQvZGVjbzA1LnBuZw~~?b=RNS3UeHJ&k=_BkGc9pb4IqO8x3BoXuZ0DMWVNWS2nyClCpS6VWD40U~)
+}
+
+.comp.hand_motion .motion-area .motion-wrap .deco .i02 {
+    right: 3.5rem;
+    top: 4.5rem;
+    width: 1.4rem;
+    height: 1.4rem;
+    background-image: url(https://ap-northeast-2-02890046-view.menlosecurity.com/c/0/i/aHR0cDovLzIyMS4xNDcuNDQuMTE3OjExODAvc3ZuL2tib2NhcmUvcHN5Y2hvbG9naWNhbFRlc3Qvd2ViQXBwL3Jlc291cmNlcy9pbWcvbW90aW9uL2hhbmQvZGVjbzAyLnBuZw~~?b=RNS3UeHJ&k=gK7cb1b5ITuiWn5u8fyRDjDimTJQ7y5D_6aZC8AR1VM~)
+}
+
+.comp.hand_motion .motion-area .motion-wrap .deco .i04 {
+    right: 5rem;
+    top: 10rem;
+    width: 1.2rem;
+    height: 1.2rem;
+    background-image: url(https://ap-northeast-2-02890046-view.menlosecurity.com/c/0/i/aHR0cDovLzIyMS4xNDcuNDQuMTE3OjExODAvc3ZuL2tib2NhcmUvcHN5Y2hvbG9naWNhbFRlc3Qvd2ViQXBwL3Jlc291cmNlcy9pbWcvbW90aW9uL2hhbmQvZGVjbzA0LnBuZw~~?b=RNS3UeHJ&k=KkX3RQMwjiDqyB-2wou1OHTKUYAoth_VpP5EYPZu39M~)
+}
+
+.comp.hand_motion .motion-area .motion-wrap .deco .i06 {
+    right: 3rem;
+    top: 15rem;
+    width: 1.3rem;
+    height: 1.3rem;
+    background-image: url(https://ap-northeast-2-02890046-view.menlosecurity.com/c/0/i/aHR0cDovLzIyMS4xNDcuNDQuMTE3OjExODAvc3ZuL2tib2NhcmUvcHN5Y2hvbG9naWNhbFRlc3Qvd2ViQXBwL3Jlc291cmNlcy9pbWcvbW90aW9uL2hhbmQvZGVjbzA2LnBuZw~~?b=RNS3UeHJ&k=ISdeqB0cyekEUEp3VgyqJWo_hzMY0KXRIvQBl6U_jw8~)
+}
+
+.img-area {
+    position: relative
+}
+
+.img-area[data-ui-motion=glass-question] .center-area {
+    top: 48%
+}
+
+.img-area[data-ui-motion=glass-question] .img-wrap {
+    background-image: url(https://ap-northeast-2-02890046-view.menlosecurity.com/c/0/i/aHR0cDovLzIyMS4xNDcuNDQuMTE3OjExODAvc3ZuL2tib2NhcmUvcHN5Y2hvbG9naWNhbFRlc3Qvd2ViQXBwL3Jlc291cmNlcy9pbWcvbW90aW9uL2luaXQvbWFpbi1ibHVyLXF1ZXN0aW9uLnBuZw~~?b=RNS3UeHJ&k=8yC1Kgd64iUKtbVlqkVbbPAxThLJF2Jntt4z1s_UATc~)
+}
+
+.img-area[data-ui-motion=blur-most-type] .center-area {
+    top: 40%
+}
+
+.img-area[data-ui-motion=blur-most-type] .img-wrap {
+    background-image: url(https://ap-northeast-2-02890046-view.menlosecurity.com/c/0/i/aHR0cDovLzIyMS4xNDcuNDQuMTE3OjExODAvc3ZuL2tib2NhcmUvcHN5Y2hvbG9naWNhbFRlc3Qvd2ViQXBwL3Jlc291cmNlcy9pbWcvaWNvbi9pY29fcXVlc3Rpb24ucG5n?b=RNS3UeHJ&k=GqUjNeKDVEiIMCRxBFr8d8po59c4xuZEb3JBS9b8Ej4~)
+}
+
+.img-area .center-area {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: calc(100% - 4rem);
+    height: 29.5rem;
+    transform: translate(-50%, -50%)
+}
+
+.img-area .center-area .img-wrap {
+    width: 9.6rem;
+    height: 9.6rem;
+    margin-bottom: 2.2rem;
+    background-repeat: no-repeat;
+    background-size: 100%
+}
+
+.img-area .center-area .center-text {
+    font-size: 2.4rem;
+    font-weight: 700;
+    color: #000;
+    line-height: 3.6rem;
+    text-align: center
+}
+
+[data-ui-motion=wait] {
+    width: 100%
+}
+
+[data-ui-motion=wait] .motion-area {
+    position: relative;
+    width: 27rem;
+    height: 27rem;
+    margin: 5.6rem auto 4rem
+}
+
+[data-ui-motion=wait] .motion-area .motion-wrap {
+    position: relative;
+    width: 100%;
+    height: 100%
+}
+
+[data-ui-motion=wait] .motion-area .motion-wrap>div>span {
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%)
+}
+
+[data-ui-motion=wait] .motion-area .motion-wrap .center .sun {
+    opacity: 0;
+    width: 8.4rem;
+    height: 8.4rem;
+    background: url("https://ap-northeast-2-02890046-view.menlosecurity.com/c/0/i/aHR0cDovLzIyMS4xNDcuNDQuMTE3OjExODAvc3ZuL2tib2NhcmUvcHN5Y2hvbG9naWNhbFRlc3Qvd2ViQXBwL3Jlc291cmNlcy9pbWcvbW90aW9uL3dhaXQvc3VuLnBuZw~~?b=RNS3UeHJ&k=Si3f5d9k47xdjUzGxV8TP31jKZ2mPWhkLuaNcCyuYFM~") center center no-repeat;
+    background-size: 100%
+}
+
+[data-ui-motion=wait] .motion-area .motion-wrap .center .moon {
+    opacity: 1;
+    width: 8.4rem;
+    height: 8.4rem;
+    background: url("https://ap-northeast-2-02890046-view.menlosecurity.com/c/0/i/aHR0cDovLzIyMS4xNDcuNDQuMTE3OjExODAvc3ZuL2tib2NhcmUvcHN5Y2hvbG9naWNhbFRlc3Qvd2ViQXBwL3Jlc291cmNlcy9pbWcvbW90aW9uL3dhaXQvbW9vbi5wbmc~?b=RNS3UeHJ&k=crLpgBg1BXRm1J7uB9V2j9rWCpTD2RUPJlbD1Bn3uKs~") center center no-repeat;
+    background-size: 100%
+}
+
+[data-ui-motion=wait] .motion-area .motion-wrap .deco .i01 {
+    width: 15.6rem;
+    height: 15.6rem;
+    background: url("data:image/svg+xml,%3Csvg width='156' height='151' viewBox='0 0 156 151' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M128.802 28.9752C132.047 28.9752 134.678 26.3443 134.678 23.0989C134.678 19.8536 132.047 17.2227 128.802 17.2227C125.557 17.2227 122.926 19.8536 122.926 23.0989C122.926 26.3443 125.557 28.9752 128.802 28.9752Z' fill='%23FFE225'/%3E%3Cpath d='M66.3255 150.832C69.5709 150.832 72.2018 148.201 72.2018 144.955C72.2018 141.71 69.5709 139.079 66.3255 139.079C63.0801 139.079 60.4492 141.71 60.4492 144.955C60.4492 148.201 63.0801 150.832 66.3255 150.832Z' fill='%232862EF'/%3E%3Cpath d='M108.388 145.264C111.633 145.264 114.264 142.633 114.264 139.388C114.264 136.143 111.633 133.512 108.388 133.512C105.143 133.512 102.512 136.143 102.512 139.388C102.512 142.633 105.143 145.264 108.388 145.264Z' fill='%232862EF'/%3E%3Cpath d='M11.6796 74.5816C12.3462 74.1966 12.3461 73.2343 11.6792 72.8495L2.30837 67.4425C1.6417 67.0579 0.808594 67.539 0.808594 68.3087V79.1273C0.808594 79.8972 1.64202 80.3783 2.30869 79.9933L11.6796 74.5816Z' fill='%23FFE225'/%3E%3Cpath d='M50.7285 0.983439C50.1142 0.519787 49.2283 0.894842 49.1336 1.65865L47.8029 12.3981C47.7082 13.1622 48.4764 13.7422 49.1854 13.4419L59.1517 9.22013C59.8605 8.91987 59.9785 7.96489 59.3641 7.50115L50.7285 0.983439Z' fill='%23FF6600'/%3E%3Cpath d='M151.299 53.7277L143.683 55.1777C142.598 55.3843 141.886 56.4314 142.093 57.5165L143.543 65.1322C143.749 66.2173 144.797 66.9295 145.882 66.7229L153.497 65.2728C154.582 65.0662 155.295 64.0191 155.088 62.934L153.638 55.3183C153.431 54.2332 152.384 53.5211 151.299 53.7277Z' fill='%23E5CBFF'/%3E%3C/svg%3E%0A") center center no-repeat;
+    background-size: 100%
+}
+
+[data-ui-motion=wait] .motion-area .motion-wrap .deco .i02 {
+    width: 21.6rem;
+    height: 21.6rem;
+    background: url("data:image/svg+xml,%3Csvg width='218' height='195' viewBox='0 0 218 195' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M61.0716 194.481C64.317 194.481 66.9479 191.85 66.9479 188.605C66.9479 185.359 64.317 182.729 61.0716 182.729C57.8262 182.729 55.1953 185.359 55.1953 188.605C55.1953 191.85 57.8262 194.481 61.0716 194.481Z' fill='%23FF6600'/%3E%3Cpath d='M6.63801 80.6657C9.88339 80.6657 12.5143 78.0348 12.5143 74.7894C12.5143 71.544 9.88339 68.9131 6.63801 68.9131C3.39262 68.9131 0.761719 71.544 0.761719 74.7894C0.761719 78.0348 3.39262 80.6657 6.63801 80.6657Z' fill='%23E5CBFF'/%3E%3Cpath d='M54.7565 13.9241C55.4519 14.2539 56.2436 13.7072 56.1816 12.94L55.3101 2.15413C55.2481 1.38662 54.3783 0.974227 53.7449 1.41199L44.8425 7.56397C44.2093 8.00156 44.2871 8.96049 44.9826 9.29023L54.7565 13.9241Z' fill='%23FFE225'/%3E%3Cpath d='M193.391 25.7779C193.644 25.051 193.016 24.3225 192.26 24.4665L181.628 26.4907C180.871 26.6347 180.554 27.5435 181.057 28.1263L188.128 36.3218C188.631 36.9047 189.576 36.7246 189.83 35.9977L193.391 25.7779Z' fill='%232862EF'/%3E%3Cpath d='M215.343 104.052L207.649 103.102C206.553 102.966 205.554 103.745 205.419 104.841L204.469 112.535C204.333 113.632 205.112 114.63 206.209 114.766L213.903 115.716C214.999 115.851 215.997 115.072 216.133 113.976L217.083 106.282C217.218 105.186 216.439 104.187 215.343 104.052Z' fill='%23FFE225'/%3E%3C/svg%3E%0A") center center no-repeat;
+    background-size: 100%
+}
+
+[data-ui-motion=wait] .motion-area .motion-wrap .line span {
+    border-radius: 50%;
+    border: .2rem solid #fff;
+    opacity: .25
+}
+
+[data-ui-motion=wait] .motion-area .motion-wrap .line .i01 {
+    width: 14.5rem;
+    height: 14.5rem;
+    opacity: 0
+}
+
+[data-ui-motion=wait] .motion-area .motion-wrap .line .i02 {
+    width: 20.8rem;
+    height: 20.8rem;
+    opacity: 0
+}
+
+[data-ui-motion=wait] .motion-area .motion-wrap .line .i03 {
+    width: 27rem;
+    height: 27rem;
+    opacity: 0
+}
+
+[data-ui-motion=wait] .title-area .h2 {
+    font-size: 2.2rem
+}
+
+[data-ui-motion=wait] .title-area .sub-text {
+    font-size: 1.5rem;
+    font-weight: 300;
+    margin-top: 1.6rem
+}
+
+[data-ui-motion=wait] .btn-area {
+    display: block;
+    margin-top: 3.2rem;
+    text-align: center
+}
+
+[data-ui-motion=wait] .btn-area a {
+    display: inline-block;
+    width: auto;
+    flex: none;
+    background-color: #45434f;
+    color: #fff;
+    border: none !important
+}
+
+.indicate-area {
+    position: absolute;
+    width: 100%;
+    height: 1rem;
+    left: 0;
+    right: 0;
+    bottom: .8rem
+}
+
+.indicate-area .btn-indicate {
+    display: inline-block;
+    width: 13.5rem;
+    height: .5rem;
+    margin: 0 auto;
+    background: #fff;
+    border-radius: 10rem
+}
+
+.tab {
+    margin-top: 4rem
+}
+
+.tab.full {
+    margin-left: -2rem;
+    margin-right: -2rem
+}
+
+.tab-content {
+    margin-top: 4.8rem;
+    display: none
+}
+
+.tab-scroll {
+    overflow-y: hidden;
+    overflow-x: auto
+}
+
+.comp .tab-scroll {
+    margin-left: -2rem;
+    margin-right: -2rem
+}
+
+.tab-scroll .tab-wrap {
+    position: relative;
+    width: max-content;
+    padding-right: 2rem
+}
+
+.tab-scroll .tab-wrap::after {
+    content: "";
+    display: block;
+    clear: both
+}
+
+.tab-scroll li {
+    float: left;
+    padding-right: .8rem
+}
+
+.tab-scroll li:first-child {
+    padding-left: 2rem
+}
+
+.tab-scroll li:last-child {
+    padding-right: 0
+}
+
+.tab-scroll li a {
+    display: block;
+    padding: 1.6rem 2rem;
+    border-radius: 10rem;
+    background: #f7f7f7
+}
+
+.tab-scroll li a span {
+    font-size: 1.6rem;
+    line-height: 1.8rem;
+    font-weight: 700;
+    color: #888
+}
+
+.tab-scroll li.on a {
+    background: #000
+}
+
+.tab-scroll li.on a span {
+    color: #fff
+}
+
+.animation-area[data-ui-motion=card-img] {
+    position: relative;
+    padding-top: 12.8rem
+}
+
+.animation-area[data-ui-motion=card-img] .card-img {
+    max-width: 33.5rem;
+    margin-bottom: 2.8rem
+}
+
+.animation-area[data-ui-motion=init] {
+    width: 34rem;
+    height: 43.7rem;
+    margin: 0 auto;
+    margin-top: 5.5rem
+}
+
+.animation-area[data-ui-motion=init] .animation-wrap {
+    position: relative;
+    width: 100%;
+    height: 100%
+}
+
+.animation-area[data-ui-motion=init] .body-ani {
+    position: absolute;
+    left: 50%;
+    top: 20rem;
+    transform: translateX(-50%);
+    width: 34rem;
+    height: 37.2rem;
+    background-image: url(https://ap-northeast-2-02890046-view.menlosecurity.com/c/0/i/aHR0cDovLzIyMS4xNDcuNDQuMTE3OjExODAvc3ZuL2tib2NhcmUvcHN5Y2hvbG9naWNhbFRlc3Qvd2ViQXBwL3Jlc291cmNlcy9pbWcvbW90aW9uL2luaXQvbWFpbi1ib2R5LWltZy5wbmc~?b=RNS3UeHJ&k=Z_6eghtObB8Xl-esQY18GLqEwugFVbhyLfccsS2Lt44~);
+    background-size: 100%;
+    background-repeat: no-repeat
+}
+
+.animation-area[data-ui-motion=init] .eyes {
+    position: absolute;
+    top: 20.5rem;
+    width: 3.8rem;
+    height: 3.8rem
+}
+
+.animation-area[data-ui-motion=init] .eyes.left {
+    left: 11.2rem
+}
+
+.animation-area[data-ui-motion=init] .eyes.right {
+    right: 11.2rem
+}
+
+.animation-area[data-ui-motion=init] .eyes::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translate(-50%);
+    width: 100%;
+    height: 100%;
+    background: url(https://ap-northeast-2-02890046-view.menlosecurity.com/c/0/i/aHR0cDovLzIyMS4xNDcuNDQuMTE3OjExODAvc3ZuL2tib2NhcmUvcHN5Y2hvbG9naWNhbFRlc3Qvd2ViQXBwL3Jlc291cmNlcy9pbWcvbW90aW9uL2luaXQvbWFpbi1leWVzLWJsdXIucG5n?b=RNS3UeHJ&k=rglOyvI32etAQ-BbkSmA87lhXSYxJqptUyjrwVnbOCc~) no-repeat center/100%;
+    z-index: 111
+}
+
+.animation-area[data-ui-motion=init] .eyes>div {
+    width: 100%;
+    height: 100%;
+    background: #000;
+    opacity: .9;
+    border-radius: 50%
+}
+
+.animation-area[data-ui-motion=init] .question-mark {
+    position: absolute;
+    right: 5rem;
+    top: 17.6rem;
+    width: 4.8rem;
+    height: 4.8rem;
+    background: url(https://ap-northeast-2-02890046-view.menlosecurity.com/c/0/i/aHR0cDovLzIyMS4xNDcuNDQuMTE3OjExODAvc3ZuL2tib2NhcmUvcHN5Y2hvbG9naWNhbFRlc3Qvd2ViQXBwL3Jlc291cmNlcy9pbWcvbW90aW9uL2luaXQvbWFpbi1xdWVzdGlvbi1pbWcucG5n?b=RNS3UeHJ&k=mZ1NTVFcoq81Mx6Y2NezzBWfOGQbzHX7-57SUzYbPIY~) no-repeat center/100%
+}
+
+.card-wrap {
+    position: relative;
+    max-width: 33.5rem;
+    margin: 3.2rem auto 0 auto
+}
+
+.card-wrap .card-content {
+    background: #fffde8
+}
+
+.card-wrap .keyword-area {
+    background: gold
+}
+
+.card-wrap .keyword-area .scroll-wrap li {
+    color: #3f3722
+}
+
+[data-bg=I] .card-wrap .card-content,.card-wrap.type-i .card-content {
+    background: #dbfaf5 !important
+}
+
+[data-bg=I] .card-wrap .keyword-area,.card-wrap.type-i .keyword-area {
+    background: #4dbeab !important
+}
+
+[data-bg=I] .card-wrap .keyword-area .scroll-wrap li,.card-wrap.type-i .keyword-area .scroll-wrap li {
+    color: #fff !important
+}
+
+.card-wrap .card-content {
+    position: relative;
+    min-height: calc(100vh - 17rem);
+    padding: 7.2rem 0 0 0;
+    border-radius: 4.8rem
+}
+
+.card-wrap .card-content .keyword-area {
+    position: absolute;
+    z-index: 100;
+    left: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    white-space: nowrap;
+    width: 100%;
+    height: 7.2rem;
+    border-radius: 0 0 4.8rem 4.8rem;
+    overflow: hidden;
+    padding-left: 2rem
+}
+
+.card-wrap .card-content .keyword-area .scroll-wrap {
+    width: max-content
+}
+
+.card-wrap .card-content .keyword-area .scroll-wrap li {
+    display: inline-block;
+    font-size: 1.8rem;
+    font-weight: 700;
+    padding-right: 1.2rem
+}
+
+.card-wrap .type-title {
+    text-align: center
+}
+
+.card-wrap .type-title h2 {
+    display: block;
+    font-size: 3.2rem;
+    font-weight: 700;
+    color: #000
+}
+
+.card-wrap .type-title .en {
+    display: block;
+    margin-bottom: 2.4rem;
+    font-size: 2.4rem;
+    font-weight: 700;
+    color: #888
+}
+
+.card-wrap .img-wrap {
+    position: relative;
+    display: block;
+    margin: 0 auto
+}
+
+.card-wrap .img-wrap::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: 100%
+}
+
+.card-wrap .img-wrap.i-card01::before {
+    background-image: url(https://ap-northeast-2-02890046-view.menlosecurity.com/c/0/i/aHR0cDovLzIyMS4xNDcuNDQuMTE3OjExODAvc3ZuL2tib2NhcmUvcHN5Y2hvbG9naWNhbFRlc3Qvd2ViQXBwL3Jlc291cmNlcy9pbWcvdG1wL2ktY2FyZDAxLnBuZw~~?b=RNS3UeHJ&k=O9lg2QiDnG8llmd3PLmiONMvFscFK_ZrPO17g9uQ9nw~)
+}
+
+.card-wrap .back {
+    position: absolute;
+    z-index: 10;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    padding: 5.4rem 3.2rem 0;
+    background: #fff;
+    border: .1rem solid #fff;
+    border-radius: 4.8rem
+}
+
+.card-wrap .back .box-area {
+    height: calc(100vh - 45rem);
+    overflow-x: hidden;
+    overflow-y: hidden;
+    padding-right: 1rem
+}
+
+.card-wrap .back .list-dot+.box-title {
+    margin-top: 2.4rem
+}
+
+.card-wrap .back .card-title {
+    font-size: 2.4rem;
+    font-weight: 700;
+    color: #111;
+    margin-bottom: 4rem
+}
+
+.card-wrap .back .box-title {
+    position: relative;
+    display: block;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #222;
+    margin-bottom: 1.6rem;
+    padding: .4rem 0 0 2.8rem
+}
+
+.card-wrap .back .box-title::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 2.4rem;
+    height: 2.4rem;
+    background-repeat: no-repeat;
+    background-size: 100%
+}
+
+.card-wrap .back .box-title[data-icon=ico_good]::before {
+    background-image: url(https://ap-northeast-2-02890046-view.menlosecurity.com/c/0/i/aHR0cDovLzIyMS4xNDcuNDQuMTE3OjExODAvc3ZuL2tib2NhcmUvcHN5Y2hvbG9naWNhbFRlc3Qvd2ViQXBwL3Jlc291cmNlcy9pbWcvaWNvbi9pY29fZmFjZV9raXNzLnBuZw~~?b=RNS3UeHJ&k=Vjbfeba_mUHsWRUYTioNrjDGaIPUWbZY8CD8mF4WLSY~)
+}
+
+.card-wrap .back .box-title[data-icon=ico_bad]::before {
+    background-image: url(https://ap-northeast-2-02890046-view.menlosecurity.com/c/0/i/aHR0cDovLzIyMS4xNDcuNDQuMTE3OjExODAvc3ZuL2tib2NhcmUvcHN5Y2hvbG9naWNhbFRlc3Qvd2ViQXBwL3Jlc291cmNlcy9pbWcvaWNvbi9pY29fZmFjZV9ib29tLnBuZw~~?b=RNS3UeHJ&k=PQ53LpVReis2YRTR2pBsk4k8osxMRVLHafKhLzB98wg~)
+}
+
+.card-wrap .back .box-title[data-icon=ico_doit]::before {
+    background-image: url(https://ap-northeast-2-02890046-view.menlosecurity.com/c/0/i/aHR0cDovLzIyMS4xNDcuNDQuMTE3OjExODAvc3ZuL2tib2NhcmUvcHN5Y2hvbG9naWNhbFRlc3Qvd2ViQXBwL3Jlc291cmNlcy9pbWcvaWNvbi9pY29fYnRuX2hhbmQucG5n?b=RNS3UeHJ&k=Jx4NsCbgTYmoVIIHl02H1e_iQn8hz5IV64Ac1hDWMTE~)
+}
+
+.card-wrap.reverse .back .box-area {
+    overflow-y: auto
+}
+
+.card-wrap.reverse .card-content .keyword-area {
+    z-index: initial
+}
+
+.img-dw {
+    width: 4rem;
+    height: 4rem;
+    background: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='20' cy='20' r='20' fill='black'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M20.3629 10L20.3607 24.1829L20.3629 10Z' fill='black'/%3E%3Cpath d='M20.3629 10L20.3607 24.1829M20.3607 24.1829L15.7241 18.4033M20.3607 24.1829L24.9988 18.4033' stroke='white' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M14.4333 28.1665H26.1667' stroke='white' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A") no-repeat center/100%
+}
+
+.front .btn.img-dw {
+    position: absolute;
+    z-index: 1;
+    top: 2.8rem;
+    right: 2rem
+}
+
+.front .btn.img-dw.zindex0 {
+    z-index: -1
+}
+
+.back .btn-type-all {
+    position: relative;
+    z-index: 1000;
+    width: 100%;
+    margin-top: 8rem
+}
+
+.front .btn-reverse {
+    z-index: 9
+}
+
+.back .btn-reverse {
+    z-index: 11
+}
+
+.btn-reverse {
+    position: absolute;
+    z-index: 9;
+    left: 50%;
+    bottom: 9.6rem;
+    transform: translateX(-50%);
+    display: flex
+}
+
+.btn-reverse::after {
+    content: "";
+    width: 1.2rem;
+    height: 1.4rem;
+    background: url("data:image/svg+xml,%3Csvg width='14' height='16' viewBox='0 0 14 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5.86139 11.1111H1.97252V15M8.97249 4.88889H12.8614V1M1.64819 5.66912C2.08428 4.58977 2.81441 3.6544 3.75561 2.96932C4.6968 2.28424 5.81163 1.87696 6.97276 1.79373C8.1339 1.7105 9.29494 1.95465 10.3242 2.49848C11.3535 3.04231 12.2091 3.864 12.7947 4.87012M13.1861 10.3309C12.75 11.4102 12.0199 12.3456 11.0787 13.0307C10.1375 13.7157 9.02317 14.1231 7.86203 14.2063C6.70089 14.2895 5.53944 14.0453 4.51016 13.5015C3.48088 12.9577 2.62493 12.136 2.03936 11.1299' stroke='%23888888' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A") no-repeat center/100%
+}
+
+.btn-reverse span {
+    margin-right: .8rem;
+    font-size: 1.6rem;
+    font-weight: 500;
+    color: #666
+}
+
+.question {
+    width: 100%
+}
+
+.question-head {
+    position: relative;
+    margin-top: 4rem;
+    height: 6.4rem
+}
+
+.question .progress {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -3.2rem;
+    margin-top: -3.2rem
+}
+
+.question .progress .progress-wrap {
+    position: relative;
+    text-align: center
+}
+
+.question .progress .progress-wrap #progress-slider {
+    margin: 0 auto
+}
+
+.question .progress .progress-wrap .progress-text {
+    position: absolute;
+    width: 6.4rem;
+    height: 6.4rem;
+    margin-left: -3.2rem;
+    margin-top: -3.2rem;
+    top: 50%;
+    left: 50%
+}
+
+.question .progress .progress-wrap .progress-text * {
+    display: inline-block;
+    vertical-align: baseline;
+    color: gold;
+    font-size: 1.8rem;
+    font-weight: 700;
+    line-height: 6.4rem
+}
+
+.question .control {
+    position: relative;
+    width: 20.8rem;
+    margin: 0 auto;
+    padding-top: 2rem;
+    text-align: center
+}
+
+.question .control::after {
+    content: "";
+    display: block;
+    clear: both
+}
+
+.question .control a {
+    position: relative;
+    display: inline-block;
+    width: 2.4rem;
+    height: 2.4rem
+}
+
+.question .control a:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    width: 2.4rem;
+    height: 2.4rem;
+    background: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M2 12H22M22 12L14.8571 5M22 12L14.8571 19' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A") center center no-repeat;
+    background-size: 100%;
+    opacity: .4
+}
+
+.question .control a:active:after {
+    opacity: 1
+}
+
+.question .control span {
+    position: absolute;
+    display: inline-block;
+    font-size: .1rem;
+    width: .1rem;
+    height: .1rem;
+    padding: 0;
+    margin: -0.1rem;
+    visibility: hidden;
+    overflow: hidden;
+    border: 0;
+    clip: rect(0, 0, 0, 0)
+}
+
+.question .control .btn-prev {
+    float: left;
+    transform: rotate(180deg)
+}
+
+.question .control .btn-next {
+    float: right
+}
+
+.question-body {
+    position: relative;
+    margin-top: 7.2rem
+}
+
+.question .motion-box {
+    position: absolute;
+    border-radius: 2.4rem 2.4rem 0 0;
+    background: #fff;
+    padding: 7.6rem 3rem 6.4rem;
+    background-color: #fff
+}
+
+.question .motion-box.box00 {
+    opacity: 0;
+    top: -4.8rem;
+    left: 4.8rem;
+    right: 4.8rem
+}
+
+.question .motion-box.box01 {
+    opacity: .8;
+    top: -1.6rem;
+    left: 1.6rem;
+    right: 1.6rem
+}
+
+.question .motion-box.box02 {
+    opacity: .6;
+    top: -3.2rem;
+    left: 3.2rem;
+    right: 3.2rem
+}
+
+.question .question-body {
+    background: #fff;
+    border-radius: 2.4rem
+}
+
+.question .question-wrap {
+    overflow: hidden
+}
+
+.question .question-item {
+    padding: 7.6rem 3rem 6.4rem
+}
+
+.question .question-item .title-area {
+    background: #fff !important;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    height: 11rem
+}
+
+.question .question-item .title-area p {
+    font-size: 2.2rem;
+    font-weight: 500;
+    line-height: 4rem;
+    color: #000
+}
+
+.question .question-item .title-area strong {
+    position: relative;
+    display: inline-block;
+    min-width: 6.4rem;
+    height: 4rem;
+    line-height: 4rem;
+    margin-right: .6rem;
+    padding-left: .6rem;
+    padding-right: .6rem;
+    margin-top: -0.2rem
+}
+
+.question .question-item .title-area strong:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    border: .2rem solid gold;
+    border-radius: .8rem;
+    background: #fff url("data:image/svg+xml,%3Csvg width='13' height='18' viewBox='0 0 13 18' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M3.875 11.8574C3.86328 9.10352 4.54297 8.24805 5.79688 7.42773C6.83984 6.74805 7.63672 6.16211 7.64844 5.20117C7.63672 4.33398 6.94531 3.74805 6.07812 3.74805C5.15234 3.74805 4.36719 4.42773 4.34375 5.43555H0.21875C0.265625 1.83789 2.91406 0.302734 6.10156 0.302734C9.61719 0.302734 12.1953 1.87305 12.1953 4.9668C12.1953 6.9707 11.1055 8.1543 9.5 9.0918C8.29297 9.81836 7.67188 10.4863 7.67188 11.8574V12.2324H3.875V11.8574ZM3.54688 15.4902C3.53516 14.248 4.56641 13.2402 5.82031 13.2402C7.01562 13.2402 8.08203 14.248 8.09375 15.4902C8.08203 16.7559 7.01562 17.7637 5.82031 17.7637C4.56641 17.7637 3.53516 16.7559 3.54688 15.4902Z' fill='%23CCCCCC'/%3E%3C/svg%3E%0A") center center no-repeat;
+    background-size: auto
+}
+
+.question .question-item .form-area {
+    margin-top: 4.2rem
+}
+
+.question .question-item.check .title-area strong {
+    min-width: 2rem;
+    padding-left: 0;
+    padding-right: 0;
+    margin-right: 0;
+    border: none;
+    font-weight: 700;
+    font-size: 2.2rem
+}
+
+.question .question-item.check .title-area strong * {
+    display: inline-block;
+    font-weight: 700;
+    font-size: 2.2rem;
+    font-kerning: none;
+    vertical-align: initial
+}
+
+.question .question-item.check .title-area strong *.whitespace {
+    width: .5rem !important
+}
+
+.question .question-item.check .title-area strong:after {
+    content: "";
+    background: none;
+    border: none;
+    bottom: .6rem;
+    border-bottom: .2rem solid #000;
+    border-radius: 0
+}
+
+@media screen and (max-width: 360px) {
+    html {
+        font-size:56.25%
+    }
+}
+
+@media screen and (max-width: 320px) {
+    html {
+        font-size:50%
+    }
+}
+
+@media screen and (max-height: 680px) {
+    body[data-ui-cate=intro] .section-fix {
+        padding-bottom:2rem
+    }
+
+    body[data-ui-cate=intro] .section-fix .main-title {
+        top: 8rem
+    }
+
+    body[data-ui-cate=intro] .section-fix .main-title .type-en {
+        font-size: 2rem;
+        margin-bottom: 2rem
+    }
+
+    body[data-ui-cate=intro] .section-fix .main-title .h1 {
+        font-size: 3.6rem
+    }
+
+    body[data-ui-cate=intro] .animation-area[data-ui-motion=init] {
+        height: 38.7rem;
+        margin-top: 0
+    }
+
+    body[data-ui-cate=intro] .animation-area[data-ui-motion=card-img] {
+        padding-top: 12rem
+    }
+
+    body[data-ui-cate=intro] .animation-area[data-ui-motion=card-img] .card-img {
+        max-width: 28.5rem
+    }
+}
+
+@media screen and (max-height: 680px) {
+    body[data-ui-cate=result] .section-fix {
+        padding-bottom:2rem
+    }
+
+    body[data-ui-cate=result] .section-fix .type-title .en {
+        font-size: 2rem;
+        margin-bottom: 2rem
+    }
+
+    body[data-ui-cate=result] .section-fix .type-title h2 {
+        font-size: 3rem
+    }
+
+    body[data-ui-cate=result] .card-img {
+        max-width: 25rem
+    }
+}
+
+@media screen and (max-width: 330px) {
+    .slider-area:after {
+        top:104%
+    }
+}
+
+.list-dot li {
+    position: relative;
+    font-size: 1.6rem;
+    font-weight: 300;
+    color: #666;
+    line-height: 2.4rem;
+    padding-left: 1.2rem
+}
+
+.list-dot li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: .8rem;
+    width: .3rem;
+    height: .3rem;
+    background: #666;
+    border-radius: 50%
+}
+
+.list-dot-s li {
+    position: relative;
+    font-size: 1.4rem;
+    font-weight: 300;
+    color: #666;
+    line-height: 2.1rem;
+    padding-left: 1rem
+}
+
+.list-dot-s li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: .9rem;
+    width: .3rem;
+    height: .3rem;
+    background: #666;
+    border-radius: 50%
+}
+
+.ico-img-area {
+    position: relative
+}
+
+.ico-img-area.size-32 {
+    width: 3.2rem;
+    height: 3.2rem
+}
+
+.ico-img-area.size-40 {
+    width: 4rem;
+    height: 4rem
+}
+
+.ico-img-area.size-48 {
+    width: 4.8rem;
+    height: 4.8rem
+}
+
+.ico-img-area.size-56 {
+    width: 5.6rem;
+    height: 5.6rem
+}
+
+.ico-img-area.size-72 {
+    width: 7.2rem;
+    height: 7.2rem
+}
+
+.ico-img-area.border {
+    border: 3px solid #fff;
+    border-radius: 50%;
+    box-shadow: 0 0 0 3px #fff inset
+}
+
+.ico-img-area.border-s {
+    border: 1.5px solid #fff;
+    border-radius: 50%;
+    box-shadow: 0 0 0 1.5px #fff inset
+}
+
+.ico-img-area.view::before {
+    content: "";
+    position: absolute;
+    right: -0.2rem;
+    top: .4rem;
+    width: 1.2rem;
+    height: 1.2rem;
+    border-radius: 50%;
+    background: #fd0000;
+    z-index: 1
+}
+
+.ico-img-area.same::after {
+    content: "";
+    position: absolute;
+    right: 0rem;
+    bottom: 0rem;
+    width: 1.4rem;
+    height: 1.2rem;
+    background: url("data:image/svg+xml,%3Csvg width='14' height='12' viewBox='0 0 14 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7 2.37166C5.44444 -1.15803 0 -0.782084 0 3.72926C0 8.24061 7 12 7 12C7 12 14 8.24061 14 3.72926C14 -0.782084 8.55556 -1.15803 7 2.37166Z' fill='%23EE3030'/%3E%3C/svg%3E%0A") no-repeat center/100%;
+    z-index: 1
+}
+
+.ico-img-area .defult-img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    overflow: hidden
+}
+
+.ico-img-area .defult-img::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 98%;
+    height: 98%;
+    background-image: url("data:image/svg+xml,%3Csvg width='72' height='72' viewBox='0 0 72 72' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='36' cy='36' r='36' fill='%23DDDDDD'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M35.8942 38.0007C42.357 38.0007 47.5962 32.7615 47.5962 26.2987C47.5962 19.8358 42.357 14.5967 35.8942 14.5967C29.4314 14.5967 24.1922 19.8358 24.1922 26.2987C24.1922 32.7615 29.4314 38.0007 35.8942 38.0007ZM43.5962 26.2987C43.5962 30.5524 40.1479 34.0007 35.8942 34.0007C31.6405 34.0007 28.1922 30.5524 28.1922 26.2987C28.1922 22.045 31.6405 18.5967 35.8942 18.5967C40.1479 18.5967 43.5962 22.045 43.5962 26.2987ZM15.85 58.8263C19.0433 51.0676 26.982 45.5537 35.8915 45.5537C45.1084 45.5537 52.7958 50.8538 55.6959 58.7543C56.0765 59.7912 57.2256 60.3233 58.2625 59.9427C59.2994 59.562 59.8315 58.4129 59.4509 57.376C55.9342 47.7955 46.6712 41.5537 35.8915 41.5537C25.3536 41.5537 15.9586 48.0527 12.151 57.304C11.7306 58.3254 12.2179 59.4942 13.2393 59.9146C14.2607 60.335 15.4296 59.8478 15.85 58.8263Z' fill='%23EEEEEE'/%3E%3C/svg%3E%0A");
+    background-size: 100%;
+    background-repeat: no-repeat
+}
+
+.ico-img-area .defult-img img {
+    object-fit: contain;
+    width: 100%;
+    height: 100%;
+    overflow: hidden
+}
+
+[data-image=CP-E]::before {
+    background-image: url(https://ap-northeast-2-02890046-view.menlosecurity.com/c/0/i/aHR0cDovLzIyMS4xNDcuNDQuMTE3OjExODAvc3ZuL2tib2NhcmUvcHN5Y2hvbG9naWNhbFRlc3Qvd2ViQXBwL3Jlc291cmNlcy9pbWcvY2FyZC9DUC1FLnBuZw~~?b=RNS3UeHJ&k=f3YGXb5_d8xfaIO3_oDe3lCELSNrVigcwMMKiaH_4r8~)
+}
+
+[data-image=CT-E]::before {
+    background-image: url(https://ap-northeast-2-02890046-view.menlosecurity.com/c/0/i/aHR0cDovLzIyMS4xNDcuNDQuMTE3OjExODAvc3ZuL2tib2NhcmUvcHN5Y2hvbG9naWNhbFRlc3Qvd2ViQXBwL3Jlc291cmNlcy9pbWcvY2FyZC9DVC1FLnBuZw~~?b=RNS3UeHJ&k=LWtAUlJPpDYndaceqHLIrn1wJ1L0ucrKPVgBLM1bQS4~)
+}
+
+[data-image=LP-E]::before {
+    background-image: url(https://ap-northeast-2-02890046-view.menlosecurity.com/c/0/i/aHR0cDovLzIyMS4xNDcuNDQuMTE3OjExODAvc3ZuL2tib2NhcmUvcHN5Y2hvbG9naWNhbFRlc3Qvd2ViQXBwL3Jlc291cmNlcy9pbWcvY2FyZC9MUC1FLnBuZw~~?b=RNS3UeHJ&k=-w9D2GqBlkD1A26XL8Iy9jQYUQKc2Mlvb0XxeTZhLXk~)
+}
+
+[data-image=LT-E]::before {
+    background-image: url(https://ap-northeast-2-02890046-view.menlosecurity.com/c/0/i/aHR0cDovLzIyMS4xNDcuNDQuMTE3OjExODAvc3ZuL2tib2NhcmUvcHN5Y2hvbG9naWNhbFRlc3Qvd2ViQXBwL3Jlc291cmNlcy9pbWcvY2FyZC9MVC1FLnBuZw~~?b=RNS3UeHJ&k=mDqLDEAhugDCV9_QwNsSlrzWWEKdFy5eUFN1HJIgVXY~)
+}
+
+[data-image=PC-E]::before {
+    background-image: url(https://ap-northeast-2-02890046-view.menlosecurity.com/c/0/i/aHR0cDovLzIyMS4xNDcuNDQuMTE3OjExODAvc3ZuL2tib2NhcmUvcHN5Y2hvbG9naWNhbFRlc3Qvd2ViQXBwL3Jlc291cmNlcy9pbWcvY2FyZC9QQy1FLnBuZw~~?b=RNS3UeHJ&k=w1uv9DE2dwPu1XpxGvdG7D6rpPRSm7He7QoB8VSMyvY~)
+}
+
+[data-image=TC-E]::before {
+    background-image: url(https://ap-northeast-2-02890046-view.menlosecurity.com/c/0/i/aHR0cDovLzIyMS4xNDcuNDQuMTE3OjExODAvc3ZuL2tib2NhcmUvcHN5Y2hvbG9naWNhbFRlc3Qvd2ViQXBwL3Jlc291cmNlcy9pbWcvY2FyZC9UQy1FLnBuZw~~?b=RNS3UeHJ&k=jh4q5Pv1GfJF2XQmodwnBDRsO0Pqm2eXCdLayFaFUuc~)
+}
+
+[data-image=PL-E]::before {
+    background-image: url(https://ap-northeast-2-02890046-view.menlosecurity.com/c/0/i/aHR0cDovLzIyMS4xNDcuNDQuMTE3OjExODAvc3ZuL2tib2NhcmUvcHN5Y2hvbG9naWNhbFRlc3Qvd2ViQXBwL3Jlc291cmNlcy9pbWcvY2FyZC9QTC1FLnBuZw~~?b=RNS3UeHJ&k=nntDxjxxr3NFX7fBW_5DMyV7YiHWfXXE7VySo-ZXiCs~)
+}
+
+[data-image=TL-E]::before {
+    background-image: url(https://ap-northeast-2-02890046-view.menlosecurity.com/c/0/i/aHR0cDovLzIyMS4xNDcuNDQuMTE3OjExODAvc3ZuL2tib2NhcmUvcHN5Y2hvbG9naWNhbFRlc3Qvd2ViQXBwL3Jlc291cmNlcy9pbWcvY2FyZC9UTC1FLnBuZw~~?b=RNS3UeHJ&k=JR5oyuVBc7m2mr8pngI32tai_s8bqlYOphS00-SyRWA~)
+}
+
+[data-image=CP-I]::before {
+    background-image: url(https://ap-northeast-2-02890046-view.menlosecurity.com/c/0/i/aHR0cDovLzIyMS4xNDcuNDQuMTE3OjExODAvc3ZuL2tib2NhcmUvcHN5Y2hvbG9naWNhbFRlc3Qvd2ViQXBwL3Jlc291cmNlcy9pbWcvY2FyZC9DUC1JLnBuZw~~?b=RNS3UeHJ&k=WB-tLlY_ICoL9DPl-bthyNW44-iQb7vM0xojDT52rZc~)
+}
+
+[data-image=CT-I]::before {
+    background-image: url(https://ap-northeast-2-02890046-view.menlosecurity.com/c/0/i/aHR0cDovLzIyMS4xNDcuNDQuMTE3OjExODAvc3ZuL2tib2NhcmUvcHN5Y2hvbG9naWNhbFRlc3Qvd2ViQXBwL3Jlc291cmNlcy9pbWcvY2FyZC9DVC1JLnBuZw~~?b=RNS3UeHJ&k=yURG0y4gmZgpbVxuG4TvAH-HRO42216fnUiog7nrTXU~)
+}
+
+[data-image=LP-I]::before {
+    background-image: url(https://ap-northeast-2-02890046-view.menlosecurity.com/c/0/i/aHR0cDovLzIyMS4xNDcuNDQuMTE3OjExODAvc3ZuL2tib2NhcmUvcHN5Y2hvbG9naWNhbFRlc3Qvd2ViQXBwL3Jlc291cmNlcy9pbWcvY2FyZC9MUC1JLnBuZw~~?b=RNS3UeHJ&k=z6aveuthM6G7e0B1F4m5CT8utuhERQdQdBPv9d0KMu8~)
+}
+
+[data-image=LT-I]::before {
+    background-image: url(https://ap-northeast-2-02890046-view.menlosecurity.com/c/0/i/aHR0cDovLzIyMS4xNDcuNDQuMTE3OjExODAvc3ZuL2tib2NhcmUvcHN5Y2hvbG9naWNhbFRlc3Qvd2ViQXBwL3Jlc291cmNlcy9pbWcvY2FyZC9MVC1JLnBuZw~~?b=RNS3UeHJ&k=pygllZ5LkHVst1PcWjtrJDPkn5n4up1PfnOBACzFO48~)
+}
+
+[data-image=PC-I]::before {
+    background-image: url(https://ap-northeast-2-02890046-view.menlosecurity.com/c/0/i/aHR0cDovLzIyMS4xNDcuNDQuMTE3OjExODAvc3ZuL2tib2NhcmUvcHN5Y2hvbG9naWNhbFRlc3Qvd2ViQXBwL3Jlc291cmNlcy9pbWcvY2FyZC9QQy1JLnBuZw~~?b=RNS3UeHJ&k=37-LBh3BhWnjF98B_2Xy_cl0n1vgNRJXL0-vhwHJvck~)
+}
+
+[data-image=TC-I]::before {
+    background-image: url(https://ap-northeast-2-02890046-view.menlosecurity.com/c/0/i/aHR0cDovLzIyMS4xNDcuNDQuMTE3OjExODAvc3ZuL2tib2NhcmUvcHN5Y2hvbG9naWNhbFRlc3Qvd2ViQXBwL3Jlc291cmNlcy9pbWcvY2FyZC9UQy1JLnBuZw~~?b=RNS3UeHJ&k=dTfE4fodcNdEkr8UpI7g6RTdoUrJNMvY9v7nyrLeoMo~)
+}
+
+[data-image=PL-I]::before {
+    background-image: url(https://ap-northeast-2-02890046-view.menlosecurity.com/c/0/i/aHR0cDovLzIyMS4xNDcuNDQuMTE3OjExODAvc3ZuL2tib2NhcmUvcHN5Y2hvbG9naWNhbFRlc3Qvd2ViQXBwL3Jlc291cmNlcy9pbWcvY2FyZC9QTC1JLnBuZw~~?b=RNS3UeHJ&k=hB3oCVMofWjyBTXvXijLiIZAeRKC8CS3yejXpcKX2mg~)
+}
+
+[data-image=TL-I]::before {
+    background-image: url(https://ap-northeast-2-02890046-view.menlosecurity.com/c/0/i/aHR0cDovLzIyMS4xNDcuNDQuMTE3OjExODAvc3ZuL2tib2NhcmUvcHN5Y2hvbG9naWNhbFRlc3Qvd2ViQXBwL3Jlc291cmNlcy9pbWcvY2FyZC9UTC1JLnBuZw~~?b=RNS3UeHJ&k=_WVYVnpPOwudfbWcXb3y58gMgihlmKci7PJ3FjY5hUU~)
+}
+
+[data-image=handshake] {
+    width: 18.1rem;
+    height: 16rem;
+    margin: 2.4rem auto;
+    background: url(https://ap-northeast-2-02890046-view.menlosecurity.com/c/0/i/aHR0cDovLzIyMS4xNDcuNDQuMTE3OjExODAvc3ZuL2tib2NhcmUvcHN5Y2hvbG9naWNhbFRlc3Qvd2ViQXBwL3Jlc291cmNlcy9pbWcvY29tbW9uL2ltZy1oYW5kc2hha2UucG5n?b=RNS3UeHJ&k=PYof9Qfb8DKVO0MxyeNEhMl4mYudQiDLzipX4vxviyY~) no-repeat center/100%
+}
+
+[data-image=highfive] {
+    width: 18.1rem;
+    height: 16rem;
+    margin: 2.4rem auto;
+    background: url(https://ap-northeast-2-02890046-view.menlosecurity.com/c/0/i/aHR0cDovLzIyMS4xNDcuNDQuMTE3OjExODAvc3ZuL2tib2NhcmUvcHN5Y2hvbG9naWNhbFRlc3Qvd2ViQXBwL3Jlc291cmNlcy9pbWcvY29tbW9uL2ltZy1oaWdoZml2ZS5wbmc~?b=RNS3UeHJ&k=6vmXSAbU9tDFCD14a07wyJIe8qDgFVqBqhnXdLvjOu8~) no-repeat center/100%
+}
+
+.line-text {
+    position: relative;
+    display: inline-block;
+    font-size: inherit;
+    font-weight: 700;
+    color: inherit;
+    z-index: 1
+}
+
+.line-text::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: .1rem;
+    width: 100%;
+    height: 1.2rem;
+    background: #ffe500;
+    border-radius: 10rem;
+    z-index: -1;
+    opacity: 50%
+}
+
+.total-list {
+    margin-top: 2.4rem
+}
+
+.total-list .total-item {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 8rem;
+    padding: 0 .8rem;
+    border-bottom: 1px solid #ededed
+}
+
+.total-list .total-item.type-i .type-info .line-text::before {
+    bottom: -0.3rem;
+    background: rgba(255,215,0,.4)
+}
+
+.total-list .total-item.type-e .type-info .line-text::before {
+    bottom: -0.3rem;
+    background: rgba(77,190,171,.4)
+}
+
+.total-list .ico-img-area {
+    position: absolute;
+    left: .8rem;
+    top: 50%;
+    transform: translateY(-50%)
+}
+
+.total-list .f-name {
+    padding-left: 6.4rem;
+    font-size: 2rem;
+    font-weight: 500;
+    color: #000
+}
+
+.total-list .type-info {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #000
+}
+
+.line-box {
+    width: 100%;
+    padding: 2.6rem 2.4rem;
+    border: 1px solid #ddd;
+    border-radius: 1.6rem;
+    background: #fff
+}
+
+.line-box+.line-box {
+    margin-top: 1.6rem
+}
+
+.line-box .box-title-area {
+    margin-top: 1.2rem;
+    text-align: center
+}
+
+.line-box .box-title-area .h4 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #000
+}
+
+.line-box .box-title {
+    position: relative;
+    display: block;
+    font-size: 1.6rem;
+    font-weight: 500;
+    color: #000;
+    line-height: 2.1rem;
+    margin: .8rem 0 1.6rem
+}
+
+.line-box .box-title.ico {
+    padding-left: 3.2rem
+}
+
+.line-box .box-title.ico::before {
+    content: "";
+    position: absolute;
+    left: -0.2rem;
+    top: 0;
+    width: 2.4rem;
+    height: 2.4rem;
+    background: url(https://ap-northeast-2-02890046-view.menlosecurity.com/c/0/i/aHR0cDovLzIyMS4xNDcuNDQuMTE3OjExODAvc3ZuL2tib2NhcmUvcHN5Y2hvbG9naWNhbFRlc3Qvd2ViQXBwL3Jlc291cmNlcy9pbWcvaWNvbi9pY29faGFuZC5wbmc~?b=RNS3UeHJ&k=iLR2Fq1ieOr87lEyzLkchY0RlmSGbck2B3394fyqCCw~) no-repeat center/100%
+}
+
+.graph-result-box {
+    padding: 2.6rem 2.4rem;
+    background: #f9f9f9;
+    border-radius: 1.6rem;
+    margin-top: 4rem;
+    text-align: center
+}
+
+.graph-result-box .txt {
+    font-size: 1.6rem;
+    font-weight: 300;
+    line-height: 2.4rem;
+    color: #000
+}
+
+.ico-list .list-item {
+    position: relative;
+    font-size: 1.6rem;
+    font-weight: 500;
+    color: #191919;
+    margin-top: 2.5rem;
+    padding-left: 3.2rem
+}
+
+.ico-list .list-item:first-child {
+    margin-top: 0
+}
+
+.ico-list .list-item::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: -0.2rem;
+    width: 2.4rem;
+    height: 2.4rem;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%
+}
+
+.ico-list .list-item[data-icon=ico_advant_01]::before {
+    background-image: url(https://ap-northeast-2-02890046-view.menlosecurity.com/c/0/i/aHR0cDovLzIyMS4xNDcuNDQuMTE3OjExODAvc3ZuL2tib2NhcmUvcHN5Y2hvbG9naWNhbFRlc3Qvd2ViQXBwL3Jlc291cmNlcy9pbWcvaWNvbi9pY29fYWR2YW50XzAxLnBuZw~~?b=RNS3UeHJ&k=F9nA-k7okc-JAh9_v6t9e0g6g-gy32IvPTrJqCTPHYk~)
+}
+
+.ico-list .list-item[data-icon=ico_advant_02]::before {
+    background-image: url(https://ap-northeast-2-02890046-view.menlosecurity.com/c/0/i/aHR0cDovLzIyMS4xNDcuNDQuMTE3OjExODAvc3ZuL2tib2NhcmUvcHN5Y2hvbG9naWNhbFRlc3Qvd2ViQXBwL3Jlc291cmNlcy9pbWcvaWNvbi9pY29fYWR2YW50XzAyLnBuZw~~?b=RNS3UeHJ&k=ueG9ItrL5Tw30eD7VMiVV6O8VtRVTDsqbCgYOY5FCm8~)
+}
+
+.ico-list .list-item[data-icon=ico_advant_03]::before {
+    background-image: url(https://ap-northeast-2-02890046-view.menlosecurity.com/c/0/i/aHR0cDovLzIyMS4xNDcuNDQuMTE3OjExODAvc3ZuL2tib2NhcmUvcHN5Y2hvbG9naWNhbFRlc3Qvd2ViQXBwL3Jlc291cmNlcy9pbWcvaWNvbi9pY29fYWR2YW50XzAzLnBuZw~~?b=RNS3UeHJ&k=6pGZ4_Ejiepv6O0FZcEFOfg_mce-Z37NBnI4srrChm0~)
+}
+
+.ico-list .list-item[data-icon=ico_advant_04]::before {
+    background-image: url(https://ap-northeast-2-02890046-view.menlosecurity.com/c/0/i/aHR0cDovLzIyMS4xNDcuNDQuMTE3OjExODAvc3ZuL2tib2NhcmUvcHN5Y2hvbG9naWNhbFRlc3Qvd2ViQXBwL3Jlc291cmNlcy9pbWcvaWNvbi9pY29fYWR2YW50XzA0LnBuZw~~?b=RNS3UeHJ&k=sxNUQsbAMryO4qh7HPzL1HxZciAv-eAJR6MO9okwUfQ~)
+}
+
+.ico-list .list-item[data-icon=ico_advant_05]::before {
+    background-image: url(https://ap-northeast-2-02890046-view.menlosecurity.com/c/0/i/aHR0cDovLzIyMS4xNDcuNDQuMTE3OjExODAvc3ZuL2tib2NhcmUvcHN5Y2hvbG9naWNhbFRlc3Qvd2ViQXBwL3Jlc291cmNlcy9pbWcvaWNvbi9pY29fYWR2YW50XzA1LnBuZw~~?b=RNS3UeHJ&k=UIjgstS-tdRaPDl4PPURfdYfvKu5eIKMDdLCIQbsWiw~)
+}
+
+.ico-list .list-item[data-icon=ico_advant_06]::before {
+    background-image: url(https://ap-northeast-2-02890046-view.menlosecurity.com/c/0/i/aHR0cDovLzIyMS4xNDcuNDQuMTE3OjExODAvc3ZuL2tib2NhcmUvcHN5Y2hvbG9naWNhbFRlc3Qvd2ViQXBwL3Jlc291cmNlcy9pbWcvaWNvbi9pY29fYWR2YW50XzA2LnBuZw~~?b=RNS3UeHJ&k=MbyprRCYaMfvyTVbEbW-DP6hB299GGRXGGX-SZUcoAs~)
+}
+
+.ico-list .list-item[data-icon=ico_advant_07]::before {
+    background-image: url(https://ap-northeast-2-02890046-view.menlosecurity.com/c/0/i/aHR0cDovLzIyMS4xNDcuNDQuMTE3OjExODAvc3ZuL2tib2NhcmUvcHN5Y2hvbG9naWNhbFRlc3Qvd2ViQXBwL3Jlc291cmNlcy9pbWcvaWNvbi9pY29fYWR2YW50XzA3LnBuZw~~?b=RNS3UeHJ&k=wFcZJ14f445Lcw50b7cGDmF8QLdYZygRHilJqanMSoc~)
+}
+
+.ico-list .list-item[data-icon=ico_advant_08]::before {
+    background-image: url(https://ap-northeast-2-02890046-view.menlosecurity.com/c/0/i/aHR0cDovLzIyMS4xNDcuNDQuMTE3OjExODAvc3ZuL2tib2NhcmUvcHN5Y2hvbG9naWNhbFRlc3Qvd2ViQXBwL3Jlc291cmNlcy9pbWcvaWNvbi9pY29fYWR2YW50XzA4LnBuZw~~?b=RNS3UeHJ&k=4EUlEHjmJ75Qz8NUrZZ6Q2Vmty6npjRWObXYDSQfUPg~)
+}
+
+.ico-list .list-item[data-icon=ico_advant_09]::before {
+    background-image: url(https://ap-northeast-2-02890046-view.menlosecurity.com/c/0/i/aHR0cDovLzIyMS4xNDcuNDQuMTE3OjExODAvc3ZuL2tib2NhcmUvcHN5Y2hvbG9naWNhbFRlc3Qvd2ViQXBwL3Jlc291cmNlcy9pbWcvaWNvbi9pY29fYWR2YW50XzA5LnBuZw~~?b=RNS3UeHJ&k=uhrNDqUyVmQPSC900Z-t-cdahI4ti6xIHKCHJQckrWU~)
+}
+
+.ico-list .list-item[data-icon=ico_advant_10]::before {
+    background-image: url(https://ap-northeast-2-02890046-view.menlosecurity.com/c/0/i/aHR0cDovLzIyMS4xNDcuNDQuMTE3OjExODAvc3ZuL2tib2NhcmUvcHN5Y2hvbG9naWNhbFRlc3Qvd2ViQXBwL3Jlc291cmNlcy9pbWcvaWNvbi9pY29fYWR2YW50XzEwLnBuZw~~?b=RNS3UeHJ&k=0MeAiMx94MbjcJRwLi6qiUumUO6Qc-uKGyedpvaBH9s~)
+}
+
+.ico-list .list-item[data-icon=ico_advant_11]::before {
+    background-image: url(https://ap-northeast-2-02890046-view.menlosecurity.com/c/0/i/aHR0cDovLzIyMS4xNDcuNDQuMTE3OjExODAvc3ZuL2tib2NhcmUvcHN5Y2hvbG9naWNhbFRlc3Qvd2ViQXBwL3Jlc291cmNlcy9pbWcvaWNvbi9pY29fYWR2YW50XzExLnBuZw~~?b=RNS3UeHJ&k=al8QNF1VHvinmajGWCLT-lPZag0Mm4LhCG5I6Wn_Uzs~)
+}
+
+.ico-list .list-item[data-icon=ico_advant_12]::before {
+    background-image: url(https://ap-northeast-2-02890046-view.menlosecurity.com/c/0/i/aHR0cDovLzIyMS4xNDcuNDQuMTE3OjExODAvc3ZuL2tib2NhcmUvcHN5Y2hvbG9naWNhbFRlc3Qvd2ViQXBwL3Jlc291cmNlcy9pbWcvaWNvbi9pY29fYWR2YW50XzEyLnBuZw~~?b=RNS3UeHJ&k=JrJpGYlp_wcwOJcyyIqSZ-daQltr63ThRsmggTWDVAk~)
+}
+
+.ico-list .list-item[data-icon=ico_advant_13]::before {
+    background-image: url(https://ap-northeast-2-02890046-view.menlosecurity.com/c/0/i/aHR0cDovLzIyMS4xNDcuNDQuMTE3OjExODAvc3ZuL2tib2NhcmUvcHN5Y2hvbG9naWNhbFRlc3Qvd2ViQXBwL3Jlc291cmNlcy9pbWcvaWNvbi9pY29fYWR2YW50XzEzLnBuZw~~?b=RNS3UeHJ&k=xASAIBMVHDEbMe50M82WPO0_Sb1sLqxpT0DVP7r0kYA~)
+}
+
+.ico-list .list-item[data-icon=ico_advant_14]::before {
+    background-image: url(https://ap-northeast-2-02890046-view.menlosecurity.com/c/0/i/aHR0cDovLzIyMS4xNDcuNDQuMTE3OjExODAvc3ZuL2tib2NhcmUvcHN5Y2hvbG9naWNhbFRlc3Qvd2ViQXBwL3Jlc291cmNlcy9pbWcvaWNvbi9pY29fYWR2YW50XzE0LnBuZw~~?b=RNS3UeHJ&k=gKEXZkqmDiM_IDmhD0vWiKf5YKLgSnUWrD0JeVv5bBU~)
+}
+
+.ico-list .list-item[data-icon=ico_advant_15]::before {
+    background-image: url(https://ap-northeast-2-02890046-view.menlosecurity.com/c/0/i/aHR0cDovLzIyMS4xNDcuNDQuMTE3OjExODAvc3ZuL2tib2NhcmUvcHN5Y2hvbG9naWNhbFRlc3Qvd2ViQXBwL3Jlc291cmNlcy9pbWcvaWNvbi9pY29fYWR2YW50XzE1LnBuZw~~?b=RNS3UeHJ&k=XRrR3NAwdc_4eQwg5R47SWH31GU5jQVpy-BKY3rMdtE~)
+}
+
+.ico-list .list-item[data-icon=ico_advant_16]::before {
+    background-image: url(https://ap-northeast-2-02890046-view.menlosecurity.com/c/0/i/aHR0cDovLzIyMS4xNDcuNDQuMTE3OjExODAvc3ZuL2tib2NhcmUvcHN5Y2hvbG9naWNhbFRlc3Qvd2ViQXBwL3Jlc291cmNlcy9pbWcvaWNvbi9pY29fYWR2YW50XzE2LnBuZw~~?b=RNS3UeHJ&k=4qiD4BYWIuuAZDKKPsvha4_nEe1lBczbTWDIlCu4voA~)
+}
+
+.ico-list .list-item[data-icon=ico_advant_17]::before {
+    background-image: url(https://ap-northeast-2-02890046-view.menlosecurity.com/c/0/i/aHR0cDovLzIyMS4xNDcuNDQuMTE3OjExODAvc3ZuL2tib2NhcmUvcHN5Y2hvbG9naWNhbFRlc3Qvd2ViQXBwL3Jlc291cmNlcy9pbWcvaWNvbi9pY29fYWR2YW50XzE3LnBuZw~~?b=RNS3UeHJ&k=vvsdtTVEUYXdgH3IsclCiOBP6gal2U7qQpztvWMVCFM~)
+}
+
+.ico-list .list-item[data-icon=ico_advant_18]::before {
+    background-image: url(https://ap-northeast-2-02890046-view.menlosecurity.com/c/0/i/aHR0cDovLzIyMS4xNDcuNDQuMTE3OjExODAvc3ZuL2tib2NhcmUvcHN5Y2hvbG9naWNhbFRlc3Qvd2ViQXBwL3Jlc291cmNlcy9pbWcvaWNvbi9pY29fYWR2YW50XzE4LnBuZw~~?b=RNS3UeHJ&k=qKdZKxxiwfUtQAxjdr-9-bZNLzHifrkpnh4MKsY2p_U~)
+}
+
+.ico-list .list-item[data-icon=ico_advant_19]::before {
+    background-image: url(https://ap-northeast-2-02890046-view.menlosecurity.com/c/0/i/aHR0cDovLzIyMS4xNDcuNDQuMTE3OjExODAvc3ZuL2tib2NhcmUvcHN5Y2hvbG9naWNhbFRlc3Qvd2ViQXBwL3Jlc291cmNlcy9pbWcvaWNvbi9pY29fYWR2YW50XzE5LnBuZw~~?b=RNS3UeHJ&k=zF8H9TV9dtw0v68RWVMhCi6qEf7kYJIUFEGX1nK8nwA~)
+}
+
+.ico-list .list-item[data-icon=ico_advant_20]::before {
+    background-image: url(https://ap-northeast-2-02890046-view.menlosecurity.com/c/0/i/aHR0cDovLzIyMS4xNDcuNDQuMTE3OjExODAvc3ZuL2tib2NhcmUvcHN5Y2hvbG9naWNhbFRlc3Qvd2ViQXBwL3Jlc291cmNlcy9pbWcvaWNvbi9pY29fYWR2YW50XzIwLnBuZw~~?b=RNS3UeHJ&k=Vy4_x4WeITrctxFzAzBH78vywbnpTlcf1qRRgfk2JvM~)
+}
+
+.observer-wrap {
+    margin-bottom: 1.2rem
+}
+
+.observer-wrap .observer-img {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2.4rem
+}
+
+.observer-wrap .observer-img .ico-img-area {
+    margin-left: -2rem
+}
+
+.observer-wrap .observer-img .ico-img-area.size-32 {
+    margin-left: -1.2rem
+}
+
+.observer-wrap .observer-img .ico-img-area:first-child {
+    margin-left: 0
+}
+
+.observer-wrap .observer-img .more-person {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 3.2rem;
+    height: 3.2rem;
+    margin-left: -1.2rem;
+    border-radius: 50%;
+    overflow: hidden;
+    background: #000;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #fff;
+    z-index: 1;
+    border: 1.5px solid #fff
+}
+
+.observer-wrap .p-txt {
+    font-size: 1.8rem;
+    font-weight: 500;
+    color: #000;
+    text-align: center
+}
+
+.ani-area {
+    width: 100%;
+    height: 31.2rem;
+    border: 1px solid #666;
+    margin-bottom: 5.6rem
+}
+
+.most-type-list {
+    margin-top: 2.4rem
+}
+
+.most-type-list .most-type-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.6rem 1.6rem 1.6rem 2.4rem;
+    border-radius: 1.6rem;
+    background: #fff6df
+}
+
+.most-type-list .most-type-item.type-i {
+    background: #dbfaf5
+}
+
+.most-type-list .most-type-item:not(:first-child) {
+    margin-top: 1.2rem
+}
+
+.most-type-list .most-type-item:nth-child(n+4) {
+    display: none
+}
+
+.most-type-list .most-type-item[data-icon*=ico_medal_] .type-name em {
+    width: 2rem;
+    height: 2.9rem;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    font-size: 0rem
+}
+
+.most-type-list .most-type-item[data-icon=ico_medal_1st] .type-name em {
+    background-image: url(https://ap-northeast-2-02890046-view.menlosecurity.com/c/0/i/aHR0cDovLzIyMS4xNDcuNDQuMTE3OjExODAvc3ZuL2tib2NhcmUvcHN5Y2hvbG9naWNhbFRlc3Qvd2ViQXBwL3Jlc291cmNlcy9pbWcvaWNvbi9pY29fbWVkYWxfMXN0LnBuZw~~?b=RNS3UeHJ&k=Dhe1NtwKQ4zLxk8Fs0nBPqP25C2bYUSmOKRJBpXCHgM~)
+}
+
+.most-type-list .most-type-item[data-icon=ico_medal_2nd] .type-name em {
+    background-image: url(https://ap-northeast-2-02890046-view.menlosecurity.com/c/0/i/aHR0cDovLzIyMS4xNDcuNDQuMTE3OjExODAvc3ZuL2tib2NhcmUvcHN5Y2hvbG9naWNhbFRlc3Qvd2ViQXBwL3Jlc291cmNlcy9pbWcvaWNvbi9pY29fbWVkYWxfMm5kLnBuZw~~?b=RNS3UeHJ&k=-ZmuN5bOKNOes4bfkkjR2f9iEXKYFyG0nG8xvA6GEPI~)
+}
+
+.most-type-list .most-type-item[data-icon=ico_medal_3rd] .type-name em {
+    background-image: url(https://ap-northeast-2-02890046-view.menlosecurity.com/c/0/i/aHR0cDovLzIyMS4xNDcuNDQuMTE3OjExODAvc3ZuL2tib2NhcmUvcHN5Y2hvbG9naWNhbFRlc3Qvd2ViQXBwL3Jlc291cmNlcy9pbWcvaWNvbi9pY29fbWVkYWxfM3JkLnBuZw~~?b=RNS3UeHJ&k=FqgZ_faG8q9IKmiSV8y13RIt7piuU0_eWO3jR1JOPcU~)
+}
+
+.most-type-list .most-type-item .type-name {
+    position: relative;
+    display: flex;
+    align-items: center;
+    font-size: 1.6rem;
+    font-weight: 500;
+    color: #000;
+    line-height: 1.6rem
+}
+
+.most-type-list .most-type-item .type-name em {
+    position: relative;
+    margin-right: 1.2rem
+}
+
+.most-type-list .most-type-item .observer-wrap {
+    margin-bottom: 0
+}
+
+.most-type-list .most-type-item .observer-wrap .observer-img {
+    margin-bottom: 0
+}
+
+.most-type-list+.btn-area {
+    display: none
+}
+
+.comp.comp-graph {
+    margin-top: 5.6rem;
+    animation: aniOpacity 1s 0s ease
+}
+
+@keyframes aniOpacity {
+    from {
+        opacity: 0
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+.my-bwf {
+    display: block;
+    text-align: center
+}
+
+[data-bg=I] .my-bwf .en {
+    background-color: #4dbeab
+}
+
+.my-bwf .my-type {
+    display: block;
+    font-size: 2rem;
+    font-weight: 700;
+    color: #000;
+    line-height: 3rem
+}
+
+.my-bwf .en {
+    display: inline-block;
+    height: 2.6rem;
+    padding: 0 1rem;
+    margin-bottom: .8rem;
+    font-size: 1.4rem;
+    line-height: 2.6rem;
+    color: #fff;
+    background: gold;
+    border-radius: 10rem
+}
+
+.bwf-area {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2.4rem
+}
+
+.bwf-area .bwf-category {
+    margin: 0 1.2rem
+}
+
+.bwf-area .bwf-category .bwf-title {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    display: inline-block;
+    padding: 1.2rem 1.6rem;
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #fff;
+    line-height: 1.8rem;
+    background: #3a3a3a;
+    border-radius: 1.6rem
+}
+
+.bwf-area .bwf-category .bwf-title::after {
+    content: "";
+    display: inline-block;
+    width: 1.6rem;
+    height: 1.6rem;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    margin-left: .4rem
+}
+
+.bwf-area .bwf-category .bwf-title[data-icon=ico_family]::after {
+    background-image: url(https://ap-northeast-2-02890046-view.menlosecurity.com/c/0/i/aHR0cDovLzIyMS4xNDcuNDQuMTE3OjExODAvc3ZuL2tib2NhcmUvcHN5Y2hvbG9naWNhbFRlc3Qvd2ViQXBwL3Jlc291cmNlcy9pbWcvaWNvbi9pY29fZmFtaWx5LnBuZw~~?b=RNS3UeHJ&k=Hw3K0XjzFtfBWMEoYgHeIgD7SywhpJKHHa88vKZUDWE~)
+}
+
+.bwf-area .bwf-category .bwf-title[data-icon=ico_gemstone]::after {
+    background-image: url(https://ap-northeast-2-02890046-view.menlosecurity.com/c/0/i/aHR0cDovLzIyMS4xNDcuNDQuMTE3OjExODAvc3ZuL2tib2NhcmUvcHN5Y2hvbG9naWNhbFRlc3Qvd2ViQXBwL3Jlc291cmNlcy9pbWcvaWNvbi9pY29fZ2Vtc3RvbmUucG5n?b=RNS3UeHJ&k=-p_IbJ-gbDSFetxm1ejEhr99Z_nhKRgmcKriKC2lQ2U~)
+}
+
+.bwf-area .bwf-category .bwf-title[data-icon=ico_heart]::after {
+    background-image: url(https://ap-northeast-2-02890046-view.menlosecurity.com/c/0/i/aHR0cDovLzIyMS4xNDcuNDQuMTE3OjExODAvc3ZuL2tib2NhcmUvcHN5Y2hvbG9naWNhbFRlc3Qvd2ViQXBwL3Jlc291cmNlcy9pbWcvaWNvbi9pY29faGVhcnQucG5n?b=RNS3UeHJ&k=2r7az5LOe4SUw3x-if6HeHwLMBQwR4CauFBybo-K2VE~)
+}
+
+.bwf-area .bwf-category .bwf-title[data-icon=ico_face06]::after {
+    background-image: url(https://ap-northeast-2-02890046-view.menlosecurity.com/c/0/i/aHR0cDovLzIyMS4xNDcuNDQuMTE3OjExODAvc3ZuL2tib2NhcmUvcHN5Y2hvbG9naWNhbFRlc3Qvd2ViQXBwL3Jlc291cmNlcy9pbWcvaWNvbi9pY29fZmFjZV9ib29tLnBuZw~~?b=RNS3UeHJ&k=PQ53LpVReis2YRTR2pBsk4k8osxMRVLHafKhLzB98wg~)
+}
+
+.bwf-area .bwf-category .bwf-title::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -0.5rem;
+    width: 1rem;
+    height: 1rem;
+    transform: translateX(-50%) rotate(45deg);
+    background: #3a3a3a
+}
+
+.bwf-area .bwf-category .bwf-type {
+    position: relative;
+    text-align: center
+}
+
+.bwf-area .bwf-category .bwf-type::before {
+    content: "";
+    display: block;
+    margin: 1.2rem auto;
+    width: 11.8rem;
+    height: 10.6rem;
+    background-size: 100%;
+    background-repeat: no-repeat
+}
+
+.bwf-area .bwf-category .bwf-type .bwf-en {
+    display: block;
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: #000;
+    line-height: 2.4rem;
+    margin-bottom: .8rem
+}
+
+.bwf-area .bwf-category .bwf-type .bwf-txt {
+    font-size: 1.2rem;
+    font-weight: 500;
+    line-height: 1.8rem;
+    color: #666
+}
+
+.copy-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 1.8rem 2rem 1.8rem 3.2rem;
+    border-radius: 1.6rem;
+    background: #2c2c2c;
+    margin-top: 4rem
+}
+
+.copy-box.white {
+    background: #fff
+}
+
+.copy-box.white .copy-title {
+    color: #000
+}
+
+.copy-box+.copy-box {
+    margin-top: .8rem
+}
+
+.copy-box .copy-title {
+    font-size: 1.4rem;
+    font-weight: 500;
+    color: #fff
+}
+
+.copy-box .btn.copy {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #888;
+    padding: 1.2rem 1.6rem;
+    background: #eee;
+    border-radius: 10rem
+}
+
+.another-test .another-list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    overflow: scroll;
+    white-space: nowrap;
+    margin-top: 4rem
+}
+
+.another-test .another-list .another-item {
+    display: block;
+    width: 14rem;
+    margin-right: 1.6rem;
+    padding: 0 .8rem
+}
+
+.another-test .another-list .another-item:first-child {
+    margin-left: .4rem
+}
+
+.another-test .another-list .another-item>a {
+    font-size: 1.6rem;
+    font-weight: 300;
+    line-height: 1.9rem;
+    color: #fff
+}
+
+.another-test .another-list .another-item>a span {
+    display: block;
+    white-space: pre-wrap;
+    text-align: center
+}
+
+.another-test .another-list .another-item>a span b {
+    font-size: 1.6rem;
+    font-weight: 700;
+    line-height: 1.9rem;
+    text-decoration: underline
+}
+
+.another-test .another-list .another-item::before {
+    content: "";
+    display: block;
+    width: 12.4rem;
+    height: 12.4rem;
+    margin-bottom: 1.6rem;
+    background-repeat: no-repeat;
+    background-size: 100%
+}
+
+.another-test .another-list .another-item[data-image=who-a-u]::before {
+    background-image: url(https://ap-northeast-2-02890046-view.menlosecurity.com/c/0/i/aHR0cDovLzIyMS4xNDcuNDQuMTE3OjExODAvc3ZuL2tib2NhcmUvcHN5Y2hvbG9naWNhbFRlc3Qvd2ViQXBwL3Jlc291cmNlcy9pbWcvY29tbW9uL2ltZy13aG8tYS11LnBuZw~~?b=RNS3UeHJ&k=DQWpEJ19cMb9hb0MlGLGc2BpzFeqZ19ruKGJ3DDcMO8~)
+}
+
+.another-test .another-list .another-item[data-image=current-heart]::before {
+    background-image: url(https://ap-northeast-2-02890046-view.menlosecurity.com/c/0/i/aHR0cDovLzIyMS4xNDcuNDQuMTE3OjExODAvc3ZuL2tib2NhcmUvcHN5Y2hvbG9naWNhbFRlc3Qvd2ViQXBwL3Jlc291cmNlcy9pbWcvY29tbW9uL2ltZy1jdXJyZW50LWhlYXJ0LnBuZw~~?b=RNS3UeHJ&k=3bn7Ey2RhX2ICTDJyZukVicfesQEVGI2fC-LrV1EJWU~)
+}
+
+.another-test .another-list .another-item[data-image=medicine]::before {
+    background-image: url(https://ap-northeast-2-02890046-view.menlosecurity.com/c/0/i/aHR0cDovLzIyMS4xNDcuNDQuMTE3OjExODAvc3ZuL2tib2NhcmUvcHN5Y2hvbG9naWNhbFRlc3Qvd2ViQXBwL3Jlc291cmNlcy9pbWcvY29tbW9uL2ltZy1tZWRpY2luZS5wbmc~?b=RNS3UeHJ&k=kdQ5Xex7fupQm9dmCAfmhcKB1dCwYm0xbcuHLrU4_S0~)
+}
+
+.oc-type-area .oc-type-box {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 4rem
+}
+
+.oc-type-area .oc-type-box::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 3.2rem;
+    transform: translateX(-50%);
+    width: 50%;
+    height: .1rem;
+    background: #ddd
+}
+
+.oc-type-area .oc-type-box .oc-type-title {
+    position: absolute;
+    left: 50%;
+    top: 2.4rem;
+    transform: translateX(-50%);
+    font-size: 1.3rem;
+    font-weight: 500;
+    color: #000;
+    background: #fff;
+    padding: .2rem .8rem
+}
+
+.oc-type-area .oc-type-box .oc-type-item {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    margin: 0 auto
+}
+
+.oc-type-area .oc-type-box .oc-type-item::before {
+    content: "";
+    display: block;
+    width: 6.4rem;
+    height: 6.4rem;
+    border-radius: 50%;
+    font-size: 4rem;
+    font-weight: 700;
+    color: #fff
+}
+
+.oc-type-area .oc-type-box .oc-type-item.oc-t::before {
+    content: "";
+    background: #f04d6a;
+    box-shadow: 0px 8px 12px rgba(240,77,106,.25)
+}
+
+.oc-type-area .oc-type-box .oc-type-item.oc-p::before {
+    content: "";
+    background: #7e5ef6;
+    box-shadow: 0px 8px 12px rgba(126,94,246,.25)
+}
+
+.oc-type-area .oc-type-box .oc-type-item.oc-c::before {
+    content: "";
+    background: #f8cc46;
+    box-shadow: 0px 8px 12px rgba(248,204,70,.25)
+}
+
+.oc-type-area .oc-type-box .oc-type-item.oc-l::before {
+    content: "";
+    background: #00c39a;
+    box-shadow: 0px 8px 12px rgba(0,195,154,.25)
+}
+
+.oc-type-area .oc-type-box .oc-type-item.oc-e::before {
+    content: "";
+    background: #5533ea;
+    box-shadow: 0px 4px 4px rgba(85,51,234,.25)
+}
+
+.oc-type-area .oc-type-box .oc-type-item.oc-i::before {
+    content: "";
+    background: #4a9fff;
+    box-shadow: 0px 8px 12px rgba(74,159,255,.25)
+}
+
+.oc-type-area .oc-type-box .oc-type-item::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 0;
+    width: 6.4rem;
+    height: 6.4rem;
+    transform: translateX(-50%);
+    background-repeat: no-repeat;
+    background-size: 100%
+}
+
+.oc-type-area .oc-type-box .oc-type-item.oc-t::after {
+    background-image: url("data:image/svg+xml,%3Csvg width='65' height='65' viewBox='0 0 65 65' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M35.1 47.5H29.06V23.98H21.3V18.94H42.86V23.98H35.1V47.5Z' fill='white'/%3E%3C/svg%3E%0A")
+}
+
+.oc-type-area .oc-type-box .oc-type-item.oc-p::after {
+    background-image: url("data:image/svg+xml,%3Csvg width='65' height='65' viewBox='0 0 65 65' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M33.22 18.94C36.9 18.94 39.58 19.74 41.26 21.34C42.9667 22.9133 43.82 25.0867 43.82 27.86C43.82 29.1133 43.6333 30.3133 43.26 31.46C42.8867 32.58 42.26 33.5933 41.38 34.5C40.5267 35.38 39.3933 36.0733 37.98 36.58C36.5667 37.0867 34.82 37.34 32.74 37.34H30.14V47.5H24.1V18.94H33.22ZM32.9 23.9H30.14V32.38H32.14C33.2867 32.38 34.2733 32.2333 35.1 31.94C35.9267 31.6467 36.5667 31.18 37.02 30.54C37.4733 29.9 37.7 29.0733 37.7 28.06C37.7 26.6467 37.3133 25.6067 36.54 24.94C35.7667 24.2467 34.5533 23.9 32.9 23.9Z' fill='white'/%3E%3C/svg%3E%0A")
+}
+
+.oc-type-area .oc-type-box .oc-type-item.oc-c::after {
+    background-image: url("data:image/svg+xml,%3Csvg width='65' height='65' viewBox='0 0 65 65' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M35.22 23.58C34.0733 23.58 33.0467 23.8067 32.14 24.26C31.26 24.7133 30.5133 25.3667 29.9 26.22C29.2867 27.0467 28.82 28.06 28.5 29.26C28.2067 30.46 28.06 31.8067 28.06 33.3C28.06 35.3267 28.3 37.06 28.78 38.5C29.2867 39.9133 30.0733 40.9933 31.14 41.74C32.2067 42.4867 33.5667 42.86 35.22 42.86C36.3933 42.86 37.5533 42.7267 38.7 42.46C39.8733 42.1933 41.14 41.82 42.5 41.34V46.42C41.2467 46.9267 40.0067 47.3 38.78 47.54C37.5533 47.78 36.18 47.9 34.66 47.9C31.7267 47.9 29.3 47.3 27.38 46.1C25.4867 44.8733 24.0867 43.1667 23.18 40.98C22.2733 38.7667 21.82 36.1933 21.82 33.26C21.82 31.1 22.1133 29.1267 22.7 27.34C23.2867 25.5267 24.14 23.9667 25.26 22.66C26.4067 21.3533 27.8067 20.34 29.46 19.62C31.14 18.9 33.06 18.54 35.22 18.54C36.6333 18.54 38.0467 18.7267 39.46 19.1C40.9 19.4467 42.2733 19.9267 43.58 20.54L41.62 25.46C40.5533 24.9533 39.4733 24.5133 38.38 24.14C37.3133 23.7667 36.26 23.58 35.22 23.58Z' fill='white'/%3E%3C/svg%3E%0A")
+}
+
+.oc-type-area .oc-type-box .oc-type-item.oc-l::after {
+    background-image: url("data:image/svg+xml,%3Csvg width='65' height='65' viewBox='0 0 65 65' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M24.1 47.5V18.94H30.14V42.5H41.74V47.5H24.1Z' fill='white'/%3E%3C/svg%3E%0A")
+}
+
+.oc-type-area .oc-type-box .oc-type-item.oc-e::after {
+    background-image: url("data:image/svg+xml,%3Csvg width='65' height='65' viewBox='0 0 65 65' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M40.54 47.5H24.1V18.94H40.54V23.9H30.14V30.18H39.82V35.14H30.14V42.5H40.54V47.5Z' fill='white'/%3E%3C/svg%3E%0A")
+}
+
+.oc-type-area .oc-type-box .oc-type-item.oc-i::after {
+    background-image: url("data:image/svg+xml,%3Csvg width='65' height='65' viewBox='0 0 65 65' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M38.78 47.5H25.78V44.06L29.26 42.46V23.98L25.78 22.38V18.94H38.78V22.38L35.3 23.98V42.46L38.78 44.06V47.5Z' fill='white'/%3E%3C/svg%3E%0A")
+}
+
+.oc-type-area .oc-type-box .oc-type-item.oc-t .oc-type-name {
+    color: #f04d6a
+}
+
+.oc-type-area .oc-type-box .oc-type-item.oc-p .oc-type-name {
+    color: #7e5ef6
+}
+
+.oc-type-area .oc-type-box .oc-type-item.oc-c .oc-type-name {
+    color: #f8cc46
+}
+
+.oc-type-area .oc-type-box .oc-type-item.oc-l .oc-type-name {
+    color: #00c39a
+}
+
+.oc-type-area .oc-type-box .oc-type-item.oc-e .oc-type-name {
+    color: #5533ea
+}
+
+.oc-type-area .oc-type-box .oc-type-item.oc-i .oc-type-name {
+    color: #4a9fff
+}
+
+.oc-type-area .oc-type-box .oc-type-item .oc-type-name {
+    font-size: 1.6rem;
+    font-weight: 700;
+    line-height: 2rem;
+    margin-top: 1.6rem
+}
+
+.oc-type-area .oc-type-box .oc-type-item .oc-type-desc {
+    font-size: 1.2rem;
+    font-weight: 500;
+    line-height: 1.8rem;
+    color: #666;
+    margin-top: .8rem
+}
+
+.oc-type-area+.btn-area {
+    margin-top: 3.6rem
+}
+
+.btn-area+.btn-area {
+    margin-top: 1.6rem
+}
+
+.oc-point-area {
+    margin: 5.6rem 0 2.8rem 0
+}
+
+.oc-point-area .oc-point-box {
+    position: relative;
+    width: 100%;
+    height: 15rem;
+    background: #fffde8;
+    border-radius: 2.4rem;
+    padding: 3.2rem;
+    margin-bottom: 5.4rem
+}
+
+[data-bg=I] .oc-point-area .oc-point-box {
+    background: #dbfaf5
+}
+
+[data-bg=I] .oc-point-area .oc-point-box .line-text::before {
+    background: #4dbeab;
+    opacity: 50%
+}
+
+.oc-point-area .oc-point-box::before {
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: -3.2rem;
+    width: 15rem;
+    height: 15rem;
+    background-repeat: no-repeat;
+    background-size: 100%
+}
+
+.oc-point-area .oc-point-box .oc-point-title {
+    display: block;
+    font-size: 2rem;
+    font-weight: 500;
+    line-height: 2.4rem;
+    color: #000
+}
+
+.oc-point-area .oc-point-box .oc-point-title .oc-sub-txt {
+    display: block;
+    font-size: 1.4rem;
+    color: #888;
+    margin-bottom: .8rem
+}
+
+.complete-test-table {
+    margin-top: 3.2rem;
+    width: 100%;
+    border-radius: 1.2rem
+}
+
+.complete-test-table thead {
+    position: relative;
+    background: #f5f5f5
+}
+
+.complete-test-table thead tr th {
+    position: relative;
+    padding: 1.3rem 1.8rem;
+    font-size: 1.4rem;
+    font-weight: 500;
+    color: #666;
+    text-align: left;
+    border-radius: 1.2rem
+}
+
+.complete-test-table thead tr th:first-child {
+    border-radius: 1.2rem 0 0 1.2rem
+}
+
+.complete-test-table thead tr th:last-child {
+    border-radius: 0 1.2rem 1.2rem 0
+}
+
+.complete-test-table thead tr th:first-child::before {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: .1rem;
+    height: 2rem;
+    background: #ddd
+}
+
+.complete-test-table tbody tr {
+    width: 100%;
+    border-bottom: 1px solid #ddd
+}
+
+.complete-test-table tbody tr td {
+    padding: 3.2rem 2rem;
+    text-align: left
+}
+
+.complete-test-table tbody tr td:nth-child(2) {
+    text-align: right
+}
+
+.complete-test-table tbody tr td .my-info,.complete-test-table tbody tr td .partner-info {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #000;
+    line-height: 2.1rem
+}
+
+.complete-test-table tbody tr td .my-info.type-i .line-text::before,.complete-test-table tbody tr td .partner-info.type-i .line-text::before {
+    background: rgba(77,190,171,.4)
+}
+
+.complete-test-table tbody tr td .my-info .line-text,.complete-test-table tbody tr td .partner-info .line-text {
+    margin-top: 1.2rem
+}
+
+.complete-test-table tbody tr td .my-info .line-text::before,.complete-test-table tbody tr td .partner-info .line-text::before {
+    bottom: -0.3rem;
+    background: rgba(255,215,0,.4)
+}
+
+.complete-test-table tbody tr td .partner-info {
+    position: relative
+}
+
+.complete-test-table tbody tr td .partner-info .ico-img-area {
+    position: absolute;
+    left: -4.5rem;
+    top: 50%;
+    transform: translateY(-50%)
+}
+
+.comment-box {
+    position: relative;
+    padding: 2.4rem 3.2rem;
+    border-radius: 1.6rem;
+    background: #2c2c2c
+}
+
+.comment-box .txt {
+    font-size: 1.4rem;
+    font-weight: 300;
+    color: #fff;
+    line-height: 2.1rem
+}
+
+.comment-box .txt .txt-l {
+    position: relative;
+    display: inline-block;
+    font-size: 2.4rem;
+    font-weight: 700;
+    margin-top: .8rem
+}
+
+.comment-box .txt .txt-l::after {
+    content: "";
+    position: absolute;
+    right: -2.8rem;
+    bottom: .4rem;
+    width: 2.4rem;
+    height: 2.4rem;
+    background: url(https://ap-northeast-2-02890046-view.menlosecurity.com/c/0/i/aHR0cDovLzIyMS4xNDcuNDQuMTE3OjExODAvc3ZuL2tib2NhcmUvcHN5Y2hvbG9naWNhbFRlc3Qvd2ViQXBwL3Jlc291cmNlcy9pbWcvaWNvbi9pY29fbGlnaHQucG5n?b=RNS3UeHJ&k=Q-Y8gNokcSU3aRACYaHKA_ED8_iwSr5gPAtj7DXaMic~) no-repeat center/100%
+}
+
+.comment-box .btn-arrow {
+    position: absolute;
+    right: 3.2rem;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 4rem;
+    height: 4rem;
+    background: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='40' height='40' rx='20' fill='%23F5F5F5'/%3E%3Cpath d='M18 15L23 20L18 25' stroke='black' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A") no-repeat center/100%
+}
+
+.comment-box+.btn-area {
+    margin-top: 3.2rem
+}
+
+.no-scroll {
+    -ms-overflow-style: none;
+    scrollbar-width: none
+}
+
+.no-scroll::-webkit-scrollbar {
+    display: none
+}

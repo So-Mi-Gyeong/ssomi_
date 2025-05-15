@@ -1,0 +1,75 @@
+.eve_7_41v{
+    .mdl-selection{
+        width: 100%;
+        align-items: center;
+        flex-direction: column;
+
+        .group {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            align-items: center;
+            gap:.4rem
+        }
+    }
+    .mdl-selection-item {
+        &[data-type=checkbox]{gap:.4rem;}
+        &[data-type=checkbox]::before{
+            width: 2rem;
+            height: 1.8rem;
+            background: url(../../img/event/eve7_41/checkbox.svg) no-repeat 0 0 /cover !important;
+        }
+
+        span{color: #fff !important; opacity:1}
+    }
+    :checked ~ .group .mdl-selection-item[data-type=checkbox]::before {
+        background: url(../../img/event/eve7_41/checkbox_on.svg) no-repeat 0 0 /cover !important;
+    }
+    :checked ~ .btn-wrap .btn-txt{
+        pointer-events: initial;
+        background-color: var(--basic);
+
+        span{  color:var(--tpoint) !important;}
+    }
+    [data-state="complete"] {
+        .mdl-selection-item {pointer-events: none;}
+        .mdl-selection-item[data-type=checkbox]::before { background: url(../../img/event/eve7_41/checkbox_on.svg) no-repeat 0 0 /cover !important;}
+        .btn-wrap .btn-txt {
+            pointer-events: none;
+
+            background-color: #332c56 !important;
+            span{ color:#fff !important; display: none;}
+
+            span + span{display: inline;}
+        }
+    }
+    .btn-wrap {
+        width: 100%;
+        margin-top: 2.4rem;
+        .btn-txt{
+            pointer-events: none;
+            background-color: #554B96;
+
+            span{ color:#fff !important; margin-left: 0 !important;}
+
+            span + span{display: none;}
+        }
+        .btn-txt:disabled {
+            pointer-events: none !important;
+            background-color: #554B96 !important;
+
+            span{ color:#fff !important;}
+        }
+    }
+   
+    &-bg{
+        padding:1.6rem 2.4rem 6rem;
+        background-color: #887BE8;
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    &.event-box {background-color: #887BE8;}
+    &.mdl-toast{bottom:calc(env(safe-area-inset-bottom) + 7.6rem);}
+}

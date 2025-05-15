@@ -1,0 +1,271 @@
+.chart-rader {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1 / 0.7;
+  padding: 0 6rem;
+  max-width: 32.7rem;
+  min-width: 32.7rem;
+  margin: 3.3rem auto 0;
+
+  &--wrap {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+  }
+
+  &--bg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+  }
+
+  &--line {
+    position: absolute;
+    width: 50%;
+    height: 1px;
+    top: 50%;
+    left: 50%;
+    transform-origin: 0 .5px;
+    background-color: #EEEEEE;
+    z-index: 0;
+  }
+
+  &--item {
+    position: absolute;
+    width: 50%;
+    height: 1px;
+    top: 50%;
+    left: 50%;
+    z-index: 3;
+    transform-origin: 0 .5px;
+  }
+
+  &--bg-tit {
+    display: block;
+    position: absolute;
+    font-size: 1.2rem;
+    padding: .4rem;
+    background-color: #FCFCFC;
+    z-index: 3;
+    left: 50%;
+    transform: translate(-50%, 0.5rem);
+    color: #777D88;
+
+    &.n1 {
+      top: 1rem;
+    }
+
+    &.n2 {
+      top: 3.2rem;
+    }
+
+    &.n3 {
+      top: 5.5rem;
+    }
+
+    &.n4 {
+      top: calc(48% - 1.8rem);
+    }
+  }
+
+  &--bg-1,
+  &--bg-2,
+  &--bg-3,
+  &--bg-4 {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: 0;
+  }
+
+  &--name {
+    position: absolute;
+    top: 100%;
+    left: 100%;
+    width: 1px;
+    height: 1px;
+
+    &[data-disabled="true"] b {
+      background-color: #DADCDF;
+      border-color: #DADCDF;
+      color: var(--color-gray-400);
+    }
+
+    b {
+      font-size: 1.1rem;
+      font-weight: 700;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: 0.1rem solid var(--color-gray-600);
+      color: var(--color-gray-300);
+      padding: .1rem .8rem 0;
+      min-height: 2.6rem;
+      background-color: #fff;
+      border-radius: 4rem;
+      position: absolute;
+      left: 0;
+      top: calc(-50% - 1.3rem);
+    }
+  }
+
+  &--dot {
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background-color: transparent;
+    margin: -2px 0 0 -3px;
+  }
+
+  svg.bg {
+    z-index: 0;
+  }
+
+  svg.bg2 {
+    z-index: 1;
+  }
+
+  svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 3;
+
+    &.value polygon {
+      opacity: 0;
+      transform: translate(3px, 3px) scale(0.5);
+      stroke: rgba(107, 156, 255, 0.7);
+      fill: rgba(101, 149, 255, 0.3);
+      stroke-width: 1;
+      transform-origin: 50% 50%;
+      transition: all 500ms cubic-bezier(.85, .88, .2, 1.15);
+    }
+
+    &.value.on polygon {
+      opacity: 1;
+      transform: translate(3px, 3px) scale(1);
+    }
+
+    polygon.line1,
+    polygon.line2,
+    polygon.line3,
+    polygon.line4 {
+      opacity: 1;
+      transform: translate(1px, 1px);
+      stroke: rgba(230, 230, 230, 1);
+      fill: transparent;
+      stroke-width: 1;
+    }
+
+    polygon.line4,
+    polygon.line1 {
+      fill: rgba(252, 252, 252, 1);
+    }
+  }
+
+  .chart-rader--bg-1,
+  [data-state="정상"] .chart-rader--dot {
+    left: 100%
+  }
+
+  .chart-rader--bg-2,
+  [data-state="경계"] .chart-rader--dot {
+    left: 75%
+  }
+
+  .chart-rader--bg-3,
+  [data-state="의심"] .chart-rader--dot {
+    left: 50%
+  }
+
+  .chart-rader--bg-4,
+  [data-state="null"] .chart-rader--dot {
+    left: 25%;
+    background-color: transparent;
+  }
+
+  [data-sum="6"] {
+    .chart-rader--line:nth-child(1),
+    .chart-rader--item:nth-child(1) {
+      rotate: 240deg;
+
+      .chart-rader--name {
+        rotate: -240deg;
+
+        b {
+          transform: translate(-3rem, -0.6rem);
+        }
+      }
+    }
+
+    .chart-rader--line:nth-child(2),
+    .chart-rader--item:nth-child(2) {
+      rotate: 300deg;
+
+      .chart-rader--name {
+        rotate: -300deg;
+
+        b {
+          transform: translate(-1rem, -0.6rem)
+        }
+      }
+    }
+
+    .chart-rader--line:nth-child(3),
+    .chart-rader--item:nth-child(3) {
+      rotate: 0deg;
+
+      .chart-rader--name {
+        rotate: -0;
+
+        b {
+          transform: translate(-.5rem, 0.2rem);
+        }
+      }
+    }
+
+    .chart-rader--line:nth-child(4),
+    .chart-rader--item:nth-child(4) {
+      rotate: 60deg;
+
+      .chart-rader--name {
+        rotate: -60deg;
+
+        b {
+          transform: translate(-1rem, 0.8rem);
+        }
+      }
+    }
+
+    .chart-rader--line:nth-child(5),
+    .chart-rader--item:nth-child(5) {
+      rotate: 120deg;
+
+      .chart-rader--name {
+        rotate: -120deg;
+
+        b {
+          transform: translate(-4.5rem, 0.8rem);
+        }
+      }
+    }
+
+    .chart-rader--line:nth-child(6),
+    .chart-rader--item:nth-child(6) {
+      rotate: 180deg;
+
+      .chart-rader--name {
+        rotate: -180deg;
+
+        b {
+          transform: translate(-5rem, 0.2rem);
+        }
+      }
+    }
+  }
+}

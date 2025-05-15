@@ -1,0 +1,415 @@
+.ocr-group-challenge{
+    background-color:#222;
+    * { font-family:'KBF';}
+    .ocr-body{
+        padding: 1.6rem 2.4rem calc(env(safe-area-inset-bottom));
+    }
+    .mdl-subject{
+        margin-top: 1.4rem;
+        justify-content: center;
+        &-group{
+            align-items: center;
+        }
+        &-em{
+            font-size: 3.3rem;
+            font-weight: 700;
+            color: #FFF;
+        }
+        &-tit{
+            font-size: 3.3rem;
+            font-weight: 700;
+            color: #FFD700;
+        }
+        &-txt{
+            background-color: #00000066;
+            color: #FFF;
+            border-radius: 1.9rem;
+            padding: 0.8rem 1.6rem;
+            font-size: 1.6rem;
+            font-weight: 500;
+            margin-top: 1.4rem;
+        }
+        &::before{
+            content: '';
+            position: absolute;
+            top: 11rem;
+            right: -6rem;
+            width: 37rem;
+            height: 35rem;
+            background: url(../../assets/img/challenge/luckyball/item.png) 0 0 no-repeat;
+            background-size: 37rem 35rem;
+            z-index: 1;
+        }
+    }
+    &-txt{
+        font-size: 1.8rem;
+        font-weight: 300;
+        color: #FFF;
+        text-align: center;
+        margin-bottom: 3.2rem;
+        padding-top: 34.5rem;
+        line-height: 2.5rem;
+        em{
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #FFD300;
+        }
+    }
+    &-info{
+        display: flex;
+        justify-content: center;
+        background-color: #FFF;
+        .mdl-acco-txt{
+            h2{
+                color: #000;
+                font-size: 2.6rem;
+                font-weight: 700;
+            }
+            
+        }
+        .mdl-acco-pnl-wrap{
+            .step{
+                display: flex;
+                flex-direction: column;
+                gap: 1rem;
+                li{
+                    position: relative;
+                    &::after{
+                        content: '';
+                        width: 3.5rem;
+                        height: 3.5rem;
+                        position: absolute;
+                        bottom: -2.4rem;
+                        left: 50%;
+                        transform: translateX(-50%);
+                        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='35' height='35' viewBox='0 0 35 35' fill='none'%3E%3Cg filter='url(%23filter0_d_10023_9119)'%3E%3Cg clip-path='url(%23clip0_10023_9119)'%3E%3Crect x='30.7734' y='0.02771' width='26' height='26' rx='13' transform='rotate(90 30.7734 0.02771)' fill='white'/%3E%3Crect x='30.7734' y='0.02771' width='26' height='26' transform='rotate(90 30.7734 0.02771)' fill='white' fill-opacity='0.01'/%3E%3Cpath d='M23.7734 10.0277L17.7734 16.0277L11.7734 10.0277' stroke='black' stroke-width='2'/%3E%3C/g%3E%3C/g%3E%3Cdefs%3E%3Cfilter id='filter0_d_10023_9119' x='0.773438' y='0.02771' width='34' height='34' filterUnits='userSpaceOnUse' color-interpolation-filters='sRGB'%3E%3CfeFlood flood-opacity='0' result='BackgroundImageFix'/%3E%3CfeColorMatrix in='SourceAlpha' type='matrix' values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0' result='hardAlpha'/%3E%3CfeOffset dy='4'/%3E%3CfeGaussianBlur stdDeviation='2'/%3E%3CfeComposite in2='hardAlpha' operator='out'/%3E%3CfeColorMatrix type='matrix' values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0'/%3E%3CfeBlend mode='normal' in2='BackgroundImageFix' result='effect1_dropShadow_10023_9119'/%3E%3CfeBlend mode='normal' in='SourceGraphic' in2='effect1_dropShadow_10023_9119' result='shape'/%3E%3C/filter%3E%3CclipPath id='clip0_10023_9119'%3E%3Crect x='30.7734' y='0.02771' width='26' height='26' rx='13' transform='rotate(90 30.7734 0.02771)' fill='white'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E");
+                        background-repeat: no-repeat no-repeat;
+                        background-position: center center;
+                        background-size: 3.2rem;
+                        z-index: 1;
+                    }
+                    &:nth-of-type(1){
+                        div{
+                            background: url(../../assets/img/challenge/luckyball/step1.png) right 2.4rem  center no-repeat;
+                            background-size: 9.8rem 5rem;
+                        }
+                    }
+                    &:nth-of-type(2){
+                        div{
+                            background: url(../../assets/img/challenge/luckyball/step2.png) right 2.4rem  center no-repeat;
+                            background-size: 9.8rem 5rem;
+                        }
+                    }
+                    &:last-child{
+                        div{
+                            background: url(../../assets/img/challenge/luckyball/step3.png) right 2.4rem  center no-repeat;
+                            background-size: 10rem 9.7rem;
+                        }
+                        &::after{
+                            display: none;
+                        }
+                    }
+                }
+                div{
+                    display: flex;
+                    flex-direction: column;
+                    gap: 0.2em;
+                    padding: 1.8rem 2.4rem;
+                    background-color: #F6F7FB !important;
+                    border: 0.1rem dashed #DDD;
+                    border-radius: 2rem;
+                    em{
+                        font-family: 'Binggrae';
+                        font-size: 1.5rem;
+                        font-weight: 700;
+                        color: #7F33FF;
+                    }
+                    p{
+                        font-family: 'KBF';
+                        font-size: 1.6rem;
+                        font-weight: 500;
+                        color: #000;
+                    }
+                }
+            }
+            .mdl-bul-dot{
+                margin: 3.6rem 0 5rem;
+                padding: 0 1.2rem;
+                li{
+                    line-height: 2.1rem;
+                    font-size: 1.5rem;
+                    color: #525252;
+                    & + li{
+                        margin-top: 0.8rem;
+                    }
+                }
+            }
+        }
+    }
+    &-Benefits{
+        display: flex;
+        justify-content: center;
+        background-color: #6128C1;
+        margin-top: -5rem;
+        .mdl-acco-txt{
+            h2{
+                color: #FFF;
+                font-size: 2.6rem;
+                font-weight: 700;
+            }   
+        }
+        .ocr-Benefits-txt{
+            position: relative;
+            color: #FFF;
+            font-size: 1.8rem;
+            font-weight: 500;
+            text-align: center;
+            padding-top: 20rem;
+            padding-bottom: 1rem;
+            em{
+                font-size: 1.8rem;
+                font-weight: 700;
+                color: #FFD700;
+            }
+            &::before{
+                content: '';
+                position: absolute;
+                top: 0;
+                right: 0;
+                width: 100%;
+                height: 19.2rem;
+                background: url(../../assets/img/challenge/luckyball/item2.png) center 0 no-repeat;
+                background-size: 33.5rem 19.2rem;
+                z-index: 1;
+            }
+        }
+        .mdl-btn-wrap{
+            margin: 3.2rem 0 2rem;
+        }
+    }
+    &-notice{
+        width: 100.2dvw;
+        display: flex;
+        justify-content: center;
+        background-color: #201F2C;
+        margin-top: -5rem;
+        padding-bottom: 4rem !important;
+        .mdl-acco-txt{
+            h2{
+                color: #FFF;
+                font-size: 2.6rem;
+                font-weight: 700;
+            }   
+        }
+        .mdl-bul-dot{
+            li{
+                color: #999;
+                font-size: 1.4rem;
+                font-weight: 300;
+                &::before{
+                    background-color: #999;
+                }
+                & + li{
+                    margin-top: 1.2rem;
+                }
+            }
+        }
+    }
+    &-after{
+        display: none;
+    }
+    &[data-step="after"]{
+        background-color: #8B46FF;
+        .ocr-group-challenge-tit{
+            .mdl-subject{
+                justify-content: flex-start;
+                padding-bottom: 8.9rem;
+                &-group{
+                    align-items:self-start;
+                }
+                &-em, &-tit{
+                    font-size: 2.8rem;
+                }
+                &::before{
+                    width: 22.6rem;
+                    height: 24.1rem;
+                    top:-1rem;
+                    right: -5rem;
+                    background: url(../../assets/img/challenge/luckyball/item3.png) 0 0 no-repeat;
+                    background-size: 22.6rem 24.1rem;
+                    z-index: -1;
+                }
+            }  
+            .ocr-group-challenge-txt{
+                display: none;
+            }
+        }
+        // .mdl-btn[data-rank] .num {
+        //     background-position: 1.6rem 0 !important;
+        // }
+        [data-rank] .num {
+            width: 4.8rem;
+            height: 4.8rem;
+        }
+        [data-rank="1"] .num{background: url(../../assets/img/challenge/luckyball/n1.png) 50% 50% / 4.8rem no-repeat; color:transparent !important;}
+        [data-rank="2"] .num{background: url(../../assets/img/challenge/luckyball/n2.png) 50% 50% / 4.8rem no-repeat; color:transparent !important;}
+        [data-rank="3"] .num{background: url(../../assets/img/challenge/luckyball/n3.png) 50% 50% / 4.8rem no-repeat; color:transparent !important;}
+        .ocr-group-challenge-after{
+            display: block;
+            background-color: #201F2C;
+            border-top-left-radius: 5rem;
+            border-top-right-radius: 5rem;
+            padding: 4rem 0 10.2rem;
+            z-index: 0;
+            .mdl-wrap {
+                display: flex;
+                flex-direction: column;
+                gap:3.2rem;
+                justify-content: flex-start;
+                align-items: center;
+            }
+            .tit{
+                font-size: 2rem;
+                color: #FFF;
+                text-align: center;
+                margin-bottom: 2rem;
+            }
+            .mdl-btn{
+                display: flex;
+                align-items: center;
+                width: calc(100% - 4rem);
+                background-color: #FFF;
+                border: 0.1rem solid #EEE;
+                border-radius: 5.8rem;
+                padding: 0 4.2rem 0 1.6rem;
+                box-shadow: 0 0.4rem 1.4rem 0 rgba(0, 0, 0, 0.14);
+                height: 5.8rem;
+
+                .num{
+                    display: flex;
+                    width: 6.6rem;
+                    height: 4.8rem;
+                    justify-content: center;
+                    align-items: center;
+                    font-size: 1.5rem;
+                    font-weight: 700;
+                    color: #000;
+                }
+                & + li{
+                    border-top: 0.1rem solid #EEE;
+                }
+                .area{
+                    display: flex;
+                    font-size: 1.5rem;
+                    font-weight: 700;
+                    flex: 1;
+                    color: #000;
+                    padding-left: 2.7rem;
+                }
+                .count{
+                    justify-content: flex-end;
+                    display: flex;
+                    color: #666;
+                    font-weight: 500;
+                    position: relative;
+                    font-size: 1.5rem;
+
+                    &::after{
+                        position: absolute;
+                        top: -0.6rem;
+                        right: -2.6rem;
+                        width: 2.6rem;
+                        height: 2.6rem;
+                        content: '';
+                        background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='27' height='27' viewBox='0 0 27 27' fill='none'%3E%3Crect x='0.162109' y='0.02771' width='26' height='26' fill='white' fill-opacity='0.01'/%3E%3Cpath d='M10.1621 7.02771L16.1621 13.0277L10.1621 19.0277' stroke='black' stroke-width='2'/%3E%3C/svg%3E") 0 0 no-repeat;
+                        background-size: 2.6rem;
+                    }
+                }
+            }
+            .mdl-box{
+                border-radius: 5.2rem;
+                max-width: inherit;
+                width: 100%;
+                left: 50%;
+                transform: translate(-50%, 0);
+                padding: 4rem 3.7rem 1.8rem 3.7rem;
+            }
+            & + .ocr-group-challenge-info{
+                margin-top: -5rem;
+                z-index: 0;
+                .mdl-bul-dot{
+                    margin: 3.6rem 0 0;
+                }
+
+                .mdl-acco-pnl {
+                    width: calc(100% + 2.4rem);
+                    margin-left: -1.2rem;
+                }
+            }
+            .ocr-ranking{
+                width: 100%;
+                strong{
+                    display: flex;
+                    justify-content: center;
+                    font-size: 2rem;
+                    font-weight: 700;
+                    color: #000;
+                    margin-bottom: 2.8rem;
+                }
+                
+                .ranking-swiper{
+                    .ocr-ranking-box{
+                        li{
+                            display: flex;
+                            align-items: center;
+                            height: 7.4rem;
+                            .num{
+                                display: flex;
+                                width: 6.6rem;
+                                height: 4.8rem;
+                                justify-content: center;
+                                align-items: center;
+                                font-size: 1.5rem;
+                                font-weight: 700;
+                                color: #000;
+                            }
+                            & + li{
+                                border-top: 0.1rem solid #EEE;
+                            }
+                            .area{
+                                display: flex;
+                                font-size: 1.5rem;
+                                font-weight: 700;
+                                flex: 1;
+                                color: #000;
+                                padding-left: 2.7rem;
+                            }
+                            .count{
+                                display: flex;
+
+                                font-size: 1.5rem;
+                                color: #666;
+                                justify-content: flex-end;
+                                margin-right: .6rem;
+                                width: 10rem;
+                            }
+                        }
+                    }
+                    .swiper-pagination{
+                        position: relative;
+                        bottom: 0;
+                        margin-top: 2rem;
+                        .swiper-pagination-bullet{
+                            border-radius: 2rem !important;
+                        }
+                    }
+                }
+            }
+        }
+        .ocr-group-challenge-Benefits{
+            .mdl-btn-wrap{
+                display: none;
+            }
+        }
+    }
+}

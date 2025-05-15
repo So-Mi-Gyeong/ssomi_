@@ -1,0 +1,16 @@
+.popup.light.ok-luckyball{
+    gap:0;
+
+    .mdl-subject{margin-top: -2rem; margin-bottom: 4rem;}
+    .mdl-subject-tit {color: #fff;}
+    .mdl-subject-txt {color:#FFFFFFCC}
+
+    .img {
+        display: flex;
+        justify-content: center;
+        width: 30rem;
+        background: url(../img/challenge/miracle/particle.png) no-repeat 50% 0 / 27.2rem;
+
+        img{display: block; width: 30rem;}
+    }
+}

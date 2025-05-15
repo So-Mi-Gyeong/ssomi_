@@ -1,0 +1,4171 @@
+//NMOK_1_1V_7,NMOK_1_1V_8
+.ocr-main-ocare {
+    overflow: visible;
+    *{word-break: keep-all;}
+    .ocr-giftavay-sign{display: none;}
+
+    &[data-ocare="0"] {
+        background: #ccc;
+        
+        .ocr-benefit,
+        .ocr-giftavay {background:#272235;}
+        .ocr-monthly-img {
+            position: absolute;
+            top: 17rem;
+            right: -$x4;
+            width: 100%;
+            max-width: 30.3rem;
+
+            img {
+                width: 100%; 
+                display: block;
+            } 
+        }
+        //오케어 서브메인
+        .ocr-monthly .skeleton-item.img {
+            position: absolute;
+            width: 28vh;
+            height: 28vh;
+            top:18rem;
+            right:0;
+
+            &::before {
+                width: 100%;
+                height: 100%;
+                @include setRound(50%);
+            }
+            &::after {display: none;}
+        }
+        .btn-ocarego .skeleton-item {position: absolute;}
+        .ocr-monthly .mdl-subject-em .skeleton-item {
+            width: 18rem;
+            height: 6rem;
+            &::before {height: 3rem;}
+            &::after {height: 3rem; width: 70%;}
+        }
+        .ocr-monthly .mdl-subject-tit .skeleton-item {
+            width: 20rem;
+            height: 4.8rem;
+            &::before {height: 4.8rem;}
+            &::after {display: none;}
+        }
+        .ocr-monthly-go .btn-ocarego .skeleton-item {
+            width: 100%;
+            height: 100%;
+            top:0;
+            transform: translate(0,0) !important;
+        
+            &::before {
+                width: 100%;
+                height: 100%;
+                @include setRound(50%);
+            }
+            &::after {display: none;}
+        }
+        .ocr-giftavay .skeleton-item {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top:0;
+            &::before {
+                width: 100%;
+                height: 100%;
+                @include setRound($x3);
+            }
+            &::after {display: none;}
+        }
+        .ocr-monthly-img2 ,
+        .ocr-monthly-img {opacity: 0;}
+    }
+
+    &[data-ocare="6"] {
+        background: linear-gradient(to bottom, #9775F3, #723EFF);
+        
+        .ocr-benefit,
+        .ocr-giftavay {background:#272235;}
+        .ocr-monthly-img {
+            position: absolute;
+            top: 17rem;
+            right: -$x4;
+            width: 100%;
+            max-width: 30.3rem;
+
+            img {
+                width: 100%; 
+                display: block;
+            }
+        }
+    }
+
+    &[data-ocare="7"] {
+        background:#2597FF url(../img/ocare/m7/main_o7_bg.jpg) repeat-x 0 0 / auto 81.2rem;
+
+        .ocr-wrap {
+            background:url(../img/ocare/m7/main_o7.jpg) no-repeat 56% 0 / 37.5rem;
+        }
+        .ocr-benefit,
+        .ocr-giftavay {background:#222835;}
+        .ocr-giftavay-sign{display: none;}
+        .ocr-monthly-img {
+            position: absolute;
+            top: 18vh;
+            right: -2.7rem;
+            width: 30.8rem;
+            max-width: initial;
+
+            img {
+                width: 100%; 
+                display: block;
+            }
+
+            animation-name: fluffy_s;
+            animation-duration: 6s;
+            animation-iteration-count: infinite;
+        }
+    }
+
+    &[data-ocare="8"] {
+        background:#FCEBB8;
+        .ocr-wrap {
+            background:url(../img/ocare/m8/main_o8.jpg) no-repeat 50% -4rem / 112.5rem;
+        }
+        .ocr-benefit,
+        .ocr-giftavay {background:#222;}
+        // .ocr-monthly-img,
+        .ocr-giftavay-sign{display: none;}
+        .ocr-monthly .mdl-subject .mdl-subject-tit,
+        .ocr-monthly .mdl-subject .mdl-subject-em {color: #222;}
+        .ocr-monthly-wrap::before,
+        .ocr-monthly::after{opacity: .5;}
+        .ocr-monthly-img {
+            position: absolute;
+            top: 19vh;
+            left: 50%;
+            margin-left: -21rem;
+            width: 48.2rem;
+            max-width: initial;
+
+            img {
+                width: 100%; 
+                display: block;
+            }
+        }
+        .ocr-ocarebanner .mdl-banner{ 
+            background-color: rgba(255,255,255,25%);
+            box-shadow: 0 .8rem 2rem rgba(0,0,0,16%) !important;
+        }
+        .ocr-ocarebanner .mdl-banner .mdl-banner-txt, 
+        .ocr-ocarebanner .mdl-banner .mdl-banner-tit {color:$gray-90;}
+        [data-icon-after="arrow-long"]::after{background-image: url(../img/common/ico_arrow_long_dark.svg);}
+        .ocr-monthly-go .btn-ocarego{
+            background: radial-gradient(at 40% 40%,  #BFF9FF 1rem, #87ECF6 30%, #25D7E9 70%); 
+            border:.1rem solid #fff;
+        }
+       
+        &[data-state="complete"] {
+            .ocr-monthly-img {
+                transform-origin: 0 0;
+                transform: scale(0.7) translate(10.3rem, -1.5rem);
+            }
+        }
+    }
+    &[data-ocare="9"] {
+        background: #C5D31F url(../img/ocare/m9/main_bg.jpg) no-repeat 50% 0 / 84rem;
+
+        [data-style="ocaremain"]{
+            .mdl-subject-em, .mdl-subject-tit{
+                color: #222;
+            }
+        }
+        .ocr-monthly-go .btn-ocarego{
+            background: radial-gradient(72.84% 72.84% at 30.56% 39.58%, #FFFACF 0%, #FFEF60 28.65%, #FFC42D 94.79%); 
+            border:.1rem solid #fff;
+        }
+
+        .ocr-benefit,
+        .ocr-giftavay {background:#222835;}
+        .ocr-giftavay-item{margin-top: $x3;}
+        .ocr-monthly-img{
+            width: 37.5rem;
+            position: absolute;
+            top: 21rem;
+            left: -4rem;
+        }
+        .ocr-addstamp{background-color: #C5D31F;}
+        .ocr-ocarebanner .swiper-pagination-bullet.swiper-pagination-bullet-active{ background-color: #444 !important; }
+        .ocr-ocarebanner .swiper-pagination-bullet{background-color: #fff !important; opacity: .6;}
+
+        &[data-state="complete"] {
+            background: #C5D31F url(../img/ocare/m9/main_bg.jpg) no-repeat 50% -12vh / 84rem;
+            .ocr-monthly-img {
+                width: 31rem;
+                left:0;
+                top:18vh;
+            }
+        }
+    }
+    &[data-ocare="10"] {
+        background: #ffe17e url(../img/ocare/m10/main_bg.jpg) no-repeat 49% -8rem / 120rem;
+
+        .mdl-subject-group{
+            .mdl-subject-em, .mdl-subject-tit{
+                color: #222;
+            }   
+        }
+        .ocr-benefit,
+        .ocr-giftavay {
+            background:#222835;
+            .mdl-subject-em{
+                color: #CCC;
+            }
+            .mdl-subject-tit{
+                color: #FFF;
+            }
+        }
+        .ocr-giftavay-item{
+            margin-top: $x3;
+        }
+
+        .ocr-missionlist .mdl-btn[data-img="m10"]::before {background-image: url(../../../local/assets/img/ocare/common/ms_ocare10.png);}
+
+    }
+    &[data-ocare="11"] {
+        .ocr-monthly-img2{
+             max-width: 7.7rem;
+             right: $x3;
+        }
+
+        background-image: url(../img/ocare/m11/main_bg.jpg), url(../img/ocare/m11/main_bg2.jpg); 
+        background-position:  50% -4.47vw, 0 0;
+        background-size: 120rem, auto;
+        background-repeat: no-repeat, repeat;
+
+        .mdl-subject[data-style="ocaremain"]{
+            .mdl-subject-em, .mdl-subject-tit{
+                color: #FFF;
+            }   
+        }
+
+
+        .ocr-mission{
+            .mdl-subject-em{
+                color: #444;
+            } 
+            .mdl-subject-tit{
+                color: #000;
+            }
+        } 
+
+        .ocr-prize,
+        .ocr-benefit,
+        .ocr-giftavay {
+            background:#222835;
+            .mdl-subject-em{
+                color: #CCC;
+            }
+            .mdl-subject-tit{
+                color: #FFF;
+            }
+        }
+
+        .ocr-mission, .ocr-addstamp{
+            .mdl-label{
+                background-color: #F55252;
+                margin: 0 0 1.6rem 2.8rem;
+            }
+        }
+
+        .ocr-prize{
+            .mdl-list-wrap{
+                gap: 3.2rem;
+            }
+            .mdl-list{
+                .mdl-subject-tit{
+                    display: flex;
+                    align-items: center;
+                    gap: 0.8rem;
+                    font-size: 1.8rem;
+                    line-height: 2.8rem;
+                }
+            }
+        }
+        .ocr-giftavay-item{
+            margin-top: $x3;
+        }
+        .ocr-missionlist .mdl-btn[data-img="m10"]::before {background-image: url(../../../local/assets/img/ocare/common/ms_ocare10.png);}
+        .ocr-missionlist .mdl-btn[data-img="m11"]::before {background-image: url(../../../local/assets/img/ocare/common/ms_ocare11.png);}
+        .ui-toast{
+            justify-content:space-between
+        }
+    }
+
+    &[data-ocare="12"]{
+        .ocr-monthly-img2{
+            max-width: 8.8rem;
+            right: 0;
+        }
+        background-image: url(../img/ocare/m12/main_bg2.jpg); 
+        background-position:  0 0;
+        background-size: auto;
+        background-repeat: repeat;
+
+        .mdl-subject[data-style="ocaremain"]{
+            .mdl-subject-group{
+                margin:0 0 $x4 $x1;
+                flex-direction: inherit;
+            } 
+            .tit{
+                width: 18.2rem;
+                height: 10.3rem;
+            }
+        }
+        .ocr-prize,
+        .ocr-benefit,
+        .ocr-giftavay {
+            width: 100%;
+            max-width: 40rem;
+            background:#222835;
+            .mdl-subject-em{
+                color: #CCC;
+            }
+            .mdl-subject-tit{
+                color: #FFF;
+            }
+        }
+        .ocr-prize{
+            .mdl-list-wrap{
+                gap: 3.2rem;
+            }
+            .mdl-list{
+                .mdl-subject-tit{
+                    display: flex;
+                    align-items: center;
+                    gap: 0.8rem;
+                    font-size: 1.8rem;
+                    line-height: 2.8rem;
+                }
+            }
+        }
+        .ocr-img{
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-end;
+            margin-top: -3rem;
+            z-index: 1;
+            img{
+                max-width: 25rem;
+            }
+        }
+        .ocr-monthly-contents{
+            display: flex;
+            flex-direction: column;
+        }
+        .ocr-monthly-before{
+            display: flex;
+            flex-direction: column;
+            gap: 2.4rem;
+        }
+        .ocr-monthly-after{
+            display: flex;
+            flex-direction: column;
+            gap: 2.4rem;
+            margin: $x3 0 2.8rem;
+            .ocr-banner{
+                position: relative;
+                background-color: #FEF3D7;
+                box-shadow: 0 .8rem 2rem 0 rgba(0, 0, 0, 0.16);
+                .txt{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    gap: 0.6rem;
+                    .mdl-box-em{
+                        color: #000;
+                        font-family: 'KBF';
+                        font-size: 1.6rem;
+                        font-weight: 700;
+                    }
+                    .mdl-btn{
+                        span{
+                            font-size: 1.3rem;
+                            font-weight: 300;
+                        }
+                    }
+                }
+                .img{
+                    position: absolute;
+                    top: 1.6rem;
+                    right: 2rem;
+                    min-width: 10.5rem;
+                    img{
+                        width: 100%;
+                        max-width: 10.5rem;
+                    }
+                }
+            }
+            .ocr-monthly-magazine{
+                display: flex;
+                opacity: 1;
+                z-index: 1;
+                margin-top: 0;
+                pointer-events: inherit;
+                .mdl-tooltip{
+                    opacity: 1;
+                    left: 1rem;
+                }
+                .mdl-list-wrap{
+                    flex-direction: row;
+                    justify-content: center;
+                }
+                .mdl-list-item{
+                    &:last-child{
+                        width: 16rem;
+                    }
+                    display: flex;
+                    align-items: center;
+                }
+            }
+        }
+    }
+
+    // .swiper[data-swiper="ocaremain"] .swiper-empty {
+    //     // height: calc(var(--vh, 1vh) * 74);
+    //     height: calc(100vh - 17.2rem - (env(safe-area-inset-bottom) + env(safe-area-inset-top)));
+    // }
+
+    &[data-state="complete"] {
+        .ocr-monthly-contents{
+            display: flex;
+            flex-direction: column-reverse;
+        }
+
+        .ocr-monthly-magazine{
+            .mdl-list{
+                display: flex;
+                justify-content: center;
+            }
+            .mdl-wrap{
+                .mdl-tooltip{
+                    left: 2rem;
+                }
+            }
+        } 
+        .ocr-monthly-before{
+           margin-bottom: $x8;
+        }
+    }
+
+    &.ready-scroll.is-scroll,
+    &.is-scroll {
+        .ocr-header {
+            background-color: rgba(0,0,0,10%) !important;
+            backdrop-filter: blur(1rem);
+            -webkit-backdrop-filter: blur(1rem);
+        }
+
+        [data-icon="singleArrowUp"]{ 
+           opacity: 0;
+        }
+        .ocr-monthly-magazine{
+            margin-bottom:0; 
+            transition: margin .2s ease;
+        }
+        .ocr-ocaremain-content {overflow-y: scroll;}
+        .ocr-monthly-go {z-index: 1;}
+        .swiper[data-swiper="ocaremain"] {
+            backdrop-filter: blur(1rem);
+            -webkit-backdrop-filter: blur(1rem);
+        }
+    }
+
+    .ocr-monthly-magazine-item {
+        background-position: 50% 50%;
+        background-size: cover;
+    }
+
+    .ocr-header {
+        position: fixed;
+        z-index: 3;
+        background-color: rgba(0,0,0,0%) !important;
+    }
+    .ocr-body {
+        padding: 0;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+    }
+    .mdl-banner {
+        max-width: $maxwidth;
+    }
+    .ocr-ocaremain-content {
+        width: 100%; 
+        padding:calc(env(safe-area-inset-top) + 0) $x3 calc(env(safe-area-inset-bottom) + 10rem);
+        display: flex; 
+        flex-direction: column; 
+        align-items: center;
+        gap: 1.6rem; 
+        overflow:hidden;
+
+        > * {
+            width: calc(100% - $x6);
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        &::-webkit-scrollbar {display: none;}
+        &::after {
+            content:"";
+            display: block;
+            height: calc(env(safe-area-inset-bottom) + $x8);
+        }
+        .mdl-box {
+            max-width: $maxwidth;
+            padding: $x5 $x3-5;
+        }
+    }
+}
+.ocr-monthly {
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    padding:calc(env(safe-area-inset-top) + 7.2rem) $x3 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &-go {
+        display: flex;
+        justify-content: center;
+        width:100%;
+        position: relative;
+        z-index: 3;
+        .mdl-btn-wrap {
+            position: relative;
+            width:100%; 
+            max-width: $maxwidth;
+        }
+        .btn-ocarego {
+            position: relative;
+            z-index: 1;
+            min-width: 11.3rem;
+            padding: 0;
+            height: 4.8rem; 
+            @include setRound(3.6rem);
+            background: radial-gradient(82.76% 75.17% at 34.72% 33.33%, #FFF0D8 0%, #F0C682 53.12%, #A98549 100%); 
+            box-shadow: 0 .2rem 0 0 rgba(0, 0, 0, 0.35), .1rem .1rem 0 0 rgba(255, 255, 255, 0.40) inset !important;
+        
+            span {
+                font-family: 'KBF';
+                font-weight: 700;
+                font-size: 1.6rem;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                transform: translate(0,.2rem);
+                text-shadow: 0 .1rem 0 #FFF; 
+                color:var(--gray_100);
+                line-height: 2rem;
+                &::after{
+                    content: '';
+                    display: inline-flex;
+                    align-items: center;
+                    background-image: url(../img/ocare/m12/m12_arrow.svg);
+                    background-size: 2.0rem;
+                    width: 2.0rem;
+                    height: 2.0rem;
+                    margin-left: 0.4rem;
+                }
+            }
+        }
+    }
+    &-down{
+        display: flex;
+        justify-content: center;
+    }
+    &-wrap {
+        position: relative;
+        width:100%;
+        max-width: 40rem;
+        // max-width: calc(37.5rem - 4.8rem);
+        display: flex;
+        flex-direction: column;
+    }
+   
+    &-img2 {
+        position: absolute;
+        right: 0;
+        top: 3rem;
+        max-width: 12.3rem;
+        
+        img {
+            width: 100%; 
+            display: block;
+        }
+    }
+
+    .mdl-subject {z-index: 2;}
+    img {z-index: 1;}
+}
+.swiper[data-swiper="ocaremain"] {
+    position: relative;
+    z-index: 2;
+    width: 100%; 
+    height: 100vh; 
+    height: 100dvh;
+    padding: 0;
+    overflow-x: hidden;
+    transition: all .2s ease-in;
+
+    .swiper-empty {
+        width: 100%; 
+        height: 60vh; 
+        height: calc(var(--vh, 1vh) * 50); 
+        padding: 0; 
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+        z-index: 1;
+
+        .ocr-monthly-go {opacity: 0;}
+
+        [data-icon="singleArrowUp"]{ 
+            transition: opacity .4s ease-in;
+            transform: translate(0, calc(18.8rem + env(safe-area-inset-top)));
+        }
+        [data-icon="doubleArrowDown"] { 
+            transition: opacity .4s ease-in;
+            transform: translate(0, calc(7rem + env(safe-area-inset-top)));
+        }
+    }
+}
+[data-icon="singleArrowUp"] {display: none !important;}
+.swiper-slide-active [data-icon="singleArrowUp"] {display: block !important;}
+[data-state="complete"] .swiper[data-swiper="ocaremain"] .swiper-empty [data-icon="singleArrowUp"] {
+    transform: translate(0, 30.6rem);
+}
+[data-state="complete"] .ocr-monthly-magazine{display: block;}
+.ready-scroll .ocr-monthly-magazine{  transition:margin-top 0s;}
+.is-scroll .ocr-monthly-magazine{ position: relative; top:0;  }
+.ocr-main-ocare[data-state=complete] .swiper-slide-active .ocr-prize{top:0}
+// .ocr-main-ocare[data-state=complete] .ocr-prize{top: 4.6rem}
+.swiper-slide-active .ocr-prize{top:0}
+.swiper-slide-active .ocr-monthly-magazine{display: none !important;}
+.ocr-monthly-magazine {
+    display: none;
+    position: relative;
+    align-self: flex-end;
+    justify-content: center;
+    width: 100% !important;
+    margin: 0 auto;
+    opacity: 0;
+    pointer-events: none;
+    z-index: -1;
+    // margin-bottom: calc(-6rem - env(safe-area-inset-bottom));
+    flex-direction: column;
+    margin-top:-5rem;
+    transition: margin-top 1.5s ease-out;
+
+    .mdl-tooltip{
+        top: 0; 
+        left:3rem;
+        opacity: 0;
+        transition: opacity .7s ease-out;
+
+        [data-icon-after]::after{margin-left: $x0-5;}
+        .mdl-tooltip-txt b{
+            font:inherit;
+            color:#4880ED;
+        }
+    }
+    .mdl-tooltip[data-arrow=bl]::before{
+        left: 2.4rem;
+    }
+
+    .mdl-list{
+        padding: $x2 0;
+        width: 100%;
+    }
+    .mdl-list[data-col] .mdl-list-wrap {gap: $x2;}
+    .mdl-list-item{width: 13.5rem; position: relative;}
+    // .mdl-list-item:nth-child(1){z-index:6;}
+    // .mdl-list-item:nth-child(2){z-index:5; margin-left:(calc((13.5rem + $x2) * -1));}
+    // .mdl-list-item:nth-child(3){z-index:4; margin-left:(calc((13.5rem + $x2) * -1));}
+    // .mdl-list-item:nth-child(4){z-index:3; margin-left:(calc((13.5rem + $x2) * -1));}
+    // .mdl-list-item:nth-child(5){z-index:2; margin-left:(calc((13.5rem + $x2) * -1));}
+    // .mdl-list-item:nth-child(6){z-index:2; margin-left:(calc((13.5rem + $x2) * -1));}
+    // .mdl-list-item:nth-child(7){z-index:2; margin-left:(calc((13.5rem + $x2) * -1));}
+    // .mdl-list-item:nth-child(8){z-index:2; margin-left:(calc((13.5rem + $x2) * -1));}
+    // .mdl-list-item:nth-child(9){z-index:2; margin-left:(calc((13.5rem + $x2) * -1));}
+    // .mdl-list-item:nth-child(10){z-index:2; margin-left:(calc((13.5rem + $x2) * -1));}
+    // .mdl-list-item:nth-child(11){z-index:2; margin-left:(calc((13.5rem + $x2) * -1));}
+    // .mdl-list-item:nth-child(12){z-index:2; margin-left:(calc((13.5rem + $x2) * -1));}
+    // .mdl-list-item:nth-child(13){z-index:2; margin-left:(calc((13.5rem + $x2) * -1));}
+    // .mdl-list-item:nth-child(14){z-index:2; margin-left:(calc((13.5rem + $x2) * -1));}
+    // .mdl-list-item:nth-child(15){z-index:2; margin-left:(calc((13.5rem + $x2) * -1));}
+    // .mdl-list-item.cover{z-index:7 !important; margin-left:(calc((13.5rem + $x2) * -1));}
+    .ocr-monthly-magazine-link{display: none;}
+    .swiper-slide{width: auto;}
+    .ocr-monthly-magazine-cover {
+        position: absolute;
+        // top:-.6rem; 
+        // left: -.4rem;
+        // width: 16rem;
+        // height: 20.8rem;
+        // transform:none !important;
+        // transition-delay: 1s;
+        box-shadow: .8rem 0rem 1.2rem rgba(0,0,0, 16%) !important;
+        border-radius: .7rem;
+        overflow: hidden;
+
+        img{
+            width: 16rem;
+        }
+
+        .ocr-monthly-magazine-open{
+            position: absolute;
+            top:0; 
+            left: 0;
+            width:100%;
+            height: 100%;
+            z-index: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            display: none;
+
+            &::before{
+                margin-top: 2.4rem
+            }
+        }
+        .ocr-monthly-magazine-link{
+            position: absolute;
+            top:0; 
+            left: 0;
+            width:100%;
+            height: 100%;
+            z-index: 1;
+            display: block;
+            justify-content: center;
+            align-items: center;
+            color: $gray-100;
+            font-family: 'KBF';
+            padding-top: 4.6rem;
+            text-decoration: underline;
+        } 
+    }
+    .ocr-monthly-magazine-item {
+        width: 13.5rem;
+        height: 19.5rem;
+        border-radius: $x1;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        padding: $x2;
+        box-shadow: 0 0 1.2rem rgba(0,0,0, 0.24) !important;
+
+        em {
+            display: block;
+            color: $gray-0;
+            font-family: 'KBF';
+            font-weight: 700;
+            font-size: 1.5rem;
+            border:.1rem solid $gray-0;
+            border-radius: $x1;
+            padding: $x0-5 $x1;
+            margin-bottom: $x1;
+        }
+        span {
+            display: block;
+            color: $gray-0;
+            text-align: left;
+            word-break: keep-all;
+            font-family: 'KBF';
+            font-weight: 500;
+            font-size:2.2rem
+        }
+    } 
+}
+.ocr-benefit {
+    display: flex;
+    flex-direction: column;
+
+    &[data-chain="true"] {
+        padding: $x2 0 !important;
+    }
+
+    .mdl-wrap {width: calc(100% + 4.4rem);}
+    .mdl-list-wrap {margin-left: $x3;}
+    .mdl-list-item {
+        min-width:calc(50% - $x2);
+        max-width:calc(50% - $x2)
+    }
+}
+.swiper-slide-active .ocr-giftavay-sign::after {
+    animation-name: ocr_textFlow;
+    animation-delay: 0;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+.ocr-ocarebanner {
+    padding-bottom: $x3;
+    width: 100%;
+    max-width: $maxwidth;
+    font-family: "KBF";
+
+    .swiper-wrapper{
+        align-items: stretch !important;
+        height: auto !important;
+    }
+    .swiper {
+        width: 100%;
+        overflow: visible;
+        padding: 1rem 0 0 0;
+        margin: 0;
+    }
+    .mdl-tooltip{
+        top:-1.5rem;
+        left: 2rem; 
+    }
+    .mdl-box {
+        padding:2.8rem 2rem 2.8rem 2.8rem !important;
+        min-height: 13.6rem;
+        flex-direction:row;
+        justify-content:space-between;
+        align-items: center ;
+        background-color: #fff;
+        .txt{
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            gap: $x1;
+        }
+        .img{
+            position: absolute;
+            right: 2rem;
+            min-width: 12.4rem;
+            img{
+                width:100%;
+                max-width: 12.4rem;
+            }
+        }
+
+        &-em {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #000;
+            font-family: "KBF";
+        }
+        &-txt {
+            font-size: 1.3rem;
+            line-height: 1.8rem;
+            color: #999;
+            font-family: "KBF";
+        }
+    }
+
+    .mdl-banner {
+        padding :$x3 $x3;
+        background-color: rgba(255,255,255,0.05);
+        box-shadow: (0 .8rem 2rem rgba(0, 0, 0, 1.6%)) !important;
+    }
+    .swiper-slide {margin-right: $x2 !important;}
+    .swiper-pagination {
+        top:auto !important;
+        bottom: $-x3-5 !important;
+        position: absolute;
+        margin-top: 0;
+        visibility: visible !important;
+    }
+    .swiper-pagination-bullet {
+        background-color: #CCCCCC !important; 
+        opacity: .3 !important;
+        @include setRound(0.25rem !important);
+    }
+    .swiper-pagination-bullet-active {
+        @include setRound(0.25rem !important);
+        background-color: #444 !important; 
+        opacity:1 !important; 
+        width:1.8rem !important
+    }
+}
+.swiper-slide-active .ocr-giftavay{ margin-top: calc(env(safe-area-inset-top) + 7.2rem);}
+.ocr-giftavay {
+    display: flex;
+    flex-direction: column;
+    padding: $x5 0 0 !important;
+    margin-top: calc(env(safe-area-inset-top) + 17.2rem);
+    
+    &-sign {
+        width: 100%;
+        height: 7.7rem;
+        position: absolute; 
+        top:20rem;
+        overflow: hidden;
+        z-index: 2;
+        pointer-events: none;
+
+        &::after {
+            content: "";
+            position: absolute;
+            width: calc(34.1rem * 3) ;
+            background: url(../../../local/assets/img/ocare/common/giveaway.png) repeat-x 0 0 / contain;
+            height: 7.7rem;
+            top: 0;
+        }
+    }
+
+    &-item {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-self: center;
+        gap: $x3;
+        width: 100%;
+        max-width: 23.5rem;
+        justify-content: center;
+        margin-top: -5rem;
+        z-index: 0;
+    }
+    &-txt {
+        color: var(--gray_0);
+        width: 100%;
+        text-align: center;
+        font-family: 'KBF';
+        font-size: 1.6rem;
+        line-height: 2.2rem;
+        font-weight: 700;
+        
+        margin-bottom: $x3;
+
+        em {
+            display: block;
+            font-family: 'KBF';
+            font-size: 1.6rem;
+            line-height: 2.2rem;
+            font-weight: 700;
+            color: $point;
+            margin-top: $x0_5;
+        }
+    }
+    &-img {
+        width: 100%;
+    }
+
+    .mdl-subject {
+        z-index: 1; 
+        padding: 0 $x3-5;
+    }
+    .mdl-btn-wrap {
+        width: 100%;
+        border-top: .1rem solid #3C354E !important;
+        padding: $x2;
+
+        .mdl-btn span {
+            font-size: 1.4rem;
+            color: var(--gray_0);
+        }
+    }
+}
+.ocr-mission {
+    padding: 4rem 0 0 !important;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+    .mdl-subject {
+        z-index: 1; 
+        padding: 0 $x3-5;
+        align-items: flex-end;
+
+        .mdl-btn {
+            margin-bottom: $x1;
+
+            span {
+                display: block;
+                font-size: 1.4rem;
+                color:#777;
+                margin-left: $x0-5;
+                transform: translate(0, .1rem);
+                text-decoration: underline;
+            }
+        }
+    }
+
+    &list {
+        position: relative;
+        width: 100%;
+        margin-top: $x4;
+        padding:0 $x3-5;
+
+        .mdl-list-wrap{gap:$x1-5 !important;}
+        .mdl-list-item{
+            display: flex;
+            justify-content: center;
+        }
+        .mdl-tooltip{
+            z-index: 1;
+            top: -1.7rem;
+            left: -2rem;
+            &-txt{
+                font-family: "KBF";
+                font-size: 1.3rem;
+                b{
+                    font-family: "KBF";
+                    font-size: 1.3rem;
+                    color: #FFE500;
+                }
+            }
+        }
+        .mdl-btn {
+            &::before {
+                content: '';
+                display: block;
+                width: 6.4rem;
+                height: 6.4rem;
+                margin-bottom: $x1;
+            }
+            &.complete::after {
+                content: '';
+                display: block;
+                width: 6.4rem;
+                height: 6.4rem;
+                position: absolute;
+                top:0; 
+                left:0;
+                background: url(../../../local/assets/img/ocare/common/ms_ocare_complete.png) 0 0 / cover no-repeat;
+            }
+
+            &[data-img] {
+                display: flex;
+                flex-direction: column;
+                gap: $x0_5;
+
+                &::before {background: url(../../../local/assets/img/ocare/common/ms_bg.png) 0 0 / cover no-repeat;}
+            }
+            &[data-img="m12"]::before {background-image: url(../../../local/assets/img/ocare/common/ms_goal_bg.png);}
+            &[data-img="m12"]::after {
+                content:"";
+                position: absolute;
+                bottom: 2.4rem; 
+                right: -2.0rem;
+                display: block;
+                width: 9.7rem;
+                height: 5.4rem;
+                background: url(../../../local/assets/img/ocare/common/ms_goal.png) no-repeat 0 0 / cover;
+            }
+
+            &[data-img="tit"]::before {background-image: url(../../../local/assets/img/ocare/common/prologue.png);}
+            
+            &[data-img="m9"]::before {background-image: url(../../../local/assets/img/ocare/common/ms_ocare9.png);}
+            &[data-img="m8"]::before {background-image: url(../../../local/assets/img/ocare/common/ms_ocare8.png);}
+            &[data-img="m7"]::before {background-image: url(../../../local/assets/img/ocare/common/ms_ocare7.png);}
+            &[data-img="m6"]::before {background-image: url(../../../local/assets/img/ocare/common/ms_ocare6.png);}
+            &[data-img="m5"]::before {background-image: url(../../../local/assets/img/ocare/common/ms_ocare5.png);}
+            &[data-img="m4"]::before {background-image: url(../../../local/assets/img/ocare/common/ms_ocare4.png);}
+
+            span {
+                color: var(--gray_70);
+                font-size: 1.4rem;
+                font-weight: 300;
+            }
+        }
+
+        &-tit {
+            position: relative;
+            padding:0 2.0rem 0 2.4rem;
+    
+            &::after {
+                content: '';
+                position: absolute;
+                right: 0;
+                top : 50%;
+                transform: translateY(-50%);
+                width: 0.1rem;
+                height: 2.0rem;
+                background-color: var(--line_light);
+                z-index: 2;
+            }
+            &::before {
+                content:"";
+                display: block;
+                position: absolute;
+                z-index:1;
+                top:0; 
+                right:-1.9rem;
+                width:2rem;
+                height: 100%;
+                background: linear-gradient(to right, var(--gray_0), rgba(255,255,255,0));
+            }
+        } 
+    }
+   
+    .mdl-btn-wrap {
+        margin-top: $x4;
+        width: 100%;
+        border-top: .1rem solid #eee !important;
+        padding: $x2;
+
+        .mdl-btn span {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: #444;
+        }
+    }
+}
+
+.mocr{
+    .ocr-body{
+        padding-top: 3.5rem;
+        padding-bottom: 0;
+    }
+    .m7-bg{
+        background: linear-gradient(182.32deg, #75B6F3 12.45%, #2597FF 81.4%);
+        background-image: url(../img/ocare/m7/dt_bg.jpg);
+        background-position: top center;
+        background-size: 162%;
+    }
+
+    &-top{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        min-height: calc(100vh - 16.2rem - env(safe-area-inset-top));
+    }
+    &-imgs{
+        .txt{
+            img{
+                display: block;
+                width: 23.2rem;
+            }
+        }
+    }
+    &-info{
+        .box{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 1.2rem;
+            background-color: #163962;
+            @include setRound(1.4rem);
+            em{
+                font-family: 'KBF';
+                font-size: 1.8rem;
+                font-weight: 700;
+                color: var(--gray_0);
+            }
+            .date-txt{
+                font-family: 'KBF';
+                font-size: 1.8rem;
+                color: var(--gray_0);
+                    font-weight: 500;
+                em{
+                    font-weight: 700;
+                }
+            }
+        }
+        .page-down{
+            position: relative;
+            display: block;
+            margin: 2.4rem auto 0 auto;
+        }
+    }
+    &-wrap{
+        display: block;
+        padding-top: $x7-5;
+
+        .mdl-box{
+            display: flex;
+            align-items: center;
+            @include setRound($x2);
+            &-tit{
+                background: var(--gray_95);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: 1.2rem 0;
+                @include setRound(9.9rem);
+                margin-top: -4.0rem;
+                width: 12.8rem;
+                text-align: center;
+                em{
+                    font-size: 1.8rem;
+                    font-family: "Binggrae";
+                    color: #FFF;
+                    font-weight: 700;
+                }
+                img{
+                    width: 6.5rem;
+                    overflow: visible !important;
+                    @include setRound(0 !important);
+                }
+                & + h2{
+                    margin-top: 1.4rem;
+                }
+            }
+            h2{
+                font-size: 2.6rem;
+                font-family: 'KBF';
+                text-align: center;
+                font-weight: 700;
+                
+                width: calc(100% + $x6);
+                padding: 0 $x1-5;
+                word-break: keep-all;
+
+                em{
+                    font-size: 2.6rem;
+                    font-family: 'KBF';
+                    font-weight: 700;
+                    color: #189EFF;
+                    &[data-marker="turquoise"]{
+                        color: #30A9C8;
+                    }
+                }
+            }
+            &[data-chain="true"]{
+                margin-top: 0 !important;
+                padding: 2.4rem 0 !important;
+                overflow: hidden;
+                flex-direction: row;
+                &::before{
+                    width: calc(100% - 2.2rem);
+                    height: 0.1rem;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    border-top: none;
+                    background: var(--gray_0) url(../img/ocare/m7/m7_line.png) no-repeat 0 0;
+                    background-size: 100% 0.1rem;
+                }
+            }
+
+        }   
+        .mocr-box{
+            margin-bottom: 10.2rem;
+            .mdl-box[data-chain="true"]{
+                display: block;
+                -webkit-backface-visibility: hidden;
+                -moz-backface-visibility: hidden;
+                -webkit-transform: translate3d(0, 0, 0);
+                -moz-transform: translate3d(0, 0, 0);
+                .mission-swiper{
+                    .swiper-slide{
+                        width: 92%;
+                    }
+                    &+ .swiper-control{
+                        position: relative;
+                        bottom: inherit;
+                        right: inherit;
+                        display: flex;
+                        justify-content: center;
+                        gap: 0 1.8rem;
+                        margin-top: $x3;
+                        .btn-round-arrow{
+                            width: 3.2rem;
+                            height: 3.2rem;
+                            background-color: var(--gray_95);
+                            @include setRound(4.0rem);
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            &.p{
+                                &::before{
+                                    transform:rotate(180deg);
+                                }   
+                            }
+                        }
+                        .total-wrap{
+                            display: flex;
+                            align-items: center;
+                            gap: 0.6rem;
+                            font-family: 'KBF';
+                            font-weight: 700;
+                            font-size: 1.4rem;
+                            span{
+                                font-family: 'KBF';
+                                font-size: 1.4rem;
+                                font-weight: 700;
+                                line-height: 2.2rem;
+                            }
+                            .current{
+                                color: var(--gray_95);   
+                            }
+                            .total{
+                                color: #D2D2D2;
+                            }
+                        }
+                    }
+                }
+                &.img-box{
+                    padding: 2.4rem 2.0rem !important;
+                }
+            }
+            .mocr-btn-wrap{
+                margin-top: 3.0rem;
+            }
+        }
+    }
+    &-stamp{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 1.2rem;
+        background: var(--gray_0) url(../img/ocare/m7/bg_box.png) no-repeat 0 100%;
+        background-size: 100%;
+        padding: 4.0rem 1.6rem;
+        @include setRound(1.6rem);
+
+        &-item{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 23vw;
+            height: 23vw;
+            max-width: 9.0rem;
+            max-height: 9.0rem;
+            position: relative;
+            background: url(../../../local/assets/img/ocare/common/stamp_coin_bg.png) no-repeat 0 0;
+            background-size: 100%;
+
+            &::before{
+                content: attr(data-month);
+                display: block;
+                font-family: 'Binggrae';
+                color: #ccc;
+                font-size: 3.2rem;
+                font-weight: 700;
+            }
+            img{
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+            }
+        }
+    }
+    &-more{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #189EFF;
+        @include setRound($x2);
+
+        &::before{
+            content: '';
+            display: block;
+            width: calc(100% - 4.8rem);
+            position: absolute;
+            left: 50%;
+            top: 0;
+            transform: translateX(-50%);
+            border: 0.1rem dashed var(--gray_70);
+        }
+        a,
+        span{
+            font-family: 'KBF';
+            font-size: 1.6rem;
+            font-weight: 700;
+            color: var(--gray_0);
+            display: flex;
+            gap: 1.1rem;
+            align-items: center;
+            line-height: 1;
+        }
+    }
+    &-link{
+        width: calc(100% + 4.8rem);
+        background-color: #AAF9FE;
+        margin: 0 -2.4rem;
+
+        button{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            width: 100%;
+            height: auto;
+            padding: 3.3rem 2.4rem 3.1rem;
+            background: url(../img/ocare/m7/m7_link.png) right 3.2rem center  no-repeat;
+            background-size: 8.0rem;
+            padding-right:10rem;
+
+            span{
+                font-family: 'KBF';
+                font-size: 1.6rem;
+                font-weight: 700;
+                color: #111;
+                word-break: keep-all;
+                margin-bottom: .4rem;
+            }
+            em{
+                display: block;
+                align-items: center;
+                gap: 1.1rem;
+                font-family: 'KBF';
+                font-size: 1.8rem;
+                font-weight: 700;
+                color: #111;
+                word-break: keep-all;
+                text-align: left;
+
+                &::after {
+                    position: absolute;
+                    display: inline-block;
+                    transform: translate(.4rem, .3rem);
+                }
+            }
+        }
+    }
+    &-benefit{
+        position: relative;
+        background-color: #272727;
+        margin: 0 -2.4rem;
+        padding: 6.0rem 2.4rem 6.0rem 2.4rem;
+
+        &-imgt{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            .tit{
+                background-color: #189EFF;
+                padding: 1.2rem 2.2rem;
+                @include setRound(9.9rem);
+                box-shadow: 0 .6rem 2rem rgba(0, 0, 0, 0.5) !important;
+                img{
+                    display: block;
+                    @include setRound(0);
+                    &[data-tit="1"]{
+                        width: 6.8rem;
+                    }
+                    &[data-tit="2"]{
+                        width: 5.2rem;
+                    }    
+                }
+            }
+            h2{
+                display: flex;
+                flex-direction: column;
+                text-align: center;
+                font-family: 'Binggrae';
+                color:var(--gray_0);
+                font-size: 2.8rem;
+                font-weight: 400;
+                line-height: 1.6;
+                margin-top: $x3;
+                strong{
+                    color:var(--gray_0);
+                    font-size: 2.8rem;
+                    font-weight: 700;
+                    font-family: 'Binggrae';
+                }
+            }
+            span{
+                font-family: "KBF";
+                font-size: 1.5rem;
+                font-weight: 500;
+                color: #AEAEAE;
+                margin-top: 0.8rem;
+            }
+        }
+        &-area{
+            position: relative;
+            margin-top: 3.6rem;
+
+            .box-group{
+                display: flex;
+                flex-direction: column;
+                background: rgba(255, 255, 255, 0.15);
+                box-shadow: 0 4rem 4rem rgba(0, 0, 0, 0.25) !important;
+                @include setRound(1.4rem);
+                text-align: center;
+                padding: 2.4rem;
+                gap: 2.4rem;
+                .txt{
+                    font-family: 'KBF';
+                    font-size: 2.0rem;
+                    font-weight: 700;
+                    color: var(--gray_0);
+                    line-height: 1.5;
+                }
+                .box-info{
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: center;
+                    align-items: center;
+                    padding: 2.0rem 1.0rem;
+                    gap: 1.0rem;
+                    background: #189EFF;
+                    @include setRound(1.4rem);
+                    color:#111;
+                    font-family: 'KBF';
+                    font-weight: 700;
+                    span{
+                        color: var(--gray_0);
+                        font-family: 'KBF';
+                        font-size: 1.6rem;
+                        font-weight: 700;
+                    }
+                }
+            }
+
+            
+            &[data-state="deadline"] {
+                img {opacity: 0.3;}
+
+                &::after{
+                    content: "";
+                    display: block;
+                    position: absolute;
+                    top:0; 
+                    left:50%;
+                    z-index: 1;
+                    width: 100%;
+                    height: 0;
+                    padding-top:100%;
+                    background: url(../../../local/assets/img/ocare/common/stamp_deadline.svg) no-repeat 50% 42% / 14rem;
+                    transform: translate(-50%, -0.7rem) rotate(-15deg);
+                } 
+            }
+        }
+        &+ .mocr-benefit{
+            padding-top: 2rem;
+        }
+    }
+
+    .mdl-btn{
+        position: relative;
+        width: 100%;
+        height: 5.6rem;
+        padding: 0 2rem;
+        background-color: #FFD700;
+        @include setRound(2.6rem);
+        span{
+            font-family: 'KBF';
+            font-size: 1.7rem;
+            font-weight: 500;
+            color: var(--gray_95);
+        }
+
+        &[data-style="primary-gray"]{
+            background: #F5F5F5;
+        }
+    }
+
+    &-footer{
+        &> .mocr-btn-wrap:only-child{
+            padding: 2rem 2.4rem 3rem;
+        }
+        .mdl-btn{
+           > span{font-weight: 700;}
+        }
+    }
+
+    &[data-session="2308"] {
+        .ocr-body {
+           padding:0;
+            
+            > .mdl-wrap {
+                max-width: 100% !important;
+                padding: 1.6rem 2.4rem calc(env(safe-area-inset-bottom) + 1.6rem);;
+                background-color: #FCEBB8;
+                background-image: url(../img/ocare/m8/bg.jpg);
+                background-position: 50% 0;
+                background-repeat: no-repeat;
+                background-size: 68rem;
+                padding-top: 5.3rem;
+            }
+        }
+        .mocr-imgs .txt img {
+            width:22.3rem;
+        }
+        .mocr-top {
+            max-width: 40rem;
+            margin: 0 auto;
+            min-height: 77rem;
+            align-items: center;
+        }
+        .mocr-info {width: 100%;}
+        .mocr-info .box {
+            width: 100%;
+            background-color: #1B1B1B;
+        }
+        .img1 {
+            position: absolute; 
+            top: 25rem; 
+            left: 6rem;
+            width: 46.8rem;
+            z-index: 2;
+        }
+        .mocr-note,
+        .mocr-link,
+        .mocr-benefit {
+            .mdl-wrap {
+                padding:0 $x3
+            }
+        }
+        .mocr-wrap {
+            max-width: 40rem;
+            margin: 0 auto;
+        }
+        .mocr-wrap .mocr-box{margin-bottom: $x8;}
+    }
+    &[data-session="2309"] {
+        .ocr-body {
+            padding:0;
+             > .mdl-wrap {
+                 max-width: 100% !important;
+                 padding: 1.6rem 2.4rem calc(env(safe-area-inset-bottom) + 1.6rem);
+                 background-color: #C5D31F;
+                 background-image: url(../img/ocare/m9/bg.jpg);
+                 background-position: 50% 0;
+                 background-size: 112.5rem;
+                 background-repeat: no-repeat;
+             }
+         }
+        .mocr-imgs .txt img {
+            width:36.5rem;
+            margin-top: -1.3rem;
+        }
+        .mocr-top {
+            max-width: 40rem;
+            margin: 0 auto;
+            min-height: 80rem;
+            align-items: center;
+        }
+        .mocr-info {width: 100%;}
+        .mocr-info .box {
+            width: 100%;
+            background-color: #1B1B1B;
+        }
+        .mocr-note,
+        .mocr-link,
+        .mocr-benefit {
+            .mdl-wrap {
+                padding:0 $x3
+            }
+        }
+        .mocr-wrap {
+            max-width: 40rem;
+            margin: 0 auto;
+        }
+        .mocr-wrap .mocr-box{
+            margin-bottom: $x8; 
+            border-radius: 1.6rem;
+        }
+        .ocare-webtoon{
+            &.more{
+                height: 42.0rem;
+            }
+            position: relative;
+            .mdl-btn-wrap{
+                position: absolute;
+                bottom: -2.5rem;
+                display: flex;
+                &.hide{
+                    display: none;
+                }
+                &::before{
+                    content: '';
+                    background:  linear-gradient(0deg, #FFF 0%, rgba(255, 255, 255, 100) 100%);
+                    width: 100%;
+                    height: 6.8rem;
+                    filter: blur(1.5rem);
+                    position: absolute;
+                    top:-5.4rem;
+                }
+                button{
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    width: 100%;
+                    background-color: #1B1B1B;
+                    border-radius: 1.4rem;
+                    z-index: 1;
+                    height: 6.2rem;
+                    span{
+                        font-weight: 700;
+                        color: #FFF;
+                        font-family: 'KBF';
+                        padding-left: $x1;
+                    }
+                    
+                }
+            }   
+       }
+    }
+    &[data-session="2310"] {
+        .ocr-body {
+           
+            padding:0;
+             > .mdl-wrap {
+                 max-width: 100% !important;
+                 padding: 1.6rem 2.4rem calc(env(safe-area-inset-bottom) + 1.6rem);
+                 background-color: #FFC466;
+                 background-image: url(../img/ocare/m10/bg.jpg);
+                 background-position: 50% 0;
+                 background-size: 112.5rem;
+                 background-repeat: no-repeat;
+
+                 &::before{
+                    content: '';
+                    display: block;
+                    background: linear-gradient(180deg, #FFC466 50.11%, #FF9C00 100%);
+                    position: absolute;
+                    bottom:0;
+                    width: 100%;    
+                    height: 100vh;
+                    left: 0;
+                }
+             }
+         }
+         .mocr-imgs .txt img {
+            width:36.5rem;
+            margin-top: -1.3rem;
+        }
+        .mocr-top {
+            max-width: 40rem;
+            margin: 0 auto;
+            min-height: 80rem;
+            align-items: center;
+        }
+        .mocr-info {width: 100%;}
+        .mocr-info .box {
+            width: 100%;
+            background-color: #1B1B1B;
+        }
+        .mocr-info .page-down{
+            &::before{
+                width: 3.2rem;
+                height: 3.2rem;
+                background-image: url(../img/ocare/m10/ico_arrow_down_m10.svg);
+            }
+            &::after{
+                width: 3.2rem;
+                height: 3.2rem;
+                background-image: url(../img/ocare/m10/ico_arrow_down_m10.svg);
+            }
+        }
+        .mocr-note,
+        .mocr-link,
+        .mocr-benefit {
+            .mdl-wrap {
+                padding:0 $x3
+            }
+        }
+        .mocr-wrap {
+            max-width: 40rem;
+            margin: 0 auto;
+        }
+        .mocr-wrap .mocr-box{
+            margin-bottom: $x8; 
+            border-radius: 1.6rem;
+        }
+        .ocare-webtoon{
+            &.more{
+                height: 42.0rem;
+            }
+            position: relative;
+            .mdl-btn-wrap{
+                position: absolute;
+                bottom: -2.5rem;
+                display: flex;
+                &.hide{
+                    display: none;
+                }
+                &::before{
+                    content: '';
+                    background:  linear-gradient(0deg, #FFF 0%, rgba(255, 255, 255, 100) 100%);
+                    width: 100%;
+                    height: 6.8rem;
+                    filter: blur(1.5rem);
+                    position: absolute;
+                    top:-5.4rem;
+                }
+                button{
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    width: 100%;
+                    background-color: #1B1B1B;
+                    border-radius: 1.4rem;
+                    z-index: 1;
+                    height: 6.2rem;
+                    span{
+                        font-weight: 700;
+                        color: #FFF;
+                        font-family: 'KBF';
+                        padding-left: $x1;
+                    }
+                    
+                }
+            }
+        }        
+    }
+    &[data-session="2311"] {
+        .ocr-body {
+            padding:0;
+
+            > .mdl-wrap {
+                 max-width: 100% !important;
+                 padding: 1.6rem 2.4rem calc(env(safe-area-inset-bottom) + 1.6rem);
+                 background-image: url(../img/ocare/m11/bg.jpg), url(../img/ocare/m11/bg2.jpg);
+                 background-position: 50% 0, 50% 0;
+                 background-size: 98.5rem, 98.5rem;
+                 background-repeat: no-repeat, repeat;
+
+                 &::before{
+                    content: '';
+                    display: block;
+                    background: url(../img/ocare/m11/bg2.jpg) 0 0 no-repeat;
+                    position: absolute;
+                    bottom:0;
+                    width: 100%;    
+                    height: 100vh;
+                    left: 0;
+                }
+            }
+            
+        }
+        .ocare-webtoon{
+            &.more{
+                height: 37.0rem;
+            }
+            position: relative;
+
+            .mdl-btn-wrap{
+                position: absolute;
+                bottom: -2.5rem;
+                display: flex;
+
+                &.hide{display: none;}
+                &::before{
+                    content: '';
+                    background:  linear-gradient(0deg, #FFF 0%, rgba(255, 255, 255, 100) 100%);
+                    width: 100%;
+                    height: 6.8rem;
+                    filter: blur(1.5rem);
+                    position: absolute;
+                    top:-5.4rem;
+                }
+
+                button{
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    width: 100%;
+                    background-color: #1B1B1B;
+                    border-radius: 1.4rem;
+                    z-index: 1;
+                    height: 6.2rem;
+
+                    span{
+                        font-weight: 700;
+                        color: #FFF;
+                        font-family: 'KBF';
+                        padding-left: $x1;
+                    }
+                    
+                }
+            }
+        }
+
+        .mocr-top{
+            max-width: 40rem;
+            margin: 0 auto;
+            min-height: 74rem;
+            align-items: center;
+        }
+        .mocr-imgs{
+            .txt{
+                display: flex;
+                justify-content: flex-end;
+                align-items: center;
+                gap: 0.6rem;
+                position: absolute;
+                top: 23.5rem;
+                left: 50%;
+                transform: translateX(-50%);
+                width: 27.0rem;
+                height: 4.2rem;
+                background: url(../img/ocare/m11/m11_d_day.png) 0 0 / 27.0rem no-repeat;
+                padding-right: 1.6rem;
+                b,
+                div{
+                    color: #FFF9EF;
+                    font-weight: 700;
+                    font-size: 1.3rem;
+                }
+            }
+        }
+        .mocr-day{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 4.4rem;
+            height: 2.4rem;
+        }
+        .mocr-time{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 6.6rem;
+            height: 2.4rem;
+        }
+        .mocr-wrap{
+            max-width: 40rem;
+            margin: 0 auto;
+
+            .mocr-box:nth-child(2) {
+                h2 {
+                    font-size: 2.2rem;
+                    em {font-size: 2.2rem;}
+                }
+            }
+        }
+        .mdl-box{
+            h2{
+                color: #000;
+                em{
+                    color: #0F805D;
+                    
+                }       
+            }
+            &[data-chain="true"]{
+                &::before{
+                    background: var(--gray_0) url(../img/ocare/m11/m11_line.png) no-repeat 0 0;
+                    background-size: 100% 0.1rem;
+                }
+            }
+        }
+        .mocr-link{background-color: #FF9995;}
+        .mocr-info{
+            width: 100%;
+
+            .box{background-color: #222;}
+        }
+        .mocr-benefit-imgt .tit{
+            background-color: #0F7F5D;
+            em{
+                color: #FFF;
+                font-size: 1.8rem;
+                font-weight: 700;
+                font-family: 'Binggrae';
+            }
+        }
+        .mocr-benefit-area .box-info{
+            background: #0F7F5D;
+            color: #FFF;
+
+            span{ color:#ABE5D4;}
+        }
+        .mocr-note,
+        .mocr-link,
+        .mocr-benefit {
+            .mdl-wrap {padding:0 $x3}
+        }
+        .mocr-more{background-color: #0F7F5D;}
+    }
+}
+
+@media (max-width: 369px) {
+    .mocr-wrap .mdl-box h2 {
+        font-size: 6.93vw;
+        em {font-size: 6.93vw;}
+    }
+    [data-session="2311"] .mocr-box:nth-child(2) {
+        h2 {
+            font-size: 5.87vw !important;
+            em {font-size: 5.87vw !important;}
+        }
+    }
+    
+    .mocr-benefit-imgt h2 { 
+        font-size: 7.47vw;
+        strong {font-size:7.47vw;}
+    }
+    .mocr-benefit-area .box-group .txt {font-size: 5.33vw;}
+}
+
+.ocr-wrap[data-month="8-1"]{
+    .mdl-box{
+        &[data-line="gray"]{
+            margin-top: 0 !important;
+            padding: 2.4rem 0 !important;
+            overflow: hidden;
+            flex-direction: row;
+            &::before{
+                width: calc(100% - 2.2rem);
+                height: 0.1rem;
+                left: 50%;
+                transform: translateX(-50%);
+                border-top: none;
+                background: var(--gray_0) url(../img/ocare/m8/m8_line.png) no-repeat 0 0;
+                background-size: 100% 0.1rem;
+            }
+        }
+    }
+    .mocr-link, .mocr-benefit-imgt .tit, .mocr-benefit-area .box-group .box-info, .mocr-more{background-color: #25D4DF;}
+    .mocr-link{
+        button{
+            em{
+                &::after{
+                    padding-left: 1.9rem;
+                    transform: translateY(.3rem);   
+                }
+            }
+        }
+    }
+}
+.ocr-wrap[data-month="9-1"]{
+    .mocr-wrap .mdl-box h2 em[data-marker=turquoise] {
+        color: #70A500;
+        ::after{
+            background-color: #70A500;
+        }
+    }
+    .mocr-link, .mocr-benefit-imgt .tit, .mocr-benefit-area .box-group .box-info, .mocr-more{
+        background-color: #B5C501;
+    }
+    .mocr-link{
+        background-color: #FFD027;
+    }
+}
+.ocr-wrap[data-month="10-1"]{
+    .mocr-wrap .mdl-box h2 em[data-marker=turquoise] {
+        color: #FF7A2F;
+        &::after{
+            background-color: #FFF4E2;
+        }
+    }
+    .mocr-link, .mocr-benefit-imgt .tit, .mocr-benefit-area .box-group .box-info, .mocr-more{
+        background-color: #FC9A00;
+    }
+    .mocr-link{
+        background-color: #FFD027;
+    }
+}
+
+.ocr-ocare11-mission{
+    .monthlyocare-tit{
+        text-align: center;
+        p{
+            font-size: 1.6rem;
+            font-weight: 400;
+            color: #666;
+            margin-top: 0.4rem;
+        }
+    }
+    .monthlyocare-box{
+        border-radius: $x3;
+        padding: 3rem 0;
+        .mdl-subject{
+            display: flex;
+            justify-content: center;
+            margin-bottom: 1.0rem;
+        }
+        img{
+            margin-top: 0;
+            max-width: inherit;
+        }
+        .txt{
+            font-size: 1.4rem;
+            font-weight: 400;
+            padding-top: 3.2rem;
+            line-height: 2.1rem;
+        }
+        .swiper-pagination{
+            bottom: 4.6rem;
+        }
+        &[data-type="camera"]{
+            margin-top: 6.0rem;
+            padding: 2.0rem;
+            background-color: #FFFAE8;
+            .mdl-subject{
+                margin-bottom: $x3;
+            }
+            .mdl-subject-group{
+                align-items: center;
+                &::before{
+                    content: '';
+                    width: 8.4rem;
+                    height: 8.0rem;
+                    background: url(../img/ocare/m11/m11_camera.png) center center no-repeat;
+                    background-size: 8.4rem, 8rem;
+                }
+            }
+            .mdl-bul-num{
+                display: flex;
+                flex-direction: column;
+                gap: $x1;
+                li{
+                    &::before{
+                        display: none;
+                    }
+                    span{
+                        margin-right: $x1;
+                    }
+                }
+            }
+            .mdl-bul-care{
+                &::before{
+                    color: #444;
+                }
+                margin-top: 1.2rem;
+                > div{
+                    font-size: 1.2rem;
+                    color: #444;
+                    font-weight: 400;   
+                }
+            }
+        }
+    }
+    &-complete{
+        .content{
+            background: url("../img/ocare/m11/m11_complete_bg.jpg") 0 0 repeat;
+            background-size: 37.5rem, cover;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        .mdl-box{
+            padding: 0;
+            background-color: transparent;
+            margin-top: -1.8rem !important;
+            &::before{
+                display: none;
+            }
+        }
+    }
+}
+
+.ocr-event-dim::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    width: 100%;
+    height: 100%;
+    background: rgba(39, 39, 39, 0.7) url(../../../local/img/event/m_ocare/common/event_end.svg) no-repeat center center/69.33vw;
+}
+
+
+/* 오케어7월 미션 */
+// NMOK_7_3P, NMOK_7_4P, NMOK_7_5P, NMOK_7_6P, NMOK_7_7P, NMOK_7_8P
+.ocr-ocare7-mission {
+    background:#56bbfe url(../img/ocare/m7/mission7_bg.jpg) repeat-x 50% 0 / 61.7rem;
+    &.complete {
+        background:#2597FF url(../img/ocare/m7/mission_complete_bg.jpg) repeat-x 50% 0 / cover;
+        .mdl-subject{
+            margin-top: $x5;
+            justify-content: center;
+        }
+        .mdl-subject-tit{
+            font-size: 3.2rem;
+            color: #163962;
+            line-height: 1.4;
+            font-weight: 700;
+            word-break: keep-all;
+            margin-bottom: 0;
+            text-align: center;
+        }
+ 
+        .mdl-box{
+            background-color: rgba(255,255,255,50%);
+            border:.1rem solid var(--gray_0) !important;
+
+            .mdl-subject{
+                margin-top: 0;
+                align-items: center;
+                justify-content: space-between;
+            }
+            .mdl-subject-tit{
+                font-size: 1.6rem;
+                color: #163962;
+            }
+        }
+        
+        .mdl-btn{
+            border-color:#163962;
+            background-color:#163962;
+
+            span {color: var(--gray_0);}
+        }
+    }
+    &-clear {
+        margin-top: 7vh;
+        margin-bottom: 5vh;
+        width: 100%;
+        text-align: center;
+
+        img{display: inline-block;}
+    }
+    &-bottom {
+        padding-bottom: $x3;  
+    }
+    &-wrap {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 100%;
+    }
+    &-q{
+        min-height: 14rem;
+
+        b, p {
+            font-size: 2rem;
+            line-height: 2.2rem;
+            font-weight: 300;
+            color:#111;
+        }
+        b {
+            vertical-align: top;
+            font-weight: 700;
+            width: 2.1rem;
+            height: 2.1rem;
+            background-color: #FFF;
+            border: .1rem solid #111 !important;
+            display: inline-flex;
+            gap: 0.2rem;
+            flex-direction: row;
+            align-items: center;
+            margin: 0 0.1rem;
+            vertical-align: baseline;
+        }
+        p + p{margin-top: $x2 !important;}
+    }
+    .mdl-subject-tit{
+        margin-bottom: $x3;
+
+        em {
+            font-family: 'Base' !important;
+            font-size:3.2rem !important;
+            font-weight: 900 !important;
+        }
+    }
+    .mdl-list-wrap {gap:$x1}
+    .mdl-list-item .mdl-btn {
+        background-color:rgba(255,255,255,50%);
+        border: .1rem solid var(--gray_0);
+        span {color: #163962;}
+    }
+    .mdl-list-item input:checked + .mdl-btn {
+        background-color:rgba(255,255,255,1);
+
+        span {
+            color: #2597FF;
+            text-decoration: none;
+        }
+    }
+}
+.mdl-modal.hint {
+    .mdl-modal-wrap {
+        max-width:$maxwidth;
+        width: 100%;
+    }
+    h2[data-typo="title-s"]{
+        color: var(--gray_100);
+        margin-bottom: $x4;
+    }
+    .hint-num {
+        font-size: 2.2rem;
+        color: #189EFF !important;
+        font-family: 'KBF';
+        font-weight: 700;
+    }
+    .mdl-definition-body{font-size: 1.6rem;}
+    .mdl-definition-head{font-size: 1.6rem; margin-bottom: $x1-5;}
+    .mdl-definition[data-body=dot] .mdl-definition-body::before {
+        top: 0.6rem;
+    }
+    [data-type="only-img"] {height: 36rem;}
+}
+
+/* 오케어8월 미션 */
+// NMOK_8_2P, NMOK_8_3P, NMOK_8_4P, NMOK_8_5P, NMOK_8_6P, NMOK_8_7P, NMOK_8_8P, NMOK_8_9P
+.ocr-ocare8-mission {
+    background:#f8e7b3 url(../img/ocare/m8/mission8_bg.jpg) no-repeat 50% 0 / 102.4rem;
+  
+    [data-id="popupEyesMissionStart"] .mdl-modal-body {max-height:100% !important;}
+    .mdl-progressbar-bar{background-color: #222;}
+    .mdl-progressbar-text{color:rgba(34, 34, 34, 30%);}
+    .mdl-progressbar-text strong{color:#222;}
+    .ocr-ocare8-mission-top .mdl-subject-tit{
+        font-family: 'Base' !important;
+        font-size:3.2rem !important;
+        font-weight: 900 !important;
+    }
+
+    &.complete {
+        .mdl-box{padding: $x4 0;} 
+        .mdl-btn span{font-weight: 700 !important;}
+    }   
+    &-clear {
+        margin-top: 7vh;
+        margin-bottom: 5vh;
+        width: 100%;
+        text-align: center;
+
+        img{display: inline-block;}
+    }
+    &-bottom {
+        padding-bottom: $x3;  
+    }
+    &-wrap {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 100%;
+       
+        .qa-box{
+            ul {padding: 0 2rem;}
+            li {
+                display: flex;
+                align-items: flex-start;
+                border-bottom: .1rem solid rgba(0, 0, 0, 0.1);
+                margin-top: 1.6rem;
+                padding-bottom: 1.6rem;
+                font-size: 1.6rem;
+                font-weight: 500;
+                
+                em{
+                    font-weight: 700;
+                    color: #30a9c8;
+                    margin-right: .8rem;
+                    min-width:2.4rem;
+                }
+                &:first-child{margin-top: 0;}
+                &:last-child{
+                    padding-bottom: 0;
+                    border-bottom:0;
+                }
+                
+                [data-icon-after="tit-party-popper"]{
+                    display: inline-flex;
+                    justify-content: flex-start;
+                    align-items: center;
+                    &::after{
+                        display: inline-block;
+                        margin-left: .8rem;
+                    }
+                }
+                div {
+                    font-weight: 500;
+                    color: #000;
+                    font-family: 'KBF';
+                }
+            }
+            [data-marker="turquoise"]{
+                color: #30A9C8;
+                &::after{
+                    background-color: transparent;
+                }
+            }
+        }
+    }
+    &-q{
+        min-height: auto;
+
+        b, p {
+            font-family: 'KBF';
+            font-size: 2rem;
+            line-height: 2.2rem;
+            font-weight: 300;
+            color:#111;
+        }
+        b {
+            vertical-align: top;
+            font-weight: 700;
+            width: 2.1rem;
+            height: 2.1rem;
+            background-color: #FFF;
+            border: .1rem solid #111 !important;
+            display: inline-flex;
+            gap: 0.2rem;
+            flex-direction: row;
+            align-items: center;
+            margin: 0 0.1rem;
+            vertical-align: baseline;
+        }
+        p + p{margin-top: $x2 !important;}
+    }
+    .mdl-subject-tit{
+        margin-bottom: $x3;
+        font-family: 'KBF';
+        font-size:3.2rem ;
+        font-weight: 700;
+    }
+    .mdl-list-wrap {gap:$x1}
+    .mdl-list-item .mdl-btn {
+        background-color:#fff;
+        width: 100%; 
+        border: .1rem solid var(--gray_0);
+        span {
+            color: #111;
+            font-weight: 500;
+            text-decoration: none;
+        }
+    }
+    .mdl-list-item input:checked + .mdl-btn {
+        background-color:#FFD027;
+    }
+    .mocr-box{
+        & + .mdl-subject{
+            justify-content: center;
+            text-align: center;
+            margin: 2.4rem 0 4.6rem;
+
+            .mdl-subject-tit{
+                font-size: 2rem;
+                font-weight: 500;
+            }
+        }
+    }
+    .mdl-btn{
+        &[data-shape="round"]{
+            border-radius: 1.2rem;
+            font-family: 'KBF';
+
+            span{
+                font:inherit;    
+                font-weight: 500;
+            }
+        }
+    } 
+}
+
+/* 오케어9월 미션 */
+// NMOK_9_2P, NMOK_9_3P, NMOK_9_4P, NMOK_9_5P, NMOK_9_6P, NMOK_9_7P, NMOK_11_3P, NMOK_11_4P
+.ocr-ocare9-mission{
+    &.complete{
+        background:#C5D31F url(../img/ocare/m9/mission9_bg.jpg) no-repeat 50% 4.5rem / 113.4rem;
+        .monthlyocare{
+            &-tit{
+                &.img-tit{
+                    background: url(../img/ocare/m9/m9_img7.png) center 2.0rem no-repeat !important;
+                    background-size: 20.7rem !important;
+                    padding-top: 17.2rem;
+                    text-align: center;
+                    margin-bottom: $x4;
+                }    
+            }
+            .mdl-subject-tit{
+                em{
+                    font-family: 'KBF';
+                    color: #70A500;
+                }
+            }
+            .ocr-complete{
+                box-shadow: none !important;
+                border: none;
+                margin-bottom: $x3;
+                padding: $x2;
+                border-radius: $x2;
+                &-list{
+                    li{
+                        font-size: 1.4rem;
+                        font-weight: 500;
+                        font-family: 'KBF';
+                        color: #000;
+                        &:not(:first-child){
+                            margin-top: $x1;
+                        }
+                        &::before{
+                            content: '';
+                            display: inline-block;
+                            width: 1.2rem;
+                            height: 1.2rem;
+                            padding-right: $x1;
+                            background: url(../../../local/assets/img/ocare/common/ico_complete_check.svg) center 0 no-repeat !important;
+                            background-size: 1.2rem;
+                        }
+                    }
+                }
+            }
+            .mdl-btn-wrap{
+                .mdl-btn{
+                    border-radius: 1.2rem;
+                    span{
+                        font-weight: 700 ;
+                    }
+                }
+            }
+        }
+    }
+    .monthlyocare{
+        padding: 0;
+        &-tit{
+            .tit{
+                font-family: 'KBF';
+                font-size: 2.2rem;
+                font-weight: 700;
+                line-height: 3.8rem;
+                color: #000;
+            }
+            &.img-tit{
+                text-align: center;
+                margin-bottom: $x4;
+                .txt{
+                    font-weight: 400;
+                    font-size: 1.6rem;
+                    line-height: 2.2rem;
+                    margin-top: 0.6rem;
+                }
+            }
+        }
+        &-box{
+            position: relative;
+            margin-top: $x4;
+            display: flex;
+            flex-direction: column;
+            gap: 3.0rem;
+            .mdl-box{
+                border: none;
+                &[data-color="gray"]{
+                    background-color: #F9F9F9;
+                    box-shadow: none !important;
+                }
+                &.step-img{
+                    background: url(../img/ocare/m9/m9_img1.png) right 2.4rem  center no-repeat;
+                    background-size: 9.2rem;
+                    box-shadow: 0 .6rem 2rem 0 rgba(0, 0, 0, 0.08) !important;
+                }
+                &::after{
+                    position: absolute;
+                    bottom: -2.7rem ;
+                    left: 50%;
+                    transform: translateX(-50%);
+                }
+            }
+
+            .mdl-subject-tit{
+                em{
+                    color: #70A500;
+                    font-family: 'Binggrae';
+                    font-size: 1.7rem;
+                }
+                & + p{
+                    font-size: 1.6rem;
+                    font-weight:500;
+                    font-family: 'KBF';
+                    color: #000;
+                }
+            }
+            
+            .complete-txt{
+                display: flex;
+                flex-direction: column;
+                span{
+                    font-size: 1.6rem;
+                    font-weight: 500;
+                    line-height: 2.4rem;
+                }
+                em{
+                    font-family: 'KBF';
+                    font-size: 1.8rem;
+                    font-weight: 700;
+                    line-height: 2.7rem;
+                }
+            }
+
+            .cite-box{
+                padding-top: 9.0rem;
+                &::before{
+                    content: '';
+                        position: absolute;
+                        width: 8.4rem;
+                        height: 8.0rem;
+                        top: 2.0rem;
+                        left: 50%;
+                        transform: translateX(-50%);
+                }
+                &.fail{
+                    &::before{
+                        background: url(../img/ocare/m9/m9_img5.png) 0 0 no-repeat;
+                        background-size: 8.4rem 8.0rem;
+                    }
+                }
+                &.succ{
+                    &::before{
+                        background: url(../img/ocare/m9/m9_img6.png) 0 0 no-repeat;
+                        background-size: 8.4rem 8.0rem;
+                    }
+                }
+
+                &-tit{
+                    font-size: 2.0rem;
+                    font-weight: 700;
+                    font-family: 'KBF';
+                    color: #000;
+                }
+                &-txt{
+                    display: flex;
+                    flex-direction: column;
+                    font-size: 1.4rem;
+                    line-height: 2.2rem;
+                    font-weight: 400;
+                    color: #666;
+                    margin-top: $x1;
+                    em{
+                        font-size: 1.4rem;
+                        line-height: 2.2rem;
+                        font-weight: 700;
+                        color: #000;
+                    }
+                }
+                &-img{
+                    margin-top: $x4;
+                }
+            }
+
+        }
+        .mdl-box{
+            max-width: 40rem;
+            margin: 0 auto;
+        }
+        .mdl-subject{
+            display: flex;
+            justify-content: center;
+            margin-bottom: $x2;
+        }
+        .txt-info{
+            font-size: 1.4rem;
+            font-weight: 400;
+            line-height: 2.1rem;
+            em{
+                font-size: 1.4rem;
+                font-weight: 500;
+                line-height: 2.1rem;
+            }
+        }
+        .swiper{
+            &-slide{
+                img{
+                    max-width: 40rem;
+                    margin: 0 auto;
+                }
+            }
+            padding-bottom: $x3;
+            margin-bottom: $x3;
+            .swiper-pagination{
+                margin-bottom: -2rem;
+            }
+        }
+        .page-down{
+            background: #9DB700;
+            &::after{
+                background: url(../img/common/ico_arrow_down.svg) no-repeat 50% 50%/100% !important;
+            }
+            &::before{
+                background: url(../img/common/ico_arrow_down.svg) no-repeat 50% 50%/100% !important;
+            }
+        }
+        
+    }
+}
+
+/* 오케어10월 미션 */
+// NMOK_10_2P
+.ocr-ocare10-mission{
+    .monthlyocare-tit{
+        .tit{
+            font-family: 'KBF';
+            font-size: 2.8rem;
+            font-weight: 700;
+            line-height: 3.9rem;
+            color: #000;
+            word-break: keep-all;
+        }
+        p{
+            font-family: 'KBF';
+            font-size: 1.6rem;
+            font-weight: 500;
+            line-height: 2.2rem;
+            color: #666;
+            margin-top: 0.8rem;
+            word-break: keep-all;
+        }
+    }
+}
+// NMOK_10_2P
+.mdl-modal.quiz{
+    .mdl-modal-wrap{
+        &::before{
+            content: '';
+            position: absolute;
+            top: -11rem;
+            right: 0;
+            width: 11.8rem;
+            height: 12.6rem;
+            background:url(../img/ocare/m10/m10_pop_rabbit.png) 0 0 no-repeat;
+            background-size: 11.8rem auto;
+
+        }
+    }
+    .mdl-modal-tit{
+        b{
+            font-size: 3.2rem;
+            font-weight: 700;
+            color: #111;
+            font-family: 'Base';
+        }
+        span{
+            display: block;
+            font-family: "KBF";
+            font-size: 2.2rem;
+            font-weight: 700;
+            margin-top: 0.8rem;
+            color: #222;
+        }
+    }
+    .mdl-modal-body{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 2.3rem;
+        button{
+            width: 12rem;
+            height: 12rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 2.4rem;
+        }
+        .btn-quiz-o{
+            background: linear-gradient(154deg, #72BFFE 10.04%, #319EF9 83.81%);
+            
+        }
+        .btn-quiz-x{
+            background: linear-gradient(154deg, #FFEF5B 10.04%, #FF9511 83.81%);
+        }
+    }
+}
+
+// NEVE_7_20P
+.ocr-webtoon{
+    .ocr-body{
+        padding: 1.6rem 0 calc(env(safe-area-inset-bottom) + 1.6rem);
+    }
+    .mdl-wrap[data-gap=full]{
+        padding: 0.8rem 0 4.8rem;
+        &::before{
+            content: '';
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            height: 2.4rem !important;
+            background: url(../../../local/img/event/webtoon/webtoon-bar.png) center center repeat-x;
+            background-size: 0.8rem auto;
+            display: block;
+        }
+        &::after{
+            content: "";
+            background: url(../../../local/img/event/webtoon/webtoon-arrow.svg) center center no-repeat;
+            width: 2.4rem;
+            height: 2.4rem;
+            display: block;
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 1;
+        }
+    }
+    .mdl-webtoon-img{
+        min-height: 100vh;
+        margin-bottom: $x4;
+    }
+  
+    .mdl-tab-wrap{
+        width: auto;
+        padding: 0 calc(50% - 6.4rem) !important;
+        gap: 0 .8rem;
+    }
+    .mdl-tab-btn{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+        padding: 0;
+        border: 0;
+        border-radius: 0;
+        background-color: transparent;
+
+       
+        .mdl-tab-img{
+            width: 12.8rem;
+            border-radius: $x2;
+            overflow: hidden;
+
+            img{
+                border-radius: 0;
+                object-fit: cover;
+                height: 100%;
+            }
+        }
+        span{
+            color: var(--gray_100);
+            margin-top: 1.7rem;
+            font-weight: 500;
+        }
+    }
+    .mdl-tab-btn[aria-selected="true"] {
+        .mdl-tab-img{
+            border: .3rem solid var(--primary) !important;
+            box-shadow: 0 .4rem .4rem rgba(255,215,0,0.3) !important;
+        }
+        & > span{
+            font-weight: 700;
+            text-decoration: underline;
+        }
+
+        // &::after {
+        //     content:"▼";
+        //     color: var(--primary);
+        //     position: absolute;
+        //     top:9.3rem; 
+        //     left:50%;
+        //     transform: translate(-50%, 0);
+        //     font-size: 1.2rem;
+            
+        // }
+    }
+    .mdl-tab-btn{
+        position: relative;
+        .mdl-flag{
+            position: absolute;
+            z-index: 1;
+            top: 0.8rem;
+            right: 0.8rem;
+            padding: 0;
+            span{
+                padding: 0;
+                width: 2.4rem;
+                height: 2.4rem;
+                font-size: 1.3rem;
+                justify-content: center;
+                align-items: center;
+                line-height: 0;
+            }
+        }
+    }
+    .mdl-line{
+        position: relative;
+        height: 2.4rem !important;
+        background: url(../../../local/img/event/webtoon/webtoon-bar.png) center center repeat-x;
+        background-size:0.8rem auto;
+        display: block;
+        border: 2.4rem solid transparent;
+        &::after{
+            content: '';
+            background: url(../../../local/img/event/webtoon/webtoon-arrow.svg) center center no-repeat;
+            width: 2.4rem;
+            height: 2.4rem;
+            display: block;
+            position: absolute;
+            top: -1.1rem;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 1;
+        }
+    }
+
+    .mdl-subject-group{
+        align-items: center;
+        margin-bottom: 0;
+        // margin-bottom: 4.2rem;
+    }
+    .mdl-subject-tit{
+        font-size: 2.6rem;
+        line-height: 2.6rem;
+    }
+    .mdl-subject-txt{
+        margin-top: 1.6rem;
+        margin-bottom: 3.2rem;
+        font-weight: 500;
+        line-height: 2.4rem;
+        color: var(--gray_90);
+        text-align: center;
+        word-break: keep-all;
+        font-size: 1.8rem;
+
+        br.ocr-br + br:not(.ocr-br){display: none;}
+        .txt-under{text-decoration: underline;}
+        b{
+            display: inline-block;
+            font-size: inherit;
+            line-height: inherit;
+            font-family: inherit;
+            vertical-align:top;
+            color: var(--gray_100)
+        }
+    }
+    .btn-wrap{
+        margin: 0 $x3;
+    }
+}
+
+// NEVE_7_23P, NEVE_7_30p, NEVE_OC_02_13P
+.ocrms-complete {
+    .stamp-relay .mdl-tooltip.ms-day {
+        top:auto;
+        bottom: -3rem;
+    }
+    .mdl-btn {
+        font-family: 'KBF';
+        font-weight: 500;
+        color:#1D1C19;
+    }
+    .stamp-number{
+        gap:$x4;
+
+        > div {
+            justify-content: flex-start;
+            gap:$x1;
+        }
+        dd {margin-left: 0;}
+    }
+
+    * {word-break: keep-all;}
+    .ocr-yearend {
+        display: flex;
+        flex-direction: column;
+        background:#272235;
+        padding-top: $x5;
+
+        .mdl-subject-tit {font-size: 2.2rem;}
+       
+        .mdl-wrap {
+            padding-top:$x3;
+            .mdl-subject-tit {
+                font-size: 1.8rem; 
+                gap:.4rem;
+                display: flex;
+            }
+            .mdl-item-img {
+                margin-top: $x2;
+            }
+            .mdl-item + .mdl-item{margin-top: $x4;}
+        }
+       
+    }
+    .stamp-status > section{position: relative;}
+    .stamp-status{
+        .mdl-subject[data-type=h1]{
+            .mdl-subject-tit{
+                font-family: 'KBF';
+            }
+        }
+    }
+    .stamp-relay {
+        display: none;
+        margin: 15.8rem auto 0;
+        max-width:40rem;
+        height: auto;
+        padding-top: $x4-5;
+        padding-bottom: $x5;
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+
+        &.show {display: flex;}
+    }
+
+    .stamp-relay-step {
+        width: 100%;
+        margin: 3.4rem auto 0;
+        height: auto;
+        position: relative;
+        background: none;
+        padding: 0 ;
+
+        .bg { width: 100%; display: block;}
+        
+    }
+
+    .stamp-relay-step-wrap {
+        position: absolute;
+        top:0; left:0;
+        z-index: 1;
+        width: 100%;
+        height: 100%;
+
+        .img1 {
+            position: absolute;
+            width: 3.9rem;
+            top: 19%;
+            left: 0;
+            z-index: 4;
+            pointer-events: none;
+        }
+        .img2 {
+            position: absolute;
+            width: 4.5rem;
+            top:auto;
+            bottom: 0;
+            right: 0;
+            z-index: 4;
+            left: auto;
+            pointer-events: none;
+        }
+        .img3 {
+            position: absolute;
+            width: 12.1rem;
+            top:auto;
+            bottom: -.9rem;
+            right: -.3rem;
+            z-index: 4;
+            left: auto;
+            pointer-events: none;
+        }
+        .mdl-tooltip{
+            position: absolute;
+            top:auto;
+            bottom: 8.2rem;
+            right: .6rem;
+            z-index: 4;
+            left: auto;
+            pointer-events: none;
+
+            b{
+                font: inherit;
+                color: var(--primary);
+                margin-left: .4rem;
+            }
+        }
+    }
+    .mdl-tooltip.ms-day{
+        position: absolute;
+        top: -5rem;
+        z-index: 4;
+        left: 50%;
+        transform: translate(-50%, 0);
+        pointer-events: none;
+
+        b {
+            font: inherit;
+            color: var(--primary);
+            margin-left: .4rem;
+        }
+    }
+
+    .stamp-relay-step1,
+    .stamp-relay-step2,
+    .stamp-relay-step3 {
+        display: flex;
+        justify-content: space-between;
+        height: auto;
+        padding: 0 2.2%;
+    }
+    .stamp-relay-step2 {
+        margin-top: 7.5%;
+        flex-direction: row-reverse;
+    }
+    .stamp-relay-step3 {
+        margin-top: 7.5%;
+        .mdl-tooltip{ 
+            right: 49%;
+            bottom: 50%;
+            transform: translate(50%, -124%);
+        }
+    }
+     
+    .stamp-relay-item {
+        width: 30%;
+        height: auto;
+        position: relative;
+ 
+        img {width: 100%; position: absolute; top:0; left:0;}
+
+        &::after{
+            content: "";
+            display: block;
+            width: 100%;
+            padding-bottom: 100%;
+            position: relative;
+            top:0; 
+            left:0;
+        }
+    }
+    
+    .stamp-relay .b1 {
+        position: absolute;
+        bottom: 23vw;
+        left: 50%;
+        transform: translate(-50%, 0);
+    }
+
+
+    .mdl-subject-tit {font-size: 2.2rem;}
+    .mdl-subject-txt {color:#999 !important; font-size: 1.5rem;}
+    [data-id="magazine-stamp"] .mdl-subject-em{
+        font-size: 1.2rem;
+        padding: .6rem 1.6rem;
+        margin-top: 1.2rem;
+        background-color: #f7f7f7;
+        border-radius: 10rem;
+    }
+    .mdl-btn.show {
+        padding:0 5rem 0 3rem;
+    } 
+    .mdl-btn.show > div {
+        width: 6rem;
+        height: 6rem;
+        border-radius: 50%;
+        background-color: #fff;
+        justify-self: flex-end;
+        display: flex;
+        transform: scale(.5);
+        position: absolute;
+        right: -2rem;
+        top: 1rem;
+        transform-origin: 0 0;
+    }
+    &-box {
+        display: flex;
+        flex-direction:row;
+        justify-content:space-around;
+        align-items: center;
+        background: #fff url(../../img/event/2023_april/barcode.png) no-repeat 100% 50% / 1.2rem;
+    }
+    .stemp-txt{
+        font-family: 'KBF';
+        width: 100%;
+        text-align: center;
+        font-size: 1.8rem;
+        color:#000;
+        font-weight: 700;
+        display: block;
+        margin-top: 2.4rem;
+    }
+    .stemp-img{
+        width: 12rem;
+        height: 12rem;
+        border-radius: 50%;
+        background-color: #f7f7f7;
+        border: 0.1rem dashed #ccc;
+    }
+    .stemp-img img {
+        width: 100%;
+        transform: scale(1.2) rotate(-12deg);
+        opacity: 0;
+        animation-delay: .8s;
+        animation-duration: .3s;
+        animation-name: stemp;
+        animation-iteration-count: 1;
+        animation-timing-function: ease-in;
+        animation-fill-mode: forwards
+    }
+    
+    
+    
+    .complete-info {
+        h3 {
+            font-family: 'KBF';
+            font-size: 1.3rem;
+            font-weight: 700;
+            color:#000;
+        }
+        h3::before{
+            content: "";
+            display: block;
+            width: 3rem;
+            height: 3rem;
+            background: url(../../img/event/2023_april/ico_firecracker.png) no-repeat 0 0 / cover;
+            margin-bottom: .6rem;
+        }
+        dl > div{margin-top: 1.6rem;}
+        dt{
+            font-size: 1.1rem;
+            font-weight: 500;
+            color:#444;
+            line-height: 1.6rem;
+        }
+        dd{
+            font-size: 1.3rem;
+            font-weight: 500;
+            color:#000;
+            margin-top: $x0-5;
+        }
+    }
+    .mdl-box[data-chain=true]{
+        margin-top: 0 !important;
+    }
+ 
+    
+    &-state {
+        padding: 2rem !important;
+        &[data-complete="true"] > div::after{
+            content: "";
+            display: block;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 1;
+            background-color: rgba(0,0,0,0.3);
+        }
+        
+        > div {
+            width: 100%;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap:.4rem;
+        }
+        .box-complete-group {
+            font-family: 'KBF';
+            font-size: 1.6rem;
+            font-weight: 700;
+            color:#FF612D;
+
+        }
+        .box-complete-num {
+            font-family: 'KBF';
+            font-size: 1.6rem;
+            font-weight: 700;
+            color:#000000;
+        }
+
+        .app-complete {
+            position: absolute;
+            right: .8rem;
+            top: 50%;
+            transform: translate(0, -50%) rotate(-15deg);
+
+            border-radius: 2rem;
+            height: auto;
+            background-color: #fff4f5;
+            z-index:2;
+            width: auto;
+            display: flex;
+            align-items: center;
+            line-height: 1;
+            border: 0.3rem solid #fff;
+            padding: 0;
+            margin-bottom: 0;
+            box-shadow: 0 0 .3rem rgba(0,0,0,0.1);
+            
+            .bgrfontB {
+                width: 100%;
+                height: 3.2rem;
+                border-radius: 2rem;
+                border: 0.1rem solid #FF612D;
+                display: flex;
+                align-items: center;
+                position: relative;
+                top: 0;
+                left: 0;
+                white-space: nowrap;
+                padding: 0 1.6rem;
+                color: #FF612D;
+                font-size: 1.3rem;
+                line-height: 1;
+            }
+        }
+    }
+
+    .stamp-status{
+        [data-type="h1"]{
+            .mdl-subject-em{
+                background-color: #3B7AF6;
+                color: #FFF;
+                font-size: 1.4rem;
+                font-weight: 500;
+                width: 14rem;
+                height: 3.2rem;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 8rem;
+                margin-bottom: 1.2rem;
+            }
+            .mdl-subject-tit{
+                [data-marker]::after{
+                    height: 1.3rem;
+                    border-radius: 1rem;
+                }
+            }
+        }
+        .stamp-number{
+            background-color: #F8F8F8;
+            border: 0.1rem solid #EEE ;
+            border-radius: 10rem;
+            padding: 1.4rem 2rem;
+            margin-bottom: 7.2rem;
+            width: 100%;
+            margin-left: 0;
+            gap: 1.6rem;
+            dt{
+                font-size: 1.4rem;
+                font-weight: 300;
+                
+                &::before{
+                    width: 1.75rem;
+                    height: 2rem;
+                    background-size: 5rem;
+                }
+            }
+            div + div dt{
+                &::before{
+                    background-position: -2.4rem 0;
+                }
+            }
+        }
+        .mdl-subject-txt{
+            margin-top: 1.6rem;
+        }
+    }
+    .stamp-footer{
+
+        .btn-wrap{
+            padding: 0;
+            button{
+                padding: 2rem 2.4rem 2rem;
+                background: #000;
+                font-size: 2.0rem;
+                font-weight: 500;
+                color: #FFF;
+                font-family: 'KBF';
+            }
+        }
+    }
+    .ocr-stamp-state-list{
+        margin-top: 7.5rem;
+    }
+}
+// NEVE_OC_02_13P
+.ocr-stamp-state-list {
+    margin-top: $x8;
+    display: flex;
+    justify-content: center;
+
+    .mdl-list-wrap{width:100%;}
+    .mdl-list-item{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        text-align: center;
+        font-family: 'KBF';
+        font-size: 1.4rem;
+        font-weight: 500;
+        color: var(--gray_100);
+    }
+    .ocr-stamp-state-coin{
+        &::after,
+        &::before{display: none;}
+    }
+    .ocr-stamp-state{
+        min-width:8rem;
+        min-height:8rem;
+        max-width:8rem;
+        max-height:8rem;
+        margin-bottom: $x2;
+
+       
+
+        &.dotted-line{
+            &[data-stamp="0"] .ocr-stamp-state-coin{background: url('../../../local/assets/img/ocare/common/stamp_coin_dotted.png') no-repeat 50% 50% / 100%;}
+            &[data-stamp="1"]{
+                .ocr-stamp-state-coin{background: url('../../../local/assets/img/ocare/common/stamp_coin_dotted.png') no-repeat 50% 50% / 100%;}
+                .ocr-stamp-state-gauge svg{top: 61%;}
+            }
+            &[data-stamp="2"]{
+                .ocr-stamp-state-coin{background: url('../../../local/assets/img/ocare/common/stamp_coin_dotted.png') no-repeat 50% 50% / 100%;}
+                .ocr-stamp-state-gauge svg{top: 38%;}
+            }
+            &[data-stamp="3"]{
+                .ocr-stamp-state-coin{background: url('../../../local/assets/img/ocare/common/stamp_coin_dotted.png') no-repeat 50% 50% / 100%;}
+                .ocr-stamp-state-gauge svg{top: 16%;}
+            }
+
+            &[data-stamp="4"] {
+                .ocr-stamp-state-coin{background: url('../../../local/assets/img/ocare/common/stamp_coin.png') no-repeat 50% 50% / 100%;}
+                .ocr-stamp-state-gauge svg {
+                    top: -15%;
+                    left: 0;
+                    transform: scale(.95);
+                }
+                .ocr-stamp-state-coin::after{display: block;}
+                .ocr-stamp-state-coin::before {
+                    content: "";
+                    display: block;
+                    color: transparent !important;
+                    background: url(../../../local/assets/img/ocare/common/stamp_coin_o.png) no-repeat 50% 50%/70%;
+                }
+            } 
+
+            .ocr-stamp-state-gauge svg {
+                transform: scale(.95);
+                left: -0.4rem;
+            }
+        }
+
+        &[data-stamp="0"] .ocr-stamp-state-gauge svg{top:95%;}
+        &[data-stamp="1"] .ocr-stamp-state-gauge svg{top:63%;}
+        &[data-stamp="2"] .ocr-stamp-state-gauge svg{top:41%;}
+        &[data-stamp="3"] .ocr-stamp-state-gauge svg{top:23%;}
+        &[data-stamp="4"] .ocr-stamp-state-gauge svg{top:-13%; transform: scale(.8);}
+
+        &-achieve{
+            font-size: 1.2rem;
+            font-weight: 700;
+            line-height: 1.8rem;
+            position: absolute;
+            display: flex;
+            justify-content: center;
+            padding-bottom: .6rem;
+            align-items: center;
+            top: -4.5rem;
+            left: 50%;
+            width: 6.6rem;
+            height: 3.87rem;
+            margin-left: -3.3rem;
+            background: url('../../../local/assets/img/ocare/common/ico_achieve.png') no-repeat 0 0 / 100%;
+            
+            span{
+                font-size: 1.2rem;
+                font-weight: 700;
+                line-height: 1.8rem;
+                color: #4880ED;
+            }
+        }
+    }
+
+    .ocr-stamp-state-gauge svg {
+        transform: scale(.7);
+        transform-origin: 0 0;
+    }
+
+   
+}
+
+.ocr-stamp-state{
+    position: relative;
+    min-width: 11rem;
+    min-height: 11rem;
+    max-width: 11rem;
+    max-height: 11rem;
+    background-color: #fff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+
+    &-coin {
+        width: 100%;
+        height: 100%;
+        display: block; 
+        position: relative;
+        z-index: 2;
+
+        img {
+            width: 100%;
+            height: 100%;
+            display: block; 
+            position: relative;
+          
+        }
+        &::before {
+            content:"";
+            display: flex;
+            font-family: 'KBF';
+            font-weight: 700;
+            position: absolute;
+            font-size: 2.6rem;
+            color:transparent;
+            justify-content: center;
+            align-items: center;
+            top:50%;
+            left:50%;
+            transform: translate(-50%, -50%);
+            z-index: 2;
+            width: 4.6rem;
+            height: 4.7rem;
+            background: url(../../../local/assets/img/ocare/common/stamp_coin_o.png) no-repeat 50% 50% / 100%;
+        }
+        &::after{
+            content: "";
+            display: block;
+            width: 65%;
+            height: 65%;
+            border: .1rem solid #666;
+            border-radius: 50%;
+            position: absolute;
+            top:50%;
+            left:50%;
+            transform: translate(-50%, -50%);
+            z-index: 1;
+        }
+    }
+    &-gauge {
+        position: absolute;
+        top:0; 
+        left:0;
+        width:100%;
+        height: 100%;
+        background-color: #fff;
+        border-radius: 50%;
+        overflow: hidden;
+
+        svg{
+            position: absolute;
+            top:0; 
+            left:0;
+        }
+    }
+    &[data-magazine="2309"] {
+        .ocr-stamp-state-coin::after{border-color:#7F8A00}
+        .ocr-stamp-state-coin::before{
+            content:"9";
+            background: transparent;
+            color:#000;
+        }
+        svg path{fill: #B5C501;}
+    }
+    &[data-magazine="2310"] {
+        .ocr-stamp-state-coin::after{border-color:#C1685A}
+        .ocr-stamp-state-coin::before{
+            content:"9";
+            background: transparent;
+            color:#000;
+        }
+        svg path{fill: #FC9A00;}
+    }
+    &[data-magazine="2311"] {
+        .ocr-stamp-state-coin::after{border-color:#543A0C}
+        .ocr-stamp-state-coin::before{
+            content:"9";
+            background: transparent;
+            color:#000;
+        }
+        svg path{fill: #F0C682;}
+    }
+
+    &[data-stamp="0"] .ocr-stamp-state-gauge svg{top:95%;}
+    &[data-stamp="1"] .ocr-stamp-state-gauge svg{top:62%;}
+    &[data-stamp="2"] .ocr-stamp-state-gauge svg{top:34%;}
+    &[data-stamp="3"] .ocr-stamp-state-gauge svg{top:10%;}
+    &[data-stamp="4"] .ocr-stamp-state-gauge svg{top:-17%;}
+}
+.ocr-addstamp {
+    padding: 4rem 0 0 !important;
+    border: .1rem solid #fff;
+    box-shadow: inset 0 0 1.2rem rgba(255,255,255,25%);
+    background-color: #C43240;
+    max-width: 40rem;
+    width: 100%;
+    &-img{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: $x3 auto 0;
+        width: 23.6rem;
+        height: 13.2rem;
+        background: url(../../../local/assets/img/ocare/common/stamp_add.png) no-repeat 50% 0 / cover;
+    }
+    .ocr-stamp-state {
+        border:.6rem solid #fff;
+        background-color: rgba(221, 221, 221, 1);
+        .ocr-stamp-state-coin::before{
+            content:"";
+            color:transparent !important;
+            background: url(../../../local/assets/img/ocare/common/stamp_add_coin_o_.png) no-repeat 50% 50% / 100%;
+        }
+    }
+
+    .mdl-subject {
+        z-index: 1; 
+        padding: 0 $x3-5;
+        .mdl-subject-txt{
+            color: #FFF;
+            font-weight: 500;
+            font-size: 1.4rem;
+            opacity: 0.8;
+        }
+        .mdl-subject-tit{
+            color: #FFF;
+        }
+    }
+    .mdl-btn-wrap {
+        margin-top: $x3;
+        width: 100%;
+        border-top: .1rem solid #eee !important;
+        padding: $x2;
+
+        .mdl-btn span {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: #FFF;
+        }
+    }
+}
+.ocr-oxquiz{
+    position: relative;
+    max-width: 33rem;
+    width: 100%;
+    margin:6.4rem auto 0;;
+ 
+    .mdl-tooltip[data-color=white]{
+        font-size: 1.3rem;
+        padding: $x1 $x2;
+        top: -4.8rem;
+        border: none !important;
+        box-shadow: 0 .4rem .8rem rgba(0, 0, 0, 0.11);
+        border-radius: 9.9rem;
+        &::before {
+            border: none !important;
+            box-shadow: 0 .4rem .8rem rgba(0, 0, 0, 0.11);
+        }
+    }
+    &-wrap{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+        min-width: 28rem;
+        max-width: 40rem;
+        gap: 4.4rem;
+    }
+    &-item{
+        position: relative;
+        display: flex;
+        width: 100%;
+        height: 0;
+        padding-top: 100%;
+        // max-width: 8.0rem;
+        // max-height: 8.0rem;
+        // min-width: 7.0rem;
+        // min-height: 7.0rem;
+        border-radius: 1.6rem;
+        background-color: #FFEDAD;
+        pointer-events:none;
+
+        span{
+            position: absolute;
+            width: 100%; 
+            height: 100%;
+            top:0;
+            left:0;
+            display: flex;
+            justify-content: center;
+            font-size: 4.8rem;
+            color:#FFDA7C;
+            font-weight: 700;
+            align-items: center;
+            line-height: 1;
+            padding-bottom: 0.6rem;
+        }
+        &.n2.on{
+            &::before{
+                content: '';
+                background-image: url(../img/ocare/m10/ico_ox_arrow_on.svg);
+            }
+        }
+        &.n3.on{
+            &::after{
+                content: '';
+                background-image: url(../img/ocare/m10/ico_ox_arrow2_on.svg);
+            }
+        }
+        &.n4.on{
+            &::before{
+                content: '';
+                background-image: url(../img/ocare/m10/ico_ox_arrow_on.svg);
+            }
+        }
+        &.n5.on{
+            &::after{
+                content: '';
+                background-image: url(../img/ocare/m10/ico_ox_arrow_on.svg);
+            }
+        }
+        &.n6.on{
+            &::before{
+                content: '';
+                background-image: url(../img/ocare/m10/ico_ox_arrow_on.svg);
+            }
+        }
+        &.n7.on{
+            &::before{
+                content: '';
+                background-image: url(../img/ocare/m10/ico_ox_arrow_on.svg);
+            }
+        }
+        &.n8.on{
+            &::before{
+                content: '';
+                background-image: url(../img/ocare/m10/ico_ox_arrow_on.svg);
+            }
+        }
+        &.n9.on{
+            &::before{
+                content: '';
+                background-image: url(../img/ocare/m10/ico_ox_arrow_on.svg);
+            }
+        }
+        &.n10.on{
+            &::before{
+                content: '';
+                background-image: url(../img/ocare/m10/ico_ox_arrow_on.svg);
+            }
+        }
+        &.n11.on{
+            &::after{
+                content: '';
+                background-image: url(../img/ocare/m10/ico_ox_arrow_on.svg);
+            }
+        }
+        &.on{
+            pointer-events: initial;
+            background: url(../img/ocare/m10/m10_on2.png) no-repeat 0 0 / cover;
+        }
+        &.complete{
+            pointer-events:none !important;
+            z-index: 1;
+        }
+
+        &:nth-of-type(1){
+           
+            &::after{
+                content: '';
+                position: absolute;
+                top: 106%;
+                right: 30%;
+                transform: rotate(90deg);
+                background: url(../img/ocare/m10/ico_ox_arrow.svg) center center no-repeat;
+                width: 3.2rem;
+                height: 3.2rem;
+            }
+        }
+        &:nth-of-type(2){
+            &::before{
+                content: '';
+                position: absolute;
+                top:50%;
+                left: -3.9rem;
+                transform: translateY(-50%);
+                background: url(../img/ocare/m10/ico_ox_arrow.svg) center center no-repeat;
+                width: 3.2rem;
+                height: 3.2rem;
+            }
+        }
+        &:nth-of-type(3){
+            &::before{
+                content: '';
+                position: absolute;
+                top:50%;
+                left: -3.9rem;
+                transform: translateY(-50%);
+                background: url(../img/ocare/m10/ico_ox_arrow.svg) center center no-repeat;
+                width: 3.2rem;
+                height: 3.2rem;
+            }
+            &::after{
+                content: "";
+                position: absolute;   
+                top: 106%;
+                right: 30%;
+                transform: rotate(90deg);
+                background: url(../img/ocare/m10/ico_ox_arrow.svg) center center no-repeat;
+                width: 3.2rem;
+                height: 3.2rem;
+            }
+        }
+        &:nth-of-type(4){
+            &::before{
+                content: "";
+                position: absolute;
+                top: 106%;
+                right: -3.8rem;
+                background: url(../img/ocare/m10/ico_ox_arrow2.svg) center center no-repeat;
+                width: 3.2rem;
+                height: 3.2rem;
+             }
+            &::after{
+                content: "";
+                position: absolute;
+                top: 50%;
+                right: -3.9rem;
+                transform: translateY(-50%) rotate(180deg);
+                background: url(../img/ocare/m10/ico_ox_arrow.svg) center center no-repeat;
+                width: 3.2rem;
+                height: 3.2rem;
+            } 
+        }
+        &:nth-of-type(5){
+            &::before{
+                content: '';
+                position: absolute;
+                top:50%;
+                right: -3.9rem;
+                transform: translateY(-50%) rotate(180deg);
+                background: url(../img/ocare/m10/ico_ox_arrow.svg) center center no-repeat;
+                width: 3.2rem;
+                height: 3.2rem;
+            }
+        }
+        &:nth-of-type(6){
+            &::before{
+                content: "";
+                position: absolute;
+                top: 106%;
+                right: 30%;
+                transform: rotate(90deg);
+                background: url(../img/ocare/m10/ico_ox_arrow.svg) center center no-repeat;
+                width: 3.2rem;
+                height: 3.2rem;
+            }
+            &::after{
+                content: '';
+                position: absolute;
+                top: -3.8rem;
+                left: -3.8rem;
+                background: url(../img/ocare/m10/ico_ox_arrow2.svg) center center no-repeat;
+                width: 3.2rem;
+                height: 3.2rem;
+            }
+        }
+        &:nth-of-type(7){
+            &::before{
+                content: '';
+                position: absolute;
+                top: -3.8rem;
+                right: 30%;
+                transform: rotate(90deg);
+                background: url(../img/ocare/m10/ico_ox_arrow.svg) center center no-repeat;
+                width: 3.2rem;
+                height: 3.2rem;
+            }
+            &::after{
+                content: "";
+                position: absolute;
+                top: 50%;
+                right: -3.9rem;
+                transform: translateY(-50%);
+                background: url(../img/ocare/m10/ico_ox_arrow.svg) center center no-repeat;
+                width: 3.2rem;
+                height: 3.2rem;
+            }          
+        }
+        &:nth-of-type(8){
+            &::before{
+                content: '';
+                position: absolute;
+                bottom: -3.8rem;
+                left: -3.8rem;
+                background: url(../img/ocare/m10/ico_ox_arrow.svg) center center no-repeat;
+                width: 3.2rem;
+                height: 3.2rem;
+                transform: rotate(318deg);
+            }
+            &::after{
+                content: "";
+                position: absolute;
+                bottom: -3.8rem;
+                right: 30%;
+                transform: rotate(90deg);
+                background: url(../img/ocare/m10/ico_ox_arrow.svg) center center no-repeat;
+                width: 3.2rem;
+                height: 3.2rem;
+            }
+        }
+        &:nth-of-type(9){
+            &::before{
+                content: "";
+                position: absolute;
+                top: 50%;
+                left: -3.9rem;
+                transform: translateY(-50%);
+                background: url(../img/ocare/m10/ico_ox_arrow.svg) center center no-repeat;
+                width: 3.2rem;
+                height: 3.2rem;
+            }
+            &::after{
+                content: "";
+                position: absolute;
+                bottom: -4rem;
+                left: -3.8rem;
+                transform: rotate(133deg);
+                background: url(../img/ocare/m10/ico_ox_arrow.svg) center center no-repeat;
+                width: 3.2rem;
+                height: 3.2rem;
+            }
+        }
+        &:nth-of-type(10){
+            &::before{
+                content: '';
+                position: absolute;
+                top: -3.8rem;
+                right: 30%;
+                transform: rotate(90deg);
+                background: url(../img/ocare/m10/ico_ox_arrow.svg) center center no-repeat;
+                width: 3.2rem;
+                height: 3.2rem;
+            }
+        }
+        &:nth-of-type(12){
+            &::before{
+                content: "";
+                position: absolute;
+                top: -3.8rem;
+                right: 30%;
+                transform: rotate(90deg);
+                background: url(../img/ocare/m10/ico_ox_arrow.svg) center center no-repeat;
+                width: 3.2rem;
+                height: 3.2rem;
+            }
+            &::after{
+                content: "";
+                position: absolute;
+                top: 50%;
+                left: -3.9rem;
+                transform: translateY(-50%);
+                background: url(../img/ocare/m10/ico_ox_arrow.svg) center center no-repeat;
+                width: 3.2rem;
+                height: 3.2rem;
+
+            }
+        }
+        &:nth-of-type(14){
+            &::after{
+                content: "";
+                position: absolute;
+                top: -4rem;
+                right: -3.8rem;
+                transform: rotate(133deg);
+                background: url(../img/ocare/m10/ico_ox_arrow.svg) center center no-repeat;
+                width: 3.2rem;
+                height: 3.2rem;
+            }
+        }
+
+        &.result{
+            background: linear-gradient(331deg, #FF9511 7.2%, #FFD15A 91.45%) !important;
+            &::before{
+                content: "";
+                position: absolute;
+                top: -4.0rem;
+                right: 30%;
+                transform: rotate(90deg);
+                background: url(../img/ocare/m10/ico_ox_arrow.svg) center center no-repeat;
+                width: 3.2rem;
+                height: 3.2rem;
+            }
+            span{
+                color: #FFF;    
+            }
+            &.on{
+                span{
+                    animation-delay: .3s;
+                    animation-duration: .3s;
+                    animation-name: quiz_stemp;
+                    animation-iteration-count: 1;
+                    animation-timing-function: ease-in;
+                    animation-fill-mode: forwards;
+                    opacity: 0;
+                }
+            }
+        }
+    }
+    .n11.on,
+    .btn-start.complete{pointer-events: none !important;}
+    .btn-start{
+        pointer-events: initial !important;
+    }
+    .btn-start span{
+        position: absolute;
+        top:0; left:0;
+        height: 100%;
+        width: 100%;
+        border-radius: 1.6rem;
+        background: linear-gradient(154deg, #FFEF5B 10.04%, #FF9511 83.81%);
+        box-shadow: .6rem .6rem 1.6rem 0 #FFDB8A;
+        color: #fff;
+        font-size: 1.8rem;
+        font-weight: 700;
+    }
+}
+.oc-report {
+    position: relative;
+    text-align: center;
+    &::before {
+        margin: 0 auto;
+    }
+    &-txt {
+        font-family: 'KBF';
+        font-size: 1.5rem;
+        line-height: 2.4rem;
+        color: var(--gray_90);
+        margin-top: 1.0rem;
+        * {
+            font: inherit;
+            font-weight: 700;
+            color:var(--gray_100);
+        }
+    }
+    .mdl-btn[data-icon="refresh"] {
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+}
+.mission-complete {
+    * {word-break: keep-all;  font-family: 'KBF';}
+    &[data-mission="2310"] {
+        .mocr-wrap{padding-top: 0; max-width: 40rem; margin: 0 auto;}
+        .content {padding: 4.8rem 2.4rem calc(env(safe-area-inset-bottom) + 3rem);}
+        .content-wrap {background-color:#F6F6F6;}
+        .mdl-box h2 em[data-marker]{color: #FF7A2F;}
+        .mdl-box h2 em[data-marker]::after{background-color: #FFF4E2;}
+        .mdl-box[data-chain="true"]::before{
+            background: url(../img/ocare/m10/m10_result_line.png) repeat-x 0 0 / auto .2rem;
+        }
+        .mdl-box{
+            flex-direction: column !important;
+            display: flex;
+        }
+        .mdl-box[data-chain="true"]{
+            padding: 3.2rem !important;
+
+            dl{width: 100%;}
+            dt{
+                font-weight: 700;
+                font-size: 2rem;
+                color: #000;
+                margin-bottom: 1.6rem;
+                text-align: center;
+                width: 100%;
+                line-height: 1.3;
+            }
+            dd {
+                font-weight: 500;
+                font-size: 1.6rem;
+                color: #666;
+                margin-bottom: 1.6rem;
+                text-align: center;
+                width: 100%;
+                line-height: 1.4;
+            }
+            [data-state] dt::before{
+                content: "";
+                display: block;
+                margin: 0 auto 2.4rem;
+                width: 23.9rem;
+                height: 22.4rem;
+            }
+            [data-state="A"] dt::before{
+                background: url(../img/ocare/m10/m10_result_1.jpg) no-repeat 50% 50% / cover;
+            }
+            [data-state="B"] dt::before{
+                background: url(../img/ocare/m10/m10_result_2.jpg) no-repeat 50% 50% / cover;
+            }
+            [data-state="C"] dt::before{
+                background: url(../img/ocare/m10/m10_result_3.jpg) no-repeat 50% 50% / cover;
+            }
+        }
+        .mdl-btn-wrap{margin-top:4.8rem;}
+        .mdl-btn{
+            background-color:#FFD027;
+            border: 0;
+            border-radius: 1.2rem;
+            height: 6.4rem;
+            width: 100%;
+
+            span{color:#222; font-size: 1.8rem; font-weight: 700;}
+        }
+    }
+}
+
+.ocr-event-dim{
+    position: relative;
+    &::before{
+        content: '';
+        display: block; 
+        position: absolute; 
+        top:0;
+        left: 0;
+        z-index: 10; 
+        width: 100%; 
+        height: 100%; 
+        background: rgba(39, 39, 39, 0.7) url(../../../local/img/event/m_ocare/common/event_end.svg) no-repeat center center / 69.33vw;
+    }
+}
+
+//NMME_1_16V
+.ocr-join-membership{
+    *{font-family: 'base';}
+    .mdl-subject{
+        &-txt{
+            font-size: 1.4rem;
+            font-weight: 400;
+            line-height: 2rem;
+            color: #666;
+            & + .mdl-subject-txt{margin-top: 2.4rem;}
+        }
+    }
+    .form-wrap{
+        margin-top: 2rem;
+    }
+    .ipt{
+        &-line-box{
+            border-radius: 1.2rem;
+            border: .1rem solid #e5e5e5;
+            padding: 1.6rem;
+            label{
+                padding: 0;
+                margin: 0;
+                font-size: 1.4rem;
+                font-weight: 700;
+                line-height: 2rem;
+                color: #000;
+            }
+        }
+        &-item{
+            min-height: auto;
+            margin-top: .8rem;
+            input[type="text"]{
+                padding: 0;
+                &::placeholder{
+                    font-size: 1.6rem;
+                    font-weight: 400;
+                    line-height: 2rem;
+                    color: #999;
+                }
+            }
+        }
+    }
+    .tip-recom{
+        margin-top: 2rem;
+        font-weight: 400;
+        text-decoration: underline;
+        text-underline-offset: .15rem;
+    }
+    .mdl-banner[data-style="kb-bank"]{
+        width: 100%;
+        height: 14.3rem;
+        margin: 5rem auto 0;
+        background-color: #F0EBE3;
+        &::before{
+            content: '';
+            display: block;
+            width: 17.9rem;
+            height: 10.3rem;
+            background-image: url(../img/page/NMME_1_16V/bn-kbbank-txt.png);
+            background-size: 17.9rem 10.3rem;;
+            background-repeat: no-repeat;
+        }
+        &::after{
+            content: '';
+            display: block;
+            width: 10rem;
+            height: 9.1rem;
+            background-image: url(../img/page/NMME_1_16V/bn-kbbank-img.png);
+            background-size: 10rem 9.1rem;;
+            background-repeat: no-repeat;
+        }
+    }
+}

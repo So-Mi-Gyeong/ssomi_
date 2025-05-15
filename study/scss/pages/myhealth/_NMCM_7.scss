@@ -1,0 +1,34 @@
+.NMCM_7_25T {
+  .ocr-header {
+    position: relative !important;
+  }
+  .ocr-body {
+    padding-top: 0;
+  }
+  .mdl-tab {
+    position: sticky;
+    top:0;
+    z-index: 10;
+    background-color: #fff;
+  }
+  .mdl-tab-pnl {padding-top:2.4rem}
+  .NMCM_7_25T-content{
+    padding:0 2.4rem 2.4rem
+  }
+  .mdl-tab-pnl .ocr-footer {
+    margin-top:0;
+    width: calc(100vw);
+    margin-left:-2.4rem;
+  }
+  .img-box {
+    display: flex;
+    justify-content: center;
+  }
+  .mdl-bul-num[data-round=black] li::before {
+    transform: translateY(-0.2rem);
+    flex-shrink: 0;
+  }
+  .mdl-bul-num[data-round=black] li div{
+    flex: 1;
+  }
+}

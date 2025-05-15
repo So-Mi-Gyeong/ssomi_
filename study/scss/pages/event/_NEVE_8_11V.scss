@@ -1,0 +1,307 @@
+.neve_8_11{
+    * {
+        font-family: 'base';
+        word-break: keep-all;
+    }
+    [data-type="body"]{
+        padding: 4.8rem 2.4rem;
+        .mdl-subject{
+            justify-content: center;
+            &-group{
+                align-items: center;
+                gap: 1.6rem;
+            }
+            &-em{
+                &::before{
+                    content: '';
+                    display: block;
+                    width: 10.7rem;
+                    height: 3.2rem;
+                }
+            }
+            &-tit{
+                font-size: 1.8rem;
+                font-weight: 700;
+                line-height: 2.52rem;
+                color: #222;
+                text-align: center;
+                span{
+                    font-size: 1.4rem;
+                    font-weight: 500;
+                    line-height: 1.96rem;
+                    color: #222; 
+                }
+            }
+        }
+    }
+    [data-type="foot"]{
+        padding: 0 2.4rem 4.8rem;
+        .mdl-definition{
+            &-head{
+                margin-bottom: 2.4rem;
+                font-size: 1.8rem;
+                font-weight: 700;
+                line-height: 2.4rem;
+                color: #222;
+            }
+            &-body{
+                font-size: 1.5rem;
+                font-weight: 400;
+                line-height: 2.2rem;
+                color: rgba(34, 34, 34, 0.6);
+                &::before{
+                    top: 0.9rem;
+                    background-color: #7A7A7A;
+                }
+            }
+        }
+    }
+    [data-event="1"]{
+        display: flex;
+        flex-direction: column;
+        gap: 4rem;
+        .mdl-subject-em{
+            &::before{
+                background: url(../../assets/img/event/NEVE_8_11/event1-tit.png) no-repeat 0 0;
+                background-size: 10.7rem;
+            }
+        }
+        [data-style="primary-line"]{border: .1rem solid #ccc;}
+    }
+    [data-event="2"]{
+        margin-top: 4.8rem;
+        padding: 4.8rem 2.4rem;
+        background-color: #F2F3F1;
+        .mdl-subject-em{
+            &::before{
+                background: url(../../assets/img/event/NEVE_8_11/event2-tit.png) no-repeat 0 0;
+                background-size: 10.7rem;
+            }
+        }
+    }
+    .event-details{
+        display: flex;
+        flex-direction: column;
+        gap: .8rem;
+        dl{
+            display: flex;
+            justify-content: flex-start;
+            align-items: flex-start;
+            gap: 1.6rem;
+        }
+        dt{
+            min-width: 7.2rem;
+            padding: .55rem 0;
+            font-size: 1.3rem;
+            font-weight: 600;
+            line-height: 1.3rem;
+            color: #222;
+            border-radius: 9.9rem;
+            text-align: center;
+            background-color: #FFD82A;
+        }
+        dd{
+            display: flex;
+            flex-direction: column;
+            gap: .8rem;
+            font-size: 1.4rem;
+            font-weight: 400;
+            line-height: 1.96rem;
+            color: #222;
+            span{
+                font-size: 1.2rem;
+                font-weight: 400;
+                line-height: 1.68rem;
+                color: #999;
+            }
+        }
+    }
+    .health-checkup-package{
+        .package{
+            &-box{
+                border: .1rem solid #EDEDED;
+                border-radius: 1.6rem;
+                padding: 2.4rem;
+            }
+            &-tit{
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                gap: .8rem;
+                font-size: 1.8rem;
+                font-weight: 700;
+                line-height: 1.8rem;
+                color: #222;
+                margin-bottom: 2.4rem;
+                &::after{
+                    content: '';
+                    display: block;
+                    width: 1.8rem;
+                    height: 1.8rem;
+                    background: url(../../assets/img/event/NEVE_8_11/ico-package.png) no-repeat 0 0;
+                    background-size: 1.8rem;
+                }
+                span{
+                    font-size: 1.8rem;
+                    font-weight: 700;
+                    line-height: 1.8rem;
+                    color: #7FBB0F;
+                }
+            }
+            &-list{
+                li{
+                display: flex;
+                justify-content: flex-start;
+                align-items: flex-start;
+                gap: .8rem;
+                padding-bottom: 1.2rem;
+                font-size: 1.2rem;
+                font-weight: 400;
+                line-height: 1.68rem;
+                color: #222;
+                border-bottom: .1rem dashed #ddd;
+                & + li{margin-top: 1.2rem;}
+                &:last-child{
+                    border-bottom: 0;
+                    padding-bottom: 0;
+                }
+                &::before{
+                    content: '';
+                    display: block;
+                    width: 1.6rem;
+                    height: 1.6rem;
+                    background: url(../../assets/img/event/NEVE_8_11/ico-check.png) no-repeat 0 0;
+                    background-size: 1.6rem;
+                }
+                }   
+            }
+            &-info{
+                margin-top: 1.2rem;
+                font-size: 1.2rem;
+                font-weight: 400;
+                line-height: 1.2rem;
+                color: #999;
+            }
+        }
+    }
+    .event-booking{
+        padding: 2.4rem;
+        border-radius: 1.6rem;
+        background-color: #F2F3F1;
+        &-tit{
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            gap: .8rem;
+            font-size: 1.6rem;
+            font-weight: 600;
+            line-height: 2.24rem;
+            color: #222;
+            border-bottom: .1rem solid rgba(0, 0, 0, 0.2);
+            padding-bottom: 2.4rem;
+            &::before{
+                content: '';
+                display: block;
+                width: 1.6rem;
+                height: 1.6rem;
+                background: url(../../assets/img/event/NEVE_8_11/ico-check2.png) no-repeat 0 0;
+                background-size: 1.6rem;
+            }
+            [data-marker="green"]::after{
+                height: .9rem;
+                border-radius: 0;
+                background-color: #CFEC98;
+            }
+        }
+        &-info{
+            margin-top: 2.4rem;
+            display: flex;
+            flex-direction: column;
+            gap: 3.2rem;
+            li{
+                display: flex;
+                justify-content: flex-start;
+                align-items: flex-start;
+                gap: 1.6rem;
+                position: relative;
+                &::before{
+                    content: attr(data-num);
+                    display: block;
+                    width: 3.2rem;
+                    min-width: 3.2rem;
+                    height: 3.2rem;
+                    font-size: 1.4rem;
+                    font-weight: 600;
+                    line-height: 3rem;
+                    color: #94BB48;
+                    text-align: center;
+                    background-color: #fff;
+                    border-radius: 50%;
+                }
+                &:nth-of-type(1){
+                    &::after{
+                        content: '';
+                        width: .15rem;
+                        height: 12.7rem;
+                        border-left: .15rem dashed #bbb;
+                        position: absolute;
+                        top: 3.3rem;
+                        left: 1.55rem;
+                    }
+                }
+                dt{
+                    font-size: 1.4rem;
+                    font-weight: 600;
+                    line-height: 1.96rem;
+                    color: #222;
+                }
+                dd{
+                    margin-top: 1.6rem;
+                    font-size: 1.4rem;
+                    font-weight: 400;
+                    line-height: 2.1rem;
+                    color: #222;
+                }
+                p{
+                    margin-top: .8rem;
+                    font-size: 1.2rem;
+                    font-weight: 400;
+                    line-height: 1.8rem;
+                    color: #999;
+                }
+            }
+        }
+    }
+    .event-coin-img{
+        margin: 2.6rem auto 3.2rem;
+        position: relative;
+        &::before{
+            content: '';
+            display: block;
+            width: 32.7rem;
+            height: 19.4rem;
+            background: url(../../assets/img/event/NEVE_8_11/coin-box.png) no-repeat 0 0;
+            background-size: 32.7rem;
+        }
+        &::after{
+            content: '';
+            display: inline-block;
+            width: 14.868rem;
+            height: 14.868rem;
+            background: url(../../assets/img/event/NEVE_8_11/coin.gif) no-repeat 0 0;
+            background-size: 14.868rem;
+            position: absolute;
+            top: 2.5rem;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }
+    .mdl-btn-wrap{
+        display: flex;
+        flex-direction: column;
+        gap: .8rem;
+        .mdl-btn{
+            span{color: #222;}
+        }
+    }
+}

@@ -1,0 +1,44 @@
+.ods-pointbox {
+  height: 2.1rem;
+  padding: 0.1rem 0.8rem 0;
+  display: inline-flex;
+  font-size: 1.1rem;
+  line-height: 1;
+  font-weight: 700;
+  color: var(--color-gray-100);
+  background-color: #fff;
+  border-radius: 1.1rem;
+  margin-left: -0.4rem;
+  align-items: center;
+  gap:0.2rem;
+
+  &[data-color="yellow"] {
+    height: 2.5rem;
+    background-color: var(--color-kb-yellow-100);
+  }
+  &[data-color="ghost"] {
+    height: 1.3rem;
+    background-color: transparent;
+  }
+  &[data-color="ghostGray"]{
+    font: var(--font-h5);
+    color: var(--color-gray-0);
+    gap: .8rem;
+    background-color: transparent;
+    padding: 0;
+    &::before{
+      content: '';
+      width: 2rem;
+      height: 2rem;
+      background:transparent url(../img/engagement/ico_gray_point.png) no-repeat 50% 50% / 2rem;
+    }
+  }
+  &::before {
+    content: "";
+    display: block;
+    width: 1.2rem;
+    height: 1.2rem;
+    transform: translateY(-0.1rem);
+    background: url(../img/engagement/ico_point.png) no-repeat 50% 50% / 1.2rem;
+  }
+}

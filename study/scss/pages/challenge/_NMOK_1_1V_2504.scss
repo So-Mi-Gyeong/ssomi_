@@ -1,0 +1,81 @@
+.ocr-challenge[data-challenge="2504"] {
+	.ocr-challenge-title {
+		background: #FFF3E6;
+	}
+	.challenge-hero .img1, .challenge-hero .img2, .challenge-hero .img3, .challenge-hero .img4 { will-change: transform; }
+	.challenge-hero {
+		position: absolute;
+		top: calc(-12.4rem + var(--sat));
+		height: 68.5rem;
+		width: calc(100% + 2px);
+		left:0;
+		pointer-events: none;
+		z-index: 0;
+ 
+		.img1-1 {width: 15.8rem;right:0rem;top:0rem;}
+		.img1-2 {width: 14.6rem;right:0rem;top:0rem;}
+		.img1-3 {width: 17.9rem;right:0rem;top:0rem;}
+		.img1-4 {width: 17.2rem;right:0rem;top:0rem;}
+		.img1-5 {width: 187.7rem;right:0rem;top:0rem;}
+		.img1-6 {width: 24.9rem;right:0rem;top:0rem;}
+		.img1-7 {width: 27.6rem;right:0rem;top:0rem;}
+		.img1{
+			top:0rem;
+			left:0.7rem;
+			position: absolute;
+			width: 100%;
+			height: 39.9rem;
+			background: url(../img/challenge/m2504/img1.png) no-repeat 50% 0 / 70rem;
+			z-index: 4;
+			// transition: transform 300ms linear;
+
+			img{
+				position: absolute;
+				transform-origin: 100% 0;
+			}
+			
+		}
+		.img2{
+			top: 54rem;
+			position: absolute;
+			width: 100%;
+			height: 22.1rem;
+			background:url(../img/challenge/m2504/img2.png) no-repeat calc(50% + 0.2rem) 0 / 70rem;
+			z-index: 3;
+			// transition: transform 300ms linear;
+			&::after{
+				content:"";
+				display: block;
+				width: 100%;
+				position: absolute;
+				top:97%;
+				left:0;
+				height: 100dvh;
+				background: linear-gradient( #8CBD72 5rem, #FFF3F4 100%  );
+			}
+		}
+		.img3{
+			top: 24.1rem;
+			left:0;
+			position: absolute;
+			width: 100%;
+			height: 44.6rem;
+			background: url(../img/challenge/m2504/img3.png) no-repeat 50% 0 / 70rem;
+			z-index: 2;
+			// transition: transform 300ms linear;
+		}
+		.img4{
+			top:27.4rem;
+			left: 0;
+			position: absolute;
+			width: 100%;
+			height: 31.1rem;
+			background: url(../img/challenge/m2504/img4.png) no-repeat 50% 0 / 70rem;
+			z-index: 1;
+			// transition: transform 300ms linear;
+		
+	
+		}
+	}
+}
+  

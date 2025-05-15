@@ -1,0 +1,420 @@
+.mdl-list {
+    width: 100%;
+    position: relative;
+    
+    &[data-col] {
+        .mdl-list-wrap {
+            flex-direction: row;
+            gap: $x1-5;
+        }
+    }
+    &[data-col="auto"] {
+        overflow-y: hidden;
+        overflow-x: auto;
+        text-align: center;
+
+        .mdl-list-wrap {display: inline-flex;}
+        &::-webkit-scrollbar {display: none;}
+    }
+
+    &[data-line="true"] {
+        .mdl-list-item + .mdl-list-item::before {
+            content: "";
+            display: block;
+            position: absolute;
+            top: calc(($x2 / 2 * -1) - .1rem);
+            width: 100%;
+            height: .1rem;
+            border-top: .1rem solid var(--line_light);
+        }
+    }
+
+    &[data-type="wrap"] {
+        &[data-col="2"] {
+            .mdl-list-wrap {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: $x1;
+            }
+            .mdl-list-item {min-width: 50%;}
+        }
+        &[data-col="3"] {
+            .mdl-list-wrap {
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr ;
+                gap: $x1;
+            }
+            .mdl-list-item {min-width: 33.33%;}
+        }  
+        &[data-col="4"] {
+            .mdl-list-wrap {
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr 1fr;
+                gap: $x1;
+            }
+            .mdl-list-item {min-width: 25%;}
+        }  
+        &[data-col="5"] {
+            .mdl-list-wrap {
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+                gap: $x1;
+            }
+            .mdl-list-item {min-width: 20%;}
+        }
+        &[data-col="6"] {
+            .mdl-list-wrap {
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+                gap: $x1;
+            }
+            .mdl-list-item {min-width: 16.66%;}
+        }  
+
+        .mdl-list-wrap {
+            flex-wrap: wrap;
+            gap: $x1;
+        }
+    }
+    &[data-type="ranking"] {
+        .mdl-list-item {
+            display: flex;
+            counter-increment: dep1 1;
+            align-items: center;
+
+            &::before{
+                content:counter(dep1);
+                display: block;
+                width:2rem;
+                font-size: 1.6rem;
+                font-style: italic;
+                font-family: 'KBF';
+                color:#999;
+            }
+            &:first-child::before {color: #FB5E5E;}
+        }
+    }
+
+    //내 정보 관리
+    &[data-type="info"] {
+        .mdl-list-item {
+            display: flex;
+            justify-content: space-between;
+            margin: 2rem 0;
+        }
+        .mdl-list-key {
+            font: var(--font-b2-500);
+            text-decoration: none;
+            color:var(--gray_90);
+        }
+        .mdl-list-value {
+            font: var(--font-b2-700);
+            color:var(--gray_100);
+            button{
+                span{
+                    font: var(--font-cap1-300);
+                    color: var(--color-blue-text);
+                }
+            }
+        }
+        .mdl-btn {
+            width: 100%;
+            justify-content: space-between;
+            // &::after {transform: translateX($x1);}
+            .mdl-list-key {
+                font: var(--font-b2-500);
+                color: $gray-100;
+            }
+            span {text-decoration: none;}
+        }
+    }
+
+    //상품소개
+    &[data-type="intro"] {
+        margin-top: 3rem;
+        .mdl-list-item {
+            display: flex;
+            justify-content: space-between;
+            margin: 2rem 0;
+            &:last-child{margin: 0;}
+        }
+        .mdl-list-key {
+            font: var(--font-b4-300);
+            color:var(--color-gray-150);
+        }
+        .mdl-list-value {
+            font: var(--font-b1-400);
+            color:var(--color-gray-100);
+            text-align: right;
+        }
+        .mdl-btn {
+            width: 100%;
+            justify-content: space-between;
+
+            &::after {transform: translateX($x1);}
+
+            .mdl-list-key {
+                font-size: 1.6rem;
+                font-weight: 400;
+                font-family: 'Base';
+                color: $gray-100;
+            }
+            span {font-family: 'Base';}
+        }
+    }
+ 
+    &-wrap {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        gap:1.2rem;
+    }
+    &-item {
+        position: relative;
+        width: 100%;
+    }
+}
+
+/* NMCM_14_1V */
+.agree-list{
+    &--wrap{
+        .agree-list{
+            display: flex;
+            flex-direction: column;
+            gap: 2.4rem;
+        }
+        li{padding: 0 ;}
+        .sub{
+            font: var(--font-b2-400);
+            color: var(--color-gray-200); 
+        }
+        .red{
+            font: var(--font-b2-700);
+            color: var(--color-red-text) !important;
+        }
+    }
+    li[data-state="error"]{
+        .mdl-form2-msg{
+            display: block;
+            padding-left: 2.7rem;
+            line-height: 2.2rem;
+            color: #D82222;
+        }
+    }
+}
+
+// NMOK_19_3V
+.objective-list{
+    margin-top: 1.2rem;
+    .font-b1-700{
+        margin-bottom: 1.6rem;
+        color: var(--color-gray-50);
+    }
+    .ods-card{
+        width: 100%;
+        justify-content: flex-start;
+        align-items: flex-start;
+        flex-direction: row;
+        flex-wrap: wrap;
+        padding-bottom: 0;
+        &--item{
+            width: calc(50% - .6rem);
+            padding: 0;
+            border: 0;
+            input{
+                position: absolute;
+                width: 1px;
+                height: 1px;
+                margin: -1px;
+                padding: 0;
+                border: none;
+                opacity: 0;
+                &:checked + label{
+                    border: .1rem solid var(--basic);
+                    .ods-card--img{
+                        background-color: rgba(255, 215, 0, 0.1);
+                        &[data-icon]::before{background-position: 0 0;}
+                    }
+                }
+            }
+            label{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                width: 100%;
+                min-height: 19.8rem;
+                padding: 2.4rem 1.6rem;
+                border: .1rem solid var(--color-gray-700);
+                border-radius: 1.6rem;
+            }
+
+            &[data-type="full"]{width: 100%;}
+        }
+        &--title{
+            display: flex;
+            align-items: center;
+            height: 6.6rem;
+            font: var(--font-b2-500);
+            color: var(--color-gray-100);
+        }
+        &--text{
+            font: var(--font-b1-700);
+            color: var(--color-gray-50);
+        }
+        &--img{
+            width: 6.8rem;
+            height: 6.8rem;
+            margin-top: .8rem;
+            border-radius: 50%;
+            background-color: #F2F2F2;
+        }
+    }
+    .ods-card--img[data-icon]{
+        &::before{
+            width: 3.2rem;
+            height: 3.2rem;
+            background-size: 6.4rem;
+            background-position: -3.2rem 0;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    }
+    [data-icon="nosmoking"]::before{background-image: url(../../assets/img/engagement/ico_nosmoking.png);}
+    [data-icon="mind"]::before{background-image: url(../../assets/img/engagement/ico_mind.png);}
+    [data-icon="pencil"]::before{background-image: url(../../assets/img/engagement/ico_pencil.png);}
+    [data-icon="spoon"]::before{background-image: url(../../assets/img/engagement/ico_spoon.png);}
+    [data-icon="exercise"]::before{background-image: url(../../assets/img/engagement/ico_exercise.png);}
+    [data-icon="weight"]::before{background-image: url(../../assets/img/engagement/ico_weight.png);}
+    [data-icon="bag"]::before{background-image: url(../../assets/img/engagement/ico_bag.png);}
+    [data-icon="sleep"]::before{background-image: url(../../assets/img/engagement/ico_sleep.png);}
+    [data-icon="clock"]::before{background-image: url(../../assets/img/engagement/ico_clock.png);}
+    [data-icon="digital"]::before{background-image: url(../../assets/img/engagement/ico_digital.png);}
+    [data-icon="healthy"]::before{background-image: url(../../assets/img/engagement/ico_healthy.png);}
+    [data-icon="environment"]::before{background-image: url(../../assets/img/engagement/ico_environment.png);}
+    [data-icon="money"]::before{background-image: url(../../assets/img/engagement/ico_money.png);}
+    .mdl-btn{
+        width: 100%;
+        margin-top: 1.2rem;
+    }
+}
+
+// NMOK_19_4V
+.objective-mission{
+    margin-top: 1.6rem;
+    padding: 3.2rem 2.4rem;
+    border-radius: 1.6rem;
+    background-color: var(--color-gray-800);
+    &--title{
+        font: var(--font-b2-400);
+        color: var(--color-gray-50);
+        margin-bottom: 1.4rem;
+    }
+    .ods-subject{
+        &--group{
+            flex-direction: column;
+            align-items: flex-start;
+            gap: .4rem;
+            margin-bottom: 2.4rem;
+        }
+        &--title{
+            font: var(--font-h5);
+            color: var(--color-gray-50);
+        }
+        &--text{
+            font: var(--font-b4-400);
+            color: var(--color-gray-300);
+        }
+    }
+    &--wrap{
+        display: flex;
+        flex-direction: column;
+        gap: 1.6rem;
+    }
+    &--item{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 1.6rem;
+        div{
+            display: flex;
+            flex-direction: column;
+            gap: .4rem;
+        }
+        dl{
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            gap: .8rem;
+            &::before{
+                content: '';
+                display: block;
+                width: 4rem;
+                height: 4rem;
+                background-image: url(../../assets/img/engagement/ico-objective-mission.png);
+                background-repeat: no-repeat;
+                background-size: 50rem;
+            }
+        }
+        dt{
+            font: var(--font-b2-700);
+            color: var(--color-gray-50);
+        }
+        dd{
+            font: var(--font-cap1-400);
+            color: var(--color-gray-150);
+        }
+        .mdl-btn{
+            max-width: 7.6rem;
+            padding: 0.1rem 1rem 0;
+            flex: 1;
+            background-color: transparent;
+        }
+    }
+    &-point{
+        font: var(--font-b1-700);
+        color: var(--color-gray-50);
+        span{
+            font: inherit;
+            color: var(--color-blue-text);
+        }
+    }
+    & + .ods-bullet--noti{margin-top: 1.8rem;}
+
+    &[data-type="my-mission"]{
+        .objective-mission--item{
+            dd{
+                font: var(--font-b4-500);
+                color: var(--color-gray-300);
+                span{
+                    font: inherit;
+                    font-weight: 700;
+                    color: var(--color-blue-text);
+                }
+            }
+        }
+    }
+
+    [data-icon="salad"]::before{background-position: 0.1rem 0;}
+    [data-icon="stairs"]::before{background-position: -4.5rem 0;}
+    [data-icon="shoes"]::before{background-position: -9.1rem 0;}
+    [data-icon="bus"]::before{background-position: -13.7rem 0;}
+    [data-icon="time"]::before{background-position: -18.3rem 0;}
+    [data-icon="diet"]::before{background-position: -23rem 0;}
+    [data-icon="snack"]::before{background-position: -27.6rem 0;}
+    [data-icon="study"]::before{background-position: -32.2rem 0;}
+    [data-icon="list"]::before{background-position: -36.8rem 0;}
+    [data-icon="love"]::before{background-position: -41.4rem 0;}
+    [data-icon="smile"]::before{background-position: -46rem 0;}
+    [data-icon="gum"]::before{background-position: 0.1rem -4.6rem;}
+    [data-icon="money"]::before{background-position: -4.5rem -4.6rem;}
+    [data-icon="shopping"]::before{background-position: -9.1rem -4.6rem;}
+    [data-icon="recycling"]::before{background-position: -13.7rem -4.6rem;}
+    [data-icon="tumbler"]::before{background-position: -18.3rem -4.6rem;}
+    [data-icon="hand"]::before{background-position: -23rem -4.6rem;}
+    [data-icon="clothes"]::before{background-position: -27.6rem -4.6rem;}
+    [data-icon="bath"]::before{background-position: -32.2rem -4.6rem;}
+    [data-icon="coffee"]::before{background-position: -36.8rem -4.6rem;}
+    [data-icon="good"]::before{background-position: -41.4rem -4.6rem;}
+}

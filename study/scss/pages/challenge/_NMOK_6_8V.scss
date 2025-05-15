@@ -1,0 +1,577 @@
+.ocr-challenge {
+    &-notice {
+        display: flex;
+        justify-content: center;
+        background-color: #1E2730;
+        padding: 5rem 2.4rem;
+        &[data-style="acco"]{margin-top: -5rem;}
+        &-wrap {
+            position: relative;
+            width: 100%;
+            max-width: $maxwidth;
+            display: flex;
+            flex-direction: column;
+        }
+        h2 {
+            display: flex;
+            width: 100%;
+            align-items: center;
+            justify-content: flex-start;
+            gap:1rem;
+            align-items: center;
+            font-size: 2.6rem;
+            color: #fff;
+            font-weight: 600;
+            margin-bottom: 2.4rem;
+
+            &::after{
+                content: "";
+                display: inline-block;
+                vertical-align: middle;
+                width: 2rem;
+                height: 2rem;
+            }
+        }
+        .mdl-bul-dot{
+            li {
+                &::before {background-color: #777;}
+                & + li{margin-top: .6rem;}
+                font-size: 1.4rem;
+                font-weight: 400;
+                color:#777;
+                line-height: 1.4;
+            }
+        }
+        .mdl-definition {
+            &-item {
+                margin-bottom: 2.4rem;
+                background-color: #262E37;
+                border-radius: 4rem;
+                padding: 2.8rem 2.4rem;
+            }
+            &-head {
+                font-size: 1.6rem;
+                font-weight: 700;
+                color:#fff;
+                line-height: 1.4;
+                margin-bottom: 1rem;
+                
+                img{width:2rem; display: inline-block; margin-left: .4rem; vertical-align: middle;}
+            }
+            &-body {
+                &::before {
+                    background-color: #999999;
+                    transform: translateY(.2rem);
+                }
+                 font-size: 1.4rem;
+                 font-weight: 200;
+                 color:#999999;
+                 line-height: 1.4;
+                 margin-top: .4rem;
+            }
+        }
+    }
+   
+    &[data-page="NMOK_6_8V"] {
+        .ocr-body { 
+            * {font-family: 'KBF';}
+            background: #31D2AE;
+            &::after {
+                opacity: 1;
+                background:linear-gradient(to bottom, #82C3FF 0%, #47E1E7 60%, #31D2AE 100%);
+            }
+        }
+    
+        .alarm-box{
+            position: absolute;
+            top: -9rem;
+            right: 0;
+            z-index: 10;
+    
+            label{
+                 flex-direction: row-reverse;
+                span{
+                    color: #000;
+                    font-size: 1.4rem;
+                    font-weight: 500;
+                    opacity: 1;
+                }
+            }
+        }
+        .ocr-challenge-luckyball dl{
+            margin-top: 3.2rem;
+        }
+        .ocr-challenge-luckyball,
+        .ocr-challenge-notice{z-index: 2;}
+       
+        .mdl-box{z-index:2}
+    
+        .miracle-road{
+            position: relative;
+            height: 28rem; 
+            width: 37.5rem; 
+            margin: 0 auto;
+           
+            &[data-ani="false"] {
+                .line-box .gauge {
+                    transition-delay: 0 !important;
+                    transition:none;
+                }
+                .luckyball {
+                    transition-delay: 0 !important;
+                    transition: none;
+                    &::after {
+                        transition-delay: 0 !important;
+                        transition: none;
+                    }
+                }
+            }
+            &[data-ani="true"] {
+                .line-box .gauge {
+                    transition: height .6s ease-in;
+                }
+                .luckyball {
+                    transition: opacity .3s ease-in-out;
+                    &::after {
+                        transition: opacity .6s ease-in;
+                    }
+                }
+            }
+            &::after,
+            &::before{
+                content: "";
+                display: block;
+                width: 2rem;
+                height: 1.1rem;
+                background-color: #fff;
+                border-radius: 50%;
+                position: absolute;
+                top:0; 
+                left:0;
+                z-index:3;
+                transform:skew(-42.1deg, 41.7deg) rotate(134.2deg);
+            }
+            &::after{ top:9.3rem;left: 21.3rem;width: 1.4rem;height: 0.8rem;}
+            &::before{top:16.9rem; left:10.3rem;}
+            
+            .bg {background-image: url(../img/page/NMOK_6_8V/road_2_1.png)}
+            .bg2{
+                display: block;
+                position: absolute;
+                top:calc(-28rem - env(safe-area-inset-top)); 
+                left:50%;
+                transform: translate(-50%, 0);
+                width: 71rem;
+                height: 56rem ;
+                background: url(../img/page/NMOK_6_8V/bg_1.png) no-repeat 50% 0 / 71rem; 
+            }
+
+            .mdl-tooltip{
+                left:50%;
+                transform: translate(-50%, -3.6rem);
+                background-color: #FFD700;
+                .mdl-tooltip-txt{color:#000; font-size: 1.4rem;}
+                &::before { background-color: #FFD700; }
+            }
+            .luckyball {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 5.8rem;
+                height: 5.7rem;
+                border-radius: 50%;
+                box-shadow: 0 0.8rem 1rem rgba(0,0,0,0.24);
+                z-index: 5;
+                opacity: 0;
+    
+                &::after {
+                    content: "";
+                    display: block;
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    border-radius: 50%;
+                    background-color: rgba(255,255,255,0.3);
+                    backdrop-filter: blur(.3rem);
+                    opacity: 0;
+                    z-index: 1;
+                }
+                > span{
+                    font-size: 1.1rem;
+                    font-weight: 700;
+                    color: #5A5A5A;
+                    display: block;
+                    width: 100%;
+                    text-align: center;
+                    position: absolute;
+                    bottom:0.5rem;
+                    left:0;
+                    z-index: 2;
+                }
+                &[data-state="wait"]{
+                    pointer-events: none;
+                    transition-delay: .5s;
+                    opacity: 1;
+                    box-shadow: 0 0.2rem 1rem rgba(0,0,0,0.24);
+                    .mdl-tooltip {display: none !important;}
+                }
+                &[data-state="wait"]::after {opacity: 1;}
+                &[data-state="complete"] {
+                    pointer-events: none;
+                    opacity: 1;
+                    filter: grayscale(1); animation: none;
+                    .mdl-tooltip{
+                        background-color: #1E1F23;
+                        .mdl-tooltip-txt{color:#fff;}
+                        &::before { background-color: #1E1F23; }
+                    }
+                }
+                &[data-state="off"] { 
+                    opacity: 0;
+                    pointer-events: none;
+                }
+                &[data-state="on"] {
+                    opacity: 1;
+                    pointer-events: initial;
+                    animation-duration: 500ms;
+                    animation-name: luckyball;
+                    animation-direction: alternate-reverse;
+                    animation-iteration-count: infinite;
+                    animation-timing-function: linear;
+    
+                    &::after {opacity: 0;}
+                }
+    
+                &[data-n="1"]{ background: url(../img/challenge/miracle/luckyball_1.png) no-repeat 0 0 / 100%; top:14rem; left:8rem;}
+                &[data-n="2"]{ background: url(../img/challenge/miracle/luckyball_2.png) no-repeat 0 0 / 100%; top:6.2rem; left:18.9rem; animation-delay: 200ms;}
+                &[data-n="3"]{ background: url(../img/challenge/miracle/luckyball_3.png) no-repeat 0 0 / 100%; top:1.1rem; left:3.4rem; animation-delay: 300ms;}
+    
+                &[data-n="3"][data-state="wait"] ~ .goal,
+                &[data-n="3"][data-state="on"] ~ .goal{opacity: 0;}
+    
+               
+            }
+            .bg {
+                content: "";
+                display: block;
+                width:  77.4rem;
+                position: absolute;
+                bottom: -10.3rem;
+                left: 50%;
+                height: 710rem;
+                z-index: 1;
+                opacity: 0;
+                animation: campaignShow 1.3s 1 forwards;
+                transform: translate(-50%, 0);
+                background-position: 50% 100%;
+                background-size: 77.4rem;
+                background-repeat: no-repeat;
+                pointer-events: none;
+            }
+            .goal{
+                position: absolute;
+                top:1.1rem; left:4.7rem;
+                width: 3.4rem;
+                height: 4.2rem;
+                z-index: 3;
+                background: url(../img/challenge/miracle/goal.png) no-repeat 0 0 / 3.4rem;
+                opacity: 1;
+                transition: opacity .3s ease-in;
+            }
+        
+            .line-box{
+                pointer-events: none;
+                position: absolute;
+                z-index: 2;
+            
+                .line {
+                    width: 100%;
+                    height: 100%;
+                    background: transparent;
+                }
+                .gauge {
+                    height: 0%;
+                    width: 100%;
+                    background: linear-gradient(to top, #CCFF0000, #CCFF00 30%, #CCFF00 70%, #CCFF0000);
+                }
+                &[data-n="1"] {
+                    top: -126.5rem;
+                    left: 38.3rem;
+                    width: 5.3rem;
+                    height: 160.2rem;
+                    perspective:89rem;
+                    perspective-origin: bottom left;
+                
+                    .line{
+                        position: relative;
+                        transform: rotate(-38.2deg) skew(21.2deg, 8deg) rotateX(60deg) translateZ(0);
+                        transform-origin: 100% 100%;
+                        border-radius: 8.5rem;
+                        .gauge{transition-delay: .6s; position: absolute; bottom:0;}
+                    }
+                }
+                &[data-n="2"] {
+                    top: 3.3rem;
+                    left: 9.9rem;
+                    width: 1.2rem;
+                    height: 14.8rem;
+    
+                    .line{
+                        position: relative;
+                        transform: rotate(54.8deg) skew(0deg, -19deg);
+                        transform-origin: 100% 100%;
+                        border-radius: 3rem;
+    
+                        .gauge{transition-delay: 1.2s; position: absolute; bottom:0;}
+                    }
+                }
+                &[data-n="3"] {
+                    top: -30.8rem;
+                    left: 21.6rem;
+                    width: 0.9rem;
+                    height: 40rem;
+                    perspective:40rem;
+                    perspective-origin: bottom left;
+    
+                    .line{
+                        position: relative;
+                        transform:rotate(-49.3deg) skew(25.8deg, 17deg) rotateX(48.9deg) translateZ(-0.1rem);
+                        transform-origin: 100% 100%;
+                        border-radius: 2rem;
+                        .gauge{transition-delay: 1.8s; position: absolute; bottom:0;}
+                    }
+                }
+            }
+        }
+        .mdl-subject-group { align-items: center;}
+        .mdl-subject-txt {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+    
+            .mission-state-info {
+                width: 15.2rem;
+                background-color: transparent;
+                flex-direction: column;
+                justify-content: flex-start;
+                padding: 0;
+                gap:.4rem;
+
+                &::after{display: none;}
+                & > div{
+                    position: relative;
+                    width: 100%;
+                    padding: 0 1.2rem;
+                    border-radius: 2.6rem;
+                    background-color: rgba(0, 0, 0, 0.3);
+                    display: flex;
+                    justify-content: flex-start;
+                    align-items: center;
+                    flex-direction: row;
+                    gap:.8rem;
+                    max-height: 2.8rem;
+                    &::after{
+                        content:"";
+                        display: block;
+                        position: absolute;
+                        top:.9rem;
+                        left:4.3rem;
+                        width: .1rem;
+                        height: 1rem;
+                        background-color: #fff;
+                        opacity: .4;
+                    }
+                }
+                .n1 dt b{
+                    background-color: transparent;
+                    padding: 0;
+                    line-height: 1;
+                    height: auto;
+                }
+                dt{width: 3rem; line-height: 1;}
+                dd{margin: 0; line-height: 1;}
+            }
+        }
+        .mission-state-info{
+            width: 100%;
+            padding: 1.2rem 2rem;
+            border-radius: 2.6rem;
+            background-color: rgba(0,0,0,0.5);
+            display: flex;
+            min-height: 7.6rem;
+            gap: 4.1rem;
+            
+            &::after {
+                content: "";
+                display: block;
+                width: .1rem;
+                height: 5.3rem;
+                position: absolute;
+                left:50%;
+                background-color: #fff;
+                opacity: 0.15;
+            }
+            & > div{
+                flex:1;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+            dd{
+                margin-top: .6rem;
+                color: #fff;
+                font-size: 1.4rem;
+                font-weight: 500;
+            }
+            .n1 dt b{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 2.4rem;
+                padding: .3rem 1.2rem 0;
+                font-size: 1.3rem;
+                font-weight: 500;
+                line-height: 1;
+                color: #fff;
+                border-radius: 1.2rem;
+                background-color: rgba(255,255,255,0.3);
+            }
+            .n2 dt b{
+                display: block;
+                width: 2.4rem;
+                height: 2.4rem;
+                background: url("data:image/svg+xml,%3Csvg width='25' height='24' viewBox='0 0 25 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M14.2269 5.12665C14.2269 5.12665 14.4118 4 15.1391 4C15.661 4 16.1089 4.37555 16.3267 4.59071C16.5034 4.76675 16.6965 4.93496 16.8896 5.09535L19.1908 7.03961C19.1908 7.03961 20.0537 7.76333 20.0537 8.86259C20.0537 9.64499 19.7332 10.2944 19.1867 10.8577C18.6401 11.421 11.6175 18.7012 11.6175 18.7012C11.6175 18.7012 10.3847 20 8.60957 20H5.3633C3.83056 20 2.95531 18.3335 3.87577 17.1638L6.08241 14.3628C6.54675 13.7721 6.90836 13.111 7.14669 12.4108L8.82325 7.4934C9.01227 6.94572 9.69029 6.711 10.2039 7.02005L11.4449 7.77115C11.6381 7.88851 11.86 7.94719 12.086 7.94719H13.3475C13.7872 7.94719 14.1447 7.61467 14.1611 7.19609L14.2269 5.12665Z' fill='white'/%3E%3Cpath d='M21.5 15.5486H19.3139' stroke='white' stroke-width='1.5' stroke-miterlimit='10' stroke-linecap='round'/%3E%3Cpath d='M21.5 18.678H16.9552' stroke='white' stroke-width='1.5' stroke-miterlimit='10' stroke-linecap='round'/%3E%3C/svg%3E%0A") no-repeat;
+                color:transparent;
+            }
+        }  
+        
+        .mdl-btn[data-style="primary-eff"] {
+            height: 6.8rem;
+            border-radius: 3.4rem;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: .3rem solid #ffd93b;
+            background-color: var(--basic); ;
+            box-shadow: inset 0.8rem 0.8rem 1.5rem rgba(255, 252, 53,1), inset -0.8rem -0.8rem 1.5rem rgba(255, 252, 53,1), 0 0.8rem 2rem rgba(0,0,0,0.2);
+
+            span{
+                font-size:2.2rem;
+                font-weight: 700;
+                color:#000;
+            }
+        }
+        
+         
+        .mdl-box[data-type="ghost"] {
+            border: 0.2rem solid #fff;
+            background: linear-gradient(rgba(255, 255, 255, 0.75), rgb(255, 255, 255));
+            -webkit-backdrop-filter: blur(0.5rem);
+            backdrop-filter: blur(0.5rem);
+            padding: 2rem;
+            display: flex;
+            align-items: center;
+            flex-direction: row;
+            justify-content: space-between;
+            dt {
+                font-size: 1.8rem;
+                font-weight: 500;
+                color: #1E1F23;
+                font-family: 'KBF';
+            }
+            dd {
+                font-size: 2.4rem;
+                font-weight: 700;
+                color: #999;
+                display: flex;
+                align-items: center;
+                font-family: 'KBF';
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: .2rem;
+                b{
+                    font-size: 2.4rem;
+                    font-weight: 700;
+                    color: #1E1F23;
+                    font-family: 'KBF';
+                }
+            }
+        }
+    
+        .ocr-challenge-how{ 
+             background-color: #fff; 
+             margin-top: 5.5rem;
+    
+             ol {
+                gap:3.2rem;
+    
+                li::before{ width: 7.6rem; height: 7.6rem; min-width: 7.6rem; background: #F7F8FA url(../img/challenge/miracle/sp_76.png) no-repeat 0 0/ auto 7.6rem}
+                li:nth-child(1)::before{background-position: 0 0;}
+                li:nth-child(2)::before{background-position: -7.6rem 0;}
+                li:nth-child(3)::before{background-position: -15.2rem 0;}
+                li em{font-weight: 700;}
+                li + li::after{
+                     content: "";
+                     position: absolute;
+                     display: block;
+                     width: 100%;
+                     height: .1rem;
+                     border-top: .1rem dashed #ddd;
+                     top: -1.6rem;
+                     left: 0;;
+                }
+            }
+        }
+        .ocr-challenge-notice{
+            padding-bottom: 4rem;
+            .mdl-bul-dot{
+                background-color: transparent;
+                padding: 0;
+     
+                li{color: #B1B3D7;}
+            }
+         }
+        .ocr-campaign-info {
+            padding: 0 2rem;
+            margin-top: -7rem;
+    
+            .mdl-btn-wrap{margin-top: 1.8rem;}
+        }
+        .ocr-challenge-luckyball .mdl-acco-btn::after,
+        .ocr-challenge-notice .mdl-acco-btn::after{background-color: #fff;}
+        
+        .ocr-challenge-title {
+            padding: calc(5.6rem + env(safe-area-inset-top) + 1.8rem) 2.4rem 4rem;
+            &::before{ opacity: 0;}
+    
+            .mdl-subject {
+                z-index: 1;
+                padding: 0;
+                width: 100%;
+                text-align: center;
+                justify-content: center;
+                margin: 0;
+                transform: translateY(-6rem);
+            }
+        } 
+    }
+}
+
+
+@keyframes luckyball {
+    0%{ 
+        transform: translate(0,0);
+        box-shadow: 0 0.8rem 1rem rgba(0,0,0,0.24);
+    }
+    100%{ 
+        transform: translate(0,.2rem);
+        box-shadow: 0 0.4rem .6rem rgba(0,0,0,0.34);
+    }
+}
+@keyframes campaignShow {
+    0%{ opacity: 0;}
+    100%{  opacity: 1;}
+}

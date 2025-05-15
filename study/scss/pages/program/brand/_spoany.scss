@@ -1,0 +1,14 @@
+// 영향을 주지 않는 class명은 data-brand 바깥에 입력
+
+[data-brand="spoany"] {
+	.brand-head-info {
+		h2 em {
+			color: var(--red);
+			font: inherit;
+		}
+	}
+ 
+	.type-h4.red {
+		color: #e5004f !important;
+	}
+}

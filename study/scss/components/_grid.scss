@@ -1,0 +1,35 @@
+.mdl-grid {
+    display: grid;
+    grid-template-areas:
+        "tit sub1"
+        "tit sub2"
+        "tit sub3"
+    ;
+    gap: 1.0rem 1.0rem;
+
+    &,&[data-type="tit1"]{
+        div{
+            &:nth-child(1){
+                grid-area: tit;
+                background-color: red;
+            }
+            &:nth-child(2){
+                grid-area: sub1;
+                background-color: blue;
+                height: 10.0rem;
+            }
+            &:nth-child(3){
+                grid-area: sub2;
+                background-color: yellow;
+                height: 10.0rem;
+            }
+            &:nth-child(4){
+                grid-area: sub3;
+                background-color: green;
+                height: 10.0rem;
+            }
+        }
+    }
+}
+
+

@@ -1,0 +1,188 @@
+.neve_8_9{
+    * {
+        font-family: 'base';
+        word-break: keep-all;
+    }
+    .mdl-definition{
+        padding: 4.8rem 2.4rem;
+        background-color: #eee;
+        &-head{
+            margin-bottom: 2.4rem;
+            font-size: 1.8rem;
+            font-weight: 700;
+            line-height: 2.4rem;
+            color: #222;
+        }
+        &-body{
+            font-size: 1.5rem;
+            font-weight: 400;
+            line-height: 2.2rem;
+            color: rgba(34, 34, 34, 0.6);
+            &::before{
+                top: .8rem !important;
+                background-color: rgba(34, 34, 34, 0.6) !important;
+            }
+        }
+    }
+    .mdl-banner{
+        justify-content: flex-start;
+        gap: .3rem;
+        padding: 2.4rem;
+        background-color: #B9E63A;
+        &::before{
+            content: '';
+            display: block;
+            width: 8.4rem;
+            height: 8.4rem;
+            background: url(../../assets/img/event/NEVE_8_9/ico-banner.png) no-repeat 0 0;
+            background-size: 8.4rem;
+        }
+        &-em{
+            font-size: 1.4rem;
+            font-weight: 400;
+            line-height: 1.4rem;
+            color: #000;
+        }
+        &-tit{
+            font-size: 2rem;
+            font-weight: 700;
+            line-height: 2.6rem;
+            color: #222;
+            
+        }
+        &-txt{
+            display: flex;
+            justify-content: flex-start;
+            gap: 1rem;
+            font-size: 1.4rem;
+            font-weight: 600;
+            line-height: 2rem;
+            color: rgba(0, 0, 0, 0.7);
+            span{
+                font-size: 1.4rem;
+                font-weight: 400;
+                line-height: 2rem;
+                color: rgba(0, 0, 0, 0.7);
+            }
+        }
+    }
+}
+
+.welcome-mission{
+    background-color: #FFE59C;
+    &-head{
+        &::before{
+            content: '';
+            width: 151.2rem;
+            height: 52.9rem;
+            background: url(../../assets/img/event/NEVE_8_9/mission-head-bg.jpg) no-repeat 0 0;
+            background-size: 151.2rem;
+            position: absolute;
+            top: calc(0 + env(safe-area-inset-top));
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        &::after{
+            content: '';
+            width: 37.5rem;
+            height: 47.5rem;
+            background: url(../../assets/img/event/NEVE_8_9/ico-mission-head.png) no-repeat 50% 0;
+            background-size: 36.8rem;
+            position: absolute;
+            top: 1rem;
+            left: calc(50% + 1.3rem);
+            transform: translateX(-50%);
+        }
+    }
+    &-body{
+        margin-top: 52.9rem;
+        background: linear-gradient(180deg, rgba(255,233,163,1) 0%, rgba(255,240,180,1) 64%, rgba(255,255,255,1) 100%);
+    }
+    &-foot{background-color: #eee;}
+    &-content{
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: -2.1rem;
+        &::before{
+            content: '';
+            display: block;
+            width: 37.5rem;
+            transform: translateY(-1.7rem);
+        }
+        &[data-mission="1"] {
+            &::before{
+                height: 47.9rem;
+                background: url(../../assets/img/event/NEVE_8_9/mission01.png) no-repeat 0 0;
+                background-size: 37.5rem 47.9rem;
+            }
+            &::after{
+                content: '';
+                width: 13rem;
+                height: 12rem;
+                background: url(../../assets/img/event/NEVE_8_9/ico-coin.png) no-repeat 0 0;
+                background-size: 13rem;
+                position: absolute;
+                top: -6.8rem;
+                right: 3.7rem;
+            }
+        }
+        &[data-mission="2"] {
+            &::before{
+                height: 46.8rem;
+                background: url(../../assets/img/event/NEVE_8_9/mission02.png) no-repeat 0 0;
+                background-size: 37.5rem 46.8rem;
+            }
+        }
+        &[data-mission="3"] {
+            &::before{
+                height: 47.3rem;
+                background: url(../../assets/img/event/NEVE_8_9/mission03.png) no-repeat 0 0;
+                background-size: 37.5rem 47.3rem;
+            }
+        }
+        &[data-type="banner"]{
+            margin-top: -.1rem;
+            .mdl-banner{
+                max-width: 32.7rem;
+                margin-top: -2rem;
+            }
+            & + .welcome-mission-content{margin-top: 2.4rem;}
+        }
+    }
+    .mdl-btn-wrap{
+        position: absolute;
+        bottom: 6.8rem;
+        left: 50%;
+        transform: translateX(-50%);
+        .mdl-btn{
+            width: 27.9rem;
+            height: 4.4rem;
+            background: linear-gradient(90deg, rgba(255,225,8,1) 0%, rgba(255,205,32,1) 100%);
+            border-radius: 9.9rem;
+            span{
+                font-family: 'base';
+                font-size: 1.6rem;
+                font-weight: 600;
+                line-height: 1.6rem;
+                color: #222;
+                text-decoration: none;
+            }
+        }
+    }
+    [data-type="promotion"]{
+        margin-top: 1rem;
+        background-color: #595348;
+        &::before{display: none;}
+        .welcome-mission-img{
+            width: 37.5rem;
+        }
+        .mdl-btn-wrap{
+            bottom: 5.6rem;
+            .mdl-btn{
+                background: #B9E63A;
+            }
+        }
+    }
+}

@@ -1,0 +1,932 @@
+//공통
+.challenge-kbbank {
+	* {
+		font-family: 'KBF';
+	}
+
+	.ocr-body {
+		padding: 0 !important
+	}
+
+	.card-progress {
+		&--wrap {
+			width: 100%;
+			border-radius: 0 0 2rem 2rem;
+		}
+
+		&--point {
+			display: inline-block;
+			width: 100%;
+			font-size: 1.4rem;
+			font-weight: 700;
+			color: #fff;
+			display: flex;
+			justify-content: flex-end;
+			align-items: center;
+			gap: .4rem;
+
+			&::before {
+				content: '';
+				display: block;
+				width: 2rem;
+				height: 2rem;
+				background: url(../img/challenge/kbBank/ico-KBcoin.png) 0 0 no-repeat;
+				background-size: 2rem;
+				transform: translateY(-.2rem);
+			}
+		}
+
+		&--box {
+			width: 100%;
+			height: 1.6rem;
+			background-color: #fff;
+			box-shadow: 0rem .4rem 2.4rem rgba(0, 0, 0, 8%) !important;
+			border: 0;
+			background-color: #EDF0F7;
+			border-radius: 1rem;
+			position: relative;
+		}
+
+		&--txt {
+			text-align: right;
+		}
+
+		&--bar {
+			width: 0%;
+			min-width: 10%;
+			height: 100%;
+			border-radius: 1rem;
+			background: linear-gradient(45deg, #ffd700, #ff9b26);
+			position: absolute;
+			top: 0;
+			left: 0;
+			transition: width 1s linear;
+		}
+
+	}
+
+	.team-challenge-list[data-style="ranking"] {
+		gap: 1.2rem;
+
+		.team-challenge-box {
+			height: auto;
+			min-height: 6.4rem;
+			padding: 2.4rem 1.6rem;
+			gap: 0.8rem;
+			box-shadow: none !important;
+		}
+
+		.team-challenge-box[data-team="true"] {
+			border: 0.2rem solid #FFD700;
+			box-shadow: 0 0.4rem 0.8rem rgba(0, 0, 0, 0.08) !important;
+		}
+
+		.team-challenge-team {
+			text-align: left;
+			word-break: break-all;
+		}
+
+		.team-challenge-num {
+			display: flex;
+			justify-content: flex-end;
+			min-width: 9rem;
+			font-size: 1.6rem;
+			font-weight: 500;
+			line-height: 1;
+		}
+
+		&[data-team="pg"] {
+			.team-challenge-wrap {
+				width: 100%;
+				flex: 1;
+			}
+
+			.team-challenge-box {
+				border-radius: 1.6rem;
+			}
+
+			.team-challenge-item {
+				gap: .8rem;
+
+				&::before {
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					width: 3.6rem;
+					height: 3.6rem;
+					line-height: 1;
+					margin-right: .3rem;
+					border-radius: 50%;
+					background-color: #F7F7F7;
+				}
+
+				&[data-rank] {
+					&::before {
+						display: block;
+						width: 4rem;
+						height: 5.4rem;
+						margin-right: 0;
+						border-radius: 0;
+						background: url(../img/challenge/kbBank/ico-level.png);
+						background-size: 12rem;
+						background-repeat: no-repeat;
+						padding-top: 2.5rem;
+						padding-right: .2rem;
+						box-sizing: border-box;
+
+					}
+				}
+
+				&[data-rank="1"]::before {
+					background-position: 0 0;
+				}
+
+				&[data-rank="2"]::before {
+					background-position: -4rem 0;
+				}
+
+				// &[data-rank="3"]::before{background-position: -8rem 0;}
+			}
+		}
+	}
+
+	.team-challenge-history {
+		[data-team="pg"] {
+			.team-challenge {
+				&-box {
+					min-height: 9.1rem;
+					padding: 2.4rem 1.6rem;
+					flex-direction: column;
+					gap: 0.8rem;
+					position: relative;
+				}
+
+				&-txt {
+					width: 100%;
+					display: flex;
+					justify-content: space-between;
+					align-items: center;
+				}
+			}
+
+			.mdl-btn {
+				position: absolute;
+				bottom: 2rem;
+				right: 2.4rem;
+
+				span {
+					font-size: 1.4rem;
+					font-weight: 500;
+					line-height: 1.68rem;
+					color: #777;
+					text-decoration: underline;
+					text-underline-offset: .3rem;
+				}
+			}
+		}
+	}
+
+	[data-icon-after="ranking"] {
+		display: flex;
+		justify-content: flex-start;
+		align-items: center;
+		gap: .8rem;
+
+		&::after {
+			content: "";
+			display: block;
+			width: 2.4rem;
+			height: 2.4rem;
+			background: url(../img/page/NMOK_6_5V/sp_NMOK_6_5V.png) no-repeat -3rem 0 / 9rem;
+		}
+	}
+
+	&.team-addlist {
+		ul {
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			justify-content: center;
+
+			li {
+				width: 100%;
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+			}
+
+			p {
+				font-size: 1.6rem;
+				font-weight: 700;
+				line-height: 1.6rem;
+				color: #1E1F23;
+			}
+		}
+
+		.team-addlist-wrap {
+			display: flex;
+			justify-content: flex-start;
+			align-items: center;
+			gap: .8rem;
+		}
+
+		.nodata {
+			min-height: 9.8rem;
+			padding: 0;
+			background: none;
+			border-radius: 0;
+			font-size: 1.8rem;
+			font-weight: 500;
+			line-height: 2.6rem;
+
+			color: #ADADAD;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+	}
+}
+
+//NMOK_1_1V.html
+[data-act="mok1_1"] {
+	[data-type="flex"] {
+		display: flex;
+		justify-content: center;
+		align-items: baseline;
+		gap: 1.4rem;
+
+		.challenge-kbbank--btn {
+			width: 100%;
+
+			&[data-style="tech"] {
+				.card-walk--type-tit {
+					background: #3CA456;
+				}
+			}
+
+			&[data-style="pg"] {
+				.card-walk--type-tit {
+					background: #3CA48B;
+				}
+
+				.card-walk--subject-tit::after {
+					transform: translateX(-1.4rem);
+				}
+			}
+		}
+
+		[data-type="kbBank"] {
+			.card-walk--head span {
+				font-size: 1.4rem;
+				line-height: 1.4rem;
+			}
+
+			.card-walk--type {
+				margin-bottom: 1.6rem;
+			}
+
+			.card-walk--subject {
+				margin-top: .9rem;
+				padding: 0 2rem;
+			}
+
+			.card-walk--subject-tit {
+				align-items: flex-end;
+				gap: 0;
+				font-size: 1.8rem;
+				font-weight: 700;
+				line-height: 1.4;
+				text-align: left;
+
+				&::before {
+					display: none;
+				}
+			}
+
+			.card-walk--type {
+				border-top: 0;
+			}
+		}
+	}
+
+	[data-type="kbBank"] {
+		.card-walk--type {
+			border-top: .2rem solid #2C8947;
+		}
+
+		.card-walk--type-tit {
+			background: #2C8947;
+		}
+
+		.card-walk--head {
+			padding: 0 2rem;
+
+			span {
+				font-size: 1.5rem;
+				font-weight: 500;
+				line-height: 1.5rem;
+				color: #858C9A;
+			}
+		}
+
+		.card-walk--subject {
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			gap: 1.2rem;
+			margin-top: 1.6rem;
+
+			&-txt {
+				font-size: 2rem;
+				font-weight: 500;
+				line-height: 2rem;
+				color: #1E1F23;
+			}
+
+			&-tit {
+				font-size: 2.2rem;
+				font-weight: 700;
+				color: #1E1F23;
+				display: flex;
+				justify-content: flex-start;
+				align-items: center;
+				gap: .4rem;
+
+				&::before {
+					content: '';
+					display: block;
+					width: 2.4rem;
+					height: 2.4rem;
+					background: url(../img/challenge/kbBank/ico-KBclover.png);
+					background-size: 2.4rem;
+				}
+			}
+		}
+
+		.card-progress--wrap {
+			padding: 0 2.4rem;
+			margin-top: 3.6rem;
+		}
+
+		.card-progress--bar {
+			&::before {
+				content: '';
+				display: block;
+				width: 3.2rem;
+				height: 3.2rem;
+				background: url(../img/challenge/kbBank/ico-KBcoin.png) 0 0 no-repeat;
+				background-size: 3.2rem;
+				position: absolute;
+				top: -3rem;
+				right: .5rem;
+				z-index: 99999;
+			}
+		}
+
+		.card-progress--point {
+			font-size: 1.5rem;
+			font-weight: 500;
+			line-height: 1.5rem;
+			color: #4E4E4E;
+			margin-top: 1.2rem;
+
+			&::before {
+				display: none;
+			}
+		}
+	}
+}
+
+//행복 걷기 기부 챌린지
+[data-page="nmok_18_1"] {
+	.challenge-kb-top {
+		height: 50rem;
+		padding: 3.6rem 0 2.8rem;
+		background: url(../img/challenge/kbBank/img-KBchallengeBg.jpg) 100% 100% no-repeat;
+
+		&::before {
+			content: '';
+			display: block;
+			width: 100%;
+			margin: 0 auto;
+			max-width: 28.1rem;
+			height: 43.6rem;
+			background-image: url(../img/challenge/kbBank/ico-KBchallenge.png);
+			background-size: 28.1rem 43.6rem;
+			background-position: 0 0;
+			background-repeat: no-repeat;
+		}
+	}
+
+	[data-act="sec2"] {
+		display: flex;
+		justify-content: center;
+	}
+
+	.card-progress {
+		&--wrap {
+			display: flex;
+			flex-direction: column;
+			gap: .8rem;
+			width: calc(100% - 2rem);
+			padding: 2.8rem;
+			background-color: #1F6E36;
+			border-radius: 1.6rem;
+			margin-top: 1.2rem;
+		}
+
+		&--tit {
+			font-size: 2rem;
+			font-weight: 700;
+			color: #fff;
+			text-align: left;
+
+			span {
+				font-size: 2rem;
+				font-weight: 700;
+				color: #FFDE2B;
+			}
+		}
+
+		&--point {
+			font-size: 1.4rem;
+			font-weight: 700;
+			line-height: 1.4rem;
+			margin-top: 0;
+		}
+
+		&--box {
+			background-color: rgba(0, 0, 0, 0.41);
+		}
+
+		&--bar {
+			background: linear-gradient(45deg, #FFD700, #FBFF00);
+		}
+	}
+
+	[data-act="sec3"] {
+		padding: 4.8rem 2.4rem 5.6rem;
+		display: flex;
+		flex-direction: column;
+		gap: 3.2rem;
+	}
+
+	.team-challenge-list .team-challenge-wrap {
+		width: 100%;
+	}
+
+	.techgroup-walk-chalenge {
+		display: flex;
+		justify-content: center;
+		padding: 4rem 3.2rem 10rem;
+		background-color: #1A5B2C;
+
+		.mdl-acco-txt h2 {
+			font-size: 2.6rem;
+			font-weight: 700;
+			color: #fff;
+		}
+
+		.mdl-acco-info {
+			display: flex;
+			flex-direction: column;
+			gap: 1.2rem;
+
+			li {
+				display: flex;
+				justify-content: flex-start;
+				align-items: flex-start;
+
+				h3 {
+					min-width: 9rem;
+					font-size: 1.6rem;
+					font-weight: 500;
+					color: #FFD700;
+				}
+
+				span {
+					display: flex;
+					flex-direction: column;
+					gap: .3rem;
+					font-size: 1.6rem;
+					font-weight: 500;
+					color: #fff;
+
+
+					span {
+						font-size: 1.2rem;
+						font-weight: 300;
+						color: #fff;
+
+					}
+				}
+			}
+		}
+	}
+
+	.ocr-challenge-notice {
+		background-color: #323734;
+
+		.mdl-bul-dot {
+			li {
+				font-weight: 300;
+				color: #BFBFBF;
+
+				&+li {
+					margin-top: 1.2rem;
+				}
+			}
+		}
+	}
+}
+
+//지난 회차 결과
+[data-page="nmok_18_3"] {
+	.mdl-tab {
+		&-wrap {
+			justify-content: center;
+		}
+
+		&-btn {
+			max-width: 25%;
+		}
+	}
+
+	.ocr-point-box {
+		padding: 2.4rem;
+
+		.mdl-tab {
+			margin: 0;
+			z-index: 99;
+		}
+	}
+
+	.card-progress {
+		&--wrap {
+			margin-top: 4.5rem;
+			position: relative;
+			z-index: 1;
+		}
+
+		&--tit {
+			font-size: 2.4rem;
+			font-weight: 700;
+			line-height: 2.4rem;
+			color: #1E1F23;
+			text-align: center;
+
+			span {
+				font-size: 2.4rem;
+				font-weight: 700;
+				line-height: 2.4rem;
+				color: #1E1F23;
+			}
+		}
+
+		&--txt {
+			width: 100%;
+			display: inline-block;
+			font-size: 1.6rem;
+			font-weight: 500;
+			color: #444;
+			margin-top: 1rem;
+			text-align: center;
+		}
+
+		&--box {
+			margin-top: 3.2rem;
+			border: .3rem solid #fff;
+			background-color: #fff;
+		}
+
+		&--bar {
+			background: linear-gradient(45deg, #50D71B, #CAE10A);
+		}
+
+		&--point {
+			font-size: 1.4rem;
+			font-weight: 700;
+			line-height: 1.4rem;
+			color: #000;
+			margin-top: 1.2rem;
+		}
+	}
+
+	.mdl-tab .mdl-tab-btn {
+		min-width: 0;
+		width: 100%;
+		height: 4rem;
+		border-radius: 2rem;
+		padding: 1.6rem 0;
+	}
+
+	.mdl-tab-pnl {
+		padding: 0 2.4rem 6.5rem;
+	}
+
+	.challenge-date {
+		margin: 4rem 0 2.4rem;
+		font-size: 1.6rem;
+		font-weight: 500;
+		line-height: 1.6rem;
+		color: #666;
+		text-align: right;
+	}
+
+	.team-challenge {
+		&-list {
+			&[data-style="ranking"] {
+				gap: 1.6rem;
+
+				.team-challenge-wrap {
+					width: 100%;
+					position: relative;
+					display: flex;
+					flex-direction: column;
+					align-items: flex-end;
+				}
+
+				.team-challenge-item {
+					padding-left: 2.8rem;
+
+					&::before {
+						position: absolute;
+						top: 2.5rem;
+						left: 0;
+					}
+				}
+
+				.team-challenge-box {
+					margin-bottom: 1.2rem;
+					gap: 0.4rem;
+					// padding: 1.2rem 2.4rem;
+				}
+
+				.mdl-btn[data-icon-after="arrow-dark"] {
+					&::after {
+						width: 2.4rem;
+						height: 2.4rem;
+						background: url(../img/common/ico_arrow_dark.svg) no-repeat 50% 50% / 2.4rem;
+						transform: translateY(-0.1rem) translateX(-1rem);
+					}
+
+					span {
+						font-size: 1.4rem;
+						font-weight: 500;
+						color: #000;
+					}
+				}
+			}
+		}
+
+		&-item {
+			&[data-mission="true"] .team-challenge-wrap::before {
+				background-position: -7.4rem 0;
+			}
+		}
+
+		&-wrap {
+			&::before {
+				content: '';
+				display: block;
+				width: 6.4rem;
+				height: 6.4rem;
+				background-image: url(../img/challenge/kbBank/ico-KBmissionstamp.png);
+				background-size: 13.8rem;
+				background-position: 0 0;
+				background-repeat: no-repeat;
+				position: absolute;
+				top: -4rem;
+				left: -2.6rem;
+				z-index: 1;
+			}
+		}
+	}
+
+	.no-data-wrap {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		height: calc(100dvh - 5.6rem);
+
+		.no-data {
+			p {
+				font-size: 2rem;
+				font-weight: 700;
+				line-height: 2.8rem;
+				color: #999;
+				text-align: center;
+			}
+		}
+	}
+}
+
+//PG그룹 챌린지
+[data-page="nmok_18_4"] {
+	.challenge-kb-top {
+		height: 54rem;
+		background-color: #05865F;
+		padding-bottom: 1rem;
+
+		.kb-top-img {
+			width: 100%;
+			height: 54rem;
+			position: relative;
+
+			&::before {
+				content: '';
+				display: block;
+				width: 100%;
+				height: 54rem;
+				margin: 0 auto;
+				background-image: url(../img/challenge/kbBank/ico-pg.jpg);
+				background-size: 45.2rem;
+				background-position: 50% 0;
+				background-repeat: no-repeat;
+				transform: translateZ(1px);
+			}
+		}
+	}
+
+	[data-act="sec3"] {
+		padding: 4.8rem 2.4rem 5.6rem;
+		display: flex;
+		flex-direction: column;
+		gap: 3.2rem;
+	}
+
+	.team-challenge-num {
+		color: #444;
+	}
+
+	[data-style="primary-line"] {
+		height: 5.6rem;
+
+		span {
+			font-size: 1.8rem;
+			line-height: 2;
+		}
+	}
+
+	[data-type="pg-notice"] {
+		padding: 4rem 2rem;
+		background-color: #0D6D51;
+
+		h2 {
+			font-size: 2.2rem;
+			font-weight: 700;
+			line-height: 2.2rem;
+			color: #fff;
+			text-align: left;
+			margin-bottom: 2.8rem;
+		}
+
+		.pg-notice-info {
+			display: flex;
+			flex-direction: column;
+			gap: 2rem;
+
+			li {
+				display: flex;
+				justify-content: flex-start;
+				align-items: flex-start;
+
+				h3 {
+					min-width: 6rem;
+					font-size: 1.6rem;
+					font-weight: 500;
+					color: #FFD700;
+
+					&+span {
+						padding-left: 5.9rem;
+					}
+				}
+
+				span {
+					display: flex;
+					flex-direction: column;
+					gap: .3rem;
+					font-size: 1.6rem;
+					font-weight: 500;
+					line-height: 2.24rem;
+					color: #fff;
+
+
+					span {
+						font-size: 1.2rem;
+						font-weight: 300;
+						line-height: 1.68rem;
+						color: #B3FFE8;
+
+					}
+				}
+			}
+		}
+
+		.pg-notice-product {
+			display: flex;
+			flex-direction: column;
+			gap: 1.2rem;
+
+			li {
+				display: flex;
+				justify-content: flex-start;
+				align-items: flex-start;
+				gap: 1.6rem;
+
+				em {
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					width: 4.2rem;
+					height: 3.2rem;
+					font-size: 1.3rem;
+					font-weight: 500;
+					line-height: 2;
+					color: #fff;
+					background-color: #1F9773;
+					border-radius: .8rem;
+				}
+			}
+		}
+	}
+
+	[data-type="notice"] {
+		padding: 4rem 2rem;
+		background-color: #323734;
+
+		h2 {
+			font-size: 2.2rem;
+			font-weight: 700;
+			line-height: 2.2rem;
+			color: #fff;
+		}
+
+		.mdl-bul-dot {
+			margin-top: 2.8rem;
+
+			li {
+				gap: .8rem;
+				font-size: 1.4rem;
+				font-weight: 300;
+				line-height: 1.96rem;
+
+				color: #BFBFBF;
+
+				&::before {
+					background-color: #BFBFBF;
+				}
+
+				&+li {
+					margin-top: 1.2rem;
+				}
+			}
+		}
+	}
+
+	.test {
+		&::before {
+			content: '500' !important;
+		}
+	}
+}
+
+//PG그룹 지난 회차 결과 보기
+[data-page="nmok_18_6"] {
+	.mdl-tab {
+		margin-top: 3rem;
+		&-btn {
+			max-width: calc(100% / 3);
+		}
+	}
+
+	.mdl-tab-pnl {
+		padding: 4rem 2.4rem 10.8rem;
+	}
+
+	.challenge-date {
+		text-align: left;
+		margin-bottom: 1.6rem;
+	}
+
+	.team-challenge-num {
+		color: #444;
+	}
+
+	.no-data-wrap {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		height: calc(100dvh - 5.6rem);
+
+		.no-data {
+			p {
+				font-size: 2rem;
+				font-weight: 700;
+				line-height: 2.8rem;
+				color: #999;
+				text-align: center;
+			}
+		}
+	}
+}

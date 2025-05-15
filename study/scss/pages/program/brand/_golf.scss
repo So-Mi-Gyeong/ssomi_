@@ -1,0 +1,58 @@
+// 영향을 주지 않는 class명은 data-brand 바깥에 입력
+
+/* 골프 */
+[data-brand="golf"]{
+    * {
+        font-family: 'base';
+        .btn-wrap .btn-txt{
+            font-family: 'KBF';
+        }
+    }
+    .content {padding: 0;}
+    .scrollBox[data-style="popup"]{padding: 2rem 2.4rem 3rem;}
+    .brand-body{padding: 4.2rem 2.4rem 2.4rem;}
+    .line-top{
+        margin-top: 5rem;
+        padding-top: 5rem;
+        border-top: .1rem dashed rgba(151, 151, 151, 0.54);
+    }
+    [data-style="ticket"]{
+        display: flex;
+        flex-direction: column;
+        gap: 1.3rem;
+        .date{
+            font-size: 1.8rem;
+            font-weight: 700;
+            line-height: 2.8rem;
+            color: #000;
+        }
+        .list-shadow-box > li + li{margin-top: 2.8rem;}
+        & + [data-style="ticket"]{margin-top: 5.4rem;}
+    }
+    .card-shadow{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        gap: .8rem;
+        .sub-txt{
+            font-size: 1.3rem;
+            font-weight: 400;
+            line-height: 2rem;
+            color: #757575;
+        }
+        .company-call{
+            font-size: 1.3rem;
+            font-weight: 500;
+            line-height: 2rem;
+            color: #757575;
+            span{
+                font-size: 1.3rem;
+                font-weight: 500;
+                line-height: 2rem;
+                color: #757575;  
+            }
+        }
+        .btn-wrap{margin: 0 auto;}
+    }
+}

@@ -1,0 +1,191 @@
+.mdl-list {
+    width: 100%;
+    position: relative;
+    
+    
+    &[data-type="horizontal"] {
+        overflow-y: hidden;
+        overflow-x: auto;
+
+        .mdl-list-wrap {
+            position: relative;
+            display: flex;
+            gap: $x1_5;
+        }
+    }
+    &-wrap {
+        position: relative;
+        display: flex;
+        
+    }
+    &[data-img-ps="right"]{
+        .mdl-list-item{
+            width: 100%;
+            .mdl-list-img{
+                position: absolute;
+                top: 0;
+                right: 0;
+                width: 8.0rem;
+                height: 8.0rem;
+            }
+            .mdl-list-group{
+                margin-top: 0;
+            }
+            .mdl-list-tit{
+                color:var(--gray_0);
+                font-size: 1.8rem;
+                line-height: $x3;
+                font-weight: 700;
+            }
+        }
+    }
+
+
+}
+
+.mdl-list-item{
+    .mdl-list-img{
+        @include setRound($x2);
+        img{
+            width: 100%;
+            display: block;
+        }
+    }
+    .mdl-list-group{
+        display: flex;
+        gap: 0.4rem;
+        margin-top: 1.2rem;
+        .mdl-list-label{
+            display: flex;
+            align-items: center;
+            font-family: 'KBF';
+            font-size: 1.3rem;
+            font-weight: 500;
+            min-height: 2.6rem;
+            color: var(--gray_0);
+            background: var(--gray_90);
+            padding: 0.4rem $x1;
+            @include setRound($x1);
+            word-break: keep-all;
+            line-height: 1.8rem;
+        }
+    }
+    .mdl-list-tit{
+        margin-top: $x1;
+        color: var(--gray_0);
+        font-family: 'KBF';
+        font-size: 1.6rem;
+        font-weight: 500;
+        
+    }
+}
+
+
+
+.mdl-listbox-wrap{
+    display: flex;
+    flex-direction: column;
+    gap: $x3;
+    .mdl-listbox-item{
+        @include setRound($x3);
+        box-shadow: 0 .6rem 2.4rem rgba(0, 0, 0, 0.08);
+        overflow: hidden;
+        .mdl-listbox-top{
+            display: block;
+            width: 100%;
+            @include setRound(0);
+            .mdl-listbox-state{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                position: absolute;
+                top: 1.2rem;
+                right: 1.2rem;
+                width: 5.6rem;
+                height: 5.6rem;
+                @include setRound(50%);
+                z-index: 1;
+                color:var(--gray_0);
+                font-size: 1.4rem;
+                font-weight: 500;
+                font-family: 'KDF';
+                &.new{
+                    background-color: #FF823C;
+                }
+                &.dday{
+                    background-color: #4DA9FF;   
+                }
+                &.first{
+                    background-color: #C64BFF;
+                }
+            }
+            .mdl-listbox-img{
+                width: 100%;
+                display: block;
+            }
+        }
+        .mdl-listbox-box{
+            display: flex;
+            flex-direction: column;
+            gap: 0.4rem;
+            padding: $x2 $x3 $x2 $x3;
+            background-color: var(--gray_0);
+            .mdl-listbox-tit{
+                font-family: 'KBF'; 
+                font-size: 1.6rem;
+                font-weight: 500;
+                color:var(--gray_100);
+                line-height: 2.2rem;
+            }
+            .mdl-listbox-date{
+                font-family: 'KBF';
+                font-size: 1.2rem;
+                font-weight: 300;
+                color: #888;
+            }
+        }
+
+        &[data-type="row"]{
+            display: flex;
+            flex-direction: row;
+            align-items: center; 
+            .mdl-listbox-top{
+                width: 6.4rem; 
+                height: 6.4rem;
+                .mdl-listbox-img{
+                    width: 100%;
+                }
+            }
+            .mdl-listbox-box{
+                background-color: transparent;
+                padding: 1.3rem 2.4rem 1.3rem 1.6rem;
+                .mdl-listbox-tit{
+                    font-size: 1.4rem;
+                    font-weight: 700;
+                }
+                .mdl-listbox-cost{
+                    display: flex;
+                    align-items: center;
+                    font-size: 1.4rem;
+                    font-weight: 700;
+                    color: #F23500;
+                    .cost{
+                        font-size: 1.6rem;
+                        font-weight: 700;
+                        color: #F23500;  
+                    }
+                }
+            }
+        } 
+    }
+    .mdl-hash-wap{
+        display: block;
+        margin-top: 1rem;
+        .hash{
+            color: var(--gray_70);
+            font-family: 'KBF';
+            font-size: 1.2rem;
+            font-weight: 300;
+        }
+    }
+}

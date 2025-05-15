@@ -1,0 +1,17 @@
+.mdl-goods{
+    .mdl-goods-txt{
+        color: var(--gray_0);
+        font-size: 1.6rem;
+        text-align: center;
+        font-family: 'KBF';
+        padding-bottom: $x3;
+        
+        .mdl-goods-point{
+            display: block;
+            font-family: 'KBF';
+            color: #FF612D;
+            margin-top: $x1;
+        } 
+    }
+
+}

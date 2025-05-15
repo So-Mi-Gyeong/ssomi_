@@ -1,0 +1,461 @@
+.ocr-header[data-title="smilegate"] .ocr-header-tit[aria-label="smilegate"]::after {
+  content: "";
+  display: block;
+  position: relative;
+  width: 12rem;
+  height: 2.4rem;
+  background: url(../img/challenge/smilegate/logo_smilegate_color.svg) no-repeat 0 0 / auto 2.4rem;
+  background-size: 12rem;
+}
+.ocr-header[data-title="smilegate"] .ocr-header-tit[aria-label="smilegate"]::before{display: none;}
+
+.ocr-challenge[data-challenge="smilegate"]{
+  $currentSPimg: url(../img/challenge/main/sp_NMOK_1_1V_2407.png);
+  $currentSPsize: 24rem;
+
+  .ocr-wrap *::after,
+  .ocr-wrap *::before,
+  .ocr-wrap * {
+      font-family: 'KBF';
+  }
+
+  .ocr-body {
+      padding: 0;
+      background: #f5f5f5;
+
+      &::before {
+          content: '';
+          display: block;
+      }
+
+      .mdl-line {
+          display: none;
+          width: calc(100vw + 4.8rem);
+          min-width: calc(100% + 4.8rem);
+          margin: 4.8rem 0;
+          border-top: 1.3rem solid #ECEDF4;
+      }
+  }
+
+  .challenge-dday {
+    margin-top: 0;
+    padding-left: 1.3rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+
+    dt {
+        font-size: 1.4rem;
+        font-weight: 500;
+        line-height: 1.4rem;
+        color: #1E1F23;
+    }
+
+    dd {
+        font-size: 2.2rem;
+        font-weight: 500;
+        line-height: 2.2rem;
+        display: flex;
+        justify-content: flex-start;
+        align-items: baseline;
+        gap: .4rem;
+        color: #1E1F23;
+
+        span {
+            font-size: 3.6rem;
+            font-weight: 700;
+            line-height: 3.6rem;
+            color: #1E1F23;
+        }
+    }
+  }
+
+  .challenge-head {
+      display: flex;
+      flex-direction: column;
+      gap: 3.2rem;
+      margin-top: 2.4rem;
+
+      .mdl-subject {
+          margin-top: 0;
+          padding: 3.2rem 3.2rem 1.6rem;
+      }
+  }
+
+  .ocr-challenge-title {
+      width: calc(100vw + 2px);
+      margin-left: -1px;
+      padding: calc(5.6rem + env(safe-area-inset-top) + 1.8rem) 2.4rem 5.7rem;
+      background-color: #f5f5f5;
+
+      &::before {
+          content: "";
+          pointer-events: none;
+          display: block;
+          position: absolute;
+          left: 50%;
+          transform: translate(-52%, -7.3rem);
+          max-width: 100rem;
+          margin-left: 0;
+          pointer-events: none;
+          overflow: hidden;
+          z-index: 0;
+          width: 100rem;
+          height: 152.7rem;
+          background: url(../img/challenge/smilegate/bg.jpg) no-repeat 2.2rem 7.6rem;
+          background-size: auto 145.7rem;
+          // top: calc(-4.7rem + env(safe-area-inset-top));
+          top: calc(-6.1rem + env(safe-area-inset-top));
+      }
+      .mdl-subject-group .linkup{position: relative; z-index: 1;}
+      .mdl-subject-group::after {
+        content: "";
+        pointer-events: none;
+        display: block;
+        position: absolute;
+        pointer-events: none;
+        overflow: hidden;
+        z-index: 0;
+        width:  19.6rem;
+        height: 14.6rem;
+        background: url(../img/challenge/smilegate/main-img.png) no-repeat 0 0;
+        background-size: 19.6rem;
+        top: -4rem;
+        right: -5rem;
+      }
+
+      .mdl-subject[data-style="title"] {
+          margin: 0;
+          padding: 1.8rem 0 3.2rem;
+
+          .linkup {
+              height: 2.4rem;
+              padding: 0 .8rem;
+              border-radius: 4rem;
+              background-color: #FFCD20;
+              border: 1px solid #e5b50d;
+
+              span {
+                  font-size: 1.2rem;
+                  font-weight: 500;
+                  line-height: 1.6rem;
+                  color: #1E1F23;
+                  position: relative;
+                  display: flex;
+                  justify-content: flex-start;
+                  align-items: center;
+                  gap: .4rem;
+
+                  &::before {
+                      content: '';
+                      display: block;
+                      width: 1.6rem;
+                      height: 1.6rem;
+                      background: url(../../assets/img/challenge/main/ico-linkup.png) no-repeat 0 0;
+                      background-size: 1.6rem;
+                  }
+              }
+          }
+
+          .mdl-subject-group {
+              width: 100%;
+              display: flex;
+              justify-content: space-between;
+              align-items: flex-end;
+              flex-direction: row;
+          }
+
+          .mdl-subject-tit {
+              font-size: 1.8rem;
+              font-weight: 700;
+              line-height: 2.4rem;
+              color: #1E1F23;
+          }
+      }
+
+      .mdl-subject[data-item="text"] {
+          margin-top: 1.6rem;
+
+          .mdl-subject-group {
+              position: relative;
+
+              &::after {
+                  content: '';
+                  display: block;
+                  width: 17.4rem;
+                  height: 11.5rem;
+                  background: url(../../assets/img/challenge/m06/ico-participate.png) no-repeat 0 0;
+                  background-size: 17.4rem 11.5rem;
+                  position: absolute;
+                  bottom: 0;
+                  right: 0;
+                  border-bottom: 0;
+                  opacity: 1;
+              }
+          }
+
+          .mdl-subject-txt {
+              font-size: 1.6rem;
+              line-height: 2.24rem;
+              padding-bottom: 8.7rem;
+          }
+      }
+  }
+
+  .card-walk{
+    &[data-type="nomal"]{
+      .card-walk{
+        &--type{
+          border-top: .2rem solid #FFD700;
+          .point{transform: translateY(0.9rem);}
+        }
+        &--type-tit{background-color: #FFD700;}
+        &--subject{margin-top: .8rem;}
+        &--subject-img{
+          position: absolute;
+          right: 2rem;
+          &::before{
+            content: '';
+            width: 10rem;
+            height: 10rem;
+            background: url(../img/challenge/smilegate/ico-high-five.png) no-repeat 0 0/10rem;
+            transform: translate(0, 0);
+          }
+        }
+        &--link{margin-top: 3rem;}
+      }
+    }
+    &[data-type="everyday"]{
+      .card-walk{
+        &--type{border-top: .2rem solid #8141EE;}
+        &--type-tit{background-color: #8141EE;}
+      }
+    }
+  }
+
+  .healium{
+    [data-type="nomal"]{
+      .card-walk--subject-img{
+        top: -2.8rem;
+        &::before{
+          content: "";
+          width: 10rem;
+          height: 10rem;
+          background: url(../img/challenge/smilegate/ico-img.png) no-repeat 0 0 / 10rem;
+          transform: translate(0, 0);
+        }
+      }
+    }
+    .card-walk--graph {
+      width: 100%;
+      min-height: 8.8rem;
+      padding: 4.6rem 3rem 0;
+
+      &-item {
+          position: relative;
+          width: calc(100% - 5.7rem) !important;
+          height: 1rem;
+          margin: 0 auto;
+          // margin-left: 1.5rem;
+          margin-left: 3rem;
+          border-radius: .5rem;
+          background-color: #DCDCDC;
+      }
+
+      &-bar {
+          position: relative;
+          width: 0;
+          background-color: #FFCD20;
+          border-radius: 0.5rem;
+          height: 100%;
+          transition: width 0.3s ease-in;
+
+          .pointer {
+              display: none !important;
+          }
+      }
+
+      &-txt {
+          margin-top: 3.36rem;
+          justify-content: center;
+          gap: 1rem;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+      }
+
+      &-step {
+          min-width: 8rem;
+          font-size: 1.2rem;
+          font-weight: 500;
+          color: #777;
+          text-align: center;
+          position: relative;
+          transform: translate(.2rem, -.7rem);
+
+          &::before {
+              content: '';
+              width: 6.4rem;
+              height: 6.4rem;
+              background: url(../../assets/img/challenge/smilegate/ico-mission-stamp.png) no-repeat 0 0;
+              background-size: 19.4rem;
+              background-position: -13rem 0rem;
+              position: absolute;
+              top: -6.4rem;
+              left: 50%;
+              transform: translateX(-50%);
+          }
+          span{
+            display: block;
+            font-size: 1.2rem;
+            font-weight: 500;
+            color: #777;
+            margin-top: .5rem;
+          }
+
+          &[data-mission="complete"]{
+            &::before{background-position: 0 0 !important;}
+            // & + .card-walk--graph-step::before{background-position: -6.5rem 0;}
+          }
+      }
+
+      &[data-week="1"]{
+        .card-walk--graph-bar{width: 0;}
+        .card-walk--graph-step:nth-of-type(1){
+          &::before{background-position: -6.5rem 0rem;}
+          span{color: #1E1F23;}
+        }
+      }
+      &[data-week="2"]{
+        .card-walk--graph-bar{width: 50%;}
+        .card-walk--graph-step:nth-of-type(1),
+        .card-walk--graph-step:nth-of-type(2){
+          &::before{background-position: -6.5rem 0rem;}
+          span{color: #1E1F23;}
+        }
+      }
+      &[data-week="3"]{
+        .card-walk--graph-bar{width: 100%;}
+        .card-walk--graph-step:nth-of-type(1),
+        .card-walk--graph-step:nth-of-type(2),
+        .card-walk--graph-step:nth-of-type(3){  
+          &::before{background-position: -6.5rem 0rem;}
+          span{color: #1E1F23;}
+        }
+      }
+    }
+  }
+
+  [data-banner="luckyball"] {
+    width: 100%;
+    height: 11.2rem;
+    margin: 0 auto 0;
+    border-radius: 2rem;
+    background: #f27759;
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: .3rem;
+
+    &::before {
+        content: '';
+        display: block;
+        width: 8.8rem;
+        height: 6.8rem;
+        background: url(../../assets/img/challenge/m08/bn-icoLuckyball.png) no-repeat 0 0;
+        background-size: 8.8rem 6.8rem;
+    }
+    .mdl-banner{
+      &-em {
+        color: #FFF173;
+        font-size: 1.6rem;
+        font-weight: 300;
+        line-height: 2.4rem;
+    }
+    &-tit {
+        color: #fff;
+        font-size: 1.6rem;
+        font-weight: 700;
+        line-height: 2.4rem;
+        display: flex;
+        align-items: center;
+
+        &::after {
+            content: "";
+            display: inline-block;
+            transform: translateX(.6rem);
+            background-image: url("data:image/svg+xml,%3Csvg width='8' height='14' viewBox='0 0 8 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 13L7 7L1 1' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+            width: .8rem;
+            height: 1.4rem;
+        }
+      }
+    }
+  }
+
+  .ocr-challenge-banner {
+    max-width: $maxwidth;
+    width: 100%;
+    margin-top: 0;
+
+    .mdl-banner {
+        padding: 1.4rem 2rem;
+
+        &[data-banner] {
+            min-height: auto;
+            align-items: center;
+            border-radius: 1.6rem;
+            background-color: #354462;
+            &::before{display: none;}
+            &::after {
+                content: '';
+                display: block;
+                width: 6rem;
+                height: 6rem;
+                background-size: 32rem;
+                z-index: 1;
+                background-image: url(../img/challenge/main/sp_NMOK_1_1V_2407.png);
+                background-repeat: no-repeat;
+                background-position: -11.7rem -3.3rem;
+                background-size: 25rem;
+            }
+
+            .mdl-banner-group {gap: .4rem;}
+
+            .mdl-banner-em {
+                font-weight: 300;
+                line-height: 1.82rem;
+            }
+        }
+    }
+}
+}
+
+.ocr-emotion-challenge[data-type="smilegate"]{
+  * {font-family: 'KBF';}
+  .ocr-body{
+    background: none;
+    background-color: #FFF1EB;
+  }
+  .mdl-btn-wrap{
+    .mdl-btn{
+      border: 0;
+      box-shadow: none;
+    }
+  }
+  .ocr-emotion-challenge-box{
+    padding: 2.4rem;
+    textarea{
+      height: 19.2rem;
+      font-size: 1.5rem;
+      font-weight: 400;
+      color: #9C9C9C;
+      &::placeholder{
+        font-size: 1.5rem;
+        font-weight: 400;
+        color: #9C9C9C;
+      }
+    }
+  }
+}
+

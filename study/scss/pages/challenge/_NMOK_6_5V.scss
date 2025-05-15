@@ -1,0 +1,555 @@
+/* [NMOK_6_5V] 주간 걷기 챌린지 개인전 상세 */
+.ocr-challenge[data-page="NMOK_6_5V"] {
+    *::after,
+    *::before,
+    * {font-family: 'KBF';}
+
+    [data-mode="dark"] & .ocr-header{
+        .ocr-header-tit::before{
+            color:#fff;
+        }
+        .ocr-hbtn[data-icon="back"]::before {
+            background-image: url(../img/common/ico_h_back.svg)
+        }
+    } 
+    [data-mode="light"] & .ocr-header{
+        background-color: #fff !important;
+        .ocr-header-tit::before{
+            color:#000;
+        }
+    }
+    [data-top=false] & .ocr-header {
+        backdrop-filter: blur(1.5rem);
+    }
+    .ocr-body{
+        padding: 0;
+    }
+    .mdl-wrap{
+        padding: 0 2.4rem;
+    }
+    [data-type="title"] {
+        background: linear-gradient(#3A85F7, #405BEB);
+        padding: calc(9rem + env(safe-area-inset-top)) 0 3.2rem;
+        &::before {
+            content: "";
+            display: block;
+            width: 22.4rem;
+            height: 19.5rem;
+            position: absolute;
+            top:calc(7.2rem + env(safe-area-inset-top)) ; 
+            left:50%;
+            transform: translateX(1rem);
+            background: url(../img/page/NMOK_6_5V/bg.png) no-repeat 0 0 / cover;
+        }
+       
+        .mdl-subject {
+            display: flex;
+            flex-direction: column;
+            gap:3.2rem;
+
+            &-head {
+                width: 100%;
+                align-items: center;
+                display: flex;
+                justify-content: space-between;
+            }
+            &-em {
+                font-size: 1.5rem;
+                font-weight: 700;
+                color:#fff;
+            }
+            &-tit {
+                font-size: 3.6rem;
+                font-weight: 700;
+                color:#fff;
+            }
+            &-txt {
+                margin-top: 2.8rem;
+                display: flex;
+                align-items: center;
+                font-size: 1.4rem;
+                font-weight: 300;
+                color:#fff;
+                gap:0.8rem;
+                b {
+                    font-size: 1.6rem;
+                    font-weight: 500;
+                    color:#fff;
+                }
+            }
+           
+            .mission-state{
+                width: 100%;
+                padding: 0;
+                
+                dl{
+                    height: 6.4rem;
+                    min-height: 6.4rem;;
+                    border-radius: 2.6rem;
+
+                    border: 0.2rem solid #fff;
+                    background: linear-gradient(rgba(255, 255, 255, 0.75), rgb(255, 255, 255));
+                    -webkit-backdrop-filter: blur(0.5rem);
+                    backdrop-filter: blur(0.5rem);
+                    padding: 0 2.4rem;
+                    display: flex;
+                    align-items: center;
+                    flex-direction: row;
+                    justify-content: space-between;
+
+                    
+                    &::after{display: none;}
+                    dt{
+                        width: auto;
+                        font-size: 1.5rem;
+                        font-weight: 300;
+                        color: #777;
+                        &::before{display: none;}
+                    }
+                    dd{
+                        width: auto;
+                        font-size: 1.8rem;
+                        font-weight: 500;
+                        color: #1E1F23;
+                        
+                        &[data-date="imminent"]{color: #FB3C53;}
+                    }
+                }
+            }
+        }
+    }
+    [data-type="lucky-ranking"]{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #F7F8FA;
+        gap: .4rem;
+        padding: 1.6rem 2.4rem;
+        .lucky-ranking-tit{
+            font-size: 1.4rem;
+            font-weight: 500;
+            line-height: 1.4rem;
+            color: #1E1F23;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            gap: .8rem;
+            &::before{
+                content: "";
+                display: block;
+                width: 2.4rem;
+                height: 2.4rem;
+                background: url(../img/page/NMOK_6_5V/ico_clover.png) no-repeat 0 0 / 2.4rem;
+            }
+        }
+        .lucky-ranking{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: .8rem;
+        }
+        .lucky-ranking-item{
+            font-size: 1.4rem;
+            font-weight: 500;
+            color: #1E1F23;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            &::after{
+                content: '';
+                width: .1rem;
+                height: 1.2rem;
+                background-color: #E7E9ED;
+                margin-left: .8rem;
+            }
+            &:last-child::after{display: none;}
+        }
+        .lucky-ranking-num{
+            font-size: 2rem;
+            font-weight: 500;
+            color: #4060ED;
+            margin-right: .2rem;
+        }
+    }
+    [data-act="sec2"]{
+        [data-type="ranking-top"]{
+            padding: 0;
+            .mdl-subject-txt{
+                font-size: 1.5rem;
+                font-weight: 500;
+                line-height: 1.5rem;
+                margin-top: 0;
+                color: #1E1F23;
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                gap: .4rem;
+                &::after{
+                    content: "";
+                    display: block;
+                    width: 2.4rem;
+                    height: 2.4rem;
+                    background: url(../img/page/NMOK_6_5V/sp_NMOK_6_5V.png) no-repeat -6rem 0 / 9rem;
+                }
+            }
+        }
+        .mdl-box[data-style="now"]{margin: 3.2rem 0;}
+        .team-challenge-list[data-style="ranking"]{
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            gap: 2.4rem;
+            .team-challenge-item{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 0 1.6rem;
+                &::before{display: none;}
+                & + .team-challenge-item{
+                    border-top: .1rem solid #E7E9ED;
+                    padding-top: 2.4rem;
+                }
+                &[data-rank="my"]{
+                    padding: 2.4rem 1.6rem;
+                    border: .1rem solid #eee;
+                    border-radius: 2.4rem;
+                    background-color: #F7F8FA;
+                    box-shadow: 0 .4rem .8rem rgba(0, 0, 0, 0.08) !important;
+                    position: relative;
+                    & + .team-challenge-item{
+                        padding-top: 0;
+                        margin-top: 0;
+                        border-top: 0;
+                    }
+                }
+            }
+            .team-challenge-rank{
+                font-size: 1.6rem;
+                font-weight: 700;
+                color: #1E1F23;
+                margin-right: 1.8rem;
+            }
+            .team-challenge-box{
+                height: auto;
+                border: 0;
+                border-radius: 0;
+                padding: 0;
+                background-color: transparent;
+            }
+            .team-challenge-num{
+                font-size: 1.6rem;
+                font-weight: 500;
+                line-height: 1.6rem;
+            }
+            .challenge-list-myranking{
+                min-height: 2.9rem;
+                padding: 0 .8rem;
+                font-size: 1.3rem;
+                font-weight: 700;
+                line-height: 2.9rem;
+                color: #000;
+                background-color: #FFD700;
+                border-radius: .8rem;
+                position: absolute;
+                top: -1.6rem;
+                left: .8rem;
+                z-index: 9;
+                &::before{
+                    content: '';
+                    display: block;
+                    width: 1rem;
+                    height: 1rem;
+                    background-color: #FFD700;
+                    position: absolute;
+                    left: 50%;
+                    bottom: -.8rem;
+                    transform: rotate(45deg) translateX(-50%);
+                }
+            }
+        }
+    }
+    [data-icon-after="ranking"] {
+        display: flex;
+        align-items: center;
+        gap:.8rem;
+    }
+    [data-icon-after="ranking"]::after {
+        content: "";
+        display: block;
+        width: 2.4rem;
+        height: 2.4rem;
+        background: url(../img/page/NMOK_6_5V/sp_NMOK_6_5V.png) no-repeat -3rem 0 / 9rem;
+    }
+    .ranking50 {
+        flex-direction: column;
+        gap:1.6rem;
+        counter-reset: dep1 3 ;
+        &-img {
+            position: relative;
+            background-color: #F2F2F2;
+            width: 4rem;
+            height: 4rem;
+            border-radius: 50%;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            img {
+                object-fit: cover;
+                width: 100%;
+                height: 100%;
+                overflow: visible;
+            }
+        
+           
+        }
+        &-name {
+            font-size: 1.6rem;
+            font-weight: 700;
+            color: #1E1F23;
+            text-align: center;
+        }
+        &-step {
+            font-size: 1.5rem;
+            font-weight: 500;
+            color: #777777;
+            text-align: center;
+        }
+        &-group{
+            flex:1;
+            display: flex;
+            border:1px solid #EEE;
+            gap:.8rem;
+            padding: 1.2rem 2.4rem 1.2rem 1.2rem;
+            border-radius: 3.2rem;
+            height: 6.4rem;
+            box-shadow: 0 0.4rem 0.8rem rgba(0, 0, 0, 8%) !important;
+        }
+        &-point {
+            display: flex;
+            align-items: center;
+            color: #1E1F23;
+            font-weight: 500;
+            font-size: 1.3rem;
+            text-align: center;
+            &::before {
+                content: "";
+                display: block;
+                width: 2.4rem;
+                height: 2.4rem;
+                background: url(../img/page/NMOK_6_5V/sp_NMOK_6_5V.png) no-repeat -6rem 0 / 9rem;
+            }
+        }
+        &-info {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex:1;
+        }
+        &-item {
+            display: flex;
+            align-items: center;
+            width: 100%;
+            gap:.8rem;
+            position: relative;
+            counter-increment: dep1 1;
+            &:before {
+                content: counter(dep1);
+                font-size: 1.6rem;
+                font-weight: 700;
+                color: #1E1F23;
+                width: 2rem;
+            }
+        }
+        &-num {
+            font-size: 1.6rem;
+            font-weight: 700;
+            color: #1E1F23;
+            width: 2rem;
+        }
+        &[data-ranking="list"] {
+            position: relative;
+            display: flex;
+            padding-bottom: 5rem;
+        }
+        &[data-ranking="top"] {
+            margin-top: 1.6rem;
+            counter-reset: dep1 0 ;
+            display: grid;
+            grid-template:
+            "step2 step1 step3" 1fr / 1fr 1fr 1fr;
+            justify-content: center;
+            margin-bottom: 2.4rem;
+    
+            .ranking50-item:nth-child(1) {grid-area: step1;}
+            .ranking50-item:nth-child(2) {grid-area: step2;}
+            .ranking50-item:nth-child(3) {grid-area: step3;}
+            .ranking50-group {
+                flex-direction: column;
+                justify-content: flex-end;
+                align-items: center;
+                border: 0;
+                padding:0;
+                border-radius: 0;
+                height: auto;
+                gap:1.6rem;
+                box-shadow: none !important;
+            }
+            .ranking50-info{
+                flex-direction: column;
+                align-items: center;
+                gap:.8rem;
+            }
+            .ranking50-item{
+                padding: 1.6rem 0;
+                flex-direction: column;
+                align-items: center;
+                gap:1.6rem;
+                &:before {
+                    position: absolute;
+                    top:0; 
+                    left:50%;
+    
+                    transform: translate(-50%, 0.8rem);
+                    width:3.9rem;
+                    height: 3.2rem;
+                    font-size: 1.5rem;
+                    padding-top: .8rem;
+    
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    font-weight: 700;
+                    font-size: 1.3rem;
+                    background-size: 3.9rem;
+                    background-position: 50% 50%;
+                    background-repeat: no-repeat;
+                    color: #fff;
+                    z-index: 1;
+                    background-image: url("data:image/svg+xml,%3Csvg width='39' height='27' viewBox='0 0 39 27' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M19.6659 27C14.2784 27 4.26985 26.4414 3.36924 19.7461L0.688712 7.41413C0.622153 6.93279 0.707732 6.44283 0.933678 6.01167C1.15962 5.5805 1.51483 5.22929 1.95045 5.00637C2.38606 4.78344 2.88068 4.69975 3.36626 4.7668C3.85185 4.83384 4.30454 5.04834 4.66206 5.38078L9.08612 9.43572C9.31997 9.65971 9.59779 9.83365 9.90234 9.94674C10.2069 10.0598 10.5316 10.1097 10.8564 10.0931C11.1812 10.0766 11.4991 9.99405 11.7904 9.85063C12.0816 9.70721 12.34 9.50597 12.5495 9.25942L17.8394 0.836775C18.062 0.574676 18.3398 0.363979 18.6533 0.219436C18.9667 0.0748934 19.3083 0 19.654 0C19.9998 0 20.3413 0.0748934 20.6548 0.219436C20.9683 0.363979 21.2461 0.574676 21.4687 0.836775L26.7824 9.25942C26.9899 9.50216 27.2449 9.70063 27.5321 9.84282C27.8193 9.98501 28.1326 10.068 28.4531 10.0866C28.7735 10.1053 29.0945 10.0593 29.3965 9.9515C29.6985 9.84365 29.9753 9.67618 30.2101 9.45923L34.6342 5.40429C34.9882 5.06044 35.442 4.83514 35.9319 4.76004C36.4218 4.68494 36.9231 4.7638 37.3655 4.98556C37.8078 5.20732 38.1689 5.56082 38.3981 5.99641C38.6272 6.432 38.7129 6.92779 38.6431 7.41413L35.9626 19.7343C35.0815 26.4397 25.051 27 19.6659 27Z' fill='%23FFC700'/%3E%3C/svg%3E");
+                }
+            }
+            .ranking50-img{
+                width: 8rem;
+                height: 8rem;
+                scale:0.7;
+                transform-origin: 50% 100%;
+            }
+            .ranking50-item:nth-child(1) {
+                .ranking50-img{
+                   scale:1;
+                   transform-origin: 50% 100%;
+                }
+                &::before{
+                    transform: translate(-50%, -1.6rem);
+                }
+            }
+            
+            .ranking50-item:nth-child(2)::before {
+                background-image: url("data:image/svg+xml,%3Csvg width='39' height='27' viewBox='0 0 39 27' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M19.6659 27C14.2784 27 4.26985 26.4414 3.36924 19.7461L0.688712 7.41413C0.622153 6.93279 0.707732 6.44283 0.933678 6.01167C1.15962 5.5805 1.51483 5.22929 1.95045 5.00637C2.38606 4.78344 2.88068 4.69975 3.36626 4.7668C3.85185 4.83384 4.30454 5.04834 4.66206 5.38078L9.08612 9.43572C9.31997 9.65971 9.59779 9.83365 9.90234 9.94674C10.2069 10.0598 10.5316 10.1097 10.8564 10.0931C11.1812 10.0766 11.4991 9.99405 11.7904 9.85063C12.0816 9.70721 12.34 9.50597 12.5495 9.25942L17.8394 0.836775C18.062 0.574676 18.3398 0.363979 18.6533 0.219436C18.9667 0.0748934 19.3083 0 19.654 0C19.9998 0 20.3413 0.0748934 20.6548 0.219436C20.9683 0.363979 21.2461 0.574676 21.4687 0.836775L26.7824 9.25942C26.9899 9.50216 27.2449 9.70063 27.5321 9.84282C27.8193 9.98501 28.1326 10.068 28.4531 10.0866C28.7735 10.1053 29.0945 10.0593 29.3965 9.9515C29.6985 9.84365 29.9753 9.67618 30.2101 9.45923L34.6342 5.40429C34.9882 5.06044 35.442 4.83514 35.9319 4.76004C36.4218 4.68494 36.9231 4.7638 37.3655 4.98556C37.8078 5.20732 38.1689 5.56082 38.3981 5.99641C38.6272 6.432 38.7129 6.92779 38.6431 7.41413L35.9626 19.7343C35.0815 26.4397 25.051 27 19.6659 27Z' fill='%23C0C2C8'/%3E%3C/svg%3E");
+            }
+            .ranking50-item:nth-child(3)::before {
+                background-image: url("data:image/svg+xml,%3Csvg width='39' height='27' viewBox='0 0 39 27' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M19.6659 27C14.2784 27 4.26985 26.4414 3.36924 19.7461L0.688712 7.41413C0.622153 6.93279 0.707732 6.44283 0.933678 6.01167C1.15962 5.5805 1.51483 5.22929 1.95045 5.00637C2.38606 4.78344 2.88068 4.69975 3.36626 4.7668C3.85185 4.83384 4.30454 5.04834 4.66206 5.38078L9.08612 9.43572C9.31997 9.65971 9.59779 9.83365 9.90234 9.94674C10.2069 10.0598 10.5316 10.1097 10.8564 10.0931C11.1812 10.0766 11.4991 9.99405 11.7904 9.85063C12.0816 9.70721 12.34 9.50597 12.5495 9.25942L17.8394 0.836775C18.062 0.574676 18.3398 0.363979 18.6533 0.219436C18.9667 0.0748934 19.3083 0 19.654 0C19.9998 0 20.3413 0.0748934 20.6548 0.219436C20.9683 0.363979 21.2461 0.574676 21.4687 0.836775L26.7824 9.25942C26.9899 9.50216 27.2449 9.70063 27.5321 9.84282C27.8193 9.98501 28.1326 10.068 28.4531 10.0866C28.7735 10.1053 29.0945 10.0593 29.3965 9.9515C29.6985 9.84365 29.9753 9.67618 30.2101 9.45923L34.6342 5.40429C34.9882 5.06044 35.442 4.83514 35.9319 4.76004C36.4218 4.68494 36.9231 4.7638 37.3655 4.98556C37.8078 5.20732 38.1689 5.56082 38.3981 5.99641C38.6272 6.432 38.7129 6.92779 38.6431 7.41413L35.9626 19.7343C35.0815 26.4397 25.051 27 19.6659 27Z' fill='%23DBA48C'/%3E%3C/svg%3E");
+            }
+        }
+    } 
+    &[data-style="team"]{
+        [data-type="title"]{
+            &::before{opacity: 20%;}
+            .mdl-subject-head .mdl-subject-em span{
+                font-size: 1.6rem;
+                font-weight: 700;
+                color: #FFD700;
+                margin-left: .8rem;
+            }
+            .mdl-subject .mdl-subject-tit{
+                font-size: 3rem;
+                line-height: 3rem;
+            }
+            .colleague-wrap{
+                width: 100%;
+                margin-top: 3.2rem;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                .mdl-subject-txt{margin-top: 0;}
+                .colleague-btn{
+                    height: 3.2rem;
+                    font-size: 1.4rem;
+                    font-weight: 700;
+                    line-height: 1.4rem;
+                    color: #1E1F23;
+                    background-color: #FFD700;
+                    border-radius: 3.2rem;
+                    padding: 0 1.2rem;
+                }
+            }
+        }
+        .ranking50{
+            margin-top: 2.4rem;
+            counter-reset: dep1 0;
+            &-item{
+                counter-increment: dep1 1;
+                &::before{
+                    content: counter(dep1);
+                    font-size: 1.6rem;
+                    font-weight: 700;
+                    color: #1E1F23;
+                    width: 2rem;
+                }
+            }
+            &-group{
+                padding: 2.15rem 2.4rem;
+                
+            }
+            &-title{
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                gap: .4rem;
+            }
+            &-name{font-size: 1.5rem;}
+            &-rank{
+                font-size: 1.3rem;
+                font-weight: 300;
+                color: #777;
+                &[data-rank]{
+                    display: flex;
+                    justify-content: flex-start;
+                    align-items: center;
+                    gap: .2rem;
+                    &::before{
+                        content: '';
+                        display: block;
+                        width: 1.6rem;
+                        height: 1.6rem;
+                    }
+                    span{
+                        font-size: 1.3rem;
+                        font-weight: 300;
+                        line-height: 1;
+                        color: #1E1F23;
+                    }
+                }
+                &[data-rank="up"]{
+                    &::before{
+                        background: url(../../assets/img/page/NMOK_6_5V_team/ico-up.png);
+                        background-size: 1.6rem;
+                    }
+                }
+                &[data-rank="down"]{
+                    &::before{
+                        background: url(../../assets/img/page/NMOK_6_5V_team/ico-down.png);
+                        background-size: 1.6rem;
+                    }
+                }
+                &[data-rank="maintain"]{
+                    &::before{
+                        background: url(../../assets/img/page/NMOK_6_5V_team/ico-maintain.png);
+                        background-size: 1.6rem;
+                    }
+                }
+            }
+        }
+    }
+}

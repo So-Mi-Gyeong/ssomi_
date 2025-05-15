@@ -1,0 +1,19 @@
+.ods-tag {
+  display: flex;
+  flex-wrap:wrap;
+  gap: .4rem;
+
+  &--item {
+    padding: 0 1rem;
+    font-size: 1.1rem;
+    color: var(--color-gray-150);
+    background-color: var(--color-gray-850);
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 2.6rem;
+    border-radius: 1.3rem;
+    position: relative;
+  }
+}

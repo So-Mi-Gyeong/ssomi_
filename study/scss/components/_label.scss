@@ -1,0 +1,90 @@
+
+.mdl-label {
+    display: flex;
+    align-items: center;
+    min-height: 2.6rem;
+    color: var(--gray_0);
+    background: var(--gray_90);
+    padding: 0.4rem 0.8rem;
+    @include setRound(0.8rem);
+    font-family: "KBF";
+    font-size: 1.3rem;
+    font-weight: 500;
+    word-break: keep-all;
+    line-height: 1.8rem;
+
+    //건강검진
+    &[data-checkup] {
+        height: 2.6rem;
+        min-height: 2.6rem;
+        padding: 0 0.8rem;
+        font-size: 1.1rem;
+        background-color: #aaa;
+        text-align: center;
+        line-height: 1;
+        white-space: nowrap;
+        border-radius: 1.3rem;
+        padding-top: .2rem;
+        font-weight: 700;
+    }
+    &[data-checkup="A"] {
+        background-color: var(--color-green);
+        color:#fff;
+    }
+    &[data-checkup="B"] {
+        background-color: var(--color-orange);
+        color:#fff;
+    }
+    &[data-checkup="C"] {
+        background-color: var(--color-red);
+        color:#fff;
+    }
+    &[data-checkup="null"] {
+        background-color: #EEEEEE;
+        color:#999999;
+    }
+    &[data-checkup="ne"] {
+        background-color: var(--color-green);
+        color:#fff;
+    }
+    &[data-checkup="po"] {
+        background-color: var(--color-red);
+        color:#fff;
+    }
+    &[data-checkup="wpo"] {
+        background-color: var(--color-orange);
+        color:#fff;
+    }
+    &[data-checkup="comprehensive"]{
+        background-color: #4880ED;
+    }
+    &[data-checkup="general"]{
+        background-color: #3CCEBC;
+    }
+ 
+    //검진일선택
+    &[data-checkup2]{
+        display: inline-block;
+        min-width: 5.4rem;
+        height: 2.1rem;
+        min-height: auto;
+        line-height: 2.1rem;
+        padding: 0 .8rem;
+        margin-right: .8rem;
+        font-size: 1.1rem;
+        font-weight: 700;
+        border-radius: .4rem;
+    }
+    //종합
+    &[data-checkup2="A"]{
+        background-color: transparent;
+        border: .1rem solid #379CE5 !important;
+        color: #379CE5;
+    }
+    //일반
+    &[data-checkup2="B"]{
+        background-color: transparent;
+        border: .1rem solid #3CCEBC !important;
+        color: #3CCEBC;
+    } 
+}

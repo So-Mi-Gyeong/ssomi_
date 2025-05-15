@@ -1,0 +1,1480 @@
+/* ============================= 기본 ============================= */
+.brand-list {
+    .btn-list {
+        border-radius: 3rem;
+        box-shadow: 0 0.5rem 1.4rem 0 rgba(0, 0, 0, 0.08);
+    }
+
+    .btn-list .thumbnail img {
+        position: relative;
+    }
+
+    .type-h7 {
+        word-break: keep-all;
+    }
+
+    &[data-brand="chamsongil"] .content {
+        padding: 0;
+    }
+}
+
+.brand-detail {
+    .scrollBox {
+        padding: 0;
+    }
+
+    .tab.line {
+        position: sticky;
+        top: -0.1rem;
+        z-index: 3;
+        background-color: #fff;
+    }
+
+    .tab-content-wrap {
+        position: relative;
+        z-index: 0;
+    }
+
+    .tab-content {
+        padding: 2.4rem 2.4rem 2.4rem;
+        min-height: calc(100dvh - 10rem);
+
+        .tab-content {
+            padding: 0;
+            min-height: 0;
+        }
+    }
+
+    .btn-wrap {
+        padding-top: 3.4rem;
+    }
+
+    .card-list {
+        li {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            gap: 1.4rem;
+            padding: 2rem 1.8rem;
+
+            &.card-case-id {
+                .mdl-btn[data-style="second"] span {
+                    color: #FF0000;
+                }
+            }
+
+            &.card-case-progress {
+                .card-top {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    gap: .8rem;
+
+                    .badge {
+                        width: 5.6rem;
+                        height: 2rem;
+                        padding: 0;
+                        margin-left: 0;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        font-size: 1.2rem;
+                        color: var(--text);
+                        text-align: center;
+                        border: .1rem solid #444;
+                        border-radius: 1rem;
+                    }
+
+                    &-tit {
+                        font-size: 1.6rem;
+                        font-weight: 700;
+                        line-height: 2.2rem;
+                        color: #000;
+                    }
+                }
+
+                .card-body {
+                    width: 100%;
+                    margin-top: 1.6rem;
+                }
+
+                .card-progress-wrap {
+                    width: 100%;
+                    padding: 0 2.3rem;
+
+                    .progressbar {
+                        height: 1.2rem;
+                        margin: 1.6rem 0;
+                        position: relative;
+                        flex: 1;
+                        background-color: var(--bggray2);
+                        border-radius: 1rem;
+                        overflow: hidden;
+
+                        .bar {
+                            display: inline-block;
+                            position: absolute;
+                            z-index: 3;
+                            left: 0;
+                            top: 0;
+                            height: 100%;
+                            margin: 0;
+                            border-top-left-radius: 1rem;
+                            border-bottom-left-radius: 1rem;
+                            background-color: var(--basic);
+                            vertical-align: baseline;
+                        }
+                    }
+
+                    .progress-date {
+                        overflow: hidden;
+                        color: var(--tpoint);
+                        font-size: 1.4rem;
+                        line-height: 1.38;
+                        text-align: center;
+                    }
+                }
+            }
+        }
+
+        .card-top {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            .badge,
+            .date {
+                font-size: 1.3rem;
+                font-weight: 500;
+                line-height: 2.2rem;
+                color: #757575;
+            }
+
+            .badge {
+                padding: 0;
+                margin: 0;
+                border-radius: 0;
+                border: 0;
+                height: auto;
+            }
+        }
+
+        .title {
+            font-size: 1.9rem;
+            font-weight: 700;
+            line-height: 2.2rem;
+            color: #000;
+        }
+
+        .btn-wrap {
+            width: 100%;
+            padding-top: 0;
+            margin-top: 1.3rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 1.4rem;
+
+            [data-type="text"] {
+                span {
+                    width: fit-content;
+                    font-size: 1.2rem;
+                    font-weight: 400;
+                    line-height: 2.2rem;
+                    color: #979797;
+                    text-decoration: underline;
+                    text-underline-offset: 0.2rem;
+                }
+            }
+        }
+
+        &[data-type="subscription"] {
+            li {
+                gap: 0;
+                padding: 2.4rem;
+                border: .1rem solid #eee;
+                border-radius: 1.6rem;
+                box-shadow: 0 .8rem 1.6rem rgba(0, 0, 0, 0.04);
+            }
+
+            .card-top {
+                &-name {
+                    font-size: 1.4rem;
+                    font-weight: 500;
+                    line-height: 2rem;
+                    display: flex;
+                    justify-content: flex-start;
+                    align-items: center;
+                    gap: .8rem;
+
+                    &[data-name="fitamin"] {
+                        color: #0aa464;
+                    }
+
+                    .badge {
+                        font-size: 1.3rem;
+                        font-weight: 500;
+                        line-height: 1;
+                        color: #666;
+                    }
+                }
+
+                .date {
+                    font-size: 1.4rem;
+                    font-weight: 400;
+                    line-height: 2rem;
+                    color: #444;
+                }
+            }
+
+            .card-body {
+                margin-top: 2.4rem;
+
+                &-wrap {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 1.6rem;
+                }
+
+                &-item {
+                    display: flex;
+                    justify-content: flex-start;
+                    align-items: center;
+                    gap: 1.6rem;
+
+                }
+
+                &-tit {
+                    font-size: 1.6rem;
+                    font-weight: 600;
+                    line-height: 2.4rem;
+                    color: #000;
+                }
+
+                &-txt {
+                    font-size: 1.4rem;
+                    font-weight: 400;
+                    line-height: 2.4rem;
+                    color: #666;
+                }
+            }
+
+            .btn-wrap {
+                margin-top: 1.6rem;
+                gap: 1.6rem;
+            }
+        }
+    }
+
+    .design-data {
+        display: flex;
+        flex-direction: column;
+        gap: 1.6rem;
+        border: .1rem solid #eee;
+        border-radius: 1.6rem;
+        box-shadow: 0 .8rem 1.6rem rgba(0, 0, 0, 0.04) !important;
+
+        &-wrap {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            gap: 1.6rem;
+        }
+
+        &-con {
+            display: flex;
+            flex-direction: column;
+            gap: .8rem;
+        }
+
+        &-tit {
+            font-size: 2rem;
+            font-weight: 700;
+            line-height: 2.6rem;
+            color: #000;
+        }
+
+        &-txt {
+            font-size: 1.4rem;
+            font-weight: 400;
+            line-height: 2rem;
+            color: #666;
+        }
+
+        .btn-wrap {
+            width: 100%;
+            padding-top: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            .mdl-btn {
+                width: 100%;
+            }
+        }
+    }
+
+    .cs-info-wrap{
+        .btn-wrap{padding-top: 0;}
+    }
+
+    .list-white-box,
+    .list-shadow-box{
+        .btn-list{min-height: 11.6rem;}
+    }
+}
+
+.brand-head {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    max-width: 100%;
+}
+
+.brand-head-img {
+    width: 100%;
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+.brand-head-logo {
+    position: relative;
+    width: 8.6rem;
+    height: 8.6rem;
+    background-color: #fff;
+    box-shadow: .1rem .1rem 1rem rgba(0, 0, 0, 0.3);
+    margin-top: -4.3rem;
+    border-radius: .8rem;
+    border: .3rem solid #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+.brand-head-info {
+    padding: 2.6rem 2.4rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: .8rem;
+
+    h2 {
+        font-weight: 700;
+        font-size: 2.2rem;
+        word-break: keep-all;
+    }
+
+    p {
+        font-size: 1.4rem;
+        font-weight: 400;
+        line-height: 1.4;
+        word-break: keep-all;
+
+        strong,
+        b {
+            font-weight: 700;
+        }
+    }
+}
+
+/* ============================= 개별(앞에 brand 붙여서 클래스명 작업) ============================= */
+
+//NMPD_3_11T
+.ocr-program-ctgtit {
+    &.mdl-subject {
+        align-items: flex-start;
+        margin-bottom: $x3;
+    }
+
+    .mdl-subject-tit {
+        display: flex;
+        font-size: 1.8rem;
+        font-family: 'Base';
+        color: var(--gray_100);
+        line-height: 2.2rem;
+    }
+}
+
+.ocr-product{
+    &-intro {
+        margin-top: -2rem;
+        >.mdl-wrap {padding: $x5 0;}
+        [data-col="3"] .mdl-list-wrap {gap: $x2 !important}
+
+        //top
+        &-img {
+            width: 100%;
+            height: 28rem;
+            position: relative;
+        }
+        [data-type="h4"] {
+            width: 100%;
+            margin: $x4 0;
+            .mdl-subject-group {width: 100%;}
+            .mdl-subject-tit {
+                width: 100%;
+                text-align: center;
+                font: var(--font-b1-700);
+                color: var(--color-gray-50);
+            }
+        }
+
+        .mdl-subject[data-type="intro"]{
+            .mdl-subject-txt{width: 100%;}
+        }
+        .mdl-item-img {
+            position: relative;
+            img{aspect-ratio: 1/1}
+    
+            .hrf-number {
+                position: absolute;
+                top: 0.6rem;
+                right: 0.6rem;
+                background-color: #25C38F;
+                font-size: 1rem;
+                color: #FFF;
+                border-radius: 0.6rem;
+                padding: 0.4rem 0.8rem;
+                z-index: 1;
+                &[data-color="olive"]{background-color: #86801D;}
+            }
+        }
+        .hrf-info {
+            margin-top: 3rem;
+            font-size: 1.2rem;
+            color: #666;
+            text-align: center;
+            word-break: keep-all;
+        }
+
+        //유의사항
+        .mdl-definition{
+            &-body,
+            &-head{
+                font-family: 'Base';
+                font-size: 1.6rem;
+            }
+            &-head {margin-bottom: $x2;}
+            &-body {
+                padding-left: $x2 !important;
+                word-break: keep-all;
+                & + .mdl-definition-body {margin-top: $x1;}
+                &::before {
+                    width: .4rem !important;
+                    height: .4rem !important;
+                    transform: translate(0, .3rem);
+                }
+            }
+    
+        }
+    
+        .mdl-btn>span {font-size: 1.6rem !important;}
+    }
+}
+
+//현대그린푸드
+.NMPD_9_352V,
+.NMPD_9_380V{
+    .content{padding: 4rem 2.4rem 19rem;}
+    .footer{
+        background: linear-gradient(180deg, rgba(255, 225, 216, 0) 0%, #fff 20%);
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        padding: 2rem 2.4rem calc(3.2rem + env(safe-area-inset-bottom));
+        .btn-wrap{padding: 0;}
+    }
+}
+.ocr-product-intro[data-style="challenge"]{
+    .mdl-list[data-type="intro"]{
+        display: flex;
+        flex-direction: column;
+        gap: 1.6rem;
+        margin-top: 3.2rem;
+        .mdl-list-item{
+            margin: 0;
+            align-items: center;
+        }
+    }
+    .ocr-product--contents{
+        display: flex;
+        flex-direction: column;
+        gap: 3.2rem;
+        padding: 4rem 0;
+        .mdl-subject[data-type="intro"]{
+            display: flex;
+            justify-content: center;
+            .mdl-subject-tit{
+                margin: 2.4rem 0 .8rem;
+                font-family: 'KBF';
+                font-size: 2rem;
+                font-weight: 300;
+                line-height: 2.6rem;
+                color: var(--color-gray-50);
+                b{
+                    line-height: 2.6rem;
+                    color: inherit;
+                }
+            }
+            .mdl-subject-txt{
+                font: var(--font-b4-300);
+                color: var(--color-gray-350);
+            }
+        }
+        .mdl-list[data-col="3"]{
+            .mdl-list-wrap{gap: 2rem 1.6rem !important;}
+            .mdl-item{
+                &-img{
+                    width: 9.6rem;
+                    height: 9.6rem;
+                    border-radius: 1.2rem;
+                }
+                &-tit{
+                    margin-top: 1.2rem;
+                    word-break: break-all;
+                }
+            }
+        }
+        .mdl-item-tit{
+            font: var(--font-b4-400);
+            color: #444;
+        }
+        .mdl-btn{
+            span{font: var(--font-b4-500) !important;}
+            &[data-shape="round-line"]{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: .6rem;
+                &::after{
+                    content: '';
+                    width: 2.4rem;
+                    height: 2.4rem;
+                    background: url("data:image/svg+xml,%3Csvg width='25' height='25' viewBox='0 0 25 25' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M9.5 19.5L15.75 12.875L9.5 6.25' stroke='black' stroke-width='1.5' stroke-linecap='round'/%3E%3C/svg%3E%0A") no-repeat 0 0 / 2.4rem;
+                }
+            }
+        }
+        .hrf-info{
+            margin-top: 2.4rem;
+            font-size: 1.2rem;
+            font-weight: 300;
+            line-height: 1.8rem;
+            color: var(--color-gray-300);
+        }        
+    }
+}
+
+//NMPD_9_375P
+.img-zoom {
+    width: 100%;
+    height: calc(100vh - 5.6rem);
+    overflow-y: scroll;
+    padding-bottom: $x9;
+
+    img {
+        width: 100%;
+        display: block;
+    }
+}
+
+//NMPD_18_3V
+[data-type="tip-guide"] {
+    .tip-guide {
+        &-img {
+            border-radius: 2.4rem;
+            overflow: hidden;
+        }
+
+        &-title {
+            position: relative;
+            margin-top: 7.7rem;
+
+            .mdl-tooltip {
+                padding: .8rem;
+                background: #FFD700;
+                top: -4.5rem;
+
+                &-txt {
+                    font-size: 1.6rem;
+                    font-weight: 600;
+                    line-height: 2.4rem;
+                    color: #000;
+                }
+
+                &::before {
+                    background: #FFD700;
+                }
+            }
+        }
+
+        &-tit {
+            font-size: 1.8rem;
+            font-weight: 700;
+            line-height: 2.4rem;
+            color: #000;
+            text-align: left;
+        }
+    }
+
+    .mdl-bul-dot {
+        margin-top: 2.4rem;
+        display: flex;
+        flex-direction: column;
+        gap: .8rem;
+
+        li {
+            display: flex;
+            justify-content: flex-start;
+            align-items: flex-start;
+            gap: .8rem;
+            font-size: 1.5rem;
+            font-weight: 400;
+            line-height: 2.2rem;
+            color: #666;
+
+            &+li {
+                margin-top: 0;
+            }
+
+            &::before {
+                min-width: .4rem;
+                min-height: .4rem;
+                background-color: #666;
+            }
+        }
+    }
+
+    .mdl-bul-care {
+        margin-top: .8rem;
+
+        div {
+            font-size: 1.4rem;
+            font-weight: 400;
+            line-height: 2rem;
+            color: #999;
+        }
+    }
+}
+
+[data-brand] {
+    .program {
+
+        //프로그램 이용안내
+        &-info {
+            &.line-top {
+                margin-top: 4rem;
+                padding-top: 4rem;
+                border-top: .1rem dashed rgba(151, 151, 151, 0.54);
+            }
+
+            .program-info-title {
+                font-size: 1.8rem;
+                font-weight: 700;
+                line-height: 2.8rem;
+                color: #000;
+
+                &+.mdl-bul-dot,
+                &+.list-dot,
+                &+.mdl-bul-num {
+                    margin-top: 1.6rem;
+                }
+            }
+
+            //프로그램 이용안내
+            .mdl-bul-num[data-shape="round"] {
+                transform: translateY(0.2rem);
+                display: flex;
+                flex-direction: column;
+                gap: .8rem;
+
+                li {
+                    display: flex;
+                    justify-content: flex-start;
+                    align-items: baseline;
+                    margin-top: 0;
+
+                    &::before {
+                        font-size: 1.6rem;
+                        font-weight: 300;
+                        color: #666;
+                    }
+
+                    div {
+                        font-size: 1.5rem;
+                        font-weight: 400;
+                        line-height: 1.5;
+                        color: #666;
+                    }
+                }
+            }
+
+            .mdl-bul-care {
+                margin-top: .8rem;
+
+                div {
+                    font-size: 1.4rem;
+                    font-weight: 400;
+                    line-height: 2rem;
+                    color: #999;
+                    word-break: keep-all;
+                    transform: translateY(-0.2rem);
+                }
+            }
+
+            //업체 이용안내(골프)
+            .mdl-bul-dot {
+                font-size: 1.6rem;
+                font-weight: 300;
+                line-height: 2.4rem;
+                color: #444;
+
+                li>div {
+                    font-size: 1.6rem;
+                    font-weight: 300;
+                    line-height: 2.4rem;
+                    color: #444;
+                }
+            }
+        }
+
+        //업체 홍보 이미지
+        &-company-img {
+            img+img {
+                margin-top: -.1rem;
+            }
+        }
+    }
+
+    .list-dot,
+    .mdl-bul-dot {
+        display: flex;
+        flex-direction: column;
+        gap: .8rem;
+
+        li {
+            font-size: 1.5rem;
+            font-weight: 400;
+            line-height: 2.2rem;
+            color: #666;
+
+            em {
+                font-size: 1.5rem;
+                font-weight: 400;
+                line-height: 2.2rem;
+                color: #666;
+                text-decoration: underline;
+                text-underline-offset: 0.3rem;
+            }
+
+            b {
+                font-size: 1.5rem;
+                font-weight: 600;
+                line-height: 2.2rem;
+                color: #666;
+                text-decoration: underline;
+                text-underline-offset: 0.3rem;
+            }
+        }
+
+        li::before {
+            min-width: 0.4rem;
+            min-height: 0.4rem;
+            max-width: 0.4rem;
+            max-height: 0.4rem;
+            border-radius: 50%;
+            background: #666;
+            margin: 0;
+            top: 0.9rem;
+        }
+    }
+
+    .mdl-bul-dot li {
+        margin-top: 0 !important;
+        gap: .8rem;
+
+        &>div {
+            flex: 1;
+            color: #666;
+            line-height: 2.2rem;
+        }
+    }
+
+    .list-dot li {
+        margin-top: 0 !important;
+        line-height: 2.2rem;
+        padding-left: 1.2rem;
+    }
+}
+
+//Box Style
+.mdl-box[data-style="info"] {
+    padding: 3.2rem;
+    display: flex;
+    flex-direction: column;
+    border: .1rem solid #eee;
+    border-radius: 4rem;
+    gap: 2.4rem;
+
+    [data-typo="title-s"] {
+        color: #000;
+        border-bottom: .3rem solid #FFE108;
+        padding-bottom: 1rem;
+    }
+
+    .mdl-subject-group {
+        display: flex;
+        flex-direction: column;
+        gap: 2.4rem;
+    }
+
+    .mdl-subject-tit {
+        font-size: 1.6rem;
+        font-weight: 500;
+    }
+
+    .mdl-subject-txt {
+        font-size: 1.4rem;
+        font-weight: 300;
+        line-height: 2rem;
+        color: #333;
+        word-break: keep-all;
+
+        .mdl-bul-dot {
+            margin-top: .8rem;
+
+            li {
+                font-size: 1.4rem;
+                font-weight: 300;
+                line-height: 2rem;
+                color: #444;
+                gap: 0.6rem;
+
+                &::before {
+                    min-width: 0.2rem;
+                    min-height: 0.2rem;
+                    max-width: 0.2rem;
+                    max-height: 0.2rem;
+                    background-color: #444;
+                }
+            }
+        }
+    }
+
+    .list-dot li,
+    .mdl-bul-dot li {
+        font-size: 1.6rem;
+        font-weight: 500;
+        line-height: 2.4rem;
+        color: #000;
+
+        &::before {
+            top: 1rem;
+            background-color: #000;
+        }
+    }
+
+    .mdl-bul-care {
+        div {
+            font-size: 1.4rem;
+            font-weight: 400;
+            line-height: 2rem;
+        }
+    }
+
+    .info-box-txt {
+        font-size: 1.4rem;
+        font-weight: 400;
+        line-height: 2rem;
+        color: #444;
+    }
+
+    .premium-info {
+        display: flex;
+        flex-direction: column;
+        gap: 2.4rem;
+
+        &::before {
+            content: '';
+            display: block;
+            width: 100%;
+            height: .1rem;
+            border-top: .1rem dashed #D7D7D7;
+        }
+
+        &-tit {
+            font-size: 1.8rem;
+            font-weight: 700;
+            line-height: 2.4rem;
+            color: #000;
+        }
+    }
+}
+
+//리스트
+// NMDP_3_2V / NMDP_3_3T / NMDP_3_4T / NMDP_3_5V / NMDP_3_11T / NMDP_3_18T / NMDP_11_1V / NMDP_14_1V
+.list-category {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+
+    li {
+        &+li {
+            margin-top: 0;
+        }
+
+        .listimg-box {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .type-status {
+            font-size: 1.6rem;
+            font-weight: 700;
+            color: #000;
+        }
+
+        .btn {
+            display: flex;
+            gap: 0.8rem;
+            margin-top: 0.8rem;
+
+            button {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 2.9rem;
+                height: 2.9rem;
+                background-color: #D9D9D9;
+                border-radius: 50%;
+            }
+
+            &-list {
+                display: flex;
+                align-items: center;
+                min-height: 12rem;
+                padding: 2.4rem 1.6rem;
+                border: .1rem solid var(--color-gray-700);
+                border-radius: 1.6rem;
+                background-color: var(--color-gray-900);
+                overflow: hidden;
+                box-shadow: none;
+                // box-shadow: 0 .2rem 1rem rgba(0, 0, 0, 0.16);
+
+                .type-status {word-break: keep-all;}
+                .type-h5 {word-break: break-all;}
+            }
+        }
+    }
+
+    [data-style="massage"] {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 1.4rem;
+        padding: 2rem 1.8rem;
+    }
+}
+
+.lesson-check {
+    &-wrap {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        gap: 0.8rem;
+        margin-bottom: 1.6rem;
+    }
+
+    &-inp {
+        cursor: pointer;
+        width: 2.4rem;
+        height: 2.4rem;
+        background-image: url(../../assets/img/common/inp-save.svg);
+        background-size: 100% auto;
+
+        &:checked {
+            background-image: url(../../assets/img/common/inp-save-chk.svg);
+        }
+
+        +label {
+            font-size: 1.4rem;
+            font-weight: 500;
+            line-height: 2rem;
+            color: #000;
+        }
+    }
+}
+
+.list-category[data-style="location"] {
+    li {
+        .btn {
+            button[data-type="call"] {
+                &::before {
+                    content: '';
+                    width: 1.3rem;
+                    height: 1.7rem;
+                    display: flex;
+                    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='13' height='17' viewBox='0 0 13 17' fill='none'%3E%3Cpath d='M3.98602 1.06519L3.26902 1.28119C2.6306 1.47372 2.06046 1.84462 1.62572 2.35023C1.19097 2.85585 0.909701 3.47513 0.815024 4.1352C0.518024 6.2032 1.18202 8.6212 2.78302 11.3942C4.38002 14.1602 6.13802 15.9422 8.07302 16.7222C8.69475 16.9728 9.37536 17.0395 10.0339 16.9146C10.6925 16.7896 11.3013 16.4781 11.788 16.0172L12.33 15.5032C12.682 15.1701 12.901 14.7206 12.9464 14.2381C12.9919 13.7557 12.8606 13.2731 12.577 12.8802L11.221 11.0002C11.0377 10.7464 10.7795 10.5563 10.4828 10.4566C10.186 10.3569 9.86541 10.3526 9.56602 10.4442L7.51502 11.0712L7.46202 11.0812C7.23602 11.1142 6.71402 10.6252 6.06402 9.4992C5.38402 8.3212 5.24402 7.63219 5.43102 7.45419L6.47402 6.48119C6.85505 6.1254 7.11532 5.6594 7.21843 5.14838C7.32153 4.63736 7.2623 4.10689 7.04902 3.63119L6.38702 2.16019C6.18796 1.71754 5.83472 1.36237 5.39315 1.16091C4.95158 0.959441 4.45082 0.925423 3.98602 1.06519ZM5.47702 2.57019L6.13702 4.04119C6.26511 4.32651 6.30081 4.64473 6.23913 4.95134C6.17745 5.25794 6.02147 5.5376 5.79302 5.75119L4.74702 6.72519C4.07702 7.35919 4.29902 8.4412 5.19902 9.9992C6.04502 11.4652 6.81702 12.1892 7.64702 12.0632L7.77102 12.0372L9.85902 11.4002C9.95883 11.3695 10.0657 11.3709 10.1647 11.4041C10.2637 11.4372 10.3498 11.5006 10.411 11.5852L11.767 13.4652C11.909 13.6616 11.9748 13.903 11.9522 14.1443C11.9296 14.3857 11.8201 14.6106 11.644 14.7772L11.101 15.2912C10.7534 15.6202 10.3186 15.8425 9.84828 15.9317C9.37799 16.0209 8.89199 15.9731 8.44802 15.7942C6.75002 15.1102 5.14502 13.4832 3.65002 10.8942C2.15102 8.2992 1.54402 6.09219 1.80502 4.27719C1.87259 3.80562 2.07348 3.36318 2.38404 3.00194C2.69461 2.6407 3.10192 2.37572 3.55802 2.23819L4.27502 2.02219C4.50748 1.95234 4.75741 1.96942 4.9782 2.07025C5.199 2.17108 5.37558 2.34877 5.47502 2.57019' fill='black'/%3E%3C/svg%3E") no-repeat center center / 1.3rem;
+                }
+            }
+
+            button[data-type="copy"] {
+                &::before {
+                    content: '';
+                    width: 1.6rem;
+                    height: 1.7rem;
+                    display: flex;
+                    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='17' viewBox='0 0 16 17' fill='none'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M10.4615 0H7.13354C5.62544 0 4.43077 0 3.49621 0.120977C2.53456 0.245907 1.7559 0.508419 1.14133 1.09986C0.52759 1.69209 0.25518 2.44247 0.125539 3.36916C9.78128e-08 4.27056 0 5.42102 0 6.87433V11.6628C1.98066e-05 12.3692 0.261691 13.0524 0.737918 13.5895C1.21414 14.1265 1.87365 14.4822 2.59774 14.5923C2.71015 15.1964 2.92759 15.712 3.36246 16.1318C3.85641 16.6078 4.47836 16.8118 5.21682 16.9083C5.92821 17 6.83323 17 7.95487 17H10.5067C11.6283 17 12.5333 17 13.2447 16.9083C13.9832 16.8118 14.6051 16.6078 15.0991 16.1318C15.593 15.6558 15.8047 15.0565 15.9048 14.3448C16 13.6593 16 12.7872 16 11.7063V7.66581C16 6.58493 16 5.71279 15.9048 5.02726C15.8047 4.31563 15.593 3.71628 15.0991 3.24028C14.6634 2.82121 14.1284 2.61167 13.5015 2.50335C13.3872 1.80557 13.0182 1.17003 12.4609 0.711104C11.9036 0.252182 11.1946 1.90869e-05 10.4615 0ZM12.2092 2.3887C12.0845 2.03763 11.8489 1.73294 11.5355 1.51729C11.2221 1.30164 10.8466 1.18582 10.4615 1.18605H7.17949C5.61477 1.18605 4.5038 1.18763 3.65949 1.29674C2.83487 1.40349 2.35897 1.60433 2.0119 1.93879C1.66482 2.27326 1.45641 2.73186 1.34564 3.5273C1.23241 4.34014 1.23077 5.41074 1.23077 6.9186V11.6628C1.23053 12.0339 1.35072 12.3958 1.5745 12.6977C1.79828 12.9997 2.11446 13.2267 2.47877 13.347C2.46154 12.8647 2.46154 12.3191 2.46154 11.7063V7.66581C2.46154 6.58493 2.46154 5.71279 2.55754 5.02726C2.656 4.31563 2.86933 3.71628 3.36246 3.24028C3.85641 2.76428 4.47836 2.56028 5.21682 2.4646C5.92821 2.37209 6.83323 2.37209 7.95487 2.37209H10.5067C11.1426 2.37209 11.7087 2.37209 12.2092 2.3887ZM4.23221 4.08C4.45949 3.86098 4.77785 3.71865 5.38092 3.64037C5.99959 3.56051 6.82174 3.55893 7.99918 3.55893H10.4607C11.6382 3.55893 12.4595 3.56051 13.0798 3.64037C13.6821 3.71865 14.0004 3.86177 14.2277 4.08C14.455 4.29902 14.6027 4.60581 14.6839 5.18698C14.7668 5.78316 14.7684 6.57544 14.7684 7.71009V11.6636C14.7684 12.7982 14.7668 13.5897 14.6839 14.1875C14.6027 14.7679 14.4542 15.0747 14.2277 15.2937C14.0004 15.5127 13.6821 15.655 13.079 15.7333C12.4595 15.8132 11.6382 15.8147 10.4607 15.8147H7.99918C6.82174 15.8147 5.99959 15.8132 5.3801 15.7333C4.77785 15.655 4.45949 15.5119 4.23221 15.2937C4.00492 15.0747 3.85723 14.7679 3.776 14.1867C3.69313 13.5897 3.69149 12.7982 3.69149 11.6636V7.71009C3.69149 6.57544 3.69313 5.78316 3.776 5.18619C3.85723 4.60581 4.00574 4.29902 4.23221 4.08Z' fill='%23111111'/%3E%3C/svg%3E") no-repeat center center / 1.6rem;
+                }
+            }
+        }
+
+        &[data-icon="premium-label"] {
+            position: relative;
+
+            &::before {
+                position: absolute;
+                top: -1rem;
+                left: .8rem;
+                z-index: 99;
+            }
+        }
+    }
+
+    &+.opening-box {
+        background-color: #E7F2F6;
+        border-radius: 1.8rem;
+        padding: 3.2rem 2.4rem;
+        margin-top: 3.5rem;
+
+        em {
+            font-family: 'KBF';
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #000;
+            display: flex;
+            gap: 0.6rem;
+
+            &::before {
+                content: '';
+                display: inline-flex;
+                width: 1.9rem;
+                height: 1.9rem;
+                background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='19' height='19' viewBox='0 0 19 19' fill='none'%3E%3Cpath d='M9.5 4.25V9.5H14.75' stroke='black' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M9.5 18.25C14.3326 18.25 18.25 14.3326 18.25 9.5C18.25 4.66738 14.3326 0.75 9.5 0.75C4.66738 0.75 0.75 4.66738 0.75 9.5C0.75 14.3326 4.66738 18.25 9.5 18.25Z' stroke='black' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") no-repeat 0 0/1.9rem;
+            }
+        }
+
+        .list-dot {
+            margin-top: 1.4rem;
+
+            li {
+                font-size: 1.5rem;
+                font-weight: 400;
+                color: #000;
+
+                &+li {
+                    margin-top: 0.3rem;
+                }
+            }
+        }
+    }
+}
+
+// NMPD_18_2T
+.list-white-box[data-type="schedule"] {
+    .listimg {
+        &-box {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: .4rem;
+        }
+
+        &-tit {
+            font-size: 1.6rem;
+            font-weight: 600;
+            line-height: 2.4rem;
+            color: #000;
+        }
+
+        &-txt {
+            font-size: 1.4rem;
+            font-weight: 400;
+            line-height: 2rem;
+            color: #000;
+        }
+
+        &-schedule {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            gap: .8rem;
+            font-size: 1.4rem;
+            font-weight: 500;
+            line-height: 2rem;
+            color: #444;
+
+            &::before {
+                content: "";
+                display: block;
+                position: relative;
+                width: 1.6rem;
+                height: 1.6rem;
+                background-image: url(../img/icon/ico-schedule.svg);
+                background-position: 50% 50%;
+                background-repeat: no-repeat;
+                background-size: 1.6rem;
+            }
+        }
+
+        &-discount {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            gap: .4rem;
+
+            span {
+                font-size: 1.2rem;
+                font-weight: 400;
+                line-height: 1.8rem;
+                color: #666;
+                text-decoration: line-through;
+            }
+
+            em {
+                font-size: 1.4rem;
+                font-weight: 500;
+                line-height: 2rem;
+                color: #FF0000;
+            }
+        }
+
+        &-pay {
+            font-size: 1.4rem;
+            font-weight: 500;
+            line-height: 2rem;
+            color: #444;
+        }
+    }
+}
+
+//NMPD_18_3V
+.mdl-bul-num[data-style="blue-num"] {
+    display: flex;
+    flex-direction: column;
+    gap: 2.4rem;
+
+    li {
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        gap: .8rem;
+        font-size: 1.6rem;
+        font-weight: 500;
+        line-height: 2.4rem;
+        color: #000;
+        padding-bottom: 2.4rem;
+        border-bottom: .1rem dashed #D7D7D7;
+
+        &:last-child {
+            padding-bottom: 0;
+            border-bottom: 0;
+        }
+
+        &::before {
+            content: counter(dep1);
+            width: 3.2rem;
+            min-width: 3.2rem;
+            height: 3.2rem;
+            background-color: #003487;
+            border-radius: 50%;
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+}
+
+//업체 주소
+// 상세페이지(마사지 / 골프)
+.company-address-title {
+    font-size: 1.8rem;
+    font-weight: 700;
+    line-height: 2.8rem;
+    color: #000;
+
+    &+.brand-company-address {
+        margin-top: .8rem;
+    }
+}
+
+.brand-company-address {
+    width: 100%;
+    padding: 0 0 2.4rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    position: relative;
+
+    .address-title {
+        width: calc(100% - 7rem);
+        font-size: 1.4rem;
+        font-weight: 500;
+        line-height: 1.9rem;
+        color: #6C6C6C;
+        text-align: left;
+        position: relative;
+        padding-left: 2.4rem;
+        word-break: keep-all;
+
+        &::before {
+            content: '';
+            display: block;
+            width: 1.994rem;
+            height: 1.994rem;
+            background: url(../../assets/img/icon/ico-address.png) no-repeat 0 0;
+            background-size: 1.994rem;
+            position: absolute;
+            left: 0;
+        }
+    }
+
+    .btn-wrap {
+        padding-top: 0;
+
+        .btn-sub {
+            height: 2.8rem;
+            padding: 0 1.2rem;
+            border: .1rem solid var(--color-gray-600);
+            border-radius: 0.8rem;
+            font-size: 1.4rem;
+            font-weight: 400;
+            line-height: 1.8rem;
+            color: var(--color-gray-200);
+        }
+    }
+}
+
+//업체 지도
+// 상세페이지의 지도 이미지(골프)
+.brand-service-map {
+    display: flex;
+    flex-direction: column;
+    gap: 3.2rem;
+
+    .map-img-group {
+        border-radius: 2.4rem;
+        overflow: hidden;
+    }
+
+    &+.company-address-title {
+        margin-top: 3.2rem;
+    }
+}
+
+//참손길
+.brand-service-info {
+    .service-info-banner {
+        border-radius: 1.6rem;
+        padding: 2.4rem;
+
+        .chamsongil-banner-tit {
+            font-size: 1.4rem;
+            font-weight: 600;
+            line-height: 1.6rem;
+        }
+
+        .chamsongil-banner-txt {
+            font-size: 1.4rem;
+            font-weight: 400;
+            line-height: 2rem;
+        }
+    }
+}
+
+//회원 정보 확인
+.membership-info {
+    .content-wrap .content {
+        display: flex;
+        flex-direction: column;
+        gap: 3.2rem;
+        padding: 0 2.4rem
+    }
+
+    &-top {
+        padding: 1.2rem 2.4rem;
+        text-align: center;
+        background-color: #FEF0E6;
+
+        [data-icon-before="info-orange"] {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 1.6rem;
+
+            span {
+                font-size: 1.4rem;
+                font-weight: 400;
+                line-height: 2rem;
+                color: #000;
+                text-align: left;
+            }
+        }
+    }
+
+    &-check {
+        display: flex;
+        flex-direction: column;
+        gap: 3.2rem;
+
+        .info-check-id {
+            display: flex;
+            flex-direction: column;
+            gap: .8rem;
+        }
+
+        .info-check-join {
+            display: flex;
+            flex-direction: column;
+            gap: .8rem;
+        }
+
+        .mdl-btn {
+            span {
+                font-size: 1.8rem;
+            }
+        }
+    }
+
+    .check-id {
+        &-area {
+            display: flex;
+            flex-direction: column;
+            gap: .8rem;
+
+            label {
+                font-size: 1.8rem;
+                font-weight: 700;
+                line-height: 2.4rem;
+                color: #000;
+            }
+
+            input {
+                width: 100%;
+                height: 5.2rem;
+                padding: 1.6rem;
+                font-size: 1.4rem;
+                font-weight: 500;
+                line-height: 2.4rem;
+                color: var(--color-gray-50);
+                text-align: left;
+                border-radius: .8rem;
+                background-color: var(--gray_0 );
+                border: 0.1rem solid var(--color-gray-0);
+            }
+        }
+
+        &-save {
+            position: relative;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            gap: .8rem;
+
+            input {
+                cursor: pointer;
+                width: 2.4rem;
+                height: 2.4rem;
+                background-image: url(../../assets/img/common/inp-save.svg);
+                background-size: 100% auto;
+
+                &:checked {
+                    background-image: url(../../assets/img/common/inp-save-chk.svg);
+                }
+            }
+
+            label {
+                cursor: pointer;
+                font-size: 1.4rem;
+                font-weight: 500;
+                line-height: 2rem;
+                color: #000;
+            }
+        }
+    }
+
+    .check-join {
+        &-tit {
+            font-size: 1.6rem;
+            font-weight: 600;
+            line-height: 2.4rem;
+            color: #000;
+        }
+
+        &-wrap {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            gap: 1.6rem;
+        }
+
+        &-btn {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            gap: .8rem;
+            font-size: 1.4rem;
+            font-weight: 500;
+            line-height: 2rem;
+            color: #444;
+
+            &::before {
+                content: '';
+                display: block;
+                width: 1.6rem;
+                height: 1.6rem;
+                background-size: 1.6rem;
+            }
+
+            &::after {
+                content: '';
+                display: block;
+                width: .1rem;
+                height: 1.6rem;
+                background-color: #D7D7D7;
+                margin-left: .8rem;
+            }
+
+            &:last-child::after {
+                display: none;
+            }
+
+            &[data-type="find"]::before {
+                background-image: url(../../assets/img/common/ico-join01.png);
+            }
+
+            &[data-type="join"]::before {
+                background-image: url(../../assets/img/common/ico-join02.png);
+            }
+        }
+    }
+}

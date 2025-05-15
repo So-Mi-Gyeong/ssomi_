@@ -1,0 +1,46 @@
+.neve_8_5v{
+    .ocr-body{padding: 0;}
+    [data-type="event"]{
+        max-width: 100%;
+        margin: 0;
+    }
+    .mocr-note{
+        * {font-family: 'base';}
+        padding: 3.6rem 2.4rem 6.4rem;
+        background-color: #6607DF;
+        transform: translateY(-.2rem);
+        .mdl-wrap{padding: 0 2.4rem;}
+        h2{
+            font-size: 1.9rem;
+            font-weight: 700;
+            line-height: 2.6rem;
+            color: #fff;
+            text-align: left;
+        }
+        .mdl-bul-dot {
+            li{
+                display: flex;
+                justify-content: flex-start;
+                align-items: flex-start;
+                gap: .8rem;
+                &::before{background-color: #fff;}
+                div{
+                    display: flex;
+                    justify-content: flex-start;
+                    align-items: flex-start;
+                    gap: .8rem;
+                    font-size: 1.4rem;
+                    font-weight: 300;
+                    line-height: 2rem;
+                    color: #fff;
+                    span{
+                        font-size: 1.4rem;
+                        font-weight: 700;
+                        line-height: 2rem;
+                        color: #fff;
+                    }
+                }
+            }
+        }
+    }
+}

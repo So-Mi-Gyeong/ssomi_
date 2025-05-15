@@ -1,0 +1,320 @@
+.ocr-challenge[data-company="insure"] {
+    $currentSPimg: url(../img/challenge/main/sp_NMOK_1_1V_2407.png);
+    $currentSPsize: 24rem;
+
+    .ocr-wrap *::after,
+    .ocr-wrap *::before,
+    .ocr-wrap * {
+        font-family: 'KBF';
+    }
+
+    .ocr-body {
+        padding: 0;
+        background: #f5f5f5;
+
+        &::before {
+            content: '';
+            display: block;
+        }
+
+        .mdl-line {
+            display: none;
+            width: calc(100vw + 4.8rem);
+            min-width: calc(100% + 4.8rem);
+            margin: 4.8rem 0;
+            border-top: 1.3rem solid #ECEDF4;
+        }
+    }
+
+    .challenge-dday {
+        margin-top: 0;
+        padding-left: 1.3rem;
+        display: flex;
+        flex-direction: column;
+        gap: 0.9rem;
+
+        dt {
+            font-size: 1.4rem;
+            font-weight: 500;
+            line-height: 1.4rem;
+            color: #222;
+        }
+
+        dd {
+            font-size: 2.2rem;
+            font-weight: 500;
+            line-height: 2.2rem;
+            display: flex;
+            justify-content: flex-start;
+            align-items: baseline;
+            gap: .4rem;
+            color: #1E1F23;
+
+            span {
+                font-size: 3.6rem;
+                font-weight: 700;
+                line-height: 3.6rem;
+                color: #1E1F23;
+                transform: translate(0, 0.4rem);
+            }
+        }
+    }
+
+    .ocr-challenge-title {
+        width: calc(100vw + 2px);
+        margin-left: -1px;
+        padding: calc(5.6rem + env(safe-area-inset-top) + 1.8rem) 2.4rem 5.7rem;
+        background: linear-gradient(180deg, rgba(255, 209, 72, 1) 56%, rgba(245, 245, 245, 1) 100%);
+
+        &::before {
+            content: "";
+            pointer-events: none;
+            display: block;
+            position: absolute;
+            left: 50%;
+            transform: translate(-50%, -7.3rem);
+            max-width: 100rem;
+            margin-left: 0;
+            pointer-events: none;
+            overflow: hidden;
+            z-index: 0;
+            width: 100rem;
+            height: 93rem;
+            background: url(../img/challenge/m08_insure/hero.png) no-repeat 50% 7.6rem / 60rem;
+            top: calc(-4.7rem + env(safe-area-inset-top));
+        }
+
+        .mdl-subject[data-style="title"] {
+            margin: 0;
+            padding: 16.4rem 0 2.4rem;
+
+            .linkup {
+                height: 2.4rem;
+                padding: 0 .8rem;
+                border-radius: 4rem;
+                background-color: #fde078;
+                border: 1px solid #ffbb2c;
+
+                span {
+                    font-size: 1.2rem;
+                    font-weight: 500;
+                    line-height: 1.6rem;
+                    color: #1E1F23;
+                    position: relative;
+                    display: flex;
+                    justify-content: flex-start;
+                    align-items: center;
+                    gap: .4rem;
+
+                    &::before {
+                        content: '';
+                        display: block;
+                        width: 1.6rem;
+                        height: 1.6rem;
+                        background: url(../../assets/img/challenge/main/ico-linkup.png) no-repeat 0 0;
+                        background-size: 1.6rem;
+                    }
+                }
+            }
+
+            .mdl-subject-group {
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+                align-items: flex-end;
+                flex-direction: row;
+            }
+
+            .mdl-subject-tit {
+                font-size: 1.8rem;
+                font-weight: 700;
+                line-height: 2.4rem;
+                color: #1E1F23;
+            }
+        }
+
+    }
+
+    [data-banner="luckyball"] {
+        width: 100%;
+        height: 11.2rem;
+        margin: 0 auto 0;
+        border-radius: 2rem;
+        background: #F27759;
+        position: relative;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        gap: .3rem;
+
+        &::before {
+            content: '';
+            display: block;
+            width: 8.8rem;
+            height: 6.8rem;
+            background: url(../../assets/img/challenge/m08/bn-icoLuckyball.png) no-repeat 0 0;
+            background-size: 8.8rem 6.8rem;
+        }
+
+        .mdl-banner-em {
+            color: #FFF173;
+            font-size: 1.6rem;
+            font-weight: 300;
+            line-height: 2.4rem;
+        }
+
+        .mdl-banner-tit {
+            color: #fff;
+            font-size: 1.6rem;
+            font-weight: 700;
+            line-height: 2.4rem;
+            display: flex;
+            align-items: center;
+
+            &::after {
+                content: "";
+                display: inline-block;
+                transform: translateX(.6rem);
+                background-image: url("data:image/svg+xml,%3Csvg width='8' height='14' viewBox='0 0 8 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 13L7 7L1 1' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+                width: .8rem;
+                height: 1.4rem;
+            }
+        }
+
+        .mdl-tooltip {
+            top: -1.2rem;
+            right: 0.6rem;
+            left: auto;
+            height: 3rem;
+            background-color: #FFD700;
+
+            &::before {
+                background-color: #FFD700;
+            }
+        }
+
+        .mdl-tooltip-txt {
+            font-size: 1.3rem;
+            color: #000;
+        }
+    }
+
+    .ocr-challenge-banner {
+        max-width: $maxwidth;
+        width: 100%;
+        margin-top: 0;
+
+        .mdl-banner {
+            padding: 2.4rem 2rem;
+
+            &[data-banner] {
+                border-radius: 1.6rem;
+
+                &::before {
+                    width: 11.2rem;
+                    height: 11.2rem;
+                    bottom: -2.8rem;
+                    right: -2.3rem;
+                }
+
+                &::after {
+                    content: '';
+                    display: block;
+                    width: 6rem;
+                    height: 6rem;
+                    background-size: 32rem;
+                    bottom: 1rem;
+                    right: 1.2rem;
+                    position: absolute;
+                    z-index: 1;
+                }
+
+                .mdl-banner-group {
+                    gap: .4rem;
+                }
+
+                .mdl-banner-em {
+                    font-weight: 300;
+                    line-height: 1.82rem;
+                }
+            }
+
+            &[data-banner="guide"] {
+                background-color: #354462;
+
+                &::before {
+                    background-color: #354462;
+                }
+            }
+
+            &[data-banner="past"] {
+                background-color: #28C3E5;
+
+                &::before {
+                    background-color: #28C3E5;
+                }
+            }
+
+            &[data-banner="special"] {
+                min-height: 8.2rem;
+                background-color: #3917CE;
+
+                &::before {
+                    background-color: #3917CE;
+                }
+            }
+        }
+    }
+
+    .mdl-wrap[data-style="team-ready"] span[data-icon="leader"]::after,
+    .mdl-wrap[data-style="team"] .mdl-team-name[data-icon="leader"]::after,
+    .mdl-wrap[data-style="team"] [data-icon="up"]::before,
+    .mdl-wrap[data-style="team"] [data-icon="down"]::before,
+    .mdl-wrap[data-type="walk-result"] .ocr-challenge-mission-item .mdl-subject-txt::before,
+    .mdl-wrap[data-type="walk"] .mdl-subject-tit::after,
+    [data-icon="flag"]::after,
+    [data-item="luckyball"] .ocr-challenge-mission-item .mdl-subject-tit::before,
+    .ocr-challenge-mission-item .point::before,
+    .ocr-challenge-banner .mdl-banner[data-banner=guide]::after,
+    .ocr-challenge-banner .mdl-banner[data-banner=past]::after,
+    .ocr-challenge-mission-item .mission-state dt::before {
+        content: "";
+        background-image: $currentSPimg;
+        background-size: $currentSPsize;
+        background-repeat: no-repeat;
+    }
+
+    .ocr-challenge-banner .mdl-banner[data-banner=guide]::after {
+        background-position: -11.7rem -3.3rem;
+        background-size: 25rem;
+    }
+
+    .ocr-challenge-banner .mdl-banner[data-banner=past]::after {
+        background-position: -0.1rem -3.5rem;
+        background-size: 25rem;
+    }
+
+    .ocr-challenge-banner .mdl-banner[data-banner=special]::after {
+        width: 10rem;
+        height: 8.5rem;
+        background: url(../../assets/img/challenge/m08_insure/special-bnr.png) no-repeat 0 0;
+        background-size: 10rem 8.5rem;
+        bottom: 0.5rem;
+    }
+
+    [data-type="team"] {
+        .card-walk--time {
+            background-color: #FFF6C8;
+        }
+    }
+
+    .mdl-box[data-chain=true] {
+        margin-top: -0.4rem !important;
+    }
+
+    [data-type="team"]+.card-walk--next[data-chain=true] {
+        &::before {
+            border-top: 1px dashed #A48A03 !important
+        }
+    }
+}

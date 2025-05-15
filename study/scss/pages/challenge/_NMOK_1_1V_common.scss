@@ -1,0 +1,295 @@
+.ocr-challenge {
+	$currentSPimg: url(../img/challenge/main/sp_NMOK_1_1V_2407.png);
+	$currentSPsize: 24rem;
+
+
+		&::before {
+			content: '';
+			display: block;
+		}
+ 
+		.mdl-line {
+			display: none;
+			width: calc(100vw + 4.8rem);
+			min-width: calc(100% + 4.8rem);
+			margin: 4.8rem 0;
+			border-top: 1.3rem solid #ECEDF4;
+		}
+
+	&-title {
+		width: calc(100vw + 2px);
+		margin-left: -1px;
+		padding: calc(5.6rem + env(safe-area-inset-top)) 2.4rem 5.7rem;
+
+		.mdl-subject[data-style="title"] {
+			min-height: 18rem;
+			margin: 0;
+			padding: 0;
+
+			.mdl-subject-tit {
+				font-size: 1.8rem;
+				font-weight: 700;
+				line-height: 2.4rem;
+				color: #1E1F23;
+			}
+
+			.linkup {
+				height: 3.8rem;
+				line-height: 0;
+				padding: 0 1.6rem;
+				border-radius: 1.2rem;
+				background-color: #000;
+				position: relative;
+				z-index: -1;
+
+				span {
+					font-size: 1.4rem;
+					font-weight: 700;
+					color: #fff;
+					font-family: 'KBF';
+				}
+			}
+
+			.mdl-tooltip {
+				gap: .8rem;
+				flex-direction: row-reverse;
+				top: 15.8rem;
+				z-index: 99;
+
+				&::before {
+					width: 0.5rem;
+					height: 0.5rem;
+					bottom: 3.2rem;
+					border: 0.1rem solid #000 !important;
+					border-bottom: 0 !important;
+					border-right: 0 !important;
+				}
+
+				&::after {
+					content: '';
+					width: 1.8rem;
+					height: 1.8rem;
+					background-image: url(../img/challenge/m01/coin.png);
+					background-size: 1.7rem;
+				}
+
+				&-txt {
+					font-size: 1.4rem;
+					font-weight: 500;
+					color: #444B55;
+
+					span {
+						font-size: 1.4rem;
+						font-weight: 700;
+						color: #444B55;
+						transform: translateY(0.1rem);
+					}
+				}
+			}
+		}
+	}
+
+	&-banner {
+		max-width: 43rem;
+		width: 100%;
+		margin-top: 0;
+	}
+	.mdl-banner {
+		padding: 3.6rem 4rem;
+		min-height: 12.4rem;
+		&[data-banner] {
+			// border-radius: 1.6rem;
+			&::before {
+				width: 11.2rem;
+				height: 11.2rem;
+				bottom: -2.8rem;
+				right: -2.3rem;
+			}
+			.mdl-banner-group {
+				&::after {
+					content: '';
+					display: block;
+					width: 6rem;
+					height: 6rem;
+					background-size: 32rem;
+					bottom: 1rem;
+					right: 1.2rem;
+					position: absolute;
+					z-index: 1;
+				}
+				gap: .6rem;
+				
+			}
+			.mdl-banner-em {
+				font-size: 1.4rem;
+				font-weight: 400;
+				line-height: 2rem;
+				font-family: 'Base';
+			}
+			.mdl-banner-tit{
+				font-size: 1.8rem;
+				font-weight: 700;
+				line-height: 2.6rem;
+				font-family: 'Base';
+			}
+		}
+		&[data-banner="guide"] {
+			background-color: #354462;
+			&::before {background-color: #354462;}
+			&::after {
+				background-position: -15rem -3.8rem;
+				background-size: 25rem;
+			}
+		}
+		&[data-banner="past"] {
+			background-color: #6C7891;
+			&::before {background-color: #6C7891;}
+			&::after {
+				background-position: -0.1rem -4rem;
+				background-size: 25rem;
+			}
+		}
+		&[data-banner="guide"]::after,
+		&[data-banner="past"]::after {
+			content: "";
+			background-image: $currentSPimg;
+			background-size: $currentSPsize;
+			background-repeat: no-repeat;
+		}
+	}
+	
+
+	.ods-tag--item {
+		color: var(--color-gray-300);
+		background-color: var(--color-gray-700);
+	}
+
+	[data-banner="luckyball"] {
+		width: 100%;
+		height: 11.2rem;
+		margin: 0 auto 0;
+		border-radius: 2rem;
+		background: #8141EE;
+		position: relative;
+		display: flex;
+		justify-content: flex-start;
+		align-items: center;
+		gap: .3rem;
+
+		&::before {
+			content: '';
+			display: block;
+			width: 8.8rem;
+			height: 6.8rem;
+			background: url(../../assets/img/challenge/m08/bn-icoLuckyball.png) no-repeat 0 0;
+			background-size: 8.8rem 6.8rem;
+		}
+
+		.mdl-banner-em {
+			color: #FFF173;
+			font-size: 1.6rem;
+			font-weight: 300;
+			line-height: 2.4rem;
+		}
+
+		.mdl-banner-tit {
+			color: #fff;
+			font-size: 1.6rem;
+			font-weight: 700;
+			line-height: 2.4rem;
+			display: flex;
+			align-items: center;
+
+			&::after {
+				content: "";
+				display: inline-block;
+				transform: translateX(.6rem);
+				background-image: url("data:image/svg+xml,%3Csvg width='8' height='14' viewBox='0 0 8 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 13L7 7L1 1' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+				width: .8rem;
+				height: 1.4rem;
+			}
+		}
+
+		.mdl-tooltip {
+			top: -1.2rem;
+			right: 0.6rem;
+			left: auto;
+			height: 3rem;
+			background-color: #FFD700;
+
+			&::before {
+				background-color: #FFD700;
+			}
+		}
+
+		.mdl-tooltip-txt {
+			font-size: 1.3rem;
+			color: #000;
+		}
+	}
+
+	.mdl-box[data-chain="true"] {
+		margin-top: -1px !important;
+	}
+
+	.card-walk--link {
+		.mdl-btn {
+			width: 100%;
+			height: 4.4rem;
+			border-radius: 1.2rem;
+
+			span {
+				font-size: 1.4rem;
+				font-weight: 500;
+				line-height: 1.6rem;
+			}
+
+			&[data-color="black"] {
+				background-color: #000;
+			}
+		}
+	}
+
+	.card-walk--list {
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		gap: 2.8rem;
+		margin-top: 1.4rem;
+		&::before{
+			content: '';
+			height: 100%;
+			position: absolute;
+			z-index: -1;
+			background-color: #f7f7f7;
+			width: calc(100vw + 1px);
+			top: -2.8rem;
+			left: 50%;
+			transform: translate(-50%, 0);
+		}
+		&::after{
+			content: '';
+			position: absolute;
+			top: -3rem;
+			left: -12rem;
+			z-index: -1;
+			background-color: #FFF;
+			width: 22rem;
+			height: 10rem;
+		}
+	}
+
+	.card-walk--next {
+		.mdl-btn {
+			min-width: 9.2rem;
+		}
+	}
+
+	.card-walk[data-type="weekly-rewardball"] {
+		.mdl-btn-wrap {
+			padding: 0 2.4rem;
+			margin-top: 3.2rem
+		}
+	}
+}
+  

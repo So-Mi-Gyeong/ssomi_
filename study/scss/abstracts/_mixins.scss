@@ -1,0 +1,24 @@
+@mixin order($val) {
+    -webkit-box-ordinal-group: $val;
+    -moz-box-ordinal-group: $val;
+    -ms-flex-order: $val;
+    -webkit-order: $val;
+    order: $val;
+}
+
+//width,height,radius,color
+@mixin setBullet($width, $height, $radius, $color) {
+    min-width: $width;
+    min-height: $height;
+    max-width: $width;
+    max-height: $height;
+    border-radius: $radius;
+    background-color: $color;
+}
+
+@mixin setRound($val) {
+    -webkit-border-radius: $val;
+    -moz-border-radius: $val;
+    -ms-border-radius: $val;
+    border-radius: $val;
+}

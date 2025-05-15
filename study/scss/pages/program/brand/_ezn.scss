@@ -1,0 +1,15 @@
+// 영향을 주지 않는 class명은 data-brand 바깥에 입력
+
+/* 이지앤웰니스 */
+[data-brand="ezn"] {
+    .egnwell-info-wrap .dm-box{
+        background-color: #fff;
+        dd {
+            background-color: #F4F4F4;
+            border-radius: .8rem;
+            padding:1.6rem;
+            word-break: keep-all;
+            &::before {border-right: 1.4rem solid #F4F4F4;}
+        }
+    }
+}

@@ -1,0 +1,25 @@
+.NMCM_11_7V{
+	.mdl-line{margin: 4.2rem auto 3.6rem;}
+	.mdl-list{
+		&[data-type="info"]{
+			.mdl-list-item{
+				height: 2.2rem;
+				align-items: center;
+			}
+			.mdl-list-key{color: var(--color-gray-100);}
+		}
+		&-item{
+			&:last-child{margin-bottom: 0;}
+		}
+	}
+	.mdl-bul-care{
+		display: block !important;
+		&::before{margin-right: 0;}
+		font: var(--font-b4-400);
+		color: var(--gray);
+		b{
+			font: var(--font-b4-700);
+			color: var(--gray);
+		}
+	}
+}

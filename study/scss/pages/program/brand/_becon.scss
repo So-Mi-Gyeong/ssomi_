@@ -1,0 +1,18 @@
+// 영향을 주지 않는 class명은 data-brand 바깥에 입력
+
+/* 비컨 */
+[data-brand="becon"]{
+    .btn-wrap{
+        display: flex;
+        flex-direction: column;
+        .btn-sub{
+            margin-left: 0;
+            & + .btn-sub{margin-top: 1.6rem;}
+        }
+    } 
+}
+.becon-sub {
+    display: flex;
+    flex-wrap: wrap;
+}
+.becon-sub-box {word-break: keep-all;}   

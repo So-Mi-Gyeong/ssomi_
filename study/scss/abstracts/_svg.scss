@@ -1,0 +1,10 @@
+.btn-routine-category.next .title .type-h5::after,
+.gene-result-list li button .left-area .type-h4::after,
+.competition-detail-go button.next::before{
+  content: '';
+  display: block;
+  width: 2.4rem;
+  height: 2.4rem;
+  background-image: var(--svg-arrow);
+  background-size: 2.4rem;
+}

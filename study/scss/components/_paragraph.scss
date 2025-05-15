@@ -1,0 +1,19 @@
+.mdl-paragraph {
+    p {
+        font-size: 1.5rem;
+        font-weight: 400;
+        font-family: 'Base';
+        line-height: 2.2rem;
+        color:$gray-90;
+        word-break: keep-all;
+    }
+    
+    p + p {margin-top:$x2}
+    & + * {margin-top:$x6;}
+
+    b {
+        font: inherit;
+        font-weight: 700;
+        color: inherit;
+    }
+}

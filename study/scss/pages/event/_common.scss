@@ -1,0 +1,15 @@
+.wrapper[data-page="event"] {
+    padding: 0 !important;
+    * img{
+        filter: none;
+    }
+    .content  {
+        padding: 0 !important; 
+    }
+    .footer .btn-wrap{padding: 0;}
+    .footer .btn-wrap .btn-txt{
+        border-radius: 0;
+        padding: 2.2rem 0 calc(1.8rem + env(safe-area-inset-bottom));
+        height: auto;
+    }
+}

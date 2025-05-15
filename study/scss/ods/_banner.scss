@@ -1,0 +1,17 @@
+.ods-banner {
+  background-color: #ccc;
+  width: 100dvw;
+  img{
+    display: block;
+    width: 100%;
+  }
+}
+
+@media (600px <= width) {
+  .ods-banner {
+    position: relative;
+    width: 100%;
+    max-width: 37.5rem;
+    border-radius: 1.2rem;
+  }
+}

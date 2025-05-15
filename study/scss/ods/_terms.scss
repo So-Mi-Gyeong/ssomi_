@@ -1,0 +1,59 @@
+.ods-terms {
+  h1 {
+    font: var(--font-h4);
+    color: var(--color-gray-0);
+  }
+  h1 + h2 { margin-top: 3.6rem}
+  h2 {
+    margin: 4rem 0 1.2rem;
+    font: var(--font-b2-700);
+    color: var(--color-gray-0);
+  }
+  p {
+    position: relative;
+    text-indent: -1rem;
+    padding-left: 1rem;
+    color: var(--color-gray-150);
+    font: var(--font-b3-400);
+
+    strong {
+      color: var(--color-gray-0);
+      font: var(--font-b1-700);
+      text-decoration: underline;
+      text-underline-position: under;
+    }
+  }
+  p + i {margin-top: 1.2rem;}
+  i {
+    display: inline-block;
+    font: var(--font-b3-400);
+    color: var(--color-gray-300);
+    
+    padding-left: 1rem;
+    text-indent: -1rem;
+  }
+  em {
+    display: inline-block;
+    font: var(--font-b4-300);
+    color: var(--color-gray-150);
+    padding-left: 1.2rem;
+    text-indent: -1.2rem;
+    &::before{
+      content:"";
+      display: inline-block;
+      width: .4rem;
+      height: .4rem;
+      border-radius: 50%;
+      background-color: #444B55;
+      vertical-align: middle;
+      margin-right: .8rem;
+      transform:translateY(-0.2rem);
+    }
+  }
+  > div {
+    margin-top: 4rem;
+    display:flex;
+    flex-direction: column;
+    gap:1.2rem;
+  }
+}

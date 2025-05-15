@@ -1,0 +1,312 @@
+.ocr-psytest{
+    background-color: var(--gray_0) !important;
+    // .ocr-body {justify-content: space-between;}
+    .ocr-psytest-card{margin-bottom: 4rem;}
+
+    &-tit {
+        position: relative;
+        padding-top: $x2;
+        font-size: 2.4rem;
+        font-weight: 700;
+        color: #000;
+        font-family: 'KBF';
+        line-height: 1.5;
+    }
+    .mdl-list{
+        margin: $x3 0 $x7;
+
+        .mdl-subject {
+            padding: $x4 0 $x2;
+        }
+        .mdl-subject-group,
+        .mdl-subject{
+            justify-content: center;
+            align-items: center;
+        }
+        .mdl-subject-tit {
+            text-align: center;
+            margin:$x1 0  $x3;
+        }
+    }
+    .mdl-list-item + .mdl-list-item{ margin-top: $x2;}
+    .mdl-box {
+        padding:0;
+        box-shadow: none !important;
+
+        img {display: block;}
+    }
+    .mdl-list-item {
+        position: relative;
+
+        &::before{
+            position: absolute;
+            top:0;
+            width:100%;
+            transform: translateY(5rem);
+            transition: transform .3s ease-out;
+        }
+        .mdl-subject,
+        .mdl-box {
+            transition: transform .5s cubic-bezier(0.47, 0.5, 0.48, 1.28);
+            img {transform:scaleY(1); transition: transform .5s cubic-bezier(0.47, 0.5, 0.48, 1.28) ; transform-origin: 0 0;}
+        }
+        
+    }
+    .mdl-list-item[data-scrollevent-s="0"] {
+        &::before{
+            position: absolute;
+            top:0;
+            width:100%;
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .mdl-subject,
+        .mdl-box {
+            transform: translate(0, 5rem);
+            img {transform:scaleY(1.8);}
+        }
+       
+    }
+}
+
+.modal .modal-content{
+    border-top-left-radius:3rem !important;
+    border-top-right-radius:3rem !important;
+}
+
+.ocr-psytest-tit{
+    position: relative;
+    padding-top: $x2;
+    font-size: 2.8rem;
+    &-group {
+        display: block;
+    }
+    &-point,
+    &-txt {
+        display: inline-block;
+        font-size: 2.8rem;
+        font-weight: 700;
+        font-family: 'KBF';
+        line-height: 3.6rem;
+        
+        color:var(--gray_100);
+    }
+
+    &-txt {
+        animation-name: psytest_step1;
+        animation-delay: .4s;
+        animation-duration: .8s;
+        animation-iteration-count: 1;
+        animation-timing-function: ease-out;
+        animation-fill-mode: forwards;
+    }
+    &-icon {
+        display: inline-block;
+        position: relative;
+        height: 4rem;
+        @include setRound(2rem);
+        margin: 0 .4rem;
+        overflow: hidden;
+        transform: translate3d(0, -.6rem, 0);
+
+        
+        &::before {
+            content: "";
+            display: block;
+            position: absolute;
+            top:0; 
+            left:50%;
+            transform: translate(-50%, 0);
+        }
+
+        &[data-n="1"] {
+            background-color: #09CEC8;
+            width: 0;
+            margin: 0;
+            
+            animation-name: psytest_step2;
+            animation-delay: 1.2s;
+            animation-duration: .6s;
+            animation-iteration-count: 1;
+            animation-timing-function: ease-out;
+            animation-fill-mode: forwards;
+
+            &::before {
+                width: 4rem;
+                height: 100%;
+                top: .6rem;
+                background: url(../img/psytest/main/tit_img1.svg) no-repeat 0 0 / 100%;
+            }
+        }
+        &[data-n="2"] {
+            background-color: #FFC5C2;
+            width: 0;
+            margin: 0;
+            
+            animation-name: psytest_step3;
+            animation-delay: 2s;
+            animation-duration: 1s;
+            animation-iteration-count: 1;
+            animation-timing-function: ease-out;
+            animation-fill-mode: forwards;
+
+            &::before {
+                width: 7rem;
+                height: 100%;
+                top: .3rem;
+                left: 59%;
+                background: url(../img/psytest/main/tit_img2.svg) no-repeat 0 0 / 100%;
+            }
+        }
+        &[data-n="3"] {
+            background-color: #96A0FF;
+            width: 0;
+            margin: 0;
+            
+            animation-name: psytest_step4;
+            animation-delay: 3.2s;
+            animation-duration: .6s;
+            animation-iteration-count: 1;
+            animation-timing-function: ease-out;
+            animation-fill-mode: forwards;
+
+            &::before {
+                width: 4rem;
+                height: 100%;
+                top: .5rem;
+                left: 42%;
+                background: url(../img/psytest/main/tit_img3.svg) no-repeat 0 0 / 100%;
+            }
+        }
+    }
+}
+
+@keyframes psytest_step1 {
+    0% {color:var(--gray_100);}
+    100% {color:#E5E5E5;}
+}
+@keyframes psytest_step2 {
+    0% {width:0; margin:0;}
+    100% {width:4rem; margin: 0 .4rem;}
+}
+@keyframes psytest_step3 {
+    0% {width:0; margin:0;}
+    100% {width:8rem; margin: 0 .4rem;}
+}
+@keyframes psytest_step4 {
+    0% {width:0; margin:0;}
+    100% {width:4rem; margin: 0 .4rem 0 0;}
+}
+
+.ocr-psytest-card{
+    max-width: 100% !important;
+    margin-top: $x3;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 100%;
+
+    &-logo {
+        position: absolute;
+        bottom: $x1-5;
+        right: 2.8rem;
+        display: flex;
+        align-items: center;
+        gap: 0.6rem;
+
+        span {
+            font-size: 1.2rem;
+            color:#fff;
+            font-family: 'KBF';
+            font-weight: 500;
+            letter-spacing: 0;
+        }
+
+        &[data-logo="HUNO"] {
+            img {width: 6rem;}
+        }
+    }
+    &-wrap {
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+        transform: translate(4rem, 0);
+
+        .swiper-slide-shadow {display: none;}
+        .swiper { 
+            margin: 0;
+            width:30rem;
+            overflow: visible !important;
+
+            [data-flag]::before {
+                order:10;
+                padding: .4rem .8rem;
+                background-color: #ccc;
+                color:var(--gray_0);
+            }
+            [data-flag="new"]::before {
+                text-transform: uppercase;
+                background-color: #FF612D;
+                @include setRound($x1);
+                font-size: 1.3rem;
+                font-weight: 700;
+                margin-top: $x1;
+                box-shadow: 0 .4rem .8rem rgba(255, 97, 45, 30%);
+            }
+        }
+        .swiper-wrapper {
+            width: 30rem;
+        }
+        .swiper-slide {
+            padding: $x5;
+            height: 36.8rem;
+            @include setRound($x4);
+            box-shadow: 0 .96rem 2.56rem rgba(0,0,0,12%) !important;
+            > * {opacity: 0; transition: opacity .2s ease-in;}
+
+            &.swiper-slide-active {
+                @include setRound($x3);
+                > * {opacity: 1;}
+            }
+
+            &[data-n="1"] {
+                background:#fffACA url(../img/psytest/main/main_01.png) no-repeat 0 100% / 28rem;
+            }
+            &[data-n="2"] {
+                background:#E7D3FF url(../img/psytest/main/main_02.png) no-repeat 0 100% / cover;
+            }
+            &[data-n="3"] {
+                background:#FFE3B1 url(../img/psytest/main/main_03.jpg) no-repeat 0 100% / 28rem;
+            }
+        }
+        
+    }
+    .swiper-pagination{
+        position: absolute;
+        transform: translate(0, 4rem);
+        visibility:visible;
+    }
+    .swiper-pagination-bullet{@include setRound(2.5rem !important);}
+    .swiper-pagination-bullet-active{width:1.8rem !important; background-color: var(--gray_90) !important;}
+ 
+    .mdl-btn{
+        position: absolute;
+        bottom:$x4; 
+        left:$x4;
+        min-width: 6.4rem;
+        min-height: 6.4rem;
+        @include setRound(3.2rem);
+        padding: 0;
+        background-color: var(--gray_0);
+        box-shadow: 0 .4rem 1.6rem rgba(0, 0, 0, 8%) ;
+
+        span {
+            font-family: 'KBF';
+            font-size: 1.8rem;
+            color: var(--gray_100);
+            display: block;
+            padding: 0 3.2rem;
+        }
+    }
+}

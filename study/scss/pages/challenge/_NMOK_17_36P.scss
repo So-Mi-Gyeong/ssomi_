@@ -1,0 +1,15 @@
+.NMOK_17_36P{
+  .mdl-wrap{
+    max-width: 100%;
+  }
+  .ocr-body{
+    padding: 0 0 env(safe-area-inset-bottom);
+  }
+  .mdl-btn-wrap{
+    background: linear-gradient(180deg, rgba(255, 225, 216,0) 0%, #FFEAC9 65%);
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    padding: 2rem 2.4rem calc(3.2rem + env(safe-area-inset-bottom));
+  }
+}

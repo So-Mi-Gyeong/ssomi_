@@ -1,0 +1,63 @@
+
+
+.ods-badge {
+	position: relative;
+	display: inline-block;
+	font-size: 1.1rem;
+	line-height: 1.3rem;
+	border-radius: 1.3rem;
+	font-weight: 700;
+	padding: 0.6rem 1rem 0.5rem;
+	height: 2.6rem;
+	border: 0.1rem solid var(--color-gray-100);
+	color: var(--color-gray-100);
+	white-space: nowrap;
+
+	&[data-state-bg] {border-color:var(--color-gray-100); color: #FFF; background-color:var(--color-gray-100);}
+	&[data-state-bg="a"],
+	&[data-state-bg="A"] {border-color:var(--color-red); color: #FFF; background-color: var(--color-red); }
+	&[data-state-bg="b"],
+	&[data-state-bg="B"] {border-color: var(--color-orange); color: #FFF; background-color: var(--color-orange); }
+	&[data-state-bg="c"],
+	&[data-state-bg="C"] {border-color: var(--color-green); color: #FFF; background-color: var(--color-green); }
+	&[data-state-bg="d"],
+	&[data-state-bg="D"] {border-color: var(--color-blue); color: #FFF; background-color: var(--color-blue); }
+	&[data-state-bg="gray"]{border-color:var(--color-gray-700); color: var(--color-gray-300); background-color:var(--color-gray-700);}
+	&[data-state-bg="lightgray"]{border-color:var(--color-gray-850); color: var(--color-gray-150); background-color:var(--color-gray-850);}
+	&[data-state-bg="darkgray"]{border:var(--color-gray-100); color:#FFF;
+	background-color: var(--color-gray-100);
+	}
+	&[data-state="a"],
+	&[data-state="A"] {color:var(--color-red-text) ; border-color:var(--color-red); }
+	&[data-state="b"],
+	&[data-state="B"] {color:var(--color-orange-text) ; border-color:var(--color-orange); }
+	&[data-state="c"],
+	&[data-state="C"] {color:var(--color-green-text) ; border-color:var(--color-green); }
+	&[data-state="gray"] {color:var(--color-gray-text) ; border-color:var(--color-gray); }
+	&[data-state="lightgray"] {color:var(---color-gray-150) ; border-color:var(--color-gray-850); }
+	&[data-state="d"],
+	&[data-state="D"] {border-color: var(--color-blue); color: var(--color-blue); }
+
+	&[data-state="leader"] {
+		background-color: #724FEF;
+		color: #fff;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		border-color: #724FEF;
+		gap:0.4rem;
+		&::before {
+			content:"";
+			display: block;
+			width: 1.2rem;
+			height: 1.2rem;
+			transform: translateY(-0.2rem);
+			background: url(../img/engagement/ico_leader.png) no-repeat 50% 50% / 1.2rem;
+		}
+	}
+	&[data-state="date"] {
+		background-color:var(--color-gray-700);
+		color: var(--color-gray-300);
+		border-color: var(--color-gray-700);
+	}
+}

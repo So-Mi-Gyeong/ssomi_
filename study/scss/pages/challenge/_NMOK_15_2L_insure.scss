@@ -1,0 +1,11 @@
+.mdl-modal{
+    &[data-id="popupChallengeTimeInsure"]{
+        .challenge-time{
+            .mdl-modal-close{
+                &::before{
+                    background-image: url(../../assets/img/challenge/ico_close_dark.png);
+                }
+            }
+        } 
+    }
+}

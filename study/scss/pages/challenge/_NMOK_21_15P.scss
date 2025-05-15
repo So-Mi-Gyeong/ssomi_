@@ -1,0 +1,137 @@
+.ocr-group-ranking{
+    background: #8B46FF;
+    .ocr-body{
+        padding : 1.6rem 2.4rem calc(env(safe-area-inset-bottom));
+        justify-content: space-between;
+    }
+    .mdl-subject{
+        margin-top: 4rem;
+        &::after{
+            content: '';
+            position: absolute;
+            top: -5.2rem;
+            right: -5rem;
+            width: 20.5rem;
+            height: 19.2rem;
+            background: url(../../assets/img/challenge/luckyball/bg2.png) 0 0 / 20.5rem no-repeat;
+        }
+        &-em{
+            font-size: 1.8rem;
+            font-weight: 500;
+            color: #fff;
+        }
+        &-tit{
+            color: #FFF;
+            font-size: 2.8rem;
+            span{
+                color: #FFD700;
+            }
+        }
+    }
+    &-list{
+        margin-top: 4.6rem;
+        .mdl-box{
+            border-top-left-radius: 5.2rem;
+            border-top-right-radius: 5.2rem;
+            border-bottom-right-radius: 0;
+            border-bottom-left-radius: 0;
+            padding-bottom: 0;
+            padding-top: 4rem;
+        }
+        .ocr-ranking{
+            width: 100%;
+            strong{
+                display: flex;
+                justify-content: center;
+                font-size: 2rem;
+                font-weight: 700;
+                color: #000;
+                font-family: 'KBF';
+            }
+            .mdl-btn {transform: translate(0.2rem, -0.1rem);}
+            &-txt{
+                display: flex;
+                justify-content: center;
+                color: #666;
+                margin-top: 1.2rem;
+                font-family: 'KBF';
+            }
+            &-tit{
+                display: flex;
+                justify-content: space-around;
+                margin-top: 3.2rem;
+                em{
+                    font-size: 1.5rem;
+                    font-weight: 500;
+                    color: #000;
+                    height: 6.2rem;
+                    background-color: #F7F7F7;
+                    flex: 1;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    font-family: 'KBF';
+                    &:first-child{
+                        border-top-left-radius: 1.2rem;
+                        border-bottom-left-radius: 1.2rem;
+                    }
+                    &:last-child{
+                        border-top-right-radius: 1.2rem;
+                        border-bottom-right-radius: 1.2rem;
+                    }
+                }
+            }
+            &-box{
+                width: calc(100% + 2rem);
+                margin-left: -1rem;
+                height: calc(100dvh - 37.4rem);
+                overflow-y: scroll;
+                overflow-x: hidden;
+                padding:0 1rem 3rem;
+                li{
+                    position: relative;
+                    display: flex;
+                    justify-content: space-around;
+                    em, span{
+                        flex: 1;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        height: 6.2rem;
+                        font-size: 1.5rem;
+                        font-family: 'KBF';
+                    }
+                    em{
+                        font-weight: 700;
+                    }
+                    span{
+                        font-weight: 500;
+                        color: #666;
+                    }
+                    &.on{
+                        &::after{
+                            content: '';
+                            position: absolute;
+                            left: 0;
+                            top: 0;
+                            border: .2rem solid #FFD700;
+                            border-radius: 1.2rem;
+                            width: 100%;
+                            height: 100%;
+                            box-sizing: border-box;
+                            box-shadow: 0 .4rem 1.4rem 0 rgba(0, 0, 0, 0.09);
+                        }    
+                    }
+                }
+            }
+        }
+    }
+    .mdl-bul-dot{
+        li{
+            div{
+                font-family: 'KBF';
+                color: var(--gray_80);
+            }
+        }
+    }
+}

@@ -1,0 +1,131 @@
+.ocr-event {
+	.ocr-body {
+		padding-bottom: $x3;
+	}
+
+	&-banner {
+		position: relative;
+		display: flex;
+		justify-content: center;
+		margin-bottom: $x2-5;
+		border-radius: 1.6rem;
+		overflow: hidden;
+		box-shadow: 0 .6rem 1.6rem 0 rgba(0, 0, 0, 0.08) !important;
+
+		img {
+			display: block;
+			width: 100%;
+			transform: none;
+		}
+	}
+
+	.mdl-tab {
+		margin-bottom: $x3;
+	}
+
+	.ocr-ocareevent {
+		padding-bottom: $x4-5;
+		width: 100%;
+		max-width: $maxwidth;
+
+		.swiper-wrapper {
+			align-items: stretch !important;
+			height: auto !important;
+		}
+
+		.swiper {
+			width: 100%;
+			overflow: visible;
+			margin: 0;
+		}
+
+		.mdl-tooltip {
+			top: -1.5rem;
+			left: 2rem;
+		}
+
+		.mdl-box {
+			padding: 0 3rem !important;
+			min-height: 11.6rem;
+			flex-direction: row;
+			justify-content: flex-start;
+			align-items: center;
+			background-color: #fff;
+			gap: $x3;
+			height: 100%;
+
+			.txt {
+				position: relative;
+				padding: 2.4rem 0;
+			}
+
+			.img {
+				position: relative;
+				min-width: 8.4rem;
+
+				img {
+					width: 100%;
+					max-width: 8.4rem;
+				}
+			}
+
+			&-em {
+				font-size: 1.6rem;
+				font-weight: 700;
+			}
+
+			&-txt {
+				font-size: 1.3rem;
+				padding-top: $x1;
+				line-height: 1.8rem;
+			}
+		}
+
+		.mdl-banner {
+			padding: $x3 $x3;
+			background-color: rgba(255, 255, 255, 0.05);
+			box-shadow: (0 .8rem 2rem rgba(0, 0, 0, 1.6%)) !important;
+		}
+
+		.swiper-slide {
+			margin-right: $x2 !important;
+		}
+
+		.swiper-pagination {
+			top: auto !important;
+			bottom: -1rem !important;
+			position: absolute;
+			margin-top: 0;
+			visibility: visible !important;
+		}
+
+		.swiper-pagination-bullet {
+			height: .5rem;
+			width: .5rem;
+			background-color: #DADCDF !important;
+			opacity: 1 !important;
+			@include setRound(0.25rem !important);
+		}
+
+		.swiper-pagination-bullet-active {
+			@include setRound(0.25rem !important);
+			background-color: #444B55 !important;
+			opacity: 1 !important;
+			width: 1.8rem !important
+		}
+	}
+
+	.ocr-ocareevent .mdl-banner {
+		background-color: rgba(255, 255, 255, 25%);
+		box-shadow: 0 .8rem 2rem rgba(0, 0, 0, 16%) !important;
+	}
+
+	.ocr-ocareevent .mdl-banner .mdl-banner-txt,
+	.ocr-ocareevent .mdl-banner .mdl-banner-tit {
+		color: $gray-90;
+	}
+
+	.ocr-ocareevent .swiper-pagination-bullet.swiper-pagination-bullet-active {
+		background-color: #444 !important;
+	}
+}

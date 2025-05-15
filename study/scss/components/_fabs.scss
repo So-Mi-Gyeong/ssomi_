@@ -1,0 +1,51 @@
+.mdl-fab {
+    position: fixed;
+    bottom: calc($x3 + env(safe-area-inset-bottom));
+    right: calc($x3 + env(safe-area-inset-right));
+    z-index: 900;
+
+    &-btn{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 6.4rem;
+        height: 6.4rem;
+        border-radius: 50%;
+        gap:0.4rem;
+
+        &[data-fab="asleep"] {
+            background-color:#F0E5FE;
+            box-shadow: 0 .6rem 2.4rem rgba(0, 0, 0, 0.08);
+            background-image: url(../../../local/assets/img/asleep/ico_float_moon.svg);
+            background-position: 50% 50%;
+            background-repeat: no-repeat;
+            background-size: 3.4rem;
+        }
+
+        &[data-extended] {
+            height: 4.4rem;
+            width: auto;
+            padding: 0 2rem;
+            border-radius: 5rem;
+            box-shadow: var(--box-shadow) !important;
+            background-color: #ccc;
+
+            span {
+                font: var(--fab-font);
+                color: var(--color-gray-0);
+            }
+        }
+        &[data-extended="primary"] { 
+            background-color: var(--color-kb-yellow-100); 
+        }
+        &[data-extended="secondary"] { 
+            background-color: var(--color-gray-0);
+            span {color: var(--color-gray-900);} 
+        }
+        &[data-extended="tertiary"] { 
+            background-color: var(--color-gray-900); 
+            border: .1rem solid var(--color-gray-600);
+        }
+    }
+
+}

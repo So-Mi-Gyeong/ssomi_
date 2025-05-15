@@ -1,0 +1,324 @@
+* {
+	font-family: 'Base';
+	word-break: keep-all;
+}
+
+*:focus {
+	outline: 0;
+}
+
+//margin, padding
+@for $i from 0 through 30 {
+	.m {
+		&g-x#{$i} {
+			margin: calc($gap * $i) !important;
+		}
+
+		&b-x#{$i} {
+			margin-bottom: calc($gap * $i) !important;
+		}
+
+		&t-x#{$i} {
+			margin-top: calc($gap * $i) !important;
+		}
+
+		&l-x#{$i} {
+			margin-left: calc($gap * $i) !important;
+		}
+
+		&r-x#{$i} {
+			margin-right: calc($gap * $i) !important;
+		}
+
+		&g-x#{$i}-5 {
+			margin: calc($gap * $i + $gap / 2) !important;
+		}
+
+		&b-x#{$i}-5 {
+			margin-bottom: calc($gap * $i + $gap / 2) !important;
+		}
+
+		&t-x#{$i}-5 {
+			margin-top: calc($gap * $i + $gap / 2) !important;
+		}
+
+		&l-x#{$i}-5 {
+			margin-left: calc($gap * $i + $gap / 2) !important;
+		}
+
+		&r-x#{$i}-5 {
+			margin-right: calc($gap * $i + $gap / 2) !important;
+		}
+	}
+
+	.p {
+		&d-x#{$i} {
+			padding: calc($gap * $i) !important;
+		}
+
+		&b-x#{$i} {
+			padding-bottom: calc($gap * $i) !important;
+		}
+
+		&t-x#{$i} {
+			padding-top: calc($gap * $i) !important;
+		}
+
+		&l-x#{$i} {
+			padding-left: calc($gap * $i) !important;
+		}
+
+		&r-x#{$i} {
+			padding-right: calc($gap * $i) !important;
+		}
+
+		&lr-x#{$i} {
+			padding-left: calc($gap * $i) !important;
+			padding-right: calc($gap * $i) !important;
+		}
+
+		&d-x#{$i}-5 {
+			padding: calc($gap * $i + $gap / 2) !important;
+		}
+
+		&b-x#{$i}-5 {
+			padding-bottom: calc($gap * $i + $gap / 2) !important;
+		}
+
+		&t-x#{$i}-5 {
+			padding-top: calc($gap * $i + $gap / 2) !important;
+		}
+
+		&l-x#{$i}-5 {
+			padding-left: calc($gap * $i + $gap / 2) !important;
+		}
+
+		&r-x#{$i}-5 {
+			padding-right: calc($gap * $i + $gap / 2) !important;
+		}
+
+		&lr-x#{$i}-5 {
+			padding-left: calc($gap * $i + $gap / 2) !important;
+			padding-right: calc($gap * $i + $gap / 2) !important;
+		}
+	}
+
+	.w {
+		&-x#{$i} {
+			width: calc($gap * $i) !important;
+		}
+
+		&-x#{$i}-5 {
+			width: calc($gap * $i + $gap / 2) !important;
+		}
+	}
+
+	.h {
+		&-x#{$i} {
+			height: calc($gap * $i) !important;
+		}
+
+		&-x#{$i}-5 {
+			height: calc($gap * $i + $gap / 2) !important;
+		}
+	}
+}
+
+.h-1 {
+	font: var(--font-h1);
+}
+
+.h-2 {
+	font: var(--font-h2);
+}
+
+.h-3 {
+	font: var(--font-h3);
+}
+
+.h-4 {
+	font: var(--font-h4);
+}
+
+.h-5 {
+	font: var(--font-h5);
+}
+
+.body-1-700 {
+	font: var(--font-b1-700);
+	color: var(--color-gray-150);
+}
+
+.body-1-400 {
+	font: var(--font-b1-400);
+}
+
+.body-2-700 {
+	font: var(--font-b2-700);
+}
+
+.body-2-500 {
+	font: var(--font-b2-500);
+}
+
+.body-2-400 {
+	font: var(--font-b2-400);
+}
+
+.body-2-300 {
+	font: var(--font-b2-300);
+}
+
+.body-3-700 {
+	font: var(--font-b3-700);
+}
+
+.body-3-500 {
+	font: var(--font-b3-500);
+}
+
+.body-3-400 {
+	font: var(--font-b3-400);
+}
+
+.body-4-700 {
+	font: var(--font-b4-700);
+}
+
+.body-4-500 {
+	font: var(--font-b4-500);
+}
+
+.body-4-400 {
+	font: var(--font-b4-400);
+}
+
+.body-4-300 {
+	font: var(--font-b4-300);
+}
+
+.em-1 {
+	font: var(--font-em1);
+}
+
+.cpt-1-400 {
+	font: var(--font-cap1-400);
+}
+
+.cpt-1-300 {
+	font: var(--font-cap1-300);
+}
+
+.cpt-2 {
+	font: var(--font-cap2);
+}
+.color-blue-t{color: var(--color-blue-text) !important;}
+.color-green-t{color: var(--color-green-text) !important;}
+.color-orange-t{color: var(--color-orange-text) !important;}
+.color-red-t{color: var(--color-red-text) !important;}
+
+
+/* align */
+.ta {
+	&-c {
+		text-align: center !important;
+	}
+
+	&-l {
+		text-align: left !important;
+	}
+
+	&-r {
+		text-align: right !important;
+	}
+}
+
+.a11y-hidden {
+	position: absolute !important;
+	width: 1px !important;
+	height: 1px !important;
+	color: transparent !important;
+	overflow: hidden !important;
+	clip: rect(1px, 1px, 1px, 1px);
+	clip-path: inset(50%);
+	margin: 0 !important;
+	padding: 0 !important;
+}
+ 
+.capture-style {
+	overflow: auto;
+	height: auto;
+	min-height: 0;
+}
+
+.capture-style .ocr-wrap {
+	height: auto;
+	overflow: auto;
+}
+
+// 공지사항용
+.text-decoration-line-through {
+	text-decoration: line-through !important;
+}
+
+// 375 기준
+html {
+	font-size: 2.6667vw;
+}
+
+@media screen and (min-width: 600px) {
+	html {
+		font-size: 1.6667vw;
+	}
+}
+// /* 16:9 기준에서 높이가 좁아질 때 (가로로 길어지는 경우) */
+// @media screen and (min-aspect-ratio: 1/1) {
+// 	html {
+// 		font-size: 1.5667vh;
+// 		.ocr-wrap {
+// 			align-items: center;
+// 			margin: 0 auto;
+// 			position: relative;
+// 		}
+		
+// 		.ocr-wrap,
+// 		.ocr-header {
+// 			max-width: 70rem !important;
+// 		}
+// 		// .mdl-wrap {
+// 		// 	max-width: 100%;
+// 		// }
+// 		.mdl-wrap[data-gap=full] {
+// 			width: 70rem;
+// 			transform: translate(-50%, 0);
+// 		}
+// 		.ocr-store .fab-my {
+// 			right:calc(50% - 33rem)
+// 		}
+// 		body::before {
+// 			content: "";
+// 			position: fixed;
+// 			left:50%;
+// 			top:0;
+// 			z-index: 1000;
+// 			background-color: #373737;
+// 			width: 100vw;
+// 			height: 100vh;
+// 			transform: translateX(35rem);
+// 		}
+// 		body::after {
+// 			content: "";
+// 			position: fixed;
+// 			right:50%;
+// 			top:0;
+// 			z-index: 1000;
+// 			background-color: #373737;
+// 			width: 100vw;
+// 			height: 100vh;
+// 			transform: translateX(-35rem);
+// 		}
+// 	}
+// }
+// @media (1024px <= width) {
+//     html{font-size:1.6vw;}
+// }

@@ -1,0 +1,24 @@
+// 매거진 전용 (반응형)
+@import 
+    'abstracts/_variable',
+    'abstracts/_mixins';
+
+@import 
+    'base/_default',
+    'base/_typography';
+
+@import 
+    'layout/_wrap',
+    'layout/_body';
+    
+@import 
+    'components/_accordion',
+    'components/_item',
+    'components/_attribute',
+    'components/_title',
+    'components/_box',
+    'components/_wrap';
+    
+@import 
+    'pages/magazine/_magazine',
+    'pages/magazine/_magazine_res';

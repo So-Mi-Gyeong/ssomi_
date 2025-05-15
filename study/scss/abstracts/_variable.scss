@@ -1,0 +1,333 @@
+@charset "utf-8";
+
+:root {
+	--opacity_1: 1;
+	--opacity_0: 0;
+	--vh: 1vh;
+
+	--sat: env(safe-area-inset-top);
+	--sar: env(safe-area-inset-right);
+	--sab: env(safe-area-inset-bottom);
+	--sal: env(safe-area-inset-left);
+
+	// 색상
+	--color-kb-yellow-10: #FFFCEA;	
+	--color-kb-yellow-40: #FFED94; //btn tonal
+	--color-kb-yellow-70: #FFE443;
+	--color-kb-yellow-100: #FFD700;
+	--color-kb-yellow-200: #FFC700; //btn filed
+	--color-kb-yellow-300: #FFBE1C;
+	--color-red: #F66D6D; //주의
+	--color-orange: #FF862F; //경계
+	--color-green: #00C378; //정상
+	--color-blue: #6B9CFF; //일반
+	--color-red-text: #E93333; //주의
+	--color-orange-text: #EC6300; //경계 
+	--color-green-text: #00935A; //정상
+	--color-blue-text: #4880ED; //일반
+	--color-gray-0: #000000;
+	--color-gray-50: #111111;
+	--color-gray-100: #333A44;
+	--color-gray-150: #444B55;
+	--color-gray-200: #555B66;
+	--color-gray-300: #666C77;
+	--color-gray-350: #777D88;
+	--color-gray-400: #888E99;
+	--color-gray-500: #999EAA; //btn outlined
+	--color-gray-550: #B7BABF;
+	--color-gray-600: #DADCDF; //btn disabled(bg,line)
+	--color-gray-700: #EDEDEE; //btn gray
+	--color-gray-750: #F5F5F5;
+	--color-gray-800: #F7F7F7;
+	--color-gray-850: #FAFAFA;
+	--color-gray-900: #FFFFFF; 
+ 
+	// 폰트
+	--font-h1: normal normal 700 3.2rem/4rem 'KBF';
+	--font-h2: normal normal 700 2.6rem/3.6rem 'KBF';
+	--font-h3: normal normal 700 2.2rem/3.2rem 'KBF';
+	--font-h4: normal normal 700 2rem/2.6rem 'KBF';
+	--font-h5: normal normal 700 2rem/2.6rem 'Base';
+
+	--font-b1-700: normal normal 700 1.8rem/2.6rem 'Base';
+	--font-b1-500: normal normal 500 1.8rem/2.6rem 'Base';
+	--font-b1-400: normal normal 400 1.8rem/2.6rem 'Base';
+
+	--font-b2-700: normal normal 700 1.6rem/2.2rem 'Base';
+	--font-b2-500: normal normal 500 1.6rem/2.2rem 'Base';
+	--font-b2-400: normal normal 400 1.6rem/2.2rem 'Base';
+	--font-b2-300: normal normal 300 1.6rem/2.2rem 'Base';
+
+	--font-b3-700: normal normal 700 1.5rem/2.2rem 'Base';
+	--font-b3-500: normal normal 500 1.5rem/2.2rem 'Base';
+	--font-b3-400: normal normal 400 1.5rem/2.2rem 'Base';
+
+	--font-b4-700: normal normal 700 1.4rem/2rem 'Base';
+	--font-b4-500: normal normal 500 1.4rem/2rem 'Base';
+	--font-b4-400: normal normal 400 1.4rem/2rem 'Base';
+	--font-b4-300: normal normal 300 1.4rem/2rem 'Base';
+
+	--font-em1: normal normal 700 4rem/4.8rem 'Base';
+
+	--font-cap1-700: normal normal 700 1.3rem/1.8rem 'Base';
+	--font-cap1-400: normal normal 400 1.3rem/1.8rem 'Base';
+	--font-cap1-300: normal normal 300 1.3rem/1.8rem 'Base';
+	--font-cap2: normal normal 300 1.2rem/1.8rem 'Base';
+
+	--font-header-main:  normal normal 700 1.8rem/2.2rem 'KBF';
+
+	//tab
+	--font-tab-p: normal normal 400 1.8rem/2.6rem 'Base';
+	--font-tab-s: normal normal 400 1.6rem/2.2rem 'Base';
+	
+	//그림자
+	--box-shadow: 0 .4rem .8rem 0 #0000001F;
+
+	// 라운드
+	--round-x2: 1.6rem; 
+	--round-x1_5: 1.2rem; 
+	--round-x1: 0.8rem;
+
+	// spacing
+	--sp-x0_2: 0.2rem;
+	--sp-x0_5: 0.4rem;
+	--sp-x1: 0.8rem;
+	--sp-x1_5: 1.2rem;
+	--sp-x2: 1.6rem;
+	--sp-x2_5: 2rem;
+	--sp-x3: 2.4rem;
+	--sp-x3_5: 2.8rem;
+	--sp-x4: 3.2rem;
+	--sp-x4_5: 3.6rem;
+	--sp-x5: 4rem;
+	--sp-bottom: 10.4rem;
+
+	//button
+	--btn-font-l: normal normal 500 1.8rem/2rem 'KBF';
+	--btn-font-m: normal normal 500 1.4rem/1.6rem 'Base';
+	--btn-font-s: normal normal 400 1.4rem/1.6rem 'Base';
+	--btn-font-t: normal normal 400 1.4rem/1.8rem 'Base';
+	--btn-height-l: 5.6rem;
+	--btn-height-m: 4.4rem;
+	--btn-height-s: 2.8rem;
+	--btn-text-h: 2rem;
+
+	--btn-line: 1px solid #999EAA;
+	--btn-line-s: 1px solid #BABABC;
+
+	--btn-gray: #EDEDEE;
+	--btn-filed: #FFD700;
+	--btn-tonal: #FFED94;
+
+	--btn-text-color: #555B66;
+	--btn-text-line: 1px solid #555B66;
+	--btn-text-arrow:url("data:image/svg+xml,%3Csvg width='21' height='20' viewBox='0 0 21 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M4.74264 5.75736L8.98528 10L4.74264 14.2426' stroke='%23888E99'/%3E%3C/svg%3E%0A");
+
+	--fab-color-pr :#FFD700;
+	--fab-color-sc :#000000;
+	--fab-color-tt :#FFFFFF;
+	--fab-line-t :1px solid #DADCDF;
+	--fab-font: normal normal 500 1.4rem/1.8rem 'Base';
+	
+	--layout-x-max: 60rem;
+
+	//svg
+ 	--svg-arrow: url("data:image/svg+xml,%3Csvg width='24' height='25' viewBox='0 0 24 25' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M9 19.3333L15.25 12.7083L9 6.08325' stroke='black' stroke-width='1.5' stroke-linecap='round'/%3E%3C/svg%3E%0A");
+
+	//화살표 24
+	--svg-arrow24: url("data:image/svg+xml,%3Csvg width='9' height='15' viewBox='0 0 9 15' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 14L7.25 7.375L1 0.75' stroke='black' stroke-width='1.5' stroke-linecap='round'/%3E%3C/svg%3E%0A") no-repeat 50% 50% / 0.9rem;
+
+	--svg-lock: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect x='7.71436' y='2.57153' width='9' height='15.8571' rx='4.5' stroke='%23A9ABB1' stroke-width='2.14286' stroke-linecap='round'/%3E%3Cpath d='M4.28564 12.4286C4.28564 10.535 5.82067 9 7.71422 9H16.7142C18.6078 9 20.1428 10.535 20.1428 12.4286V16.7143C20.1428 19.7913 17.6484 22.2857 14.5714 22.2857H9.85707C6.78006 22.2857 4.28564 19.7913 4.28564 16.7143V12.4286Z' fill='%23E9EAED'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M13.2575 15.5936C13.7773 15.2396 14.1186 14.6431 14.1186 13.9668C14.1186 12.8806 13.2381 12 12.1518 12C11.0656 12 10.1851 12.8806 10.1851 13.9668C10.1851 14.6945 10.5803 15.3299 11.1678 15.67V17.3473C11.1678 17.9243 11.6356 18.3921 12.2126 18.3921C12.7897 18.3921 13.2575 17.9243 13.2575 17.3473V15.5936Z' fill='%23A9ABB1'/%3E%3C/svg%3E%0A");
+
+    
+
+	--basic: #FFD700;
+	--sub: #FF612D;
+
+	--primary: #FFD700;
+	--point: #FF612D;
+
+	--maingra1: #FFE600;
+	--maingra2: #FFD300;
+	--subgra1: #ffdc60;
+	--subgra2: #ffc805;
+	--subgra3: #ffa800;
+	--subgra4: #ff9900;
+
+	--tpoint: #000000;
+	--text: #444444;
+	--gray: #666666;
+	--gray2: #777777;
+	--lightgray: #999999;
+
+	--red: #E14868;
+	--yellow: #F6D300;
+	--orange: #ff612d;
+	--green: #25C38F;
+	--blue: #4698FC;
+
+	--bggray0: #e1e1e1;
+	--bggray: #f7f7f7;
+	--bggray2: #e5e5e5;
+	--bggray3: #eeeeee;
+	--bggray4: #d7d7d7;
+	--bggray5: #EEEEEE;
+
+	--bgyellow: #fff8d9;
+
+	--linegray: #cccccc;
+	--linelightgray: #d7d7d7;
+	--lineyellow: #ffed94;
+
+	/*그래프 컬러*/
+	--graph01: #f23500;
+	--graph02: #bd2459;
+	--graph03: #ff9500;
+	--graph04: #ffc40e;
+	--graph05: #ffdd85;
+
+
+	/* Grayscale */
+	--gray_100: #000;
+	--gray_95: #222;
+	--gray_90: #444;
+	--gray_80: #666;
+	--gray_70: #777;
+	--gray_60: #999;
+	--gray_50: #ccc;
+	--gray_40: #d7d7d7;
+	--gray_30: #e5e5e5;
+	--gray_20: #eee;
+	--gray_10: #f7f7f7;
+	--gray_0: #fff;
+
+	--line_base: #D7D7D7;
+	--line_light: #EEEEEE;
+
+	--warning: #E14868;
+	--caution: #E18768;
+	--boundary: #F6D300;
+	--usually: #ADDC3D;
+	--good: #25C38F;
+	--info: #4698FC;
+
+	--error: #f44336;
+	--success: #3182f6;
+	--link: #6296df;
+	--cost: #F23500;
+}
+
+$primary: var(--primary);
+$point: var(--point);
+$error: var(--warning);
+$cost: var(--cost);
+$gray-100: var(--gray_100);
+$gray-95: var(--gray_95);
+$gray-90: var(--gray_90);
+$gray-80: var(--gray_80);
+$gray-70: var(--gray_70);
+$gray-60: var(--gray_60);
+$gray-50: var(--gray_50);
+$gray-40: var(--gray_40);
+$gray-30: var(--gray_30);
+$gray-20: var(--gray_20);
+$gray-10: var(--gray_10);
+$gray-0: var(--gray_0);
+
+//REM 기준
+$font-default-size: 62.5%;
+$font-default-size-m: 2.2vw;
+$font-default-size-t: 1vw;
+$maxwidth: 37.5rem;
+
+//기본간격
+$gap : 0.8rem;
+$gap-h : calc($gap / 2);
+
+@mixin getGap($name, $n) {
+	#{$name}: $gap * $n;
+}
+
+$x0: calc($gap * 0);
+$x1: calc($gap * 1);
+$x2: calc($gap * 2);
+$x3: calc($gap * 3);
+$x4: calc($gap * 4);
+$x5: calc($gap * 5);
+$x6: calc($gap * 6);
+$x7: calc($gap * 7);
+$x8: calc($gap * 8);
+$x9: calc($gap * 9);
+$x10: calc($gap * 10);
+$x11: calc($gap * 11);
+$x12: calc($gap * 12);
+$x13: calc($gap * 13);
+$x14: calc($gap * 14);
+$x15: calc($gap * 15);
+$x16: calc($gap * 16);
+$x17: calc($gap * 17);
+$x18: calc($gap * 18);
+$x19: calc($gap * 19);
+$x20: calc($gap * 20);
+$x0_5: calc($gap-h);
+$x1_5: calc($gap * 1 + $gap-h);
+$x2_5: calc($gap * 2 + $gap-h);
+$x3_5: calc($gap * 3 + $gap-h);
+$x4_5: calc($gap * 4 + $gap-h);
+$x5_5: calc($gap * 5 + $gap-h);
+$x6_5: calc($gap * 6 + $gap-h);
+$x7_5: calc($gap * 7 + $gap-h);
+$x8_5: calc($gap * 8 + $gap-h);
+$x9_5: calc($gap * 9 + $gap-h);
+$x10_5: calc($gap * 10 + $gap-h);
+$x11_5: calc($gap * 11 + $gap-h);
+$x12_5: calc($gap * 12 + $gap-h);
+$x13_5: calc($gap * 13 + $gap-h);
+$x14_5: calc($gap * 14 + $gap-h);
+$x15_5: calc($gap * 15 + $gap-h);
+$x16_5: calc($gap * 16 + $gap-h);
+$x17_5: calc($gap * 17 + $gap-h);
+$x18_5: calc($gap * 18 + $gap-h);
+$x19_5: calc($gap * 19 + $gap-h);
+$x20_5: calc($gap * 20 + $gap-h);
+$-x1: calc($gap * -1);
+$-x2: calc($gap * -2);
+$-x3: calc($gap * -3);
+$-x4: calc($gap * -4);
+$-x5: calc($gap * -5);
+$-x6: calc($gap * -6);
+$-x7: calc($gap * -7);
+$-x8: calc($gap * -8);
+$-x9: calc($gap * -9);
+$-x10: calc($gap * -10);
+$-x11: calc($gap * -11);
+$-x12: calc($gap * -12);
+$-x13: calc($gap * -13);
+$-x14: calc($gap * -14);
+$-x15: calc($gap * -15);
+$-x16: calc($gap * -16);
+$-x17: calc($gap * -17);
+$-x18: calc($gap * -18);
+$-x19: calc($gap * -19);
+$-x20: calc($gap * -20);
+$-x0_5: calc($gap-h * -1);
+$-x1_5: calc($gap * -1 - $gap-h);
+$-x2_5: calc($gap * -2 - $gap-h);
+$-x3_5: calc($gap * -3 - $gap-h);
+$-x4_5: calc($gap * -4 - $gap-h);
+$-x5_5: calc($gap * -5 - $gap-h);
+$-x6_5: calc($gap * -6 - $gap-h);
+$-x7_5: calc($gap * -7 - $gap-h);
+$-x8_5: calc($gap * -8 - $gap-h);
+$-x9_5: calc($gap * -9 - $gap-h);
+$-x10_5: calc($gap * -10 - $gap-h);
+$-x11_5: calc($gap * -11 - $gap-h);
+$-x12_5: calc($gap * -12 - $gap-h);
+$-x13_5: calc($gap * -13 - $gap-h);
+$-x14_5: calc($gap * -14 - $gap-h);
+$-x15_5: calc($gap * -15 - $gap-h);
+$-x16_5: calc($gap * -16 - $gap-h);
+$-x17_5: calc($gap * -17 - $gap-h);
+$-x18_5: calc($gap * -18 - $gap-h);
+$-x19_5: calc($gap * -19 - $gap-h);
+$-x20_5: calc($gap * -20 - $gap-h);

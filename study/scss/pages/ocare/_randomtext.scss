@@ -1,0 +1,12 @@
+.game-text-rendom{
+    &-view{
+        font-size: 3.0rem;
+        margin-bottom: 2.0rem;
+        background-color: #2482ff;
+    }
+    &-btn{
+        border: 1px solid red !important;
+        padding: 1.0rem;
+        margin-bottom: 2.0rem;
+    }
+}

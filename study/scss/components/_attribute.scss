@@ -1,0 +1,186 @@
+/* 플래그 */
+[data-flag]::before{
+    content: attr(data-flag);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+[data-flag-after]::after{
+    content: attr(data-flag-after);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+[data-em="700"] {
+    font-weight: 700 !important;
+    
+    * {font: inherit;}
+    .danger{color: #F40000 !important;}
+}
+   
+/* 말줄임 */
+[data-ellipsis] {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    text-align: left;
+}
+[data-ellipsis="1"] {
+    display: block;
+    white-space: nowrap;
+} 
+[data-ellipsis="2"] {
+    display: -webkit-box !important;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+} 
+[data-ellipsis="3"] {
+    display: -webkit-box !important;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+} 
+
+[data-marker]{
+    position: relative;
+    z-index: 1;
+    font: inherit;
+    color: $gray-100;
+    line-height: inherit;
+    
+    &::after{
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 1.3rem;
+        @include setRound(1.0rem);
+        z-index: -1;
+        background-color: #ccc;
+    }
+}
+[data-marker="light-yellow"]::after{background-color: #FFFF66; height: .8rem;}
+
+[data-marker="yellow"]::after{background-color: #FFD700;}
+[data-marker="blue"]::after{background-color: #ECF2FF;}
+[data-marker="mint"]::after{background-color: #AAF9FE;}
+[data-marker="turquoise"]::after{background-color: #DFF9FF;}
+[data-marker="yellow2"]::after{background-color: #FFFDCC;}
+[data-marker="green"]::after{background-color: rgba(74, 223, 138, 0.18)}
+[data-marker="purple"]::after{background-color: #C8CDFF;}
+
+/* TYPOGRAPHY */
+[data-typo] {
+    font-family: "KBF";
+    
+}
+[data-typo="display-l"] {
+    font-size: 3.6rem !important;
+    font-weight: 700 !important;
+    line-height: 4.8rem !important;
+}
+[data-typo="display"] {
+    font-size: 2.8rem !important;
+    font-weight: 700 !important;
+    line-height: 4rem !important;
+}
+[data-typo="display-s"] {
+    font-size: 2.6rem !important;
+    font-weight: 700 !important;
+    line-height: 3.2rem !important;
+}
+[data-typo="title"] {
+    font-size: 2.2rem !important;
+    font-weight: 700 !important;
+    line-height: 3rem !important;
+}
+[data-typo="title-s"] {
+    font-size: 1.8rem !important;
+    font-weight: 700 !important;
+    line-height: 2.4rem !important;
+}
+[data-typo="body-l"] {
+    font-size: 1.6rem !important;
+    font-weight: 700 !important;
+    line-height: 2.2rem !important;
+}
+[data-typo="body"] {
+    font-size: 1.5rem !important;
+    line-height: 2.2rem !important;
+}
+
+[data-typo="body-s"] {
+    font-size: 1.4rem !important;
+    font-weight: 300 !important;
+    line-height: 2rem !important;
+}
+[data-typo="body-ss"] {
+    font-size: 1.3rem !important;
+    font-weight: 300 !important;
+    line-height: 1.8rem !important;
+}
+[data-typo="tag"] {
+    font-size: 1.2rem !important;
+    font-weight: 300 !important;
+    line-height: 1.8rem !important;
+}
+
+@for $i from 0 through 10 {
+    [data-space="x#{$i}"] {
+        max-width: calc(100% + (($gap * $i) * 2)) !important;
+        width: calc(100% + (($gap * $i) * 2)) !important;
+        margin-left: calc(($gap * $i) * -1) !important;
+    }
+}
+@for $i from 0 through 10 {
+    [data-space="-x#{$i}"] {
+        max-width: calc(100% - (($gap * $i) * 2)) !important;
+        width: calc(100% - (($gap * $i) * 2)) !important;
+        margin-left: calc(($gap * $i)) !important;
+    }
+} 
+[data-space="full"] {
+    max-width: inherit;
+    width: 100vw !important;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+[data-scroll="x"] {
+    position: relative;
+    overflow: hidden;
+    display: flex;
+
+    & > * {
+        position: relative;
+        width: 100%;
+        display: flex;
+        gap: $x2;
+        overflow-y: hidden;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+
+        &::-webkit-scrollbar {display: none;}
+    }
+} 
+[data-scroll="y"] {
+    position: relative;
+    overflow: hidden;
+    display: flex;
+
+    & > * {
+        position: relative;
+        width: 100%;
+        display: flex;
+        gap: $x2;
+        flex-direction: column;
+        overflow-x: hidden;
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
+
+        &::-webkit-scrollbar {display: none;}
+    }
+}
+
+[data-align="center"] {text-align: center !important;} 
+[data-align="left"] {text-align: left !important;} 
+[data-align="right"] {text-align: right !important;} 

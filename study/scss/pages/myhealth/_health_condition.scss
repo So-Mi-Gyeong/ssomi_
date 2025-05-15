@@ -1,0 +1,2180 @@
+//메인
+.NMDP_15_1V {
+	.ocr-body {
+		padding: 0 2.4rem;
+	}
+
+	.mdl-wrap {
+		height: 100dvh;
+		overflow: hidden;
+	}
+
+	.healthMainSwiper {
+		width: 100%;
+		height: 100%;
+		overflow: visible;
+		height: 50.6rem;
+	}
+
+	.healthMainSwiper .swiper-slide {
+		display: flex;
+		justify-content: flex-start;
+		align-items: flex-start;
+		padding-top: 2rem;
+	}
+
+	.ods-card {
+		position: relative;
+		z-index: 1;
+		background-color: transparent;
+		gap: 4.4rem;
+	}
+
+	.ods-card--item {
+		border: 0;
+		min-height: 46.4rem;
+		// min-height: calc(100dvh - 30rem);
+		padding: 3.6rem 2.8rem;
+		justify-content: flex-start;
+		flex-direction: column;
+
+		.mdl-btn {
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			background-color: transparent;
+			border: 0;
+			top: 0rem;
+			left: 0rem;
+			z-index: 10;
+		}
+	}
+
+	[data-icon="ods-arrow"] {
+		width: 1.1rem;
+		height: 2.1rem;
+		background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='11' height='21' viewBox='0 0 11 21' fill='none'%3E%3Cpath d='M1 19L8.93934 11.0607C9.52513 10.4749 9.52513 9.52513 8.93934 8.93934L1 1' stroke='black' stroke-width='2.1' stroke-linecap='round'/%3E%3C/svg%3E");
+		background-size: 1.1rem;
+		transform: translate(0.6rem, -0.6rem);
+	}
+
+	.ods-card--title {
+		font: var(--font-h4);
+		font-weight: 300;
+		color: #000;
+		text-align: left;
+	}
+
+	.ods-card--title[data-style="bold"] {
+		font: var(--font-h2);
+		color: #000;
+		margin-top: 0.4rem;
+	}
+
+	.ods-card--group {
+		flex-direction: column;
+		align-items: flex-start;
+		flex-shrink: 0;
+	}
+
+	.ods-card--bottom {
+		position: relative;
+		flex: 1;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		img {
+			width: 23.5rem;
+		}
+	}
+
+	.line-bg {
+		z-index: 0;
+		position: fixed;
+		top: calc(20rem + env(safe-area-inset-top));
+		left: -0.1rem;
+		width: 224.8rem;
+		height: 27.5rem;
+		transform: translateX(-36rem);
+		background-image: url("data:image/svg+xml,%3Csvg width='2247' height='274' viewBox='0 0 2247 274' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M23 144.101C78.3361 90.8099 169 5.57212 343 18C438 24.7853 473.52 102.097 521 160.097C640.565 306.155 787.803 268.963 888 174.097C956.426 109.312 1113.67 -36.7367 1386.94 144.101C1670.44 331.716 1809.99 211.298 1960.8 118.408C2111.6 25.5189 2197.63 20.5779 2229 17.6134' stroke='%23FFBE1C' stroke-width='32' stroke-linecap='square'/%3E%3C/svg%3E%0A");
+		background-size: cover;
+		background-position: 0 0;
+		background-repeat: no-repeat;
+		transition: left 600ms cubic-bezier(0.165, 0.84, 0.44, 1);
+	}
+}
+
+.swiper-slide-active .ods-card--item[data-style="myhealth-main-info"] {
+	.img1 {
+		position: absolute;
+		width: 19.6rem;
+		top: calc(50% - 6rem);
+		left: calc(50% - 9rem);
+	}
+
+	.img2 {
+		position: absolute;
+		width: 4.4rem;
+		top: calc(50% - 10rem);
+		left: calc(50% + 4rem);
+		transform: rotate(0);
+	}
+
+	.img3 {
+		position: absolute;
+		width: 9.8rem;
+		top: calc(50% - 0rem);
+		left: calc(50% - 13rem);
+		transform: rotate(0);
+	}
+}
+
+.ods-card--item[data-style="myhealth-main-info"] {
+	background-color: rgba(62, 190, 126, 0.9);
+
+	.img1 {
+		position: absolute;
+		width: 19.6rem;
+		top: calc(50% - 6rem);
+		left: calc(50% - 9rem);
+		z-index: 2;
+		transition: all .3s ease-in;
+	}
+
+	.img2 {
+		position: absolute;
+		width: 4.4rem;
+		top: calc(50% - 2rem);
+		left: calc(50% - 2rem);
+		z-index: 1;
+		transform: rotate(680deg);
+		transition: all .3s ease-in;
+	}
+
+	.img3 {
+		position: absolute;
+		width: 9.8rem;
+		top: calc(50% - 2rem);
+		left: calc(50% - 10rem);
+		transform: rotate(35deg);
+		z-index: 3;
+		transition: all .3s ease-in;
+	}
+}
+
+.swiper-slide-active .ods-card--item[data-style="myhealth-main-state"] {
+	.img1 {
+		position: absolute;
+		width: 8.3rem;
+		top: calc(50% - 13rem);
+		left: calc(50% - 10rem);
+		z-index: 4;
+		transform: rotate(0) scale(1);
+	}
+
+	.img2 {
+		position: absolute;
+		width: 21.3rem;
+		top: calc(50% - 8rem);
+		left: calc(50% - 10rem);
+		z-index: 3;
+		transform: rotate(0);
+	}
+
+	.img3 {
+		position: absolute;
+		width: 21.3rem;
+		top: calc(50% - 2rem);
+		left: calc(50% - 11rem);
+		z-index: 2;
+		transform: rotate(0);
+	}
+
+	.img4 {
+		position: absolute;
+		width: 13.3rem;
+		top: calc(50% + 3rem);
+		left: calc(50% - 1rem);
+		z-index: 1;
+		scale: 1;
+	}
+}
+
+.ods-card--item[data-style="myhealth-main-state"] {
+	background-color: rgba(253, 215, 79, 0.9);
+
+	.img1 {
+		position: absolute;
+		width: 8.3rem;
+		top: calc(50% - 13rem);
+		left: calc(50% - 10rem);
+		z-index: 4;
+		transform: rotate(-180deg) scale(0);
+		transition-delay: .4s;
+		transition: all .3s ease-in;
+	}
+
+	.img2 {
+		position: absolute;
+		top: calc(50% - 8rem);
+		left: calc(50% - 10rem);
+		z-index: 3;
+		transform: rotate(-4deg);
+		transition: all .2s ease-in;
+	}
+
+	.img3 {
+		position: absolute;
+		width: 21.3rem;
+		top: calc(50% - 2rem);
+		left: calc(50% - 11rem);
+		z-index: 2;
+		transform: rotate(10deg);
+		transform-origin: 100% 50%;
+		transition: all 0.5s cubic-bezier(.8, 1.8, .62, .76);
+		transition-delay: 0.3s;
+	}
+
+	.img4 {
+		position: absolute;
+		width: 13.3rem;
+		top: calc(50% + 3rem);
+		left: calc(50% - 1rem);
+		z-index: 1;
+		scale: 0;
+		transition: all .3s ease-in;
+		transition-delay: 0.4s;
+	}
+}
+
+.swiper-slide-active .ods-card--item[data-style="myhealth-main-ocareM"] {
+	.img1 {
+		position: absolute;
+		width: 15rem;
+		top: calc(50% - 9rem);
+		left: calc(50% - 12rem);
+		z-index: 1;
+		rotate: 0deg;
+	}
+
+	.img2 {
+		position: absolute;
+		width: 12.4rem;
+		top: calc(50% + 4rem);
+		left: calc(50% - 8rem);
+		z-index: 2;
+		scale: 1;
+	}
+
+	.img3 {
+		position: absolute;
+		width: 12.7rem;
+		top: calc(50% - 8rem);
+		left: calc(50% - 1rem);
+		rotate: 0deg;
+		z-index: 4;
+	}
+
+	.img4 {
+		position: absolute;
+		width: 4.8rem;
+		top: calc(50% - 12rem);
+		left: calc(50% - 1rem);
+		z-index: 3;
+		scale: 1;
+	}
+}
+
+.ods-card--item[data-style="myhealth-main-ocareM"] {
+	background-color: rgba(234, 201, 215, 0.9);
+
+	.img1 {
+		position: absolute;
+		width: 15rem;
+		top: calc(50% - 9rem);
+		left: calc(50% - 15rem);
+		z-index: 1;
+		rotate: -49deg;
+		transition: all .3s ease-in;
+	}
+
+	.img2 {
+		position: absolute;
+		width: 12.4rem;
+		top: calc(50% + 4rem);
+		left: calc(50% - 8rem);
+		z-index: 2;
+		scale: 0;
+		transition: all .5s ease-in;
+	}
+
+	.img3 {
+		position: absolute;
+		width: 12.7rem;
+		top: calc(50% - 8rem);
+		left: calc(50% + 2rem);
+		z-index: 4;
+		rotate: 41deg;
+		transition: all .3s ease-in;
+	}
+
+	.img4 {
+		position: absolute;
+		width: 4.8rem;
+		top: calc(50% - 12rem);
+		left: calc(50% - 1rem);
+		z-index: 3;
+		scale: 0;
+		transition: all .4s ease-in;
+	}
+}
+
+.swiper-slide-active .ods-card--item[data-style="myhealth-main-group"] {
+	.img {
+		scale: 1;
+	}
+}
+
+.ods-card--item[data-style="myhealth-main-group"] {
+	background-color: transparent;
+	padding: 0;
+	gap: 4.4rem;
+
+	.ods-card--item-box {
+		background-color: rgba(173, 173, 251, 0.9);
+		padding: 3.6rem 2.8rem;
+		position: relative;
+		display: flex;
+		gap: 1.6rem;
+		align-items: center;
+		flex-wrap: wrap;
+		width: 100%;
+		justify-content: flex-start;
+		flex-direction: column;
+		border-radius: 1.6rem;
+		min-height: 21rem;
+	}
+
+	.img {
+		display: block;
+		position: absolute;
+		width: 8rem;
+		bottom: 3rem;
+		right: 1.7rem;
+		z-index: 1;
+		scale: 0;
+		transition: all .3s ease-in;
+	}
+
+	.ods-card--item-box[data-style="routine"] {
+		background-color: rgba(117, 221, 195, 0.9);
+
+		.img {
+			bottom: 1.6rem;
+			right: 2.4rem;
+		}
+	}
+}
+
+.ods-card--img[data-style="oblong"] {
+	box-shadow: inset 1px 1px 1px rgba(0, 0, 0, 5%), inset -1px -1px rgba(0, 0, 0, 5%);
+	background: url(../img/page/NMDP_15/none-medicine.png) no-repeat 50% 50% / 20rem;
+}
+
+//나의 건강 정보
+.NMDP_15_2V {
+	.ocr-body {
+		padding-top: 0;
+	}
+
+	.mdl-wrap[data-color="darkgray"] {
+		padding: 0;
+	}
+	.mdl-tab{
+		margin-top: 2.4rem;
+	}
+	.mdl-wrap {
+		padding-top: 3.6rem;
+		padding-bottom: 3.6rem;
+	}
+
+	.ods-card {
+		padding-bottom: 0;
+	}
+
+	//간격
+	.ods-subject {
+		&+.ods-card {
+			margin-top: 1.6rem;
+		}
+
+		&+[data-type="history"] {
+			margin-top: 1.8rem;
+		}
+	}
+
+	.ods-subject--text {
+		font: var(--font-b4-400);
+		color: var(--color-gray-200);
+	}
+
+	// 기본정보
+	.health-data {
+		position: relative;
+		width: 32.7rem;
+		box-shadow: 0px .6rem 1.6rem 0px rgba(0, 0, 0, 0.08);
+		background: url("../img/page/NMDP_15/ods_fitlift_bg.png") 0 0 no-repeat;
+		background-size: 32.7rem auto;
+		border-radius: 1.6rem;
+		padding: 2.4rem 1.6rem;
+		margin: 3.2rem auto 3.2rem;
+		height: 30.8rem;
+
+		.ods-card {
+			display: flex;
+			flex-direction: row;
+			gap: 4.3rem;
+
+			&--img {
+				margin: 0.4rem 0 0 1.6rem;
+				width: 7.2rem;
+				min-width: 7.2rem;
+				height: 7.2rem;
+			}
+
+			&--info {
+				display: flex;
+				flex-direction: row;
+				flex-wrap: wrap;
+				gap: 1.2rem;
+			}
+
+			&--group {
+				display: flex;
+				flex-wrap: wrap;
+				flex-direction: row;
+				justify-content: flex-start;
+				gap: 1.2rem 0.8rem;
+				width: 15.5rem;
+
+				div {
+					display: flex;
+					flex-direction: column;
+					align-items: flex-start;
+					gap: 0.2rem;
+					width: 7.2rem;
+				}
+			}
+
+			&--title {
+				color: var(--color-gray-350);
+				font: var(--font-b4-400);
+				min-height: 2rem;
+
+				&[data-style="bold"] {
+					display: flex;
+					align-items: baseline;
+					gap: 0;
+					min-height: 2.6rem;
+					font: var(--font-b1-700);
+					color: var(--color-gray-0);
+
+					b {
+						font: var(--font-b1-700);
+						color: var(--color-gray-0);
+					}
+
+					span {
+						color: var(--color-gray-0);
+						font: var(--font-b4-700);
+					}
+				}
+			}
+		}
+
+		::-webkit-scrollbar {
+			display: none;
+		}
+
+		&--list {
+			position: relative;
+			padding: 0;
+			max-width: 100vw;
+			display: flex;
+			justify-content: center;
+			margin-top: 2.8rem;
+
+			.ods-card {
+				display: flex;
+				flex-direction: row;
+				overflow-x: auto;
+				overflow-y: hidden;
+				gap: 0.8rem !important;
+				padding: 0 4rem 1.2rem 4rem;
+
+				&--item {
+					display: flex;
+					min-width: 13.2rem;
+					width: 100%;
+					height: 12.4rem;
+					background-color: var(--color-gray-900);
+					box-shadow: 0 .4rem .8rem 0 #0000001F;
+					border: none;
+					gap: 1.2rem;
+					border-radius: 1.2rem;
+					justify-content: flex-start;
+					align-items: flex-start;
+					padding-top: 2.3rem;
+				}
+
+				&--info {
+					width: 100%;
+					display: flex;
+					flex-direction: column;
+					flex: initial;
+					gap: 0.4rem;
+				}
+
+				&--group {
+					width: initial;
+					gap: 1.5rem 0;
+					justify-content: space-between;
+					flex-wrap: nowrap;
+				}
+
+				&--title {
+					display: flex;
+					font-size: 1.4rem;
+					font-weight: 700;
+					line-height: 2rem;
+					color: var(--color-gray-100);
+
+					&[data-style="bold"] {
+						font-size: 1.8rem;
+						line-height: 2.6rem;
+						gap: 0.2rem;
+
+						span {
+							font-size: 1.2rem;
+							font-weight: 300;
+							line-height: 1.8rem;
+							color: var(--color-gray-100);
+						}
+					}
+				}
+
+				&--text {
+					font-size: 1.2rem;
+					font-weight: 300;
+					line-height: 1.8rem;
+					color: var(--color-gray-300);
+				}
+
+				.ods-badge {
+					min-width: 3.6rem;
+					text-align: center;
+					padding: 0;
+					display: inline-flex;
+					justify-content: center;
+					align-items: center;
+				}
+			}
+		}
+	}
+
+	.mdl-chart {
+		padding-top: 0;
+		padding-right: 0;
+		padding-left: 3.8rem;
+
+		&[data-severity="예외"] {
+			padding-left: 0;
+
+			.mdl-chart-svg {
+				transform: translateY(0rem);
+			}
+
+			.mdl-chart-item-btn::after {
+				transform: translateY(-0.7rem);
+			}
+
+			.mdl-chart-y-n~.mdl-chart-y-n {
+
+				&::after,
+				&::before {
+					display: none;
+				}
+			}
+		}
+
+
+		.mdl-chart-wrap {
+			height: 10.9rem;
+			border-bottom: 1px solid #F2F2F2;
+		}
+
+		.mdl-chart-item-name {
+			font-family: 'Base';
+		}
+
+		.mdl-chart-item-btn::after {
+			background-color: #fff !important;
+			border: 0.4rem solid var(--color-kb-yellow-100) !important;
+			min-width: 1.4rem !important;
+			width: 1.4rem !important;
+			height: 1.4rem !important;
+			box-sizing: border-box;
+		}
+
+		.mdl-chart-tooltip {
+			display: none !important;
+		}
+
+		.mdl-chart-item {
+			width: 100%;
+			flex: 1;
+			border-left: 0;
+
+			&::before {
+				display: none;
+			}
+
+			.mdl-chart-item-name {
+				font-weight: 400;
+				color: var(--color-gray-300);
+			}
+		}
+
+		.mdl-chart-item[data-tooltip="true"] {
+			z-index: 3;
+		}
+
+		.mdl-chart-item-wrap {
+			z-index: 1;
+		}
+
+		.mdl-chart-item:nth-child(1) {
+			border-left: 0;
+		}
+
+		.mdl-chart-y-n:last-child:after {
+			display: none !important;
+		}
+
+		.mdl-chart-svg {
+			transform: translateY(1.8rem);
+		}
+
+		.mdl-chart-item-btn {
+			top: 0;
+			height: 100%;
+			align-items: flex-start;
+			transform: translate(-1.5rem, 0);
+
+			&::after {
+				transform: translateY(1.1rem);
+			}
+
+			&::before {
+				content: "";
+				display: none;
+				position: absolute;
+				bottom: 0;
+				height: calc(100% - 1.1rem);
+				width: 0.1rem;
+				opacity: 0.7;
+				border-left: 0.1rem dashed #111;
+			}
+		}
+
+		.mdl-chart-item-btn[data-selected="true"]~.mdl-chart-item-name::after {
+			display: block;
+		}
+
+		.mdl-chart-item-name::after {
+			content: "";
+			display: none;
+			position: absolute;
+			top: 0;
+			left: 50%;
+			width: 1.9rem;
+			height: 1rem;
+			background-image: url("data:image/svg+xml,%3Csvg width='19' height='10' viewBox='0 0 19 10' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0_1325_5599)'%3E%3Cpath d='M10.7931 1.93483C10.1954 1.08943 8.94121 1.08943 8.3435 1.93483L3.5 9.2995L3.5 11L15.5 11L15.5 9.2995L10.7931 1.93483Z' fill='white'/%3E%3Cpath d='M3.1366 9.2995L8.3435 1.93483C8.94121 1.08943 10.1954 1.08943 10.7931 1.93483L16 9.2995' stroke='%23DADCDF'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_1325_5599'%3E%3Crect width='19' height='10' fill='white'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E%0A");
+			background-repeat: no-repeat;
+			background-size: 50% 0;
+			background-size: 1.9rem;
+			transform: translate(-50%, 2.3rem);
+		}
+
+		.mdl-chart-item-btn[data-selected="true"]::before {
+			display: block;
+		}
+
+		.mdl-chart-unit {
+			display: none;
+		}
+
+		.mdl-chart-y-n:nth-child(2) {
+			opacity: 0;
+		}
+
+		.mdl-chart-y-n:nth-child(3) span,
+		.mdl-chart-y-n:nth-child(4) span,
+		.mdl-chart-y-n:nth-child(5) span,
+		.mdl-chart-y-n:nth-child(6) span,
+		.mdl-chart-y-n:nth-child(7) span {
+			display: none;
+		}
+
+		.mdl-chart-y-n::before {
+			width: 2.6rem;
+			text-align: right;
+		}
+
+		.mdl-chart-y-n:nth-child(3)::before,
+		.mdl-chart-y-n:nth-child(4)::before,
+		.mdl-chart-y-n:nth-child(5)::before,
+		.mdl-chart-y-n:nth-child(6)::before,
+		.mdl-chart-y-n:nth-child(7)::before {
+			position: absolute;
+			transform: translateY(1.1rem);
+			display: block;
+			left: -3.8rem;
+			font-size: 1.2rem;
+			color: #666C77;
+		}
+
+		.mdl-chart-y-n:nth-child(3)::before {
+			content: "1단계";
+		}
+
+		.mdl-chart-y-n:nth-child(4)::before {
+			content: "2단계";
+		}
+
+		.mdl-chart-y-n:nth-child(5)::before {
+			content: "3단계";
+		}
+
+		.mdl-chart-y-n:nth-child(6)::before {
+			content: "4단계";
+		}
+
+		&[data-severity="중증도+예외"] {
+			.mdl-chart-y-n:nth-child(3)::before {
+				content: "예외";
+			}
+
+			.mdl-chart-y-n:nth-child(4)::before {
+				content: "1단계";
+			}
+
+			.mdl-chart-y-n:nth-child(5)::before {
+				content: "2단계";
+			}
+
+			.mdl-chart-y-n:nth-child(6)::before {
+				content: "3단계";
+			}
+
+			.mdl-chart-y-n:nth-child(7)::before {
+				content: "4단계";
+			}
+		}
+
+		&[data-length="4"] {
+			.mdl-chart-item-btn::after {
+				transform: translateY(0.7rem);
+			}
+
+			.mdl-chart-y-n::before {
+				transform: translateY(0.8rem);
+			}
+
+			.mdl-chart-svg {
+				transform: translateY(1.4rem);
+			}
+		}
+
+		&[data-severity="중증도+예외"][data-length="4"] {
+			.mdl-chart-unit+.mdl-chart-y-n {
+				opacity: 1;
+
+				span {
+					display: none;
+				}
+			}
+
+			.mdl-chart-unit+.mdl-chart-y-n::before {
+				content: "";
+				display: block;
+				position: absolute;
+				width: 100%;
+				height: 2.8rem;
+				background-color: #f2f2f2;
+				bottom: 0.8rem;
+			}
+		}
+
+		&[data-severity="중증도+예외"][data-length="3"] {
+			.mdl-chart-unit+.mdl-chart-y-n {
+				opacity: 1;
+
+				span {
+					display: none;
+				}
+			}
+
+			.mdl-chart-unit+.mdl-chart-y-n::before {
+				content: "";
+				display: block;
+				position: absolute;
+				width: 100%;
+				height: 3.7rem;
+				background-color: #f2f2f2;
+				bottom: 0rem;
+			}
+		}
+	}
+
+	// 최근 병원/약국 이용
+	.ods-card--graybox {
+		&-item {
+			gap: .4rem;
+		}
+	}
+
+	[data-div="middle-dot"] {
+		.ods-card--div-item {
+			color: var(--color-gray-350);
+		}
+	}
+
+	// 최근 예방접종
+	.ods-card--list {
+		.ods-card--text {
+			color: var(--color-gray-350);
+		}
+	}
+
+	[data-type="history"] {
+		gap: .8rem;
+
+		.ods-card--div-item {
+			color: var(--color-gray-350);
+		}
+
+		.ods-card--text {
+			flex-shrink: 0;
+			font: var(--font-cap1-400);
+			color: var(--color-gray-200);
+		}
+	}
+
+	// 의심 보유 질환 분석 리포트
+	
+	.mdl-tab-pnl {
+		padding-top: 1.6rem;
+
+		.ods-subject {
+			padding-bottom: .2rem;
+
+			.ods-subject--title {
+				font: var(--font-b1-700);
+			}
+		}
+	}
+
+	.ods-bullet--noti {
+		&::before {
+			width: 1.8rem;
+			min-width: 1.8rem;
+			height: 1.8rem;
+			background-size: 1.8rem;
+		}
+	}
+
+	[data-type="graph-info"] {
+		margin-top: .2rem;
+		padding: 2.4rem 1.6rem;
+		border: .1rem solid #DADCDF;
+		border-radius: 1.6rem;
+		position: relative;
+
+		.ods-card-item {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+		}
+
+		.ods-card--group {
+			justify-content: center;
+		}
+
+		.ods-card--title[data-style="bold"] {
+			font: var(--font-h4);
+			color: var(--color-gray-50);
+		}
+
+		.ods-card--title {
+			margin-top: .4rem;
+			font: var(--font-b3-400);
+			color: var(--color-gray-100);
+		}
+
+		.ods-card--text {
+			display: flex;
+			flex-direction: column;
+			gap: 1.2rem;
+			font: var(--font-b4-400);
+			color: var(--color-gray-200);
+			text-align: center;
+		}
+
+		.ods-card--text.source {
+			font: var(--font-cap1-300);
+			color: var(--color-gray-400);
+			margin-top: 1.2rem;
+		}
+
+		.ods-card--img {
+			width: 8rem;
+			height: 8rem;
+			margin: 2rem 0;
+			border-radius: 0;
+			background-color: transparent;
+			box-shadow: none;
+		}
+
+		.ods-card--notice {
+			margin-top: 2.4rem;
+			padding: 2.4rem 1.4rem;
+			font: var(--font-b2-400);
+			color: var(--color-gray-100);
+			text-align: center;
+			border-radius: 1.2rem;
+			background-color: rgba(255, 215, 0, 0.1);
+
+			strong {
+				font: var(--font-b2-700);
+				color: var(--color-gray-100);
+			}
+		}
+	}
+
+	// 팝업
+	.mdl-modal {
+		&[data-style="ex"] {
+			.mdl-modal-header-group {
+				display: flex;
+				align-items: center;
+				gap: .8rem;
+			}
+
+			.mdl-modal-wrap {
+				padding-bottom: env(safe-area-inset-bottom);
+			}
+
+			.mdl-modal-body {
+				padding-bottom: 0;
+			}
+
+			.ods-badge {
+				background-color: #FFD700 !important;
+				border-color: #FFD700 !important;
+				color: #000;
+			}
+		}
+
+		&[data-style="severity"] {
+			.mdl-modal-body {
+				display: flex;
+				flex-direction: column;
+			}
+
+			.ods-card--item {
+				gap: .4rem;
+				padding: 0;
+				border: 0;
+				border-radius: 0;
+			}
+
+			.ods-card--title {
+				font: var(--font-b1-700);
+				color: var(--color-gray-100);
+			}
+
+			.ods-card--text {
+				font: var(--font-b2-400);
+				color: var(--color-gray-200);
+			}
+		}
+	}
+}
+
+//병원/약국 이용내역
+.NMDP_15_3V {
+	.ods-subject {
+		margin-bottom: 2.8rem;
+
+		&--group {
+			justify-content: flex-start;
+			gap: 1.6rem;
+		}
+
+		&--title {
+			font: var(--font-h5);
+			color: var(--color-gray-100);
+		}
+	}
+
+	.ods-card [data-history="point"][aria-label="약국"]{
+		background-color: #FFFFFF;
+		background-image: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect x='10.623' y='6.10352e-05' width='7.51112' height='15.0222' rx='3.75556' transform='rotate(45 10.623 6.10352e-05)' fill='%23FFD797'/%3E%3Cpath d='M7.96746 2.65564C9.4341 1.18901 11.812 1.18901 13.2786 2.65564C14.7453 4.12228 14.7453 6.50017 13.2786 7.96681L10.623 10.6224L5.31188 5.31123L7.96746 2.65564Z' fill='url(%23paint0_linear_1186_2683)'/%3E%3Cdefs%3E%3ClinearGradient id='paint0_linear_1186_2683' x1='7.35542' y1='2.50377' x2='13.4582' y2='8.60656' gradientUnits='userSpaceOnUse'%3E%3Cstop stop-color='%23F7655B'/%3E%3Cstop offset='1' stop-color='%23E1453B'/%3E%3C/linearGradient%3E%3C/defs%3E%3C/svg%3E%0A");
+		background-position: 50% 50%;
+		background-repeat: no-repeat;
+		background-size:1.6rem;
+	}
+
+	[data-type="hospital"] .ods-card--group[data-type="badge"] {
+		.ods-badge {
+			flex-shrink: 0;
+		}
+
+		.ods-badge+.ods-badge {
+			flex: 1;
+		}
+	}
+
+	.ods-searchtype {
+		position: relative;
+		width: 100%;
+		max-width: 37.5rem;
+		height: 5.2rem;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: 0 2.4rem;
+
+		&--total {
+			font: var(--font-b3-500);
+			color: var(--color-gray-200);
+		}
+
+		fieldset {
+			position: relative;
+			display: flex;
+			gap: .6rem;
+
+			label {
+				font: var(--font-b3-500);
+				color: var(--color-gray-400);
+				cursor: pointer;
+			}
+
+			:checked+label {
+				font: var(--font-b3-700);
+				color: var(--color-gray-150);
+			}
+
+			label+input {
+				&+label {
+					display: flex;
+					align-items: center;
+					gap: 1.2rem;
+
+					&::before {
+						content: '';
+						display: block;
+						width: 0.1rem;
+						height: 1.6rem;
+						background-color: var(--color-gray-600);
+					}
+				}
+			}
+		}
+	}
+
+	.history-line {
+		margin-top: 2rem;
+	}
+
+	[data-type="history"] {
+		gap: .8rem;
+		padding-left: 3.4rem;
+
+		&::before {
+			left: 1.3rem;
+		}
+
+		[data-history="point"] {
+			left: -5.1rem;
+		}
+
+		.ods-card--info {
+			gap: 0;
+		}
+
+		.ods-card--item {
+			&:first-child {
+				margin-top: .8rem;
+			}
+
+			&:last-child {
+				margin-bottom: 2rem;
+			}
+		}
+
+		[data-type="badge"] {
+			justify-content: flex-start;
+			gap: .8rem;
+			margin-top: .8rem;
+			flex-wrap: wrap;
+
+			.ods-badge {
+				display: block;
+				white-space: nowrap;
+				text-overflow: ellipsis;
+				overflow: hidden;
+				text-align: left;
+			}
+		}
+	}
+}
+
+//병원 이용 상세
+.NMDP_15_4V {
+	.statement {
+		margin-top: 3.6rem;
+	}
+
+}
+
+.NMDP_15_4V-head {
+	padding-bottom: 3.6rem;
+}
+
+.NMDP_15_4V-head,
+.NMDP_15_5V-head {
+	.ods-card--info {
+		gap: 0;
+
+		.ods-card--group .ods-card--group {
+			flex: 1;
+		}
+
+		.ods-card--group+.ods-card--group {
+			margin-top: 2.6rem;
+		}
+
+		.ods-card--title {
+			width: auto;
+			font: var(--font-h3);
+			color: var(--color-gray-0);
+		}
+
+		.ods-card--text {
+			font: var(--font-b3-400);
+			color: var(--color-gray-350);
+		}
+	}
+
+	[data-history="point"][aria-label] {
+		background-size: 2.8rem;
+		background-color: transparent;
+	}
+
+	.mdl-btn {
+		gap: .2rem;
+		flex-shrink: 0 !important;
+	}
+
+	.ods-card--graybox {
+		margin-top: 2rem;
+	}
+}
+
+//약 정보 상세
+.NMDP_15_6V {
+	.ods-card--title {
+		font: var(--font-h3);
+	}
+
+	.ods-card {
+		gap: .4rem;
+		margin-top: 2rem;
+		padding-bottom: 0;
+
+		&+.mdl-bul-num {
+			margin-top: 1.6rem;
+		}
+	}
+
+	.ods-card--img {
+		width: 100%;
+		height: 100%;
+		border-radius: .1rem;
+		background-color: transparent;
+		box-shadow: none;
+
+		&.nodata {
+			width: 100% !important;
+			height: 18.5rem !important;
+			padding: 0;
+			border-radius: 1rem !important;
+			background-color: #f2f2f2 !important;
+			position: relative;
+			background: none;
+
+			&::before {
+				content: '';
+				width: 7rem;
+				height: 7rem;
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+				background-size: 7rem;
+				background-image: url("data:image/svg+xml,%3Csvg width='70' height='70' viewBox='0 0 70 70' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0_932_7105)'%3E%3Cmask id='mask0_932_7105' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='1' y='10' width='49' height='48'%3E%3Crect x='1.73828' y='49.394' width='40.1818' height='40.1818' transform='rotate(-78.0234 1.73828 49.394)' fill='%23D9D9D9'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_932_7105)'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M12.7716 15.1047C17.5293 12.0122 23.8935 13.3623 26.9859 18.12L40.0529 38.2212C43.145 42.9805 41.795 49.3447 37.0373 52.4372C32.2796 55.5296 25.9154 54.1796 22.823 49.4219L9.75632 29.319C6.66388 24.5613 8.01392 18.1971 12.7716 15.1047Z' fill='%23B7BABF'/%3E%3Cmask id='mask1_932_7105' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='-3' y='4' width='40' height='37'%3E%3Cpath d='M36.9554 25.3738L13.1327 40.8583L-2.09377 28.7285L4.35838 4.76704L24.8458 5.00544L36.9554 25.3738Z' fill='%23D9D9D9'/%3E%3C/mask%3E%3Cg mask='url(%23mask1_932_7105)'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M12.7716 15.1045C17.5293 12.012 23.8935 13.3621 26.9859 18.1198L40.0529 38.221C43.145 42.9804 41.795 49.3446 37.0373 52.437C32.2796 55.5294 25.9154 54.1794 22.823 49.4217L9.75632 29.3188C6.66388 24.5611 8.01392 18.1969 12.7716 15.1045Z' fill='%23DADCDF'/%3E%3C/g%3E%3Cpath opacity='0.5' fill-rule='evenodd' clip-rule='evenodd' d='M24.3732 41.9304C23.4379 42.5273 22.1957 42.2529 21.5988 41.3176L12.5315 27.1097C11.9346 26.1744 12.209 24.9322 13.1443 24.3353C14.0797 23.7384 15.3218 24.0127 15.9187 24.9481L24.986 39.1559C25.5829 40.0913 25.3086 41.3334 24.3732 41.9304Z' fill='white'/%3E%3C/g%3E%3Cmask id='mask2_932_7105' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='24' y='19' width='50' height='50'%3E%3Crect x='24.082' y='30.3052' width='40.1818' height='40.1818' transform='rotate(-16.2203 24.082 30.3052)' fill='%23D9D9D9'/%3E%3C/mask%3E%3Cg mask='url(%23mask2_932_7105)'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M59.516 23.8271C64.4895 26.559 66.3067 32.8059 63.5748 37.7793L52.0332 58.7935C49.2997 63.7675 43.0528 65.5848 38.0794 62.8529C33.1059 60.121 31.2886 53.8741 34.0205 48.9006L45.5638 27.886C48.2957 22.9125 54.5425 21.0952 59.516 23.8271Z' fill='%23DADCDF'/%3E%3Cmask id='mask3_932_7105' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='36' y='11' width='39' height='39'%3E%3Cpath d='M61.8919 49.9931L36.9887 36.3139L40.4845 17.163L64.6511 11.5276L74.1214 29.6964L61.8919 49.9931Z' fill='%23D9D9D9'/%3E%3C/mask%3E%3Cg mask='url(%23mask3_932_7105)'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M59.516 23.8264C64.4895 26.5583 66.3067 32.8052 63.5748 37.7786L52.0332 58.7928C49.2997 63.7668 43.0528 65.5841 38.0794 62.8522C33.1059 60.1203 31.2886 53.8734 34.0205 48.8999L45.5638 27.8853C48.2957 22.9118 54.5425 21.0945 59.516 23.8264Z' fill='%23777D88'/%3E%3C/g%3E%3Cpath opacity='0.4' fill-rule='evenodd' clip-rule='evenodd' d='M41.3554 46.7277C40.3874 46.1854 40.0423 44.961 40.5846 43.993L48.8221 29.2885C49.3644 28.3204 50.5887 27.9753 51.5568 28.5176C52.5248 29.0599 52.8699 30.2843 52.3276 31.2523L44.0902 45.9568C43.5479 46.9249 42.3235 47.27 41.3554 46.7277Z' fill='white'/%3E%3C/g%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_932_7105'%3E%3Crect width='70' height='70' fill='white'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E%0A");
+			}
+		}
+	}
+
+	.mdl-bul-num {
+		display: flex;
+		flex-direction: column;
+		gap: .8rem;
+
+		li+li {
+			margin-top: 0;
+		}
+	}
+
+	.mdl-line {
+		margin: 3.2rem auto 3.2rem -2.4rem;
+	}
+
+	.mdl-tab {
+		margin-bottom: 1.6rem;
+	}
+
+	.mdl-tab-pnl {
+		p {
+			font: var(--font-b2-400);
+			color: var(--color-gray-50);
+		}
+	}
+}
+
+//건강검진 결과 조회
+.NMDP_15_8V {
+	.ocr-body {
+		padding-top: 0;
+		padding-bottom: 0;
+	}
+
+	section.mdl-wrap {
+		&:last-child {
+			padding: 0;
+		}
+
+		padding: 3.6rem 0;
+	}
+	[data-type="checkup-notice"] {
+		padding: 1.6rem 0 !important;
+		[data-type="notice"] {padding-bottom:0;}
+	}
+	section.mdl-wrap[data-type="checkup-date"] {
+		padding-top: 2.8rem;
+	}
+
+	.ods-checkupcard--icon {
+		transform: translateX(1.15rem);
+	}
+
+	.mdl-line {
+		margin: 3.6rem 0 0;
+	}
+
+	.mdl-tab {
+		margin-top: 2.4rem;
+	}
+
+	.mdl-tab-btn span {
+		display: flex;
+		align-items: center;
+		gap: 0.4rem;
+	}
+
+	.mdl-tab-btn * {
+		font: var(--font-b2-400);
+		color: var(--color-gray-350);
+	}
+
+	.mdl-tab-btn[aria-selected="true"] * {
+		font: var(--font-b2-500);
+		color: var(--color-gray-900);
+	}
+
+	.ods-subject {
+		&--title {
+			font: var(--font-h3);
+			color: var(--color-gray-0);
+		}
+	}
+
+	[data-style="select"] {
+		.ods-subject--title {
+			flex-direction: row;
+			gap: .4rem;
+		}
+	}
+
+	// 병원 
+	[data-type="healthcare-provider"] {
+		margin: 1.2rem 0 3.2rem;
+
+		.ods-subject--text {
+			display: flex;
+			justify-content: flex-start;
+			align-items: center;
+			gap: .4rem;
+
+			&::before {
+				content: '';
+				display: block;
+				width: 1.6rem;
+				height: 1.6rem;
+				background-image: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0_217_4831)'%3E%3Ccircle cx='8' cy='8' r='8' fill='%23999EAA'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M7.26983 3.98547C6.86674 3.98547 6.53998 4.31223 6.53998 4.71531V6.54076H4.71519C4.31211 6.54076 3.98535 6.86752 3.98535 7.2706V8.73021C3.98535 9.13329 4.31211 9.46005 4.71519 9.46005H6.53998V11.2837C6.53998 11.6868 6.86674 12.0135 7.26983 12.0135H8.72958C9.13266 12.0135 9.45942 11.6868 9.45942 11.2837V9.46005H11.284C11.6871 9.46005 12.0138 9.13329 12.0138 8.73021V7.2706C12.0138 6.86752 11.6871 6.54076 11.284 6.54076H9.45942V4.71532C9.45942 4.31223 9.13266 3.98547 8.72958 3.98547H7.26983Z' fill='white'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_217_4831'%3E%3Crect width='16' height='16' fill='white'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E%0A");
+				background-size: 1.6rem;
+			}
+		}
+	}
+
+	// 질환별 요약 리포트
+	[data-style="summary-report"] {
+		padding-top: 3.6rem;
+
+		.swiper {
+			padding-bottom: 0 !important;
+		}
+
+		.ods-badge[data-state] {
+			border: 0.1rem solid var(--color-gray-600);
+			color: var(--color-gray-300);
+		}
+	}
+
+	//연도별 변화
+	[data-type="yearly"] {
+		padding: 2.4rem 1.6rem;
+		margin-top: .8rem;
+
+		.ods-subject {
+			margin: .8rem 0;
+		}
+
+		.ods-subject--title {
+			display: flex;
+			justify-content: flex-start;
+			flex-direction: row;
+			gap: .4rem;
+			font: var(--font-h4);
+			color: var(--color-gray-0);
+		}
+
+		.ods-subject--text {
+			font: var(--font-b3-400);
+			color: var(--color-gray-350);
+		}
+
+		.mdl-line {
+			margin: 1.2rem 0 0;
+		}
+
+		.mdl-graph-legend {
+			li {
+				display: flex;
+				justify-content: flex-start;
+				align-items: center;
+				gap: .4rem;
+
+				&::before {
+					margin-right: 0;
+				}
+			}
+		}
+	}
+
+	.ods-subject[data-type="comparison"] {
+		justify-content: center;
+		align-items: center;
+		width: 100%;
+		margin: 2.4rem 0 0;
+
+		.ods-subject--group {
+			display: flex;
+			align-items: center;
+			flex-direction: column;
+			gap: .8rem;
+		}
+
+		.ods-subject--title {
+			font: var(--font-b1-700);
+		}
+
+		.ocr-checkup-compare-case dt {
+			font: var(--font-b3-400);
+			color: var(--color-gray-100);
+		}
+	}
+
+	.yearly-chart {
+		display: flex;
+		flex-direction: column;
+		gap: 1.6rem;
+		width: 100%;
+		margin: 3.2rem 0 2rem;
+		position: relative;
+
+		>div {
+			display: flex;
+			flex-direction: column;
+			gap: .8rem;
+		}
+
+		dt {
+			display: flex;
+			align-items: center;
+			gap: .8rem;
+			font: var(--font-cap2);
+			color: var(--color-gray-400);
+
+			time {
+				font: var(--font-b4-500);
+				color: var(--color-gray-100);
+			}
+		}
+
+		.mdl-graph {
+			display: flex;
+			width: calc(100% - 1.2rem);
+			position: relative;
+		}
+
+		.mdl-graph-item.n0,
+		.mdl-graph-item.n0::after {
+			color: #fff;
+			background-color: var(--color-green);
+		}
+
+		.mdl-graph-item.n1,
+		.mdl-graph-item.n1::after {
+			color: #fff;
+			background-color: var(--color-orange);
+		}
+
+		.mdl-graph-item.n2,
+		.mdl-graph-item.n2::after {
+			color: #fff;
+			background-color: var(--color-red);
+		}
+
+		.mdl-graph-item.n3,
+		.mdl-graph-item.n3::after {
+			color: #7B7B7B;
+			background-color: #DDDDDD;
+		}
+	}
+
+	//또래 그룹 대비
+	[data-type="peer-comparison"] {
+		padding: 2.4rem 1.6rem;
+		margin-top: 0.8rem;
+
+		.ods-subject {
+			width: 100%;
+			display: flex;
+			flex-direction: column;
+			gap: .4rem;
+		}
+
+		.ods-subject--title {
+			display: flex;
+			justify-content: flex-start;
+			flex-direction: row;
+			gap: .4rem;
+			font: var(--font-h4);
+			color: var(--color-gray-0);
+		}
+
+		[data-type="peer-filter"] {
+			display: flex;
+			justify-content: space-between;
+			align-items: flex-end;
+		}
+
+		[data-type="peer-result"] {
+			margin-top: 2.4rem;
+
+			.ods-subject--group {
+				justify-content: center;
+			}
+
+			.ods-subject--title,
+			.ods-subject--title b,
+			.ods-subject--title span {
+				font: var(--font-b1-700);
+				color: var(--color-gray-0);
+			}
+
+			.ods-subject--title b {
+				color: var(--color-kb-yellow-300);
+			}
+		}
+
+		.mdl-switch {
+			label {
+				span {
+					padding-top: 0;
+					font: var(--font-b3-400);
+					color: var(--color-gray-350);
+				}
+			}
+		}
+
+		.mdl-graph[data-type="bar-y"] {
+			margin-top: 8.6rem;
+			margin-bottom: 2rem;
+		}
+
+		.mdl-graph-item-name {
+			display: none;
+		}
+
+		.n0 .mdl-graph-item-value {
+			border: 0.1rem solid var(--color-kb-yellow-100);
+			background-color: var(--color-kb-yellow-100);
+			text-align: center;
+
+			&::before {
+				content: "내 결과";
+			}
+
+			&::after {
+				border-top: 1px solid var(--color-kb-yellow-100);
+				border-right: 1px solid var(--color-kb-yellow-100);
+				background-color: var(--color-kb-yellow-100);
+			}
+		}
+
+		.n1 .mdl-graph-item-value {
+			color: #333A44;
+
+			&::before {
+				content: "또래결과";
+			}
+		}
+
+		.mdl-graph-item-value {
+			display: flex;
+			flex-direction: column;
+			gap: 0.4rem;
+			margin-left: 0;
+			padding: 0.8rem 1.2rem;
+			position: absolute;
+			top: -4.5rem;
+			left: 50%;
+			transform: translate(-50%, -2rem);
+			border: 0.1rem solid var(--color-gray-600);
+			border-radius: 0.8rem;
+			background-color: #fff;
+			pointer-events: none;
+			transition: none;
+			font-size: 1.4rem;
+			font-weight: 700;
+			color: #111111;
+			text-align: center;
+		}
+
+		.mdl-graph-item-value::after {
+			content: "";
+			display: block;
+			width: 0.6rem;
+			height: 0.6rem;
+			position: absolute;
+			bottom: 0;
+			left: 50%;
+			transform: translate(-0.4rem, 0.4rem) rotate(-220deg) skewY(-12deg);
+			border-top: 1px solid var(--color-gray-600);
+			border-right: 1px solid var(--color-gray-600);
+			background-color: #fff;
+		}
+	}
+
+	[data-type="bar-y"] {
+		.mdl-graph-item::before {
+			background-color: var(--color-gray-600);
+		}
+
+		.mdl-graph-item.n0::before {
+			background-color: var(--color-kb-yellow-300);
+		}
+	}
+
+	//건강관리 swiper
+	[data-swiper="program_store"] {
+		margin-top: 2.4rem;
+
+		.swiper-wrapper {
+			.swiper-slide {
+				padding: 0;
+
+				&[data-type="normal"] .ods-card--item {
+					align-items: center;
+				}
+			}
+		}
+
+		.ods-card--item {
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			gap: 2rem;
+			min-height: 43.15rem;
+		}
+
+		.ods-tag {
+			width: 100%;
+		}
+
+		// head
+		.ods-card--head {
+			display: flex;
+			justify-content: flex-start;
+			align-items: center;
+			gap: 2rem;
+			height: 8.02rem;
+
+		}
+
+		.ods-card--title {
+			font: var(--font-h4);
+			color: var(--color-gray-0);
+		}
+
+		.ods-card--text {
+			font: var(--font-b3-400);
+			color: var(--color-gray-100);
+
+			strong {
+				font: var(--font-b4-700);
+				color: var(--color-gray-150);
+			}
+		}
+
+		.mdl-bul-star {
+			justify-content: center;
+
+			div {
+				font: var(--font-cap2);
+				color: var(--color-gray-100);
+			}
+		}
+
+		// body
+		.ods-card--body {
+			transform: translateY(-.5rem);
+
+			.ods-card--img {
+				min-width: 12rem;
+				width: 12rem;
+				height: 12rem;
+				border-radius: 0;
+				background-color: transparent;
+				box-shadow: none;
+			}
+		}
+
+		// foot
+		.ods-card--foot {
+			width: 100%;
+			display: flex;
+			flex-direction: column;
+			justify-content: flex-end;
+			gap: 2.4rem;
+			margin-top: 0;
+
+			.ods-card--text {
+				min-height: 4rem;
+			}
+		}
+
+		[data-type="advice"] {
+			flex-direction: column;
+			gap: 1.2rem;
+
+			.ods-card--text {
+				width: 100%;
+				font: var(--font-b4-400);
+				color: var(--color-gray-200);
+				text-align: left;
+			}
+		}
+
+		[data-type="normal"] {
+			.ods-card--img {
+				width: 12rem;
+				height: 12rem;
+				background-color: transparent;
+				box-shadow: none;
+			}
+		}
+	}
+
+	//프로그램
+	[data-type="program"] {
+		.ods-card {
+			margin-top: 2.4rem;
+			padding-bottom: 0;
+		}
+
+		.ods-card--info {
+			flex-direction: column;
+		}
+
+		.mdl-btn-wrap {
+			margin-top: 1.2rem;
+		}
+	}
+
+	[data-type="tag"] {
+		justify-content: flex-start;
+		gap: .8rem;
+	}
+
+	.routine-tag {
+		font-size: 1.1rem;
+		font-weight: 700;
+		color: var(--color-gray-150);
+		background-color: var(--color-gray-850);
+	}
+
+	[data-type="banner"] {
+		display: flex;
+		flex-direction: column;
+		gap: .1rem;
+	}
+}
+
+//건강검진 노란박스
+.ods-checkupcard {
+	width: 100%;
+	border: 0 !important;
+	position: relative;
+	background-color: var(--color-kb-yellow-100) !important;
+	padding: 2.4rem 1.6rem 2.4rem;
+	border-radius: 1.6rem !important;
+
+	[data-icon="btn-note"] {
+		position: absolute;
+		width: 2.2rem;
+		height: 2.2rem;
+		top: 2.4rem;
+		right: 1.6rem;
+		background-image: url("data:image/svg+xml,%3Csvg width='22' height='22' viewBox='0 0 22 22' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg opacity='0.3'%3E%3Cpath d='M21 11C21 16.523 16.523 21 11 21C5.477 21 1 16.523 1 11C1 5.477 5.477 1 11 1C16.523 1 21 5.477 21 11' stroke='black' stroke-width='1.4'/%3E%3Cpath d='M10.725 6.69995H11.225V11.95H10.725V6.69995ZM10.6001 14.375C10.6001 14.1678 10.768 14 10.9751 14C11.1822 14 11.3501 14.1678 11.3501 14.375C11.3501 14.5821 11.1822 14.75 10.9751 14.75C10.768 14.75 10.6001 14.5821 10.6001 14.375Z' fill='white' stroke='black'/%3E%3C/g%3E%3C/svg%3E%0A");
+		background-size: 2.2rem;
+		z-index: 2;
+
+		&::before {
+			display: none;
+		}
+	}
+
+	&[data-set="on"] {
+		transform: perspective(80rem) rotateY(180deg);
+	}
+
+	&--top {
+		display: flex;
+		align-items: center;
+		margin: -1.5rem 0 0.5rem;
+	}
+
+	&--type {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		padding: 0 2.4rem;
+		background-color: var(--color-kb-yellow-70);
+		max-width: 15.6rem;
+		font: var(--font-b1-700);
+		color: rgba(17, 17, 17, 0.7);
+		margin: 0 auto;
+		border-radius: 3.3rem;
+		text-align: center;
+		min-height: 6.2rem;
+		min-width: 9.6rem;
+	}
+
+	&--icon {
+		position: relative;
+		text-align: center;
+
+		&::after {
+			content: '';
+			display: inline-block;
+			width: 12.4rem;
+			height: 12.4rem;
+			background: url(../img/page/NMDP_1_167V/mh_a.png) 0 0 no-repeat;
+			background-size: 100% 100%;
+		}
+	}
+
+	&--bottom {
+		display: flex;
+		flex-direction: column;
+		gap: 2.5rem;
+		margin-bottom: 0.3rem;
+	}
+
+	&--point {
+		display: flex;
+		align-items: flex-end;
+
+		strong {
+			display: flex;
+			align-items: center;
+			font: var(--font-h2);
+			color: var(--color-gray-50);
+			transform: translateY(.5rem);
+
+			span {
+				font: var(--font-b2-700);
+				color: var(--color-gray-50);
+				vertical-align: middle;
+				transform: translateY(.1rem);
+			}
+		}
+
+		&>span {
+			&::before {
+				content: '/';
+				color: rgba(0, 0, 0, 0.1);
+				padding: 0 0.4rem 0 0.6rem;
+			}
+
+			font: var(--font-b2-300);
+			color: rgba(17, 17, 17, .5);
+			padding-top: 0.1rem;
+		}
+	}
+
+	&--txt {
+		position: relative;
+		display: flex;
+		gap: 0;
+		flex-direction: column;
+		padding-left: 6.2rem;
+		min-height: 5.2rem;
+
+		&>span {
+			font: var(--font-b3-400);
+			color: rgba(17, 17, 17, .7);
+		}
+
+		&[data-icon] {
+			&::before {
+				content: '';
+				position: absolute;
+				left: 0;
+				top: 0;
+				width: 5.2rem;
+				height: 5.2rem;
+				background-size: 3.4rem;
+				border-radius: 50%;
+			}
+		}
+
+		&[data-icon="score"] {
+			&::before {
+				content: '';
+				background: #FFF url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='34' height='34' viewBox='0 0 34 34' fill='none'%3E%3Crect x='7' y='5' width='20' height='25' rx='3' fill='%2343474F'/%3E%3Crect x='9' y='7' width='16' height='7' rx='2' fill='%23B5B8C1'/%3E%3Ccircle cx='11.5' cy='18.4' r='2' fill='%23D37A49'/%3E%3Ccircle cx='11.5' cy='24' r='2' fill='%23D9D9D9'/%3E%3Ccircle cx='17' cy='18.4' r='2' fill='%23D37A49'/%3E%3Ccircle cx='17' cy='24' r='2' fill='%23D9D9D9'/%3E%3Cpath d='M22.4175 20.3054C21.7962 20.0892 20.4021 19.1788 20.4012 17.6341C20.4007 16.9517 20.9339 16.3997 21.5948 16.3993C21.985 16.399 22.3315 16.5909 22.5507 16.8931C22.7655 16.5947 23.1158 16.3983 23.5059 16.3981C24.1669 16.3976 24.7007 16.949 24.7012 17.6314C24.7021 19.1761 23.3092 20.0883 22.6842 20.3052C22.6126 20.3298 22.4892 20.3299 22.4175 20.3054Z' fill='%23D9D9D9'/%3E%3C/svg%3E") no-repeat 50% 50% / 3.4rem;
+			}
+
+		}
+
+		&[data-icon="age"] {
+			&::before {
+				content: '';
+				background-color: #fff;
+				background-image: url(../img/health/checkup/ico_age.png);
+				background-repeat: no-repeat;
+				background-position: 50% 50%;
+				background-size: 3.4rem;
+			}
+		}
+	}
+
+	// span {
+	// 	font-size: 1.5rem;
+	// 	font-weight: 300;
+	// 	color: #504300;
+	// 	line-height: 1.8rem;
+
+	// 	font-family: Base;
+	// }
+
+	.ods-checkupcard--icon::after {
+		animation-name: ocr_fluffy;
+		animation-delay: 0;
+		animation-duration: 2.5s;
+		animation-iteration-count: infinite;
+		animation-timing-function: ease-in;
+	}
+
+	&[data-state="A"] .ods-checkupcard--icon::after {
+		background-image: url(../img/page/NMDP_1_167V/mh_a.png);
+	}
+
+	&[data-state="B"] .ods-checkupcard--icon::after {
+		background-image: url(../img/page/NMDP_1_167V/mh_b.png);
+	}
+
+	&[data-state="C"] .ods-checkupcard--icon::after {
+		background-image: url(../img/page/NMDP_1_167V/mh_c.png);
+	}
+
+	&[data-state="D"] .ods-checkupcard--icon::after {
+		background-image: url(../img/page/NMDP_1_167V/mh_d.png);
+	}
+
+	&[data-state="E"] .ods-checkupcard--icon::after {
+		background-image: url(../img/page/NMDP_1_167V/mh_e.png);
+	}
+
+	&[data-state="F"] .ods-checkupcard--icon::after {
+		background-image: url(../img/page/NMDP_1_167V/mh_f.png);
+	}
+
+	&[data-state="G"] .ods-checkupcard--icon::after {
+		background-image: url(../img/page/NMDP_1_167V/mh_g.png);
+	}
+
+	&[data-state="H"] .ods-checkupcard--icon::after {
+		background-image: url(../img/page/NMDP_1_167V/mh_h.png);
+	}
+
+	&[data-state="I"] .ods-checkupcard--icon::after {
+		background-image: url(../img/page/NMDP_1_167V/mh_i.png);
+	}
+
+	&[data-state="J"] .ods-checkupcard--icon::after {
+		background-image: url(../img/page/NMDP_1_167V/mh_j.png);
+	}
+
+	&[data-state="K"] .ods-checkupcard {
+		&--top {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			margin-top: 0;
+		}
+
+		&--bottom {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			margin-top: 1.2rem;
+		}
+
+		&--icon {
+			transform: translateX(0);
+
+			&::before {
+				content: '';
+				display: block;
+				width: 7.8rem;
+				height: 7.8rem;
+				background-color: #FFE766;
+				border-radius: 50%;
+				position: relative;
+			}
+
+			&::after {
+				animation: none;
+				width: 3.511rem;
+				height: 4.388rem;
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+				background-image: url("data:image/svg+xml,%3Csvg width='36' height='44' viewBox='0 0 36 44' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect x='0.770508' width='35.106' height='43.8826' rx='5.26591' fill='%233E485B'/%3E%3Cpath d='M5.28125 7.51055C5.28125 5.8537 6.6244 4.51055 8.28125 4.51055H28.3661C30.0229 4.51055 31.3661 5.8537 31.3661 7.51055V13.3105C31.3661 14.9674 30.0229 16.3106 28.3661 16.3106H8.28125C6.62439 16.3106 5.28125 14.9674 5.28125 13.3106V7.51055Z' fill='%23E1E4F0'/%3E%3Cellipse cx='8.78116' cy='33.8422' rx='3.36514' ry='3.29995' fill='%235266B6'/%3E%3Cellipse cx='8.78116' cy='24.2423' rx='3.36514' ry='3.29995' fill='%237489DD'/%3E%3Cellipse cx='18.0351' cy='24.2423' rx='3.36514' ry='3.29995' fill='%237489DD'/%3E%3Cellipse cx='18.0351' cy='33.4826' rx='3.36514' ry='3.29995' fill='%235266B6'/%3E%3Cpath d='M27.1507 27.3861C26.1055 27.0294 23.7598 25.5273 23.7581 22.9786C23.7574 21.8526 24.6545 20.9418 25.7666 20.9411C26.4231 20.9407 27.0061 21.2573 27.3749 21.756C27.7363 21.2636 28.3256 20.9396 28.9821 20.9391C30.0942 20.9385 30.9925 21.8481 30.9932 22.9741C30.9948 25.5228 28.6511 27.0279 27.5996 27.3859C27.479 27.4264 27.2714 27.4265 27.1507 27.3861Z' fill='%23EB5D81'/%3E%3C/svg%3E%0A");
+			}
+		}
+
+		&--point {
+			display: flex;
+			flex-direction: column;
+			gap: .2rem;
+			width: auto;
+			align-items: flex-start;
+
+			strong {
+				font-size: 3rem;
+				font-weight: 700;
+				line-height: 3.72rem;
+				color: #000;
+
+				span {
+					font-size: 1.8rem;
+					font-weight: 700;
+					line-height: 3.72rem;
+					color: #000;
+
+					&::before {
+						display: none;
+					}
+				}
+			}
+
+			&>span {
+				font-size: 1.6rem;
+				font-weight: 300;
+				line-height: 1.984rem;
+				color: rgba(0, 0, 0, 0.57);
+
+				&::before {
+					content: "/";
+					color: rgba(0, 0, 0, 0.1);
+					padding: 0 0.4rem 0 0.6rem;
+				}
+			}
+		}
+
+		&--txt {
+			padding: 0;
+			text-align: center;
+			gap: 1.2rem;
+			align-items: center;
+
+			span {
+				font-size: 1.6rem;
+				font-weight: 500;
+				line-height: 2.16rem;
+
+				color: #000;
+			}
+		}
+	}
+}
+
+//하단 배너
+.ocr-checkup-banner {
+
+	&--bn1,
+	&--bn2,
+	&--bn3 {
+		.mdl-banner {
+			padding: 2.6rem 4rem 2rem;
+
+			&::after {
+				width: 8.8rem;
+				height: 8.8rem;
+				background: none;
+				background-size: 8.8rem;
+				position: absolute;
+				right: 4.7rem;
+			}
+		}
+
+		.mdl-banner-tit {
+			font: var(--font-b1-700);
+			color: var(--color-gray-900);
+		}
+
+		.mdl-banner-txt {
+			display: flex;
+			justify-content: flex-start;
+			align-items: center;
+			gap: .4rem;
+			font: var(--font-b4-400);
+
+			&::after {
+				width: 2rem;
+				height: 2rem;
+				background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M4.24264 5.75736L8.48528 10L4.24264 14.2426' stroke='%23D5E5FF'/%3E%3C/svg%3E%0A");
+				background-size: 2rem;
+			}
+		}
+	}
+
+	&--bn1 {
+		.mdl-banner-txt {
+			&::after {
+				transform: none;
+				background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 20 20' fill='none'%3E%3Cpath d='M4.24264 5.75736L8.48528 10L4.24264 14.2426' stroke='%23D5E5FF'/%3E%3C/svg%3E");
+			}
+		}
+	}
+
+	&--bn2 {
+		.mdl-banner-txt {
+			&::after {
+				transform: none;
+				background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 20 20' fill='none'%3E%3Cpath d='M4.24264 5.75736L8.48528 10L4.24264 14.2426' stroke='%23D8CAFF'/%3E%3C/svg%3E");
+			}
+		}
+	}
+
+	&--bn3 {
+		.mdl-banner-txt {
+			&::after {
+				transform: none;
+				background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 20 20' fill='none'%3E%3Cpath d='M4.24264 5.75736L8.48528 10L4.24264 14.2426' stroke='%23F4CBFF'/%3E%3C/svg%3E");
+			}
+		}
+	}
+}
+
+.ocr-checkup-banner--bn1 {
+	background-color: #7280B8;
+
+	.mdl-banner::after {
+		background-image: url("../img/page/NMDP_15/img_banner3.png");
+	}
+
+	.mdl-banner-txt {
+		color: #D5E5FF;
+	}
+}
+
+.ocr-checkup-banner--bn2 {
+	background-color: #6A50B3;
+
+	.mdl-banner::after {
+		background-image: url("../img/page/NMDP_15/img_banner2.png");
+	}
+
+	.mdl-banner-txt {
+		color: #D8CAFF;
+	}
+}
+
+.ocr-checkup-banner--bn3 {
+	background-color: #A972B8;
+
+	.mdl-banner::after {
+		background-image: url("../img/page/NMDP_15/img_banner1.png");
+	}
+
+	.mdl-banner-txt {
+		color: #F4CBFF;
+	}
+}
+
+.mdl-btn[data-icon-before="arrow-more"][data-selected="true"]::before {
+	rotate: 180deg;
+}
+

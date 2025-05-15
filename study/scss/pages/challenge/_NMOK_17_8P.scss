@@ -1,0 +1,112 @@
+.challenge-new--year{
+    .ocr-body{
+        padding: 0; 
+        background-color: #9dd9d9;
+    }
+    .mdl-btn-wrap{
+        padding: 0 2.4rem 5.6rem;
+        background-color: #9DD9D9;
+    }
+    .img-box{
+        position: relative;
+        img{display: block;}
+        & + .img-box{transform: translateY(-.1rem);}
+    }
+    .img-box-ani{
+        position: absolute;
+        bottom: 75.9vw;
+        left: 50%;
+        transform: translateX(calc(-50% + 20vw));
+        &::before{
+            content: "";
+            width: 13vw;
+            height: 7vw;
+            border-radius: 9rem;
+            background-color: #42E8F1;
+            opacity: 25%;
+            position: absolute;
+            bottom: 16vw;
+            left: 50%;
+            transform: translateX(-51.2%) scale(1);
+            z-index: 1;
+            animation: sparkle 2s infinite, scalePulse 2s infinite;
+        }
+        &::after{
+            content: '';
+            width: 10vw;
+            height: 4.3vw;
+            background: url(../../assets/img/challenge/m01/step2.png) no-repeat 0 0 / 10vw;
+            position: absolute;
+            bottom: 17.4vw;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 9;
+        }
+    }
+    .img-box-ani2{
+        position: absolute;
+        bottom: 8.1vw;
+        left: 50%;
+        transform: translateX(calc(-50% - -0.1rem));
+        &::before{
+            content: "";
+            width: 55vw;
+            height: 13vw;
+            border-radius: 9rem;
+            background-color: #42E8F1;
+            opacity: 25%;
+            position: absolute;
+            bottom: 16vw;
+            left: 50%;
+            transform: translateX(-51.2%) scale(1);
+            z-index: 1;
+            animation: sparkle 2s infinite, scalePulse 2s infinite;
+        }
+        &::after{
+            content: '';
+            width: 50vw;
+            height: 24vw;
+            background: url(../../assets/img/challenge/m01/step2-1.png) no-repeat 0 0 / 49vw;
+            position: absolute;
+            bottom: 3vw;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 9;
+        }
+    }
+    .gif-step4{
+        position: absolute;
+        bottom: 30vw;
+        left: 50%;
+        transform: translateX(-50%);
+        &[data-img="1"]{
+            width: 59vw;
+            height: 59vw;
+            z-index: 9;
+        }
+        &[data-img="2"]{
+            width: 70vw;
+            height: 65vw;
+            bottom: 22vw;
+            z-index: 1;
+        }
+    }
+}
+
+@keyframes sparkle {
+    0%, 100% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 25%;
+    }
+}
+
+@keyframes scalePulse {
+    0%, 100% {
+        transform: translateX(-51.2%) scale(.9);
+    }
+    50% {
+        transform: translateX(-51.2%) scale(1);
+    }
+}

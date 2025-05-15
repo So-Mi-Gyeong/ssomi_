@@ -1,0 +1,91 @@
+// 영향을 주지 않는 class명은 data-brand 바깥에 입력
+/* 핏타민 */
+[data-brand="fitamin"]{
+    * {
+        font-family: 'base';
+        word-break: keep-all;
+        .btn-wrap .btn-txt{
+            font-family: 'KBF';
+        }
+    }
+    
+    .scrollBox[data-style="popup"]{padding: 2rem 2.4rem 3rem;}
+
+    .service-info-wrap{
+        padding-bottom: 15rem;
+        .btn-wrap{
+            width: 100%;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            padding: 2rem 2.4rem calc(env(safe-area-inset-bottom) + 3rem);
+            background-color: #fff;
+        }
+    }
+
+    [data-style="ticket"]{
+        display: flex;
+        flex-direction: column;
+        gap: 1.3rem;
+        .date{
+            font-size: 1.8rem;
+            font-weight: 700;
+            line-height: 2.8rem;
+            color: #000;
+        }
+        .list-shadow-box > li + li{margin-top: 2.8rem;}
+        & + [data-style="ticket"]{margin-top: 5.4rem;}
+    }
+    
+    .ocr-product-intro-img{
+        height: 28rem;
+        background: url(../../img/content/fitamin/fitamin-top.jpg) no-repeat 50% 50%/cover;
+    }
+
+    .tab-content.program{
+        .program-info{margin-top: 3.2rem;}
+    }
+
+    .program-info{
+        &[data-color="gray"]{
+            padding: 4rem 0;
+            .list-dot{
+                li{
+                    em{
+                        font-size: 1.5rem;
+                        font-weight: 500;
+                        line-height: 1.5;
+                        color: #666;
+                        text-decoration: underline;
+                        text-underline-offset: .3rem;
+                    }
+                }
+            }
+        }
+    }
+
+    .mdl-banner[data-style=fitamin]{
+        width: 100%;
+        height: 10.4rem;
+        border-radius: 1rem;
+        background-color: #E6EDFC;
+        .mdl-banner-txt{
+            font-size: 1.3rem;
+            font-weight: 400;
+            line-height: 1.8rem;
+            color: #000;
+        }
+        .mdl-banner-tit{
+            font-size: 1.8rem;
+            font-weight: 600;
+            line-height: 2.4rem;
+            color: #000;
+            em{
+                font-size: 1.8rem;
+                font-weight: 600;
+                line-height: 2.4rem;
+                color: #5345F2;
+            }
+        }
+    }
+}

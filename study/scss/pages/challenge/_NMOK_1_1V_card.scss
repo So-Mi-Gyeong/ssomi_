@@ -1,0 +1,1990 @@
+.card-walk {
+	padding: 0 0 2.6rem;
+	overflow: hidden;
+	border:0;
+	box-shadow: inset 1px 0 0 var(--color-gray-700), inset 0 1px 0 var(--color-gray-700), inset -1px 0 0 var(--color-gray-700), inset 0 -1px 0 var(--color-gray-700) !important;
+
+	&--type {
+		position: relative;
+		border-top: 0.2rem solid #F27759;
+		width: 100%;
+		padding: 0 2.4rem;
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-end;
+		margin-bottom: 2.4rem;
+
+		&-tit {
+			min-width: 6.3rem;
+			height: 3.3rem;
+			padding: 0 1.5rem 0;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			font: var(--font-cap1-700);
+			font-family: 'KBF';
+			color: #fff;
+			background-color: #EF4678;
+			border-bottom-left-radius: .8rem;
+			border-bottom-right-radius: .8rem;
+
+			&[data-icon="thunder"] {
+				display: flex;
+				gap: 0.2rem;
+				&::before {
+					content: "";
+					width: 1.2rem;
+					height: 1.2rem;
+					background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='13' viewBox='0 0 12 13' fill='none'%3E%3Cg clip-path='url(%23clip0_81_8763)'%3E%3Cpath d='M6.01142 0.5C5.92078 0.5 5.83724 0.54906 5.79308 0.628219L2.20737 7.0568C2.11442 7.22344 2.2349 7.42858 2.4257 7.42858H5.45717C5.64372 7.42858 5.76455 7.6255 5.68006 7.79182L3.96194 11.1736C3.83421 11.425 4.15557 11.6626 4.35845 11.4667L10.0201 6.00129C10.1819 5.84511 10.0713 5.57142 9.84648 5.57142H7.27511C7.0709 5.57142 6.95283 5.33984 7.07278 5.17458L10.1774 0.896843C10.2973 0.731574 10.1793 0.5 9.97507 0.5H6.01142Z' fill='white'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_81_8763'%3E%3Crect width='12' height='12' fill='white' transform='translate(0 0.5)'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E") no-repeat 0 0 / 1.2rem;
+				}
+			}
+		}
+
+		&+.card-walk--subject {
+			margin-top: 0;
+		}
+
+		.mdl-btn {
+			opacity: .4;
+			transform: translateY(.5rem);
+		}
+
+		.point {
+			display: flex;
+			justify-content: flex-start;
+			align-items: center;
+			gap: .4rem;
+			font: var(--font-b3-700);
+			font-family: 'KBF';
+			line-height: 1.6rem;
+			color: #000;
+
+			&::before {
+				content: "";
+				display: block;
+				width: 2.2rem;
+				height: 2.4rem;
+				background-image: url(../../assets/img/challenge/m08/ico-point.png);
+				background-size: 2.2rem 2.4rem;
+				background-repeat: no-repeat;
+			}
+		}
+	}
+
+	&--head {
+		position: relative;
+		width: 100%;
+		font: var(--font-b3-500);
+		font-family: 'KBF';
+		padding: 0 2.4rem 0;
+		display: flex;
+		gap: 1rem;
+		align-items: center;
+		justify-content: flex-start;
+
+		.div {
+			width: 1px;
+			height: 1.4rem;
+			background-color: #B1B7C4;
+		}
+
+		b {
+			font: inherit;
+			color: #61697A;
+		}
+
+		span {
+			font: inherit;
+			color: #858C9A;
+		}
+
+		i {
+			font-style: normal;
+			color: #B1B7C4;
+		}
+	}
+
+	&--team {
+		position: relative;
+		width: 100%;
+		display: flex;
+		align-items: center;
+		gap: .6rem;
+		padding: 0 2.4rem 0;
+		margin-top: 1.7rem;
+
+		strong {
+			display: block;
+			font: var(--font-h3);
+			color: #1E1F23;
+			word-break: break-all;
+		}
+
+		&::before {
+			content: "";
+			display: block;
+			width: .6rem;
+			min-width: .6rem;
+			height: .6rem;
+			border-radius: 50%;
+			background-color: #9530E8;
+			transform: translateY(-.3rem);
+		}
+
+		&[data-team="leader"]::before {
+			width: 2rem;
+			min-width: 2rem;
+			height: 2rem;
+			border-radius: 0;
+			background-color: transparent;
+			transform: translateY(0);
+			background-image: url(../../assets/img/challenge/walk/ico-leader.png);
+			background-size: 2rem;
+		}
+	}
+
+	&--subject {
+		display: flex;
+		align-items: flex-end;
+		justify-content: space-between;
+		width: 100%;
+		position: relative;
+		padding: 0 2.4rem;
+		margin-top: 1.2rem;
+
+		b[data-marker="yellow"]::after {
+			opacity: .6;
+			bottom: 0.3rem;
+		}
+
+		&[data-ranking] {
+			.card-walk--subject-img {
+				padding-top: 3.4rem;
+			}
+
+			.card-walk--subject-tit {
+				font-size: 4.4rem;
+				font-weight: 700;
+				line-height: 1.4;
+
+				span {
+					display: block;
+					font: var(--font-h3);
+					color: inherit;
+					// line-height: 1;
+				}
+			}
+		}
+
+		&[data-state="end"] {
+			padding-bottom: 2.7rem;
+
+			.card-walk--subject-img {
+				padding-top: 5.5rem;
+
+				&::before {
+					transform: translateY(-.8rem);
+				}
+			}
+
+			.card-walk--subject-tit {
+				display: block;
+				font-size: 2rem !important;
+				font-weight: 300 !important;
+				line-height: normal;
+
+				b {
+					font: inherit;
+					color: #9530E8;
+					font-weight: 700;
+				}
+			}
+		}
+
+		&[data-state="before"] {
+			margin: 0.1rem 0 0.9rem;
+			align-items: center;
+
+			.card-walk--subject-tit {
+				b {
+					font: inherit;
+					color: #EF4678;
+					font-weight: 700;
+				}
+			}
+
+			.card-walk--subject-img {
+				transform: translateY(-0.5rem);
+			}
+		}
+
+		&[data-state="none"] {
+			align-items: center;
+			margin-top: 2.2rem;
+
+			.card-walk--subject-tit {
+				display: block;
+				font-size: 2.2rem;
+
+				b {
+					font: inherit;
+					color: #9530E8;
+					font-weight: 700;
+				}
+			}
+
+			.card-walk--subject-img {
+				transform: translateY(-0.5rem);
+			}
+
+			&+.card-walk--time {
+				margin-top: 1.3rem;
+			}
+		}
+
+		&[data-state="ready"] {
+			.card-walk--subject-tit {
+				// transform: translate(0.5rem, 1.5rem);
+			}
+		}
+
+		&-tit {
+			font: var(--font-h3);
+			color: #1E1F23;
+
+			span {
+				display: block;
+				font: var(--font-h3);
+				color: inherit;
+				line-height: inherit;
+			}
+			
+			
+
+			b {
+				font-size: 4.4rem;
+				font-weight: 700;
+				line-height: inherit;
+				color: inherit;
+				display: inline-block;
+				transform: translateY(-0.2rem);
+
+				&[data-marker="yellow"] {
+					&::after {
+						background-color: rgba(255, 215, 0, 0.60);
+					}
+				}
+			}
+		}
+
+		&-txt {
+			font: var(--font-b3-500);
+			font-family: 'KBF';
+			color: #61697A;
+		}
+
+		&-img {
+			position: relative;
+
+			&[data-size="l"]::before {
+				width: 10.4rem;
+				height: 10.4rem;
+				background-size: 10.4rem;
+				transform: translate(-0.9rem, -0.4rem);
+			}
+
+			&[data-size="m"]::before {
+				width: 9rem;
+				height: 9rem;
+				background-size: 9rem;
+				transform: translateY(-0.3rem);
+			}
+
+			&::before {
+				content: "";
+				display: block;
+				width: 7rem;
+				height: 7rem;
+				background: url(../img/challenge/walk/walk-team.png) no-repeat 0 0 / 7rem;
+				transform: translateY(0.5rem);
+			}
+		}
+
+		.mdl-tooltip {
+			position: absolute;
+			top: 0;
+			left: auto;
+			right: 0;
+			background: #EDF0F7;
+			min-height: 3.6rem;
+			border-radius: 1.8rem;
+			padding: 0 1.6rem;
+			display: flex;
+			border: 0 !important;
+			align-items: center;
+			box-shadow: none !important;
+
+			&::before {
+				background: #EDF0F7;
+				border: 0 !important;
+				left: 77.4%;
+				box-shadow: none !important;
+			}
+		}
+
+		.mdl-tooltip-txt {
+			display: flex;
+			background: #EDF0F7;
+			align-items: center;
+			font: var(--font-b4-300);
+			font-family: 'KBF';
+			color: #4E4E4E;
+			gap: 0;
+
+			b {
+				font: var(--font-b2-500);
+				font-family: 'KBF';
+				color: #4E4E4E;
+				margin: 0 .2rem 0 .6rem;
+			}
+		}
+	}
+
+	&--time {
+		background-color: #F4F6FA;
+		margin: 3rem 2.4rem 0;
+		width: calc(100% - 4.8rem);
+		min-height: 5.2rem;
+		padding: 0 2.4rem;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		border-radius: 1.2rem;
+
+		span {
+			font-size: 1.5rem;
+			font-weight: 300;
+			color: #858C9A;
+			font-family: 'KBF';
+		}
+
+		b {
+			font: var(--font-b2-500);
+			font-family: 'KBF';
+			color: #61697A;
+
+			&[data-end] {
+				color: #EF4678;
+			}
+		}
+
+		&+.card-walk--link {
+			margin-top: 1.5rem;
+		}
+	}
+
+	&--link {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-shrink: 0;
+		padding: 0 2.4rem 0;
+		width: 100%;
+		flex-direction: column;
+		margin-top: 2.5rem;
+
+		.mdl-btn {
+			width: 16rem;
+			min-width: 16rem;
+			height: 5.2rem;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			color: #1E1F23;
+			border-radius: 2.6rem;
+
+			span {
+				font-size: 1.7rem;
+				font-weight: 700;
+				color: inherit;
+				// font-family: 'KBF';
+			}
+
+			&[data-color="black"] {
+				background-color: #1E1F23;
+				color: #fff
+			}
+
+			&[data-color="primary"] {
+				background-color: #FFD700;
+				color: #1E1F23
+			}
+		}
+	}
+
+	&--mission {
+		display: flex;
+		align-items: center;
+		flex-direction: column;
+		gap: 1.4rem;
+		width: 100%;
+		padding: 0 2.2rem;
+		margin-top: 2rem;
+
+		* {
+			font-family: 'KBF';
+		}
+
+		&-wrap {
+			width: 100%;
+			padding: 2rem 0.8rem;
+			border-radius: 2rem;
+			background-color: #F7F8FA;
+			display: flex;
+			min-height: 7.6rem;
+			justify-content: space-around;
+			position: relative;
+
+			&::after {
+				content: "";
+				display: block;
+				position: absolute;
+				left: 50%;
+				width: 0.1rem;
+				height: calc(100% - 4rem);
+				border-left: 0.1rem solid #E7E9ED;
+			}
+		}
+
+		&-item {
+			position: relative;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			padding-left: 4rem;
+
+			&::before {
+				display: none;
+			}
+
+			&[data-icon="participate"] {
+				.card-walk--mission-tit::before {
+					content: "";
+					background-image: url(../img/challenge/main/sp_NMOK_1_1V_2407.png);
+					background-size: 24rem;
+					background-repeat: no-repeat;
+					background-position: 0 0;
+				}
+			}
+
+			&[data-icon="achieve"] {
+				.card-walk--mission-tit::before {
+					content: "";
+					background-image: url(../img/challenge/main/sp_NMOK_1_1V_2407.png);
+					background-size: 24rem;
+					background-repeat: no-repeat;
+					background-position: -4rem 0;
+				}
+			}
+		}
+
+		&-tit {
+			width: 100%;
+			font-size: 1.2rem;
+			font-weight: 300;
+			line-height: 1.4;
+			text-align: left;
+			color: #1E1F23;
+
+			&::before {
+				content: "";
+				position: absolute;
+				top: 0;
+				left: 0;
+				display: block;
+				margin: 0;
+				width: 3.2rem;
+				height: 3.2rem;
+				border-radius: 50%;
+				background: #fff url(../img/challenge/main/sp_x24.png) no-repeat 0 0 / auto 3.2rem;
+			}
+		}
+
+		&-txt {
+			width: 100%;
+			font-size: 1.4rem;
+			font-weight: 500;
+			line-height: 1.4;
+			text-align: left;
+			color: #1E1F23;
+		}
+	}
+
+	//상태별 스타일
+	&[data-type="person"] {
+		
+		.card-walk--type{
+			border-top: 0.2rem solid #3084F3;
+		}
+		.card-walk--type-tit {background-color: #3084F3;}
+		.card-walk--subject {
+			margin-top: .3rem;
+			&-img {
+				padding-top: 1.7rem;
+
+				&[data-size="l"]::before {
+					width: 10.4rem;
+					height: 10.4rem;
+					background-size: 10.4rem;
+					transform: translate(-0.8rem, -0.2rem);
+				}
+				&[data-size="m"]::before {
+					width: 9rem;
+					height: 9rem;
+					background-size: 9rem;
+				}
+				&::before {
+					content: "";
+					display: block;
+					width: 7.8rem;
+					height: 7.8rem;
+					background: url(../img/challenge/walk/walk-person.png) no-repeat 0 0 / 7.8rem;
+				}
+				.mdl-tooltip {
+					top: -0.6rem;
+				}
+			}
+
+			&[data-ranking] {
+				.card-walk--subject-img {
+					&::before {
+						transform: translate(0.5rem, 0.8rem);
+					}
+				}
+			}
+
+			&[data-ranking="1"],
+			&[data-ranking="2"],
+			&[data-ranking="3"] {
+				.card-walk--subject-tit {
+					display: flex;
+					justify-content: flex-start;
+					align-items: center;
+					gap: .7rem;
+
+					&::after {
+						content: "";
+						display: block;
+						width: 3.2rem;
+						height: 3.2rem;
+						background: url(../img/challenge/walk/ranking.png) no-repeat 0 0 / 3.2rem;
+					}
+				}
+			}
+
+			&[data-state="before"] {
+				margin-top: -.5rem;
+
+				.card-walk--subject-img {
+					&+.card-walk--time {
+						margin: 0.6rem 2.4rem 0;
+					}
+				}
+			}
+
+			&[data-state="end"] {
+				padding-bottom: 0;
+
+				.card-walk--subject-tit b {
+					color: #3084F3;
+				}
+
+				.card-walk--subject-img {
+					padding-top: 6.1rem;
+				}
+
+				.mdl-tooltip {
+					top: 1.3rem;
+				}
+
+				&+.card-walk--time {
+					margin-top: 1.1rem;
+				}
+			}
+
+			&[data-state="end-no"] {
+				.card-walk--subject {
+					margin-top: -2rem;
+				}
+
+				.card-walk--subject-tit {
+					transform: translateY(-1rem);
+				}
+
+				.card-walk--subject-img[data-size="m"] {
+					padding-top: 0;
+
+					&::before {
+						transform: translate(0rem, 0.4rem);
+					}
+				}
+
+				&+.card-walk--time {
+					margin: 2rem 2.4rem 0;
+				}
+			}
+		}
+
+		.mdl-tooltip::before {
+			left: 73%;
+		}
+
+		.card-walk--time {
+			margin: 2.9rem 2.4rem 0;
+		}
+
+		[data-ranking] {
+			margin-top: 1.9rem;
+
+			.card-walk--subject-img::before {
+				transform: translate(0.5rem, 0.8rem);
+			}
+
+			&+.card-walk--time {
+				margin: 2.4rem 2.4rem 0;
+			}
+		}
+	}
+	&[data-type="team"] {
+		
+		.card-walk--type {
+			border-top: 0.2rem solid #9530E8;
+			&-tit {
+				background-color: #9530E8;
+			}
+		}
+		+ .card-walk--next{
+			// border: 0.2rem solid #9530E8;
+			// border-top:0;
+		}
+	}
+	&[data-type="everyday"] {
+		.card-walk--type {
+			&-tit {
+				background-color: #F27759;
+			}
+		}
+
+		.card-walk--subject-tit {
+			line-height: 2.7rem;
+			margin-top: 1rem;
+		}
+
+		.card-walk--subject-txt {
+			color: #858C9A;
+			line-height: 2.1rem;
+		}
+
+		[data-state="before"] {
+			display: flex;
+			flex-direction: row;
+			justify-content: space-between;
+			margin-bottom: 0;
+
+			.card-walk--subject-img {
+				transform: translateY(.9rem);
+			}
+
+			.card-walk--subject-txt {
+				white-space: nowrap;
+				margin-top: 1rem;
+			}
+
+			.card-walk--subject-tit {
+				line-height: 2.7rem;
+				margin-top: .8rem;
+			}
+
+			&+.card-walk--link {
+				margin-top: 1.4rem;
+			}
+		}
+
+		.card-walk--graph+.card-walk--link {
+			margin-top: 1.1rem;
+		}
+
+		.card-walk--subject-img {
+			width: 16rem;
+		}
+	}
+	&[data-type="theme"] {
+		.card-walk--type {
+			border-top: 0.2rem solid #747d8a;
+			&-tit {
+				background-color: #747d8a;
+			}
+
+			.point {
+				position: absolute;
+				top: 1.5rem;
+				right: 2.4rem;
+			}
+		}
+	}
+	&[data-type="rewardball"] {
+		.card-walk--subject {
+			flex-direction: column;
+			justify-content: flex-start;
+			align-items: flex-start;
+		}
+
+		.card-walk--stepcount {
+			display: flex;
+			align-items: center;
+			gap: .4rem;
+			margin-top: 0.8rem;
+
+			strong {
+				font-size: 1.6rem;
+				font-weight: 500;
+				color: #858C9A;
+			}
+
+			b,
+			span {
+				font-size: 1.6rem;
+				font-weight: 300;
+				color: #858C9A;
+			}
+		}
+
+		.card-walk--type {
+			&-tit {
+				background-color: #F27759;
+			}
+		}
+
+		.card-walk--rewardstep {
+			position: relative;
+			margin: 0 2.4rem 0;
+			width: calc(100% - 4.8rem);
+			display: flex;
+			flex-direction: column;
+			gap: 1.7rem;
+
+			&::before {
+				content: '';
+				position: absolute;
+				top: 3rem;
+				left: 3.8rem;
+				width: 1rem;
+				height: calc(100% - 6rem);
+				background-color: #F2F5FC;
+				z-index: 1;
+			}
+
+			.card-walk--rewardstep-bar {
+				position: absolute;
+				top: 3rem;
+				left: 3.8rem;
+				width: 1rem;
+				height: 0;
+				background: linear-gradient(180deg, #FFE108 0.97%, #FFCD20 89.35%);
+				z-index: 2;
+				border-bottom-right-radius: 4rem;
+				border-bottom-left-radius: 4rem;
+			}
+
+			.card-walk--rewardstep-state>*{
+				background-color: #F7F7F7 !important;
+				color: transparent;
+				font-size: 0;
+				pointer-events: none;
+
+				&::before {
+					display: none !important;
+				}
+
+				&::after {
+					content: "리워드 받기";
+					color: #999;
+					font-weight: 500;
+					font-size: 1.5rem;
+				}
+			}
+
+			[data-state="off"] .card-walk--rewardstep-state>* {
+				background-color: #F7F7F7 !important;
+				color: transparent;
+				font-size: 0;
+				
+				&::before {
+					display: none !important;
+				}
+
+				&::after {
+					content: "리워드 받기";
+					color: #999;
+					font-weight: 500;
+					font-size: 1.5rem;
+				}
+			}
+
+			[data-state="ing"] .card-walk--rewardstep-state>* {
+				background-color: #F7F7F7 !important;
+				display: flex;
+				gap: 0.4rem;
+				color: transparent;
+				font-size: 0;
+				
+				&::before {
+					content: '';
+					display: flex !important;
+					width: 1.8rem;
+					height: 1.8rem;
+					background: url(../img/challenge/rewardball/ico_ing.svg) no-repeat 0 0 / 1.8rem;
+				}
+
+				&::after {
+					content: "진행중";
+					color: #515762;
+					font-weight: 500;
+					font-size: 1.5rem;
+				}
+			}
+
+			[data-state="on"] .card-walk--rewardstep-state>* {
+				background-color: #FFD700 !important;
+				color: transparent !important;
+				font-size: 0 !important;
+				pointer-events: visible !important;
+				&::before {
+					display: none !important;
+				}
+
+				&::after {
+					content: "리워드 받기";
+					color: #000;
+					font-weight: 500;
+					font-size: 1.5rem;
+				}
+			}
+
+			[data-state="complete"] .card-walk--rewardstep-state>* {
+				display: flex;
+				gap: 0.3rem;
+				background: #FEF8D9;
+				color: transparent;
+				font-size: 0;
+				
+				&::before {
+					content: '';
+					display: flex !important;
+					width: 1.8rem;
+					height: 1.8rem;
+					background: url(../img/challenge/rewardball/ico_check.svg) no-repeat 0 0 / 1.8rem !important;
+				}
+
+				&::after {
+					content: "획득 완료";
+					color: #000;
+					font-weight: 500;
+					font-size: 1.5rem;
+				}
+			}
+
+			// 1단계
+			.card-walk--rewardstep-item:first-child[data-state="off"]~.card-walk--rewardstep-bar,
+			.card-walk--rewardstep-item:first-child[data-state="ing"]~.card-walk--rewardstep-bar {
+				height: 0rem;
+			}
+
+			.card-walk--rewardstep-item:nth-child(2)[data-state="ing"]~.card-walk--rewardstep-bar,
+			.card-walk--rewardstep-item:first-child[data-state="on"]~.card-walk--rewardstep-bar,
+			.card-walk--rewardstep-item:first-child[data-state="complete"]~.card-walk--rewardstep-bar {
+				height: 7rem;
+			}
+
+			// 2단계
+			.card-walk--rewardstep-item:nth-child(3)[data-state="ing"]~.card-walk--rewardstep-bar,
+			.card-walk--rewardstep-item:nth-child(2)[data-state="on"]~.card-walk--rewardstep-bar,
+			.card-walk--rewardstep-item:nth-child(2)[data-state="complete"]~.card-walk--rewardstep-bar {
+				height: 17.6rem;
+			}
+
+			// 3단계
+			.card-walk--rewardstep-item:nth-child(3)[data-state="on"]~.card-walk--rewardstep-bar,
+			.card-walk--rewardstep-item:nth-child(3)[data-state="complete"]~.card-walk--rewardstep-bar {
+				height: calc(100% - 6rem);
+			}
+
+			&-item {
+				position: relative;
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+
+				.card-walk--rewardstep-point {
+					background: url(../img/challenge/rewardball/rbs1.png) no-repeat 0 0 / 8.8rem;
+
+					span {
+						color: #515762;
+					}
+				}
+
+				.card-walk--rewardstep-score {
+					color: #515762;
+				}
+
+				&[data-state="ing"] {
+					.card-walk--rewardstep-point {
+						background: url(../img/challenge/rewardball/rbs4.png) no-repeat 0 0 / 8.8rem;
+
+						span {
+							color: #515762;
+						}
+					}
+
+					.card-walk--rewardstep-score {
+						color: #515762;
+					}
+				}
+
+				&[data-state="on"] {
+					.card-walk--rewardstep-point {
+						background: url(../img/challenge/rewardball/rbs2.png) no-repeat 0 0 / 8.8rem;
+
+						span {
+							color: #1E1F23;
+						}
+					}
+
+					.card-walk--rewardstep-score {
+						color: #1E1F23;
+					}
+				}
+
+				&[data-state="complete"] {
+					.card-walk--rewardstep-point {
+						background: url(../img/challenge/rewardball/rbs3.png) no-repeat 0 0 / 8.8rem;
+
+						span {
+							color: #1E1F23;
+						}
+					}
+
+					.card-walk--rewardstep-score {
+						color: #1E1F23;
+					}
+				}
+
+				.card-walk--rewardstep-point {
+					display: inline-flex;
+					align-items: center;
+					justify-content: center;
+					width: 8.8rem;
+					height: 8.8rem;
+					gap: 0.2rem;
+					background: url(../img/challenge/rewardball/rbs1.png) no-repeat 0 0 / 8.8rem;
+					z-index: 5;
+					padding-right: 0.1rem;
+
+					span {
+						font-size: 1.4rem;
+						font-weight: 700;
+						display: flex;
+						align-items: center;
+						gap: 0.3rem;
+						color: #61697A;
+
+						&::before {
+							content: '';
+							display: flex;
+							width: 1.6rem;
+							height: 1.8rem;
+							background: url(../img/challenge/rewardball/ico_medal.png) no-repeat 0 0 / 1.6rem;
+						}
+					}
+				}
+
+				.card-walk--rewardstep-score {
+					display: flex;
+					flex-direction: column;
+					font-size: 1.9rem;
+					font-weight: 700;
+					margin-left: 0.8rem;
+					padding-top: 0.8rem;
+
+					span {
+						color: #515762;
+						font-size: 1.5rem;
+						font-weight: 500;
+						padding-top: 0.1rem;
+					}
+				}
+
+				.card-walk--rewardstep-state {
+					* {
+						display: flex;
+						align-items: center;
+						justify-content: center;
+						border-radius: 4rem;
+						background: #F7F7F7;
+						width: 9.3rem;
+						height: 4rem;
+						margin-left: 2.6rem;
+						font-weight: 500;
+					}
+
+					.btn-on {
+						display: flex;
+						gap: 0.4rem;
+						color: #515762;
+
+						&::before {
+							content: '';
+							display: flex;
+							width: 1.8rem;
+							height: 1.8rem;
+							background: url(../img/challenge/rewardball/ico_ing.svg) no-repeat 0 0 / 1.8rem;
+						}
+					}
+
+					button {
+						&:disabled {
+							background-color: #F7F7F7;
+							color: #999;
+						}
+
+						color:#000;
+						background-color: #FFD700;
+					}
+
+					.btn-complete {
+						display: flex;
+						gap: 0.3rem;
+						color: #515762;
+						background: #FEF8D9;
+						color: #000;
+
+						&::before {
+							content: '';
+							display: flex;
+							width: 1.8rem;
+							height: 1.8rem;
+							background: url(../img/challenge/rewardball/ico_check.svg) no-repeat 0 0 / 1.8rem;
+						}
+					}
+				}
+			}
+
+		}
+	}
+	&[data-type="weekly-rewardball"] {
+		.card-walk--subject-tit {
+			font-size: 2rem;
+		}
+
+		.card-walk--subject {
+			align-items: center;
+		}
+
+		.rewardball-dday {
+			display: flex;
+			justify-content: flex-start;
+			align-items: center;
+			gap: .8rem;
+			width: 100%;
+			position: relative;
+			padding: 0 2.4rem;
+			margin-top: -0.2rem;
+
+			.rewardball-num {
+				display: flex;
+				justify-content: flex-start;
+				align-items: center;
+				gap: .2rem;
+				font: var(--font-h2);
+				color: #1E1F23;
+
+				span {
+					font: var(--font-h4);
+					color: var(--color-gray-0);
+				}
+			}
+
+			.rewardball-txt {
+				font-size: 1.8rem;
+				font-weight: 500;
+				line-height: 1;
+				color: #61697A;
+			}
+		}
+
+		.card-walk--stepcount {
+			display: flex;
+			align-items: center;
+			gap: .4rem;
+			margin-top: 0.6rem;
+
+			strong {
+				font-size: 1.6rem;
+				font-weight: 500;
+				color: #858C9A;
+			}
+
+			b,
+			span {
+				font-size: 1.6rem;
+				font-weight: 300;
+				color: #858C9A;
+			}
+		}
+
+		.card-walk--type {
+			margin-bottom: 2.3rem;
+			&-tit {
+				background-color: #F27759;
+			}
+		}
+
+		.card-walk--rewardstep {
+			* {
+				font-family: 'base' !important;
+			}
+
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			gap: 0;
+			width: 100%;
+			padding: 0 1.5rem 0 1.6rem;
+			margin-top: 2.3rem;
+			position: relative;
+			overflow-x: hidden;
+
+			&-item {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				position: relative;
+				z-index: 9;
+
+				&[data-state="on"] {
+					.card-walk--rewardstep-point::before {
+						background-position: -8rem 0.5rem;
+					}
+
+					.mdl-btn {
+						background-color: #FFD700;
+
+						span {
+							color: #000;
+						}
+					}
+
+					.card-walk--rewardstep-point {
+						&::after {
+							content: "";
+							display: block;
+							width: 1.8rem;
+							height: 1.8rem;
+							background: url(../img/challenge/rewardball/ico-new.svg) no-repeat 50% 50% / 1.8rem;
+
+							position: absolute;
+							top: 0.3rem;
+							right: 0.3rem;
+						}
+					}
+				}
+
+				&[data-state="ing"] {
+					.card-walk--rewardstep-point::before {
+						background-position: -8rem 0.5rem;
+					}
+
+					.mdl-btn {
+						background-color: #EDEDEE;
+
+						span {
+							display: flex;
+							justify-content: center;
+							align-items: center;
+							gap: .2rem;
+							color: #000;
+						}
+					}
+				}
+
+				&[data-state="complete"] {
+					.card-walk--rewardstep-point {
+						&::before {
+							background-position: -16rem 0.7rem;
+						}
+
+						span {
+							top: calc(50% - 0.3rem);
+							left: calc(50% + .1rem);
+						}
+					}
+					.mdl-btn {
+						background-color: var(--color-gray-700);
+
+						span {
+							display: flex;
+							justify-content: center;
+							align-items: center;
+							gap: .2rem;
+							color: var(--color-gray-0);
+
+						}
+					}
+				}
+			}
+
+			.card-walk--rewardstep-state>*,
+			[data-state="off"] .card-walk--rewardstep-state>* {
+				background-color: var(--color-gray-600) !important;
+				color: transparent;
+				font-size: 0;
+				pointer-events: none;
+
+				&::before {
+					display: none !important;
+				}
+
+				&::after {
+					content: "리워드 받기";
+					color: #999EAA;
+					font-weight: 400;
+					font-size: 1.4rem;
+				}
+			}
+
+			[data-state="ing"] .card-walk--rewardstep-state>* {
+				background-color: #EDEDEE !important;
+				display: flex;
+				gap: 0.1rem;
+				color: transparent;
+				font-size: 0;
+
+				&::before {
+					content: '';
+					display: flex !important;
+					width: 1.8rem;
+					height: 1.8rem;
+					background: url(../img/challenge/rewardball/ico_ing2.svg) no-repeat 0 0 / 1.8rem;
+				}
+
+				&::after {
+					content: "진행중";
+					color: #000;
+					font-weight: 400;
+					font-size: 1.4rem;
+				}
+			}
+
+			[data-state="on"] .card-walk--rewardstep-state>* {
+				background-color: #FFD700 !important;
+				color: transparent;
+				font-size: 0;
+				pointer-events: visible !important;
+
+				&::before {
+					display: none !important;
+				}
+
+				&::after {
+					content: "리워드 받기";
+					color: #000;
+					font-weight: 400;
+					font-size: 1.4rem;
+				}
+			}
+
+			[data-state="complete"] .card-walk--rewardstep-state>* {
+				display: flex;
+				gap: 0.1rem;
+				background: #EDEDEE;
+				color: transparent;
+				font-size: 0;
+
+				&::before {
+					content: '';
+					display: flex !important;
+					width: 1.8rem;
+					height: 1.8rem;
+					background: url(../img/challenge/rewardball/ico_complete.svg) no-repeat 0 0 / 1.8rem !important;
+				}
+
+				&::after {
+					content: "획득 완료";
+					color: #000;
+					font-weight: 400;
+					font-size: 1.4rem;
+				}
+			}
+
+			// 1단계
+			.card-walk--rewardstep-item:first-child[data-state="off"]~.card-walk--rewardstep-bar .rewardstep-bar--item,
+			.card-walk--rewardstep-item:first-child[data-state="ing"]~.card-walk--rewardstep-bar .rewardstep-bar--item {
+				width: 0rem;
+			}
+
+			.card-walk--rewardstep-item:nth-child(2)[data-state="ing"]~.card-walk--rewardstep-bar .rewardstep-bar--item,
+			.card-walk--rewardstep-item:first-child[data-state="on"]~.card-walk--rewardstep-bar .rewardstep-bar--item,
+			.card-walk--rewardstep-item:first-child[data-state="complete"]~.card-walk--rewardstep-bar .rewardstep-bar--item {
+				width: 30%;
+			}
+
+			// 2단계
+			.card-walk--rewardstep-item:nth-child(3)[data-state="ing"]~.card-walk--rewardstep-bar .rewardstep-bar--item,
+			.card-walk--rewardstep-item:nth-child(2)[data-state="on"]~.card-walk--rewardstep-bar .rewardstep-bar--item,
+			.card-walk--rewardstep-item:nth-child(2)[data-state="complete"]~.card-walk--rewardstep-bar .rewardstep-bar--item {
+				width: 75%;
+			}
+
+			// 3단계
+			.card-walk--rewardstep-item:nth-child(3)[data-state="on"]~.card-walk--rewardstep-bar .rewardstep-bar--item,
+			.card-walk--rewardstep-item:nth-child(3)[data-state="complete"]~.card-walk--rewardstep-bar .rewardstep-bar--item {
+				width: 100%;
+			}
+
+			&-score {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				width: fit-content;
+				height: 2.6rem;
+				padding: 0 .8rem;
+				border: .1rem solid var(--color-gray-700);
+				border-radius: 3.8rem;
+				background-color: var(--color-gray-900);
+				font-size: 1.1rem;
+				font-weight: 700;
+				color: var(--color-gray-300);
+
+				span {
+					font: inherit;
+					color: inherit;
+				}
+			}
+
+			&-point {
+				position: relative;
+				margin-top: -.8rem;
+
+				&::before {
+					content: '';
+					display: block;
+					width: 8rem;
+					height: 8rem;
+					background: url(../img/challenge/rewardball/ico-rewardball.png) no-repeat 0 0 / 24rem;
+					background-position: 0 .5rem;
+				}
+
+				span {
+					display: flex;
+					align-items: center;
+					gap: .2rem;
+					font-size: 1.5rem;
+					font-weight: 700;
+					color: var(--color-gray-0);
+					position: absolute;
+					top: 50%;
+					left: 50%;
+					transform: translate(-50%, -50%);
+
+					&::before {
+						content: '';
+						display: block;
+						width: 1.8rem;
+						height: 1.8rem;
+						background-image: url(../img/challenge/rewardball/ico-point.png);
+						background-size: 1.8rem;
+					}
+				}
+			}
+
+			&-state {
+				margin-top: 0.7rem;
+				width: 100%;
+
+				.mdl-btn {
+					width: 100%;
+					min-width: 8.9rem;
+					height: 2.8rem;
+					padding: 0 1.2rem;
+					border-radius: .8rem;
+					background-color: var(--color-gray-600);
+
+					span {
+						font: var(--font-b4-400);
+						color: var(--color-gray-500);
+						text-decoration: none;
+						white-space: nowrap;
+					}
+				}
+			}
+
+			&-bar {
+				width: calc(100% - 11rem);
+				position: absolute;
+				top: calc(50% - 0.8rem);
+				left: 50%;
+				transform: translate(-50%, -50%);
+				z-index: 1;
+				background-color: #f7f7f7;
+
+				.rewardstep-bar--item {
+					width: 0%;
+					height: 1.2rem;
+					border-radius: 2rem;
+					background-color: #D6DBE7;
+					transition: width .2s ease-in;
+				}
+			}
+		}
+
+		.mdl-btn-wrap {
+			.mdl-btn {
+				span {
+					font-family: 'base' !important;
+				}
+			}
+		}
+	}
+	&[data-type="weekly-walking-challenge"] {
+		.card-walk--subject {
+			flex-direction: column;
+			justify-content: flex-start;
+			align-items: flex-start;
+			gap: 0.8rem;
+			min-height: 10.758rem;
+			margin: 0;
+			position: relative;
+
+			&::before {
+				content: '';
+				width: 13.7rem;
+				height: 9.979rem;
+				background: url(../img/challenge/walk/walk-wwc.png) no-repeat 0 0 / 12.4rem;
+				transform: translateY(0);
+				position: absolute;
+				top: 1rem;
+				right: -1.3rem;
+			}
+
+			&-tit {
+				line-height: 3.08rem;
+			}
+
+			&-txt {
+				line-height: 2.1rem;
+			}
+		}
+
+		.card-walk--type-tit {
+			background-color: #F27759;
+		}
+
+		.card-walk--link {
+			margin-top: 2.742rem;
+		}
+
+		.mdl-btn-wrap {
+			.mdl-btn {
+				height: var(--btn-height-m);
+				border-radius: var(--round-x1_5);
+				padding: 0 1.5rem;
+				gap: 0.8rem;
+				background-color: #fff;
+				border: 0.1rem solid var(--color-gray-550);
+				min-width: auto;
+
+				span {
+					font: var(--btn-font-m);
+					color: rgba(0, 0, 0, 0.7);
+				}
+
+				&[data-style="filed"] {
+					border: .1rem solid var(--color-kb-yellow-100);
+					background-color: var(--color-kb-yellow-100);
+
+					span {
+						color: var(--color-gray-0);
+					}
+				}
+			}
+		}
+	}
+	&[data-booster="true"] {
+		// 5월에 적용
+		// border: 0.2rem solid #F27759 !important;
+		// .card-walk--type {
+		// 	border-top: none;
+		// }
+		
+		.card-walk--rewardstep-booster {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			gap: 0.1rem;
+			width: 3rem;
+			height: 2.4rem;
+			border-radius: 3.8rem;
+			background: linear-gradient(124.73deg, #6054E5 17.59%, #393288 81.63%);
+			position: absolute;
+			top: 2.4rem;
+			left: .4rem;
+			z-index: 1;
+
+			&::before {
+				content: '';
+				width: 1.6rem;
+				height: 1.6rem;
+				background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16' fill='none'%3E%3Cpath d='M7.27315 3C7.18299 3 7.09981 3.04855 7.05547 3.12706L3.42485 9.55564C3.33073 9.7223 3.45114 9.92858 3.64254 9.92858H6.71749C6.90459 9.92858 7.02539 10.1266 6.9398 10.2929L5.19655 13.6818C5.06763 13.9324 5.38739 14.1715 5.59137 13.9771L11.3337 8.50236C11.4969 8.34668 11.3868 8.07142 11.1611 8.07142H8.55287C8.34798 8.07142 8.23009 7.83848 8.35142 7.67338L11.4932 3.39804C11.6145 3.23294 11.4966 3 11.2917 3H7.27315Z' fill='%23FFE972'/%3E%3C/svg%3E") no-repeat center center / 1.6rem;
+			}
+
+			&::after {
+				content: '';
+				position: absolute;
+				bottom: -.4rem;
+				width: .6rem;
+				height: .4rem;
+				background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='6' height='4' viewBox='0 0 6 4' fill='none'%3E%3Cpath d='M6 4C3.2247 2.71332 1.95423 1.82478 0 0H6C5.1019 1.45612 5.36815 2.36267 6 4Z' fill='%23463EA8'/%3E%3C/svg%3E") no-repeat 0 0 / 0.6rem;
+			}
+
+			span {
+				display: flex;
+				flex-direction: row;
+				align-items: baseline;
+				color: var(--color-gray-900);
+				font-size: 1rem;
+
+				&::before {
+					content: '';
+					display: flex;
+					width: 0.6rem;
+					height: 0.6rem;
+					background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='6' height='6' viewBox='0 0 6 6' fill='none'%3E%3Cpath d='M1.0625 1L5.0625 5M5.0625 1L1.0625 5' stroke='white' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") no-repeat 0 0 / 0.6rem;
+				}
+			}
+
+		}
+	}
+}
+.mdl-box.esg-notice + .mdl-wrap{margin-top: -1.2rem;}
+.mdl-box.esg-notice {
+	border:.1rem solid #fff !important;
+	background: linear-gradient(to bottom, rgba(255,255,255,0.44), rgba(255,255,255,1));
+	padding: 1.6rem 1.2rem;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	gap:2rem;
+	justify-content: space-between;
+	p::before {
+		content:"";
+		display: block;
+		flex-shrink: 0;
+		width: 3.6rem;
+		height: 3.6rem;
+		background: url("../img/challenge/ico-esg.png") no-repeat 50% 50% / 3.6rem;
+	}
+	p {
+		display: flex;
+		align-items: center;
+		font-size: 1.6rem;
+		color:#111;
+		gap:.4rem;
+		font-weight: 500;
+		line-height: 2.2rem;
+	}
+	em {
+		font-size: 1.6rem;
+		color: #00935A;
+		font-weight: 700;
+		line-height: 1.8rem;
+	}
+	.mdl-btn{
+		width: auto;
+	}
+}
+.booster-walk-guide {
+	.ocr-body {
+		padding: 0;
+	}
+
+	.mdl-wrap {
+		max-width: 100%;
+		z-index: 0;
+	}
+
+	.mdl-btn-wrap {
+		background: linear-gradient(180deg, rgba(255, 225, 216, 0) 0%, #FFEAC9 65%);
+		position: fixed;
+		bottom: 0;
+		left: 0;
+		padding: 2rem 2.4rem calc(3.2rem + env(safe-area-inset-bottom));
+	}
+
+	.weekly-walk-guide-img1 {
+		position: absolute;
+		width: 58.7vw;
+		z-index: 1;
+		bottom: 74.7vw;
+		left: 50%;
+		transform: translateX(-50%);
+	}
+
+	.weekly-walk-guide-img2 {
+		position: absolute;
+		width: 69.3vw;
+		bottom: 74.7vw;
+		z-index: 0;
+		left: 50%;
+		transform: translateX(-50%);
+	}
+}
+
+.card-walk--next {
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
+	flex-direction: column;
+
+	em {
+		color: #61697A;
+	}
+
+	&-group {
+		width: 100%;
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-start;
+		gap: 0.8rem;
+
+		&[data-align="center"] {
+			align-items: center;
+		}
+	}
+
+	&-tit {
+		font-size: 1.6rem;
+		font-weight: 700;
+		color: #1E1F23;
+		line-height: 1.5;
+		text-align: left;
+		font-family: 'KBF';
+
+		em {
+			color: #61697A;
+			font-size: 1.5rem;
+			font-weight: 500;
+			font-family: 'KBF';
+		}
+	}
+
+	.card-walk--team {
+		padding: 0;
+		margin-top: .6rem;
+		align-items: baseline;
+	}
+
+	.card-walk--link {
+		width: auto;
+		margin-top: 0;
+		padding: 0;
+	}
+
+	.mdl-btn {
+		width: 10rem;
+		min-width: 10rem;
+		height: 3.6rem;
+		padding: 0 2rem;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		color: #1E1F23;
+		border-radius: 1.8rem;
+		span {
+			font-size: 1.4rem;
+			font-weight: 500;
+			color: inherit;
+		}
+
+		&[data-color="black"] {
+			background-color: #1E1F23;
+			color: #fff
+		}
+
+		&[data-color="primary"] {
+			background-color: #FFD700;
+			color: #1E1F23
+		}
+	}
+}
+
+.card-walk--next[data-chain="true"]::before {
+	width: calc(100% - 4.4rem) !important;
+	left: 2.2rem !important;
+	border-top: 1px dashed #FFF !important;
+	top: -1px;
+	background: #B1B7C4;
+}
+
+.card-walk--link {
+	.mdl-btn {
+		&:disabled {
+			background-color: #E8E8E8;
+
+			span {
+				color: #999999;
+			}
+		}
+	}
+}
+
+//럭키볼
+[data-card="luckyball"] {
+	.card-walk {
+		&--subject {
+			flex-direction: column;
+			align-items: flex-start;
+			// &[data-ranking]{
+			//     display: flex;
+			//     flex-direction: column;
+			//     gap: .8rem;
+			//     .card-walk--subject-txt{
+			//         font-size: 1.5rem;
+			//         font-weight: 500;
+			//         line-height: 2.1rem;
+			//         color: #858C9A;
+			//     }
+			//     .card-walk--subject-tit{
+			//         font-size: 2.2rem;
+			//         font-weight: 700;
+			//         line-height: 3.08rem;
+			//         color: #1E1F23;
+			//     }
+			// }
+		}
+
+		&--graph {
+			width: 100%;
+			min-height: 8.8rem;
+			padding: 4.4rem 3rem 0;
+
+			&-item {
+				position: relative;
+				width: calc(100% - 5.7rem) !important;
+				height: 1rem;
+				margin: 0 auto;
+				margin-left: 3rem;
+				border-radius: .5rem;
+				background-color: #DCDCDC;
+			}
+
+			&-bar {
+				position: relative;
+				width: 0;
+				background-color: #FFCD20;
+				border-radius: 0.5rem;
+				height: 100%;
+				transition: width 0.3s ease-in;
+
+				.pointer {
+					display: none !important;
+				}
+			}
+
+			&-txt {
+				margin-top: 3.36rem;
+				justify-content: center;
+				gap: 1rem;
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+			}
+
+			&-step {
+				min-width: 8rem;
+				font-size: 1.2rem;
+				font-weight: 500;
+				color: #777;
+				text-align: center;
+				position: relative;
+				transform: translate(.2rem, -.7rem);
+
+				&::before {
+					content: '';
+					width: 8rem;
+					height: 8.6rem;
+					background: url(../../assets/img/challenge/luckyball.png) no-repeat 0 0;
+					background-size: 32rem;
+					position: absolute;
+					top: -6.4rem;
+					left: 50%;
+					transform: translateX(-50%);
+				}
+			}
+
+			&[data-step="0"] {
+				.card-walk--graph-bar {
+					width: 0;
+				}
+			}
+
+			&[data-step="1"] {
+				.card-walk--graph-bar {
+					width: 0;
+				}
+
+				.card-walk--graph-step:nth-of-type(1),
+				.card-walk--graph-step:nth-of-type(1)::before {
+					color: #1E1F23;
+					background-position: -8rem 0;
+				}
+			}
+
+			&[data-step="2"] {
+				.card-walk--graph-bar {
+					width: 50%;
+				}
+
+				.card-walk--graph-step:nth-of-type(1),
+				.card-walk--graph-step:nth-of-type(2) {
+					color: #1E1F23;
+				}
+
+				.card-walk--graph-step:nth-of-type(1)::before {
+					background-position: -8rem 0;
+				}
+
+				.card-walk--graph-step:nth-of-type(2)::before {
+					background-position: -16rem 0;
+				}
+			}
+
+			&[data-step="3"] {
+				.card-walk--graph-bar {
+					width: 100%;
+				}
+
+				.card-walk--graph-step:nth-of-type(1),
+				.card-walk--graph-step:nth-of-type(2),
+				.card-walk--graph-step:nth-of-type(3) {
+					color: #1E1F23;
+				}
+
+				.card-walk--graph-step:nth-of-type(1)::before {
+					background-position: -8rem 0;
+				}
+
+				.card-walk--graph-step:nth-of-type(2)::before {
+					background-position: -16rem 0;
+				}
+
+				.card-walk--graph-step:nth-of-type(3)::before {
+					background-position: -24rem 0;
+				}
+			}
+		}
+	}
+}
+
+[data-banner="luckyball"] {
+	.mdl-banner-group {
+		gap: 0;
+	}
+}
+
+//KBHC-2593_오케어 챌린지 타임 - 100일 걷기 챌린지 추가 오픈
+[data-company="affiliate"]{
+	.card-walk--type{
+		margin-bottom: 1rem !important;
+	}
+	.card-walk--subject{
+		&-tit{
+			line-height: 2.6rem !important;	
+		}
+		&::before {
+			top: 2rem !important;
+			right: -1.3rem !important;
+		}
+		.stit{
+			color: #1E1F23;
+			font-family: 'KBF';
+			font-size: 1.5rem;
+			font-weight: 500;
+		}
+	}
+	.card-walk--subject{
+		&-tit{
+			font-size: 1.9rem !important;
+		}
+	}	
+}
+//KBHC-2751 [오케어] 금연캠페인 고도화
+[data-type="nosmoking-challenge"]{
+	&.card-walk{
+		padding:  0 0 1.8rem;
+		.card-walk--type{
+			border-top: 0.2rem solid #229175;
+			margin-bottom: 1.6rem;
+			&-tit{
+				background-color: #229175;
+			}
+		}
+		.card-walk--subject{
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			gap: 0.4rem;
+			margin-top: 0.4rem;
+			&-tit{
+				display: flex;
+				align-items: center;
+				span{
+					font-family: "KBF";
+					font-size: 1.8rem;
+					font-weight: 700;
+					color: #333A44;
+				}
+			}
+		}
+		&::after{
+			content:'';
+			width: 8rem;
+			height: 8rem;
+			position: absolute;
+			top: 2.8rem;
+			right: 1.7rem;
+			background: url(../../assets/img/challenge/nosmoking/step.png) no-repeat 0 0 /8rem;
+		}
+
+		&.cheer{
+			.card-walk--subject {
+				margin-top: 0;
+			}
+			.card-walk--subject-tit {
+				text-align: left;
+				span {
+					font:var(--font-b1-700);
+					color: #111;
+				}
+			}
+			&::after{
+				content:'';
+				width: 8rem;
+				height: 8rem;
+				position: absolute;
+				top: 2.8rem;
+				right: 1.7rem;
+				background: url(../../assets/img/page/NEVE_10/ico-cheer.svg) no-repeat 50% 50% / 7.2rem;
+			}
+		}
+	}
+}

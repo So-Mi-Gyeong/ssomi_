@@ -1,0 +1,508 @@
+.ui-loading {
+	display: none;
+	position: fixed;
+	z-index: 100;
+	width: 100%;
+	height: 100%;
+	opacity: 0;
+	top: 0;
+	left: 0;
+	overflow: hidden;
+	animation-name: fadeOut;
+	animation-duration: 0.5s;
+	animation-iteration-count: 1;
+	animation-timing-function: linear;
+	animation-fill-mode: forwards;
+
+	&.type-area {position: absolute;}
+	&.type-area::after {position: absolute !important;}
+	&.visible {
+		display: block;
+		animation-name: fadeIn;
+		animation-duration: 0.5s;
+		animation-iteration-count: 1;
+		animation-timing-function: linear;
+		animation-fill-mode: forwards;
+	}
+
+	.ui-loading-message {
+		display: flex;
+		justify-content: center;
+		width: 100%;
+		
+		span {
+			width: 100%;
+			font-size: 1.5rem;
+			color: var(--gray_100);
+			line-height: 2.2rem;
+			font-family: 'KBF';
+			font-weight: 700;
+			text-align: center;
+		}
+	}
+}
+.ui-loading.content {
+	&::after {
+		content: "";
+		display: block;
+		position: absolute;
+		z-index: 0;
+		width: 100%;
+		height: 100%;
+		opacity: 0;
+		top:0;
+		left: 0;
+		background: rgba(255, 255, 255, 0.6);
+		@include setRound(0);
+		animation-name: fadeIn;
+		animation-duration: 0.5s;
+		animation-iteration-count: 1;
+		animation-timing-function: ease-in-out;
+		animation-fill-mode: forwards;
+	}
+	&.close:after {
+		animation-name: fadeOut;
+		animation-duration: 0.25s;
+		animation-iteration-count: 1;
+		animation-timing-function: ease-in;
+		animation-fill-mode: forwards;
+	}
+
+	&.visible .ui-loading-wrap {
+		animation-delay: .2s;
+		animation-name: fadeIn;
+		animation-duration: 0.4s;
+		animation-iteration-count: 1;
+		animation-timing-function: ease-in;
+		animation-fill-mode: forwards;
+	}
+	&.close .ui-loading-wrap {
+		opacity: 1;
+		animation-name: fadeOut;
+		animation-duration: 0.1s;
+		animation-iteration-count: 1;
+		animation-timing-function: ease-in;
+		animation-fill-mode: forwards;
+	}
+	.ui-loading-wrap {
+		position: absolute;
+		width: 100%;
+		max-width: 10rem;
+		height: 10rem;
+		background-color: transparent;
+		@include setRound($x3);
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		transform-origin: 50% 50%;
+		z-index: 1;
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-start;
+		align-items: center;
+		opacity:0;
+
+		img{
+			position: absolute;
+			top: 50%;
+			left: 0;
+			width: 100%;
+			transform: translateY(-50%);
+		}
+	}
+}
+.ui-loading.challenge {
+	&::after {
+		content: "";
+		display: block;
+		position: absolute;
+		z-index: 0;
+		width: 100%;
+		height: 100%;
+		opacity: 0;
+		top:0;
+		left: 0;
+		background: rgba(0, 0, 0, 0.6);
+		@include setRound(0);
+		animation-name: fadeIn;
+		animation-duration: 0.5s;
+		animation-iteration-count: 1;
+		animation-timing-function: ease-in-out;
+		animation-fill-mode: forwards;
+	}
+	&.close:after {
+		animation-name: fadeOut;
+		animation-duration: 0.25s;
+		animation-iteration-count: 1;
+		animation-timing-function: ease-in;
+		animation-fill-mode: forwards;
+	}
+
+	&.visible .ui-loading-wrap {
+		animation-delay: .2s;
+		animation-name: fadeIn;
+		animation-duration: 0.4s;
+		animation-iteration-count: 1;
+		animation-timing-function: ease-in;
+		animation-fill-mode: forwards;
+	}
+	&.close .ui-loading-wrap {
+		opacity: 1;
+		animation-name: fadeOut;
+		animation-duration: 0.1s;
+		animation-iteration-count: 1;
+		animation-timing-function: ease-in;
+		animation-fill-mode: forwards;
+	}
+	.ui-loading-wrap {
+		position: absolute;
+		width: 100%;
+		max-width: 18rem;
+		height: 18rem;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		transform-origin: 50% 50%;
+		z-index: 1;
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-start;
+		align-items: center;
+		opacity:0;
+	}
+	.ocr-loading-challenge {
+		width: 18rem;
+		height: 18rem;
+		animation-name: loadingChallengeShow;
+		animation-delay: 0.4s;
+		animation-duration: 0.4s;
+		animation-iteration-count: 	1;
+		animation-timing-function: ease-out;
+		animation-fill-mode:backwards;
+
+		&-main {
+			width: 18rem;
+			height: 18rem;
+			background: url(../img/challenge/loading_1.png) no-repeat 50% 50% / cover;
+			
+			animation-name: loadingChallenge;
+			animation-delay: 0.6s;
+			animation-duration: 1.5s;
+			animation-direction: normal, reverse;
+			animation-iteration-count: infinite;
+			animation-timing-function: linear;
+			position:absolute;
+			top:1.4rem;
+
+		}
+		&-star {
+			position: absolute;
+			top:0;
+			left:0;
+			width: 1.8rem;
+			height: 2rem;
+			opacity: 0;
+			background: url(../img/challenge/loading_2.png) no-repeat 50% 50% / 1.5rem;
+			
+
+			&.n1{
+				animation-name: loadingChallengeStar;
+				animation-delay: .2s;
+				animation-duration: 1.5s;
+				animation-direction: normal, reverse;
+				animation-iteration-count: infinite;
+				animation-timing-function: ease-in;
+				top:2.2rem;
+				left: 2.3rem;
+			}
+			&.n2{
+				animation-name: loadingChallengeStar;
+				animation-delay: .4s;
+				animation-duration: 1.5s;
+				animation-direction: normal, reverse;
+				animation-iteration-count: infinite;
+				animation-timing-function: ease-in;
+				top: 0.3rem;
+				left: 12.1rem;
+				transform: rotate(34deg) scale(0.8);
+			}
+			&.n3{
+				animation-name: loadingChallengeStar;
+				animation-delay: .6s;
+				animation-duration: 1.5s;
+				animation-direction: normal, reverse;
+				animation-iteration-count: infinite;
+				animation-timing-function: ease-in;
+				top: 5.5rem;
+				left: 16.9rem;
+				transform: rotate(86deg);
+			}
+		}
+	}
+	@keyframes loadingChallengeShow {
+		0% {transform: scale(0);}
+		50% {transform: scale(1);}
+	}
+	@keyframes loadingChallenge {
+		0% {transform: rotate(0);}
+		50% {transform: rotate(-15deg);}
+	}
+	@keyframes loadingChallengeStar {
+		0% {opacity: 0}
+		50% {opacity: 1;}
+	}
+}
+.ui-loading.myhealth {
+	&::after {
+		content: "";
+		display: block;
+		position: absolute;
+		z-index: 0;
+		width: 100%;
+		height: 100%;
+		opacity: 0;
+		top:0;
+		left: 0;
+		background: rgba(0, 0, 0, 0.5);
+		@include setRound(0);
+		animation-name: fadeIn;
+		animation-duration: 0.5s;
+		animation-iteration-count: 1;
+		animation-timing-function: ease-in-out;
+		animation-fill-mode: forwards;
+	}
+	
+	&.close:after {
+		animation-name: fadeOut;
+		animation-duration: 0.25s;
+		animation-iteration-count: 1;
+		animation-timing-function: ease-in;
+		animation-fill-mode: forwards;
+	}
+
+	&.visible .ui-loading-wrap {
+		animation-delay: .2s;
+		animation-name: fadeIn;
+		animation-duration: 0.4s;
+		animation-iteration-count: 1;
+		animation-timing-function: ease-in;
+		animation-fill-mode: forwards;
+	}
+	&.close .ui-loading-wrap {
+		opacity: 1;
+		animation-name: fadeOut;
+		animation-duration: 0.1s;
+		animation-iteration-count: 1;
+		animation-timing-function: ease-in;
+		animation-fill-mode: forwards;
+	}
+	.ui-loading-wrap {
+		position: absolute;
+		width: 100%;
+		max-width: 26.8rem;
+		height: 16.4rem;
+		background-color: var(--gray_0);
+		@include setRound($x3);
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		transform-origin: 50% 50%;
+		z-index: 1;
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-start;
+		align-items: center;
+		opacity:0;
+	}
+	.ocr-loading-myhealth {
+		position: relative;
+		display: block;
+		margin: -4rem 0 0;
+		width: 18.8rem;
+		height: 13.6rem;
+		background: url(../img/common/myhealth_loading.png) no-repeat 50% 50% / cover;
+
+		&-bar {
+			position: absolute;
+			width: 1.4rem;
+			height: .8rem;
+			background-color: #19C2AE;
+			@include setRound(.4rem);
+			bottom:6.4rem;
+
+			animation-name: loadingHealthAni;
+			animation-duration: 1.5s;
+			animation-iteration-count: infinite;
+			animation-timing-function: ease-in-out;
+
+			&:nth-child(1) {
+				left:6.8rem;
+			}
+			&:nth-child(2) {
+				left:8.6rem;
+				animation-delay: .2s;
+				animation-duration: 1.7s;
+			}
+			&:nth-child(3) {
+				left:10.4rem;
+				animation-delay: .1s;
+				animation-duration: 1.2s;
+			}
+		}
+	}
+}
+
+.ui-loading.ocare {
+	&::after {
+		content: "";
+		display: block;
+		position: absolute;
+		z-index: 0;
+		width: 100%;
+		height: 100%;
+		opacity: 0;
+		top:0;
+		left: 0;
+		background: rgba(0, 0, 0, 0.5);
+		@include setRound(0);
+		animation-name: fadeIn;
+		animation-duration: 0.5s;
+		animation-iteration-count: 1;
+		animation-timing-function: ease-in-out;
+		animation-fill-mode: forwards;
+	}
+	
+	&.close:after {
+		animation-name: fadeOut;
+		animation-duration: 0.25s;
+		animation-iteration-count: 1;
+		animation-timing-function: ease-in;
+		animation-fill-mode: forwards;
+	}
+	
+	&.visible .ui-loading-wrap {
+		animation-delay: .2s;
+		animation-name: fadeIn;
+		animation-duration: 0.4s;
+		animation-iteration-count: 1;
+		animation-timing-function: ease-in;
+		animation-fill-mode: forwards;
+	}
+
+	&.close .ui-loading-wrap {
+		opacity: 1;
+		animation-name: fadeOut;
+		animation-duration: 0.1s;
+		animation-iteration-count: 1;
+		animation-timing-function: ease-in;
+		animation-fill-mode: forwards;
+	}
+	.ui-loading-wrap {
+		position: absolute;
+		width: 100%;
+		max-width: 20.3rem;
+		height: 20.3rem;
+		background-color: #034a3d;
+		@include setRound($x3);
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		transform-origin: 50% 50%;
+		z-index: 1;
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-start;
+		align-items: center;
+		opacity:0;
+		img{
+			position: absolute;
+			top: 50%;
+			left: 0;
+			width: 100%;
+			transform: translateY(-50%);
+		}
+	}
+}
+
+.ui-loading.correct {
+	&::after {
+		content: "";
+		display: block;
+		position: absolute;
+		z-index: 0;
+		width: 100%;
+		height: 100%;
+		opacity: 0;
+		top:0;
+		left: 0;
+		background: rgba(0, 0, 0, 0.8);
+		animation-name: fadeIn;
+		animation-duration: 0.1s;
+		animation-iteration-count: 1;
+		animation-timing-function: ease-in-out;
+		animation-fill-mode: forwards;
+	}
+	
+	&.close:after {
+		animation-name: fadeOut;
+		animation-duration: 0.25s;
+		animation-iteration-count: 1;
+		animation-timing-function: ease-in;
+		animation-fill-mode: forwards;
+	}
+	
+	&.visible .ui-loading-wrap {
+		animation-delay: 0s;
+		animation-name: fadeIn;
+		animation-duration: 0s;
+		animation-iteration-count: 1;
+		animation-timing-function: ease-in;
+		animation-fill-mode: forwards;
+	}
+
+	&.close .ui-loading-wrap {
+		opacity: 1;
+		animation-name: fadeOut;
+		animation-duration: 0.1s;
+		animation-iteration-count: 1;
+		animation-timing-function: ease-in;
+		animation-fill-mode: forwards;
+	}
+	.ui-loading-wrap {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		z-index: 1;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		opacity:0;
+
+		img{overflow:inherit; width: 37.5rem;}
+	}
+	.txt{
+		color:#fff;
+		font-family: 'KBF';
+		font-weight: 700;
+		font-size:2.4rem;
+		transform: translateY(10rem);
+		position: absolute;
+		top: 50%;
+	}
+}
+
+.test-loading{
+	position: fixed;
+	bottom:10rem;
+	left:1rem;
+	z-index: 1000;
+	font-size: 1.1rem;
+	border:0.1rem dashed var(--gray_95);
+	background-color: var(--gray_0);
+	padding: .2rem .4rem;
+	@include setRound(.5rem);
+	opacity: .8;
+} 

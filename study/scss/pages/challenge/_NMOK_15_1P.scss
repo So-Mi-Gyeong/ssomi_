@@ -1,0 +1,88 @@
+.challengetime-team[data-company="insure"]{
+    [data-sec="1"]{
+        min-height: 86.8rem;
+        padding-bottom: 4rem;
+        &::before{
+            content: '';
+            display: block;
+            width: 100%;
+            height: 78rem;
+            background: url(../../assets/img/page/NMOK_15_1P/team_hero.jpg) no-repeat 50% 0 / 60rem;
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }
+    .challengetime-team-cont{
+        .caution-box{
+            margin-bottom: 26.8rem;
+            img{
+                transform:  translateX(-50%);
+                width: 19.6rem;
+            }
+        }
+    }
+    .challengetime-team-exp{
+        dl{
+            display: flex;
+            flex-direction: column;
+            gap:1.5rem;
+            > div {
+                display: flex;
+                gap: 1.2rem;
+                align-items: flex-start;
+            }
+            dt{
+                display: flex;
+                align-items:center;
+                font-size: 1.4rem;
+                font-weight: 500;
+                color: #3E3D45;
+                background-color: #DFDEE4;
+                padding: 0 1rem;
+                min-height: 3rem;
+                border-radius: 4rem;
+                white-space: nowrap;
+                transform: translateY(-0.2rem);
+            }
+            dd {
+                font-size: 1.5rem;
+                font-weight: 500;
+                line-height: 2.1rem;
+                color:#000;
+
+                b {
+                    display: inline-block;
+                    width: .8rem;
+                    height: 1.5rem;
+                    position: relative;
+                    margin:0 .3rem;
+
+                    &::after {
+                        content:"";
+                        display: block;
+                        width: 0.8rem;
+                        height: 0.2rem;
+                        position: absolute;
+                        top: 50%;
+                        transform: translateY(-50%);
+                        background-color: #000;
+                        // background-image: url("data:image/svg+xml,%3Csvg width='11' height='17' viewBox='0 0 11 17' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 16L9 8.5L1 1' stroke='%23B5B3BE' stroke-width='2'/%3E%3C/svg%3E%0A");
+                        // background-repeat: no-repeat;
+                        // background-position: 50% 50%;
+                        // background-size:.8rem;
+                        // width: .8rem;
+                        // height:1.5rem;
+                    }
+                }
+                &.member{
+                    div{
+                        color: #000;
+                        line-height: 2.6rem;
+                    }
+                }
+            }
+        }
+    }
+}

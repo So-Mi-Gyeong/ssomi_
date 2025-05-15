@@ -1,0 +1,46 @@
+// 영향을 주지 않는 class명은 data-brand 바깥에 입력
+
+/* 현대그린푸드 */
+.homefit-service-info-wrap {
+    section{
+        padding: 0;
+        & + section{
+            margin-top: 4rem;
+            padding-top: 4rem;
+        }
+    }
+}
+
+[data-brand="greenfood"]{
+    .content{padding: 0;}
+    //프로모션
+    .event-program-box{
+        .mdl-btn-wrap{
+            padding: 0 3rem 6rem;
+            background-color: #FAF3ED;
+        }
+    }    
+
+    .img-zoom{padding: 0 2.4rem;}
+
+    .list-white-box[data-type="schedule"]{
+        .listimg-tit{font-weight: 700;}
+        .listimg-pay{font-weight: 700;}
+    }
+}
+[data-img="mpd_9_352_top"] {
+    background: url(../../assets/img/store/program/NMPD_9_352V/mpd_9_352_top.jpg) no-repeat 50% 50% / cover;
+}
+.ocr-product-intro [data-img="mpd_9_380_top"]{
+    background: url(../../assets/img/store/program/NMPD_9_380V/mpd_9_380_top.jpg) no-repeat 50% 50%/cover;
+}
+
+//NEVE_10_46V
+.ods-event{
+    &.NEVE_10_46V{
+        .ods-event--notice{padding: 5rem 3rem 7rem;}
+        .ocr-footer{
+            background: linear-gradient(to bottom, rgba(145, 190, 75, 0) 0%, #fff 3rem)
+        }
+    }
+}

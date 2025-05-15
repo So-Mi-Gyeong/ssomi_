@@ -1,0 +1,116 @@
+.mdl-acco {
+    position: relative;
+    margin: 0;
+ 
+    &::after{
+        content: "";
+        display: block;
+        width: 100%;
+        height: .1rem;
+        position: absolute;
+        bottom:0;
+        left:0;
+        border-bottom: .1rem solid var(--line_light);
+    }
+ 
+    .mdl-acco-wrap {
+        position: relative;
+        width: 100%;
+        padding: 0;
+        margin: 0;
+    } 
+    .mdl-acco-tit {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        margin: -.1rem 0 0;
+        padding: 0;
+        min-height: 5.8rem;
+        border-top: .1rem solid var(--line_light);
+        background: var(--gray_0);
+    }
+    .mdl-acco-txt {
+        position: relative;
+        padding: $x1 $x5 $x1 0;
+        z-index:2;
+        font-size: 1.6rem;
+        font-weight: 700;
+        font-family: 'KBF';
+        color: var(--gray_90);
+        z-index: 1;
+        & + .mdl-acco-btn{position: absolute;}
+    }
+    .mdl-acco-btn {
+        cursor: pointer;
+        position: relative;
+        z-index: 1;
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        padding: $x1 $x5 $x1 $x1;
+        text-align: left;
+        font-size: 1.4rem;
+    
+        &[aria-expanded="true"]::after {
+            transform: rotate(180deg);
+        }
+        &::after {
+            display: block;
+            position: absolute;
+            right: 1.0rem;
+            top: 50%;
+            margin-top: -0.4rem;
+            width: 1.3rem;
+            height: 0.8rem;
+            background-image: url(../img/common/ico_arrow_acco.svg);
+            background-repeat: no-repeat;
+            background-size: 1.3rem 0.8rem;
+        }
+    }
+    a.mdl-acco-btn { 
+        text-decoration: none;
+        text-decoration: underline;
+        color: #6296df;
+    
+        .mdl-acco-arrow {transform: rotate(-90deg);}
+    }
+    .mdl-acco-pnl {
+        position: relative;
+        visibility: visible;
+        transition: height .3s ease-in-out;
+        height:auto;
+        overflow: hidden;
+        background: var(--gray_0);   
+
+        &.off[aria-hidden="false"] .mdl-acco-pnl-wrap{display: block;}
+        &.off .mdl-acco-pnl-wrap{display: none;}
+    }
+    .mdl-acco-pnl-wrap{
+        padding: $x2 0;
+        font-size: 1.6rem;
+        font-weight: 300;
+        font-family: 'KBF';
+        line-height: 2.5rem;
+    }
+    .mdl-acco-tit-wrap {
+        position: relative;
+        display: inline-block;
+        z-index: 2;
+        width: auto;
+        text-decoration: none;
+        padding: 1rem;
+        color: var(--gray_100);
+    
+        & + .mdl-acco-btn {
+            position: absolute;
+            color: transparent;
+            overflow: hidden;
+            font-size: xx-small;
+            line-height: 0;
+        }
+    } 
+}

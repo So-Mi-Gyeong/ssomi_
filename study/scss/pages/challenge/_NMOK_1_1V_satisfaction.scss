@@ -1,0 +1,108 @@
+body[data-type="satisfaction"]{
+  .ocr-body{
+    background: #FFF;
+    padding: 0 2.4rem calc(env(safe-area-inset-bottom));
+  }
+  .ocr-emotion-challenge-step{
+    .mdl-wrap + .mdl-wrap{margin-top: 4rem;}
+    .mdl-subject{
+      margin-top: 3rem;
+      justify-content: center;
+      &::after{
+        display: none;
+      }
+    }
+    .mdl-subject-group{
+      flex-direction: column;
+      gap: 1rem;
+      em{
+        width: 2.2rem;
+        height: 2.2rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        background-color: #FF5000;
+        color:#FFF;
+        font-size: 1.3rem;
+      }
+    }
+    .mdl-subject-tit{
+      font-family: 'KBF';
+      text-align: center;
+      font-size: 1.8rem;
+      
+      span{
+        font-size: 1.8rem;
+        font-weight: 300;
+        color:#999; 
+      }
+    }
+    .ocr-emotion-challenge-box{
+      border: 0.1rem solid #EEE;
+      box-shadow: 0 1.2rem 3rem 0 #0000000F;
+      textarea{
+        &::placeholder{
+          font-weight: 400;
+          font-size: 1.5rem;
+          color: #9C9C9C;
+        }
+      }
+    }
+  }
+  .footer{
+    .btn-wrap{
+      margin-top: 3.6rem;
+      padding: 2rem 0 3rem;
+    }
+  }
+}
+.ocr-emotion-challenge-box ul label span{ font-family: 'KBF';}
+.ocr-emotion-challenge-box[data-direction="column"]{
+  ul{
+    display: flex;
+    gap: 1.5rem;
+    flex-direction: column;
+    li{
+      width: 100%;
+    }
+    label{
+      position: relative;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: flex-start;
+      &::before{
+        content: '';
+        width: 2.2rem;
+        height: 2.2rem;
+        background-image: none !important;
+        background-color: #FFF;
+        border: 0.1rem solid #CCC;
+        border-radius: 50%;
+        box-sizing: border-box;
+      }
+      &::after{
+        content: '';
+        position: absolute;
+        left: 0.6rem;
+        top: 0.6rem;
+        width: 1rem;
+        height: 1rem;
+        border-radius: 50%;
+        background-color: #CCC;
+        
+      }
+    }
+    input[type="radio"]:checked + label{
+      &::before{
+        content: '';
+        background-color: #FFC200;
+      }
+      &::after{
+        background-color: #FFF;
+      }
+    }
+  }
+
+}

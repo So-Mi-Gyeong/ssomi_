@@ -1,0 +1,339 @@
+.NMOK_19_17P {
+  .emotion-select {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-top: 2.4rem;
+
+    :checked + label span {
+      color:#000;
+    }
+    label {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap:0.8rem;
+
+      span {
+        display: block;
+        font-family: 'KBF';
+        font-size: 1.2rem;
+        font-family: 500;
+        color: #999;
+      }
+      &::before {
+        content: "";
+        display: inline-flex;
+        width: 3.6rem;
+        height: 3.6rem;
+        background: url(../img/challenge/m09/ico_emotion.svg) no-repeat 0 0 / 3.6rem;
+      }
+      
+    }
+    label:nth-of-type(1)::before {background-image: url(../img/challenge/m09/ico_emotion.svg);}
+    label:nth-of-type(2)::before {background-image: url(../img/challenge/m09/ico_emotion2.svg);}
+    label:nth-of-type(3)::before {background-image: url(../img/challenge/m09/ico_emotion3.svg);}
+    label:nth-of-type(4)::before {background-image: url(../img/challenge/m09/ico_emotion4.svg);}
+    label:nth-of-type(5)::before {background-image: url(../img/challenge/m09/ico_emotion5.svg);}
+    :checked + label:nth-of-type(1)::before {background-image: url(../img/challenge/m09/ico_emotion_on.svg);}
+    :checked + label:nth-of-type(2)::before {background-image: url(../img/challenge/m09/ico_emotion2_on.svg);}
+    :checked + label:nth-of-type(3)::before {background-image: url(../img/challenge/m09/ico_emotion3_on.svg);}
+    :checked + label:nth-of-type(4)::before {background-image: url(../img/challenge/m09/ico_emotion4_on.svg);}
+    :checked + label:nth-of-type(5)::before {background-image: url(../img/challenge/m09/ico_emotion5_on.svg);}
+  }
+  .mdl-line {
+    margin-top: 3.6rem;
+    margin-bottom: 3.6rem;
+  }
+  textarea {
+    margin-top: 2.4rem;
+    width: 100%;
+    height: 15.2rem;
+    border: .1rem solid var(--color-gray-550);
+    border-radius: .8rem;
+    padding: 1.2rem 1.6rem;
+  }
+  .positive-textnumber {
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+    margin-top: 0.8rem;
+    font-size: 1.6rem;
+  }
+  h3.ods-subject--title {
+    font-size: 2rem;
+    line-height: 2.6rem;
+    font-weight: 700;
+    color: var(--color-gray-50);
+  }
+
+  .ocr-footer {
+    margin-top: -2.4rem;
+    flex-shrink: 0;
+    padding: 2.4rem 2.4rem 0;
+    border:0;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgb(255, 255, 255) 2.4rem);
+  }
+  .ocr-body{padding:1.6rem 2.4rem 2.4rem;}
+  .ocr-wrap {
+    padding-bottom: calc(3rem + env(safe-area-inset-bottom));
+  }
+}
+
+.NMOK_19_18P {
+  .to-do-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+    &--group {
+      width: 100%;
+      display: flex;
+      gap:0.8rem;
+      align-items: center;
+      &::before {
+        content: attr(data-n);
+        width: 3.2rem;
+        height: 3.2rem;
+        border-radius: 50%;
+        background-color: #000;
+        color:#fff;
+        font-size: 1.6rem;
+        font-weight: 700;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      input {
+        flex: 1;
+        border:0.1rem solid var(--color-gray-550);
+        height: 5.2rem;
+        border-radius: 0.8rem;
+        -webkit-appearance: none;
+        padding: 0 1.4rem;
+      }
+    }
+    &--item {
+      display: flex;
+      gap:0.8rem;
+      align-items: center;
+      flex-direction: column;
+    }
+    .answer-textnumber{ 
+      display: flex;
+      justify-content: flex-end;
+      width: 100%;
+      span {
+        color: var(--color-gray-500);
+      }
+      strong {
+        color:#1E1F23;
+      }
+    }
+  }
+
+  .mdl-bul-star{margin-top: 1.6rem;}
+  .ocr-footer {
+    margin-top: -2.4rem;
+    flex-shrink: 0;
+    padding: 2.4rem 2.4rem 0;
+    border:0;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgb(255, 255, 255) 2.4rem);
+  }
+  .ocr-body{padding:2.4rem 2.4rem 2.4rem;}
+  .ocr-wrap {
+    padding-bottom: calc(3rem + env(safe-area-inset-bottom));
+  }
+}
+
+.NMOK_19_19P {
+  textarea {
+    margin-top: 2.4rem;
+    width: 100%;
+    height: 15.2rem;
+    border: .1rem solid var(--color-gray-550);
+    border-radius: .8rem;
+    padding: 1.2rem 1.6rem;
+  }
+  .positive-textnumber {
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+    margin-top: 0.8rem;
+    font-size: 1.6rem;
+  }
+
+  .ocr-footer {
+    margin-top: -2.4rem;
+    flex-shrink: 0;
+    padding: 2.4rem 2.4rem 0;
+    border:0;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgb(255, 255, 255) 2.4rem);
+  }
+  .ocr-body{padding:1.6rem 2.4rem 2.4rem;}
+  .ocr-wrap {
+    padding-bottom: calc(3rem + env(safe-area-inset-bottom));
+  }
+}
+
+.NMOK_19_6P {
+  background-color: #F7F7F7;
+  .ocr-body {
+    padding: 2.4rem 2.4rem calc(env(safe-area-inset-bottom) + 8rem);
+  }
+
+  .to-do-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    &--item {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      padding: 2.4rem;
+      border: .1rem solid var(--color-gray-700);
+      background-color: #fff;
+      border-radius: 1.6rem;
+      gap:1.6rem;
+    }
+    &--round {
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+      font-size: 1.6rem;
+      font-weight: 700;
+      line-height: 2.2rem;
+
+      &::before {
+        content: "";
+        display: block;
+        width: 1.8rem;
+        height: 1.8rem;
+        margin-right: 0.8rem;
+        background: url(../../assets/img/challenge/m04/ico_smile.png) no-repeat 0 0 / 1.8rem;
+      }
+      
+    }
+    &--group {
+      display: flex;
+      gap:0.8rem;
+      flex-direction: column;
+      counter-reset: dep1 0 dep2 0;
+
+      &-item {
+        display: flex;
+        gap:0.8rem;
+        align-items: center;
+        padding: 0.8rem 1.2rem;
+        border-radius: 1.2rem;
+        background-color: var(--color-gray-800);
+        font: var(--font-b3-400);
+        color: var(--color-gray-300);
+        counter-increment: dep1 1;
+
+        &::before {
+          content: counter(dep1);
+          flex-shrink: 0;
+          padding-top: 0.1rem;
+          width: 2.4rem;
+          height: 2.4rem;
+          border-radius: 50%;
+          background-color: #333A44;
+          color:#fff;
+          font-size: 1.2rem;
+          font-weight: 700;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          white-space: nowrap;
+        }
+      }
+    }
+  }
+  
+}
+
+.NMOK_19_7P {
+  background-color: #F7F7F7;
+  .ocr-body {
+    padding: 2.4rem 2.4rem calc(env(safe-area-inset-bottom) + 8rem);
+  }
+  .emotion-select {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    &--item {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      padding: 2.4rem;
+      border: .1rem solid var(--color-gray-700);
+      background-color: #fff;
+      border-radius: 1.6rem;
+      gap:1.6rem;
+    }
+
+    &--icon {
+      width: 4rem;
+      height: 4rem;
+      &[data-state="0"] {background: url(../img/challenge/m09/ico_emotion_normal.svg) no-repeat 0 0 / 4rem;}
+      &[data-state="1"] {background: url(../img/challenge/m09/ico_emotion_on.svg) no-repeat 0 0 / 4rem;}
+      &[data-state="2"] {background: url(../img/challenge/m09/ico_emotion2_on.svg) no-repeat 0 0 / 4rem;}
+      &[data-state="3"] {background: url(../img/challenge/m09/ico_emotion3_on.svg) no-repeat 0 0 / 4rem;}
+      &[data-state="4"] {background: url(../img/challenge/m09/ico_emotion4_on.svg) no-repeat 0 0 / 4rem;}
+      &[data-state="5"] {background: url(../img/challenge/m09/ico_emotion5_on.svg) no-repeat 0 0 / 4rem;}
+      
+    }
+    &--main {
+      padding-top: 1.6rem;
+      position: relative;
+      font-size: 1.5rem;
+      line-height: 2.2rem;
+      font-weight: 400;
+      color: var(--color-gray-300);
+      &::before {
+        content:"";
+        display: block;
+        position: absolute;
+        top:0;
+        left:0;
+        width: 100%;
+        height: .2rem;
+        background: url("data:image/svg+xml,%3Csvg width='281' height='2' viewBox='0 0 281 2' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1H280' stroke='%23E7E9ED' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' stroke-dasharray='0.1 6'/%3E%3C/svg%3E%0A") no-repeat 0 0 / auto .2rem;
+      }
+    }
+    &--head {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      &-tit {
+        display: flex;
+        gap:0.8rem;
+        align-items: center;
+
+        &::before {
+          content:"";
+          display: block;
+          background: url(../../assets/img/challenge/new/Ico_clover.svg) no-repeat 0 0 / 1.8rem;
+          width: 1.8rem;
+          height: 1.8rem;
+        }
+
+        h2 {
+          font-size: 1.6rem;
+          font-weight: 700;
+          line-height: 2.2rem;
+          color: var(--color-gray-50);
+        }
+        span {
+          font-size: 1.4rem;
+          font-weight: 400;
+          line-height: 1.8rem;
+          color: var(--color-gray-500);
+        }
+      }
+    }
+  }
+}

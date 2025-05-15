@@ -1,0 +1,749 @@
+//NMOK_1_1V - 챌린지 메인 
+$currentSPimg: url(../img/challenge/main/sp_NMOK_1_1V_2407.png);
+	$currentSPsize: 24rem;
+.ocr-challenge {
+	* {word-break: keep-all;}
+
+	textarea,
+	input {
+		font-family: 'Base';
+	}
+
+	.mdl-switch[data-type="tab"] label,
+	.mdl-subject-em,
+	.mdl-subject-txt,
+	.mdl-subject-tit {
+		font-family: 'KBF';
+	}
+
+	&[data-top="false"] .ocr-header {
+		backdrop-filter: blur(1.5rem);
+		-webkit-backdrop-filter: blur(1.5rem);
+	}
+
+
+
+	.ocr-header {
+		position: fixed;
+		background-color: transparent !important;
+		background-color: rgba(0, 0, 0, 0) !important;
+		backdrop-filter: blur(0rem);
+		-webkit-backdrop-filter: blur(0rem);
+		transition: all .3s ease-in;
+	}
+	.ocr-header-tit[aria-label]::before{
+			font:var(--font-h3) !important;
+	}
+
+	.ocr-body {
+		padding: 0;
+		background: #fff;
+		transition: background-color .2s ease;
+
+		&::after {
+			content: "";
+			pointer-events: none;
+			display: block;
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			max-height: 71.7rem;
+			pointer-events: none;
+			border-radius: 0;
+			overflow: hidden;
+			z-index: 0;
+			opacity: 0;
+			transition: opacity .2s ease-in;
+		}
+
+		.mdl-line {
+			display: none;
+			width: calc(100vw + 4.8rem);
+			min-width: calc(100% + 4.8rem);
+			margin: 4.8rem 0;
+			border-top: 1.3rem solid #ECEDF4;
+		}
+	}
+
+	.mdl-group {
+		position: relative;
+		width: 100%;
+	}
+
+	//걷기챌린지 - 팀전
+	[data-leader="true"] {
+		display: flex;
+		align-items: center;
+		gap: .8rem;
+	}
+
+	[data-leader="true"]::after {
+		content: "";
+		display: block;
+		width: 3.2rem;
+		height: 3.2rem;
+		transform: translateY(-0.2rem);
+		background: url(../../assets/img/challenge/m06/sp-team.png);
+		background-size: 17rem;
+		background-position: -6rem -8rem;
+		;
+	}
+
+	//챌린지메인 하단 배너
+	&-banner {
+		position: relative;
+		width: calc(100vw + 1px) !important;
+		max-width: inherit !important;
+    left: 50%;
+    transform: translate(-50%, 0);
+		display: flex;
+		flex-direction: column;
+		gap: 0.1rem;
+		margin-top: 0;
+
+		* {font-family: 'KBF';}
+	}
+
+	&-title {
+		z-index: 1;
+		position: relative;
+		display: flex;
+		align-items: flex-start;
+		justify-content: center;
+		flex-direction: column;
+		width: calc(100vw + 2px);
+		margin-left: -1px;
+		padding: calc(5.6rem + env(safe-area-inset-top)) 2.4rem 5.7rem;
+
+		.mdl-subject {
+			position: relative;
+			width: 100%;
+			margin: 1.8rem 0 0;
+			padding: 2.3rem 0;
+
+			&[data-style="title"] {
+				min-height: 18rem;
+				margin: 0;
+				padding: 0;
+	
+				.mdl-subject-group {
+					position: absolute;
+					left: 0;
+					bottom: 3.3rem;
+					display: flex;
+					flex-direction: column;
+					gap: 4.2rem;
+					z-index: 99;
+				}
+				.mdl-subject-tit {
+					font-size: 1.8rem; 
+					font-weight: 700;
+					line-height: 2.4rem;
+					color: #1E1F23;
+				}
+				.linkup {
+					height: 3.8rem;
+					line-height: 0;
+					padding: 0 1.6rem;
+					border-radius: 1.2rem;
+					background-color: #000;
+					position: relative;
+					z-index: -1;
+					span {
+						font-size: 1.4rem;
+						font-weight: 700;
+						color: #fff;
+						font-family: 'KBF';
+					}
+				}
+				.mdl-tooltip {
+					gap: .8rem;
+					flex-direction: row-reverse;
+					top: 15.8rem;
+					z-index: 99;
+	
+					&::before {
+						width: 0.5rem;
+						height: 0.5rem;
+						bottom: 3.2rem;
+						border: 0.1rem solid #000 !important;
+						border-bottom: 0 !important;
+						border-right: 0 !important;
+					}
+					&::after {
+						content: '';
+						width: 1.8rem;
+						height: 1.8rem;
+						background-image: url(../img/challenge/m01/coin.png);
+						background-size: 1.7rem;
+					}
+					&-txt {
+						font-size: 1.4rem;
+						font-weight: 500;
+						color: #444B55;
+	
+						span {
+							font-size: 1.4rem;
+							font-weight: 700;
+							color: #444B55;
+							transform: translateY(0.1rem);
+						}
+					}
+				}
+			}
+
+			&-txt {
+				font-size: 1.5rem;
+				color: #1E1F23;
+				line-height: 1.3;
+				margin-bottom: 0;
+				font-weight: 500;
+				margin-top: 0;
+				;
+			}
+
+			&-tit {
+				font-size: 3rem;
+				font-weight: 700;
+				line-height: 1.3;
+				color: #1E1F23;
+				// margin-bottom: 1.2rem;
+			}
+		}
+
+		.challenge-dday {
+			position: relative;
+			z-index: 1;
+
+			dt {
+				font-family: 'KBF';
+				color: #1E1F23;
+				font-size: 1.4rem;
+				font-weight: 300;
+			}
+
+			dd {
+				font-size: 5.8rem;
+				font-weight: 900;
+				color: #1E1F23;
+			}
+		}
+	}
+
+	&-mission {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		max-width: 100%;
+		justify-content: center;
+		border-top-left-radius: 5rem;
+		border-top-right-radius: 5rem;
+		padding: 5.6rem 2.4rem 5.3rem;
+		gap: 2.4rem;
+
+		&-wrap {
+			position: relative;
+			width: 100%;
+			max-width: $maxwidth;
+			display: flex;
+			flex-direction: column;
+			gap: 2.4rem;
+		}
+
+		&-item {
+			padding: 0 0 8.4rem;
+			border-radius: 4rem;
+			overflow: hidden;
+			max-width: $maxwidth;
+
+			* {
+				font-family: 'KBF';
+			}
+
+			.point {
+				position: absolute;
+				top: 1.8rem;
+				right: 1.8rem;
+				height: 3.8rem;
+				padding: 0 1.2rem 0 0;
+				border-radius: 1.9rem;
+
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				font-size: 1.5rem;
+				font-weight: 700;
+				color: #fff;
+				background: #4A56DF;
+
+				&::before {
+					content: "";
+					display: block;
+					width: 3.4rem;
+					height: 3.8rem;
+				}
+			}
+
+			.mdl-subject {
+				width: 100%;
+				padding: 3.8rem 2.7rem .7rem;
+				min-height: 0;
+
+				&-em {
+					position: relative;
+					font-size: 1.6rem;
+					color: #777;
+					line-height: 1.2;
+					margin-bottom: 2rem;
+					font-weight: 500;
+					padding-bottom: .8rem;
+
+					&::after {
+						content: "";
+						position: absolute;
+						bottom: 0;
+						display: block;
+						width: 100%;
+						height: .3rem;
+						border-radius: .2rem;
+						background-color: #FFE108;
+					}
+				}
+
+				&-tit {
+					font-size: 2.2rem;
+					font-weight: 700;
+					line-height: 1.4;
+					color: #1E1F23;
+					margin-bottom: 0.4rem;
+				}
+
+				&-txt {
+					color: #777;
+					font-weight: 300;
+					font-size: 1.5rem;
+					margin-top: 0;
+				}
+			}
+
+			.challenge-graph {
+				position: relative;
+				width: 100%;
+				padding: 5.8rem 4rem 1.4rem;
+				border-radius: 1.6rem;
+
+				&-txt {
+					margin-top: .7rem;
+					display: flex;
+					justify-content: space-between;
+
+					div {
+						font-size: 1.2rem;
+						font-weight: 500;
+						line-height: 1.3;
+						color: #777;
+					}
+				}
+
+				.challenge-graph-item {
+					position: relative;
+					margin-top: 1rem;
+					width: 100%;
+					height: 1rem;
+					border-radius: .5rem;
+					background-color: #F7F8FA;
+				}
+
+				.challenge-graph-bar {
+					position: relative;
+					width: 0;
+					background-color: #FFCD20;
+					border-radius: .5rem;
+					height: 100%;
+					transition: width .3s ease-in;
+
+					.pointer {
+						display: block;
+						position: absolute;
+						right: -1.6rem;
+						bottom: 0;
+						width: 3.6rem;
+						height: 3.6rem;
+						background: url(../img/challenge/main/bar_pointer.png) no-repeat 0 0 / 100%;
+					}
+
+					.mdl-tooltip {
+						position: absolute;
+						left: 50%;
+						top: auto;
+						bottom: 4.4rem;
+						width: auto;
+						height: 3.2rem;
+						border-radius: .8rem;
+						padding: 0 1rem;
+						transform: translateX(-50%);
+						box-shadow: 0 .4rem .4rem 0 rgba(0, 0, 0, 0.08);
+
+					}
+				}
+
+			}
+
+			.mission-state {
+				display: flex;
+				align-items: center;
+				flex-direction: column;
+				gap: 1.4rem;
+				width: 100%;
+				padding: 0 2.2rem;
+				margin-top: 2rem;
+
+				&[data-n="1"] {
+					dl::after {
+						display: none;
+					}
+
+					dl>div {
+						flex-direction: row;
+						justify-content: center;
+						padding-left: 4rem;
+						gap: 2.4rem;
+					}
+
+					dt,
+					dd {
+						width: auto;
+					}
+
+					dd {
+						position: relative;
+					}
+
+					dd::before {
+						content: "";
+						position: absolute;
+						top: 0.4rem;
+						left: -1.2rem;
+						width: .1rem;
+						height: 1rem;
+						background-color: #E7E9ED;
+					}
+				}
+
+				dl {
+					width: 100%;
+					padding: 2rem .8rem;
+					border-radius: 2.6rem;
+					background-color: #F7F8FA;
+					display: flex;
+					min-height: 7.6rem;
+					justify-content: space-around;
+					position: relative;
+
+					&::after {
+						content: "";
+						display: block;
+						position: absolute;
+						left: 50%;
+						width: .1rem;
+						height: calc(100% - 4rem);
+						border-left: .1rem solid #E7E9ED;
+					}
+				}
+
+				dl>div {
+					position: relative;
+					display: flex;
+					flex-direction: column;
+					align-items: center;
+					padding-left: 4rem;
+				}
+
+				.n1 dt::before {
+					background-position: 0 0;
+				}
+
+				.n2 dt::before {
+					background-position: -3.2rem 0;
+				}
+
+				.n3 dt::before {
+					background-position: -6.4rem 0;
+				}
+
+				.n4 dt::before {
+					background-position: -9.6rem 0;
+				}
+
+				dt {
+					width: 100%;
+					text-align: left;
+					color: #1E1F23;
+					font-size: 1.2rem;
+					line-height: 1.4;
+					font-weight: 200;
+
+					&::before {
+						content: "";
+						position: absolute;
+						top: 0;
+						left: 0;
+						display: block;
+						margin: 0;
+						width: 3.2rem;
+						height: 3.2rem;
+						border-radius: 50%;
+						background: #fff url(../img/challenge/main/sp_x24.png) no-repeat 0 0 / auto 3.2rem;
+					}
+				}
+
+				dd {
+					width: 100%;
+					text-align: left;
+					color: #1E1F23;
+					font-size: 1.4rem;
+					line-height: 1.4;
+					font-weight: 500;
+				}
+			}
+
+			.mdl-btn span {
+				color: #444;
+				font-size: 1.4rem;
+				font-weight: 700;
+			}
+
+			.mdl-btn-wrap {
+				position: absolute;
+				bottom: 0;
+				margin-top: 4rem;
+				padding: 0;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+
+				.mdl-btn {
+					border-radius: 0;
+					height: 5.6rem;
+					background: linear-gradient(92deg, #FFE108 7.12%, #FFCD20 85.68%);
+
+					&:disabled {
+						background: linear-gradient(0deg, #E8E8E8 0%, #E8E8E8 100%), linear-gradient(92deg, #FFE108 7.12%, #FFCD20 85.68%);
+
+						span {
+							color: #999;
+						}
+					}
+
+					span {
+						width: 100%;
+						color: #1E1F23;
+						font-size: 1.7rem;
+						font-weight: 700;
+					}
+
+					+.mdl-tooltip {
+						position: absolute;
+						top: auto;
+						bottom: 5.9rem;
+						left: 50%;
+						transform: translate(-50%, 0);
+						background: #4A56DF;
+						padding: .9rem 1.2rem .6rem;
+						border-radius: 1.5rem;
+						box-shadow: 0 .2rem .4rem rgba(0, 0, 0, 0.16);
+
+						&::before {
+							background: #4A56DF;
+						}
+
+						.mdl-tooltip-txt {
+							font-size: 1.2rem;
+							font-weight: 300;
+							color: #fff;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	.challenge-dday {
+		display: flex;
+		flex-direction: column;
+		gap: 1.2rem;
+
+		dt {
+			font-size: 1.6rem;
+			font-weight: 500;
+			line-height: 1.6rem;
+			color: #000;
+			font-family: 'KBF';
+		}
+
+		dd {
+			font-size: 2.2rem;
+			font-weight: 500;
+			line-height: 2.2rem;
+			display: flex;
+			justify-content: flex-start;
+			align-items: baseline;
+			gap: .4rem;
+			color: #000;
+			font-family: 'KBF';
+
+			span {
+				font-size: 3.6rem;
+				font-weight: 700;
+				line-height: 3.6rem;
+				color: #000;
+				font-family: 'KBF';
+			}
+		}
+	}
+	.mdl-banner {
+		position: relative;
+		background-color: #fff;
+		box-shadow: 0 1.2rem 3rem 0 rgba(0, 0, 0, 0.10);
+		padding: 2.4rem 2rem;
+		z-index: 1;
+		border-radius: 3.6rem;
+		min-height: 14.8rem;
+		align-items: flex-start;
+		overflow: hidden;
+
+		&::before {
+			content: "";
+			display: block;
+			position: absolute;
+			bottom: -2rem;
+			right: -2rem;
+			width: 11.2rem;
+			height: 11.2rem;
+			border-radius: 50%;
+			z-index: 0;
+		}
+		&[data-banner] {
+			border-radius: 0;
+			&::before {
+				width: 11.2rem;
+				height: 11.2rem;
+				bottom: -2.8rem;
+				right: -2.3rem;
+			}
+			&::after {
+				content: '';
+				display: block;
+				width: 8rem;
+				height: 8rem;
+				background-size: 32rem !important;
+				bottom: 2.4rem;
+				right: 5.2rem;
+				position: absolute;
+				z-index: 1;
+			}
+			.mdl-banner-group {
+				gap: .4rem;
+			}
+			.mdl-banner-em {
+				font-weight: 300;
+				line-height: 1.82rem;
+			}
+		}
+		
+		//지난 챌린지
+		//지난 챌린지
+		&[data-banner="past"] {
+			background-color: #6C7891;
+			color: #fff;
+
+			&::before {background-color: #6C7891;}
+			&::after {
+				content: "";
+				display: block;
+				position: absolute;
+				bottom: 2.4rem;
+				right: 5.2rem;
+				background: url(../img/challenge/sp_60.png) no-repeat -0.1rem -3.5rem / 25rem;
+				width: 8rem;
+				height: 8rem;
+				z-index: 1;
+			}
+		}
+		&[data-banner="guide"] {
+			background-color: #354462;
+			&::before {background-color: #354462;}
+			&::after {
+				background-position: -11.7rem -3.3rem;
+				background-size: 25rem;
+			}
+		}
+		&[data-banner="guide"]::after,
+		&[data-banner="past"]::after {
+			content: "";
+			background-image: $currentSPimg;
+			background-size: $currentSPsize;
+			background-repeat: no-repeat;
+		}
+		&-em {
+			position: relative;
+			font-size: 1.3rem;
+			font-weight: 200;
+			color: #fff;
+			z-index: 2;
+		}
+		&-tit {
+			position: relative;
+			font-size: 1.8rem;
+			color: #fff;
+			font-weight: 700;
+			z-index: 2;
+		}
+	}
+	.challenge-new25{
+		padding: 0 2.4rem;
+		position: relative;
+		z-index: -1;
+		&::before{
+			content: '';
+			position: absolute;
+			top: -7.4rem;
+    	left: 50%;
+    	width: 200vw;
+			height: 20.2rem;
+			background-color: #ffe443;
+			transform: rotate(-26.2deg) translate(-50%, 0);
+		}
+		&::after{
+			content: '';
+			background: url(../img/challenge/new25/img2502_01.png) no-repeat right 0 top / 28.6rem 26.3rem;
+			width: 34.6rem;
+			height: 26.3rem;
+			position: absolute;
+			top: 5rem;
+			right: -8rem;
+			z-index: 10;
+		}
+		.challenge-new25--tit{
+			padding: 3rem 0 5.2rem;
+			img{
+				width: 13.1rem;
+				height: 2.2rem;
+			}
+		}
+		.mdl-wrap{
+			&::after{
+				content: '';
+				position: absolute;
+				top: 0.5rem;
+				right: 1rem;
+				width: 22.3rem;
+				height: 14.4rem;
+				z-index: 11;
+				background: url(../img/challenge/new25/img2502_02.png) no-repeat 0 0 / 22.3rem auto;
+			}
+		}
+	}
+}

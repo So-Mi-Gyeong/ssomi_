@@ -1,0 +1,338 @@
+.mdl-banner {
+	position: relative;
+	width: 100%;
+	display: flex;
+	padding: $x2 $x3;
+	align-items: center;
+	justify-content: space-between;
+	@include setRound($x3);
+
+	&[data-icon-after="arrow-long"]::after {
+		content: '';
+		width: 5.2rem;
+		height: 5.2rem;
+		@include setRound(2.6rem);
+		border: .1rem solid rgba(255, 255, 255, 30%);
+		background-size: 2.4rem;
+		background-color: rgba(255, 255, 255, 10%);
+	}
+
+	&[data-style]::after {
+		background-position: 50% 50%;
+		background-repeat: no-repeat;
+	}
+
+	&[data-style="ocare"] {
+		background-color: #8E67F7;
+
+		&::after {
+			content: '';
+			width: 7.6rem;
+			height: 7.6rem;
+			background-image: url(../img/health/img_ocarem.png);
+			background-size: 7.2rem 5.2rem;
+		}
+	}
+
+	&[data-style="mind"] {
+		background-color: #266EFA;
+
+		&::after {
+			content: '';
+			width: 8.2rem;
+			height: 8.6rem;
+			background-image: url(../img/health/img_ocaremind.png);
+			background-size: 8.2rem 8.6rem;
+		}
+	}
+
+	&[data-style="ocaremall"] {
+		background-color: #8E67F7;
+
+		&::after {
+			content: '';
+			width: 7.6rem;
+			height: 7.6rem;
+			background-image: url(../img/icon/img_ocaremall.png);
+			background-size: 7.2rem auto;
+		}
+	}
+
+	&[data-style="news"] {
+		background-color: #FF612D;
+
+		&::after {
+			content: '';
+			width: 7.6rem;
+			height: 7.6rem;
+			background-image: url(../img/health/img_news.png);
+			background-size: 7.2rem auto;
+		}
+	}
+
+	&[data-style="score2"] {
+		background-color: #597EFF;
+
+		&::after {
+			content: '';
+			width: 7.6rem;
+			height: 7.6rem;
+			background-image: url(../img/health/img_healthscore.png);
+			background-size: 6.4rem auto;
+		}
+
+	}
+
+	&[data-style="score"] {
+		background-color: #8E67F7;
+		padding: 1.5rem 2.4rem;
+
+		&::after {
+			content: '';
+			position: absolute;
+			bottom: 0;
+			right: 1.6rem;
+			width: 8.0rem;
+			height: 5.6rem;
+			background-image: url(../img/health/img_score.png);
+			background-size: 8.0rem 5.6rem;
+		}
+
+		.mdl-banner-tit {
+			font-family: 'KBF';
+			font-size: 1.5rem;
+			font-weight: 500;
+		}
+	}
+
+	&[data-style="program"] {
+		background-color: #FF8469;
+		padding: 1.5rem 2.4rem;
+
+		&::after {
+			content: '';
+			position: absolute;
+			bottom: 0;
+			right: 1.6rem;
+			width: 8.0rem;
+			height: 5.6rem;
+			background-image: url(../img/health/img_program.png);
+			background-size: 8.0rem 5.6rem;
+		}
+
+		.mdl-banner-tit {
+			font-family: 'KBF';
+			font-size: 1.6rem;
+			font-weight: 500;
+		}
+	}
+
+	&[data-style="reservation"] {
+		background-color: #2DD2BD;
+		padding: 1.5rem 2.4rem;
+
+		&::after {
+			content: '';
+			position: absolute;
+			bottom: 0;
+			right: 1.6rem;
+			width: 8.0rem;
+			height: 5.6rem;
+			background-image: url(../img/health/img_reservation.png);
+			background-size: 8.0rem 5.6rem;
+		}
+
+		.mdl-banner-tit {
+			font-family: 'KBF';
+			font-size: 1.6rem;
+			font-weight: 500;
+		}
+	}
+
+	&[data-style="magazine"] {
+		height: 11.6rem;
+		background-color: #3F4FEB;
+		padding: $x1-5 $x1-5 $x1-5 $x3 !important;
+
+		&::after {
+			content: '';
+			min-width: 8rem;
+			height: 8rem;
+			background-image: url(../img/ocare/m7/m7_link.png);
+			background-size: 8rem 8rem;
+		}
+
+		.mdl-banner-txt {
+			font-size: 1.6rem;
+			word-break: keep-all;
+		}
+
+		.mdl-banner-tit {
+			word-break: keep-all;
+			display: block;
+			align-items: center;
+			font-size: 1.8rem;
+			width: auto;
+
+			&::after {
+				display: inline-block;
+				position: absolute;
+			}
+		}
+	}
+
+	&[data-style="medical"],
+	&[data-style="medical2"] {
+		height: 11.6rem;
+		background-color: #6A42D3;
+
+		&::after {
+			content: '';
+			min-width: 8rem;
+			height: 8rem;
+			background-image: url(../img/ocare/m7/m7_link.png);
+			background-size: 8rem 8rem;
+
+		}
+
+		.mdl-banner-txt {
+			font-size: 1.6rem;
+			word-break: keep-all;
+		}
+
+		.mdl-banner-tit {
+			word-break: keep-all;
+			display: block;
+			align-items: center;
+			font-size: 1.8rem;
+			width: auto;
+
+			&::after {
+				display: inline-block;
+				position: absolute;
+			}
+		}
+	}
+
+	&[data-style="medical2"] {
+		background-color: #6227E3;
+	}
+
+	&[data-shape="round"] {
+		@include setRound($x3);
+		padding: 1.2rem 2.4rem;
+	}
+
+	&[data-shape="round-slim"] {
+		@include setRound(1.2rem);
+		max-height: 4.8rem;
+	}
+
+	&[data-color="light"] {
+
+		.mdl-banner-txt,
+		.mdl-banner-tit {
+			color: var(--gray_0);
+		}
+	}
+
+	&[data-color="dark"] {
+		.mdl-banner-txt {
+			color: var(--gray_90);
+		}
+
+		.mdl-banner-tit {
+			color: var(--gray_100);
+		}
+	}
+
+	&-group {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		text-align: left;
+		gap: 0.6rem;
+
+		&+.mdl-banner-img {
+			margin-right: 0;
+			margin-left: $x2;
+		}
+	}
+
+	&-txt {
+		font-family: "KBF";
+		font-size: 1.3rem;
+		font-weight: 300;
+		color: var(--gray_0);
+	}
+
+	&-tit {
+		font-family: "KBF";
+		font-size: 1.8rem;
+		line-height: 2.4rem;
+		font-weight: 700;
+		color: var(--gray_0);
+	}
+
+	&-img {
+		width: 8rem;
+		height: 8rem;
+		margin-right: $x2;
+		margin-left: 0;
+
+		img {
+			display: block;
+			width: 100%;
+		}
+	}
+}
+
+.ocr-mhbanner2 {
+	.swiper-wrapper {
+		&+ {
+			.swiper-pagination {
+				bottom: -3.3rem;
+
+				// .swiper-pagination-bullet-active,
+				// .swiper-pagination-bullet{
+				//     background-color: #ccc !important;
+				// }
+				.swiper-pagination-bullet-active[aria-current="true"] {
+					opacity: 100% !important;
+				}
+
+				.swiper-pagination-bullet {
+					opacity: 30% !important;
+				}
+			}
+		}
+	}
+}
+
+//기본 스와이퍼
+.swiper[data-swiper] {
+	padding-bottom: 2.9rem !important;
+	overflow: visible;
+	.swiper-slide {
+		border-radius: 1.2rem !important;
+		overflow: hidden;
+	}
+	.swiper-pagination{
+		bottom: 1.2rem !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: .5rem;
+
+		.swiper-pagination-bullet.swiper-pagination-bullet-active {
+			width: 1.8rem !important;
+			background-color: #444B55 !important;
+		}
+		.swiper-pagination-bullet {
+			width: .5rem !important;
+			height: .5rem !important;
+			background-color: #DADCDF !important;
+			border-radius: .5rem !important;
+		}
+	}
+}

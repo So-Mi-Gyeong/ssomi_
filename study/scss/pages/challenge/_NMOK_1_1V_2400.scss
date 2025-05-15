@@ -1,0 +1,40 @@
+.ocr-challenge-mission {
+    &-item {
+        &[data-item="step"] .mdl-subject {
+            padding-bottom: 0.7rem;
+        }
+
+        &[data-item="special"] {
+            background-color: #FBF8E4;
+            border: .1rem solid #FFCD20;
+
+            .mdl-subject {
+                min-height: 0;
+                padding-top: 3.2rem;
+            }
+            .mdl-subject-em{
+                padding-bottom: 0;
+                margin-left: 4.3rem;
+                font-size: 1.8rem;
+                color: #1E2322;
+                font-weight: 500;
+                text-indent: -0.8rem;
+            }
+            .mdl-subject-em::after {
+                content:"";
+                position: absolute;
+                top: -0.1rem;
+                left: -4.4rem;
+                display: block;
+                width: 3.5rem;
+                height: 2.3rem;
+                background: url(../img/challenge/main/ico_special2404.png) no-repeat 50% 50% / 2.8rem;
+            }
+            .mission-state dl {
+                background-color: rgba(255,241,141, 0.6);
+
+                dd::before{background-color: #CBBF62;}
+            }
+        }
+    }
+}

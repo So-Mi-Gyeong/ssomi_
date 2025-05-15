@@ -1,0 +1,107 @@
+.ods-agree {
+  display: flex;
+  flex-direction: column;
+  gap:1.6rem;
+
+  .agree-all-check {
+    height: 6.4rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0 2.4rem;
+    position: relative;
+
+    input {
+      position: relative;
+      z-index: 1;
+    }
+    :checked + label {
+      border-color:#FFD700;
+      background-color: #FFFCEA;
+    }
+    label {
+      font-size: 1.8rem;
+      font-weight: 700;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      border: .1rem solid #EDEDEE;
+      background-color:#FAFAFA;
+      border-radius: 1.2rem;
+      padding:0 2.4rem 0 2.4rem;
+      display: flex;
+      align-items: center;
+      top:0;
+      left:0;
+    }
+    
+  }
+  &--group {
+    display: flex;
+    flex-direction: column;
+    gap:1.2rem;
+  }
+  &--text{
+    font: var(--font-b3-400) !important;
+    color: var(--color-gray-200);
+    b {
+      display: inline-block;
+      color: var(--color-red-text);
+      font-weight: 700 !important;
+      transform: translateY(-0.1rem);
+    }
+    strong{
+      display: inline-block;
+      color: var(--color-blue-text);
+      font-weight: 700 !important;
+      transform: translateY(-0.1rem);
+    }
+  }
+  &--list {
+    display: flex;
+    flex-direction: column;
+    gap:2rem;
+    margin-top: 0.8rem;
+
+    .mdl-selection-item {
+      padding: 0;
+    }
+  }
+  .mdl-line {
+    margin: 0.8rem 0;
+  }
+  .btn-arrow {
+    flex-shrink: 0;
+    width: 2.4rem;
+    height: 2.4rem;
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='9' height='15' viewBox='0 0 9 15' fill='none'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M6.28756 7.87511L0.490723 14.0198L1.50907 14.9805L8.21224 7.87511L1.50907 0.76976L0.490723 1.73047L6.28756 7.87511Z' fill='%23555B66'/%3E%3C/svg%3E") no-repeat 100% 50% / 0.9rem;
+  }
+  .mdl-list{
+    &[data-type="info"] {
+      display: flex;
+      flex-direction: column;
+      gap: 1.6rem;
+      .mdl-list-item {
+        align-items: center;
+        margin: 0;
+      }
+    }
+  }
+  .ods-agree-box{
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    padding: 2.4rem 0;
+    border-radius: 1.6rem;
+    background-color: #F2F2F2;
+    text-align: center;
+    p{
+      font: var(--font-b4-400);
+      color: #444B55;
+    }
+    b{
+      font: var(--font-b2-500);
+      color: var(--color-gray-100);
+    }
+  }
+}

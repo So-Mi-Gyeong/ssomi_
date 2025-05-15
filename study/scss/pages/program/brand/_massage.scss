@@ -1,0 +1,122 @@
+// 영향을 주지 않는 class명은 data-brand 바깥에 입력
+
+/* sk하이닉스 마사지 */
+[data-brand="massage"]{
+    .content{padding: 0;}
+    .brand-head-img{height: 19.5rem;}
+    .brand-body{padding: 1.5rem 2.4rem 2.4rem;}
+    .scrollBox[data-style="popup"]{padding: 2rem 2.4rem 3rem;}
+
+    .card-shadow{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        gap: .8rem;
+        .sub-txt{
+            font-size: 1.3rem;
+            font-weight: 400;
+            line-height: 2rem;
+            color: #757575;
+        }
+        .company-call{
+            font-size: 1.3rem;
+            font-weight: 500;
+            line-height: 2rem;
+            color: #757575;
+            span{
+                font-size: 1.3rem;
+                font-weight: 500;
+                line-height: 2rem;
+                color: #757575;  
+            }
+        }
+        .btn-wrap{margin: 0 auto;}
+    }
+    .txt-center-box{
+        p{
+            font-size: 1.4rem;
+            font-weight: 500;
+            color: #605F5F;
+        }
+    }
+}
+
+.massage-list-tit{
+    font-size: 1.3rem;
+    font-weight: 500;
+    line-height: 1.9rem;
+    color: #6C6C6C;
+    margin-bottom: 1.8rem;
+}
+.massage-service-info-wrap{
+    .brand-company-address{padding: 0 0 4rem;}
+    .list-dot{
+        > *:before{
+            border-radius: 50%;
+            background: #444;
+        }
+        li{
+            word-break: keep-all;
+            & + li{margin-top: 1.2rem;}
+        }
+    }
+}
+[data-style="massage"],
+.massage-card-list{
+    li{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 1.4rem;
+        padding: 2rem 1.8rem;
+    }
+    .title{
+        font-size: 1.9rem;
+        font-weight: 700;
+        line-height: 2.2rem;
+        color: #000;
+    }
+    .btn-wrap{
+        width: 100%;
+        padding-top: 0;
+        margin-top: 1.3rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 1.4rem;
+        [data-type="text"]{
+            span{
+                width: fit-content;
+                font-size: 1.2rem;
+                font-weight: 400;
+                line-height: 2.2rem;
+                color: #979797;
+                text-decoration: underline;
+                text-underline-offset: 0.2rem;
+            }
+        }
+    }
+}
+.massage-card-top{ 
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .badge,
+    .date{
+        font-size: 1.3rem;
+        font-weight: 500;
+        line-height: 2.2rem;
+        color: #757575;
+    }
+    .badge{
+        padding: 0;
+        margin: 0;
+        border-radius: 0;
+        border: 0;
+        height: auto;
+    }
+}
